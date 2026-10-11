@@ -1,5 +1,8 @@
 <script>
   import { onMount, tick } from 'svelte';
+  import {attachKnowledge,schedulingKey,legacyFactKey,evidenceKind} from '../lib/knowledge-model.js';
+  import {selectLearningPath,selectConnectedSession,objectiveStatus} from '../lib/connected-learning.js';
+  import {sourceQueries,loadSourceContent,mergeSourceContent,downloadSourceImage} from '../lib/source-loading.js';
   import StructuredQuiz from '../lib/StructuredQuiz.svelte';
   import {FORMAT_CHOICES,STRUCTURED_MODES,buildFormatTargets,gradeStructured,structuredReady} from '../lib/quiz-formats.js';
   import {advanceSession,nextActionNote,retryTargets} from '../lib/repetition.js';
@@ -25,6 +28,12 @@
   let data = $state.raw(null);
   let maps = $state.raw([]);
   let artworkMedia = $state.raw([]);
+  let sourceRecords = $state.raw([]);
+  let sourceStatus = $state('');
+  let sourceProgress = $state('');
+  let baseMedia = [];
+  let basePackage;
+  const sourceBatchSize = 8;
   let states = $state.raw([]);
   let reviews = $state.raw([]);
   let logs = $state.raw([]);
@@ -82,7 +91,7 @@
 
   const ratingLabels = ['Igjen', 'Vanskelig', 'Bra', 'Lett'];
   const ratingNotes = ['Husket ikke', 'Husket med innsats', 'Husket riktig', 'Husket lett'];
-  const reasonLabel = reason => reason === 'Due review' ? 'Repetisjon' : reason === 'New knowledge' ? 'Ny kunnskap' : reason === 'Session retry' ? 'Nytt forsøk i denne quizen' : reason === 'Extra practice' ? 'Ekstraøving' : reason;
+  const reasonLabel = reason => reason==='Connected introduction'?'Nytt holdepunkt':reason==='Connected recall'?'Neste sammenheng': reason === 'Due review' ? 'Repetisjon' : reason === 'New knowledge' ? 'Ny kunnskap' : reason === 'Session retry' ? 'Nytt forsøk i denne quizen' : reason === 'Extra practice' ? 'Ekstraøving' : reason;
   const modeLabel = mode => ({recall:'SKRIV SVARET',recognition:'FLERVALG',outline:'GJENKJENN OMRISS',map:'KART',timeline:'TIDSLINJE',matching:'KOBLE SAMMEN','before-after':'HVA KOM FØRST?',arrows:'HISTORISKE PILER'}[mode] || mode);
   const subjectLabel = subject => ({history:'Historie',geography:'Geografi',politics:'Politikk',literature:'Litteratur',art:'Kunst',science:'Vitenskap',philosophy:'Filosofi',economics:'Økonomi',nobel:'Nobelpriser'}[subject] || subject);
   const typeLabel = type => ({'document':'Dokument','space-mission':'Romoppdrag','military-operation':'Militær operasjon','fictional-character':'Litterær figur',person:'Person','country-area':'Land eller område','municipality':'Kommune','award-event':'Pristildeling',country:'Land',city:'By',region:'Region',event:'Hendelse',work:'Verk',concept:'Begrep',organization:'Organisasjon',award:'Pris',discovery:'Oppdagelse',movement:'Bevegelse',office:'Embete',period:'Periode',artwork:'Kunstverk',scientific_discovery:'Vitenskapelig oppdagelse',historical_event:'Historisk hendelse',literary_work:'Litterært verk','literary-work':'Litterært verk','political-office':'Politisk embete','former-county':'Tidligere fylke',county:'Fylke'}[type] || type);
@@ -124,7 +133,7 @@
   let targets = $derived.by(() => {
     if (!data) return [];
     const base = data.targets.map(t => ({...t, mode:'recall'}));
-    const recognition = data.targets.filter(t => hasRecognitionOptions(t, recognitionIndex))
+    const recognition = data.targets.filter(t => t.answerFormat!=='explanation' && hasRecognitionOptions(t, recognitionIndex))
       .map(t => ({...t, id:`${t.id}:recognition`, baseId:t.id, mode:'recognition', significance:Math.max(1,t.significance-1)}));
     const mapTargets = maps.flatMap(dataset => dataset.regions.filter(r => dataset.id === 'norway' || worldIds.includes(r.id)).flatMap(region => {
       const countryEntity = data.entities.find(e => e.label.toLowerCase() === region.label.toLowerCase());
@@ -146,13 +155,13 @@
     });
     const introductions=foundationTargets(data);
     const anchored=new Set(introductions.filter(t=>!t.id.startsWith('foundation:period:')).map(t=>t.entityId));
-    return assessTargets([...introductions.filter(t=>!t.id.startsWith('foundation:period:') || !anchored.has(t.entityId)), ...base, ...recognition, ...mapTargets, ...timelines, ...buildFormatTargets(data,maps)]);
+    return attachKnowledge(assessTargets([...introductions.filter(t=>!t.id.startsWith('foundation:period:') || !anchored.has(t.entityId)), ...base, ...recognition, ...mapTargets, ...timelines, ...buildFormatTargets(data,maps)]),data);
   });
   function formatAvailable(mode) {
     const depth=['chronology','before-after','arrows'].includes(mode)?'advanced':['geography','outline','matching'].includes(mode) && quizDepth==='foundation'?'intermediate':quizDepth;
     return targets.some(t=>targetMatches(t,{...prefs,collectionIds:quizCollection?[quizCollection]:[],subject:'all',fromYear:'',toYear:'',depth,objective:mode},data.collections) && (mode!=='chronology' || t.mode==='timeline'));
   }
-  let selection = $derived(data ? selectSession(targets, states, prefs, new Date(), data.collections, reviews) : {queue:[],dueCount:0,newCount:0,eligibleCount:0});
+  let selection = $derived(data ? selectConnectedSession(data,targets, states, prefs, new Date(), data.collections, reviews) : {queue:[],dueCount:0,newCount:0,eligibleCount:0});
   let summary = $derived(quizProgress(targets, reviews));
   let progress = $derived(progressDetails(targets,reviews));
   let outcome = $derived(sessionOutcome(session?.results || []));
@@ -160,8 +169,9 @@
   let current = $derived(session ? targets.find(t => t.id === session.queue[session.index]?.id) : null);
   let currentArtwork = $derived(artworkMedia.find(m=>m.entityId===current?.entityId));
   let answerStyle = $derived(answerPresentation(current));
-  let connections = $derived(relatedContext(data,current));
-  let currentState = $derived(current ? stateForTarget(current,targets,states) : null);
+  let connections = $derived(relatedContext(data,current,3,{targets,reviews,pendingIds:session?.queue.slice((session?.index||0)+1).map(q=>q.id)||[]}));
+  let currentObjective = $derived(data?.learningObjectives?.find(o=>o.id===session?.queue[session.index]?.objectiveId));
+  let currentState = $derived(current ? stateForTarget(current,targets,states,reviews) : null);
   let intervals = $derived(current ? ratingIntervals(currentState) : {});
   const retryNote = rating => nextActionNote(session,{correct,usedHint,learnedFirst,rating:effectiveRating(rating,{correct,usedHint,learnedFirst,mode:current?.mode})});
   let entity = $derived(data?.entities.find(e => e.id === detailId));
@@ -191,6 +201,38 @@
   }
   let mapViewBox = $derived(currentDataset && current ? current.mode==='map' ? overviewBounds(currentDataset,mapZoom,mapPanX,mapPanY) : mapBounds(currentDataset.regions.find(r=>r.id===current.regionId),currentDataset) : '0 0 720 290');
 
+  async function restoreSourceContent() {
+    basePackage=(await all(db,'packages'))[0];
+    sourceRecords=(await get(db,'settings','source-content'))?.records || [];
+    data=mergeSourceContent(basePackage,sourceRecords);
+    artworkMedia=[...baseMedia,...sourceRecords.map(record=>record.media).filter(Boolean).filter(media=>!baseMedia.some(old=>old.entityId===media.entityId))];
+  }
+  async function loadMoreSources(entityId='') {
+    if(offlineTest || !navigator.onLine)throw new Error('Koble til nettet for å hente nye bilder og spørsmål.');
+    const candidates=data.entities.filter(item=>(entityId?item.id===entityId:!collectionFilter || item.collectionIds.includes(collectionFilter)) && sourceQueries(item,data.sources).length && (entityId || !sourceRecords.some(record=>record.entityId===item.id))).slice(0,sourceBatchSize);
+    if(!candidates.length){sourceStatus='Alle tilgjengelige kildeposter i dette utvalget er hentet.';return;}
+    let added=0,pictures=0,failed=0;
+    const originalCount=data.targets.length;
+    for(const [index,item] of candidates.entries()) {
+      sourceProgress=`Henter ${index+1} av ${candidates.length}: ${item.label}`;
+      try {
+        const result=await loadSourceContent(item,data,{knownMedia:artworkMedia});
+        let pictureFailed=false;
+        if(result.media)try {result.media=await downloadSourceImage(result.media);} catch {result.media=null;pictureFailed=true;}
+        const old=sourceRecords.find(record=>record.entityId===item.id);
+        const record={entityId:item.id,...result,media:result.media || old?.media || null};
+        const records=[...sourceRecords.filter(record=>record.entityId!==item.id),record];
+        const merged=mergeSourceContent(basePackage,records);
+        if(records.reduce((sum,record)=>sum+(record.media?.bytes || 0),0)>8000000)throw new Error('Bildebiblioteket har nådd grensen på 8 MB.');
+        await put(db,'settings',{id:'source-content',records});
+        sourceRecords=records;data=merged;
+        artworkMedia=[...baseMedia,...records.map(record=>record.media).filter(Boolean).filter(media=>!baseMedia.some(old=>old.entityId===media.entityId))];
+        added++;if(result.media)pictures++;if(pictureFailed)failed++;
+      }catch {failed++;}
+    }
+    sourceProgress='';
+    sourceStatus=`${added} kildeposter hentet · ${pictures} nye bilder · ${data.targets.length-originalCount} nye spørsmål.${failed?' Noe innhold kunne ikke hentes. Prøv igjen på emnesiden.':''}`;
+  }
   async function refresh() {
     [states,reviews,logs,savedSessions] = await Promise.all(['states','reviews','logs','sessions'].map(s=>all(db,s)));
   }
@@ -210,7 +252,7 @@
     answer = saved?.answer || ''; formatDraft = saved?.formatDraft || {}; correct = saved?.correct ?? null; revealed = saved?.revealed || false;
     usedHint = saved?.usedHint || false; selectedRegion = saved?.selectedRegion || ''; mapZoom = saved?.mapZoom || 1;mapPanX=saved?.mapPanX || 0;mapPanY=saved?.mapPanY || 0;
     timelineOrder = saved?.timelineOrder || (current?.mode === 'timeline' ? buildTimelineExercise(current.timeline).items : []);
-    introduction = saved?.introduction ?? false;
+    introduction = saved?.introduction ?? Boolean(session?.queue[session.index]?.reason==='Connected introduction' && current?.snapshot);
     learnedFirst = saved?.learnedFirst || false; preparedTargetId=current?.id || '';
     await tick(); document.querySelector('#main-view')?.focus({preventScroll:true}); window.scrollTo({top:0,behavior:'instant'});
   }
@@ -220,10 +262,10 @@
   async function beginSession(practiceObjective = null, scope = null) {
     const pool = scope?.targetIds ? targets.filter(t=>scope.targetIds.includes(t.id)) : scope?.entityId ? targets.filter(t=>t.entityId===scope.entityId) : targets;
     const focus = scope ? {...prefs,collectionIds:scope.collectionId?[scope.collectionId]:[],subject:'all',fromYear:'',toYear:'',depth:scope.depth || quizDepth} : prefs;
-    const selected = practiceObjective ? selectPracticeSession(pool,states,focus,practiceObjective,new Date(),data.collections,reviews) : selection;
-    if (!selected.queue.length) { notify('Ingen spørsmål på dette nivået. Velg et annet nivå eller emne.'); return; }
+    const selected = scope?.learningPathId ? selectLearningPath(data,scope.learningPathId,targets,states,focus,reviews) : practiceObjective ? selectPracticeSession(pool,states,focus,practiceObjective,new Date(),data.collections,reviews) : selection;
+    if (!selected.queue.length) { notify(scope?.learningPathId?'Du har øvd på disse holdepunktene. Neste steg blir tilgjengelig senere; du kan også velge en fri quiz.':'Ingen spørsmål på dette nivået. Velg et annet nivå eller emne.'); return; }
     await archiveActive();
-    session = {id:'active',difficultyPolicy:'2026-10-11',sessionId:crypto.randomUUID(),startedAt:new Date().toISOString(),title:scope?.title || (practiceObjective?'Fri quiz':'Dagens quiz'),scope,objective:practiceObjective,queue:selected.queue.map(q=>({id:q.target.id,reason:q.reason})),practice:Boolean(practiceObjective),index:0,results:[],status:'active'};
+    session = {id:'active',difficultyPolicy:'2026-10-11',sessionId:crypto.randomUUID(),startedAt:new Date().toISOString(),title:scope?.title || (practiceObjective?'Fri quiz':'Dagens quiz'),scope,objective:practiceObjective,queue:selected.queue.map(q=>({id:q.target.id,reason:q.reason,objectiveId:q.objectiveId,support:q.support})),practice:Boolean(practiceObjective && !scope?.learningPathId),index:0,results:[],status:'active'};
     await put(db,'sessions',session);
     sessionScreen = true; view = 'today'; window.location.hash='today';
     await prepareQuestion(); await refresh(); window.scrollTo(0,0);
@@ -236,6 +278,7 @@
   function reveal() {
     if (STRUCTURED_MODES.includes(current?.mode)) correct=gradeStructured(current,formatDraft).correct;
     else if (current?.mode === 'timeline') correct = gradeTimeline(timelineOrder,current.timeline).correct;
+    else if(current?.answerFormat==='explanation')correct=null;
     else if (!['map','recognition'].includes(current?.mode)) correct = answer.trim() ? checkAnswer(current,answer) : null;
     revealed = true;
   }
@@ -250,11 +293,11 @@
     const target=current, now=new Date();
     rating=effectiveRating(rating,{correct,learnedFirst,usedHint,mode:target.mode});
     const entry=session.queue[session.index];
-    const result=scheduleReview(factKey(target),currentState,rating,now);
+    const result=scheduleReview(schedulingKey(target),currentState,rating,now);
     const event={id:`${session.sessionId}:${session.index}`,targetId:target.id,entityId:target.entityId || null,timestamp:now.toISOString(),rating,mode:target.mode,correct,usedHint,learnedFirst,
-      reason:entry.reason,schedulerId:factKey(target),sessionRetry:Boolean(entry.sessionRetry),nextDue:result.card.due,log:result.log};
+      factId:factKey(target),claimIds:target.claimIds,evidenceKind:evidenceKind(target),answerFormat:target.answerFormat,assessment:target.answerFormat==='explanation'?'self':'answer',reason:entry.reason,schedulerId:schedulingKey(target),sessionRetry:Boolean(entry.sessionRetry),nextDue:result.card.due,log:result.log};
     if(session.practice || entry.sessionRetry) await recordReview(db,null,{...event,practice:true,nextDue:null,log:null});
-    else await recordReview(db,result.card,event);
+    else await recordReview(db,result.card,event,{...result.card,id:legacyFactKey(target)});
     session=advanceSession(session,{id:target.id,rating,correct,learnedFirst,usedHint,mode:target.mode});
     await transaction(db,['sessions'],tx=>{
       tx.objectStore('sessions').put(session);
@@ -303,7 +346,7 @@
       }
       lastUpdate={id:'updates',checkedAt:new Date().toISOString(),status:'success',changed,bytes,durationMs:Date.now()-started};
       await put(db,'settings',lastUpdate);
-      if(changed) {data=(await all(db,'packages'))[0];await refresh();}
+      if(changed) {await restoreSourceContent();await refresh();}
       await logEvent(db,'updates',changed?'Kunnskapspakkene er oppdatert.':'Kunnskapen er oppdatert.','info',{changed,bytes});
       if(manual)notify(changed?'Innholdet er oppdatert.':'Kunnskapen din er oppdatert.');
     }catch(failure) {
@@ -326,7 +369,7 @@
   }
   async function restore() {
     await restoreDatabase(db,confirmRestore);confirmRestore=null;
-    const packages=await all(db,'packages');data=packages[0] || null;
+    await restoreSourceContent();
     prefs={...DEFAULT_PREFERENCES,...await get(db,'settings','preferences')};
     session=await get(db,'sessions','active') || null;
     document.documentElement.dataset.theme=prefs.theme;
@@ -373,9 +416,10 @@
         document.documentElement.dataset.theme=prefs.theme;
         data=(await all(db,'packages'))[0] || null;
         if(!data || data.language !== 'nb') {await checkUpdates(true);data=(await all(db,'packages'))[0] || null;}
-        else if(['1.0.1','1.0.2','1.1.0','1.1.1'].includes(data.version)) {try{await checkUpdates(true);data=(await all(db,'packages'))[0] || data;}catch{/* Keep the installed package usable offline. */}}
+        else if(['1.1.2','1.0.1','1.0.2','1.1.0','1.1.1'].includes(data.version)) {try{await checkUpdates(true);data=(await all(db,'packages'))[0] || data;}catch{/* Keep the installed package usable offline. */}}
         if(!data)throw new Error('Koble til nettet én gang for å installere kunnskapsbiblioteket.');
-        const mediaResponse=await fetch('/knowledge/media.json');if(mediaResponse.ok)artworkMedia=await mediaResponse.json();
+        const mediaResponse=await fetch('/knowledge/media.json');if(mediaResponse.ok)baseMedia=await mediaResponse.json();
+        await restoreSourceContent();
         maps=await Promise.all(['world','norway'].map(async id=>{const r=await fetch(`/maps/${id}.json`);if(!r.ok)throw new Error('Kartpakken er utilgjengelig.');return r.json();}));
         await refresh();session=await get(db,'sessions','active') || null;
         const journal=readJournal(localStorage,session);
@@ -429,11 +473,12 @@
         <div class="session-steps" role="progressbar" aria-label="Fullførte spørsmål" aria-valuemin="0" aria-valuemax={session.queue.length} aria-valuenow={session.index}>{#each session.queue as item,i}<span class:done={i<session.index} class:independent={session.results[i]?.correct===true && !session.results[i]?.usedHint && !session.results[i]?.learnedFirst} class:active={i===session.index} aria-hidden="true"></span>{/each}</div>
         <small class="muted">{outcome.independent} riktige uten hjelp · {outcome.supported} med støtte · {outcome.retry} å øve videre på</small>
       </div>
-      <section class="exercise" class:question-step={!revealed}>{#if session.queue[session.index]?.sessionRetry}<p class="retry-banner">Nytt forsøk · hent fram svaret uten hjelp</p>{/if}<p class="eyebrow">{stageLabel(learningStage(current))} · {modeLabel(current.mode)}</p>{#if introduction}<div class="card lesson"><h1>Kort fortalt</h1><p>{current.snapshot}</p><button class="primary" onclick={()=>{introduction=false;learnedFirst=true;}}>Prøv spørsmålet</button></div>{:else}<h1 class="question" class:answered-question={revealed}>{current.prompt}</h1>
+      <section class="exercise" class:question-step={!revealed}>{#if session.queue[session.index]?.sessionRetry}<p class="retry-banner">Nytt forsøk · hent fram svaret uten hjelp</p>{/if}<p class="eyebrow">{stageLabel(learningStage(current))} · {modeLabel(current.mode)}</p>{#if introduction}<div class="card lesson"><h1>Kort fortalt</h1><p>{current.snapshot}</p>{#if currentObjective}<p class="muted">{currentObjective.introduction}</p>{/if}<button class="primary" onclick={()=>{introduction=false;learnedFirst=true;}}>Prøv spørsmålet</button></div>{:else}<h1 class="question" class:answered-question={revealed}>{current.prompt}</h1>
         {#if !revealed}
-        <details class="difficulty-note"><summary>Om nivået</summary><p class="muted">{current.difficultyReason}</p></details>
+        {#if session.queue[session.index]?.support?.length}<details class="card"><summary>Holdepunkter før du prøver</summary>{#each session.queue[session.index].support as item}<p><strong>{item.title}</strong></p><p>{item.text}</p>{/each}<p class="muted">Du kan utforske videre selv om dette er nytt.</p></details>{/if}
+        <details class="difficulty-note"><summary>Om nivået</summary><p class="muted">{current.difficultyReason}</p><p class="muted">{current.precision==='exact'?'Presisjon: eksakt detalj.':current.precision==='complete'?'Presisjon: alle delene må med.':'Presisjon: hovedideen.'} {current.reasoning==='explain'?'Du forklarer med egne ord.':current.reasoning==='compare'?'Du sammenligner.':current.reasoning==='order'?'Du ordner i tid.':'Du identifiserer et holdepunkt.'}</p></details>
         {#if questionSupport(current) && !revealed && !currentArtwork}<p class="muted question-context">{questionSupport(current)}</p>{/if}
-        {#if currentArtwork}<figure class="artwork-figure"><img src={currentArtwork.url} alt={revealed?`${currentArtwork.title} av ${currentArtwork.artist}`:'Kunstverket du skal undersøke'} width={currentArtwork.width} height={currentArtwork.height}><figcaption class="muted detail">{revealed?`${currentArtwork.title} · ${currentArtwork.artist}`:'Se nøye på motivet før du svarer.'}</figcaption></figure>{/if}
+        {#if currentArtwork}<figure class="artwork-figure"><img src={currentArtwork.url} alt={revealed?currentArtwork.title:'Bildet du skal undersøke'} width={currentArtwork.width} height={currentArtwork.height}><figcaption class="muted detail">{revealed?currentArtwork.title:'Se nøye på motivet før du svarer.'}</figcaption></figure>{/if}
         {#if STRUCTURED_MODES.includes(current.mode)}
           <StructuredQuiz target={current} bind:draft={formatDraft} dataset={maps.find(m=>m.id===current.datasetId)} />
         {:else if current.mode === 'map' && currentMap}
@@ -462,15 +507,16 @@
         {/if}
         {/if}
         {#if revealed}
-          <div class="answer-box"><p class="eyebrow">{correct===true?'RIKTIG':correct===false?'IKKE HELT':'SVARET'}</p><h2 id="answer-heading" tabindex="-1">{current.mode==='matching'?'De riktige parene':current.answer}</h2>{#if current.mode==='matching'}<ul class="pair-answers">{#each current.pairs as pair}<li>{pair.label} <strong>{pair.answer}</strong></li>{/each}</ul>{/if}{#if current.mode==='arrows'}{@const result=gradeStructured(current,formatDraft)}<p class="muted">Retning: {result.directionCorrect?'riktig':'må øves'} · År: {result.yearCorrect?'riktig':'må øves'}</p>{/if}<p class="feedback">{current.explanation}</p><details><summary>Kilder</summary>{#each (current.sources || []) as source}<a class="source-link" href={source.url} target="_blank" rel="noreferrer">{source.title} ↗</a>{/each}{#each current.sourceIds as sourceId}{@const source=sourceFor(sourceId)}{#if source}<a class="source-link" href={source.url} target="_blank" rel="noreferrer">{source.title} ↗</a>{/if}{/each}</details></div>
+          <div class="answer-box"><p class="eyebrow">{correct===true?'RIKTIG':correct===false?'IKKE HELT':'SVARET'}</p><h2 id="answer-heading" tabindex="-1">{current.mode==='matching'?'De riktige parene':current.answer}</h2>{#if current.mode==='matching'}<ul class="pair-answers">{#each current.pairs as pair}<li>{pair.label} <strong>{pair.answer}</strong></li>{/each}</ul>{/if}{#if current.mode==='arrows'}{@const result=gradeStructured(current,formatDraft)}<p class="muted">Retning: {result.directionCorrect?'riktig':'må øves'} · År: {result.yearCorrect?'riktig':'må øves'}</p>{/if}<p class="feedback">{current.explanation}</p>{#if current.answerFormat==='explanation'}<fieldset class="stack"><legend>Sammenlign med svaret ditt</legend><p class="muted">Vurder innholdet, ikke om du brukte samme ord. Dette lagres som egenvurdering.</p>{#each current.rubric || [] as criterion}<label class="row"><input type="checkbox" disabled={!answer.trim()} checked={Boolean(formatDraft[criterion.id])} onchange={event=>{formatDraft={...formatDraft,[criterion.id]:event.currentTarget.checked};correct=Boolean(answer.trim()) && current.rubric.every(c=>formatDraft[c.id]);}}>{criterion.text}</label>{/each}</fieldset>{/if}<details><summary>Kilder</summary>{#each (current.sources || []) as source}<a class="source-link" href={source.url} target="_blank" rel="noreferrer">{source.title} ↗</a>{/each}{#each current.sourceIds as sourceId}{@const source=sourceFor(sourceId)}{#if source}<a class="source-link" href={source.url} target="_blank" rel="noreferrer">{source.title} ↗</a>{/if}{/each}</details></div>
           {#if current.mode==='map' && currentDataset}<details class="card"><summary>Se riktig sted</summary><div class="map-board"><svg viewBox={currentDataset.viewBox} role="img" aria-label={`Kart med ${current.answer} markert`}>{#each currentDataset.regions as region}<path d={region.path} class:correct={region.id===current.regionId} fill-rule="evenodd" />{/each}</svg></div></details>{/if}
           {#if currentArtwork}<figure class="artwork-figure"><img src={currentArtwork.url} alt={`${currentArtwork.title} av ${currentArtwork.artist}`} width={currentArtwork.width} height={currentArtwork.height} /></figure>{/if}
-          {#if current.snapshot || current.followUp || currentArtwork || connections.length}<details class="card learning-context"><summary>Fordypning og forbindelser</summary>{#if current.snapshot}<p>{current.snapshot}</p>{/if}{#if current.followUp}<p>{current.followUp}</p>{/if}{#if currentArtwork}<details><summary>Om denne versjonen og bildekilden</summary><p>{currentArtwork.context}</p><p class="muted detail">{currentArtwork.credit} · <a href={currentArtwork.sourceUrl} target="_blank" rel="noreferrer">Bildekilde</a> · <a href={currentArtwork.licenseUrl} target="_blank" rel="noreferrer">Fri bruk / public domain</a></p></details>{/if}{#if connections.length}<details><summary>Les videre ({connections.length})</summary>{#each connections as relation}<p>{relation.context}</p><small class="muted">Koblet til {relation.label}</small>{/each}</details>{/if}</details>{/if}
+          {#if current.snapshot || current.followUp || currentArtwork || connections.length}<details class="card learning-context"><summary>Fordypning og forbindelser</summary>{#if current.snapshot}<p>{current.snapshot}</p>{/if}{#if current.followUp}<p>{current.followUp}</p>{/if}{#if currentArtwork}<details><summary>Om bildet og bildekilden</summary><p>{currentArtwork.context}</p><p class="muted detail">{currentArtwork.credit} · <a href={currentArtwork.sourceUrl} target="_blank" rel="noreferrer">Bildekilde</a> · <a href={currentArtwork.licenseUrl} target="_blank" rel="noreferrer">Lisens og bruk</a></p></details>{/if}{#if connections.length}<details><summary>Les videre ({connections.length})</summary>{#each connections as relation}<p>{relation.context}</p><small class="muted">Koblet til {relation.label}</small>{/each}</details>{/if}</details>{/if}
           <div class="quiz-actions">{#if usedHint || learnedFirst || correct!==true || session.practice || session.queue[session.index]?.sessionRetry}<p class="muted">{retryNote(correct===true?3:1) || (session.queue[session.index]?.sessionRetry?'Lagret som øving i denne quizen':'Svar uten hjelp lagres som riktig')}</p><button class="primary" disabled={busy} onclick={()=>run(()=>rate(correct===true?3:1))}>Neste spørsmål</button>{:else}<p class="field">Hvor godt husket du?{#if !currentState} Første repetisjon blir i morgen.{/if}</p><div class="rating-grid">{#each ratingLabels as label,index}<button class="rating-button" disabled={busy} onclick={()=>run(()=>rate(index+1))}><strong>{label}</strong><small>{ratingNotes[index]}</small><small>{retryNote(index+1) || intervalLabel(intervals[index+1])}</small></button>{/each}</div>{/if}</div>
         {/if}
       {/if}</section>
     {:else}
       {#if !quizSetup}<section class="hero"><h1>Hva vil du øve på?</h1><p class="lead">{reviewedToday} svar i dag · {selection.dueCount} repetisjoner klare</p></section>
+      {#if data.learningPaths?.length}<details class="card learning-paths"><summary>Lær i sammenheng</summary><p class="muted">Begynn med betydningen, hent fram det du husker, og bygg forbindelser over flere økter. Repetisjoner kommer i dagens quiz.</p>{#each data.learningPaths as path}{@const completed=path.objectiveIds.filter(id=>objectiveStatus(data.learningObjectives.find(o=>o.id===id),targets,reviews)==='recalled').length}<button class="entity-row" disabled={busy} onclick={()=>run(()=>beginSession('mixed',{learningPathId:path.id,depth:'advanced',title:path.title}))}><span><strong>{path.title}</strong><small>{completed} av {path.objectiveIds.length} holdepunkter hentet fram · neste steg</small></span><span>→</span></button>{/each}</details>{/if}
       {#if session?.status==='active' && current}<div class="card"><h2>{session.title || 'Påbegynt quiz'}</h2><p class="muted">Spørsmål {session.index+1} av {session.queue.length}</p><button class="primary" onclick={()=>run(()=>resumeSession())}>Fortsett quizen</button></div>{/if}
       <div class="card"><h2>Dagens quiz</h2><p class="muted">{selection.queue.length} spørsmål · {prefs.depth==='foundation'?'Grunnlag':prefs.depth==='intermediate'?'Detaljer':'Sammenhenger'}</p><button class="primary" disabled={busy || !selection.queue.length} onclick={()=>run(()=>beginSession())}>Start dagens quiz</button>{#if !selection.queue.length}<p class="muted">Du er ferdig med dagens utvalg. Ta en emnequiz under.</p>{/if}<button class="quiet" onclick={()=>navigate('focus')}>Endre dagens utvalg</button></div>
       <button class="primary" onclick={()=>{quizSetup=true;window.scrollTo(0,0);}}>Velg emne og quizform →</button>
@@ -491,6 +537,7 @@
   {:else if view === 'explore'}
     {#if entity}
       <button class="quiet back-button" onclick={()=>detailId=''}>← Bibliotek</button><section class="hero"><p class="eyebrow">{typeLabel(entity.type)}</p><h1>{entity.label}</h1><p class="lead">{entity.summary}</p></section>{#if artworkMedia.find(m=>m.entityId===entity.id)}{@const art=artworkMedia.find(m=>m.entityId===entity.id)}<figure class="artwork-figure"><img src={art.url} alt={`${art.title} av ${art.artist}`} width={art.width} height={art.height}><figcaption class="muted detail">{art.credit} · <a href={art.sourceUrl} target="_blank" rel="noreferrer">Bildekilde</a></figcaption></figure>{/if}
+      {#if sourceQueries(entity,data.sources).length}<div class="card stack"><button class="secondary" disabled={busy} onclick={()=>run(()=>loadMoreSources(entity.id))}>Hent bilder og flere spørsmål</button><p class="muted detail">Henter kildebelagte forbindelser og bilder med fri bruk. Innholdet lagres på denne enheten.</p>{#if sourceProgress || sourceStatus}<p class="muted" role="status">{sourceProgress || sourceStatus}</p>{/if}</div>{/if}
       <div class="card stack"><label>Quiznivå<select bind:value={quizDepth}><option value="foundation">Grunnlag</option><option value="intermediate">Detaljer</option><option value="advanced">Avansert</option></select></label><button class="primary" disabled={busy || !targets.some(t=>t.entityId===entity.id)} onclick={()=>run(()=>beginSession('mixed',{entityId:entity.id,title:entity.label,depth:quizDepth}))}>Quiz om {entity.label}</button>{#if !targets.some(t=>t.entityId===entity.id)}<p class="muted">Denne siden har ikke quizspørsmål ennå.</p>{/if}</div>
       <div class="chips">{#each entity.collectionIds as id}<button class="chip" onclick={()=>run(()=>beginSession('mixed',{collectionId:id,depth:quizDepth,title:titleFor(id)}))}>Quiz: {titleFor(id)} →</button>{/each}</div>
       <h2 class="section-title">Sammenhenger</h2><div class="card">{#each entityRelationships.slice(0,relationshipLimit) as relation}{@const other=data.entities.find(e=>e.id===(relation.from===entity.id?relation.to:relation.from))}<button class="entity-row" onclick={()=>detailId=other?.id || ''}><span><small class="eyebrow">{relation.from===entity.id?relationLabel(relation.type):`${relationLabel(relation.type)} · inngående`}</small><strong>{other?.label}</strong><small class="muted">{relation.context}</small></span><span aria-hidden="true">↗</span></button>{/each}</div>
@@ -498,7 +545,7 @@
       <h2 class="section-title">Flere spørsmål</h2>{#each targets.filter(t=>t.entityId===entity.id && !t.baseId).sort((a,b)=>a.difficulty-b.difficulty).slice(0,6) as target}<div class="card"><small class="muted">{stageLabel(learningStage(target))} · nivå {target.difficulty}/5</small><p>{target.prompt}</p><details><summary>Vis svar</summary><h3>{target.answer}</h3><p class="muted">{target.explanation}</p></details></div>{/each}
       <div class="card"><h2>Kilder</h2>{#each entity.sourceIds as id}{@const source=sourceFor(id)}{#if source}<p><a class="source-link" href={source.url} target="_blank" rel="noreferrer">{source.title} ↗</a></p>{/if}{/each}</div>
     {:else}
-      <section class="hero"><h1>Finn et emne</h1></section><label class="field" for="search">Søk i biblioteket</label><input class="input" id="search" bind:value={query} type="search" placeholder="En person, et sted eller en idé"><label class="field">Samling<select class="select" bind:value={collectionFilter}><option value="">All kunnskap</option>{#each data.collections as collection}<option value={collection.id}>{collection.title}</option>{/each}</select></label><p class="muted detail">Søk etter en person, et sted eller et verk.</p>{#if collectionFilter}<div class="card stack"><label>Quiznivå<select bind:value={quizDepth}><option value="foundation">Grunnlag</option><option value="intermediate">Detaljer</option><option value="advanced">Avansert</option></select></label><button class="primary" disabled={busy} onclick={()=>run(()=>beginSession('mixed',{collectionId:collectionFilter,depth:quizDepth,title:titleFor(collectionFilter)}))}>Start quiz: {titleFor(collectionFilter)}</button></div>{/if}
+      <section class="hero"><h1>Finn et emne</h1></section><label class="field" for="search">Søk i biblioteket</label><input class="input" id="search" bind:value={query} type="search" placeholder="En person, et sted eller en idé"><label class="field">Samling<select class="select" bind:value={collectionFilter}><option value="">All kunnskap</option>{#each data.collections as collection}<option value={collection.id}>{collection.title}</option>{/each}</select></label><p class="muted detail">Søk etter en person, et sted eller et verk.</p><div class="card stack"><button class="secondary" disabled={busy} onclick={()=>run(()=>loadMoreSources())}>Hent flere bilder og spørsmål</button><p class="muted detail">Henter opptil åtte nye kildeposter i valgt samling. Bilder og spørsmål lagres lokalt og kan brukes uten nett.</p><p class="muted" role="status">{sourceProgress || sourceStatus}</p></div>{#if collectionFilter}<div class="card stack"><label>Quiznivå<select bind:value={quizDepth}><option value="foundation">Grunnlag</option><option value="intermediate">Detaljer</option><option value="advanced">Avansert</option></select></label><button class="primary" disabled={busy} onclick={()=>run(()=>beginSession('mixed',{collectionId:collectionFilter,depth:quizDepth,title:titleFor(collectionFilter)}))}>Start quiz: {titleFor(collectionFilter)}</button></div>{/if}
       <div class="entity-list">{#each matchingEntities as item}<button class="entity-row" onclick={()=>detailId=item.id}><span><small class="eyebrow">{typeLabel(item.type)}</small><strong>{item.label}</strong><small class="muted">{item.summary}</small></span><span aria-hidden="true">↗</span></button>{:else}<p class="empty">Ingen treff ennå. Prøv et annet navn eller en annen samling.</p>{/each}</div>
       <p class="muted detail">Viser {matchingEntities.length} av {allMatchingEntities.length} treff.</p>{#if matchingEntities.length < allMatchingEntities.length}<button class="secondary" onclick={()=>exploreLimit+=60}>Vis flere</button>{/if}
       

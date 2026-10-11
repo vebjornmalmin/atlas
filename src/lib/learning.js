@@ -11,6 +11,13 @@ export const DEFAULT_PREFERENCES = {
 
 
 export function schedulingIndex(targets,states,reviews=[]) {
+  if(!targets.some(t=>t.factId)) {
+    const keys=new Map(targets.map(t=>[t.id,factKey(t)])), index=new Map();
+    for(const state of states){const key=keys.get(state.id)||state.id,previous=index.get(key);
+      if(!previous || (state.last_review||'').localeCompare(previous.last_review||'')>0 || (state.last_review===previous.last_review && state.id===key))index.set(key,state);
+    }
+    return index;
+  }
   const byId=new Map(states.map(state=>[state.id,state]));
   const latestReview=new Map();
   for(const review of [...reviews].sort((a,b)=>a.timestamp.localeCompare(b.timestamp)))if(!review.practice)latestReview.set(review.schedulerId || review.targetId.replace(/:recognition$/,''),review);

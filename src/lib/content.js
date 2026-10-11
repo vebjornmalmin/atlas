@@ -1,3 +1,4 @@
+import {validateCurriculum} from './connected-learning.js';
 import {validateKnowledgeModel} from './knowledge-model.js';
 /** Validate a complete package before it can replace an installed version. */
 function validateKnowledge(data) {
@@ -93,7 +94,7 @@ function validateKnowledge(data) {
   }
   const counts = Object.fromEntries(sections.map(x => [x, maps[x].size]));
   for (const [key, section] of [['entityCount','entities'],['relationshipCount','relationships'],['targetCount','targets']]) if (data[key] !== undefined && data[key] !== counts[section]) errors.push(`${key} disagrees with contents.`);
-  errors.push(...validateKnowledgeModel(data));
+  errors.push(...validateKnowledgeModel(data),...validateCurriculum(data));
   return { valid: errors.length === 0, errors, warnings, counts };
 }
 

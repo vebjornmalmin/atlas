@@ -3,6 +3,8 @@ import {normalizeAnswer} from './exercises.js';
 const countries=['country','country-area'];
 const works=['artwork','literary-work'];
 export const RELATIONSHIP_RULES = {
+  'born-in':[['person'],['place','city','municipality','country','country-area']],
+  'died-in':[['person'],['place','city','municipality','country','country-area']],
   'held-office':[['person'],['political-office']], succeeded:[['person'],['person']],
   'capital-of':[['city'],countries], 'in-region':[countries,['region']],
   'formerly-part-of':[['county'],['former-county']], received:[['person','organization'],['award']],
@@ -87,9 +89,9 @@ export function validateKnowledgeModel(data) {
   if(data.knowledgeModelVersion===undefined)return [];
   const errors=[];
   if(data.knowledgeModelVersion!==1)return ['Unsupported knowledge model version.'];
-  const entities=new Map((data.entities||[]).map(e=>[e.id,e]));
-  const sources=new Set((data.sources||[]).map(s=>s.id));
-  const relations=new Set((data.relationships||[]).map(r=>r.id));
+  const entities=new Map((data.entities||[]).filter(Boolean).map(e=>[e.id,e]));
+  const sources=new Set((data.sources||[]).filter(Boolean).map(s=>s.id));
+  const relations=new Set((data.relationships||[]).filter(Boolean).map(r=>r.id));
   const claims=new Map();
   if(!Array.isArray(data.claims))return ['Knowledge model requires claims.'];
   for(const c of data.claims){
@@ -102,7 +104,7 @@ export function validateKnowledgeModel(data) {
     if(!['documented','disputed','uncertain'].includes(c.evidenceStatus))errors.push(`${c.id}: invalid evidence status.`);
     if(c.date && (!Number.isInteger(c.date.startYear) || (c.date.endYear!==undefined && (!Number.isInteger(c.date.endYear) || c.date.endYear<c.date.startYear)) || !['year','range','approximate'].includes(c.date.precision)))errors.push(`${c.id}: invalid claim dates.`);
   }
-  for(const r of data.relationships||[]){
+  for(const r of (data.relationships||[]).filter(Boolean)){
     const rule=RELATIONSHIP_RULES[r.type];
     if(!rule || !rule[0].includes(entities.get(r.from)?.type) || !rule[1].includes(entities.get(r.to)?.type))errors.push(`${r.id}: incompatible relationship type or direction.`);
     if(r.endYear!==undefined && (!Number.isInteger(r.endYear) || !Number.isInteger(r.year) || r.endYear<r.year))errors.push(`${r.id}: invalid relationship dates.`);
@@ -112,6 +114,6 @@ export function validateKnowledgeModel(data) {
   for(const [id,m] of Object.entries(data.exerciseFacts||{})){
     if(!claims.has(m.factId) || !Array.isArray(m.claimIds) || !m.claimIds.length || m.claimIds.some(c=>!claims.has(c)))errors.push(`${id}: invalid exercise claim references.`);
   }
-  for(const t of data.targets||[])if(!data.exerciseFacts?.[t.id])errors.push(`${t.id}: missing exercise fact mapping.`);
+  for(const t of (data.targets||[]).filter(Boolean))if(!data.exerciseFacts?.[t.id])errors.push(`${t.id}: missing exercise fact mapping.`);
   return errors;
 }
