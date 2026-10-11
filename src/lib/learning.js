@@ -1,3 +1,4 @@
+import {schedulingKey,legacyFactKey,evidenceKind} from './knowledge-model.js';
 import {factKey,learningStage,uniqueFacts,exposureKey,uniqueQuizFacts} from './journey.js';
 import { fsrs, createEmptyCard, Rating } from 'ts-fsrs';
 export { Rating };
@@ -9,17 +10,25 @@ export const DEFAULT_PREFERENCES = {
 };
 
 
-export function schedulingIndex(targets,states) {
-  const keyById=new Map(targets.map(t=>[t.id,factKey(t)]));
+export function schedulingIndex(targets,states,reviews=[]) {
+  const byId=new Map(states.map(state=>[state.id,state]));
+  const latestReview=new Map();
+  for(const review of [...reviews].sort((a,b)=>a.timestamp.localeCompare(b.timestamp)))if(!review.practice)latestReview.set(review.schedulerId || review.targetId.replace(/:recognition$/,''),review);
   const index=new Map();
-  for(const state of states){
-    const key=keyById.get(state.id) || state.id;
-    const previous=index.get(key);
-    if(!previous || (state.last_review || '').localeCompare(previous.last_review || '')>0 || (state.last_review===previous.last_review && state.id===key))index.set(key,state);
+  for(const target of targets){
+    const key=schedulingKey(target), legacy=legacyFactKey(target);
+    const canonical=byId.get(key), old=byId.get(legacy);
+    const review=latestReview.get(legacy);
+    // Legacy cards without evidence metadata remain usable only for written recall.
+    const oldKind=review?evidenceKind({mode:review.mode,answerFormat:review.answerFormat}):'recall';
+    const compatible=old && oldKind===evidenceKind(target)?old:null;
+    const candidates=[canonical,compatible].filter(Boolean).sort((a,b)=>(b.last_review||'').localeCompare(a.last_review||''));
+    if(candidates.length)index.set(key,candidates[0]);
   }
+  for(const state of states)if(!index.has(state.id))index.set(state.id,state);
   return index;
 }
-export function stateForTarget(target,targets,states) {return schedulingIndex(targets,states).get(factKey(target)) || null;}
+export function stateForTarget(target,targets,states,reviews=[]) {return schedulingIndex(targets,states,reviews).get(schedulingKey(target)) || null;}
 
 export function hydrateCard(state, now = new Date()) {
   if (!state) return createEmptyCard(now);
@@ -63,11 +72,11 @@ export function targetMatches(target, preferences, collections = []) {
 export function selectSession(targets, states, preferences, now = new Date(), collections = [], reviews = []) {
   const pref = { ...DEFAULT_PREFERENCES, ...preferences };
   const eligible = targets.filter(t => targetMatches(t, pref, collections));
-  const byId = schedulingIndex(targets,states);
-  const due = eligible.filter(t => byId.has(factKey(t)) && new Date(byId.get(factKey(t)).due) <= now)
-    .sort((a,b) => new Date(byId.get(factKey(a)).due) - new Date(byId.get(factKey(b)).due));
+  const byId = schedulingIndex(targets,states,reviews);
+  const due = eligible.filter(t => byId.has(schedulingKey(t)) && new Date(byId.get(schedulingKey(t)).due) <= now)
+    .sort((a,b) => new Date(byId.get(schedulingKey(a)).due) - new Date(byId.get(schedulingKey(b)).due));
   const score = target => target.significance * 2 - target.difficulty + (pref.geography === 'norway' && target.collectionIds.some(id => id.includes('norway') || id.includes('norwegian')) ? 3 : 0);
-  const knownFacts = new Set(targets.filter(t=>byId.has(factKey(t))).map(factKey));
+  const knownFacts = new Set(targets.filter(t=>byId.has(schedulingKey(t))).map(factKey));
   const recentFacts = new Set(reviews.filter(r=>now-new Date(r.timestamp)<86400000).map(r=>targets.find(t=>t.id===r.targetId)).filter(Boolean).map(factKey));
   const fresh = eligible.filter(t => !knownFacts.has(factKey(t)) && !recentFacts.has(factKey(t)))
     .sort((a,b) => Number(Boolean(b.snapshot))-Number(Boolean(a.snapshot)) || Number(b.mode==='recognition')-Number(a.mode==='recognition') || score(b) - score(a) || a.id.localeCompare(b.id));
@@ -98,11 +107,11 @@ export function selectPracticeSession(targets, states, preferences, objective='m
   if (objective==='chronology' || objective==='connections' || ['before-after','arrows'].includes(objective)) pref.depth='advanced';
   else if(['geography','outline','matching'].includes(objective) && pref.depth==='foundation')pref.depth='intermediate';
   const eligible=targets.filter(target=>targetMatches(target,pref,collections) && (objective!=='chronology' || target.mode==='timeline'));
-  const byId=schedulingIndex(targets,states);
+  const byId=schedulingIndex(targets,states,reviews);
   const lastPracticed=new Map();
   for(const review of reviews) { const target=targets.find(t=>t.id===review.targetId); if(!target)continue; const key=exposureKey(target); if(!lastPracticed.has(key) || lastPracticed.get(key)<review.timestamp) lastPracticed.set(key,review.timestamp); }
-  const rank=target=>!byId.has(factKey(target))?0:new Date(byId.get(factKey(target)).due)<=now?1:2;
-  const remaining=uniqueQuizFacts([...eligible].sort((a,b)=>(lastPracticed.get(exposureKey(a))||byId.get(factKey(a))?.last_review||'').localeCompare(lastPracticed.get(exposureKey(b))||byId.get(factKey(b))?.last_review||'') || rank(a)-rank(b) || Number(Boolean(b.snapshot))-Number(Boolean(a.snapshot)) || Number(b.mode==='recognition')-Number(a.mode==='recognition') || b.significance-a.significance || a.id.localeCompare(b.id)));
+  const rank=target=>!byId.has(schedulingKey(target))?0:new Date(byId.get(schedulingKey(target)).due)<=now?1:2;
+  const remaining=uniqueQuizFacts([...eligible].sort((a,b)=>(lastPracticed.get(exposureKey(a))||byId.get(schedulingKey(a))?.last_review||'').localeCompare(lastPracticed.get(exposureKey(b))||byId.get(schedulingKey(b))?.last_review||'') || rank(a)-rank(b) || Number(Boolean(b.snapshot))-Number(Boolean(a.snapshot)) || Number(b.mode==='recognition')-Number(a.mode==='recognition') || b.significance-a.significance || a.id.localeCompare(b.id)));
   const selected=[];const modes=new Set();
   const max=Math.min(20,Math.max(3,Number(pref.dailyMinutes)*2));
   while(remaining.length && selected.length<max){
