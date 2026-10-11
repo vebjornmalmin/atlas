@@ -1,6 +1,6 @@
+import {legacyFactKey} from './knowledge-model.js';
 export function factKey(target) {
-  if (['map','outline'].includes(target.mode)) return `place:${target.datasetId}:${target.regionId}`;
-  return target.baseId || target.id.replace(/:recognition$/, '');
+  return target.factId || legacyFactKey(target);
 }
 export function learningStage(target) {
   if (target.learningStage) return target.learningStage;

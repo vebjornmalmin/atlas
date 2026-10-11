@@ -71,7 +71,7 @@ export async function installPackage(db, data, metadata = {}) {
   });
 }
 
-export function recordReview(db, state, review) {
+export function recordReview(db, state, review, legacyState = null) {
   return new Promise((resolve, reject) => {
     let applied = false;
     const tx = db.transaction(['states', 'reviews'], 'readwrite');
@@ -81,7 +81,10 @@ export function recordReview(db, state, review) {
     const existing = tx.objectStore('reviews').get(review.id);
     existing.onsuccess = () => {
       if (existing.result) return;
-      if (!review.practice) tx.objectStore('states').put(state);
+      if (!review.practice) {
+        tx.objectStore('states').put(state);
+        if(legacyState) tx.objectStore('states').put(legacyState);
+      }
       tx.objectStore('reviews').add(review);
       applied = true;
     };
