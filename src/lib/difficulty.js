@@ -1,6 +1,7 @@
 // Difficulty describes the knowledge required, not the number of answer choices.
 const assessment=(difficulty,learningStage,family,difficultyReason)=>({difficulty,learningStage,difficultyFamily:family,difficultyReason,difficultyPolicy:'2026-10-11'});
-export function assessDifficulty(target) {
+function familyAssessment(target) {
+ if(target.learningProfile?.reviewed)return assessment(target.answerFormat==='explanation'?3:2,target.learningProfile.stage,'curated-learning',target.answerFormat==='explanation'?'Krever at du forklarer eller sammenligner dokumenterte sammenhenger med egne ord.':'Krever et sentralt holdepunkt før du går videre til detaljer.');
  const id=target.baseId || target.id.replace(/:recognition$/,'');
  const collections=target.collectionIds || [];
  if(target.mode==='matching')return assessment(3,'details','matching','Krever tre riktige koblinger mellom kjente navn eller steder.');
@@ -8,8 +9,8 @@ export function assessDifficulty(target) {
  if(target.mode==='timeline' || target.kind==='before-after' || /^president-before-/.test(id)) return assessment(5,'connections','sequence','Krever at du kjenner flere personer eller hendelser og den nøyaktige rekkefølgen.');
  if(id.startsWith('foundation:'))return assessment(1,'foundation','introduction','Et overblikk med ett tydelig kjennetegn eller en bred tidsperiode.');
  if(id.startsWith('president-start-'))return assessment(4,'details','presidential-year','Krever et bestemt tiltredelsesår blant mange presidentperioder.');
- if(id.startsWith('nobel-year-'))return assessment(5,'connections','award-year','Krever et bestemt prisår, som kan være langt senere enn oppdagelsen.');
- if(target.answerType==='person-list' || target.answerType==='city-list' || id.startsWith('norway-split-'))return assessment(5,'connections','complete-list','Krever flere riktige navn samtidig; ett manglende navn gjør svaret ufullstendig.');
+ if(id.startsWith('nobel-year-'))return assessment(5,'details','award-year','Krever et bestemt prisår, som kan være langt senere enn oppdagelsen.');
+ if(target.answerType==='person-list' || target.answerType==='city-list' || id.startsWith('norway-split-'))return assessment(5,'details','complete-list','Krever flere riktige navn samtidig; ett manglende navn gjør svaret ufullstendig.');
  if(id.startsWith('nobel-people-'))return assessment(4,'details','award-person','Krever at du kjenner både bidraget og den konkrete prisvinneren.');
  if(/^(nobel-contribution-|science-contribution-)/.test(id))return assessment(4,'details','scientific-contribution','Krever forkunnskap om et faglig bidrag og hvem som står bak det.');
  if(id.startsWith('nobel-category-'))return assessment(3,'details','award-category','Krever kjennskap til personens fag og den bestemte pristildelingen.');
@@ -29,5 +30,13 @@ export function assessDifficulty(target) {
  if(['map','outline'].includes(target.mode))return assessment(target.mode==='map'?3:4,'details','geographic-shape','Krever at du kjenner plassering eller grenser uten stedsnavn på kartet.');
  // Unknown future families are not silently treated as beginner material.
  return assessment(Math.max(3,target.difficulty || 3),target.kind==='connections'?'connections':/^-?\d{3,4}$/.test(String(target.answer))?'details':target.learningStage || 'details','unreviewed','Nytt innhold må vurderes før det brukes som grunnlag.');
+}
+export function assessDifficulty(target) {
+ const family=familyAssessment(target);
+ const numeric=/^-?\d{3,4}$/.test(String(target.answer));
+ const reasoning=target.learningProfile?.reasoning || (target.answerFormat==='explanation'?'explain':['timeline','before-after','arrows'].includes(target.mode) || target.kind==='before-after'?'order':target.mode==='matching'?'compare':'identify');
+ const precision=target.learningProfile?.precision || (numeric?'exact':/person-list|city-list/.test(target.answerType||'')?'complete':'broad');
+ const learningStage=target.learningProfile?.stage || family.learningStage;
+ return {...family,learningStage,precision,reasoning,learningDepth:['compare','explain'].includes(reasoning)?'connections':reasoning==='order'?'sequence':learningStage==='foundation'?'foundation':'details'};
 }
 export function assessTargets(targets) {return targets.map(target=>({...target,...assessDifficulty(target)}));}
