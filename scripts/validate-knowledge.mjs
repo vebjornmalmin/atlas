@@ -1,3 +1,4 @@
+import {validateKnowledgeModel} from '../src/lib/knowledge-model.js';
 import { readFile } from 'node:fs/promises';
 import { pathToFileURL } from 'node:url';
 
@@ -95,6 +96,7 @@ export function validatePackage(data) {
   }
   const counts = Object.fromEntries(sections.map(x => [x, maps[x].size]));
   for (const [key, section] of [['entityCount','entities'],['relationshipCount','relationships'],['targetCount','targets']]) if (data[key] !== undefined && data[key] !== counts[section]) errors.push(`${key} disagrees with contents.`);
+  errors.push(...validateKnowledgeModel(data));
   return { valid: errors.length === 0, errors, warnings, counts };
 }
 
