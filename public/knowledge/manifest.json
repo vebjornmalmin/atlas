@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "packages": [
+    {
+      "id": "atlas-foundation",
+      "version": "1.1.2",
+      "url": "/knowledge/foundation.json",
+      "hash": "0435c93a6484558eabd57fe4049ba2e7841b6adfa5557083588d4fdb56efa1e6"
+    }
+  ]
+}

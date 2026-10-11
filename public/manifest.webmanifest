@@ -1,0 +1,15 @@
+{
+  "id": "/",
+  "name": "Atlas",
+  "short_name": "Atlas",
+  "description": "Quiz om historie, geografi, kunst og vitenskap.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#edf0e6",
+  "theme_color": "#edf0e6",
+  "icons": [
+    {"src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable"},
+    {"src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}
+  ]
+}

@@ -1,0 +1,1914 @@
+# ATLAS — AUTONOMOUS BUILD AND DEPLOYMENT MISSION
+
+You are an autonomous senior software engineer, product
+designer, knowledge architect, data engineer, and
+learning-science specialist.
+
+Your mission is to BUILD, DEPLOY, TEST, and CONTINUOUSLY
+IMPROVE a complete Progressive Web App called ATLAS.
+
+ATLAS is a personal, offline-first knowledge and
+long-term memory training application.
+
+This is an execution assignment.
+
+Do not stop after planning.
+Do not stop after creating mockups.
+Do not stop after generating a project skeleton.
+
+Build the actual product, deploy it, and continue
+improving it through successive working releases.
+
+You have authority to make sensible technical and
+design decisions within the requirements below.
+
+====================================================
+0. FIRST ACTION — CLOUDFLARE AUTHENTICATION
+====================================================
+
+YOUR FIRST TASK IS TO ESTABLISH CLOUDFLARE ACCESS.
+
+Before implementing the complete application:
+
+1. Inspect the development environment.
+2. Check the current Node.js and package manager versions.
+3. Check whether Wrangler is installed.
+4. Install or update Wrangler if necessary.
+5. Check existing Cloudflare authentication.
+6. If necessary, initiate interactive Cloudflare login.
+7. Verify the account and deployment permissions.
+
+Use current supported commands such as:
+
+npx wrangler whoami
+
+If not authenticated:
+
+npx wrangler login
+
+If running in an environment where browser OAuth
+callbacks cannot work, investigate the supported
+device authorization flow:
+
+npx wrangler login --device
+
+Follow the CURRENT Cloudflare documentation.
+
+Do not use deprecated APIs or outdated deployment
+configuration.
+
+Do not expose authentication tokens.
+
+Do not commit credentials to the repository.
+
+If interactive authentication is required, ask me
+to complete the authentication step.
+
+Once authenticated, continue automatically.
+
+Do not ask unnecessary questions.
+
+====================================================
+1. DEPLOY A WORKING APP IMMEDIATELY
+====================================================
+
+This is the most important execution requirement.
+
+DO NOT spend the entire development session
+building architecture before deploying anything.
+
+As soon as Cloudflare authentication succeeds,
+create and deploy a minimal working ATLAS PWA.
+
+The first deployment must include:
+
+- A clean mobile-first interface
+- A working home screen
+- A minimal functional learning session
+- A small set of real, verified knowledge items
+- Local progress persistence
+- A valid PWA manifest
+- A service worker
+- Basic offline support
+- A working Cloudflare URL
+
+Use Cloudflare Workers with static assets or another
+current Cloudflare-supported static deployment approach.
+
+Prefer the simplest reliable deployment architecture.
+
+Verify that the deployed URL actually works.
+
+The initial interface should be beautiful but simple.
+
+Do not wait until the knowledge graph or advanced
+gameplay mechanics are finished.
+
+Once the initial deployment is live:
+
+CONTINUE DEVELOPMENT.
+
+Build the complete application through iterative
+improvements to the same deployment.
+
+Do not treat the first deployment as completion.
+
+====================================================
+2. CONTINUOUS IMPLEMENTATION LOOP
+====================================================
+
+Follow this development cycle:
+
+IMPLEMENT
+    |
+    v
+TEST LOCALLY
+    |
+    v
+BUILD
+    |
+    v
+DEPLOY TO CLOUDFLARE
+    |
+    v
+VERIFY PRODUCTION
+    |
+    v
+CONTINUE IMPROVING
+
+Deploy frequently after completing stable,
+meaningful functionality.
+
+Never knowingly deploy broken functionality.
+
+Keep the existing application operational as
+new features are introduced.
+
+Report the live URL after the first successful
+deployment.
+
+Then continue implementing the remaining requirements.
+
+Prioritize real functionality over lengthy status reports.
+
+If execution time is limited, leave the application
+deployed in a working state and document remaining work.
+
+====================================================
+3. ABSOLUTE PLATFORM REQUIREMENT
+====================================================
+
+ATLAS MUST BE A PROGRESSIVE WEB APP.
+
+Only implement a browser-based PWA.
+
+DO NOT implement:
+
+- Native iOS applications
+- Native Android applications
+- React Native
+- Flutter
+- Capacitor wrappers
+- Electron
+- Separate mobile applications
+
+Do not propose converting the product to a native app.
+
+The PWA must be designed specifically for mobile use,
+while also working in desktop browsers.
+
+Required PWA capabilities:
+
+- Installable on supported mobile browsers
+- Home-screen icon
+- Standalone display mode
+- Responsive layout
+- Service worker
+- Offline application shell
+- Offline knowledge access
+- Offline learning sessions
+- Persistent local learning history
+- Safe application updates
+
+The app must continue functioning when the device
+has no internet connection.
+
+====================================================
+4. PRODUCT PURPOSE
+====================================================
+
+ATLAS helps a person build substantial,
+interconnected general knowledge over many years.
+
+Its purpose is not simply to answer trivia questions.
+
+Its purpose is to:
+
+- Improve long-term factual memory
+- Develop historical understanding
+- Strengthen geographical knowledge
+- Recognize influential people
+- Understand cultural and scientific developments
+- Remember important events and dates
+- Connect knowledge across domains
+- Develop broad intellectual foundations
+
+The product should combine:
+
+1. A curated knowledge library
+2. A structured knowledge graph
+3. A memory scheduling system
+4. Interactive recall exercises
+5. Contextual explanations
+6. Personalized learning priorities
+7. A learning progress model
+
+The central principle:
+
+KNOWLEDGE IS A NETWORK, NOT A QUESTION LIST.
+
+However, remember that the core user experience
+must consist of EXCELLENT MEMORY EXERCISES.
+
+Do not overengineer the knowledge graph at the
+expense of question quality or learning experience.
+
+====================================================
+5. DESIGN DIRECTION
+====================================================
+
+Create an exceptionally beautiful, minimalist app.
+
+The design should feel:
+
+- Calm
+- Modern
+- Premium
+- Intelligent
+- Focused
+- Effortless
+- Thoughtful
+- Elegant
+
+Think of the design quality of a premium reading
+application combined with an excellent learning tool.
+
+Use:
+
+- Beautiful typography
+- Generous whitespace
+- Warm neutral backgrounds
+- Subtle contrasting surfaces
+- One restrained accent color
+- Minimal navigation
+- Elegant transitions
+- Excellent mobile touch interactions
+- Clear visual hierarchy
+
+Support light and dark modes.
+
+Avoid:
+
+- Generic dashboards
+- Excessive statistics
+- Bright gamification
+- Childish illustrations
+- Unnecessary badges
+- Overcomplicated navigation
+- Dense settings screens
+- Decorative complexity
+
+Every screen must have a clear purpose.
+
+The primary action should always be obvious.
+
+The app should feel excellent on an iPhone,
+including smaller screen sizes.
+
+====================================================
+6. APPLICATION NAVIGATION
+====================================================
+
+Build five principal sections.
+
+TODAY
+
+The daily memory training experience.
+
+FOCUS
+
+Configure knowledge interests and learning priorities.
+
+EXPLORE
+
+Browse knowledge collections and relationships.
+
+PROGRESS
+
+Understand learning development and retention.
+
+SETTINGS
+
+Manage preferences, offline data, backups,
+knowledge updates, and developer diagnostics.
+
+The primary screen is TODAY.
+
+It should show:
+
+- Today's learning session
+- Number of due reviews
+- New knowledge available
+- Estimated session duration
+- Current learning focus
+- One prominent start button
+
+Make this screen extremely simple.
+
+====================================================
+7. OFFLINE-FIRST DATA ARCHITECTURE
+====================================================
+
+All personal user data must remain on the device.
+
+Use IndexedDB for persistent local application data.
+
+Dexie is recommended if it simplifies development.
+
+Store locally:
+
+- Learning preferences
+- Selected focus areas
+- Knowledge graph indexes
+- Installed knowledge packages
+- Review history
+- Memory model state
+- Scheduling information
+- Learning progress
+- Diagnostics
+- Error logs
+- Application settings
+
+Do not require a hosted database for personal data.
+
+Do not require authentication to use ATLAS.
+
+Do not use Firebase or Supabase.
+
+Do not upload personal learning history to Cloudflare.
+
+The application must work independently of external
+services after the required knowledge content has
+been downloaded.
+
+KNOWLEDGE STORAGE
+
+The knowledge library should be built from versioned
+JSON packages.
+
+Example package organization:
+
+knowledge/
+  geography/
+  history/
+  politics/
+  literature/
+  art/
+  science/
+  nobel/
+  norway/
+
+Use compressed JSON packages where practical.
+
+Import and index the packages through IndexedDB.
+
+Maintain stable knowledge IDs across versions.
+
+Separate:
+
+A. Immutable or versioned knowledge content
+
+B. Mutable personal memory and learning state
+
+Never overwrite personal learning progress during
+content updates.
+
+Implement proper schema migrations.
+
+STORAGE RELIABILITY
+
+Request persistent browser storage when supported.
+
+Monitor storage quota.
+
+Handle storage errors gracefully.
+
+Support full data export and restore.
+
+Do not assume browser storage is permanent.
+
+All essential learning data must be recoverable from
+a user-exported backup.
+
+====================================================
+8. INITIAL KNOWLEDGE FOUNDATION
+====================================================
+
+The application must be useful immediately.
+
+Do not rely on live Wikipedia queries to provide
+the primary learning experience.
+
+Build a substantial initial knowledge library.
+
+Long-term foundation targets:
+
+- 2,000–3,000 meaningful knowledge entities
+- 8,000–12,000 verified relationships
+- 4,000–6,000 distinct retrieval targets
+- At least 10 substantial learning collections
+
+These are targets, not permission to generate filler.
+
+Prioritize content quality over quantity.
+
+Initial collections must include:
+
+US PRESIDENTS
+
+- Complete presidential chronology
+- Terms of office
+- Important events
+- Historical significance
+- Predecessors and successors
+- Relevant military and international connections
+
+NOBEL PRIZE WINNERS
+
+- Prize categories
+- Laureates
+- Prize years
+- Major contributions
+- Historically significant discoveries
+- Important contextual relationships
+
+WORLD GEOGRAPHY
+
+- Countries
+- Capitals
+- Country outlines
+- Geographic locations
+- Neighboring countries
+- Major world regions
+
+NORWEGIAN GEOGRAPHY
+
+- Counties
+- Major cities
+- Geographic boundaries
+- Important locations
+
+WORLD HISTORY
+
+- Major events
+- Historical periods
+- Wars
+- Political developments
+- Significant figures
+
+LITERATURE
+
+- Important authors
+- Significant literary works
+- Literary movements
+- Historical periods
+- Nobel Literature winners
+
+ART HISTORY
+
+- Significant artists
+- Important artworks
+- Artistic movements
+- Chronological relationships
+
+SCIENCE
+
+- Important scientists
+- Discoveries
+- Nobel laureates
+- Scientific developments
+
+Do not allocate equal depth to every topic.
+
+Prioritize meaningful general knowledge.
+
+====================================================
+9. KNOWLEDGE GRAPH
+====================================================
+
+Build a typed, extensible knowledge graph.
+
+The graph must support entities such as:
+
+- People
+- Countries
+- Cities
+- Regions
+- Historical events
+- Political offices
+- Organizations
+- Awards
+- Literary works
+- Artworks
+- Scientific discoveries
+- Historical periods
+- Concepts
+- Cultural movements
+
+Represent relationships explicitly.
+
+Examples:
+
+Eisenhower
+  -> held office -> US President
+
+Eisenhower
+  -> associated with -> D-Day
+
+Eisenhower
+  -> preceded by -> Harry Truman
+
+Marie Curie
+  -> received -> Nobel Prize in Physics
+
+Marie Curie
+  -> received -> Nobel Prize in Chemistry
+
+Oslo
+  -> capital of -> Norway
+
+Jon Fosse
+  -> received -> Nobel Prize in Literature
+
+Relationships must support:
+
+- Stable IDs
+- Relationship types
+- Direction
+- Dates where applicable
+- Source references
+- Confidence
+- Additional context
+
+Use Wikidata IDs wherever appropriate.
+
+Do not store duplicate entities in separate collections.
+
+Collections should reference the same underlying
+knowledge graph.
+
+A fact learned in one collection should contribute
+to learning in other relevant collections.
+
+====================================================
+10. MULTIDIMENSIONAL LEARNING FOCUS
+====================================================
+
+The user must be able to customize learning priorities.
+
+Do not reduce this to a single difficulty setting.
+
+Support independent dimensions.
+
+SUBJECT
+
+History, geography, politics, literature, art,
+science, philosophy, economics, and more.
+
+TOPIC
+
+Examples:
+
+- US presidency
+- Nobel Prize winners
+- European capitals
+- World War II
+- Norwegian history
+- Impressionist painters
+
+GEOGRAPHY
+
+- Local
+- National
+- Regional
+- International
+- Global
+
+Default relevance context:
+
+Oslo, Norway.
+
+IMPORTANT:
+
+Norwegian relevance is one factor, not the
+organizing principle of the entire product.
+
+Globally significant information must remain important.
+
+TIME
+
+Allow historical period selection and custom
+date ranges.
+
+DEPTH
+
+- Foundation
+- Intermediate
+- Advanced
+- Specialized
+
+LEARNING OBJECTIVE
+
+- Recognition
+- Recall
+- Chronology
+- Geography
+- Connections
+- Contextual understanding
+
+BREADTH VS DEPTH
+
+Allow users to choose between broad learning
+and focused mastery.
+
+DISCOVERY VS CONSOLIDATION
+
+Allow users to control how much time is dedicated
+to new learning versus reviewing existing knowledge.
+
+Do not overload the UI with sliders.
+
+Design a simple focus editor that progressively
+reveals advanced options.
+
+====================================================
+11. RELEVANCE AND DIFFICULTY ENGINE
+====================================================
+
+Build independent models for:
+
+A. Knowledge significance
+B. Expected initial difficulty
+C. Personal memory difficulty
+D. Exercise-specific difficulty
+E. Question quality
+
+Do not confuse these measurements.
+
+SIGNIFICANCE
+
+Estimate the educational importance of a knowledge item.
+
+Consider:
+
+- Historical influence
+- Cultural importance
+- Global significance
+- Connections to major events
+- Foundational usefulness
+- Relevance to selected interests
+
+INITIAL DIFFICULTY
+
+Use measurable candidate predictors such as:
+
+- Expected public familiarity
+- Historical distance
+- Geographic or cultural familiarity
+- Conceptual complexity
+- Required prerequisite knowledge
+- Answer specificity
+- Retrieval format
+- Availability of meaningful memory anchors
+
+Do not assume these predictors have fixed
+universal effects.
+
+For example, older information is not automatically
+harder to remember.
+
+A highly connected concept may be easier to learn
+because it has more memory cues.
+
+Use an explainable heuristic initially.
+
+Calibrate difficulty estimates using actual
+learning performance.
+
+PERSONAL MEMORY DIFFICULTY
+
+Measure how well the user actually remembers
+a specific retrieval target.
+
+The user's performance should increasingly replace
+generic difficulty assumptions.
+
+QUESTION QUALITY
+
+Evaluate exercises according to:
+
+- Historical or educational significance
+- Contextual usefulness
+- Clarity
+- Factual reliability
+- Retrieval suitability
+- Redundancy
+
+Reject ambiguous or trivial questions.
+
+A difficult question is not necessarily a valuable one.
+
+====================================================
+12. MEMORY ENGINE
+====================================================
+
+Use established research on:
+
+- Active recall
+- Spaced repetition
+- Retrieval practice
+- Corrective feedback
+- Interleaving
+- Contextual elaboration
+
+Use a maintained FSRS implementation where appropriate.
+
+Track memory per retrieval target.
+
+Examples:
+
+Recognizing Eisenhower from a photograph is
+different from remembering his presidency dates.
+
+Remembering his relationship to D-Day is another
+retrieval target.
+
+Record:
+
+- Review timestamp
+- Recall outcome
+- Memory stability
+- Estimated retrievability
+- Scheduling difficulty
+- Next review date
+- Review history
+
+Separate content difficulty from FSRS scheduling state.
+
+Provide:
+
+- New learning
+- Due reviews
+- Forgotten knowledge
+- Difficult knowledge
+- Long-term retention
+
+Support configurable daily learning duration.
+
+The app should adapt to actual performance.
+
+Do not repeatedly show the same easy questions
+simply to fill a daily session.
+
+====================================================
+13. GAMEPLAY MECHANICS
+====================================================
+
+Implement a reusable exercise engine.
+
+The knowledge graph is the source of facts.
+
+Exercise templates turn those facts into meaningful
+memory challenges.
+
+Prioritize the following mechanics.
+
+1. FREE RECALL
+
+Present a question without answer options.
+
+Let the user attempt an answer.
+
+Reveal the correct answer with context.
+
+Allow self-assessment where appropriate.
+
+2. RECOGNITION
+
+Identify a person, object, place, artwork,
+or historical event from images or clues.
+
+3. CHRONOLOGICAL TIMELINE
+
+Place events or people in chronological order.
+
+Examples:
+
+Arrange US presidents.
+
+Place historical events relative to one another.
+
+Identify which event happened first.
+
+4. BEFORE AND AFTER
+
+Recall predecessors, successors,
+or chronological relationships.
+
+5. KNOWLEDGE CONNECTIONS
+
+Identify relationships between people,
+events, places, and institutions.
+
+Example:
+
+Which World War II military commander later
+became US president?
+
+6. MAP IDENTIFICATION
+
+Recognize a country or county by its outline.
+
+7. MAP LOCATION
+
+Tap the correct country or region on an
+unlabeled map.
+
+8. ART RECOGNITION
+
+Identify artists, paintings, and movements.
+
+9. COLLECTION RECALL
+
+Reconstruct meaningful knowledge sets.
+
+Examples:
+
+Name US presidents in chronological order.
+
+Recall European capitals.
+
+Name Nobel laureates in a selected category.
+
+10. CONTEXT RECONSTRUCTION
+
+Start with an entity and recall important
+historical or conceptual connections.
+
+For example:
+
+Eisenhower
+    -> World War II
+    -> Allied command
+    -> D-Day
+    -> US presidency
+    -> Cold War
+
+The system must provide corrective feedback.
+
+Prefer independently recalled answers over
+multiple-choice recognition when appropriate.
+
+Provide hints when useful.
+
+Do not fabricate unsupported explanations.
+
+====================================================
+14. INTERACTIVE MAP ENGINE
+====================================================
+
+Use MapLibre GL JS when appropriate.
+
+All essential map exercises must work offline.
+
+Use locally packaged geographic datasets.
+
+Recommended sources include Natural Earth and
+appropriate official geographic datasets.
+
+Required features:
+
+- Country outlines
+- Blank political maps
+- Unlabeled country borders
+- Interactive country selection
+- Norwegian county boundaries
+- Capital identification
+- Geographic highlighting
+- Geographic relationships
+
+Do not require external map tiles.
+
+Do not rely on Google Maps or another hosted
+map service during learning sessions.
+
+Keep geographic rendering efficient on mobile.
+
+Use correct published boundaries.
+
+Historical borders must use period-specific sources
+when available.
+
+Never present modern boundaries as historically
+accurate without qualification.
+
+====================================================
+15. KNOWLEDGE ACQUISITION ENGINE
+====================================================
+
+Build a maintainable knowledge acquisition pipeline.
+
+Primary sources:
+
+- Wikidata
+- Wikipedia
+- Nobel Prize official API
+- Natural Earth
+- Suitable official geographic datasets
+- Other reputable open sources when necessary
+
+IMPORTANT:
+
+Before implementing integrations, inspect the latest
+official API documentation.
+
+Do not rely exclusively on remembered API behavior.
+
+Verify:
+
+- Current endpoints
+- Authentication requirements
+- Rate limits
+- Response formats
+- Pagination
+- Attribution requirements
+- Licensing
+- Deprecations
+
+Implement source adapters.
+
+Pipeline:
+
+DISCOVER
+    |
+    v
+FETCH
+    |
+    v
+NORMALIZE
+    |
+    v
+VALIDATE
+    |
+    v
+CONNECT
+    |
+    v
+SCORE
+    |
+    v
+GENERATE RETRIEVAL TARGETS
+    |
+    v
+PACKAGE
+    |
+    v
+PUBLISH
+
+Use deterministic fact extraction when possible.
+
+Do not invent missing facts.
+
+Do not generate questions from unsupported claims.
+
+Preserve source references.
+
+Store provenance for important relationships.
+
+Respect source licenses and attribution rules.
+
+Do not blindly scrape Wikipedia HTML when structured
+APIs are available.
+
+====================================================
+16. FOUNDATION FIRST, EXPANSION SECOND
+====================================================
+
+The application should have a large, useful
+foundation before needing external expansion.
+
+During ordinary use, learning should rely on
+locally installed content.
+
+Do not make a Wikipedia request every time
+a user opens a question.
+
+Do not require internet connectivity to answer
+questions or browse downloaded knowledge.
+
+Introduce three content states:
+
+FOUNDATION
+
+Knowledge already installed on the device.
+
+AVAILABLE EXPANSION
+
+Additional knowledge packages available online.
+
+EXPANSION REQUESTED
+
+Knowledge the user explicitly wants to explore
+in greater depth.
+
+The application should initially prioritize
+the existing foundation.
+
+For the first 14 days, avoid automatically introducing
+new optional topic expansions.
+
+Users can still request additional topics manually.
+
+Do not block corrections or critical content updates
+during this period.
+
+After the foundation is well established, the app can
+suggest meaningful expansions.
+
+Example:
+
+"You have learned the foundational US presidents.
+Would you like to explore their relationships
+with major European historical events?"
+
+Expansion should be intelligent, relevant,
+and controlled.
+
+====================================================
+17. BACKGROUND KNOWLEDGE UPDATES
+====================================================
+
+Implement a robust, nonblocking knowledge update system.
+
+The application should periodically check whether
+new or improved knowledge packages are available.
+
+DEFAULT TARGET:
+
+Approximately once per day.
+
+The update mechanism must be designed around
+actual browser capabilities.
+
+CRITICAL REQUIREMENT:
+
+Do not assume a closed PWA can reliably execute
+scheduled background tasks on iOS or Android.
+
+Implement a reliable fallback.
+
+CLIENT-SIDE UPDATE STRATEGY
+
+When the application is active:
+
+1. Check whether the last update check was more
+   than approximately 24 hours ago.
+
+2. If online, request a lightweight knowledge
+   manifest from Cloudflare.
+
+3. Compare available versions with locally
+   installed knowledge packages.
+
+4. Identify relevant updates.
+
+5. Download suitable updates without blocking
+   the learning experience.
+
+6. Validate package integrity and compatibility.
+
+7. Import new data into IndexedDB.
+
+8. Atomically activate validated updates.
+
+9. Preserve all existing learning progress.
+
+10. Record update results in the developer log.
+
+Checks should also run opportunistically:
+
+- On application startup
+- When returning to the application
+- When network connectivity returns
+- During long active sessions when appropriate
+
+Throttle requests to avoid unnecessary network traffic.
+
+Perform large parsing and validation operations
+off the main UI thread when practical.
+
+Use Web Workers for CPU-intensive processing.
+
+Do not cause interface freezes during updates.
+
+PERIODIC BACKGROUND SYNC
+
+Investigate browser support.
+
+Use it only as an optional enhancement.
+
+Do not depend on it for correctness.
+
+SERVER-SIDE UPDATE CHECKS
+
+Investigate Cloudflare Workers Cron Triggers
+for scheduled public knowledge update checks.
+
+These may run even when the phone is offline
+or the PWA is closed.
+
+However:
+
+Cloudflare must never need to store the user's
+personal learning progress.
+
+Server-side jobs may process PUBLIC knowledge
+and prepare updated knowledge packages.
+
+Use durable publication of versioned packages
+when required.
+
+Prefer the simplest approach that is reliable
+and compatible with the project constraints.
+
+Do not introduce a hosted database merely
+to store user information.
+
+If durable public package storage is needed,
+use the smallest suitable Cloudflare-supported
+mechanism and document its purpose.
+
+Keep it separate from all personal learning data.
+
+IMPORTANT:
+
+An update check must not automatically introduce
+a large volume of new educational content.
+
+Distinguish between:
+
+A. Corrections to existing knowledge
+B. Updates to existing collections
+C. Optional new topic expansions
+
+Corrections can be installed automatically after
+validation.
+
+New topic expansions should generally be controlled
+through the user's focus preferences.
+
+====================================================
+18. CONTENT VERSIONING AND UPDATES
+====================================================
+
+Each knowledge package must have:
+
+- Package ID
+- Version
+- Schema version
+- Generation timestamp
+- Source references
+- Entity count
+- Relationship count
+- Content hash
+- Compatibility information
+
+Provide a manifest listing available packages.
+
+Support:
+
+- Initial download
+- Incremental updates
+- Content corrections
+- Optional package installation
+- Package removal where safe
+- Update failure recovery
+
+Never partially activate a failed update.
+
+Keep the previous working package available
+until a replacement is fully validated.
+
+Protect review history from knowledge changes.
+
+If a knowledge entity is replaced, merged,
+or deprecated, provide an explicit migration path
+where possible.
+
+====================================================
+19. KNOWLEDGE COVERAGE AND EXHAUSTION
+====================================================
+
+The system should know whether a selected topic
+has sufficient knowledge available.
+
+Track:
+
+- Installed entities
+- Available retrieval targets
+- Introduced knowledge
+- Unintroduced knowledge
+- Mastered knowledge
+- Weak knowledge
+- Due reviews
+- Missing prerequisites
+- Coverage gaps
+- Available expansions
+
+Do not confuse "nothing due today" with
+"the collection has been exhausted."
+
+When the user has learned most foundational content,
+suggest the next useful level of depth.
+
+Avoid offering obscure trivia merely to increase
+the number of questions.
+
+====================================================
+20. PERSONAL LEARNING COLLECTIONS
+====================================================
+
+Users should be able to create and maintain
+personal focus collections.
+
+Examples:
+
+"Master US Presidents"
+
+"Learn European Geography"
+
+"Understand World War II"
+
+"Recognize Important Paintings"
+
+"Know Nobel Prize Winners"
+
+"Norwegian Political History"
+
+Collections should be dynamically generated views
+of the same knowledge graph.
+
+Do not duplicate underlying facts.
+
+Allow users to customize:
+
+- Topic
+- Geographic scope
+- Historical period
+- Learning depth
+- Daily attention allocation
+- Preferred exercise types
+
+Learning progress must carry across collections.
+
+====================================================
+21. KNOWLEDGE EXPLORATION
+====================================================
+
+Build a beautiful knowledge exploration interface.
+
+Users should be able to:
+
+- Search entities
+- View contextual summaries
+- Explore relationships
+- Discover related topics
+- Add knowledge to learning focus
+- Move between connected subjects
+
+Example:
+
+Marie Curie
+    |
+    v
+Radioactivity
+    |
+    v
+Ernest Rutherford
+    |
+    v
+Atomic structure
+    |
+    v
+Niels Bohr
+
+Distinguish direct factual relationships from
+suggested educational connections.
+
+Avoid irrelevant knowledge graph expansion.
+
+The exploration experience should remain
+simple and intuitive on mobile.
+
+====================================================
+22. LOCAL DEVELOPER DASHBOARD
+====================================================
+
+Since this is initially a single-user application,
+implement a polished developer dashboard.
+
+Access through:
+
+Settings -> Developer
+
+The developer interface should follow the same
+visual design system as the main application.
+
+It should be functional, not decorative.
+
+SECTION A: STORAGE
+
+Show:
+
+- IndexedDB usage
+- Cache Storage usage
+- Browser storage quota estimate
+- Storage persistence status
+- Installed knowledge packages
+- Total knowledge size
+- Cached media size
+- Offline readiness
+
+Use browser-supported storage APIs.
+
+If actual RAM usage is unavailable,
+do not display invented memory measurements.
+
+SECTION B: KNOWLEDGE GRAPH
+
+Show:
+
+- Total entities
+- Total relationships
+- Total retrieval targets
+- Entities by domain
+- Collection coverage
+- Missing descriptions
+- Missing source references
+- Duplicate entities
+- Invalid relationships
+- Failed imports
+- Data integrity status
+
+SECTION C: MEMORY ENGINE
+
+Show:
+
+- Recent review events
+- Scheduling decisions
+- Predicted retrieval difficulty
+- Estimated memory stability
+- Review selection explanations
+- Next review dates
+- Memory scheduling errors
+
+Allow inspection of individual retrieval targets.
+
+SECTION D: BACKGROUND UPDATES
+
+Show:
+
+- Last update check
+- Last successful update
+- Last failed update
+- Installed package versions
+- Available package versions
+- Downloaded data size
+- Update duration
+- Validation errors
+- Source API errors
+- Update status
+
+Provide a manual "Check for updates" action.
+
+Provide a manual "Validate knowledge database" action.
+
+SECTION E: LOCAL ERROR LOGS
+
+Capture:
+
+- Application errors
+- IndexedDB errors
+- Knowledge validation errors
+- Failed imports
+- Failed update checks
+- Cache errors
+- Exercise generation errors
+- Unhandled promise rejections
+
+Store logs locally.
+
+Use a bounded log history.
+
+Include timestamps, severity,
+component, and relevant context.
+
+Support diagnostic export to JSON.
+
+Do not use external analytics or error-monitoring
+services for personal user information.
+
+SECTION F: DEVELOPER TOOLS
+
+Provide:
+
+- Export database
+- Import database
+- Rebuild knowledge indexes
+- Validate knowledge graph
+- Check offline readiness
+- Inspect package versions
+- View recent learning events
+- Clear diagnostic logs
+
+Destructive operations must require confirmation.
+
+====================================================
+23. KNOWLEDGE READINESS METRIC
+====================================================
+
+Introduce a metric called Knowledge Readiness.
+
+This describes the quality and completeness of
+a knowledge collection.
+
+It does NOT describe user learning performance.
+
+Calculate readiness from measurable factors:
+
+- Coverage of important entities
+- Availability of verified relationships
+- Source completeness
+- Exercise availability
+- Exercise quality
+- Prerequisite coverage
+- Diversity of memory interactions
+
+Clearly document the scoring formula.
+
+Avoid fabricated precision.
+
+Display readiness in the developer dashboard.
+
+Separately track:
+
+Knowledge Readiness
+    = Quality of the content foundation
+
+Memory Mastery
+    = How well the user remembers
+
+Learning Difficulty
+    = How challenging the content is
+
+These must remain separate measurements.
+
+====================================================
+24. REMINDERS
+====================================================
+
+Implement a simple daily practice reminder system.
+
+Support:
+
+- Preferred daily practice time
+- Due review indicators
+- Review count
+- Calendar reminder export
+
+Provide an .ics calendar event export.
+
+The phone's calendar can deliver recurring
+notifications independently of the PWA.
+
+Do not promise reliable local scheduled
+notifications while the PWA is closed.
+
+Do not introduce a remote user account simply
+to support reminders.
+
+Push notifications may be considered only
+as an optional future enhancement.
+
+====================================================
+25. TECHNOLOGY STACK
+====================================================
+
+Recommended stack:
+
+React
+TypeScript
+Vite
+Tailwind CSS
+IndexedDB
+Dexie
+FSRS
+MapLibre GL JS
+Service Workers
+JSON knowledge packages
+Cloudflare Workers with static assets
+Wrangler
+
+Use current, maintained versions.
+
+Consult official documentation before implementation.
+
+Prefer simple, maintainable architecture.
+
+Avoid unnecessary dependencies.
+
+Avoid premature microservice architectures.
+
+Keep the production architecture small.
+
+Suggested project organization:
+
+src/
+  app/
+  components/
+  design/
+  features/
+    today/
+    focus/
+    explore/
+    progress/
+    settings/
+    developer/
+  knowledge/
+    graph/
+    ingestion/
+    queries/
+    packages/
+    validation/
+  learning/
+    scheduling/
+    exercises/
+    difficulty/
+    relevance/
+  maps/
+  storage/
+  diagnostics/
+  updates/
+  workers/
+
+scripts/
+  ingest/
+  validate/
+  package/
+
+public/
+  icons/
+  maps/
+  knowledge/
+
+tests/
+
+Use actual project requirements to refine the structure.
+
+====================================================
+26. CLOUDFLARE ARCHITECTURE
+====================================================
+
+Cloudflare is responsible for:
+
+- Hosting the PWA
+- Serving application assets
+- Serving public knowledge packages
+- Serving package manifests
+- Supporting optional scheduled public-content jobs
+
+Cloudflare is NOT responsible for storing
+personal learning progress.
+
+The device is responsible for:
+
+- Personal memory state
+- Review scheduling
+- Learning sessions
+- Knowledge queries
+- Offline maps
+- Local content
+- Diagnostics
+- User preferences
+
+Use the current Cloudflare deployment approach.
+
+Maintain Wrangler configuration in source control.
+
+Deploy the application early.
+
+Continue deploying working iterations.
+
+Do not introduce Cloudflare D1, KV, R2, or
+other storage merely out of convenience.
+
+Use additional Cloudflare storage only if a
+clearly required public-content update mechanism
+cannot be implemented reliably without it.
+
+Document any such dependency.
+
+====================================================
+27. PERFORMANCE REQUIREMENTS
+====================================================
+
+Optimize for mobile use.
+
+Implement:
+
+- Fast startup
+- Minimal initial JavaScript
+- Lazy-loaded large components
+- Efficient graph queries
+- IndexedDB indexes
+- Efficient map rendering
+- Background data parsing
+- Nonblocking updates
+- Compressed knowledge packages
+- Lazy-loaded media
+
+Avoid downloading all media unnecessarily.
+
+Provide offline availability indicators.
+
+Keep core knowledge usable offline.
+
+Do not require the entire future knowledge library
+to be installed before learning begins.
+
+====================================================
+28. QUALITY ASSURANCE
+====================================================
+
+Implement automated tests.
+
+Test:
+
+KNOWLEDGE
+
+- Entity integrity
+- Relationship integrity
+- Date validation
+- Source references
+- Duplicate handling
+- Package versioning
+- Update migrations
+
+LEARNING
+
+- Exercise generation
+- Answer correctness
+- Recall scheduling
+- Review persistence
+- Difficulty calculations
+- Cross-collection knowledge sharing
+
+APPLICATION
+
+- First launch
+- Focus selection
+- Completing a session
+- Saving progress
+- App restart
+- Offline use
+- Database migration
+- Backup and restore
+
+UPDATES
+
+- Manifest retrieval
+- Package validation
+- Interrupted downloads
+- Failed imports
+- Rollback behavior
+- Offline update fallback
+- Repeated update checks
+
+MAPS
+
+- Country identification
+- Offline boundary rendering
+- Touch interactions
+- Correct answer detection
+
+Use browser-based end-to-end testing.
+
+Explicitly test the application with network
+access disabled.
+
+Verify that previously installed knowledge
+remains available.
+
+Test PWA installation requirements.
+
+Test service worker behavior.
+
+Test production deployment.
+
+====================================================
+29. EXECUTION PRIORITIES
+====================================================
+
+FOLLOW THIS ORDER.
+
+MILESTONE 1 — CLOUDFLARE ACCESS
+
+Authenticate with Wrangler.
+
+Verify deployment access.
+
+MILESTONE 2 — FIRST LIVE DEPLOYMENT
+
+Create the smallest genuinely functional ATLAS PWA.
+
+Deploy it immediately.
+
+Provide the live URL.
+
+MILESTONE 3 — CORE LOCAL ARCHITECTURE
+
+Implement IndexedDB, service worker,
+offline functionality, and backup.
+
+MILESTONE 4 — KNOWLEDGE GRAPH
+
+Implement the entity and relationship schema.
+
+Create the ingestion pipeline.
+
+Import initial verified data.
+
+MILESTONE 5 — MEMORY TRAINING
+
+Implement retrieval targets, FSRS,
+learning sessions, and feedback.
+
+MILESTONE 6 — GAMEPLAY
+
+Implement recall, recognition,
+timelines, and knowledge connections.
+
+MILESTONE 7 — GEOGRAPHY
+
+Implement offline interactive maps
+and geographic exercises.
+
+MILESTONE 8 — KNOWLEDGE EXPANSION
+
+Implement versioned packages, manifest checks,
+background update processing, and validation.
+
+MILESTONE 9 — PERSONALIZATION
+
+Implement focus controls, difficulty estimation,
+relevance, and adaptive learning.
+
+MILESTONE 10 — DEVELOPER TOOLS
+
+Implement storage diagnostics, error logs,
+knowledge integrity checks, and update monitoring.
+
+MILESTONE 11 — CONTENT EXPANSION
+
+Build out the initial knowledge portfolio
+to the defined foundation targets.
+
+MILESTONE 12 — POLISH AND VALIDATION
+
+Improve design, performance, accessibility,
+offline reliability, and automated test coverage.
+
+Deploy each milestone when stable.
+
+Do not delay initial deployment until
+the entire roadmap is complete.
+
+====================================================
+30. DEFINITION OF DONE
+====================================================
+
+The assignment is complete only when:
+
+1. A real ATLAS PWA is deployed to Cloudflare.
+
+2. The application is installable.
+
+3. The application works offline.
+
+4. Personal learning data is stored locally.
+
+5. The knowledge graph is implemented.
+
+6. The initial knowledge foundation covers
+   multiple substantial domains.
+
+7. Knowledge relationships support actual
+   cross-domain memory exercises.
+
+8. Users can adjust learning focus.
+
+9. Spaced repetition schedules reviews.
+
+10. Several gameplay mechanics work.
+
+11. Geography exercises work offline.
+
+12. Knowledge packages can be updated safely.
+
+13. Background update checks do not disrupt learning.
+
+14. Offline functionality survives failed updates.
+
+15. Local diagnostics are available.
+
+16. Backup and restore work.
+
+17. Automated tests pass.
+
+18. The UI is polished and mobile-first.
+
+19. Cloudflare deployment is operational.
+
+20. The codebase is maintainable and documented.
+
+====================================================
+31. FINAL EXECUTION RULES
+====================================================
+
+Do not begin by writing a lengthy product strategy.
+
+Do not begin by designing every screen in detail.
+
+Do not begin by generating thousands of questions.
+
+BEGIN WITH CLOUDFLARE AUTHENTICATION.
+
+THEN BUILD AND DEPLOY A SIMPLE WORKING PWA.
+
+THEN CONTINUE DEVELOPMENT.
+
+Always prioritize:
+
+1. Working software
+2. Offline reliability
+3. Excellent memory exercises
+4. Correct, meaningful knowledge
+5. Simple and beautiful design
+6. Safe local persistence
+7. Intelligent progression
+8. Expandable architecture
+
+Do not silently skip requirements.
+
+Do not claim features are working without testing them.
+
+Do not fabricate knowledge to meet content targets.
+
+Do not confuse a prototype with a completed product.
+
+If a technical limitation exists, implement
+the best working PWA-compatible fallback.
+
+Never propose switching to native mobile development.
+
+Keep the user informed at major milestones,
+but minimize interruptions.
+
+Make reasonable decisions independently.
+
+The project should remain deployable throughout
+development.
+
+Start now.
+
+FIRST ACTION:
+
+Check Wrangler authentication and connect to Cloudflare.
+
+SECOND ACTION:
+
+Build and deploy the first functional ATLAS PWA.
+
+THIRD ACTION:
+
+Continue implementing the complete product.
