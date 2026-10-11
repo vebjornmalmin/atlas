@@ -28,15 +28,16 @@ export function prerequisiteSupport(data,objective,targets,reviews) {
 }
 const disclosedText=t=>[t.answer,t.explanation,t.snapshot,t.followUp].filter(Boolean).join(' ').normalize('NFKC').toLocaleLowerCase('nb');
 export function safeLearningQueue(rows) {
-  const selected=[], seen=new Set();let disclosed='';
+  const selected=[], seen=new Set(), introducedEntities=new Set();let disclosed='';
   for(const row of rows){
     const t=row.target,key=exposureKey(t);
     if(seen.has(key))continue;
     const answer=String(t.answer||'').normalize('NFKC').toLocaleLowerCase('nb');
     const sharesClaims=selected.some(r=>(r.target.claimIds||[]).some(id=>(t.claimIds||[]).includes(id)));
-    const leaked=sharesClaims || (answer.length>=4 && disclosed.includes(answer)) || (t.answerFormat==='explanation' && selected.some(r=>r.objectiveId && (t.prerequisiteObjectiveIds||[]).includes(r.objectiveId)));
+    const alternatives=[answer,...(t.acceptedAnswers||[]).map(a=>String(a).normalize('NFKC').toLocaleLowerCase('nb'))];
+    const leaked=sharesClaims || (t.entityId && introducedEntities.has(t.entityId)) || alternatives.some(a=>a.length>=4 && disclosed.includes(a)) || (t.answerFormat==='explanation' && selected.some(r=>r.objectiveId && (t.prerequisiteObjectiveIds||[]).includes(r.objectiveId)));
     if(leaked)continue;
-    selected.push(row);seen.add(key);disclosed+=' '+disclosedText(t);
+    selected.push(row);seen.add(key);if(t.entityId && (t.snapshot || t.followUp || t.collectionIds?.includes('art')))introducedEntities.add(t.entityId);disclosed+=' '+disclosedText(t);
   }
   return selected;
 }

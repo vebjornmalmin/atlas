@@ -27,10 +27,10 @@ export function schedulingIndex(targets,states,reviews=[]) {
     const canonical=byId.get(key), old=byId.get(legacy);
     const review=latestReview.get(legacy);
     // Legacy cards without evidence metadata remain usable only for written recall.
-    const oldKind=review?evidenceKind({mode:review.mode,answerFormat:review.answerFormat}):'recall';
+    const oldKind=review?evidenceKind({mode:review.mode || (review.targetId.endsWith(':recognition')?'recognition':'recall'),answerFormat:review.answerFormat}):'recall';
     const compatible=old && oldKind===evidenceKind(target)?old:null;
     const candidates=[canonical,compatible].filter(Boolean).sort((a,b)=>(b.last_review||'').localeCompare(a.last_review||''));
-    if(candidates.length)index.set(key,candidates[0]);
+    if(candidates.length){const previous=index.get(key);if(!previous || (candidates[0].last_review||'')>(previous.last_review||'') || candidates[0].id===key)index.set(key,candidates[0]);}
   }
   for(const state of states)if(!index.has(state.id))index.set(state.id,state);
   return index;
@@ -131,7 +131,7 @@ export function selectPracticeSession(targets, states, preferences, objective='m
 }
 
 export function memorySummary(targets, states, now = new Date()) {
-  const activeIds = new Set(targets.map(factKey));
+  const activeIds = new Set(targets.map(schedulingKey));
   const active = [...schedulingIndex(targets,states)].filter(([id])=>activeIds.has(id)).map(([,state])=>state);
   const introduced = active.length;
   const strong = active.filter(s => s.stability >= 21 && s.lapses <= Math.max(1, s.reps / 3)).length;

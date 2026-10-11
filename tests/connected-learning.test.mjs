@@ -39,3 +39,9 @@ test('daily connected selection respects filters and zero new-knowledge preferen
  const result=selectConnectedSession(data,targets,[],{...base,newRatio:0.4},now,data.collections,[]);
  assert.ok(result.queue.length);assert.ok(result.queue.every(r=>r.target.collectionIds.includes('art')));
 });
+test('teaching a work defers artist identification and accepted-answer spoilers',()=>{
+ const rows=[{target:{id:'purpose',entityId:'work',answer:'Dekorasjon',snapshot:'Van Gogh forberedte huset.',collectionIds:['art']}},{target:{id:'artist',entityId:'work',answer:'Vincent van Gogh',acceptedAnswers:['Van Gogh'],collectionIds:['art']}}];
+ assert.equal(safeLearningQueue(rows).length,1);
+ const art=selectLearningPath(data,'art-nature',targets,[],{},[],now);
+ assert.ok(!art.queue.some(row=>row.target.id==='artist-sunflowers'));
+});

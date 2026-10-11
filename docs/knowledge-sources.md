@@ -25,3 +25,26 @@ The package provides factual relationships, not speculative educational connecti
 Run `node scripts/validate-knowledge.mjs` to check IDs, all references, descriptions, explanations, years, chronology, non-consecutive administrations and count metadata. Validation checks structure and editorial invariants; it cannot independently prove a factual assertion. Content corrections require review against the source.
 
 Remaining content work: all Norwegian counties and cities, broader country coverage and borders, deeper historical context, licensed visual media, and substantially more literature, art and scientific connections. Expansions should pass the same source and quality checks rather than meeting a count through repetitive questions.
+
+## Dynamisk innlasting av bilder og spørsmål
+
+Biblioteket og emnesidene har «Hent flere bilder og spørsmål». Biblioteket henter opptil åtte tidligere uhentede kildeposter fra valgt samling per trykk; emnesiden kan hente samme post på nytt. Eksisterende Wikidata-ID-er gir et utgangspunkt for over tusen registerposter. Dette er ikke en påstand om at alle postene har et brukbart bilde eller et nytt spørsmål.
+
+Den felles spørringsstrukturen er definert i `src/lib/source-loading.js` som `SOURCE_QUERY_STRUCTURE`. Den følger identitet og kildebelegg, ikke fritekstsøk etter navn:
+
+| Kilde | Innparameter | Struktur og kobling |
+| --- | --- | --- |
+| Wikipedia, alle språkverter | HTTPS-artikkellenke fra nodens kilder | `action=query`, `prop=pageprops\|info`, `redirects=1`, `titles`; `pageprops.wikibase_item` peker på samme Wikidata-post. Tvetydighetssider utelates. |
+| Wikidata | Eksakt Q-ID fra artikkelen eller noden | `action=wbgetentities`, `props=labels\|aliases\|claims\|sitelinks`; svarnoder hentes samlet med norske navn og aliaser. |
+| Wikimedia Commons | Filnavn fra den identifiserte postens P18 | `action=query`, `prop=imageinfo`, `iiprop=url\|size\|extmetadata`, `iiurlwidth=900`; kontroll av filadresse, lisens, fotograf/kreditering og dimensjoner. |
+| The Metropolitan Museum of Art | Eksakt objekt-ID fra museumskilden | `/public/collection/v1/objects/{id}`; bildet brukes bare når `objectID` stemmer og `isPublicDomain` er sant. Kunstnerforbindelsen får museumskatalogen som kilde. |
+
+API-kontraktene er dokumentert hos [MediaWiki](https://www.mediawiki.org/wiki/API:Query), [Commons-bildemetadata](https://www.mediawiki.org/wiki/API:Imageinfo), [Wikidata](https://www.wikidata.org/w/api.php?action=help&modules=wbgetentities) og [Met](https://metmuseum.github.io/). Wikipedia-strukturen er generell på tvers av språk, men behandler én identifisert artikkel om gangen; den laster ikke ned hele Wikipedia. Andre nettsteder trenger egne adaptere for faktisk dokumenterte felt, identitet og lisens.
+
+Når kilden ikke gir nye brukbare påstander, lager innlastingen også spørsmål fra allerede dokumenterte forbindelser i det installerte nettverket: pris, institusjon ved pristildelingen og anerkjent faglig bidrag. År, entydig svar og kildereferanser må finnes i forbindelsen. Disse spørsmålene bruker samme kunnskapspåstand som forbindelsen og introduserer ingen nye faktapåstander.
+
+Spørsmålsmalene bruker fødested (P19), dødssted (P20), forfatter (P50) og kunstner (P170). Bare én entydig verdi med en eksplisitt HTTPS-kildelenke i referansene og et norsk svarnavn blir til et kortsvarsspørsmål. Foretrukne påstander prioriteres. Utgåtte, tidsavgrensede eller andre kvalifiserte påstander, flertydige svar og manglende kildebelegg utelates. Sammenheng, referanselenker og eventuell postrevisjon følger spørsmålet. Det lages ikke formåls- eller oppdragsgiverspørsmål fra antakelser.
+
+Generiske Wikipedia-/Wikidata-bilder brukes ikke automatisk som en bestemt versjon av et kunstverk. De fem gjennomgåtte lokale versjonene beholdes. Nye kunstbilder krever et eksakt museumskatalogobjekt; personbilder og andre illustrasjoner kommer fra identifiserte P18-filer med godkjent fri lisens. Kreditering og lisens er tilgjengelig i fordypningen etter svaret. Navnet i alternativ tekst skjules før svaret.
+
+Nedlastingen skjer bare etter brukerens valg. Offentlige kildeidentifikatorer sendes til kildene; svar, fremgang og personlige innstillinger sendes ikke. Nye forbindelser og spørsmål valideres som et lokalt tillegg til installert kunnskap. De bevarer tidligere spørsmåls-ID-er, minneplan og påbegynte svar, og følger med den vanlige sikkerhetskopien i innstillinger. Bildene lagres som lokale dataadresser, maksimalt 2 MB per bilde og 8 MB totalt før base64-koding. Tillegget gjenopprettes ved oppstart, etter innholdsoppdatering og fra sikkerhetskopi. Midlertidige nettfeil lar tidligere innhold være tilgjengelig; et tillegg som ikke lenger passer med en oppdatert grunnpakke holdes utenfor visningen.

@@ -112,7 +112,7 @@ export function validateKnowledgeModel(data) {
   }
   if(!data.exerciseFacts || typeof data.exerciseFacts!=='object')errors.push('Missing exercise fact mappings.');
   for(const [id,m] of Object.entries(data.exerciseFacts||{})){
-    if(!claims.has(m.factId) || !Array.isArray(m.claimIds) || !m.claimIds.length || m.claimIds.some(c=>!claims.has(c)))errors.push(`${id}: invalid exercise claim references.`);
+    if(!m || !claims.has(m.factId) || !Array.isArray(m.claimIds) || !m.claimIds.length || m.claimIds.some(c=>!claims.has(c)))errors.push(`${id}: invalid exercise claim references.`);
   }
   for(const t of (data.targets||[]).filter(Boolean))if(!data.exerciseFacts?.[t.id])errors.push(`${t.id}: missing exercise fact mapping.`);
   return errors;
