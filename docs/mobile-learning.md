@@ -41,3 +41,12 @@ Ukjente svar, feil, viste svar og svar med hint eller introduksjon legges tilbak
 Kanonisk faktum-ID deler repetisjonsplan mellom tekst og flervalg, og mellom kart og omriss. Historiske varianttilstander beholdes i databasen; nyeste relevante tilstand brukes, og videre planlagte svar skriver til felles ID. Eksisterende datoer flyttes ikke samlet ved oppdatering. Gjentakelser i samme økt lagres som ekstraøving og endrer ikke langtidsplanen. Frie emnequizer flytter fortsatt ikke planlagte repetisjoner.
 
 128 automatiske tester dekker blant annet delte varianttilstander, voksende intervaller etter øving over flere dager, rekkefølge i den utvidede køen, maks antall forsøk og at vellykkede gjentakelser løser tidligere feil. Mobiltesten følger en ny anbefalt quiz gjennom ukjent svar, omlasting, øvrige spørsmål, gjentakelse til slutt og fullføring, og kontrollerer at gjentakelsen ikke øker planlagte repetisjoner.
+
+Utgivelse 0.10.0 (`bf3c56e16732`) er også kontrollert på den publiserte adressen med samme mobiltest.
+
+
+## 0.11.0 – Lær i sammenheng
+
+Quizmenyen har fem korte læringsstier. Nytt stoff kan begynne med «Kort fortalt» på en separat skjerm. Svar etter denne støtten lagres som støttet læring og får et nytt forsøk. Forklaringsspørsmål bruker et flerlinjefelt og innholdskriterier etter svaret; originalsvaret vises ved siden av vurderingsgrunnlaget. Ordlyden trenger ikke være identisk med eksempelsvaret.
+
+Gjenkjenning, fri gjenhenting og egenvurdert forklaring vises separat i fremgangen. Innholdsdekning beskriver bibliotekets svakheter uavhengig av egen historie. Tilbakemelding, pause, omlasting og appoppdatering skal bevare svaret og den nøyaktige aktiviteten. Kunstverk beholder sine gjennomgåtte bildeversjoner og lisensopplysninger etter svaret.

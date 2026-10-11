@@ -4,7 +4,7 @@ Mobile PWA starter, deployed on 10 October 2026.
 
 Live app: https://atlas-first-app.atlas-memory.workers.dev
 
-## Current learning release — 0.9.0
+## Current learning release — 0.11.0
 
 - Mobile-only SvelteKit PWA with Today, Focus, Explore, Progress, and Settings.
 - A shared sourced graph covering global geography, every Norwegian municipality, Nobel award records through 2025, and curated culture/history. Coverage and exact installed counts are reported in the app.
@@ -159,3 +159,12 @@ Publisert og kontrollert utgivelse: `e85bdae1a84d`. Cloudflare-utrullingen og de
 ## 0.10.0 – Repetisjon i quizen og historikk over tid
 
 Feil, ukjente svar og svar med hjelp kommer tilbake mot slutten av samme quiz, med inntil to ekstra forsøk per spørsmål. Nye spørsmål vises direkte, og læringsstøtte kan åpnes når den trengs. Første planlagte repetisjon blir i morgen; senere intervaller følger FSRS-historikken og faktisk tid siden øving. Tekst/flervalg og kart/omriss deler repetisjonsplan, med tidligere varianttilstander bevart. Øktgjentakelser lagres uten å blåse opp langtidsintervallet. 128 tester består; mobiltesten bekrefter gjentakelse til slutt, lagring ved omlasting og at en vellykket gjentakelse fjerner tidligere feil fra videre øving.
+
+Utgivelse `bf3c56e16732` er publisert via Cloudflare og kontrollert med hele repetisjonsforløpet i mobilnettleseren.
+
+
+## 0.11.0 – Stabile fakta og læring i sammenheng
+
+Alle publiserte spørsmål og historiske introduksjoner har eksplisitte koblinger til stabile, kildebelagte påstander. Grafretning, dateringer og undervisningsforutsetninger valideres. Tidligere ID-er og svarhistorikk beholdes, mens gjenkjenning, fri gjenhenting og forklaring får egne repetisjonstilstander.
+
+Fem kuraterte stier innfører betydning før detaljspørsmål og bygger videre til sammenligning og forklaring. Egenvurdering skjer mot innholdskriterier. Spørsmål som røpes av tidligere materiale utsettes til andre økter. Etter svaret vises relevante, dokumenterte forbindelser til tidligere øvd stoff. Dekningsrapporten omfatter alle 17 samlinger og synliggjør hva som fortsatt mangler. Se `docs/knowledge-network.md` for modell, kompatibilitet og redaksjonelle avgrensninger.

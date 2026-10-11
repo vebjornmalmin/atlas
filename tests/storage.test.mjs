@@ -128,3 +128,18 @@ test('extra practice is recorded once without moving any scheduled repetition an
  assert.deepEqual(await get(restored,'states',targetId),state);
  assert.equal((await get(restored,'reviews',event.id)).practice,true);
 });
+test('new fact cards and legacy mirrors survive backup, rollback and old backups without rewriting history',async t=>{
+ const {attachKnowledge,schedulingKey,legacyFactKey}=await import('../src/lib/knowledge-model.js');
+ const {stateForTarget}=await import('../src/lib/learning.js');
+ const db=await database(t);await installPackage(db,foundation);
+ const target=attachKnowledge([foundation.targets[0]],foundation)[0];
+ const card=scheduleReview(schedulingKey(target),null,3,now).card;
+ const review={id:'canonical',targetId:target.id,schedulerId:card.id,factId:target.factId,mode:'recall',rating:3,timestamp:now.toISOString(),correct:true};
+ await recordReview(db,card,review,{...card,id:legacyFactKey(target)});
+ const backup=await exportDatabase(db),destination=await database(t);await restoreDatabase(destination,backup);
+ assert.equal(stateForTarget(target,[target],await all(destination,'states'),await all(destination,'reviews')).id,card.id);
+ const legacy=JSON.parse(await readFile('knowledge-build/base-foundation.json','utf8'));await installPackage(destination,legacy);
+ assert.equal((await get(destination,'states',legacyFactKey(target))).due,card.due);
+ assert.deepEqual(await all(destination,'reviews'),[review]);
+ const oldBackup=await exportDatabase(destination);await restoreDatabase(db,oldBackup);assert.deepEqual(await all(db,'reviews'),[review]);
+});

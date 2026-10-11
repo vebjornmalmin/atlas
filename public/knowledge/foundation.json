@@ -184882,6 +184882,11 @@
         "precision": "broad",
         "reviewed": true
       },
+      "options": [
+        "For å dekorere huset før Paul Gauguins besøk",
+        "For å illustrere en botanisk lærebok",
+        "For å dekorere en kirke"
+      ],
       "snapshot": "Van Gogh laget solsikkebilder til huset i Arles før kunstnervennen Paul Gauguin skulle komme. Det gir et konkret holdepunkt for forbindelsen mellom motivet og kunstnerfellesskapet.",
       "factId": "fact:learn-sunflowers-purpose",
       "claimIds": [
@@ -184922,6 +184927,11 @@
         "precision": "broad",
         "reviewed": true
       },
+      "options": [
+        "For å nyte hagen og få motiver å male",
+        "For å bygge et offentlig museum",
+        "For å drive jordbruk"
+      ],
       "snapshot": "Monet anla en vannhage ved hjemmet sitt. Den ga ham både glede og motiver til maleriene. Hagen hjelper oss å forstå forbindelsen mellom landskapsforming og kunst.",
       "factId": "fact:learn-monet-garden",
       "claimIds": [
@@ -184963,6 +184973,11 @@
         "precision": "broad",
         "reviewed": true
       },
+      "options": [
+        "En karakter eller mennesketype",
+        "En bestemt persons dokumenterte livshistorie",
+        "En historisk begivenhet"
+      ],
       "snapshot": "En tronie er en studie av karakter og uttrykk. Vermeers Pike med perleøredobb er et slikt bilde. Skillet fra et identifisert portrett hjelper oss å forstå hva slags verk vi ser.",
       "factId": "fact:learn-vermeer-study",
       "claimIds": [
