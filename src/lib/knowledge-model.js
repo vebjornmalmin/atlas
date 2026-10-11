@@ -96,7 +96,7 @@ export function validateKnowledgeModel(data) {
   if(!Array.isArray(data.claims))return ['Knowledge model requires claims.'];
   for(const c of data.claims){
     if(!c?.id || claims.has(c.id)){errors.push('Duplicate or missing claim ID.');continue;}claims.set(c.id,c);
-    if(!c.statement?.trim())errors.push(`${c.id}: missing claim statement.`);
+    if(typeof c.statement!=='string' || !c.statement.trim())errors.push(`${c.id}: missing claim statement.`);
     for(const [field,refs] of [['entityIds',entities],['sourceIds',sources],['relationshipIds',relations]]){
       if(!Array.isArray(c[field]) || (field!=='relationshipIds' && !c[field].length))errors.push(`${c.id}: missing ${field}.`);
       else for(const id of c[field])if(!refs.has(id))errors.push(`${c.id}: unknown ${field} ${id}.`);

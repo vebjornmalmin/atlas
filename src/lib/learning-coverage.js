@@ -13,7 +13,7 @@ export function learningCoverage(data,targets=data.targets) {
     const objectives=(data.learningObjectives||[]).filter(o=>o.collectionIds.includes(collection.id));
     const paths=(data.learningPaths||[]).filter(p=>p.collectionIds.includes(collection.id));
     const entities=data.entities.filter(e=>e.collectionIds.includes(collection.id));
-    const introductions=rows.filter(t=>Boolean(t.snapshot));
+    const introductions=[...new Map(rows.filter(t=>Boolean(t.snapshot)).map(t=>[factKey(t),t])).values()];
     const connections=rows.filter(t=>t.answerFormat==='explanation' || learningStage(t)==='connections' && t.reasoning!=='identify');
     const exact=unique.filter(t=>t.precision==='exact');
     const entityIds=new Set(rows.map(t=>t.entityId));
