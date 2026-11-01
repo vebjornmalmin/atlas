@@ -151,7 +151,7 @@
             "ekspresjonisme",
             "ekspresjonistene"
           ],
-          "explain": "Bevegelsen hadde hovedsete i Tyskland, med kunstnergruppene Brücke og Der Blaue Reiter. Malerne forlot ofte sentralperspektivet og lot fargen bære følelsen."
+          "explain": "Bevegelsen hadde hovedsete i Tyskland, med kunstnergruppene Brücke og Der Blaue Reiter. Vincent van Gogh og Edvard Munch regnes som viktige forløpere. Malerne forlot ofte sentralperspektivet og lot fargen bære følelsen."
         },
         {
           "id": "kul-kunstepoker-rekkefolge",
@@ -254,14 +254,14 @@
       "summary": "Maleriene som er blitt felles referanser i hele verden, hva som gjør dem særegne, og hvordan de hører hjemme i sin tid.",
       "lesson": [
         "Fra høyrenessansen kommer Leonardo da Vincis Mona Lisa, påbegynt omkring 1503 og i dag i Louvre i Paris, og veggmaleriet Nattverden (Det siste måltid) i Milano, der Jesus sier at en av disiplene skal forråde ham. Leonardo myket opp konturene med teknikken sfumato. Michelangelo, egentlig billedhugger, malte takfreskene i Det sixtinske kapell i Vatikanet med scener fra skapelsesberetningen.",
-        "I Nederland fornyet Jan van Eyck maleriet på 1400-tallet med oljefarger i lysende nyanser. I barokken malte Rembrandt det store gruppeportrettet Nattevakten (1642), og Johannes Vermeer i Delft gjorde lyset i stille interiører til selve hovedsaken.",
-        "Impresjonisten Claude Monet malte samme motiv i serier for å fange skiftende lys. Vincent van Gogh brukte intense farger og kraftige penselstrøk som pekte fram mot ekspresjonismen. I 1937 svarte Pablo Picasso på bombingen av byen Guernica under den spanske borgerkrigen med et av 1900-tallets fremste kunstverk."
+        "I Flandern fornyet Jan van Eyck maleriet på 1400-tallet med oljefarger i lysende nyanser og myke overganger. I barokken malte Rembrandt det store gruppeportrettet Nattevakten (1642), og Johannes Vermeer i Delft gjorde lyset i stille interiører til selve hovedsaken.",
+        "Impresjonisten Claude Monet malte samme motiv i serier for å fange skiftende lys. Postimpresjonisten Vincent van Gogh, kjent for Solsikker (1888), brukte intense farger og kraftige penselstrøk og ble en forløper for ekspresjonismen. I 1937 svarte Pablo Picasso på bombingen av byen Guernica under den spanske borgerkrigen med et av 1900-tallets fremste kunstverk."
       ],
       "keyPoints": [
         "Leonardo da Vinci: Mona Lisa (Louvre) og Nattverden (Milano).",
         "Michelangelo malte taket i Det sixtinske kapell i 1508–1512.",
         "Barokkens Nederland: Rembrandts Nattevakten og Vermeers lysfylte interiører.",
-        "Van Eyck, van Gogh og Monet: oljefarger, intense farger og flyktig lys.",
+        "Van Eyck: lysende oljefarger. Monet: skiftende lys. Van Gogh: forløper for ekspresjonismen.",
         "Picassos Guernica (1937) skildrer sivile lidelser i den spanske borgerkrigen."
       ],
       "sources": [
@@ -380,17 +380,18 @@
           "explain": "Jan van Eyck var en banebryter for nordeuropeisk renessansemaleri. Han ble lenge regnet som oljemaleriets oppfinner; hans egentlige fornyelse var lysende farger og myke overganger, som i stoffene og metallet her."
         },
         {
-          "id": "kul-mesterverk-van-gogh",
+          "id": "kul-mesterverk-van-gogh-retning",
           "step": 2,
-          "type": "text",
+          "type": "choice",
           "media": "sunflowers",
-          "prompt": "Hvem malte denne versjonen av blomstermotivet i Arles i 1888?",
-          "answer": "Vincent van Gogh",
-          "accept": [
-            "van Gogh",
-            "Vincent"
+          "prompt": "Maleren av dette bildet regnes som en viktig forløper for hvilken retning?",
+          "answer": "Ekspresjonismen",
+          "distractors": [
+            "Kubismen",
+            "Surrealismen",
+            "Popkunsten"
           ],
-          "explain": "Van Gogh flyttet til Arles i Sør-Frankrike i 1888 og fikk Paul Gauguin på besøk. Han malte flere versjoner av solsikkene; denne tilhører National Gallery i London."
+          "explain": "Vincent van Gogh malte denne versjonen av Solsikker i Arles i 1888. Han regnes som postimpresjonist, men de kraftige strøkene og fargene som bærer følelser, pekte fram mot ekspresjonismen. Kubismen bygde i stedet på Paul Cézanne."
         },
         {
           "id": "kul-mesterverk-monet",
@@ -476,7 +477,7 @@
           "type": "year",
           "prompt": "Hvilket år fullførte Michelangelo takmaleriene i Det sixtinske kapell?",
           "answer": "1512",
-          "explain": "Arbeidet tok fire år, med et opphold på ni måneder blant annet på grunn av pengemangel. Etter 1534 malte han også den dramatiske fresken Dommedag på alterveggen."
+          "explain": "Arbeidet tok fire år, med et opphold på ni måneder blant annet på grunn av pengemangel. I 1536–1541 malte han også den dramatiske fresken Dommedag på alterveggen."
         },
         {
           "id": "kul-mesterverk-vermeer-antall",
@@ -501,12 +502,12 @@
       "summary": "Hvordan norsk billedkunst gikk fra nasjonalromantiske landskap til Munchs eksistensielle bilder og Vigelands skulpturpark.",
       "lesson": [
         "Norsk billedkunst fikk sin egen stemme på 1800-tallet. J.C. Dahl gjorde fra 1820-årene det norske landskapet til et nasjonalt motiv. I nasjonalromantikken malte Adolph Tidemand bondeliv og Hans Gude landskap; sammen laget de Brudeferd i Hardanger (1848). Mange norske kunstnere utdannet seg i Düsseldorf, senere i München og Paris.",
-        "Rundt 1880 kom en generasjon naturalister hjem. Christian Krohg brukte maleriet til samfunnskritikk, Harriet Backer arbeidet med farge, komposisjon og forholdet mellom flate og rom, og Kitty Kielland malte stemningsfulle landskap fra Jæren. Kvinner hadde ikke adgang til kunstakademiene i Tyskland og måtte ta privattimer.",
-        "Edvard Munch brøt med realismen. I Livsfrisen malte han kjærlighet, angst og død, og Skrik er blitt et ikon for det moderne menneskets angst. Han regnes som en foregangsfigur for ekspresjonismen. Billedhuggeren Gustav Vigeland skapte skulpturanlegget i Frognerparken i Oslo. Nasjonalmuseet og Munchmuseet eier hver sin malte versjon av Skrik."
+        "Rundt 1880 kom en generasjon naturalister hjem. Christian Krohg brukte maleriet til samfunnskritikk, Harriet Backer var en fremragende kolorist som malte lys og farge i stille interiører, og Kitty Kielland malte stemningsfulle landskap fra Jæren. Kvinner hadde ikke adgang til kunstakademiene i Tyskland og måtte ta privattimer.",
+        "Edvard Munch brøt med realismen. I Livsfrisen malte han kjærlighet, angst og død, og Skrik er blitt et ikon for det moderne menneskets angst. Han regnes som en foregangsfigur for ekspresjonismen. Det første malte Skrik, fra 1893, tilhører Nasjonalmuseet; et senere maleri fra omkring 1910 tilhører Munchmuseet. Billedhuggeren Gustav Vigeland skapte skulpturanlegget i Frognerparken i Oslo."
       ],
       "keyPoints": [
         "J.C. Dahl gjorde det norske landskapet til et nasjonalt motiv.",
-        "Tidemand og Gude: Brudeferd i Hardanger (1848), et hovedverk i nasjonalromantikken.",
+        "Tidemand og Gude: Brudeferd i Hardanger (originalen 1848), et hovedverk i nasjonalromantikken.",
         "Krohg, Backer og Kielland: 1880-årenes naturalisme med ulike mål.",
         "Munch: Livsfrisen og Skrik; symbolisme og foregangsfigur for ekspresjonismen.",
         "Vigeland skapte Vigelandsanlegget i Frognerparken."
@@ -539,6 +540,14 @@
         {
           "title": "Gustav Vigeland – Store norske leksikon",
           "url": "https://snl.no/Gustav_Vigeland"
+        },
+        {
+          "title": "Harriet Backer – Store norske leksikon",
+          "url": "https://snl.no/Harriet_Backer"
+        },
+        {
+          "title": "J.C. Dahl – Store norske leksikon",
+          "url": "https://snl.no/J.C._Dahl"
         }
       ],
       "cards": [
@@ -553,7 +562,7 @@
             "Portretter av embetsmenn",
             "Bibelske scener"
           ],
-          "explain": "Dahl var nær venn av Caspar David Friedrich, men malte naturen mer realistisk. Han tok også initiativ til de første norske kunstforeningene, blant dem Christiania Kunstforening i 1836."
+          "explain": "Dahl var nær venn av Caspar David Friedrich, men malte naturen mer realistisk. Han ivret for norske kunstforeninger og for Nasjonalgalleriet, og han var den første som gjorde oppmerksom på stavkirkene."
         },
         {
           "id": "kul-norsk-kunst-brudeferd",
@@ -580,7 +589,7 @@
             "Arbeiderklassens kamp",
             "Kjærlighetens lykke"
           ],
-          "explain": "Munch beskrev et øyeblikk da han følte et stort, uendelig skrik gjennom naturen. Landskapet er Oslofjorden sett fra Ekebergåsen, under en blodrød himmel."
+          "explain": "Munch beskrev et øyeblikk da han følte et stort, uendelig skrik gjennom naturen. Landskapet er Oslofjorden sett fra Ekebergåsen, under en blodrød himmel. Bildet regnes som Munchs dristigste ekspresjonistiske forsøk."
         },
         {
           "id": "kul-norsk-kunst-vigeland",
@@ -628,20 +637,20 @@
             "Livs-frisen",
             "Livsfrise"
           ],
-          "explain": "Da Munch viste bildene i Berlin i 1892, ble utstillingen en skandale og måtte stenges etter en uke. Han ville male levende mennesker som puster, føler, lider og elsker."
+          "explain": "Utstillingen i Berlin i 1892 ble en skandale og ble stengt etter en uke. Serien vokste videre med Skrik og andre bilder, og i 1902 viste han 22 motiver samlet i Berlin. Han ville male levende mennesker som puster, føler, lider og elsker."
         },
         {
           "id": "kul-norsk-kunst-backer",
           "step": 2,
           "type": "choice",
           "prompt": "Hva var Harriet Backers hovedinteresse som maler?",
-          "answer": "Farge, komposisjon og forholdet flate–rom",
+          "answer": "Lys og farge i stille interiører",
           "distractors": [
-            "Samfunnskritikk og skildringer av sosial nød",
-            "Store historiske slag fra norrøn tid",
-            "Nasjonale mønstre hentet fra gamle vevnader"
+            "Samfunnskritikk og sosial nød i byen",
+            "Store slag fra norrøn historie",
+            "Nasjonale mønstre fra gamle vevnader"
           ],
-          "explain": "Backer stod utenfor striden mellom nasjonalistene og de samfunnskritiske naturalistene. Hun la samtidig vekt på et sterkt stemningsinnhold i bildene."
+          "explain": "Backer regnes som en av de fremste koloristene i norsk kunst. Bildene hennes, fra bondestuer til middelalderkirker, skulle først og fremst nytes som lys- og fargestudier, ikke vekke politisk engasjement slik Krohgs bilder skulle."
         },
         {
           "id": "kul-norsk-kunst-forklar-munch",
@@ -663,7 +672,7 @@
           "prompt": "Sett bildene i rekkefølge etter når de ble malt.",
           "items": [
             {
-              "label": "Brudeferd i Hardanger (Tidemand og Gude)",
+              "label": "Brudeferd i Hardanger, originalen (Tidemand og Gude)",
               "year": 1848
             },
             {
@@ -723,9 +732,9 @@
           "id": "kul-norsk-kunst-brudeferd-aar",
           "step": 4,
           "type": "year",
-          "prompt": "Hvilket år ble Brudeferd i Hardanger fullført?",
+          "prompt": "Hvilket år ble originalen av Brudeferd i Hardanger, som Nasjonalmuseet eier, fullført?",
           "answer": "1848",
-          "explain": "Bildet ble malt i Düsseldorf vinteren 1847–1848. Samme år ble en gjentakelse malt der fiolinisten Ole Bull satt modell for felespilleren i båten."
+          "explain": "Originalen ble malt i Düsseldorf vinteren 1847–1848. Samme år ble en gjentakelse malt der fiolinisten Ole Bull satt modell for felespilleren, og i 1853 tok Tidemand og Gude opp motivet i en ny utforming."
         }
       ]
     },
@@ -1054,7 +1063,7 @@
           "answer": "Dorisk, jonisk og korintisk",
           "distractors": [
             "Romansk, gotisk og barokk",
-            "Toskansk, kompositt og fransk",
+            "Toskansk, dorisk og kompositt",
             "Egyptisk, persisk og minoisk"
           ],
           "explain": "Ordenene skilles særlig på kapitelet, toppen av søylen. Romerne la senere til den toskanske ordenen og komposittkapitelet."
@@ -1083,7 +1092,7 @@
             "Heddal stavkirke",
             "Gol stavkirke"
           ],
-          "explain": "Kirken står ved Lustrafjorden og ble bygd tidlig på 1130-tallet. Treskurden fra en eldre kirke på stedet har gitt navn til urnesstilen, med stiliserte dyr i kamp."
+          "explain": "Kirken står ved Lustrafjorden og ble bygd tidlig på 1130-tallet. Treskurden fra en eldre kirke på stedet har gitt navn til urnesstilen, med stiliserte dyr i kamp. Maleren J.C. Dahl var den første som gjorde oppmerksom på stavkirkene."
         },
         {
           "id": "kul-arkitektur-pantheon",
@@ -1229,7 +1238,7 @@
       "summary": "Den klassiske musikkens tre store epoker, de mest kjente komponistene og hvordan et symfoniorkester er bygd opp.",
       "lesson": [
         "Klassisk musikk deles gjerne i epoker. Barokken (omtrent 1600–1750) gav oss operaen, solokonserten og generalbassen, der melodien bæres av et fast akkompagnement. Johann Sebastian Bach regnes som barokkens fullender, og Antonio Vivaldi skrev De fire årstider, fire fiolinkonserter som skildrer hver sin årstid.",
-        "Wienerklassisismen, med Joseph Haydn, Wolfgang Amadeus Mozart og Ludwig van Beethoven, svarte på barokkens tyngde med lettere uttrykk og klarere form. Den firesatsige symfonien ble epokens viktigste form. Beethoven ble døv, men skrev likevel sin 9. symfoni, der han tok inn kor og solister med Schillers dikt «Ode til gleden».",
+        "Wienerklassisismen (omtrent 1750–1820), med Joseph Haydn, Wolfgang Amadeus Mozart og Ludwig van Beethoven, svarte på barokkens tyngde med lettere uttrykk og klarere form. Den firesatsige symfonien ble epokens viktigste form. Beethoven ble døv, men skrev likevel sin 9. symfoni, der han tok inn kor og solister med Schillers dikt «Ode til gleden».",
         "I romantikken (omtrent 1820–1900) kom følelser, natur og enkeltmennesket i forgrunnen. Frédéric Chopin skrev stemningsfulle klaverstykker, og Pjotr Tsjajkovskij komponerte ballettene Svanesjøen og Nøtteknekkeren. Et symfoniorkester består av fire instrumentgrupper: strykere, treblåsere, messingblåsere og slagverk."
       ],
       "keyPoints": [
@@ -1463,7 +1472,7 @@
             "35–45",
             "150–200"
           ],
-          "explain": "I klassisismen var rundt 25 musikere vanlig. Orkesteret vokste i romantikken, da komponister som Beethoven og Berlioz skrev for større besetninger."
+          "explain": "Joseph Haydn hadde omkring 25 musikere ved fyrstehoffet Esterháza. Orkesteret vokste i romantikken, da komponister som Beethoven og Berlioz skrev for større besetninger."
         }
       ]
     },
@@ -1476,13 +1485,13 @@
       ],
       "summary": "Hvordan folkemusikk, Ole Bull og Edvard Grieg gav Norge en egen tone i kunstmusikken, og hvem som skapte nasjonalsangen.",
       "lesson": [
-        "Norsk kunstmusikk fikk sitt gjennombrudd i nasjonalromantikken. Fiolinisten Ole Bull var den første norske kunstneren med internasjonal berømmelse, og han ble venn med hardingfelespilleren Myllarguten. Hardingfela, utformet i Hardanger på 1600-tallet, har understrenger som klinger med og gir en særegen klang.",
+        "Norsk kunstmusikk fikk sitt gjennombrudd i nasjonalromantikken (omtrent 1830–1870), som søkte det særnorske i bondekulturen. Asbjørnsen og Moe samlet eventyr, Ivar Aasen dialekter og L.M. Lindeman folketoner, og Tidemand og Gude malte Brudeferd i Hardanger. Fiolinisten Ole Bull ble Norges første internasjonale stjerne og venn med hardingfelespilleren Myllarguten. Hardingfela har understrenger som klinger med.",
         "Edvard Grieg (1843–1907) er Norges viktigste komponist. På Ole Bulls råd studerte han i Leipzig, og han ville skape en norsk tonekunst inspirert av folkeviser og slåtter. Scenemusikken til Ibsens Peer Gynt, med Morgenstemning og I Dovregubbens hall, og A-mollkonserten gjorde ham verdensberømt. Fra 1885 bodde han på Troldhaugen i Bergen.",
         "Rikard Nordraak skrev melodien til nasjonalsangen «Ja, vi elsker dette landet», med tekst av Bjørnstjerne Bjørnson. Agathe Backer Grøndahl var en av tidens fremste pianister og romansekomponister. Johan Halvorsen ledet Nationaltheatrets orkester i nesten 30 år og skrev Bojarenes inntogsmarsj."
       ],
       "keyPoints": [
         "Ole Bull: Norges første internasjonale stjerne og Griegs tidlige mentor.",
-        "Hardingfela, med understrenger, ble et nasjonalsymbol i nasjonalromantikken.",
+        "Nasjonalromantikken samlet eventyr, dialekter og folketoner; hardingfela ble et nasjonalsymbol.",
         "Grieg: Peer Gynt-suitene, A-mollkonserten og Lyriske stykker; Troldhaugen i Bergen.",
         "«Ja, vi elsker»: tekst av Bjørnson, melodi av Nordraak; offisiell nasjonalsang fra 2019.",
         "Agathe Backer Grøndahl og Johan Halvorsen preget musikklivet som pianist, komponist og dirigent."
@@ -1515,6 +1524,14 @@
         {
           "title": "Johan Halvorsen – Store norske leksikon",
           "url": "https://snl.no/Johan_Halvorsen"
+        },
+        {
+          "title": "Nasjonalromantikken – Store norske leksikon",
+          "url": "https://snl.no/nasjonalromantikken"
+        },
+        {
+          "title": "Ludvig Mathias Lindeman – Store norske leksikon",
+          "url": "https://snl.no/Ludvig_Mathias_Lindeman"
         }
       ],
       "cards": [
@@ -1603,7 +1620,7 @@
           "accept": [
             "Halvorsen"
           ],
-          "explain": "Halvorsen ledet Nationaltheatrets orkester fra 1899 til 1929, med ett års avbrudd, og skrev over 30 scenemusikker. Etter Griegs død satte han sammen den første utgaven av Peer Gynt-musikken."
+          "explain": "Halvorsen ledet Nationaltheatrets orkester fra 1899 til 1929, med ett års avbrudd, og skrev over 30 scenemusikker. I 1908, året etter Griegs død, satte han sammen den første trykte utgaven av Peer Gynt-musikken."
         },
         {
           "id": "kul-norsk-musikk-backer-grondahl",
@@ -1684,6 +1701,31 @@
             }
           ],
           "explain": "Tre av dem var tett knyttet til Grieg: Bull sendte ham til Leipzig, Nordraak inspirerte ham, og Halvorsen redigerte Peer Gynt-musikken etter hans død."
+        },
+        {
+          "id": "kul-norsk-musikk-nasjonalromantikk",
+          "step": 3,
+          "type": "match",
+          "prompt": "Koble nasjonalromantikerne med det de samlet eller skapte.",
+          "pairs": [
+            {
+              "left": "Asbjørnsen og Moe",
+              "right": "Folkeeventyr"
+            },
+            {
+              "left": "Ivar Aasen",
+              "right": "Dialekter"
+            },
+            {
+              "left": "L.M. Lindeman",
+              "right": "Folketoner"
+            },
+            {
+              "left": "Tidemand og Gude",
+              "right": "Brudeferd i Hardanger"
+            }
+          ],
+          "explain": "I 1849 møttes kunstartene på scenen i Christiania: Brudeferd i Hardanger ble vist som levende bilde, med Ole Bull som felespiller i båten. Lindemans folketoner hadde samme betydning for musikken som Aasens dialekter for språket. Grieg fullendte senere det Kjerulf og Nordraak begynte på."
         },
         {
           "id": "kul-norsk-musikk-myllarguten",
