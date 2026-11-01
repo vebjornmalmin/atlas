@@ -15,7 +15,8 @@ export function cardAnswers(card) {
 
 /** Rough check that a tested answer was taught earlier in the unit. */
 export function taughtBefore(unit, card) {
-  if (['explain','order','match'].includes(card.type)) return true;
+  // Step 3 asks the learner to reason from what was taught, so the answer need not appear verbatim.
+  if (['explain','order','match'].includes(card.type) || (card.step === 3 && card.type === 'choice')) return true;
   const cards = unit.cards || [];
   const index = cards.indexOf(card);
   const earlier = cards.filter((other, i) => other !== card && (other.step < card.step || (other.step === card.step && i < index)));
