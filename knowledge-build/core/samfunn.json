@@ -488,7 +488,7 @@
             "Meritokrati",
             "Folkestyre"
           ],
-          "explain": "Enevelde, oligarki (en liten gruppe styrer) og meritokrati (de best kvalifiserte styrer) regnes som diktaturer. Mange diktaturer holder valg for å se legitime ut, uten at folket reelt styrer."
+          "explain": "Enevelde, oligarki (en liten gruppe styrer) og meritokrati (de best kvalifiserte styrer) omtales gjerne samlet som diktatur, fordi de har lite politisk likhet og folkelig deltakelse. Mange diktaturer holder valg for å se legitime ut, uten at folket reelt styrer."
         },
         {
           "id": "sam-demokrati-rettigheter-rettsstat",
@@ -709,7 +709,7 @@
             "Ingen medlemsland kan ha atomvåpen",
             "Alle medlemmer må bruke like mye på forsvar"
           ],
-          "explain": "Hvert medlemsland avgjør selv med hvilke midler, også militære, det skal svare på angrepet. Alle beslutninger i NATO tas ved enstemmighet."
+          "explain": "Hvert medlemsland avgjør selv med hvilke midler, også militære, det skal svare på angrepet. Beslutninger i NATO tas ved konsensus, uten avstemning, så alle medlemsland må kunne godta dem."
         },
         {
           "id": "sam-fn-nato-norge-stifter",
@@ -859,7 +859,7 @@
       "keyPoints": [
         "EU vokste fram fra Kull- og stålunionen i 1952; navnet EU er fra 1993.",
         "De fire friheter: fri bevegelse av varer, tjenester, personer og kapital.",
-        "Norge sa nei til medlemskap i folkeavstemninger i 1972 og 1994, altså nei begge gangene.",
+        "Folkeavstemningene om medlemskap i 1972 og 1994 endte med nei begge gangene.",
         "EØS-avtalen (1994) gir Norge adgang til EUs indre marked.",
         "Norge er med i Schengen, men ikke i EUs tollunion."
       ],
@@ -956,7 +956,7 @@
           "accept": [
             "euroen"
           ],
-          "explain": "Grunnlaget for en felles valuta ble lagt i Maastricht-traktaten, som også opprettet det indre markedet. Den europeiske sentralbank styrer pengepolitikken for eurolandene."
+          "explain": "Grunnlaget for en felles valuta ble lagt i Maastricht-traktaten, som også gjorde EF til EU i 1993. Den europeiske sentralbank styrer pengepolitikken for eurolandene."
         },
         {
           "id": "sam-eu-eos-romatraktaten",
@@ -968,7 +968,7 @@
             "Roma-traktaten",
             "Romatraktatene"
           ],
-          "explain": "Traktaten opprettet Fellesmarkedet og formulerte målet om «en stadig nærmere union». I 2009 ble den erstattet av Lisboatraktaten."
+          "explain": "Traktaten opprettet Fellesmarkedet og formulerte målet om «en stadig nærmere union». Den gjelder fortsatt i endret form og heter i dag traktaten om Den europeiske unions virkemåte."
         },
         {
           "id": "sam-eu-eos-unntak",
@@ -1190,7 +1190,7 @@
             "Gjennom full brukerbetaling for tjenestene",
             "Gjennom overskudd fra statlige bedrifter"
           ],
-          "explain": "De med høyest inntekt betaler mest skatt, mens tjenestene fordeles likt. Derfor virker velferdsstaten omfordelende, og de fleste offentlige tjenester er gratis eller har en liten egenandel."
+          "explain": "De med høyest inntekt betaler mest skatt, mens tjenestene gis etter behov. Derfor virker velferdsstaten omfordelende, og de fleste offentlige tjenester er gratis eller har en liten egenandel."
         },
         {
           "id": "sam-okonomi-forklar-rente",
@@ -1716,7 +1716,7 @@
       "lesson": [
         "USA er en forbundsstat med 50 delstater. Grunnloven fra 1787 bygger på Montesquieus maktfordeling, og USA har ikke parlamentarisme. Kongressen er den lovgivende makten og består av Senatet, der hver delstat har to senatorer, og Representantenes hus, der plassene fordeles etter folketall. Presidenten har den utøvende makten, og Høyesterett med ni dommere har den dømmende.",
         "Statsmaktene kontrollerer hverandre, på engelsk ofte kalt «checks and balances». Presidenten kan nedlegge veto mot lover, men Kongressen kan overstyre vetoet med to tredels flertall i begge kamre. Presidenten velges for fire år og kan gjenvelges én gang. Formelt velges presidenten av et valgmannskollegium på 538 medlemmer, der 270 stemmer gir flertall.",
-        "George Washington ble USAs første president i 1789. Abraham Lincoln ledet landet gjennom borgerkrigen og ble drept i 1865. Franklin Roosevelt møtte den økonomiske krisen på 1930-tallet med New Deal og er den eneste som er valgt mer enn to ganger. John Kennedy ble skutt i Dallas i 1963. Barack Obama ble i 2009 USAs første svarte president."
+        "George Washington ble USAs første president i 1789. Abraham Lincoln ledet landet gjennom borgerkrigen og ble drept i 1865. Franklin Roosevelt møtte den økonomiske krisen på 1930-tallet med New Deal og er den eneste som er valgt mer enn to ganger. John Kennedy håndterte Cubakrisen i 1962 og ble skutt i Dallas i 1963. Barack Obama ble i 2009 USAs første svarte president."
       ],
       "keyPoints": [
         "Grunnloven er fra 1787; de ti første tilleggene fra 1791 kalles Bill of Rights.",
@@ -1780,7 +1780,7 @@
             "To perioder på fem år",
             "Tre perioder på fire år"
           ],
-          "explain": "Presidenten er både statsoverhode, regjeringssjef og øverstkommanderende for de væpnede styrkene. Statsrådene er ikke ansvarlige overfor Kongressen og kan heller ikke møte der."
+          "explain": "Presidenten er både statsoverhode, regjeringssjef og øverstkommanderende for de væpnede styrkene. Statsrådene er ikke ansvarlige overfor Kongressen og kan ikke delta i forhandlingene der, slik norske statsråder gjør i Stortinget."
         },
         {
           "id": "sam-usa-styresett-grunnlov",
@@ -1930,7 +1930,7 @@
           "type": "year",
           "prompt": "Hvilket år ble president Kennedy skutt i Dallas?",
           "answer": "1963",
-          "explain": "Kennedy ble drept 22. november 1963, etter under tre år som president. Sammen med Khrusjtsjov fant han en løsning på Cubakrisen, en av de største atomkrisene på 1960-tallet."
+          "explain": "Kennedy ble drept 22. november 1963, etter under tre år som president. Visepresident Lyndon B. Johnson ble tatt i ed som president samme dag, om bord i presidentflyet."
         }
       ]
     }

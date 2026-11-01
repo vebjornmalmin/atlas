@@ -141,7 +141,7 @@
             "Greenwichmeridianen",
             "null-meridianen"
           ],
-          "explain": "Før 1884 brukte flere land egne nullmeridianer, blant annet en gjennom Oslo observatorium. Da ble det vedtatt å bruke Greenwich for alle lengde- og tidsangivelser."
+          "explain": "På den internasjonale meridiankonferansen i 1884 ble det vedtatt å bruke Greenwich for alle lengde- og tidsangivelser. Andre nullmeridianer har likevel vært brukt lokalt, blant annet en gjennom Oslo observatorium i norske kartsystemer."
         },
         {
           "id": "geo-kontinenter-hav-match-hav",
@@ -224,12 +224,12 @@
       "prerequisites": [],
       "summary": "Hvordan istidene formet fjordene, fjellene og viddene, og hvilke landskapsformer som er Norges største.",
       "lesson": [
-        "Norge ligger på den vestlige og nordlige delen av Den skandinaviske halvøy. Landet er langt og smalt og grenser i øst mot Sverige, Finland og Russland. Ellers er det omgitt av hav: Barentshavet, Norskehavet, Nordsjøen og Skagerrak. Fra Lindesnes i sør til Kinnarodden i nord er det 1748 kilometer.",
+        "Norge ligger på den vestlige og nordlige delen av Den skandinaviske halvøy. Landet er langt og smalt og grenser i øst mot Sverige, Finland og Russland. Ellers er det omgitt av hav: Barentshavet, Norskehavet, Nordsjøen og Skagerrak. Polarsirkelen krysser landet i Nordland, litt nord for Mo i Rana. Nord for den er det midnattssol om sommeren og mørketid om vinteren.",
         "Landskapet er formet av istidene, da tykke isdekker lå over landet. Isbreene gravde ut daler og fjorder. En fjord er en dal som isen har gravd så dyp at havet har fylt den. Sognefjorden er landets lengste og dypeste fjord, 1303 meter på det dypeste. Mellom fjordene ligger flatere vidder. Hardangervidda regnes som Europas største høyfjellsplatå.",
         "Norges høyeste fjell er Galdhøpiggen i Jotunheimen, 2469 meter over havet. Den lengste elva er Glomma, og den største innsjøen er Mjøsa. Jostedalsbreen er den største breen på fastlandet. Med alle fjorder og øyer er kystlinjen over 100 000 kilometer. Bare ett land i verden har lengre kyst: Canada."
       ],
       "keyPoints": [
-        "Norge grenser mot Sverige, Finland og Russland.",
+        "Norge grenser mot Sverige, Finland og Russland; polarsirkelen krysser landet i Nordland.",
         "Istidene formet landskapet; fjordene er daler som isen gravde ut og havet fylte.",
         "Galdhøpiggen (2469 moh.) er høyest, Glomma lengst, Mjøsa størst og Sognefjorden lengst og dypest.",
         "Kystlinjen med fjorder og øyer er over 100 000 km; bare Canada har lengre."
@@ -250,6 +250,10 @@
         {
           "title": "Hardangervidda – Store norske leksikon",
           "url": "https://snl.no/Hardangervidda"
+        },
+        {
+          "title": "Polarsirkel – Store norske leksikon",
+          "url": "https://snl.no/polarsirkel"
         }
       ],
       "cards": [
@@ -264,7 +268,7 @@
             "Sverige, Finland og Estland",
             "Sverige, Russland og Danmark"
           ],
-          "explain": "Landegrensen er 2564 kilometer i alt. Den lengste delen går mot Sverige, den korteste mot Russland i Finnmark."
+          "explain": "Landegrensen er 2564 kilometer i alt. Den lengste delen går mot Sverige, den korteste mot Russland i Finnmark. Fra Lindesnes i sør til Kinnarodden i nord er det 1748 kilometer i luftlinje."
         },
         {
           "id": "geo-norges-landskap-istid",
@@ -299,11 +303,25 @@
           "prompt": "Hvilket land har lengre kystlinje enn Norge når fjorder og øyer regnes med?",
           "answer": "Canada",
           "distractors": [
-            "Chile",
-            "Russland",
-            "Indonesia"
+            "Australia",
+            "Japan",
+            "Filippinene"
           ],
           "explain": "Uten fjorder, bukter og øyer ville den norske kysten vært under en tjuedel så lang. Det er innskjæringene som gjør kysten så lang."
+        },
+        {
+          "id": "geo-norges-landskap-polarsirkelen",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva kalles breddesirkelen som krysser Nordland litt nord for Mo i Rana og markerer grensen for midnattssol og mørketid?",
+          "answer": "Polarsirkelen",
+          "accept": [
+            "Den nordlige polarsirkelen",
+            "nordlige polarsirkel",
+            "polarsirkel",
+            "Nordpolarsirkelen"
+          ],
+          "explain": "Polarsirkelen ligger på omtrent 66,5° nordlig bredde. Avstanden derfra til polen er lik helningen på jordaksen, og det er denne helningen som gir årstidene. Den sørlige polarsirkelen går gjennom Sørishavet ved Antarktis."
         },
         {
           "id": "geo-norges-landskap-sognefjorden",
@@ -434,13 +452,13 @@
       ],
       "summary": "Hvordan Norge er delt inn i fylker og landsdeler, hvor folk bor, og hvilke områder i nord og sør som hører til Norge.",
       "lesson": [
-        "Fra 1. januar 2024 har Norge 15 fylker. Før regionreformen var det 19. Sammenslåinger gav blant annet Innlandet (Hedmark og Oppland), Vestland (Hordaland og Sogn og Fjordane), Agder og Trøndelag. Oslo er både en kommune og et fylke. Fylkene har blant annet ansvar for videregående skole og fylkesveier.",
-        "Landet deles også ofte i fem landsdeler. Østlandet har flest innbyggere, fulgt av Vestlandet. Nord-Norge består av Nordland, Troms og Finnmark og har rundt 9 prosent av folket.",
+        "Fra 1. januar 2024 har Norge 15 fylker. Før regionreformen var det 19. Sammenslåinger gav blant annet Innlandet (Hedmark og Oppland), Vestland (Hordaland og Sogn og Fjordane), Agder og Trøndelag. Oslo er både en kommune og et fylke. Fylkeskommunene har blant annet ansvar for videregående skole og fylkesveier.",
+        "Landet deles også i fem landsdeler: Østlandet, Sørlandet, Vestlandet, Trøndelag, også kalt Midt-Norge, og Nord-Norge. Østlandet har omtrent halvparten av innbyggerne og Vestlandet rundt en firedel. Sørlandet svarer til Agder fylke. Nord-Norge består av Nordland, Troms og Finnmark, er størst i areal og har rundt 9 prosent av folket.",
         "De største byene, målt som tettsteder, er Oslo, Bergen, Stavanger/Sandnes og Trondheim. Tettstedet Oslo har over én million innbyggere. I nord er Bodø og Tromsø størst. Kongeriket omfatter også Svalbard og Jan Mayen. I tillegg har Norge tre biland i sør: Bouvetøya, Peter I Øy og Dronning Maud Land i Antarktis."
       ],
       "keyPoints": [
         "15 fylker fra 2024; Oslo er både kommune og fylke.",
-        "Østlandet har flest innbyggere; Nord-Norge har rundt 9 prosent.",
+        "Fem landsdeler: Østlandet, Sørlandet, Vestlandet, Trøndelag (Midt-Norge) og Nord-Norge. Østlandet har flest innbyggere.",
         "Største tettsteder: Oslo, Bergen, Stavanger/Sandnes og Trondheim.",
         "Svalbard og Jan Mayen hører til kongeriket; Bouvetøya, Peter I Øy og Dronning Maud Land er biland."
       ],
@@ -460,6 +478,14 @@
         {
           "title": "Nord-Norge – Store norske leksikon",
           "url": "https://snl.no/Nord-Norge"
+        },
+        {
+          "title": "Norge – bosettingsmønster – Store norske leksikon",
+          "url": "https://snl.no/Norge_-_bosettingsm%C3%B8nster"
+        },
+        {
+          "title": "Sørlandet – Store norske leksikon",
+          "url": "https://snl.no/S%C3%B8rlandet"
         }
       ],
       "cards": [
@@ -524,7 +550,7 @@
           "accept": [
             "Oslo kommune"
           ],
-          "explain": "Ellers har hvert fylke flere kommuner. Oslo og Akershus har likevel felles statsforvalter."
+          "explain": "Ellers har hvert fylke flere kommuner. Oslo kommune har derfor både grunnskolen, som kommunene har ansvar for, og videregående skole, som ellers er fylkeskommunens oppgave."
         },
         {
           "id": "geo-norges-fylker-byer-nord-norge",
@@ -540,6 +566,18 @@
           "explain": "Nord-Norge er den største landsdelen i areal, med 35 prosent av hovedlandet. I middelalderen ble landsdelen kalt Hålogaland."
         },
         {
+          "id": "geo-norges-fylker-byer-sorlandet",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva heter landsdelen som svarer til Agder fylke?",
+          "answer": "Sørlandet",
+          "accept": [
+            "Sorlandet",
+            "Sørland"
+          ],
+          "explain": "Navnet ble foreslått av forfatteren Vilhelm Krag i 1902. Før det ble Agder ofte regnet til Vestlandet, og Gjernestangen i Risør ble helt fra vikingtiden sett som skillet mellom Østlandet og Vestlandet."
+        },
+        {
           "id": "geo-norges-fylker-byer-trondheim",
           "step": 2,
           "type": "text",
@@ -548,7 +586,7 @@
           "accept": [
             "Trondhjem"
           ],
-          "explain": "Trondheim har rundt 200 000 innbyggere. Tettstedet ligger i én kommune, mens Stavanger/Sandnes strekker seg over fire."
+          "explain": "Trondheim har rundt 200 000 innbyggere og er den største byen i Trøndelag, eller Midt-Norge. I middelalderen het byen Nidaros og ble sete for Norges erkebiskop fra 1150-årene."
         },
         {
           "id": "geo-norges-fylker-byer-jan-mayen",
@@ -621,7 +659,7 @@
           "answer": "9",
           "unit": "prosent",
           "tolerance": 2,
-          "explain": "De fire landsdelene i sør har dermed over ni av ti innbyggere. Bare Østlandet og Vestlandet har flere innbyggere enn Nord-Norge."
+          "explain": "De fire landsdelene lenger sør har dermed over ni av ti innbyggere. Nord-Norge og Trøndelag har nesten like mange innbyggere, men Nord-Norge har over tre ganger så stort areal."
         },
         {
           "id": "geo-norges-fylker-byer-aar-bergen",
@@ -962,7 +1000,7 @@
             "Jangtsekiang",
             "Changjiang"
           ],
-          "explain": "Chang Jiang renner mot øst, slik også Ganges og Mekong renner mot sør og øst. Elver nord for fjellbeltet, som Ob, Jenisej og Lena, renner i stedet mot nord."
+          "explain": "Chang Jiang renner fra Tibet østover og munner ut ved Shanghai. Elvene nord for fjellbeltet, som Ob, Jenisej og Lena, renner i stedet mot nord, ut i Polhavet."
         },
         {
           "id": "geo-asia-gobi",
@@ -1024,7 +1062,7 @@
               "right": "Hyppige jordskjelv og vulkanutbrudd"
             }
           ],
-          "explain": "Japan ligger der Asia støter sammen med stillehavsplaten. Landet er også blant dem med høyest forventet levealder i verden, 86 år."
+          "explain": "Japan ligger der stillehavsplaten kolliderer med den eurasiske platen. Landet har rundt 1500 jordskjelv i året og over hundre aktive vulkaner, og skjelv i havet utenfor kan gi tsunamier."
         },
         {
           "id": "geo-asia-forklar-elver",
@@ -1463,7 +1501,7 @@
           "type": "year",
           "prompt": "I hvilket år ble Panamakanalen tatt i bruk?",
           "answer": "1914",
-          "explain": "Et fransk selskap ledet av Ferdinand de Lesseps hadde mislyktes på 1880-tallet, og tusenvis av arbeidere døde av tropesykdommer. Polarskipet Fram ventet i Buenos Aires for å bli åpningsskip, men ga opp og seilte hjem."
+          "explain": "Et fransk selskap ledet av Ferdinand de Lesseps hadde mislyktes på 1880-tallet, og tusenvis av arbeidere døde av tropesykdommer. Kanalen er ikke i havnivå: Sluser løfter skipene 26 meter opp til den oppdemte Gatúnsjøen."
         },
         {
           "id": "geo-amerika-hoyde-aconcagua",
@@ -1473,7 +1511,7 @@
           "answer": "6962",
           "unit": "moh.",
           "tolerance": 20,
-          "explain": "Nord-Amerikas høyeste fjell er Denali i Alaska, 6194 meter over havet."
+          "explain": "Nord-Amerikas høyeste fjell er Denali i Alaska, omtrent 6190 meter over havet."
         }
       ]
     },
@@ -1488,7 +1526,7 @@
       "lesson": [
         "Oseania er den minste verdensdelen. Den består av Australia, New Zealand og mange øyer i Stillehavet, ofte delt i Melanesia, Mikronesia og Polynesia. Australia er det største landet. Det ligger i et høytrykksområde, og store deler av innlandet er tørr steppe og ørken. Utenfor nordøstkysten ligger Great Barrier Reef. Aboriginene er Australias urfolk, maoriene New Zealands.",
         "Polområdene er svært forskjellige. Arktis rundt Nordpolen er for det meste hav, Polhavet, omgitt av land som Grønland, Svalbard og nordkysten av Russland, Canada og Alaska. Antarktis rundt Sørpolen er et kontinent dekket av innlandsis og omgitt av hav. Det er det kaldeste, mest forblåste og tørreste kontinentet og har 90 prosent av all is på Jorden.",
-        "Roald Amundsen ledet den første ekspedisjonen som nådde Sydpolen, 14. desember 1911, fem uker før briten Robert F. Scott. Norge er blant landene som har gjort krav på områder i Antarktis. Siden 1959 er Antarktis forvaltet gjennom Antarktistraktaten: området skal bare brukes til fredelige formål, med frihet til forskning."
+        "Roald Amundsen ledet den første ekspedisjonen som nådde Sydpolen, 14. desember 1911, fem uker før briten Robert F. Scott. Norge er blant landene som har gjort krav på områder i Antarktis. Ifølge Antarktistraktaten fra 1959 skal området bare brukes til fredelige formål, med frihet til forskning."
       ],
       "keyPoints": [
         "Oseania er minst; Australia er det største landet, med tørt innland og Great Barrier Reef utenfor kysten.",
@@ -1596,7 +1634,7 @@
           "id": "geo-oseania-polar-gronland",
           "step": 2,
           "type": "text",
-          "prompt": "Hva heter den store øya i Arktis der om lag 85 prosent er dekket av innlandsis?",
+          "prompt": "Hva heter den store øya i Arktis der over 80 prosent er dekket av innlandsis?",
           "answer": "Grønland",
           "accept": [
             "Gronland",
@@ -1912,13 +1950,13 @@
       "lesson": [
         "Det lever omtrent 8,3 milliarder mennesker på Jorden. Folketallet passerte 8 milliarder i november 2022, elleve år etter at det nådde 7 milliarder. Rundt år 1800 var vi under én milliard. Veksten skjøt fart på 1800-tallet med industri, nye transportmidler og bedre hygiene, som fikk dødeligheten ned.",
         "Mønsteret kalles den demografiske overgangen: først faller dødeligheten, senere fødselstallene, og i mellomtiden vokser befolkningen raskt. Den prosentvise veksten var størst på 1960-tallet, over 2 prosent i året. I 2020 falt den under 1 prosent. FN venter en topp på rundt 10,4 milliarder i midten av 2080-årene, men slike framskrivinger er usikre.",
-        "Asia har 59 prosent av verdens befolkning, Afrika 18 og Europa bare 9. Afrika vokser raskest fordi fruktbarheten fortsatt er høy, mens flere land i Europa og Øst-Asia krymper. De mest folkerike landene er Kina og India, fulgt av USA og Indonesia. Samtidig flytter folk til byene, såkalt urbanisering. I 1900 bodde 3 prosent i byer; i dag gjør over halvparten det."
+        "Asia har 59 prosent av verdens befolkning, Afrika 18 og Europa bare 9. Afrika vokser raskest fordi fruktbarheten fortsatt er høy, mens flere land i Europa og Øst-Asia krymper. De mest folkerike landene er Kina og India, fulgt av USA og Indonesia. Samtidig flytter folk til byene, såkalt urbanisering. I 1950 bodde 29 prosent i byer; i dag gjør over halvparten det."
       ],
       "keyPoints": [
         "Omtrent 8,3 milliarder mennesker; 8 milliarder ble passert i 2022.",
         "Den prosentvise veksten toppet seg på 1960-tallet og er nå under 1 prosent i året.",
         "Afrika vokser raskest; Europas andel av verden synker.",
-        "Over halvparten av verdens befolkning bor i byer."
+        "Andelen som bor i byer har økt fra 29 prosent i 1950 til over halvparten i dag."
       ],
       "sources": [
         {
@@ -1988,7 +2026,7 @@
             "urbanisasjon",
             "byvekst"
           ],
-          "explain": "I FNs statistikk regnes et område som by når det har minst 20 000 innbyggere. I Norden kan et tettsted ha bare 200, så tallene fra ulike land er ikke direkte sammenlignbare."
+          "explain": "Hva som regnes som by, varierer. I Norden er 200 innbyggere nok til å regnes som tettsted, mens andre land setter grensen langt høyere. Tall for ulike land er derfor ikke direkte sammenlignbare."
         },
         {
           "id": "geo-befolkning-byer-storste-land",
@@ -2097,14 +2135,14 @@
           "explain": "En annen analyse mener toppen kan komme allerede i midten av 2060-årene. Uansett ventes andelen eldre å øke klart."
         },
         {
-          "id": "geo-befolkning-byer-byandel-1900",
+          "id": "geo-befolkning-byer-byandel-1950",
           "step": 4,
           "type": "number",
-          "prompt": "Hvor mange prosent av verdens befolkning bodde i byer i 1900?",
-          "answer": "3",
+          "prompt": "Omtrent hvor mange prosent av verdens befolkning bodde i byer i 1950?",
+          "answer": "29",
           "unit": "prosent",
-          "tolerance": 1,
-          "explain": "I 1950 var andelen 29 prosent og i 2005 49 prosent. I Europa skjøt byveksten fart med industrialiseringen."
+          "tolerance": 3,
+          "explain": "I 2005 var andelen 49 prosent og i 2014 54 prosent. I Europa skjøt byveksten fart allerede med industrialiseringen på 1800-tallet."
         }
       ]
     }
