@@ -12,7 +12,7 @@
       "title": "Kunsthistoriens epoker",
       "tier": 1,
       "prerequisites": [],
-      "summary": "Hva som kjennetegner de store epokene i europeisk kunst, fra gotikkens katedraler til ekspresjonismens sterke farger.",
+      "summary": "Europeisk kunst har gått gjennom tydelige epoker, fra gotikkens katedraler til ekspresjonismens sterke farger, og hver epoke speiler sin tid.",
       "lesson": [
         "Kunsthistorien deles gjerne i epoker med felles stiltrekk. Gotikken (omtrent 1140–1500) startet i fransk kirkearkitektur: Spissbuer og tynnere vegger ga plass til store glassmalerier. Navnet var opprinnelig et skjellsord: Renessansens kunstnere mente stilen var like barbarisk som goterne. Renessansen begynte i Italia på 1400-tallet som en gjenoppdagelse av antikkens kultur, med lineært perspektiv og nye studier av anatomi.",
         "Barokken preget 1600-tallet med bevegelse, diagonale komposisjoner og dramatiske kontraster mellom lys og skygge, som hos Caravaggio og Rembrandt. Romantikken (omtrent 1780–1850) var en reaksjon mot nyklassisismens fornuft og orden. Følelsene og det subjektive kom i sentrum, og storslagne, stormfulle landskap ble et hovedmotiv.",
@@ -251,7 +251,7 @@
       "prerequisites": [
         "kul-kunstepoker"
       ],
-      "summary": "Hva som gjør de mest kjente maleriene i verden særegne, og hvordan de speiler sin tid.",
+      "summary": "Verdens mest kjente malerier er særegne i teknikk og motiv, og de forteller mye om tiden de ble laget i.",
       "lesson": [
         "Fra høyrenessansen kommer Leonardo da Vincis «Mona Lisa», påbegynt omkring 1503 og i dag i Louvre i Paris. Veggmaleriet «Nattverden» («Det siste måltid») i Milano viser øyeblikket da Jesus sier at en av disiplene skal forråde ham. Leonardo myket opp konturene med teknikken sfumato. Michelangelo, egentlig billedhugger, malte takfreskene i Det sixtinske kapell i Vatikanet med scener fra skapelsesberetningen.",
         "I Flandern fornyet Jan van Eyck maleriet på 1400-tallet med oljefarger i lysende nyanser og myke overganger. I barokken malte Rembrandt det store gruppeportrettet «Nattevakten» (1642), og Johannes Vermeer i Delft gjorde lyset i stille interiører til selve hovedsaken.",
@@ -499,7 +499,7 @@
       "title": "Norsk billedkunst",
       "tier": 1,
       "prerequisites": [],
-      "summary": "Hvordan norsk billedkunst gikk fra nasjonalromantiske landskap til Munchs eksistensielle bilder og Vigelands skulpturpark.",
+      "summary": "Norsk billedkunst gikk fra nasjonalromantiske landskap til Munchs eksistensielle bilder og Vigelands skulpturpark.",
       "lesson": [
         "Norsk billedkunst fikk sin egen stemme på 1800-tallet. J.C. Dahl gjorde fra 1820-årene det norske landskapet til et nasjonalt motiv. I nasjonalromantikken malte Adolph Tidemand bondeliv og Hans Gude landskap. Sammen laget de «Brudeferd i Hardanger» (1848). Mange norske kunstnere utdannet seg i Düsseldorf, senere i München og Paris.",
         "Rundt 1880 kom en generasjon naturalister hjem. Christian Krohg brukte maleriet til samfunnskritikk. Harriet Backer var en fremragende kolorist som malte lys og farge i stille interiører, og Kitty Kielland malte stemningsfulle landskap fra Jæren. Kvinner hadde ikke adgang til kunstakademiene i Tyskland og måtte ta privattimer.",
@@ -745,7 +745,7 @@
       "prerequisites": [
         "kul-kunstepoker"
       ],
-      "summary": "Hvordan 1900-tallets kunstnere brøt med etterligningen av virkeligheten og spurte hva kunst egentlig er.",
+      "summary": "Kunstnerne på 1900-tallet brøt med etterligningen av virkeligheten og spurte hva kunst egentlig er.",
       "lesson": [
         "På begynnelsen av 1900-tallet brøt kunstnerne med ideen om at et bilde skal etterligne det øyet ser. Pablo Picasso og Georges Braque utviklet kubismen fra 1907: Tingene ble brutt opp i fasetter og vist fra flere sider samtidig. Inspirasjonen kom fra Paul Cézanne og fra urfolks skulptur.",
         "Vasilij Kandinskij gikk mot det helt abstrakte: Fra omkring 1909 fremstilte bildene hans ikke lenger en synlig virkelighet. Den svenske kunstneren Hilma af Klint hadde nådd fram til abstrakte bilder allerede i 1906. Surrealistene i Paris fra 1920-årene søkte kunstens kilde i drømmer og det underbevisste, og Salvador Dalí malte drømmelandskap med skarpe detaljer.",
@@ -990,7 +990,7 @@
       "prerequisites": [
         "vh-romerriket"
       ],
-      "summary": "Hvordan nye konstruksjoner og idealer har formet byggekunsten, fra pyramidene til operahuset i Bjørvika.",
+      "summary": "Nye konstruksjoner og idealer har formet byggekunsten fra pyramidene til operahuset i Bjørvika.",
       "lesson": [
         "Byggekunsten viser hva samfunn har prioritert. Pyramidene i Egypt var gravanlegg for kongene. Den største, Kheopspyramiden i Giza, var opprinnelig mellom 146 og 147 meter høy. Grekerne utviklet søyleordenene dorisk, jonisk og korintisk, som ble grunnlaget for klassisk arkitektur.",
         "Romerne overtok søylene, men utviklet også buer, hvelv og støpte konstruksjoner. Colosseum i Roma, innviet i år 80, viser alle tre søyleordener på fasaden. Pantheon har den største kjente kuppelen fra romersk tid, med en lysåpning øverst. I middelalderen gjorde gotikkens spissbuer, ribbehvelv og utvendige strebebuer kirkene høyere og lysere.",
@@ -1235,7 +1235,7 @@
       "title": "Klassisk musikk",
       "tier": 1,
       "prerequisites": [],
-      "summary": "Hva som kjennetegner den klassiske musikkens tre store epoker, hvem de viktigste komponistene var, og hvordan et symfoniorkester er bygd opp.",
+      "summary": "Den klassiske musikken har tre store epoker med hver sine komponister, og symfoniorkesteret er bygd opp av fire instrumentgrupper.",
       "lesson": [
         "Klassisk musikk deles gjerne i epoker. Barokken (omtrent 1600–1750) ga oss operaen, solokonserten og generalbassen, der melodien bæres av et fast akkompagnement. Johann Sebastian Bach regnes som barokkens fullender, og Antonio Vivaldi skrev «De fire årstider», fire fiolinkonserter som skildrer hver sin årstid.",
         "Wienerklassisismen (omtrent 1750–1820), med Joseph Haydn, Wolfgang Amadeus Mozart og Ludwig van Beethoven, svarte på barokkens tyngde med lettere uttrykk og klarere form. Den firesatsige symfonien ble epokens viktigste form. Beethoven ble døv, men skrev likevel sin 9. symfoni, der han tok inn kor og solister med Schillers dikt «Ode til gleden».",
@@ -1483,7 +1483,7 @@
       "prerequisites": [
         "kul-klassisk-musikk"
       ],
-      "summary": "Hvordan folkemusikk, Ole Bull og Edvard Grieg ga Norge en egen tone i kunstmusikken, og hvem som skapte nasjonalsangen.",
+      "summary": "Folkemusikk, Ole Bull og Edvard Grieg ga Norge en egen tone i kunstmusikken og en nasjonalsang.",
       "lesson": [
         "Norsk kunstmusikk fikk sitt gjennombrudd i nasjonalromantikken (omtrent 1830–1870), som søkte det særnorske i bondekulturen. Asbjørnsen og Moe samlet eventyr, Ivar Aasen dialekter og L.M. Lindeman folketoner, og Tidemand og Gude malte «Brudeferd i Hardanger». Fiolinisten Ole Bull ble Norges første internasjonale stjerne og ble venn med hardingfelespilleren Myllarguten. Hardingfela har understrenger som klinger med.",
         "Edvard Grieg (1843–1907) er Norges viktigste komponist. På Ole Bulls råd studerte han i Leipzig, og han ville skape en norsk tonekunst inspirert av folkeviser og slåtter. Scenemusikken til Ibsens «Peer Gynt», med «Morgenstemning» og «I Dovregubbens hall», og a-mollkonserten gjorde ham verdensberømt. Fra 1885 bodde han på Troldhaugen i Bergen.",

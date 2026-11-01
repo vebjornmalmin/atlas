@@ -12,7 +12,7 @@
       "title": "Hvordan Norge styres",
       "tier": 1,
       "prerequisites": [],
-      "summary": "Hvordan makten i Norge er fordelt mellom Storting, regjering og domstoler, og hvorfor regjeringen må ha Stortingets tillit.",
+      "summary": "Makten i Norge er delt mellom Storting, regjering og domstoler, og regjeringen må ha Stortingets tillit for å styre.",
       "lesson": [
         "Norge er et konstitusjonelt monarki. Grunnloven setter grenser for makten, og kongen har i dag først og fremst en symbolsk og seremoniell rolle. Grunnloven bygger på maktfordelingsprinsippet, som den franske filosofen Montesquieu formulerte. Makten er delt mellom tre statsmakter: den lovgivende, den utøvende og den dømmende.",
         "Stortinget er den lovgivende makten. De 169 representantene vedtar lover, bestemmer statsbudsjettet og kontrollerer regjeringen. Regjeringen, ledet av statsministeren, er den utøvende makten og setter lovene ut i livet. Domstolene er den dømmende makten, med Høyesterett som siste instans.",
@@ -218,7 +218,7 @@
       "prerequisites": [
         "sam-norges-styresett"
       ],
-      "summary": "Hvordan Stortinget velges, hvem som har stemmerett, og hvorfor partiene ofte må samarbeide om makten.",
+      "summary": "Stortingsvalget avgjør hvem som får makt, og partiene må ofte samarbeide for å danne regjering.",
       "lesson": [
         "Stortingsvalg holdes hvert fjerde år i september. Norske statsborgere som fyller 18 år innen utgangen av valgåret, har stemmerett. Norge har forholdstallsvalg: Partienes mandater skal speile andelen stemmer de får. En sperregrense på fire prosent avgjør hvilke partier som får utjevningsmandater.",
         "Stemmeretten kom gradvis. Menn fikk allmenn stemmerett i 1898, og i 1913 fikk kvinner stemmerett ved stortingsvalg på like vilkår som menn. Norge var blant de første landene i verden. I Europa var bare Finland tidligere ute. Stemmerettsalderen ble senket til 18 år i 1978.",
@@ -429,7 +429,7 @@
       "title": "Demokrati og menneskerettigheter",
       "tier": 1,
       "prerequisites": [],
-      "summary": "Hva som skiller demokrati fra diktatur, og hvordan menneskerettighetene ble formulert og beskyttet etter andre verdenskrig.",
+      "summary": "Demokrati skiller seg fra diktatur ved frie valg og rettigheter, og menneskerettighetene fikk sin moderne form etter andre verdenskrig.",
       "lesson": [
         "Demokrati betyr folkestyre. Ordet er gresk og ble først brukt om bystater i Hellas på 400-tallet f.Kr.. I dag er de fleste demokratier representative: Folket velger representanter som lager lovene. Diktatur er en samlebetegnelse for styreformer med lite politisk likhet og folkelig deltakelse. Et eksempel er enevelde, der én person styrer.",
         "Et demokrati trenger mer enn valg. Stemmerett, ytringsfrihet og organisasjonsfrihet er demokratiske rettigheter. I en rettsstat er makten bundet av offentlige lover, og myndighetene kan ikke straffe eller fengsle vilkårlig. Motsetningen er en politistat.",
@@ -641,7 +641,7 @@
       "prerequisites": [
         "mh-andre-verdenskrig"
       ],
-      "summary": "Hvordan FN og NATO ble opprettet etter andre verdenskrig, og hvorfor de har formet Norges plass i verden.",
+      "summary": "FN og NATO ble opprettet etter andre verdenskrig og har siden formet Norges plass i verden.",
       "lesson": [
         "FN ble opprettet 24. oktober 1945, rett etter andre verdenskrig, for å bevare internasjonal fred og sikkerhet. Norge var blant de 51 landene som skrev under FN-pakten. FN har hovedkontor i New York og 193 medlemsland. Forløperen var Folkeforbundet, som ikke klarte å hindre en ny verdenskrig.",
         "I Generalforsamlingen møtes alle medlemslandene, og hvert land har én stemme. Sikkerhetsrådet har 15 medlemmer og kan fatte vedtak som er bindende for alle. De fem faste medlemmene, USA, Russland, Kina, Storbritannia og Frankrike, har vetorett. Nordmannen Trygve Lie var FNs første generalsekretær fra 1946 til 1953.",
@@ -850,7 +850,7 @@
       "prerequisites": [
         "sam-fn-nato"
       ],
-      "summary": "Hvordan europeisk samarbeid vokste fra kull og stål til dagens EU, og hvorfor Norge er knyttet til EU gjennom EØS uten å være medlem.",
+      "summary": "Europeisk samarbeid vokste fra kull og stål til dagens EU, og Norge er knyttet til EU gjennom EØS uten å være medlem.",
       "lesson": [
         "EU startet som Kull- og stålunionen i 1952. Der gikk seks vesteuropeiske land sammen, blant dem Frankrike og Vest-Tyskland. Romatraktaten fra 1957 regnes som EUs grunndokument. Navnet EU stammer fra 1993, samme år som det indre markedet ble opprettet. I dag har EU 27 medlemsland og hovedsete i Brussel.",
         "Kjernen i det indre markedet er de fire friheter: fri bevegelse av varer, tjenester, personer og kapital. Fellesvalutaen euro ble innført i 2002. Gjennom Schengensamarbeidet er personkontrollen på grensene mellom de fleste EU- og EØS-land fjernet, og landene har en felles yttergrense.",
@@ -1050,7 +1050,7 @@
       "title": "Økonomi i hverdagen og samfunnet",
       "tier": 2,
       "prerequisites": [],
-      "summary": "Hvordan priser, renter og skatt henger sammen, og hvorfor bruken av oljepengene styres av en egen regel.",
+      "summary": "Priser, renter og skatt henger sammen, og en egen regel styrer hvor mye av oljepengene staten kan bruke.",
       "lesson": [
         "I et marked bestemmes prisene av tilbud og etterspørsel. Etterspørsel er mengden kjøperne ønsker å kjøpe, og når prisen stiger, synker etterspørselen vanligvis. Er etterspørselen større enn tilbudet, kan prisene presses opp. Bruttonasjonalproduktet, BNP, måler den samlede verdien av varer og tjenester som et land produserer for sluttbrukere.",
         "Inflasjon betyr at prisene i økonomien stiger. Norges Bank er Norges sentralbank og setter styringsrenten med mål om lav og stabil inflasjon. Når renten settes opp, blir lån dyrere, folk og bedrifter bruker mindre, og prisveksten dempes. Arbeidsledig er den som er uten arbeid, men aktivt søker arbeid.",
@@ -1268,7 +1268,7 @@
       "title": "Verdensreligionene",
       "tier": 1,
       "prerequisites": [],
-      "summary": "Hva de fem store verdensreligionene lærer, hvilke skrifter de bygger på, og hvilken plass religion har i Norge i dag.",
+      "summary": "De fem store verdensreligionene bygger på hver sine skrifter og lærer, og religion har fortsatt en plass i det norske samfunnet.",
       "lesson": [
         "Jødedom, kristendom og islam deler troen på én Gud og regnes som abrahamittiske religioner. Jødedommens hellige skrift er Tanakh, den hebraiske bibel. Kristendommen bygger på Jesus fra Nasaret, som de kristne tror er Guds sønn, og Bibelen består av Det gamle og Det nye testamentet. Kristendommen er verdens største religion, fulgt av islam.",
         "Islam oppsto på Den arabiske halvøy på 600-tallet. Muslimer tror at Koranen er Guds ord, åpenbart for profeten Muhammed. Hinduismen har ingen stifter, men er et mangfold av tradisjoner fra India. Buddhismen ble grunnlagt av Buddha i Nord-India omkring 400 f.Kr., og skriftene samles i Tripitaka. Begge lærer om karma og gjenfødelse. I buddhismen er målet nirvana, frihet fra gjenfødelse.",
@@ -1497,7 +1497,7 @@
       "prerequisites": [
         "vh-antikkens-hellas"
       ],
-      "summary": "Hva de store tenkerne i vestlig filosofi har spurt om, fra Sokrates til Arne Næss, og hvordan etikken skiller rett fra galt.",
+      "summary": "Filosofien har fra Sokrates til Arne Næss spurt hva vi kan vite og hvordan vi bør leve, og etikken gir ulike svar på hva som er rett.",
       "lesson": [
         "Vestlig filosofi begynte i antikkens Hellas. Sokrates skrev ingenting selv, men utfordret athenerne ved å stille spørsmål i samtaler. Han ble til slutt dømt til døden. Eleven Platon grunnla Akademiet og skilte mellom sansenes verden og en evig ideverden. Platons elev Aristoteles gikk mer empirisk til verks og mente at formene finnes i tingene selv.",
         "René Descartes regnes som grunnleggeren av den nyere filosofien. Han ville tvile på alt, men fant at han ikke kunne tvile på at han selv tvilte: «Jeg tenker, altså er jeg». Immanuel Kant mente at mennesket som fornuftsvesen selv kan finne moralloven, uttrykt i det kategoriske imperativ.",
@@ -1712,7 +1712,7 @@
       "prerequisites": [
         "sam-demokrati-rettigheter"
       ],
-      "summary": "Hvordan USAs grunnlov fordeler makten, hvordan presidenten velges, og hvilke presidenter som har satt dypest spor.",
+      "summary": "USAs grunnlov fordeler makten mellom tre statsmakter, og noen få presidenter har satt spor som preger landet fortsatt.",
       "lesson": [
         "USA er en forbundsstat med 50 delstater. Grunnloven fra 1787 bygger på Montesquieus maktfordeling, og USA har ikke parlamentarisme. Kongressen er den lovgivende makten. Den består av Senatet, der hver delstat har to senatorer, og Representantenes hus, der plassene fordeles etter folketall. Presidenten har den utøvende makten, og Høyesterett med ni dommere har den dømmende.",
         "Statsmaktene kontrollerer hverandre. På engelsk kalles dette «checks and balances». Presidenten kan nedlegge veto mot lover, men Kongressen kan overstyre vetoet med to tredjedels flertall i begge kamre. Presidenten velges for fire år og kan gjenvelges én gang. Formelt velges presidenten av et valgmannskollegium på 538 medlemmer, der 270 stemmer gir flertall.",
