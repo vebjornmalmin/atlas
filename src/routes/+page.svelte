@@ -265,12 +265,12 @@
   async function refresh() {
     [states,reviews,logs,savedSessions] = await Promise.all(['states','reviews','logs','sessions'].map(s=>all(db,s)));
   }
-  async function savePreferences() {
+  async function savePreferences(silent = false) {
     if (prefs.fromYear !== '' && prefs.toYear !== '' && Number(prefs.fromYear)>Number(prefs.toYear)) throw new Error('Startåret må være før sluttåret.');
     const record = JSON.parse(JSON.stringify(prefs));
     await put(db,'settings',record);
     document.documentElement.dataset.theme = prefs.theme;
-    notify('Utvalget er lagret.');
+    if(!silent) notify('Utvalget er lagret.');
   }
   function toggleCollection(id) {
     prefs.collectionIds = prefs.collectionIds.includes(id) ? prefs.collectionIds.filter(x=>x!==id) : [...prefs.collectionIds,id];
@@ -602,6 +602,7 @@
     {:else}
       {#if !quizSetup}<section class="hero today-hero"><p class="eyebrow">{new Date().toLocaleDateString('nb-NO',{weekday:'long',day:'numeric',month:'long'})}{#if streak>1} · {streak} dager på rad{/if}</p><h1>{reviewedToday?'Godt i gang':'Dagens økt'}</h1><p class="lead">{reviewedToday?`${reviewedToday} svar i dag`:'Noen minutter om dagen bygger kunnskap som varer.'}</p></section>
       {#if session?.status==='active' && (current || currentLesson)}<div class="card resume-card"><h2>{session.title || 'Påbegynt økt'}</h2><p class="muted">{session.index} av {session.queue.length} gjort</p><button class="primary" onclick={()=>run(()=>resumeSession())}>Fortsett der du var</button></div>{/if}
+      {#if data.curriculum && !reviews.length && !prefs.introSeen}<div class="card intro-card"><h2>Slik fungerer Atlas</h2><ul class="key-points"><li>Hvert emne begynner med en kort innføring. Spørsmålene kommer litt etter, så du henter fram i stedet for å kopiere.</li><li>Du går fra oversikt til detaljer i fire steg, og emnene bygger videre på hverandre.</li><li>Det du holder på å glemme, kommer tilbake til riktig tid. Noen minutter om dagen er nok.</li></ul><button class="quiet" onclick={()=>run(async()=>{prefs.introSeen=true;await savePreferences(true);})}>Skjønner</button></div>{/if}
       {#if data.curriculum}
         {@const plan=selection.queue}
         {@const fresh=plan.filter(q=>q.target && q.reason!=='Due review')}
