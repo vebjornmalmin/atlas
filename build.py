@@ -5,6 +5,7 @@ import struct
 import zlib
 
 root = Path(__file__).parent
+version = json.loads((root / 'package.json').read_text())['version']
 public = root / 'public'
 
 def png(size):
@@ -36,7 +37,7 @@ urls = ['/' if p.relative_to(built).as_posix() == 'index.html' else '/' + p.rela
 sw = (root / 'scripts/service-worker.js').read_text().replace('__CACHE__', 'atlas-release-' + release).replace('__ASSETS__', json.dumps(urls))
 (built / 'sw.js').write_text(sw)
 files.append(built / 'sw.js')
-(built / 'version.json').write_text(json.dumps({'version':'0.11.0','release':release}))
+(built / 'version.json').write_text(json.dumps({'version':version,'release':release}))
 files.append(built / 'version.json')
 types = {'.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.json':'application/json', '.txt':'text/plain; charset=utf-8', '.webmanifest': 'application/manifest+json', '.png': 'image/png', '.jpg':'image/jpeg'}
 assets = {}
@@ -51,7 +52,7 @@ source = 'const assets = ' + json.dumps(assets) + ';\nconst csp=' + json.dumps(c
   async fetch(request) {
     const path = new URL(request.url).pathname;
     if (!['GET', 'HEAD'].includes(request.method)) return new Response('Method not allowed', {status: 405, headers: {Allow: 'GET, HEAD'}});
-    if (path === '/health') return Response.json({status: 'ok', version: '0.11.0'});
+    if (path === '/health') return Response.json({status: 'ok', version: '__VERSION__'});
     const asset = assets[path];
     if (!asset) return new Response('Not found', {status: 404});
     const bytes = Uint8Array.from(atob(asset.body), c => c.charCodeAt(0));
@@ -66,5 +67,6 @@ source = 'const assets = ' + json.dumps(assets) + ';\nconst csp=' + json.dumps(c
   }
 };
 """
+source = source.replace('__VERSION__', version)
 (root / 'worker.mjs').write_text(source)
 print('Built release', release, 'with', len(assets), 'assets; Worker bytes',len(source))

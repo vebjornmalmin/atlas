@@ -1,4 +1,5 @@
-export const APP_VERSION='0.11.0';
+import pkg from '../../package.json' with {type:'json'};
+export const APP_VERSION=pkg.version;
 export const APP_CHECK_INTERVAL=5*60*1000;
 export function createAppUpdateChecker({fetchVersion,getRegistration,version=APP_VERSION,now=Date.now,onStatus=()=>{},waitMs=30000}) {
  let last=0,inFlight=null;
