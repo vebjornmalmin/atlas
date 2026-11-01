@@ -1,0 +1,2311 @@
+{
+  "domain": {
+    "id": "moderne-historie",
+    "title": "Det moderne århundret",
+    "subject": "history",
+    "order": 3,
+    "description": "Fra imperialismen til i dag: verdenskrigene, ideologiene og forandringene som preger verden vi lever i."
+  },
+  "units": [
+    {
+      "id": "mh-imperialismen",
+      "title": "Imperialismen",
+      "tier": 2,
+      "prerequisites": [
+        "vh-industrielle-revolusjon"
+      ],
+      "years": {
+        "from": 1870,
+        "to": 1914
+      },
+      "summary": "Tiden da europeiske stormakter delte Afrika og store deler av Asia mellom seg, med grenser og konflikter som fortsatt preger verden.",
+      "lesson": [
+        "Imperialisme betyr at en stat legger under seg andre land og folk og styrer dem fra et fjernt sentrum. Industrialiseringen på 1800-tallet skapte behov for råvarer og nye markeder, og dampskip, jernbane og telegraf gjorde det mulig å styre områder langt unna. Nasjonal prestisje og en utbredt tro på europeisk overlegenhet, uttrykt som «den hvite manns byrde», ga politikken oppslutning.",
+        "Afrika ble i hovedsak delt opp på slutten av 1800-tallet. På Berlinkonferansen i 1884–1885 trakk europeiske stater opp regler og grenser, uten at noen afrikanere var med. I 1895 var bare Marokko, Etiopia, Liberia og to sultanater i dagens Somalia selvstendige. Kongo ble den belgiske kong Leopold 2.s private eiendom. Tvangsarbeidet for å skaffe naturgummi kostet etter historikernes anslag mellom én og ti millioner mennesker livet.",
+        "Britisk India var lenge styrt av Det ostindiske kompani. Etter et stort opprør i 1857–1859, som begynte blant indiske soldater, overtok den britiske kronen styret, og India ble kronkoloni. Imperiene ga stormaktene rikdom og makt, men skjerpet også rivaliseringen mellom dem."
+      ],
+      "keyPoints": [
+        "Imperialismen nådde sitt høydepunkt fra omkring 1870 til første verdenskrig.",
+        "Motivene var råvarer, markeder, investeringer, makt og prestisje, støttet av forestillinger om europeisk overlegenhet.",
+        "Berlinkonferansen 1884–1885 satte rammene for oppdelingen av Afrika, uten afrikanske deltakere.",
+        "Leopold 2.s Kongo ble beryktet for tvangsarbeid og massedød.",
+        "India gikk fra kompanistyre til britisk kronkoloni etter opprøret i 1857."
+      ],
+      "sources": [
+        {
+          "title": "Kolonialisme – Store norske leksikon",
+          "url": "https://snl.no/kolonialisme"
+        },
+        {
+          "title": "Berlinkonferansen – Store norske leksikon",
+          "url": "https://snl.no/Berlinkonferansen"
+        },
+        {
+          "title": "Fristaten Kongo – Store norske leksikon",
+          "url": "https://snl.no/Fristaten_Kongo"
+        },
+        {
+          "title": "Det indiske opprøret av 1857 – Store norske leksikon",
+          "url": "https://snl.no/Det_indiske_oppr%C3%B8ret_av_1857"
+        }
+      ],
+      "cards": [
+        {
+          "id": "mh-imperialismen-hva",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hva menes med imperialisme?",
+          "answer": "At en stat legger under seg og styrer andre land og folk",
+          "distractors": [
+            "At en stat stenger grensene for all utenrikshandel",
+            "At flere stater slår seg sammen i et frivillig forbund",
+            "At folk flytter ut og bosetter seg uten statlig styring"
+          ],
+          "explain": "Imperialisme henger tett sammen med kolonialisme, der et sentrum oppretter og styrer kolonier langt unna. Fra 1800-tallet ble det viktigere for kolonimaktene å knytte koloniene tett til moderlandet og dominere dem."
+        },
+        {
+          "id": "mh-imperialismen-periode",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Når ble det meste av Afrika delt mellom de europeiske kolonimaktene?",
+          "answer": "Slutten av 1800-tallet",
+          "distractors": [
+            "Begynnelsen av 1700-tallet",
+            "Midten av 1500-tallet",
+            "Tiden etter andre verdenskrig"
+          ],
+          "explain": "Så sent som på 1870-tallet holdt europeerne stort sett til langs kysten og helt sør og nord på kontinentet. I løpet av 1880- og 1890-årene ble Afrika delt mellom Storbritannia, Frankrike, Belgia, Tyskland, Italia, Spania og Portugal."
+        },
+        {
+          "id": "mh-imperialismen-berlin",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hva ble avgjort på Berlinkonferansen i 1884–1885?",
+          "answer": "Regler og grenser for oppdelingen av Afrika",
+          "distractors": [
+            "Fredsvilkårene etter den fransk-tyske krigen",
+            "Delingen av Kina i europeiske handelssoner",
+            "Grensene mellom stormaktene på Balkan"
+          ],
+          "explain": "Den tyske rikskansleren Otto von Bismarck tok initiativet, fordi han mente den nye stormakten Tyskland også burde ha kolonier. Grensene skar ofte gjennom tidligere afrikanske riker, men er i hovedsak blitt stående til i dag."
+        },
+        {
+          "id": "mh-imperialismen-motiver",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hva drev stormaktene til å skaffe seg kolonier på slutten av 1800-tallet?",
+          "answer": "Råvarer, markeder, makt og nasjonal prestisje",
+          "distractors": [
+            "Ønsket om å gi koloniene demokrati og selvstyre",
+            "Et overskudd av matvarer som måtte selges ut",
+            "Avtaler med afrikanske stater om felles forsvar"
+          ],
+          "explain": "Politiske og militære ledere ville styrke landets «makt og ære». Rudyard Kiplings dikt «Den hvite manns byrde» fra 1899 uttrykte ideen om at europeerne hadde en plikt til å «sivilisere» andre folk."
+        },
+        {
+          "id": "mh-imperialismen-etiopia",
+          "step": 2,
+          "type": "choice",
+          "prompt": "Hvilket av disse afrikanske landene var fortsatt selvstendig i 1895?",
+          "answer": "Etiopia",
+          "distractors": [
+            "Kongo",
+            "Egypt",
+            "Algerie"
+          ],
+          "explain": "Etiopia var en av svært få selvstendige stater i Afrika. Mussolinis Italia angrep landet i 1935–1936, se emnet om mellomkrigstiden."
+        },
+        {
+          "id": "mh-imperialismen-leopold",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvilken belgisk konge fikk Kongo som sin private eiendom i 1885?",
+          "answer": "Leopold 2.",
+          "accept": [
+            "Leopold II",
+            "Leopold 2",
+            "Leopold",
+            "Kong Leopold",
+            "Leopold den andre"
+          ],
+          "explain": "Leopold framstilte prosjektet som humanitært og lovet frihandel og «sivilisasjon». I praksis ble Fristaten Kongo drevet for hans egen fortjeneste, og han besøkte aldri kolonien."
+        },
+        {
+          "id": "mh-imperialismen-gummi",
+          "step": 2,
+          "type": "choice",
+          "prompt": "Hvilken råvare drev særlig utbyttingen av Kongo fra 1890-årene?",
+          "answer": "Naturgummi",
+          "distractors": [
+            "Kakao",
+            "Bomull",
+            "Tobakk"
+          ],
+          "explain": "Gummi trengtes til sykkel- og bildekk og til isolasjon av elektriske ledninger. Leopolds private hær, Force Publique, tok kvinner som gisler og tvang mennene til å samle inn gummikvoter."
+        },
+        {
+          "id": "mh-imperialismen-kompani",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvilket handelsselskap styrte Britisk India fram til opprøret i 1857?",
+          "answer": "Det ostindiske kompani",
+          "accept": [
+            "Ostindiske kompani",
+            "Det ostindiske kompaniet",
+            "Det britiske ostindiske kompani",
+            "East India Company",
+            "Ostindiakompaniet"
+          ],
+          "explain": "Britene kontrollerte et område fra Calcutta til Kabul med hjelp av indiske soldater, kalt sepoyer. Opprøret startet blant disse soldatene og regnes i India som begynnelsen på uavhengighetsbevegelsen."
+        },
+        {
+          "id": "mh-imperialismen-hvorfor-industri",
+          "step": 3,
+          "type": "choice",
+          "prompt": "Hvorfor ga industrialiseringen ny fart til kappløpet om kolonier?",
+          "answer": "Industrien trengte råvarer og nye markeder for varene",
+          "distractors": [
+            "Fabrikkene trengte slaver fra Afrika som arbeidere",
+            "Jordbruket i Europa hadde nesten opphørt helt",
+            "Europeiske arbeidere ville flytte til tropiske strøk"
+          ],
+          "explain": "Masseproduksjonen av billige varer krevde større markeder, og kapitalinvesteringer i koloniene ga stor fortjeneste. Industrien tjente også på bestillinger av jernbaner, utstyr og ferdigvarer til koloniene."
+        },
+        {
+          "id": "mh-imperialismen-forklar-grenser",
+          "step": 3,
+          "type": "explain",
+          "prompt": "Forklar hvorfor grensene fra Berlinkonferansen fortsatt kan skape problemer i Afrika.",
+          "answer": "Grensene ble trukket av europeiske makter uten afrikansk deltakelse og skar ofte gjennom tidligere riker og områder. Ved selvstendigheten valgte de nye statene å beholde dem for å unngå videre oppsplitting, men flere grenser er fortsatt omstridt og kilde til konflikt.",
+          "checklist": [
+            "Grensene ble trukket uten afrikanere",
+            "De skar gjennom eldre riker og områder",
+            "De nye statene beholdt dem for å unngå oppsplitting",
+            "Flere grenser er fortsatt omstridt"
+          ],
+          "explain": "Det var Organisasjonen for afrikansk enhet, i dag Den afrikanske union, som vedtok å beholde de koloniale grensene. Hvordan koloniene ble selvstendige, handler emnet om avkoloniseringen om."
+        },
+        {
+          "id": "mh-imperialismen-rekkefolge",
+          "step": 3,
+          "type": "order",
+          "prompt": "Sett hendelsene fra imperialismens tid i kronologisk rekkefølge.",
+          "items": [
+            {
+              "label": "Opprøret mot britene i India begynner",
+              "year": 1857
+            },
+            {
+              "label": "Berlinkonferansen åpner",
+              "year": 1884
+            },
+            {
+              "label": "Kipling utgir «Den hvite manns byrde»",
+              "year": 1899
+            },
+            {
+              "label": "Kongo blir belgisk statskoloni",
+              "year": 1908
+            }
+          ],
+          "explain": "Leopold ble i 1908 presset av internasjonal kritikk til å overlate Kongo til den belgiske staten. Området fikk da navnet Belgisk Kongo."
+        },
+        {
+          "id": "mh-imperialismen-aar-berlin",
+          "step": 4,
+          "type": "year",
+          "prompt": "I hvilket år ble sluttavtalen fra Berlinkonferansen undertegnet?",
+          "answer": "1885",
+          "explain": "Avtalen ble undertegnet 26. februar 1885. Et omstridt punkt sa at den som kom først til et område, kunne ta det i besittelse, og det skjerpet rivaliseringen i stedet for å dempe den."
+        },
+        {
+          "id": "mh-imperialismen-kongo-dode",
+          "step": 4,
+          "type": "choice",
+          "prompt": "Hvor mange mennesker døde under Leopold 2.s styre i Kongo, ifølge historikernes anslag?",
+          "answer": "Mellom én og ti millioner",
+          "distractors": [
+            "Rundt 10 000",
+            "Rundt 100 000",
+            "Over 50 millioner"
+          ],
+          "explain": "Anslagene spriker fordi ingen talte de døde. Vold, sult og sykdom fulgte tvangsarbeidet, og matproduksjonen falt kraftig. Rundt 200 norske «kongofarere» tjenestegjorde i kolonien."
+        },
+        {
+          "id": "mh-imperialismen-kronkoloni",
+          "step": 4,
+          "type": "choice",
+          "prompt": "Hva ble følgen for styret av India etter opprøret i 1857–1859?",
+          "answer": "Den britiske kronen overtok styret",
+          "distractors": [
+            "India fikk indre selvstyre",
+            "Kompaniet fikk utvidet makt",
+            "Frankrike overtok kystbyene"
+          ],
+          "explain": "Britene slo opprøret ned med hard hånd. Et rykte om at patronene til de nye riflene var smurt med svine- eller kufett, var en av de utløsende årsakene."
+        }
+      ]
+    },
+    {
+      "id": "mh-forste-verdenskrig",
+      "title": "Første verdenskrig",
+      "tier": 1,
+      "prerequisites": [],
+      "years": {
+        "from": 1914,
+        "to": 1918
+      },
+      "summary": "Den første industrielle storkrigen, som knuste fire keiserdømmer og la grunnen for konfliktene resten av 1900-tallet.",
+      "lesson": [
+        "Første verdenskrig varte fra 1914 til 1918. På den ene siden stod sentralmaktene Tyskland og Østerrike-Ungarn, senere med Det osmanske riket og Bulgaria. På den andre siden stod ententemaktene, eller de allierte, med Frankrike, Russland og Storbritannia i kjernen. Den utløsende årsaken var drapet på den østerriksk-ungarske tronarvingen Franz Ferdinand i Sarajevo 28. juni 1914. Bak lå stormaktsrivalisering, imperialisme, nasjonalisme og opprustning.",
+        "På vestfronten stivnet krigen raskt til stillingskrig. Skyttergraver strakte seg fra Den engelske kanal til Sveits, og masseslag som Verdun og Somme i 1916 kostet enorme tap for små gevinster. Fly, ubåter, stridsvogner og giftgass ble tatt i bruk. Tysklands uinnskrenkede ubåtkrig fikk USA til å gå inn i krigen på alliert side i april 1917.",
+        "Våpenstillstanden 11. november 1918 avsluttet kampene. Nærmere 18 millioner soldater og sivile var drept. I Versaillestraktaten fra 1919 ble Tyskland gitt skylden for krigen, måtte betale krigserstatning og avstå land. Fire keiserdømmer brøt sammen, og Folkeforbundet ble opprettet for å hindre nye kriger."
+      ],
+      "keyPoints": [
+        "Krigen varte fra 1914 til 1918 mellom sentralmaktene og ententemaktene.",
+        "Skuddene i Sarajevo 28. juni 1914 utløste krigen, men årsakene lå dypere.",
+        "Vestfronten ble en fastlåst skyttergravskrig med enorme tap.",
+        "USA gikk inn i 1917, og våpenstillstanden kom 11. november 1918.",
+        "Versaillestraktaten straffet Tyskland, og Folkeforbundet skulle sikre freden."
+      ],
+      "sources": [
+        {
+          "title": "Første verdenskrig – Store norske leksikon",
+          "url": "https://snl.no/f%C3%B8rste_verdenskrig"
+        },
+        {
+          "title": "Skuddene i Sarajevo – Store norske leksikon",
+          "url": "https://snl.no/Skuddene_i_Sarajevo"
+        },
+        {
+          "title": "Versailles-traktaten – Store norske leksikon",
+          "url": "https://snl.no/Versailles-traktaten"
+        },
+        {
+          "title": "Folkeforbundet – Store norske leksikon",
+          "url": "https://snl.no/Folkeforbundet"
+        }
+      ],
+      "cards": [
+        {
+          "id": "mh-forste-verdenskrig-periode",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilke år varte første verdenskrig?",
+          "answer": "1914–1918",
+          "distractors": [
+            "1912–1916",
+            "1917–1921",
+            "1905–1910"
+          ],
+          "explain": "Krigen begynte i begynnelsen av august 1914, om lag en måned etter skuddene i Sarajevo. Den hadde sitt sentrum i Europa, men spredte seg til Midtøsten, Afrika, deler av Asia og verdenshavene."
+        },
+        {
+          "id": "mh-forste-verdenskrig-sarajevo",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilken hendelse utløste krigen sommeren 1914?",
+          "answer": "Drapet på tronarvingen Franz Ferdinand i Sarajevo",
+          "distractors": [
+            "Tysklands angrep på den britiske flåten",
+            "En revolusjon som styrtet tsaren i Russland",
+            "Frankrikes invasjon av tyske grenseområder"
+          ],
+          "explain": "Gjerningsmannen var den bosnisk-serbiske Gavrilo Princip. Østerrike-Ungarn ga Serbia skylden og stilte landet et ultimatum, og krisen som fulgte, kalles Julikrisen."
+        },
+        {
+          "id": "mh-forste-verdenskrig-sentralmaktene",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilke land utgjorde kjernen i sentralmaktene?",
+          "answer": "Tyskland og Østerrike-Ungarn",
+          "distractors": [
+            "Frankrike og Storbritannia",
+            "Russland og Serbia",
+            "Italia og Japan"
+          ],
+          "explain": "Alliansen gikk tilbake til et forsvarsforbund fra 1879. Italia var med i den såkalte trippelalliansen før krigen, men gikk inn på ententens side i 1915."
+        },
+        {
+          "id": "mh-forste-verdenskrig-vestfronten",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hva kjennetegnet krigføringen på vestfronten?",
+          "answer": "Fastlåst stillingskrig i skyttergraver",
+          "distractors": [
+            "Raske kavaleriangrep over store avstander",
+            "Kamper som i hovedsak foregikk til sjøs",
+            "Geriljakrig i fjell og skog"
+          ],
+          "explain": "Den tyske Schlieffenplanen gikk ut på å slå Frankrike raskt, men ble stanset ved Marne i september 1914. Deretter gravde begge sider seg ned. På østfronten var krigen langt mer bevegelig."
+        },
+        {
+          "id": "mh-forste-verdenskrig-franz",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvem var den østerriksk-ungarske tronarvingen som ble skutt i Sarajevo i 1914?",
+          "answer": "Franz Ferdinand",
+          "accept": [
+            "Frans Ferdinand",
+            "Erkehertug Franz Ferdinand",
+            "Franz Ferdinand av Østerrike"
+          ],
+          "explain": "Kona hans, Sophie, ble også drept. Gavrilo Princip ble knyttet til den serbiske nasjonalistiske organisasjonen Den sorte hånd, som hadde forbindelser til serbisk etterretning."
+        },
+        {
+          "id": "mh-forste-verdenskrig-versailles",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva kalles fredsavtalen de allierte sluttet med Tyskland i 1919?",
+          "answer": "Versaillestraktaten",
+          "accept": [
+            "Versailles-traktaten",
+            "Versaillesfreden",
+            "Versailles-freden",
+            "Freden i Versailles",
+            "Versailles"
+          ],
+          "explain": "Tyskland måtte blant annet gi Elsass-Lothringen tilbake til Frankrike, og Polen fikk en korridor til havet som skilte Øst-Preussen fra resten av Tyskland. De tyske koloniene ble fordelt mellom seiersmaktene."
+        },
+        {
+          "id": "mh-forste-verdenskrig-folkeforbundet",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva het den internasjonale organisasjonen som ble opprettet etter krigen for å trygge freden?",
+          "answer": "Folkeforbundet",
+          "accept": [
+            "Nasjonenes forbund",
+            "League of Nations"
+          ],
+          "explain": "Ideen ble særlig fremmet av USAs president Woodrow Wilson, og sekretariatet lå i Genève. USA ble likevel aldri medlem fordi Senatet sa nei, og forbundet ble oppløst i 1946 etter at FN var opprettet."
+        },
+        {
+          "id": "mh-forste-verdenskrig-hvorfor-usa",
+          "step": 3,
+          "type": "choice",
+          "prompt": "Hva var den viktigste grunnen til at USA gikk inn i krigen i april 1917?",
+          "answer": "Tysklands uinnskrenkede ubåtkrig mot skipsfarten",
+          "distractors": [
+            "Japans angrep på amerikanske flåtebaser",
+            "Russlands krav om hjelp mot Østerrike-Ungarn",
+            "Drapet på en amerikansk diplomat i Berlin"
+          ],
+          "explain": "I tillegg avslørte det såkalte Zimmermann-telegrammet at Tyskland ville tilby Mexico en allianse mot USA. Først med amerikanske styrker kunne de allierte gjennomføre vellykkede offensiver i 1918."
+        },
+        {
+          "id": "mh-forste-verdenskrig-forklar-utbrudd",
+          "step": 3,
+          "type": "explain",
+          "prompt": "Forklar hvordan et drap i Sarajevo kunne utvikle seg til en storkrig.",
+          "answer": "Østerrike-Ungarn ga Serbia skylden og gikk mot landet med støtte fra Tyskland. Fordi stormaktene var bundet i to faste allianser, ble Russland, Frankrike og etter hvert Storbritannia trukket inn. Spenninger fra stormaktsrivalisering, imperialisme, nasjonalisme og opprustning lå allerede der.",
+          "checklist": [
+            "Østerrike-Ungarn gikk mot Serbia med tysk støtte",
+            "Faste allianser trakk inn flere stormakter",
+            "Rivalisering og nasjonalisme hadde bygd opp spenninger"
+          ],
+          "explain": "Tidligere hadde stormaktene ofte byttet partnere for å bevare maktbalansen. Storbritannia gikk inn da Tyskland krenket Belgias nøytralitet på vei mot Frankrike."
+        },
+        {
+          "id": "mh-forste-verdenskrig-bitterhet",
+          "step": 3,
+          "type": "choice",
+          "prompt": "Hvorfor skapte fredsavtalen fra 1919 så mye bitterhet i Tyskland?",
+          "answer": "Tyskland fikk skylden for krigen og måtte betale erstatning",
+          "distractors": [
+            "Tyskland mistet alle områdene vest for Rhinen",
+            "Keiseren ble innsatt igjen mot folkets vilje",
+            "Tyskland ble delt i fire okkupasjonssoner"
+          ],
+          "explain": "Krigsskyldsparagrafen, paragraf 231, vakte særlig harme, og mange kalte avtalen «skammens fred». Misnøyen med fredsoppgjøret regnes som en del av bakgrunnen for andre verdenskrig."
+        },
+        {
+          "id": "mh-forste-verdenskrig-rekkefolge",
+          "step": 3,
+          "type": "order",
+          "prompt": "Sett hendelsene fra første verdenskrig i kronologisk rekkefølge.",
+          "items": [
+            {
+              "label": "Skuddene i Sarajevo",
+              "year": 1914
+            },
+            {
+              "label": "Slaget ved Verdun",
+              "year": 1916
+            },
+            {
+              "label": "USA går inn i krigen",
+              "year": 1917
+            },
+            {
+              "label": "Versaillestraktaten undertegnes",
+              "year": 1919
+            }
+          ],
+          "explain": "Versaillestraktaten ble undertegnet 28. juni 1919, på femårsdagen for skuddene i Sarajevo. Ved Verdun ble det anslått 750 000 drepte og sårede på ti måneder."
+        },
+        {
+          "id": "mh-forste-verdenskrig-vapenstillstand",
+          "step": 4,
+          "type": "choice",
+          "prompt": "Hvilken dato trådte våpenstillstanden i kraft og ilden opphørte på vestfronten?",
+          "answer": "11. november 1918",
+          "distractors": [
+            "28. juni 1919",
+            "1. september 1918",
+            "6. april 1917"
+          ],
+          "explain": "To dager før hadde keiser Wilhelm 2. abdisert og gått i eksil i Nederland, og Tyskland var blitt republikk. Den nye staten ble kjent som Weimarrepublikken."
+        },
+        {
+          "id": "mh-forste-verdenskrig-wilson",
+          "step": 4,
+          "type": "text",
+          "prompt": "Hvilken amerikansk president la i januar 1918 fram et fredsprogram i 14 punkter?",
+          "answer": "Woodrow Wilson",
+          "accept": [
+            "Wilson",
+            "Thomas Woodrow Wilson"
+          ],
+          "explain": "Programmet krevde blant annet nasjonenes selvbestemmelse og et alminnelig forbund av folkene. Tyskerne håpet på en fred etter Wilsons linje, men fikk langt strengere vilkår."
+        },
+        {
+          "id": "mh-forste-verdenskrig-elsass",
+          "step": 4,
+          "type": "choice",
+          "prompt": "Hvilket grenseområde måtte Tyskland gi tilbake til Frankrike etter krigen?",
+          "answer": "Elsass-Lothringen",
+          "distractors": [
+            "Sudetenland",
+            "Nordslesvig",
+            "Ruhr-området"
+          ],
+          "explain": "Frankrike hadde tapt området i den fransk-tyske krigen i 1870–1871, og ønsket om å vinne det tilbake hadde preget fransk politikk siden. Nordslesvig gikk til Danmark etter en folkeavstemning i 1920."
+        }
+      ]
+    },
+    {
+      "id": "mh-russiske-revolusjon",
+      "title": "Den russiske revolusjonen og Sovjetunionen",
+      "tier": 2,
+      "prerequisites": [
+        "mh-forste-verdenskrig"
+      ],
+      "years": {
+        "from": 1917,
+        "to": 1953
+      },
+      "summary": "Revolusjonen i 1917 skapte verdens første kommunistiske stat, som under Stalin ble en industrimakt til en enorm menneskelig pris.",
+      "lesson": [
+        "Russland gikk inn i første verdenskrig som et fattig keiserrike med en enevoldig tsar. Krig, matmangel og dyrtid utløste revolusjon i 1917. I februarrevolusjonen måtte tsar Nikolaj 2. gå av, og en provisorisk regjering tok over. I oktober tok bolsjevikene under Vladimir Lenin makten i et nesten ublodig opprør i Petrograd. Etter vår kalender skjedde dette i mars og november.",
+        "Bolsjevikene sluttet separatfred med Tyskland i Brest-Litovsk i 1918 og vant den nådeløse borgerkrigen mellom «de røde» og «de hvite» i 1918–1921. I 1922 ble Sovjetunionen opprettet, en forbundsstat styrt av kommunistpartiet. Lenin døde i 1924, og Josef Stalin vant maktkampen etter ham.",
+        "Stalin innførte planøkonomi med femårsplaner og tvangskollektiviserte jordbruket. Bøndene ble samlet i kollektivbruk, og de mer velstående bøndene, kulakkene, ble deportert. Hungersnøden i 1932–1933 kostet anslagsvis 6–7 millioner liv. Under Den store terror i 1937–1938 ble omkring 700 000 mennesker skutt. Sovjetunionen ble en industrimakt, men til en enorm menneskelig pris."
+      ],
+      "keyPoints": [
+        "Februarrevolusjonen 1917 styrtet tsaren; i oktober tok bolsjevikene makten.",
+        "Bolsjevikene vant borgerkrigen og opprettet Sovjetunionen i 1922.",
+        "Stalin vant maktkampen etter Lenins død i 1924.",
+        "Tvangskollektivisering og terror kostet millioner av liv."
+      ],
+      "sources": [
+        {
+          "title": "Den russiske revolusjon – Store norske leksikon",
+          "url": "https://snl.no/Den_russiske_revolusjon"
+        },
+        {
+          "title": "Vladimir Lenin – Store norske leksikon",
+          "url": "https://snl.no/Vladimir_Lenin"
+        },
+        {
+          "title": "Josef Stalin – Store norske leksikon",
+          "url": "https://snl.no/Josef_Stalin"
+        },
+        {
+          "title": "Sovjetunionens historie – Store norske leksikon",
+          "url": "https://snl.no/Sovjetunionens_historie"
+        }
+      ],
+      "cards": [
+        {
+          "id": "mh-russiske-revolusjon-1917",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hva skjedde i Russland i 1917?",
+          "answer": "Tsaren ble styrtet, og bolsjevikene tok makten",
+          "distractors": [
+            "Tsaren innførte demokrati etter vestlig mønster",
+            "Tyskland okkuperte Moskva og innsatte en ny tsar",
+            "Russland ble delt mellom Tyskland og Japan"
+          ],
+          "explain": "Revolusjonen bestod egentlig av to omveltninger. Februarrevolusjonen var spontan og nedenfra, mens oktoberrevolusjonen var nøye planlagt av bolsjevikledelsen."
+        },
+        {
+          "id": "mh-russiske-revolusjon-leder",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvem ledet bolsjevikene da de tok makten i oktober 1917?",
+          "answer": "Vladimir Lenin",
+          "distractors": [
+            "Josef Stalin",
+            "Aleksandr Kerenskij",
+            "Nikita Khrusjtsjov"
+          ],
+          "explain": "Lenin oppholdt seg i Sveits da revolusjonen brøt ut, og fikk reise hjem i et «plombert» tog gjennom Tyskland. Kerenskij var en sentral skikkelse i den provisoriske regjeringen som bolsjevikene avsatte."
+        },
+        {
+          "id": "mh-russiske-revolusjon-sovjet",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Når ble Sovjetunionen opprettet?",
+          "answer": "1922",
+          "distractors": [
+            "1917",
+            "1918",
+            "1924"
+          ],
+          "explain": "Den russiske sovjetrepublikken ble slått sammen med Ukraina, Belarus og en transkaukasisk republikk. Sovjetunionen bestod til 1991 og var verdens største stat."
+        },
+        {
+          "id": "mh-russiske-revolusjon-stalin-styre",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hva kjennetegnet Stalins styre fra slutten av 1920-årene?",
+          "answer": "Tvangskollektivisering, rask industrialisering og terror",
+          "distractors": [
+            "Fri markedsøkonomi og valg med flere partier",
+            "Nedrustning og tett samarbeid med vestmaktene",
+            "Desentralisering og fritt jordbruk for bøndene"
+          ],
+          "explain": "Fra slutten av 1930-årene hadde Stalin i praksis diktatorisk makt. Historikere anslår at politikken hans kostet mellom 3 og 9 millioner mennesker livet, avhengig av hva som regnes med."
+        },
+        {
+          "id": "mh-russiske-revolusjon-bolsjevikene",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva het fraksjonen som tok makten i oktober 1917, og som senere ble kommunistpartiet?",
+          "answer": "Bolsjevikene",
+          "accept": [
+            "Bolsjevikpartiet",
+            "Bolsjeviker",
+            "Bolsjevik",
+            "Bolsjevikane"
+          ],
+          "explain": "Navnet betyr «flertallsmenn» og stammer fra splittelsen av det russiske sosialdemokratiske partiet i 1903. Den andre fløyen ble kalt mensjevikene, «mindretallsmenn»."
+        },
+        {
+          "id": "mh-russiske-revolusjon-petrograd",
+          "step": 2,
+          "type": "text",
+          "prompt": "I hvilken by tok bolsjevikene makten i oktober 1917?",
+          "answer": "Petrograd",
+          "accept": [
+            "St. Petersburg",
+            "Sankt Petersburg",
+            "St Petersburg",
+            "Petersburg"
+          ],
+          "explain": "Røde garder besatte strategiske punkter i byen, og om natten ble Vinterpalasset, der regjeringen holdt til, inntatt. Byen heter i dag St. Petersburg."
+        },
+        {
+          "id": "mh-russiske-revolusjon-stalin",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvem vant maktkampen i kommunistpartiet etter Lenins død?",
+          "answer": "Josef Stalin",
+          "accept": [
+            "Stalin",
+            "Joseph Stalin",
+            "Iosif Stalin"
+          ],
+          "explain": "Som generalsekretær fra 1922 fylte Stalin partiapparatet med lojale folk. Lenin hadde i sitt politiske testamente bedt om at han ble fjernet fra stillingen."
+        },
+        {
+          "id": "mh-russiske-revolusjon-kulakker",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva ble de mer velstående bøndene kalt, som ble stemplet som klassefiender under kollektiviseringen?",
+          "answer": "Kulakker",
+          "accept": [
+            "Kulakkene",
+            "Kulak",
+            "Kulaker"
+          ],
+          "explain": "Kulakkene fikk ikke arbeide i kollektivbrukene og ble i stor grad deportert til Sibir. Mange bønder slaktet heller buskapen enn å gi den fra seg."
+        },
+        {
+          "id": "mh-russiske-revolusjon-hvorfor-rode",
+          "step": 3,
+          "type": "choice",
+          "prompt": "Hvorfor vant de røde borgerkrigen?",
+          "answer": "De hvite var splittet politisk, geografisk og militært",
+          "distractors": [
+            "Vestmaktene sendte tropper til hjelp for de røde",
+            "Tsaren sluttet seg til de røde under krigen",
+            "De røde hadde fått hele hæren med seg fra starten"
+          ],
+          "explain": "De røde kontrollerte kjerneområdene, mens de hvite var spredt i periferien og uenige om målet. Krig, sult og utvandring fikk folketallet til å synke med 28 millioner."
+        },
+        {
+          "id": "mh-russiske-revolusjon-forklar-kollektivisering",
+          "step": 3,
+          "type": "explain",
+          "prompt": "Forklar hva tvangskollektiviseringen var, og hvilke følger den fikk.",
+          "answer": "Fra slutten av 1920-årene ble bøndene tvunget inn i store kollektivbruk under statlig kontroll. Velstående bønder ble deportert, og hardhendt rekvirering av korn førte til hungersnøden i 1932–1933 med millioner av døde.",
+          "checklist": [
+            "Bøndene ble tvunget inn i kollektivbruk",
+            "Kulakker ble deportert",
+            "Kornrekvirering ga hungersnød med millioner av døde"
+          ],
+          "explain": "Hungersnøden kalles Holodomor og regnes som den verste i Europas moderne historie. Samtidig ble industrien bygd ut i et tempo som gjorde Sovjetunionen til en industristat på få tiår."
+        },
+        {
+          "id": "mh-russiske-revolusjon-rekkefolge",
+          "step": 3,
+          "type": "order",
+          "prompt": "Sett hendelsene fra Russlands og Sovjetunionens historie i kronologisk rekkefølge.",
+          "items": [
+            {
+              "label": "Tsaren går av i februarrevolusjonen",
+              "year": 1917
+            },
+            {
+              "label": "Borgerkrigen bryter ut",
+              "year": 1918
+            },
+            {
+              "label": "Sovjetunionen opprettes",
+              "year": 1922
+            },
+            {
+              "label": "Lenin dør",
+              "year": 1924
+            },
+            {
+              "label": "Den store terror begynner",
+              "year": 1937
+            }
+          ],
+          "explain": "Mordet på Leningrad-lederen Sergej Kirov i 1934 regnes som opptakten til terroren som toppet seg i 1937–1938."
+        },
+        {
+          "id": "mh-russiske-revolusjon-aar-lenin",
+          "step": 4,
+          "type": "year",
+          "prompt": "I hvilket år døde Lenin?",
+          "answer": "1924",
+          "explain": "Etter en hjerneblødning i 1922 var han mer eller mindre ute av stand til å arbeide. Liket ble balsamert og ligger fortsatt i mausoleet på Den røde plass i Moskva."
+        },
+        {
+          "id": "mh-russiske-revolusjon-terror",
+          "step": 4,
+          "type": "choice",
+          "prompt": "Omtrent hvor mange mennesker ble skutt under Den store terror i 1937–1938?",
+          "answer": "Omkring 700 000",
+          "distractors": [
+            "Omkring 7000",
+            "Omkring 70 000",
+            "Omkring 7 millioner"
+          ],
+          "explain": "Omtrent like mange ble sendt til GULag-leirene. Utrenskningene rammet alle samfunnsgrupper, men særlig intellektuelle, partimedlemmer og offiserer."
+        },
+        {
+          "id": "mh-russiske-revolusjon-brest",
+          "step": 4,
+          "type": "text",
+          "prompt": "Hvor sluttet bolsjevikene separatfred med sentralmaktene i mars 1918?",
+          "answer": "Brest-Litovsk",
+          "accept": [
+            "Brest Litovsk",
+            "Brest"
+          ],
+          "explain": "Russland måtte avstå store områder, blant annet Ukraina og de baltiske landene. Avtalen falt bort da Tyskland tapte krigen i november 1918."
+        }
+      ]
+    },
+    {
+      "id": "mh-mellomkrigstiden",
+      "title": "Mellomkrigstiden",
+      "tier": 2,
+      "prerequisites": [
+        "mh-forste-verdenskrig"
+      ],
+      "years": {
+        "from": 1918,
+        "to": 1939
+      },
+      "summary": "Årene mellom verdenskrigene, da økonomisk krise og misnøye banet vei for fascismen i Italia og nazismen i Tyskland.",
+      "lesson": [
+        "Mellomkrigstiden er årene mellom 1918 og 1939. Etter første verdenskrig ble Tyskland en demokratisk republikk, kalt Weimarrepublikken etter byen der grunnloven ble vedtatt i 1919. Republikken slet fra starten med krigserstatninger, kuppforsøk og en hyperinflasjon, en ekstrem prisstigning, som i 1923 gjorde pengene nesten verdiløse.",
+        "I Italia grunnla Benito Mussolini fascistpartiet i 1921. Etter marsjen mot Roma i 1922 ble han statsminister, og han bygde gradvis opp et diktatur. Fascismen er en høyreekstrem og antidemokratisk ideologi med en sterk fører, ytterliggående nasjonalisme og vold som politisk middel.",
+        "Krakket på New York-børsen høsten 1929 innledet den store depresjonen, den største økonomiske krisen i verdenshistorien. I Tyskland var om lag en tredjedel av arbeidsstyrken uten arbeid i 1933. Adolf Hitlers nazistparti NSDAP vokste fra 18 prosent i 1930 til 37 prosent i 1932. 30. januar 1933 utnevnte president Paul von Hindenburg Hitler til rikskansler, og med fullmaktsloven samme vår fikk Hitler diktatorisk makt."
+      ],
+      "keyPoints": [
+        "Weimarrepublikken var ustabil og rammet av hyperinflasjon i 1923.",
+        "Mussolini kom til makten i Italia i 1922 og grunnla fascismen.",
+        "Børskrakket i 1929 utløste den store depresjonen.",
+        "Krisen ga nazistene vind i seilene, og Hitler ble rikskansler i 1933."
+      ],
+      "sources": [
+        {
+          "title": "Weimarrepublikken – Store norske leksikon",
+          "url": "https://snl.no/Weimarrepublikken"
+        },
+        {
+          "title": "Benito Mussolini – Store norske leksikon",
+          "url": "https://snl.no/Benito_Mussolini"
+        },
+        {
+          "title": "Fascisme – Store norske leksikon",
+          "url": "https://snl.no/fascisme"
+        },
+        {
+          "title": "Den store depresjonen – Store norske leksikon",
+          "url": "https://snl.no/den_store_depresjonen"
+        }
+      ],
+      "cards": [
+        {
+          "id": "mh-mellomkrigstiden-periode",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilket tidsrom kalles mellomkrigstiden?",
+          "answer": "1918–1939",
+          "distractors": [
+            "1871–1914",
+            "1945–1989",
+            "1900–1914"
+          ],
+          "explain": "Perioden ble preget av ustabile demokratier, økonomiske kriser og nye diktaturer. Mindre enn 21 år etter første verdenskrig brøt det igjen ut krig i Europa."
+        },
+        {
+          "id": "mh-mellomkrigstiden-krakk",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilken hendelse regnes ofte som starten på den store depresjonen?",
+          "answer": "Krakket på New York-børsen høsten 1929",
+          "distractors": [
+            "Hyperinflasjonen i Tyskland i 1923",
+            "Marsjen mot Roma i 1922",
+            "Fredsavtalen i Versailles i 1919"
+          ],
+          "explain": "Fallet ble fulgt av en dramatisk nedgang i utlån, forbruk og investeringer. Flere tusen banker ble avviklet i USA, og nesten en fjerdedel av den amerikanske arbeidsstyrken stod uten arbeid i 1933."
+        },
+        {
+          "id": "mh-mellomkrigstiden-fascisme",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hva kjennetegner fascismen som ideologi?",
+          "answer": "Førerdyrking, ytterliggående nasjonalisme og motstand mot demokrati",
+          "distractors": [
+            "Klassekamp, felleseie av produksjonsmidlene og et klasseløst samfunn",
+            "Fri markedsøkonomi, individuell frihet og begrenset statsmakt",
+            "Gradvise reformer, velferdsstat og parlamentarisk styre"
+          ],
+          "explain": "Ordet kommer av det italienske fascio, et knippe, etter det romerske symbolet fasces. Samlebetegnelsen fascisme omfatter også nazismen i Tyskland."
+        },
+        {
+          "id": "mh-mellomkrigstiden-hitler-makt",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvordan kom Hitler til makten i Tyskland i 1933?",
+          "answer": "Han ble utnevnt til rikskansler av president Hindenburg",
+          "distractors": [
+            "Han tok makten ved et væpnet kupp i Berlin",
+            "Partiet hans fikk rent flertall i et riksdagsvalg",
+            "Han ble innsatt av de allierte seiersmaktene"
+          ],
+          "explain": "Hindenburg kunne ikke fordra Hitler, men flere av aristokratene og offiserene rundt ham var mer velvillige. Et kuppforsøk Hitler gjorde i en ølkjeller i München i 1923, var mislykket."
+        },
+        {
+          "id": "mh-mellomkrigstiden-weimar",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva kalles den tyske republikken fra 1919 til 1933?",
+          "answer": "Weimarrepublikken",
+          "accept": [
+            "Weimar-republikken",
+            "Weimarrepublikk",
+            "Weimar"
+          ],
+          "explain": "Grunnloven ga forholdstallsvalg, noe som førte til mange små partier og skiftende regjeringer. Fra 1930 ble landet i stor grad styrt med presidentens unntaksdekreter i stedet for riksdagen."
+        },
+        {
+          "id": "mh-mellomkrigstiden-mussolini",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvem grunnla det italienske fascistpartiet og ble statsminister i 1922?",
+          "answer": "Benito Mussolini",
+          "accept": [
+            "Mussolini",
+            "Il Duce",
+            "Duce"
+          ],
+          "explain": "Mussolini tok tittelen «Il Duce», føreren, og diktaturet ble lovfestet i 1926–1927. Han deltok ikke selv i marsjen mot Roma, men ventet i Milano til kongen ga ham regjeringsmakten."
+        },
+        {
+          "id": "mh-mellomkrigstiden-nsdap",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva er forkortelsen for Hitlers parti?",
+          "answer": "NSDAP",
+          "accept": [
+            "Nazistpartiet",
+            "Nazipartiet",
+            "Nationalsozialistische Deutsche Arbeiterpartei"
+          ],
+          "explain": "Ved valget i 1930 ble partiet nest størst. På gatene i Berlin og andre storbyer kjempet uniformerte nazister og kommunister nærmest en gatekrig."
+        },
+        {
+          "id": "mh-mellomkrigstiden-hyperinflasjon",
+          "step": 2,
+          "type": "choice",
+          "prompt": "Hva var det som rammet Tyskland i 1923 og gjorde pengene nesten verdiløse?",
+          "answer": "En ekstrem prisstigning, hyperinflasjon",
+          "distractors": [
+            "Et kraftig prisfall, deflasjon",
+            "En bankkrise etter børskrakket",
+            "En valutareform knyttet til gull"
+          ],
+          "explain": "I november 1923 var én dollar verdt 4,2 billioner mark. Den fransk-belgiske okkupasjonen av Ruhr-området i januar 1923 var en utløsende årsak, og krisen ble løst med en ny valuta, rentenmark."
+        },
+        {
+          "id": "mh-mellomkrigstiden-forklar-nazistene",
+          "step": 3,
+          "type": "explain",
+          "prompt": "Forklar hvorfor nazistene fikk så stor oppslutning rundt 1930.",
+          "answer": "Den store depresjonen ga massearbeidsledighet og nød, og mange mistet troen på at Weimarrepublikken kunne løse krisen. Bitterhet over nederlaget og Versaillestraktaten, ustabile regjeringer og politisk uro gjorde Hitlers løfter om et sterkt Tyskland tiltrekkende.",
+          "checklist": [
+            "Depresjonen ga massearbeidsledighet",
+            "Demokratiet virket svakt og ustabilt",
+            "Bitterhet over nederlaget og Versaillestraktaten"
+          ],
+          "explain": "Ved valget i 1930 hadde arbeidsledigheten doblet seg siden 1928. Nazistene fikk likevel aldri flertall alene; Hitler kom til makten fordi Hindenburg og kretsen rundt ham valgte å samarbeide med dem."
+        },
+        {
+          "id": "mh-mellomkrigstiden-spredning",
+          "step": 3,
+          "type": "choice",
+          "prompt": "Hvorfor spredte krisen i USA seg så raskt til Europa?",
+          "answer": "Landenes finansmarkeder var tett knyttet sammen",
+          "distractors": [
+            "Europeiske land manglet egne sentralbanker",
+            "USA stanset all handel med Europa i 1929",
+            "Europeiske banker var eid av den amerikanske staten"
+          ],
+          "explain": "Mange land forsterket krisen ved å holde høy rente for å forsvare gullstandarden og ved å heve tollsatsene. USA gjennomførte i 1930 en av de største tolløkningene i landets historie."
+        },
+        {
+          "id": "mh-mellomkrigstiden-rekkefolge",
+          "step": 3,
+          "type": "order",
+          "prompt": "Sett hendelsene fra mellomkrigstiden i kronologisk rekkefølge.",
+          "items": [
+            {
+              "label": "Marsjen mot Roma",
+              "year": 1922
+            },
+            {
+              "label": "Hyperinflasjonen topper seg i Tyskland",
+              "year": 1923
+            },
+            {
+              "label": "Børskrakket i New York",
+              "year": 1929
+            },
+            {
+              "label": "Hitler blir rikskansler",
+              "year": 1933
+            }
+          ],
+          "explain": "I Norge bidro krisen gjennom kriseforliket i 1935 til starten på en lang periode med Arbeiderparti-styre. Depresjonen påvirket økonomisk tenkning helt fram til i dag."
+        },
+        {
+          "id": "mh-mellomkrigstiden-aar-hitler",
+          "step": 4,
+          "type": "year",
+          "prompt": "I hvilket år ble Hitler rikskansler i Tyskland?",
+          "answer": "1933",
+          "explain": "Fire uker etter utnevnelsen brant riksdagsbygningen, og nazistene brukte brannen som påskudd for unntakstilstand. Med fullmaktsloven var Weimarrepublikken i praksis død."
+        },
+        {
+          "id": "mh-mellomkrigstiden-oppslutning",
+          "step": 4,
+          "type": "choice",
+          "prompt": "Omtrent hvor stor andel av stemmene fikk nazistene på det meste i et fritt valg i 1932?",
+          "answer": "37 prosent",
+          "distractors": [
+            "12 prosent",
+            "24 prosent",
+            "51 prosent"
+          ],
+          "explain": "Ved neste valg i november 1932 gikk partiet noe tilbake. Kommunistpartiet var også blitt stort, med tretten prosent allerede i 1930."
+        },
+        {
+          "id": "mh-mellomkrigstiden-ledighet",
+          "step": 4,
+          "type": "choice",
+          "prompt": "Hvor stor del av arbeidsstyrken i Tyskland var uten arbeid i 1933?",
+          "answer": "Om lag en tredjedel",
+          "distractors": [
+            "Om lag en tidel",
+            "Om lag halvparten",
+            "Om lag to tredjedeler"
+          ],
+          "explain": "I Storbritannia var om lag en fjerdedel uten arbeid samme år. Globalt falt bruttonasjonalproduktet med om lag 15 prosent fra 1929 til 1932."
+        }
+      ]
+    },
+    {
+      "id": "mh-andre-verdenskrig",
+      "title": "Andre verdenskrig",
+      "tier": 1,
+      "prerequisites": [],
+      "years": {
+        "from": 1939,
+        "to": 1945
+      },
+      "summary": "Den mest ødeleggende krigen i historien, som endte med aksemaktenes nederlag og la grunnlaget for verdensordenen etter 1945.",
+      "lesson": [
+        "Andre verdenskrig varte fra 1939 til 1945. Aksemaktene Tyskland, Italia og Japan stod mot de allierte, der Storbritannia, Sovjetunionen og USA ble de største maktene. Krigen begynte da Tyskland angrep Polen 1. september 1939, kort tid etter at Hitler og Stalin hadde inngått en ikkeangrepspakt.",
+        "Med lynkrig, raske angrep med stridsvogner og fly som brøt gjennom fiendens linjer, erobret Tyskland store deler av Europa, blant dem Norge i 1940. I Slaget om Storbritannia sommeren og høsten 1940 klarte ikke tyskerne å vinne luftherredømmet. I juni 1941 angrep Tyskland Sovjetunionen, under kodenavnet Barbarossa. 7. desember 1941 angrep Japan den amerikanske flåtebasen Pearl Harbor, og USA var med i krigen.",
+        "Vendepunktene kom i 1942–1943, blant annet ved Stalingrad, der en tysk armé måtte overgi seg. På D-dagen 6. juni 1944 gikk de allierte i land i Normandie. Hitler tok sitt eget liv 30. april 1945, og krigen i Europa sluttet 8. mai. Etter atombombene over Hiroshima og Nagasaki i august kapitulerte Japan. Tallene er usikre, men minst 70 millioner mennesker antas å ha mistet livet."
+      ],
+      "keyPoints": [
+        "Krigen begynte med Tysklands angrep på Polen 1. september 1939.",
+        "Aksemaktene Tyskland, Italia og Japan stod mot de allierte.",
+        "Stalingrad og D-dagen var avgjørende vendepunkter.",
+        "Krigen i Europa endte 8. mai 1945, i Asia med Japans kapitulasjon i september."
+      ],
+      "sources": [
+        {
+          "title": "Andre verdenskrig – Store norske leksikon",
+          "url": "https://snl.no/andre_verdenskrig"
+        },
+        {
+          "title": "Andre verdenskrig – viktige hendelser – Store norske leksikon",
+          "url": "https://snl.no/andre_verdenskrig_-_viktige_hendelser"
+        },
+        {
+          "title": "Stalingrad – Store norske leksikon",
+          "url": "https://snl.no/Stalingrad"
+        },
+        {
+          "title": "D-dagen – Store norske leksikon",
+          "url": "https://snl.no/D-dagen"
+        }
+      ],
+      "cards": [
+        {
+          "id": "mh-andre-verdenskrig-start",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilken hendelse regnes som starten på andre verdenskrig?",
+          "answer": "Tysklands angrep på Polen",
+          "distractors": [
+            "Japans angrep på Pearl Harbor",
+            "Tysklands angrep på Norge",
+            "Italias angrep på Etiopia"
+          ],
+          "explain": "Storbritannia hadde garantert Polens selvstendighet, og både Storbritannia og Frankrike erklærte Tyskland krig 3. september 1939. I årene før hadde vestmaktene gitt etter for flere av Hitlers krav, den såkalte appeasement-politikken."
+        },
+        {
+          "id": "mh-andre-verdenskrig-aksemaktene",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilke land var de viktigste aksemaktene?",
+          "answer": "Tyskland, Italia og Japan",
+          "distractors": [
+            "Tyskland, Sovjetunionen og Spania",
+            "Tyskland, Østerrike-Ungarn og Tyrkia",
+            "Italia, Frankrike og Japan"
+          ],
+          "explain": "Tyskland og Italia formaliserte vennskapet i alliansen Berlin–Roma-aksen og nærmet seg deretter Japan. Italia gikk ut av krigen på aksesiden i 1943."
+        },
+        {
+          "id": "mh-andre-verdenskrig-lynkrig",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hva var den tyske krigføringen kalt lynkrig?",
+          "answer": "Raske angrep med stridsvogner og fly som brøt gjennom fiendens linjer",
+          "distractors": [
+            "Bombing av byer for å knekke sivilbefolkningens vilje",
+            "Lange beleiringer av festninger og storbyer",
+            "Ubåtangrep på handelsskip i Atlanterhavet"
+          ],
+          "explain": "Lynkrigen skulle avgjøre krigen før motstanderen rakk å mobilisere. Polen, Nederland, Belgia og Frankrike falt på få uker, men i Sovjetunionen vant tyskerne store, men ikke avgjørende seirer."
+        },
+        {
+          "id": "mh-andre-verdenskrig-europa-slutt",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilken dato sluttet krigen i Europa?",
+          "answer": "8. mai 1945",
+          "distractors": [
+            "6. juni 1944",
+            "9. april 1940",
+            "31. januar 1943"
+          ],
+          "explain": "Tyskland kapitulerte betingelsesløst dagen før. Japan undertegnet sin kapitulasjon 2. september 1945 om bord på slagskipet USS Missouri."
+        },
+        {
+          "id": "mh-andre-verdenskrig-pearl",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvilken amerikansk flåtebase på Hawaii angrep Japan 7. desember 1941?",
+          "answer": "Pearl Harbor",
+          "accept": [
+            "Pearl Harbour"
+          ],
+          "explain": "Alle de åtte slagskipene i havnen ble senket eller skadet, og 2335 amerikanske militære ble drept. Tyskland og Italia erklærte USA krig fire dager senere."
+        },
+        {
+          "id": "mh-andre-verdenskrig-stalingrad",
+          "step": 2,
+          "type": "text",
+          "prompt": "Ved hvilken by ved Volga led Tyskland et stort nederlag vinteren 1942–1943?",
+          "answer": "Stalingrad",
+          "accept": [
+            "Volgograd"
+          ],
+          "explain": "Byen het Tsaritsyn før 1925 og heter i dag Volgograd. De tyske styrkene i byen kapitulerte 31. januar 1943 etter å ha blitt omringet av en sovjetisk motoffensiv."
+        },
+        {
+          "id": "mh-andre-verdenskrig-normandie",
+          "step": 2,
+          "type": "text",
+          "prompt": "I hvilken fransk region gikk de allierte i land på D-dagen?",
+          "answer": "Normandie",
+          "accept": [
+            "Normandy"
+          ],
+          "explain": "Landgangen er den største amfibieoperasjonen som er gjennomført. Omkring 156 000 soldater gikk i land på fem strender med kodenavnene Utah, Omaha, Gold, Juno og Sword, under ledelse av Dwight D. Eisenhower."
+        },
+        {
+          "id": "mh-andre-verdenskrig-barbarossa",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva var kodenavnet for Tysklands angrep på Sovjetunionen i 1941?",
+          "answer": "Barbarossa",
+          "accept": [
+            "Operasjon Barbarossa",
+            "Operation Barbarossa",
+            "Barbarossa-planen"
+          ],
+          "explain": "Angrepet begynte 22. juni 1941 med en invasjonshær på tre millioner soldater. En stor sovjetisk motoffensiv i desember tvang tyskerne tilbake, og vinteren ga dem store tap."
+        },
+        {
+          "id": "mh-andre-verdenskrig-atombomber",
+          "step": 2,
+          "type": "choice",
+          "prompt": "Hvilke to japanske byer ble rammet av atombomber i august 1945?",
+          "answer": "Hiroshima og Nagasaki",
+          "distractors": [
+            "Tokyo og Osaka",
+            "Kyoto og Kobe",
+            "Yokohama og Sendai"
+          ],
+          "explain": "Rundt 80 000 mennesker ble drept øyeblikkelig i Hiroshima 6. august, og omkring 40 000 i Nagasaki tre dager senere, og mange døde senere av skadene. Keiser Hirohito bestemte 14. august at Japan skulle kapitulere."
+        },
+        {
+          "id": "mh-andre-verdenskrig-pakten",
+          "step": 3,
+          "type": "choice",
+          "prompt": "Hva gjorde ikkeangrepspakten mellom Tyskland og Sovjetunionen i august 1939 mulig for Hitler?",
+          "answer": "Å angripe Polen uten å risikere tofrontskrig",
+          "distractors": [
+            "Å angripe Storbritannia over Kanalen",
+            "Å innlemme Østerrike i Tyskland",
+            "Å trekke Tyskland ut av Folkeforbundet"
+          ],
+          "explain": "I en hemmelig tilleggsprotokoll fikk Sovjetunionen frie hender i blant annet det østlige Polen og de baltiske landene. Sovjetiske tropper rykket inn i Øst-Polen 17. september 1939."
+        },
+        {
+          "id": "mh-andre-verdenskrig-forklar-stalingrad",
+          "step": 3,
+          "type": "explain",
+          "prompt": "Forklar hvorfor slaget ved Stalingrad regnes som et vendepunkt i krigen.",
+          "answer": "En hel tysk armé ble omringet og måtte overgi seg, Tysklands første store nederlag. Slaget viste at den tyske offensive kraften hadde passert sitt høydepunkt. Seieren fikk også stor symbolsk betydning fordi byen bar Stalins navn.",
+          "checklist": [
+            "En hel tysk armé ble omringet og overga seg",
+            "Tysklands offensive kraft hadde passert høydepunktet",
+            "Byen hadde stor symbolsk betydning"
+          ],
+          "explain": "Det egentlige målet for den tyske sommeroffensiven i 1942 var oljefeltene i Baku i Kaukasus. Hitler grep inn og gjorde Stalingrad til et eget mål."
+        },
+        {
+          "id": "mh-andre-verdenskrig-rekkefolge",
+          "step": 3,
+          "type": "order",
+          "prompt": "Sett hendelsene fra andre verdenskrig i kronologisk rekkefølge.",
+          "items": [
+            {
+              "label": "Tyskland angriper Polen",
+              "year": 1939
+            },
+            {
+              "label": "Slaget om Storbritannia",
+              "year": 1940
+            },
+            {
+              "label": "Japan angriper Pearl Harbor",
+              "year": 1941
+            },
+            {
+              "label": "Tysk kapitulasjon i Stalingrad",
+              "year": 1943
+            },
+            {
+              "label": "De allierte går i land i Normandie",
+              "year": 1944
+            }
+          ],
+          "explain": "Krigen skiftet karakter med Tysklands angrep på Sovjetunionen og USAs inntreden i 1941. Fra da av hadde de allierte langt større ressurser enn aksemaktene."
+        },
+        {
+          "id": "mh-andre-verdenskrig-aar-ddagen",
+          "step": 4,
+          "type": "year",
+          "prompt": "I hvilket år var D-dagen?",
+          "answer": "1944",
+          "explain": "Invasjonen åpnet vestfronten igjen for første gang på fire år. Etter en måned stod rundt én million allierte soldater i Frankrike, og Paris ble befridd i august."
+        },
+        {
+          "id": "mh-andre-verdenskrig-dode",
+          "step": 4,
+          "type": "choice",
+          "prompt": "Hvor mange mennesker antas å ha mistet livet i andre verdenskrig?",
+          "answer": "Minst 70 millioner",
+          "distractors": [
+            "Omkring 18 millioner",
+            "Omkring 7 millioner",
+            "Over 300 millioner"
+          ],
+          "explain": "Sovjetunionen hadde de største tapene, omkring 27 millioner, og Kina mistet 15–20 millioner. Norge mistet omkring 10 000 mennesker. Alle tallene er omtrentlige."
+        }
+      ]
+    },
+    {
+      "id": "mh-holocaust",
+      "title": "Holocaust",
+      "tier": 2,
+      "prerequisites": [
+        "mh-andre-verdenskrig"
+      ],
+      "years": {
+        "from": 1933,
+        "to": 1945
+      },
+      "summary": "Nazistenes systematiske folkemord på Europas jøder, som også rammet romer og andre grupper, og som endret synet på menneskerettigheter.",
+      "lesson": [
+        "Holocaust er nazistenes folkemord på Europas jøder. Mer enn seks millioner jøder ble drept, om lag 60 prosent av jødene i Europa. Mange jøder bruker det hebraiske ordet shoah. Nazismen bygde på en rasebasert antisemittisme der jødene ble framstilt som en fiende av det tyske folket.",
+        "Forfølgelsen skjedde trinnvis. Fra 1933 ble jøder boikottet og presset ut av samfunnslivet. Nürnberglovene i 1935 fratok dem statsborgerskapet og forbød ekteskap med ikke-jøder. Under novemberpogromen, også kalt krystallnatten, 9.–10. november 1938 ble jødiske forretninger, hjem og synagoger angrepet, og rundt 30 000 jøder ble sendt til konsentrasjonsleirer.",
+        "Under krigen ble jødene i Øst-Europa stengt inne i gettoer, og mobile drapsenheter drepte drøyt én million jøder etter angrepet på Sovjetunionen. På Wannsee-konferansen i januar 1942 ble «den endelige løsningen» samordnet. I dødsleirer som Auschwitz ble mennesker drept med gass. Også romer, funksjonshemmede og andre grupper ble forfulgt og drept. Etter krigen ble ledende nazister stilt for en alliert rettssak, Nürnbergprosessen, i 1945–1946."
+      ],
+      "keyPoints": [
+        "Mer enn seks millioner jøder ble drept, om lag 60 prosent av Europas jøder.",
+        "Forfølgelsen gikk trinnvis fra diskriminering til industrialisert massedrap.",
+        "Nürnberglovene 1935 og novemberpogromen 1938 var viktige vendepunkter.",
+        "Auschwitz var den største dødsleiren; også romer og andre grupper ble drept.",
+        "Nürnbergprosessen stilte ledende nazister til ansvar."
+      ],
+      "sources": [
+        {
+          "title": "Holocaust – Store norske leksikon",
+          "url": "https://snl.no/Holocaust"
+        },
+        {
+          "title": "Novemberpogromen – Store norske leksikon",
+          "url": "https://snl.no/Novemberpogromen"
+        },
+        {
+          "title": "Auschwitz – Store norske leksikon",
+          "url": "https://snl.no/Auschwitz"
+        },
+        {
+          "title": "Nürnbergprosessen – Store norske leksikon",
+          "url": "https://snl.no/N%C3%BCrnbergprosessen"
+        }
+      ],
+      "cards": [
+        {
+          "id": "mh-holocaust-hva",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hva betegner ordet Holocaust?",
+          "answer": "Nazistenes folkemord på Europas jøder",
+          "distractors": [
+            "Sovjetunionens deportasjoner av bønder",
+            "Japans okkupasjon av Sørøst-Asia",
+            "Bombingen av tyske byer under krigen"
+          ],
+          "explain": "Ordet er gresk og betyr «fullstendig brent». Det ble tatt i bruk om folkemordet på jødene først på 1960-tallet. Nazistene selv brukte omskrivingen «den endelige løsningen»."
+        },
+        {
+          "id": "mh-holocaust-antall",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvor mange jøder ble drept i Holocaust?",
+          "answer": "Mer enn seks millioner",
+          "distractors": [
+            "Omkring én million",
+            "Omkring 600 000",
+            "Omkring 20 millioner"
+          ],
+          "explain": "Halvparten av ofrene var polske jøder. De fleste ble drept i dødsleirene, men svært mange døde også i gettoer og i massehenrettelser på østfronten."
+        },
+        {
+          "id": "mh-holocaust-trinnvis",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvordan utviklet forfølgelsen av jødene i Tyskland seg etter 1933?",
+          "answer": "Trinnvis, fra boikott og lover til deportasjon og massedrap",
+          "distractors": [
+            "Massedrapene begynte samme uke som Hitler tok makten",
+            "Jødene ble bare forfulgt i de okkuperte landene",
+            "Forfølgelsen stanset da krigen brøt ut i 1939"
+          ],
+          "explain": "Ofte kom boikott og vold fra nazistiske aktivister først, og deretter lover fra statsledelsen. Krigsutbruddet og okkupasjonen av Polen radikaliserte politikken ytterligere."
+        },
+        {
+          "id": "mh-holocaust-andre-grupper",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilke andre grupper ble også systematisk forfulgt og drept av nazistene?",
+          "answer": "Romer og funksjonshemmede",
+          "distractors": [
+            "Bønder og fabrikkarbeidere",
+            "Lutheranere og katolikker",
+            "Briter og amerikanere"
+          ],
+          "explain": "I det såkalte eutanasiprogrammet ble om lag 70 000 funksjonshemmede drept i 1939–1941, mange med gass. Erfaringene ble senere brukt i dødsleirene. Også homoseksuelle og Jehovas vitner ble forfulgt."
+        },
+        {
+          "id": "mh-holocaust-nurnberglovene",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva kalles raselovene fra 1935 som fratok tyske jøder statsborgerskapet?",
+          "answer": "Nürnberglovene",
+          "accept": [
+            "Nurnberglovene",
+            "Nürnberg-lovene",
+            "Nuernberglovene"
+          ],
+          "explain": "Lovene ga en definisjon av hvem som skulle regnes som jøde, og forbød ekteskap og seksuelle forhold mellom jøder og «ariere». Jødene mistet også stemmeretten."
+        },
+        {
+          "id": "mh-holocaust-krystallnatten",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva kalles pogromen natten mellom 9. og 10. november 1938 ofte?",
+          "answer": "Krystallnatten",
+          "accept": [
+            "Novemberpogromen",
+            "Krystallnatta",
+            "Rikskrystallnatten",
+            "Kristallnacht"
+          ],
+          "explain": "Navnet viser til de knuste vindusrutene i jødiskeide forretninger. Mange bruker i dag heller betegnelsen novemberpogromen. Offisielt ble 91 mennesker drept."
+        },
+        {
+          "id": "mh-holocaust-wannsee",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva kalles møtet i januar 1942 der folkemordet på Europas jøder ble samordnet?",
+          "answer": "Wannsee-konferansen",
+          "accept": [
+            "Wannseekonferansen",
+            "Wannsee"
+          ],
+          "explain": "Representanter for den tyske staten og nazipartiet møttes i Wannsee utenfor Berlin. Massedrapene hadde da allerede pågått i et halvt år i de okkuperte sovjetiske områdene."
+        },
+        {
+          "id": "mh-holocaust-auschwitz",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva het den største av nazistenes leirer, bygd for masseutrydding i det okkuperte Polen?",
+          "answer": "Auschwitz",
+          "accept": [
+            "Auschwitz-Birkenau",
+            "Birkenau",
+            "Oświęcim"
+          ],
+          "explain": "Man regner nå at mellom 1,1 og 2 millioner mennesker ble drept der, de fleste jøder, men også polakker, romer og andre. Sovjetiske soldater inntok leiren 27. januar 1945, dagen som i dag er internasjonal holocaustdag."
+        },
+        {
+          "id": "mh-holocaust-nurnbergprosessen",
+          "step": 2,
+          "type": "choice",
+          "prompt": "Hva var Nürnbergprosessen i 1945–1946?",
+          "answer": "En alliert rettssak mot ledende nazister",
+          "distractors": [
+            "Et opprør i en tysk konsentrasjonsleir",
+            "Vedtaket av de tyske raselovene",
+            "En fredskonferanse etter andre verdenskrig"
+          ],
+          "explain": "USA, Sovjetunionen, Storbritannia og Frankrike stilte med én dommer hver. Av 24 tiltalte personer ble tolv dømt til døden. Forbrytelser mot menneskeheten var ett av tiltalepunktene."
+        },
+        {
+          "id": "mh-holocaust-gettoer",
+          "step": 3,
+          "type": "choice",
+          "prompt": "Hvilken rolle spilte gettoene i folkemordet?",
+          "answer": "Jødene ble samlet og isolert før deportasjon til dødsleirene",
+          "distractors": [
+            "De var trygge soner under beskyttelse av Røde Kors",
+            "De var arbeidsleirer bare for sovjetiske krigsfanger",
+            "De skulle forberede utvandringen til Amerika"
+          ],
+          "explain": "I 1941 hadde tyskerne opprettet 223 gettoer i Polen, og mange døde av sult og sykdom. Opprøret i Warszawa-gettoen i april 1943 er det mest kjente eksemplet på væpnet jødisk motstand."
+        },
+        {
+          "id": "mh-holocaust-forklar-flukt",
+          "step": 3,
+          "type": "explain",
+          "prompt": "Forklar hvorfor det var vanskelig for mange tyske jøder å forstå faren og flykte i tide.",
+          "answer": "Tiltakene kom skrittvis, så det var vanskelig å se hvor det bar, og mange håpet at hvert nytt tiltak skulle bli det siste. Det var krevende å forlate hjem, familie og arbeid, og de som emigrerte, fikk mye av eiendelene sine konfiskert.",
+          "checklist": [
+            "Forfølgelsen kom skrittvis",
+            "Mange håpet at hvert tiltak var det siste",
+            "Flukt betydde å miste familie, arbeid og eiendeler"
+          ],
+          "explain": "Mange flyktet likevel. I januar 1939 sa Hitler i riksdagen at en ny krig ville føre til at «den jødiske rase i Europa» ble tilintetgjort."
+        },
+        {
+          "id": "mh-holocaust-rekkefolge",
+          "step": 3,
+          "type": "order",
+          "prompt": "Sett hendelsene i forfølgelsen av jødene i kronologisk rekkefølge.",
+          "items": [
+            {
+              "label": "Nürnberglovene vedtas",
+              "year": 1935
+            },
+            {
+              "label": "Novemberpogromen",
+              "year": 1938
+            },
+            {
+              "label": "Wannsee-konferansen",
+              "year": 1942
+            },
+            {
+              "label": "Opprøret i Warszawa-gettoen",
+              "year": 1943
+            },
+            {
+              "label": "Auschwitz befris",
+              "year": 1945
+            }
+          ],
+          "explain": "Rekkefølgen viser hvordan diskriminering ble til folkemord. Forskere regner angrepet på Sovjetunionen sommeren 1941 som begynnelsen på «den endelige løsningen»."
+        },
+        {
+          "id": "mh-holocaust-andel",
+          "step": 4,
+          "type": "choice",
+          "prompt": "Omtrent hvor stor del av Europas jøder ble drept i Holocaust?",
+          "answer": "Om lag 60 prosent",
+          "distractors": [
+            "Om lag 10 prosent",
+            "Om lag 30 prosent",
+            "Om lag 90 prosent"
+          ],
+          "explain": "I 1939 bodde det knappe ti millioner jøder i Europa. Norge og Danmark var blant de få landene i vest der jødene ikke ble tvunget til å bære gul stjerne."
+        }
+      ]
+    },
+    {
+      "id": "mh-kalde-krigen",
+      "title": "Den kalde krigen",
+      "tier": 2,
+      "prerequisites": [
+        "mh-andre-verdenskrig"
+      ],
+      "years": {
+        "from": 1945,
+        "to": 1991
+      },
+      "summary": "Rivaliseringen mellom USA og Sovjetunionen som delte Europa, drev fram atomvåpen og romfart, og preget nesten alle konflikter fra 1945 til 1991.",
+      "lesson": [
+        "Den kalde krigen var konfrontasjonen mellom USA og Sovjetunionen fra 1945 til 1991. Supermaktene hadde vært allierte under krigen, men stod for motsatte systemer: demokrati og markedsøkonomi mot kommunistisk ettpartistat og planøkonomi. Det såkalte jernteppet delte Europa og Tyskland i en vestblokk og en østblokk. Vesten dannet forsvarsalliansen NATO i 1949, øst svarte med Warszawapakten i 1955.",
+        "Supermaktene kom aldri i direkte krig med hverandre, men begge rustet opp med atomvåpen og støttet hver sin side i kriger som Koreakrigen (1950–1953) og Vietnamkrigen. Berlinmuren, bygd fra august 1961, skulle stanse flukten fra Øst-Tyskland. Under Cubakrisen i oktober 1962, da Sovjetunionen bygde rakettbaser på Cuba, nådde trusselen om atomkrig sitt høydepunkt.",
+        "Rivaliseringen gjaldt også verdensrommet. Sovjetunionen skjøt opp Sputnik 1, den første satellitten, i 1957, og i 1961 ble Jurij Gagarin det første mennesket i verdensrommet. USA vant kappløpet til Månen: 20. juli 1969 landet Apollo 11, og Neil Armstrong ble den første som satte foten på Månen."
+      ],
+      "keyPoints": [
+        "USA og Sovjetunionen var hovedmotstandere fra 1945 til 1991.",
+        "Jernteppet delte Europa; NATO (1949) stod mot Warszawapakten (1955).",
+        "Supermaktene kriget aldri direkte, men støttet hver sin side i andre kriger.",
+        "Cubakrisen i 1962 var det farligste øyeblikket.",
+        "Romkappløpet gikk fra Sputnik 1957 til månelandingen 1969."
+      ],
+      "sources": [
+        {
+          "title": "Den kalde krigen – Store norske leksikon",
+          "url": "https://snl.no/den_kalde_krigen"
+        },
+        {
+          "title": "Berlinmuren – Store norske leksikon",
+          "url": "https://snl.no/Berlinmuren"
+        },
+        {
+          "title": "Cubakrisen – Store norske leksikon",
+          "url": "https://snl.no/Cubakrisen"
+        },
+        {
+          "title": "Romkappløpet – Store norske leksikon",
+          "url": "https://snl.no/romkappl%C3%B8pet"
+        }
+      ],
+      "cards": [
+        {
+          "id": "mh-kalde-krigen-hva",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hva var den kalde krigen?",
+          "answer": "En langvarig konflikt mellom USA og Sovjetunionen uten direkte krig mellom dem",
+          "distractors": [
+            "En handelskrig mellom USA og Vest-Europa om toll og eksport",
+            "En borgerkrig i Sovjetunionen mellom kommunister og liberale",
+            "En rekke grensekriger mellom Tyskland og Polen etter 1945"
+          ],
+          "explain": "Konflikten skjerpet seg etter president Franklin D. Roosevelts død i april 1945. Andre verdenskrig hadde svekket de gamle stormaktene, så USA og Sovjetunionen ble stående som supermakter uten rivaler."
+        },
+        {
+          "id": "mh-kalde-krigen-allianser",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilke militære allianser stod mot hverandre under den kalde krigen?",
+          "answer": "NATO og Warszawapakten",
+          "distractors": [
+            "Ententen og sentralmaktene",
+            "Aksemaktene og de allierte",
+            "Trippelalliansen og Trippelententen"
+          ],
+          "explain": "NATO ble dannet først, i 1949, og Warszawapakten fulgte i 1955. De andre alliansene stod mot hverandre i de to verdenskrigene."
+        },
+        {
+          "id": "mh-kalde-krigen-jernteppet",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hva var jernteppet?",
+          "answer": "Skillet som delte Europa i en østblokk og en vestblokk",
+          "distractors": [
+            "En sovjetisk rakettbase på Cuba",
+            "Den tyske forsvarslinjen langs Atlanterhavet",
+            "Et luftvernsystem rundt Moskva"
+          ],
+          "explain": "I landene øst for skillet satt lokale kommunister ved makten, men de hadde liten støtte i befolkningen, og det var de sovjetiske styrkene som hadde den reelle makten. Berlinmuren ble det fremste symbolet på delingen."
+        },
+        {
+          "id": "mh-kalde-krigen-cubakrisen",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilken krise i 1962 brakte supermaktene til randen av atomkrig?",
+          "answer": "Cubakrisen",
+          "distractors": [
+            "Berlinblokaden",
+            "Koreakrigen",
+            "Sputnik-krisen"
+          ],
+          "explain": "President John F. Kennedy svarte med en blokade av skipstrafikken til Cuba. Krisen endte 28. oktober da den sovjetiske lederen Nikita Khrusjtsjov gikk med på å fjerne rakettene, og USA lovet å trekke sine raketter ut av Tyrkia."
+        },
+        {
+          "id": "mh-kalde-krigen-ledere",
+          "step": 2,
+          "type": "choice",
+          "prompt": "Hvilke to statsledere stod mot hverandre under Cubakrisen?",
+          "answer": "John F. Kennedy og Nikita Khrusjtsjov",
+          "distractors": [
+            "Harry Truman og Josef Stalin",
+            "Ronald Reagan og Mikhail Gorbatsjov",
+            "Richard Nixon og Leonid Brezjnev"
+          ],
+          "explain": "Krisen ble et prestisjenederlag for Khrusjtsjov og kan være noe av forklaringen på at han ble avsatt noen år senere. Avtalen ble forhandlet fram i et hemmelig møte der presidentens bror, Robert Kennedy, deltok."
+        },
+        {
+          "id": "mh-kalde-krigen-sputnik",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva het den første satellitten i bane rundt Jorden, skutt opp av Sovjetunionen i 1957?",
+          "answer": "Sputnik 1",
+          "accept": [
+            "Sputnik",
+            "Sputnik-1",
+            "Sputnik I"
+          ],
+          "explain": "Sputnik 1 ble skutt opp 4. oktober 1957, og en måned senere sendte Sovjetunionen hunden Laika i bane. USA skjøt opp sin første satellitt i januar 1958 og opprettet romorganisasjonen NASA samme år."
+        },
+        {
+          "id": "mh-kalde-krigen-gagarin",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvem ble det første mennesket i verdensrommet i 1961?",
+          "answer": "Jurij Gagarin",
+          "accept": [
+            "Gagarin",
+            "Juri Gagarin",
+            "Yuri Gagarin"
+          ],
+          "explain": "Gagarin kretset rundt Jorden i 108 minutter i romfartøyet Vostok 1 den 12. april 1961. Den første kvinnen i verdensrommet var også sovjetisk: Valentina Teresjkova i 1963."
+        },
+        {
+          "id": "mh-kalde-krigen-armstrong",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvem var det første mennesket som gikk på Månen, i juli 1969?",
+          "answer": "Neil Armstrong",
+          "accept": [
+            "Armstrong"
+          ],
+          "explain": "Buzz Aldrin fulgte etter som nummer to. Romkappløpet regnes som avsluttet i 1975, da et amerikansk Apollo-fartøy og et sovjetisk Sojus-fartøy koblet seg sammen i bane."
+        },
+        {
+          "id": "mh-kalde-krigen-hvorfor-muren",
+          "step": 3,
+          "type": "choice",
+          "prompt": "Hvorfor bygde myndighetene i Øst-Tyskland Berlinmuren?",
+          "answer": "For å stanse flukten av innbyggere til Vest-Berlin",
+          "distractors": [
+            "For å beskytte Øst-Berlin mot et NATO-angrep",
+            "For å markere grensen fra Potsdamavtalen",
+            "For å hindre smugling av vestlige varer"
+          ],
+          "explain": "Fra 1949 til august 1961 flyktet nesten 2,7 millioner mennesker fra DDR, omtrent en sjudel av befolkningen. Soldatene ved muren hadde ordre om å skyte på dem som prøvde å komme seg over."
+        },
+        {
+          "id": "mh-kalde-krigen-forklar-rivalisering",
+          "step": 3,
+          "type": "explain",
+          "prompt": "Forklar hvordan USA og Sovjetunionen konkurrerte uten å gå til direkte krig mot hverandre.",
+          "answer": "Supermaktene unngikk krig med hverandre, men støttet hver sin side i kriger som Korea og Vietnam. De rustet opp med atomvåpen og konkurrerte om å vise teknologisk overlegenhet, blant annet i verdensrommet.",
+          "checklist": [
+            "Ingen direkte krig mellom supermaktene",
+            "Støtte til hver sin side i andre lands kriger",
+            "Kappløp om atomvåpen og romfart"
+          ],
+          "explain": "Sovjetunionen sprengte sin første atombombe i 1949 og brøt dermed USAs monopol. Mange levde i frykt for en atomkrig som kunne utslette alt liv på jorden."
+        },
+        {
+          "id": "mh-kalde-krigen-rekkefolge",
+          "step": 3,
+          "type": "order",
+          "prompt": "Sett hendelsene fra den kalde krigen i kronologisk rekkefølge.",
+          "items": [
+            {
+              "label": "NATO dannes",
+              "year": 1949
+            },
+            {
+              "label": "Sputnik 1 skytes opp",
+              "year": 1957
+            },
+            {
+              "label": "Berlinmuren bygges",
+              "year": 1961
+            },
+            {
+              "label": "Cubakrisen",
+              "year": 1962
+            },
+            {
+              "label": "Apollo 11 lander på Månen",
+              "year": 1969
+            }
+          ],
+          "explain": "Byggingen av muren og Cubakrisen kom med drøyt ett års mellomrom og markerer den mest spente fasen. Den kalde krigen gikk i bølger med perioder med avspenning."
+        },
+        {
+          "id": "mh-kalde-krigen-aar-muren",
+          "step": 4,
+          "type": "year",
+          "prompt": "I hvilket år begynte byggingen av Berlinmuren?",
+          "answer": "1961",
+          "explain": "Byggingen startet 13. august 1961 med bevoktede piggtrådsperringer, og to dager senere kom de første betongblokkene. Muren ble rundt 45 kilometer lang."
+        },
+        {
+          "id": "mh-kalde-krigen-aar-warszawa",
+          "step": 4,
+          "type": "year",
+          "prompt": "I hvilket år ble Warszawapakten opprettet?",
+          "answer": "1955",
+          "explain": "Pakten var østblokkens militære svar på NATO, som var dannet seks år tidligere. Sammen markerte de to alliansene delingen av Europa."
+        }
+      ]
+    },
+    {
+      "id": "mh-avkolonisering",
+      "title": "Avkoloniseringen",
+      "tier": 3,
+      "prerequisites": [
+        "mh-kalde-krigen",
+        "mh-imperialismen"
+      ],
+      "years": {
+        "from": 1945,
+        "to": 1994
+      },
+      "summary": "Hvordan koloniene i Asia og Afrika ble selvstendige stater etter andre verdenskrig, gjennom forhandlinger, ikkevold og væpnet kamp.",
+      "lesson": [
+        "Avkoloniseringen er prosessen der koloniene ble selvstendige stater, særlig i tiårene etter andre verdenskrig. Krigen hadde svekket Storbritannia og Frankrike, og forestillingen om europeisk overlegenhet hadde fått en knekk. I 1945 levde over 750 millioner mennesker i kolonier. FN hadde 51 medlemmer ved starten; i dag nærmer tallet seg 200.",
+        "India ble selvstendig i 1947 etter en lang kamp ledet av Kongresspartiet, med Mohandas Gandhi og Jawaharlal Nehru i spissen. Gandhi var kjent for ikkevold, blant annet ulydighetsaksjonen mot britenes saltmonopol i 1930. Samtidig ble Pakistan opprettet som egen stat for muslimene, og delingen førte til krig og millioner av flyktninger.",
+        "I 1960, kalt Afrikas år, ble de fleste franske koloniene selvstendige. Der et hvitt mindretall hadde makten, ble frigjøringen ofte voldelig, og krigen i Algerie varte fra 1954 til 1962. I Sør-Afrika innførte Nasjonalistpartiet apartheid, et lovfestet raseskille, i 1948. Nelson Mandela satt fengslet i over 27 år før han ble løslatt i 1990 og valgt til president i 1994."
+      ],
+      "keyPoints": [
+        "De fleste koloniene ble selvstendige i tiårene etter 1945.",
+        "India ble fritt i 1947 etter en ikkevoldskamp ledet av Gandhi.",
+        "1960 kalles Afrikas år; der hvite nybyggere hadde makten, ble kampen væpnet.",
+        "Apartheid i Sør-Afrika varte fra 1948 til 1994, da Mandela ble president."
+      ],
+      "sources": [
+        {
+          "title": "Avkolonisering – Store norske leksikon",
+          "url": "https://snl.no/avkolonisering"
+        },
+        {
+          "title": "Mahatma Gandhi – Store norske leksikon",
+          "url": "https://snl.no/Mahatma_Gandhi"
+        },
+        {
+          "title": "Apartheid – Store norske leksikon",
+          "url": "https://snl.no/apartheid"
+        },
+        {
+          "title": "Nelson Mandela – Store norske leksikon",
+          "url": "https://snl.no/Nelson_Mandela"
+        }
+      ],
+      "cards": [
+        {
+          "id": "mh-avkolonisering-hva",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hva menes med avkolonisering?",
+          "answer": "At kolonier frigjøres og blir selvstendige stater",
+          "distractors": [
+            "At kolonimakter kjøper områder av hverandre",
+            "At innbyggere flytter fra koloniene til Europa",
+            "At kolonier slås sammen til større enheter"
+          ],
+          "explain": "Ordet kan gi inntrykk av en vennlig handling ovenfra. Mange historikere understreker derfor at selvstendigheten i stor grad ble vunnet gjennom motstand og frigjøringskamp i koloniene."
+        },
+        {
+          "id": "mh-avkolonisering-tid",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Når ble de fleste koloniene i Asia og Afrika selvstendige?",
+          "answer": "I tiårene etter andre verdenskrig",
+          "distractors": [
+            "Rett etter første verdenskrig",
+            "På slutten av 1800-tallet",
+            "Etter den kalde krigens slutt"
+          ],
+          "explain": "I 1950 fantes det bare tre selvstendige stater i Afrika; i dag er det 54. Sammen med den kalde krigen var framveksten av de nye statene den største omveltningen i verdenssamfunnet etter 1945."
+        },
+        {
+          "id": "mh-avkolonisering-india-aar",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Når ble India selvstendig?",
+          "answer": "1947",
+          "distractors": [
+            "1919",
+            "1957",
+            "1960"
+          ],
+          "explain": "India hadde nærmere 400 millioner innbyggere da britene trakk seg ut. Uttrekningen kom brått på alle, og britene etterlot seg kaos og vold langs de nye grensene."
+        },
+        {
+          "id": "mh-avkolonisering-apartheid",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hva var apartheid?",
+          "answer": "Et lovfestet raseskille som sikret hvitt herredømme i Sør-Afrika",
+          "distractors": [
+            "En frigjøringsbevegelse for svarte sørafrikanere",
+            "En fredsavtale mellom Storbritannia og boerne",
+            "Et økonomisk samarbeid i det sørlige Afrika"
+          ],
+          "explain": "Alle innbyggere ble klassifisert i fire rasegrupper, og byer og tettsteder ble delt etter rase. Ekteskap mellom personer fra ulike grupper ble forbudt."
+        },
+        {
+          "id": "mh-avkolonisering-gandhi",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvem ledet den indiske frigjøringskampen med ikkevold som metode?",
+          "answer": "Mahatma Gandhi",
+          "accept": [
+            "Gandhi",
+            "Mohandas Gandhi",
+            "Mohandas Karamchand Gandhi"
+          ],
+          "explain": "Mahatma betyr «stor sjel». Gandhi ble myrdet av en hindunasjonalist 30. januar 1948, et halvt år etter selvstendigheten."
+        },
+        {
+          "id": "mh-avkolonisering-pakistan",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvilken stat ble opprettet for muslimene samtidig med Indias selvstendighet?",
+          "answer": "Pakistan",
+          "explain": "Pakistan fikk også områder øst for India. Denne østlige delen rev seg løs i 1971 under navnet Bangladesh."
+        },
+        {
+          "id": "mh-avkolonisering-mandela",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvem satt fengslet i over 27 år og ble Sør-Afrikas første demokratisk valgte president?",
+          "answer": "Nelson Mandela",
+          "accept": [
+            "Mandela",
+            "Madiba"
+          ],
+          "explain": "Mandela satt store deler av tiden på Robben Island. I 1993 fikk han Nobels fredspris sammen med president de Klerk for den fredelige overgangen fra apartheid til demokrati."
+        },
+        {
+          "id": "mh-avkolonisering-afrikas-ar",
+          "step": 2,
+          "type": "choice",
+          "prompt": "Hvorfor kalles 1960 «Afrikas år»?",
+          "answer": "De fleste franske koloniene ble selvstendige det året",
+          "distractors": [
+            "Den afrikanske union ble grunnlagt det året",
+            "Apartheid ble avskaffet i Sør-Afrika det året",
+            "De siste europeiske soldatene forlot Afrika det året"
+          ],
+          "explain": "Ghana hadde blitt selvstendig allerede i 1957 under Kwame Nkrumah. I 1960 vedtok også FNs hovedforsamling at selvstendighet var en rettighet for koloniene."
+        },
+        {
+          "id": "mh-avkolonisering-hvorfor",
+          "step": 3,
+          "type": "choice",
+          "prompt": "Hvorfor skjøt avkoloniseringen fart etter andre verdenskrig?",
+          "answer": "Kolonimaktene var svekket, og motstanden i koloniene vokste",
+          "distractors": [
+            "Koloniene hadde ikke lenger råvarer av verdi",
+            "FN overtok styret i alle koloniene i 1945",
+            "Kolonimaktene ble enige om å avvikle alt samtidig"
+          ],
+          "explain": "Japans raske erobring av de europeiske koloniene i Sørøst-Asia i 1942 svekket Vestens prestisje. Mange indere og afrikanere hadde også håpet på selvstyre som belønning for innsatsen i krigen."
+        },
+        {
+          "id": "mh-avkolonisering-forklar-vold",
+          "step": 3,
+          "type": "explain",
+          "prompt": "Forklar hvorfor frigjøringen ble langt mer voldelig i noen kolonier enn i andre.",
+          "answer": "Der kolonimakten kunne forhandle med lokale eliter, gikk overgangen raskt og fredelig. Der et hvitt mindretall eide jorda og dominerte politikken, som i Algerie, Kenya og Sør-Rhodesia, ville de ikke gi fra seg makten, og frigjøringsbevegelsene grep til væpnet kamp.",
+          "checklist": [
+            "Forhandlinger var mulig enkelte steder",
+            "Hvite nybyggere ville beholde jord og makt",
+            "Frigjøringsbevegelser valgte væpnet kamp"
+          ],
+          "explain": "I Algerie bodde rundt én million europeere, og landet ble regnet som en del av Frankrike. Krigen kostet trolig rundt 500 000 liv, men anslagene varierer mye."
+        },
+        {
+          "id": "mh-avkolonisering-kald-krig",
+          "step": 3,
+          "type": "choice",
+          "prompt": "Hvordan påvirket den kalde krigen avkoloniseringen?",
+          "answer": "Supermaktene konkurrerte om innflytelse i de nye statene",
+          "distractors": [
+            "Supermaktene nektet de nye statene å bli med i FN",
+            "Den kalde krigen stanset all avkolonisering til 1991",
+            "Supermaktene delte koloniene likt mellom seg"
+          ],
+          "explain": "USA støttet ofte Frankrike og Storbritannia der kommunistiske bevegelser stod sterkt. Da Belgia trakk seg brått ut av Kongo i 1960, fulgte en lang krig med utenlandsk innblanding og FN-styrker, blant dem mange nordmenn."
+        },
+        {
+          "id": "mh-avkolonisering-rekkefolge",
+          "step": 3,
+          "type": "order",
+          "prompt": "Sett hendelsene i avkoloniseringen i kronologisk rekkefølge.",
+          "items": [
+            {
+              "label": "India blir selvstendig",
+              "year": 1947
+            },
+            {
+              "label": "Apartheid innføres i Sør-Afrika",
+              "year": 1948
+            },
+            {
+              "label": "Ghana blir selvstendig",
+              "year": 1957
+            },
+            {
+              "label": "Krigen i Algerie ender",
+              "year": 1962
+            },
+            {
+              "label": "Mandela blir president",
+              "year": 1994
+            }
+          ],
+          "explain": "Asia gikk foran, og Afrika fulgte fra slutten av 1950-årene. Apartheid i Sør-Afrika ble først avviklet i 1994, nesten et halvt århundre etter Indias selvstendighet."
+        },
+        {
+          "id": "mh-avkolonisering-aar-mandela",
+          "step": 4,
+          "type": "year",
+          "prompt": "I hvilket år ble Nelson Mandela løslatt?",
+          "answer": "1990",
+          "explain": "Etter løslatelsen ledet han forhandlingene fram mot de første frie valgene i 1994, der ANC vant klart. Han satt som president til 1999."
+        },
+        {
+          "id": "mh-avkolonisering-aar-algerie",
+          "step": 4,
+          "type": "year",
+          "prompt": "I hvilket år begynte frigjøringskrigen i Algerie?",
+          "answer": "1954",
+          "explain": "Charles de Gaulle kom til makten i Frankrike i 1958 og ville heller bruke ressursene hjemme. Forhandlingene med frigjøringsfronten FLN ble sluttført våren 1962."
+        }
+      ]
+    },
+    {
+      "id": "mh-murens-fall",
+      "title": "Murens fall og Sovjetunionens oppløsning",
+      "tier": 3,
+      "prerequisites": [
+        "mh-kalde-krigen"
+      ],
+      "years": {
+        "from": 1985,
+        "to": 1995
+      },
+      "summary": "Hvordan Gorbatsjovs reformer, Berlinmurens fall og Sovjetunionens oppløsning avsluttet den kalde krigen, mens Jugoslavia gikk i oppløsning i krig.",
+      "lesson": [
+        "Mikhail Gorbatsjov ble leder for det sovjetiske kommunistpartiet i 1985. Han satte i gang reformer: perestrojka, økonomisk omstrukturering med mer markedsøkonomi, og glasnost, økt åpenhet og ytringsfrihet. Han ville fornye kommuniststyret, ikke avskaffe det, men reformene slapp løs krefter han ikke kontrollerte.",
+        "Sovjetunionens endrede holdning åpnet for systemskifter i Øst-Europa i 1989–1990. 9. november 1989 åpnet DDR grensen, og Berlinmuren falt. 3. oktober 1990 ble Tyskland gjenforent.",
+        "Sovjetrepublikkene krevde stadig mer selvstyre. Et mislykket kuppforsøk mot Gorbatsjov i august 1991 framskyndet oppløsningen, og den russiske lederen Boris Jeltsin overtok initiativet. 25. desember 1991 gikk Gorbatsjov av, og Sovjetunionen var historie. Samtidig gikk Jugoslavia i oppløsning i blodige kriger. I Bosniakrigen 1992–1995 ble rundt 100 000 drept, og i Srebrenica ble over 8000 bosnjakiske gutter og menn massakrert i juli 1995."
+      ],
+      "keyPoints": [
+        "Gorbatsjov innførte glasnost og perestrojka fra 1985.",
+        "Berlinmuren falt 9. november 1989, og Tyskland ble gjenforent 3. oktober 1990.",
+        "Sovjetunionen ble oppløst i desember 1991.",
+        "Jugoslavias oppløsning førte til krig, og Srebrenica-massakren er dømt som folkemord."
+      ],
+      "sources": [
+        {
+          "title": "Mikhail Gorbatsjov – Store norske leksikon",
+          "url": "https://snl.no/Mikhail_Gorbatsjov"
+        },
+        {
+          "title": "Tysklands samtidshistorie – Store norske leksikon",
+          "url": "https://snl.no/Tysklands_samtidshistorie"
+        },
+        {
+          "title": "Bosniakrigen – Store norske leksikon",
+          "url": "https://snl.no/Bosniakrigen"
+        },
+        {
+          "title": "Srebrenica-massakren – Store norske leksikon",
+          "url": "https://snl.no/Srebrenica-massakren"
+        }
+      ],
+      "cards": [
+        {
+          "id": "mh-murens-fall-gorbatsjov",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvem var Sovjetunionens leder da den kalde krigen tok slutt?",
+          "answer": "Mikhail Gorbatsjov",
+          "distractors": [
+            "Leonid Brezjnev",
+            "Boris Jeltsin",
+            "Nikita Khrusjtsjov"
+          ],
+          "explain": "Gorbatsjov var Sovjetunionens første og eneste president, fra 1990 til 1991. Han fikk Nobels fredspris i 1990 for reformarbeidet."
+        },
+        {
+          "id": "mh-murens-fall-9-november",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hva skjedde i Berlin 9. november 1989?",
+          "answer": "Grensen ble åpnet, og muren falt",
+          "distractors": [
+            "Tyskland ble formelt gjenforent",
+            "Sovjetiske stridsvogner rykket inn",
+            "Byen ble delt i fire soner"
+          ],
+          "explain": "Under ett år senere var Tyskland samlet igjen. Allerede i juli 1990 trådte en monetær, økonomisk og sosial union mellom de to statene i kraft."
+        },
+        {
+          "id": "mh-murens-fall-sovjet-slutt",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Når ble Sovjetunionen oppløst?",
+          "answer": "I desember 1991",
+          "distractors": [
+            "I november 1989",
+            "I oktober 1990",
+            "I mars 1985"
+          ],
+          "explain": "8. desember 1991 inngikk Russland, Ukraina og Belarus Belavezja-avtalen, som i praksis oppløste unionen. Gorbatsjov gikk av som president 25. desember."
+        },
+        {
+          "id": "mh-murens-fall-jugoslavia",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hva skjedde med Jugoslavia på 1990-tallet?",
+          "answer": "Landet gikk i oppløsning gjennom blodige kriger",
+          "distractors": [
+            "Landet ble innlemmet i Sovjetunionen",
+            "Landet ble delt fredelig etter folkeavstemning",
+            "Landet ble et samlet medlem av NATO"
+          ],
+          "explain": "Kroatia og Slovenia brøt løs i 1991. I Bosnia-Hercegovina bodde bosnjaker, serbere og kroater om hverandre, noe som gjorde etniske grensedragninger vanskelige."
+        },
+        {
+          "id": "mh-murens-fall-glasnost",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva het Gorbatsjovs politikk for økt åpenhet og ytringsfrihet?",
+          "answer": "Glasnost",
+          "explain": "Den nye åpenheten førte etniske konflikter og krav om løsrivelse fram i lyset. Ved siden av glasnost og perestrojka var demokratisering det tredje nøkkelordet i reformene."
+        },
+        {
+          "id": "mh-murens-fall-perestrojka",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva het Gorbatsjovs program for økonomisk omstrukturering?",
+          "answer": "Perestrojka",
+          "accept": [
+            "Perestroika"
+          ],
+          "explain": "Reformene ga ikke det økonomiske oppsvinget Gorbatsjov håpet på, og motstanden mot dem vokste. Etter hvert prioriterte han stabilitet framfor reformer."
+        },
+        {
+          "id": "mh-murens-fall-jeltsin",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvem ledet den russiske republikken og overtok initiativet etter kuppforsøket i 1991?",
+          "answer": "Boris Jeltsin",
+          "accept": [
+            "Jeltsin",
+            "Boris Yeltsin",
+            "Yeltsin"
+          ],
+          "explain": "Jeltsin var folkevalgt leder for den russiske republikken. Etter kuppforsøket gikk Gorbatsjov av som generalsekretær i kommunistpartiet, og makten gled over til republikkene."
+        },
+        {
+          "id": "mh-murens-fall-srebrenica",
+          "step": 2,
+          "type": "text",
+          "prompt": "I hvilken bosnisk by ble over 8000 bosnjakiske gutter og menn drept i juli 1995?",
+          "answer": "Srebrenica",
+          "explain": "Byen var erklært som et av FNs «sikre områder». Krigsforbryterdomstolen for det tidligere Jugoslavia har slått fast at massakren var et folkemord."
+        },
+        {
+          "id": "mh-murens-fall-hvorfor-ost-europa",
+          "step": 3,
+          "type": "choice",
+          "prompt": "Hvorfor kunne kommunistregimene i Øst-Europa falle så raskt i 1989–1990?",
+          "answer": "Sovjetunionen under Gorbatsjov lot systemskiftene skje",
+          "distractors": [
+            "NATO invaderte landene og innsatte nye regjeringer",
+            "FN vedtok at landene skulle bli demokratier",
+            "Regimene ble avsatt av Kina etter et kupp"
+          ],
+          "explain": "Gorbatsjov tok også initiativ til nedrustning, og forholdet til Vesten ble langt bedre. I 1990 godtok han at Vest- og Øst-Tyskland ble slått sammen."
+        },
+        {
+          "id": "mh-murens-fall-forklar-opplosning",
+          "step": 3,
+          "type": "explain",
+          "prompt": "Forklar hvorfor Gorbatsjovs reformer bidro til at Sovjetunionen gikk i oppløsning, selv om han ville bevare den.",
+          "answer": "Reformene ga ikke økonomisk oppsving, mens åpenheten brakte etniske konflikter og krav om løsrivelse fram i lyset. Republikkene krevde mer selvstyre, og da kuppforsøket i august 1991 mislyktes, mistet Gorbatsjov initiativet til republikklederne.",
+          "checklist": [
+            "Økonomien ble ikke bedre",
+            "Åpenheten ga rom for løsrivelseskrav",
+            "Kuppforsøket i 1991 framskyndet oppløsningen"
+          ],
+          "explain": "Kuppforsøket stanset en ny unionsavtale som skulle gi republikkene mer selvstyre. I stedet for å redde unionen framskyndet det oppløsningen."
+        },
+        {
+          "id": "mh-murens-fall-rekkefolge",
+          "step": 3,
+          "type": "order",
+          "prompt": "Sett hendelsene fra murens fall til Bosniakrigen i kronologisk rekkefølge.",
+          "items": [
+            {
+              "label": "Gorbatsjov blir partileder",
+              "year": 1985
+            },
+            {
+              "label": "Berlinmuren faller",
+              "year": 1989
+            },
+            {
+              "label": "Tyskland gjenforenes",
+              "year": 1990
+            },
+            {
+              "label": "Sovjetunionen oppløses",
+              "year": 1991
+            },
+            {
+              "label": "Srebrenica-massakren",
+              "year": 1995
+            }
+          ],
+          "explain": "Innen drøyt to år etter murens fall var både DDR og Sovjetunionen borte. Bosniakrigen endte med en fredsavtale forhandlet fram i Dayton i USA og undertegnet i Paris i desember 1995."
+        },
+        {
+          "id": "mh-murens-fall-gjenforening",
+          "step": 4,
+          "type": "choice",
+          "prompt": "Hvilken dato ble Tyskland gjenforent?",
+          "answer": "3. oktober 1990",
+          "distractors": [
+            "9. november 1989",
+            "25. desember 1991",
+            "1. juli 1990"
+          ],
+          "explain": "Sommeren 1990 godtok Sovjetunionen at et samlet Tyskland selv kunne velge NATO-medlemskap. Sammensmeltingen av to svært ulike økonomier ble dyrere og vanskeligere enn mange hadde trodd."
+        },
+        {
+          "id": "mh-murens-fall-bosnia-dode",
+          "step": 4,
+          "type": "choice",
+          "prompt": "Omtrent hvor mange ble drept i Bosniakrigen 1992–1995?",
+          "answer": "Rundt 100 000",
+          "distractors": [
+            "Rundt 10 000",
+            "Rundt 500 000",
+            "Rundt 2 millioner"
+          ],
+          "explain": "Mellom 35 og 40 prosent av de drepte var sivile. Krigen var den største væpnede konflikten i Europa etter andre verdenskrig."
+        }
+      ]
+    },
+    {
+      "id": "mh-2000-tallet",
+      "title": "Verden etter 2000",
+      "tier": 3,
+      "prerequisites": [
+        "mh-murens-fall"
+      ],
+      "years": {
+        "from": 2001,
+        "to": 2022
+      },
+      "summary": "Terror, kriger, finanskrise, folkelige opprør og en pandemi som har formet verden i det 21. århundret.",
+      "lesson": [
+        "Terrorangrepet mot USA 11. september 2001, da passasjerfly ble brukt som bomber mot mål i New York og mot Pentagon, kostet nesten 3000 mennesker livet. Amerikanske myndigheter pekte raskt ut terrornettverket al-Qaida og lederen Osama bin Laden. President George W. Bush erklærte en «krig mot terror», og i oktober 2001 angrep USA-ledede styrker Afghanistan og fordrev Taliban-regimet, som hadde latt bin Laden operere fra landet.",
+        "I mars 2003 gikk USA til krig mot Irak uten samtykke fra FN. Begrunnelsen var påståtte masseødeleggelsesvåpen, men ingen ble funnet. Saddam Hussein ble styrtet, men landet ble preget av opprør og vold i årene etter. I 2008 rammet en finanskrise, den verste siden 1930-årene, USA og resten av verden.",
+        "Fra desember 2010 spredte folkelige opprør seg fra Tunisia til flere arabiske land, den arabiske våren. Regimene i Tunisia, Egypt og Libya falt, mens Syria og Jemen havnet i borgerkrig. I 2014 annekterte Russland Krim-halvøya, og 24. februar 2022 gikk Russland til fullskala angrep på Ukraina, i strid med folkeretten. I mars 2020 erklærte Verdens helseorganisasjon covid-19-utbruddet for en pandemi."
+      ],
+      "keyPoints": [
+        "11. september 2001 utløste «krigen mot terror» og krigen i Afghanistan.",
+        "Irak-krigen i 2003 manglet FN-mandat, og de påståtte våpnene ble ikke funnet.",
+        "Finanskrisen i 2008 var den verste siden 1930-årene.",
+        "Den arabiske våren fra 2010 endte svært ulikt i de ulike landene.",
+        "Russland annekterte Krim i 2014 og angrep Ukraina i full skala i 2022."
+      ],
+      "sources": [
+        {
+          "title": "USAs historie 2001–2016 – Store norske leksikon",
+          "url": "https://snl.no/USAs_historie_2001%E2%80%932016"
+        },
+        {
+          "title": "Den arabiske våren – Store norske leksikon",
+          "url": "https://snl.no/Den_arabiske_v%C3%A5ren"
+        },
+        {
+          "title": "Krigen i Ukraina siden 2022 – Store norske leksikon",
+          "url": "https://snl.no/Krigen_i_Ukraina_siden_2022"
+        },
+        {
+          "title": "Koronapandemien – Store medisinske leksikon",
+          "url": "https://sml.snl.no/koronapandemien"
+        }
+      ],
+      "cards": [
+        {
+          "id": "mh-2000-tallet-terrorgruppe",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilket terrornettverk pekte amerikanske myndigheter ut som ansvarlig for angrepet 11. september 2001?",
+          "answer": "Al-Qaida",
+          "distractors": [
+            "Hamas",
+            "Hizbollah",
+            "Taliban"
+          ],
+          "explain": "Al-Qaida hadde angrepet amerikanske mål også på 1990-tallet. Taliban, som styrte Afghanistan, hadde latt al-Qaidas leder operere fra baser i landet."
+        },
+        {
+          "id": "mh-2000-tallet-afghanistan",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hva skjedde i Afghanistan høsten 2001?",
+          "answer": "USA-ledede styrker angrep og fordrev Taliban-regimet",
+          "distractors": [
+            "Sovjetunionen trakk sine siste soldater ut",
+            "Taliban tok makten i landet for første gang",
+            "FN overtok styret etter en fredsavtale"
+          ],
+          "explain": "Osama bin Laden slapp unna og ble først drept av amerikanske spesialsoldater i 2011. USA og NATO avsluttet formelt kampoperasjonene i Afghanistan i 2014."
+        },
+        {
+          "id": "mh-2000-tallet-ukraina",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hva skjedde 24. februar 2022?",
+          "answer": "Russland gikk til fullskala angrep på Ukraina",
+          "distractors": [
+            "Russland annekterte Krim-halvøya",
+            "Ukraina ble tatt opp som medlem i NATO",
+            "Ukraina og Russland inngikk en fredsavtale"
+          ],
+          "explain": "Det russiske forsøket på et lynangrep mot Kyiv mislyktes, og krigen utviklet seg til en stillingskrig. Angrepet ble fordømt av et overveldende flertall av FNs medlemsland."
+        },
+        {
+          "id": "mh-2000-tallet-pandemi",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hva erklærte Verdens helseorganisasjon (WHO) i mars 2020?",
+          "answer": "At covid-19-utbruddet var en pandemi",
+          "distractors": [
+            "At sarsviruset var utryddet",
+            "At alle land måtte stenge grensene",
+            "At en vaksine mot viruset var godkjent"
+          ],
+          "explain": "Sykdommen ble først påvist i Kina omkring årsskiftet 2019/2020. Ved utgangen av 2024 var over 7 millioner dødsfall rapportert, men tallene er svært usikre og det reelle tallet kan være betydelig høyere."
+        },
+        {
+          "id": "mh-2000-tallet-bush",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvilken amerikansk president erklærte en «krig mot terror» etter 11. september?",
+          "answer": "George W. Bush",
+          "accept": [
+            "Bush",
+            "George Bush",
+            "George W Bush"
+          ],
+          "explain": "Fanger fra Afghanistan ble sendt til den amerikanske militærbasen Guantánamo Bay på Cuba, der de ble holdt uten rettergang. Det vakte sterk kritikk både i USA og internasjonalt."
+        },
+        {
+          "id": "mh-2000-tallet-saddam",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvem var Iraks president da USA invaderte landet i 2003?",
+          "answer": "Saddam Hussein",
+          "accept": [
+            "Saddam",
+            "Hussein"
+          ],
+          "explain": "Regimet hans falt etter kort tid. Opprør i flere bølger førte deretter til vold og store ødeleggelser i mange år."
+        },
+        {
+          "id": "mh-2000-tallet-tunisia",
+          "step": 2,
+          "type": "text",
+          "prompt": "I hvilket land begynte den arabiske våren i desember 2010?",
+          "answer": "Tunisia",
+          "explain": "Opprøret ble utløst da en ung grønnsakselger, Mohamed Bouazizi, satte fyr på seg selv. Presidenten Zine el-Abidine Ben Ali måtte gå av 14. januar 2011."
+        },
+        {
+          "id": "mh-2000-tallet-krim",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvilken ukrainsk halvøy annekterte Russland i 2014?",
+          "answer": "Krim",
+          "accept": [
+            "Krim-halvøya",
+            "Krimhalvøya",
+            "Krym"
+          ],
+          "explain": "Samtidig støttet Russland separatister i Donbas øst i Ukraina, der det ble krig. I Budapest-memorandumet fra 1994 hadde Russland forpliktet seg til å respektere Ukrainas grenser."
+        },
+        {
+          "id": "mh-2000-tallet-hvorfor-irak",
+          "step": 3,
+          "type": "choice",
+          "prompt": "Hvorfor ble invasjonen av Irak i 2003 sterkt kritisert?",
+          "answer": "Den manglet FN-mandat, og de påståtte våpnene ble aldri funnet",
+          "distractors": [
+            "Irak hadde allerede blitt et stabilt demokrati før krigen",
+            "Krigen ble ført med atomvåpen mot irakiske byer",
+            "USA invaderte uten å ha varslet sine egne allierte"
+          ],
+          "explain": "Uenigheten om det folkerettslige grunnlaget skadet forholdet mellom USA og flere allierte. Etterretningen før krigen viste seg å bygge på usannheter, noe som svekket tilliten til myndighetene."
+        },
+        {
+          "id": "mh-2000-tallet-forklar-finanskrise",
+          "step": 3,
+          "type": "explain",
+          "prompt": "Forklar hvorfor finanskrisen i 2008 ofte sammenlignes med den store depresjonen.",
+          "answer": "Begge krisene startet i USA og fikk følger for hele verden. Krisen i 2008 var den verste siden 1930-årene: USA var på randen av økonomisk kollaps, og arbeidsledigheten steg kraftig.",
+          "checklist": [
+            "Begge startet i USA og fikk globale følger",
+            "2008-krisen var den verste siden 1930-årene",
+            "Arbeidsledigheten steg kraftig"
+          ],
+          "explain": "Før krisen hadde økonomer advart mot at forbruket i USA ble finansiert med lån i boliger. Etterdønningene, særlig høy arbeidsledighet, preget USA i flere år."
+        },
+        {
+          "id": "mh-2000-tallet-arabisk-utfall",
+          "step": 3,
+          "type": "choice",
+          "prompt": "Hvordan endte opprørene i den arabiske våren?",
+          "answer": "Utfallet varierte fra demokratisering til borgerkrig",
+          "distractors": [
+            "Alle landene ble varige demokratier",
+            "Opprørene ble slått ned uten noen endringer",
+            "Landene slo seg sammen til én arabisk stat"
+          ],
+          "explain": "Tunisia fikk de mest varige endringene i demokratisk retning, mens utviklingen ble reversert i Egypt. I Syria og Jemen ble det borgerkrig, og terrorgruppen IS fikk fotfeste."
+        },
+        {
+          "id": "mh-2000-tallet-rekkefolge",
+          "step": 3,
+          "type": "order",
+          "prompt": "Sett hendelsene etter 2000 i kronologisk rekkefølge.",
+          "items": [
+            {
+              "label": "Terrorangrepet mot USA",
+              "year": 2001
+            },
+            {
+              "label": "Den globale finanskrisen",
+              "year": 2008
+            },
+            {
+              "label": "Den arabiske våren begynner",
+              "year": 2010
+            },
+            {
+              "label": "Russland annekterer Krim",
+              "year": 2014
+            },
+            {
+              "label": "Russland angriper Ukraina i full skala",
+              "year": 2022
+            }
+          ],
+          "explain": "Konflikten mellom Russland og Ukraina begynte altså i 2014, ikke i 2022. Fram til fullskala-invasjonen hadde krigshandlingene øst i Ukraina allerede krevd flere tusen liv."
+        },
+        {
+          "id": "mh-2000-tallet-aar-bin-laden",
+          "step": 4,
+          "type": "year",
+          "prompt": "I hvilket år ble Osama bin Laden drept av amerikanske spesialsoldater?",
+          "answer": "2011",
+          "explain": "Han ble drept nesten ti år etter angrepet 11. september. Samme år ble krigføringen i Afghanistan, som var kraftig trappet opp, igjen senket."
+        },
+        {
+          "id": "mh-2000-tallet-pandemi-dode",
+          "step": 4,
+          "type": "choice",
+          "prompt": "Hvor mange dødsfall var rapportert i forbindelse med koronapandemien ved utgangen av 2024?",
+          "answer": "Over 7 millioner",
+          "distractors": [
+            "Rundt 700 000",
+            "Rundt 70 millioner",
+            "Over 700 millioner"
+          ],
+          "explain": "Det reelle tallet kan være betydelig høyere. Arbeidet med vaksiner ga et gjennombrudd for såkalte RNA-vaksiner, og vaksineringen startet i desember 2020."
+        }
+      ]
+    }
+  ]
+}
