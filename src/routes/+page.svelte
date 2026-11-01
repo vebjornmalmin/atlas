@@ -350,14 +350,18 @@
     const result=scheduleReview(schedulingKey(target),currentState,rating,now);
     const event={id:`${session.sessionId}:${session.index}`,targetId:target.id,entityId:target.entityId || null,timestamp:now.toISOString(),rating,mode:target.mode,correct,usedHint,learnedFirst,
       factId:factKey(target),claimIds:target.claimIds,evidenceKind:evidenceKind(target),answerFormat:target.answerFormat,assessment:target.answerFormat==='explanation'?'self':'answer',reason:entry.reason,schedulerId:schedulingKey(target),sessionRetry:Boolean(entry.sessionRetry),nextDue:result.card.due,log:result.log};
-    if(session.practice || entry.sessionRetry) await recordReview(db,null,{...event,practice:true,nextDue:null,log:null});
-    else await recordReview(db,result.card,event,{...result.card,id:legacyFactKey(target)});
+    const practice=session.practice || entry.sessionRetry;
+    const saved=practice?{...event,practice:true,nextDue:null,log:null}:event, mirror={...result.card,id:legacyFactKey(target)};
+    const applied=practice?await recordReview(db,null,saved):await recordReview(db,result.card,event,mirror);
+    // Update memory directly; reading every store back after each answer made phones lag.
+    if(applied){reviews=[...reviews,saved];if(!practice){const ids=new Set([result.card.id,mirror.id]);states=[...states.filter(s=>!ids.has(s.id)),result.card,...(mirror.id!==result.card.id?[mirror]:[])];}}
     session=advanceSession(session,{id:target.id,rating,correct,learnedFirst,usedHint,mode:target.mode});
     await transaction(db,['sessions'],tx=>{
       tx.objectStore('sessions').put(session);
       if(session.status==='completed') tx.objectStore('sessions').put({...session,id:session.sessionId,completedAt:now.toISOString()});
     });
-    await refresh(); await prepareQuestion();
+    if(!applied || session.status==='completed') await refresh();
+    await prepareQuestion();
   }
   async function checkStorage() {
     const estimate = await navigator.storage?.estimate?.() || {};
@@ -376,7 +380,7 @@
   async function checkUpdates(manual = false) {
     if (offlineTest || !navigator.onLine) { if(manual) notify('Du er frakoblet. Installert kunnskap er fortsatt tilgjengelig.'); return; }
     const prior=await get(db,'settings','updates');
-    if(!manual && prior && Date.now()-new Date(prior.checkedAt)<86400000) {lastUpdate=prior;return;}
+    if(!manual && prior && Date.now()-new Date(prior.checkedAt)<3600000) {lastUpdate=prior;return;}
     const started=Date.now();
     try {
       const response=await fetch('/knowledge/manifest.json',{cache:'no-store'});
