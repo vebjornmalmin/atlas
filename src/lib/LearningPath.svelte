@@ -23,7 +23,7 @@
     <p class="lead">{unit.summary}</p>
   </section>
   <div class="card unit-status">
-    <div class="row"><strong>{UNIT_STATUS[state.status].label}</strong><span class="muted">{state.correct} av {state.total} sitter</span></div>
+    <div class="row"><strong>{UNIT_STATUS[state.status].label}</strong><span class="muted">{state.correct} av {state.total} riktig sist</span></div>
     <div class="step-bars" aria-label="Fremgang per steg">
       {#each [1, 2, 3, 4] as step}{#if state.steps[step].total}
         <div class="step-bar"><span class="bar"><span style={`width:${100 * state.steps[step].correct / state.steps[step].total}%`}></span></span><small>{STEP_LABELS[step]}</small></div>
@@ -70,7 +70,7 @@
     {@const summary = progress.domains.get(domain.id)}
     <section class="card domain-card">
       <button class="domain-header" aria-expanded={openDomain === domain.id} onclick={() => openDomain = openDomain === domain.id ? '' : domain.id}>
-        <span><strong>{domain.title}</strong><small class="muted">{summary.started ? `${summary.complete} av ${summary.units} gjennomført · ${percent(summary)} % sitter` : `${summary.units} emner`}</small></span>
+        <span><strong>{domain.title}</strong><small class="muted">{summary.started ? `${summary.complete} av ${summary.units} gjennomført · ${percent(summary)} % riktig` : `${summary.units} emner`}</small></span>
         <span class="bar small"><span style={`width:${percent(summary)}%`}></span></span>
       </button>
       {#if openDomain === domain.id}

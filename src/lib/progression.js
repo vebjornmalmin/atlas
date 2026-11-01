@@ -6,9 +6,10 @@ import {normalizeAnswer} from './exercises.js';
 export const UNIT_STATUS = {
   new: {label: 'Ikke startet', rank: 0},
   started: {label: 'Påbegynt', rank: 1},
-  grounded: {label: 'Grunnlaget sitter', rank: 2},
-  complete: {label: 'Gjennomført', rank: 3},
-  secure: {label: 'Sitter godt', rank: 4}
+  practiced: {label: 'Lært – repeteres', rank: 2},
+  grounded: {label: 'Grunnlaget sitter', rank: 3},
+  complete: {label: 'Gjennomført', rank: 4},
+  secure: {label: 'Sitter godt', rank: 5}
 };
 export const SECURE_STABILITY_DAYS = 21;
 export const LESSON_PREFIX = 'lesson:';
@@ -50,7 +51,8 @@ export function unitProgress(unit, targetsById, evidence) {
   const grounded = base.length > 0 && base.every(r => r.attempted) && base.filter(r => r.correct).length / base.length >= 0.7 && spaced / base.length >= 0.5;
   const complete = grounded && rows.every(r => r.attempted) && correct / rows.length >= 0.8;
   const secure = complete && rows.every(r => r.correct && r.stability >= SECURE_STABILITY_DAYS);
-  const status = secure ? 'secure' : complete ? 'complete' : grounded ? 'grounded' : attempted ? 'started' : 'new';
+  const practiced = base.length > 0 && base.every(r => r.attempted) && base.filter(r => r.correct).length / base.length >= 0.7;
+  const status = secure ? 'secure' : complete ? 'complete' : grounded ? 'grounded' : practiced ? 'practiced' : attempted ? 'started' : 'new';
   const nextStep = [1, 2, 3, 4].find(step => steps[step].total && steps[step].correct < steps[step].total) || null;
   const lastActivity = rows.reduce((latest, r) => r.lastTimestamp > latest ? r.lastTimestamp : latest, '');
   return {unitId: unit.id, total: rows.length, attempted, correct, steps, status, nextStep, lastActivity,
@@ -83,7 +85,7 @@ export function recommendedUnits(curriculum, progress, {domainIds = []} = {}) {
   const wanted = domainIds.length ? new Set(domainIds) : null;
   const domainOrder = new Map((curriculum?.domains || []).map(d => [d.id, d.order]));
   const units = (curriculum?.units || []).filter(unit => !wanted || wanted.has(unit.domainId));
-  const started = units.filter(unit => ['started', 'grounded'].includes(progress.units.get(unit.id)?.status))
+  const started = units.filter(unit => ['started', 'practiced', 'grounded'].includes(progress.units.get(unit.id)?.status) && progress.units.get(unit.id).unseen.length)
     .sort((a, b) => progress.units.get(b.id).lastActivity.localeCompare(progress.units.get(a.id).lastActivity));
   const fresh = units.filter(unit => progress.units.get(unit.id)?.status === 'new' && progress.units.get(unit.id).ready)
     .sort((a, b) => a.tier - b.tier || domainOrder.get(a.domainId) - domainOrder.get(b.domainId) || a.order - b.order);

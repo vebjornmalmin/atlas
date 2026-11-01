@@ -31,6 +31,7 @@ Innholdet skrives i `knowledge-build/core/*.json` etter reglene i [curriculum-au
 |---|---|
 | Ikke startet | Ingen kort besvart. |
 | Påbegynt | Minst ett kort besvart. |
+| Lært – repeteres | Kortene i steg 1–2 er besvart, minst 70 % riktig, men ennå ikke hentet fram en senere dag. |
 | Grunnlaget sitter | Alle kort i steg 1–2 besvart, minst 70 % riktig uten hjelp sist, og minst halvparten husket riktig også ved en senere repetisjon. Låser opp emner som bygger på dette. |
 | Gjennomført | Grunnlaget sitter, alle kort er besvart og minst 80 % var riktige uten hjelp sist. |
 | Sitter godt | Gjennomført, og alle kort har FSRS-stabilitet på minst 21 dager. |

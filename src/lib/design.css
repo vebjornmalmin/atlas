@@ -150,3 +150,4 @@ button{min-height:46px;border:1px solid var(--line);background:var(--surface);co
 .unit-years small{font-weight:400;color:var(--muted)}
 #answer-heading:focus,#answer-heading:focus-visible{outline:none}
 .unit-row{border-radius:0}
+.unit-row[data-status="practiced"] .unit-dot{border-color:var(--accent);background:linear-gradient(90deg,var(--accent) 65%,transparent 65%)}
