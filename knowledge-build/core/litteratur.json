@@ -18,17 +18,17 @@
         "from": 800,
         "to": 1350
       },
-      "summary": "Eddadikt, skaldedikt og sagaer: diktningen fra vikingtid og middelalder som ble skrevet ned på Island og gir oss det meste av det vi vet om norrøn tro og de første norske kongene.",
+      "summary": "Hva eddadikt, skaldedikt og sagaer er, og hvorfor tekstene som ble skrevet ned på Island, er hovedkilden til norrøn tro og de første norske kongene.",
       "lesson": [
         "Norrøn litteratur er diktningen og fortellingene fra vikingtiden og den tidlige middelalderen i Norden. Den levde lenge muntlig, og dikterne hadde høy status. Runer ble brukt til innskrifter i stein og tre, men de lange tekstene ble først skrevet ned etter at det latinske alfabetet kom omkring år 1100, mest av islendinger på 1200- og 1300-tallet.",
-        "Versediktningen deles i to. Eddadiktene er anonyme dikt om guder og helter, samlet i Den eldre Edda. Det mest kjente er Håvamål, et visdomsdikt med leveregler og en kilde til moral og levesett i norrøn tid. Skaldediktene ble laget av navngitte skalder ved kongens eller høvdingens hird. De hyllet oppdragsgiveren og brukte kenninger, kunstferdige poetiske omskrivninger.",
-        "Sagaene er fortellinger i prosa: kongesagaer, ættesagaer (også kalt islendingesagaer) og fornaldar- og riddersagaer. Den mest kjente kongesagaen er Heimskringla, skrevet omkring 1220–1230 av den islandske høvdingen Snorre Sturlason. Snorre skrev også Den yngre Edda, en lærebok i skaldekunst med en oversikt over norrøn mytologi."
+        "Versediktningen deles i to. Eddadiktene er anonyme dikt om guder og helter, samlet i «Den eldre Edda». Det mest kjente er «Håvamål», et visdomsdikt med leveregler og en kilde til moral og levesett i norrøn tid. Skaldediktene ble laget av navngitte skalder ved kongens eller høvdingens hird. De hyllet oppdragsgiveren og brukte kenninger, kunstferdige poetiske omskrivninger.",
+        "Sagaene er fortellinger i prosa: kongesagaer, ættesagaer (også kalt islendingesagaer) og fornaldar- og riddersagaer. Den mest kjente kongesagaen er «Heimskringla», skrevet omkring 1220–1230 av den islandske høvdingen Snorre Sturlason. Snorre skrev også «Den yngre Edda», en lærebok i skaldekunst med en oversikt over norrøn mytologi."
       ],
       "keyPoints": [
         "Diktningen levde muntlig og ble skrevet ned, mest på Island, på 1200- og 1300-tallet.",
-        "Eddadikt er anonyme dikt om guder og helter; Håvamål gir leveregler.",
+        "Eddadikt er anonyme dikt om guder og helter, og «Håvamål» gir leveregler.",
         "Skaldedikt ble laget av navngitte skalder for å hylle konger og høvdinger.",
-        "Snorre Sturlason skrev kongesagaene i Heimskringla og Den yngre Edda."
+        "Snorre Sturlason skrev kongesagaene i «Heimskringla» og «Den yngre Edda»."
       ],
       "sources": [
         {
@@ -146,7 +146,7 @@
           "id": "lit-norron-litteratur-hvorfor-havamal",
           "step": 3,
           "type": "choice",
-          "prompt": "Hvorfor er Håvamål en viktig kilde for historikere?",
+          "prompt": "Hvorfor er «Håvamål» en viktig kilde for historikere?",
           "answer": "Det viser moral og levesett i norrøn tid",
           "distractors": [
             "Det forteller hvordan Norge ble samlet",
@@ -191,7 +191,7 @@
             "Det var islendinger som skrev ned tekstene",
             "Island og Norge hadde tett kontakt"
           ],
-          "explain": "Flere av de første heltediktene og deler av Håvamål ble trolig likevel til i Norge. Her ble det diktet i de gamle versemålene helt fram til 1300-tallet, slik runeinnskrifter i stein og tre viser."
+          "explain": "Flere av de første heltediktene og deler av «Håvamål» ble trolig likevel til i Norge. Her ble det diktet i de gamle versemålene helt fram til 1300-tallet, slik runeinnskrifter i stein og tre viser."
         },
         {
           "id": "lit-norron-litteratur-aar-snorre",
@@ -205,10 +205,10 @@
           "id": "lit-norron-litteratur-strofer",
           "step": 4,
           "type": "number",
-          "prompt": "Hvor mange strofer har Håvamål?",
+          "prompt": "Hvor mange strofer har «Håvamål»?",
           "answer": "164",
           "unit": "strofer",
-          "explain": "Diktet er satt sammen av flere deler, blant dem råd til den ukjente Loddfåvne og Odins runedikt, Runatal. De fleste strofene står i versemålet ljodahått."
+          "explain": "Diktet er satt sammen av flere deler, blant dem råd til den ukjente Loddfåvne og Odins runedikt, «Runatal». De fleste strofene står i versemålet ljodahått."
         },
         {
           "id": "lit-norron-litteratur-codex-regius",
@@ -221,7 +221,7 @@
             "I Oslo",
             "I Uppsala"
           ],
-          "explain": "Navnet betyr Kongeboken, fordi en islandsk biskop sendte håndskriftet til kong Frederik 3 i København. Boken ble laget og skrevet på Island i siste halvdel av 1200-tallet."
+          "explain": "Navnet betyr «Kongeboken», fordi en islandsk biskop sendte håndskriftet til kong Frederik 3. i København. Boken ble laget og skrevet på Island i siste halvdel av 1200-tallet."
         }
       ]
     },
@@ -234,17 +234,17 @@
         "from": 1830,
         "to": 1910
       },
-      "summary": "Forfatterne som etter 1814 ga Norge en egen litteratur: fra Wergelands romantikk og folkeeventyrene til realismens «fire store».",
+      "summary": "Hvordan forfatterne etter 1814 ga Norge en egen litteratur, fra Wergelands romantikk og folkeeventyrene til realismens «fire store».",
       "lesson": [
-        "Norsk litteratur sto svakt i årene rundt 1814. Omkring 1830 sto Henrik Wergeland fram, og med ham kom romantikken for alvor til Norge. Wergeland var en lidenskapelig lyriker og patriot som gjorde 17. mai til en virkelig nasjonaldag. Etter 1840 kom det nasjonale gjennombruddet: Peter Christen Asbjørnsen og Jørgen Moe ga ut Norske Folkeeventyr fra 1841, etter prinsippet om å fortelle slik folket fortalte.",
-        "Fra 1850-årene dominerte Henrik Ibsen og Bjørnstjerne Bjørnson. Bjørnson fornyet prosaen med bondefortellinger som Synnøve Solbakken (1857), skrev teksten til «Ja, vi elsker dette landet» og fikk Nobelprisen i litteratur i 1903. Camilla Collett, pioneren i norsk kvinnebevegelse, ga ut Amtmandens Døttre (1854–1855), regnet som Norges første samfunnskritiske roman.",
-        "Bjørnson, Ibsen, Alexander Kielland og Jonas Lie kalles «de fire store». De skrev på dansk, ga ut bøkene på Gyldendal i København og forbindes med realistisk og samfunnskritisk litteratur i siste del av 1800-tallet. Kielland skrev sosiale romaner som Garman & Worse (1880), og Lies hovedverk er Familien paa Gilje (1883). Betegnelsen er omstridt fordi den utelater blant andre Amalie Skram og Arne Garborg."
+        "Norsk litteratur sto svakt i årene rundt 1814. Omkring 1830 sto Henrik Wergeland fram, og med ham kom romantikken for alvor til Norge. Wergeland var en lidenskapelig lyriker og patriot som gjorde 17. mai til en virkelig nasjonaldag. Etter 1840 kom det nasjonale gjennombruddet: Peter Christen Asbjørnsen og Jørgen Moe ga ut «Norske Folkeeventyr» fra 1841, etter prinsippet om å fortelle slik folket fortalte.",
+        "Fra 1850-årene dominerte Henrik Ibsen og Bjørnstjerne Bjørnson. Bjørnson fornyet prosaen med bondefortellinger som «Synnøve Solbakken» (1857), skrev teksten til «Ja, vi elsker dette landet» og fikk nobelprisen i litteratur i 1903. Camilla Collett, pioneren i norsk kvinnebevegelse, ga ut «Amtmandens Døttre» (1854–1855), regnet som Norges første samfunnskritiske roman.",
+        "Bjørnson, Ibsen, Alexander Kielland og Jonas Lie kalles «de fire store». De skrev på dansk, ga ut bøkene på Gyldendal i København og forbindes med realistisk og samfunnskritisk litteratur i siste del av 1800-tallet. Kielland skrev sosiale romaner som «Garman & Worse» (1880), og Lies hovedverk er «Familien paa Gilje» (1883). Betegnelsen er omstridt fordi den utelater blant andre Amalie Skram og Arne Garborg."
       ],
       "keyPoints": [
         "Wergeland brakte romantikken til Norge og gjorde 17. mai til nasjonaldag.",
         "Asbjørnsen og Moes folkeeventyr ga litteraturen en norsk språktone.",
-        "Colletts Amtmandens Døttre regnes som Norges første samfunnskritiske roman.",
-        "Bjørnson skrev «Ja, vi elsker» og fikk Nobelprisen i 1903.",
+        "Colletts «Amtmandens Døttre» regnes som Norges første samfunnskritiske roman.",
+        "Bjørnson skrev «Ja, vi elsker» og fikk nobelprisen i 1903.",
         "«De fire store» er Bjørnson, Ibsen, Kielland og Lie."
       ],
       "sources": [
@@ -283,14 +283,14 @@
           "id": "lit-norske-klassikere-collett",
           "step": 1,
           "type": "choice",
-          "prompt": "Hvorfor regnes Camilla Colletts Amtmandens Døttre som en milepæl?",
+          "prompt": "Hvorfor regnes Camilla Colletts «Amtmandens Døttre» som en milepæl?",
           "answer": "Den var Norges første samfunnskritiske roman",
           "distractors": [
             "Den var den første boken på landsmål",
             "Den var Norges første kriminalroman",
-            "Den var første norske bok på engelsk"
+            "Den var den første norske boken på engelsk"
           ],
-          "explain": "Romanen regnes som det første eksemplet på realistisk tendensdiktning i Norge. Kvinnene begynte nå å gjøre seg gjeldende: Mellom 1850 og 1870 debuterte 13 kvinnelige forfattere."
+          "explain": "Romanen regnes som det første eksempelet på realistisk tendensdiktning i Norge. Kvinnene begynte nå å gjøre seg gjeldende: Mellom 1850 og 1870 debuterte 13 kvinnelige forfattere."
         },
         {
           "id": "lit-norske-klassikere-eventyrprinsipp",
@@ -303,7 +303,7 @@
             "Å gjendikte eventyrene på rim",
             "Å gjøre eventyrene om til skuespill"
           ],
-          "explain": "Norske Folkeeventyr fikk internasjonal anerkjennelse. Theodor Kittelsens og Erik Werenskiolds tegninger av Askeladden og trollene har siden formet bildet av eventyrene."
+          "explain": "«Norske Folkeeventyr» fikk internasjonal anerkjennelse. Theodor Kittelsens og Erik Werenskiolds tegninger av Askeladden og trollene har siden formet bildet av eventyrene."
         },
         {
           "id": "lit-norske-klassikere-ja-vi-elsker",
@@ -347,14 +347,14 @@
           "id": "lit-norske-klassikere-kielland",
           "step": 2,
           "type": "text",
-          "prompt": "Hvem av «de fire store» skrev Garman & Worse (1880)?",
+          "prompt": "Hvem av «de fire store» skrev «Garman & Worse» (1880)?",
           "answer": "Alexander Kielland",
           "accept": [
             "Kielland",
             "Alexander L. Kielland",
             "Alexander Lange Kielland"
           ],
-          "explain": "I Kiellands sosiale tendensromaner, som også Skipper Worse (1882), er familien hovedarenaen. 1880-årene ble den realistiske samtidsromanens storhetstid i Norge."
+          "explain": "I Kiellands sosiale tendensromaner, som også «Skipper Worse» (1882), er familien hovedarenaen. 1880-årene ble den realistiske samtidsromanens storhetstid i Norge."
         },
         {
           "id": "lit-norske-klassikere-forfatter-verk",
@@ -411,7 +411,7 @@
           "id": "lit-norske-klassikere-aar-nobel",
           "step": 4,
           "type": "year",
-          "prompt": "Hvilket år fikk Bjørnstjerne Bjørnson Nobelprisen i litteratur?",
+          "prompt": "Hvilket år fikk Bjørnstjerne Bjørnson nobelprisen i litteratur?",
           "answer": "1903",
           "explain": "Bjørnson var kjent i hele Europa og talte minoriteters sak, blant annet finnenes og slovakenes. Han var både venn og rival av Henrik Ibsen."
         },
@@ -432,7 +432,7 @@
           "id": "lit-norske-klassikere-aar-eventyr",
           "step": 4,
           "type": "year",
-          "prompt": "Hvilket år begynte Norske Folkeeventyr å komme ut?",
+          "prompt": "Hvilket år begynte «Norske Folkeeventyr» å komme ut?",
           "answer": "1841",
           "explain": "Eventyrene kom i hefter fra desember 1841, og den store utgaven kom i 1851. Senere utgaver ble sterkt fornorsket i språket, slik samlerne ønsket."
         }
@@ -449,15 +449,15 @@
         "from": 1850,
         "to": 1906
       },
-      "summary": "Norges mest betydningsfulle dramatiker, som gjorde vanlige menneskers liv og løgner til moderne tragedier.",
+      "summary": "Hvordan Henrik Ibsen gjorde vanlige menneskers liv og løgner til moderne tragedier, og hvorfor han regnes som Norges mest betydningsfulle dramatiker.",
       "lesson": [
-        "Henrik Ibsen (1828–1906) er den sentrale forfatteren i norsk litteraturhistorie og en av verdenslitteraturens mest innflytelsesrike dramatikere. Han lærte teaterhåndverket ved Det norske Theater i Bergen. Senere bodde han 27 år i Italia og Tyskland, og der skrev han de fleste hovedverkene, blant dem versdramaene Brand (1866) og Peer Gynt (1867), om eventyreren som bare reddes av Solveig.",
-        "Med Et dukkehjem (1879) fikk Ibsen sitt store internasjonale gjennombrudd. Nora tar et oppgjør med ektemannen og forlater ham og barna, og slutten er et av verdenslitteraturens mest kjente kjønnspolitiske øyeblikk. Gengangere (1881) tok opp utroskap, kjønnssykdom og dobbeltmoral og ble så kontroversielt at det ble nektet oppført på skandinaviske og tyske scener. I En folkefiende (1882) står doktor Stockmann alene mot flertallet.",
-        "Ibsen fornyet tragedien: Vanlige mennesker fikk de klassiske heltenes rolle i realistiske prosastykker om borgerlige hjem. Mange stykker handler om sannhetssøkere som angriper løgn, ofte med tragisk utfall. I Vildanden (1884) vil Gregers Werle ta «livsløgnen» fra vanlige mennesker, og Hedda Gabler (1890) er fanget i borgerlige konvensjoner. Stykkene spilles stadig på teatre over hele verden."
+        "Henrik Ibsen (1828–1906) er den sentrale forfatteren i norsk litteraturhistorie og en av verdenslitteraturens mest innflytelsesrike dramatikere. Han lærte teaterhåndverket ved Det Norske Theater i Bergen. Senere bodde han 27 år i Italia og Tyskland, og der skrev han de fleste hovedverkene, blant dem versdramaene «Brand» (1866) og «Peer Gynt» (1867), om eventyreren som bare reddes av Solveig.",
+        "Med «Et dukkehjem» (1879) fikk Ibsen sitt store internasjonale gjennombrudd. Nora tar et oppgjør med ektemannen og forlater ham og barna, og slutten er et av verdenslitteraturens mest kjente kjønnspolitiske øyeblikk. «Gengangere» (1881) tok opp utroskap, kjønnssykdom og dobbeltmoral og ble så kontroversielt at det ble nektet oppført på skandinaviske og tyske scener. I «En folkefiende» (1882) står doktor Stockmann alene mot flertallet.",
+        "Ibsen fornyet tragedien: Vanlige mennesker fikk de klassiske heltenes rolle i realistiske prosastykker om borgerlige hjem. Mange stykker handler om sannhetssøkere som angriper løgn, ofte med tragisk utfall. I «Vildanden» (1884) vil Gregers Werle ta «livsløgnen» fra vanlige mennesker, og i «Hedda Gabler» (1890) er hovedpersonen fanget i borgerlige konvensjoner. Stykkene spilles stadig på teatre over hele verden."
       ],
       "keyPoints": [
         "Ibsen (1828–1906) er en av verdenslitteraturens mest innflytelsesrike dramatikere.",
-        "Et dukkehjem (1879) ble hans store internasjonale gjennombrudd.",
+        "«Et dukkehjem» (1879) ble hans store internasjonale gjennombrudd.",
         "Samtidsdramaene avslører løgn og dobbeltmoral i det borgerlige livet.",
         "De fleste hovedverkene skrev han i de 27 årene i Italia og Tyskland."
       ],
@@ -523,7 +523,7 @@
           "id": "lit-ibsen-nora",
           "step": 2,
           "type": "text",
-          "prompt": "Hva heter hovedpersonen i Et dukkehjem, som forlater mann og barn?",
+          "prompt": "Hva heter hovedpersonen i «Et dukkehjem», som forlater mann og barn?",
           "answer": "Nora",
           "accept": [
             "Nora Helmer"
@@ -591,13 +591,13 @@
               "year": 1890
             }
           ],
-          "explain": "Etter versdramaene på 1860-tallet skrev Ibsen realistiske samtidsdramaer i prosa. Med Vildanden, Rosmersholm og Fruen fra havet fikk dramatikken et sterkere symbolsk preg."
+          "explain": "Etter versdramaene på 1860-tallet skrev Ibsen realistiske samtidsdramaer i prosa. Med «Vildanden», «Rosmersholm» og «Fruen fra havet» fikk dramatikken et sterkere symbolsk preg."
         },
         {
           "id": "lit-ibsen-gengangere",
           "step": 3,
           "type": "choice",
-          "prompt": "Hvorfor ble Gengangere så kontroversielt da det kom ut?",
+          "prompt": "Hvorfor ble «Gengangere» så kontroversielt da det kom ut?",
           "answer": "Det tok opp utroskap, kjønnssykdom og dobbeltmoral",
           "distractors": [
             "Det angrep kongen og unionen med Sverige",
@@ -610,14 +610,14 @@
           "id": "lit-ibsen-forklar-vildanden",
           "step": 3,
           "type": "explain",
-          "prompt": "Forklar hvordan Ibsen i Vildanden setter sannhetskravet på prøve.",
+          "prompt": "Forklar hvordan Ibsen i «Vildanden» setter sannhetskravet på prøve.",
           "answer": "Gregers Werle tror han kan ta livsløgnen fra familien Ekdal og sette dem fri. Men Hjalmar Ekdal tåler ikke å få illusjonene sine avslørt, og avsløringen får skjebnesvangre følger. Sannhetssøkeren gjør mer skade enn nytte.",
           "checklist": [
             "Gregers vil avsløre livsløgnen",
             "Hjalmar tåler ikke sannheten",
             "Sannhetskravet får tragiske følger"
           ],
-          "explain": "Mange av Ibsens stykker handler om sannhetssøkere som angriper overflatisk løgn, som doktor Stockmann. I Vildanden blir sannhetssøkeren selv problemet."
+          "explain": "Mange av Ibsens stykker handler om sannhetssøkere som angriper overflatisk løgn, som doktor Stockmann. I «Vildanden» blir sannhetssøkeren selv problemet."
         },
         {
           "id": "lit-ibsen-aar-dod",
@@ -641,13 +641,13 @@
           "step": 4,
           "type": "choice",
           "prompt": "Hvilket teater ga Ibsen erfaring med scenografi, kostymer og instruksjon på 1850-tallet?",
-          "answer": "Det norske Theater i Bergen",
+          "answer": "Det Norske Theater i Bergen",
           "distractors": [
             "Nationaltheatret i Kristiania",
             "Dramaten i Stockholm",
             "Burgtheater i Wien"
           ],
-          "explain": "Teateret var grunnlagt av Ole Bull, som tilbød Ibsen arbeid der høsten 1851. Gildet på Solhaug (1856) ble Ibsens første teatersuksess."
+          "explain": "Teateret var grunnlagt av Ole Bull, som tilbød Ibsen arbeid der høsten 1851. «Gildet på Solhaug» (1856) ble Ibsens første teatersuksess."
         }
       ]
     },
@@ -662,16 +662,16 @@
         "from": 1890,
         "to": 1970
       },
-      "summary": "To nobelprisvinnere og deres samtid: fra Hamsuns modernistiske gjennombrudd og Undsets middelalder til Vesaas' og Hauges fornyelse etter krigen.",
+      "summary": "Hvordan Hamsun og Undset vant nobelprisen, og hvordan Duun, Vesaas og Hauge fornyet norsk litteratur før og etter krigen.",
       "lesson": [
-        "Knut Hamsun brøt med 1880-årenes samfunnsdiktning. Romanen Sult (1890) skildrer et menneskes sammensatte sjeleliv og regnes som et pionerarbeid i europeisk modernisme. For Markens grøde (1917), om nybyggeren Isak Sellanrå, fikk Hamsun Nobelprisen i litteratur i 1920. Han støttet nazistene og den tyske okkupasjonen. Etter krigen slapp han tiltale, men ble i 1948 dømt til å betale erstatning til staten.",
-        "Sigrid Undset (født 1882) er Norges internasjonalt mest kjente kvinnelige forfatter. Hovedverket er trilogien Kristin Lavransdatter (1920–1922), om en kvinne som vokser opp i Gudbrandsdalen på 1300-tallet og trosser farens valg av ektemann. Undset fikk Nobelprisen i 1928 for skildringene av middelalderen i Norden. Hun advarte tidlig mot nazismen og måtte flykte til USA under krigen.",
-        "Etter 1900 vendte romanen tilbake til realismen. Et hovedtema i nyrealismen var konflikten mellom gammel bondekultur og ny tid, som i Markens grøde. Olav Duun skrev om Namdalen i seksbindsverket Juvikfolket (1918–1923). Etter krigen ble Tarjei Vesaas en pioner for modernistisk prosa, blant annet med Is-slottet (1963) om venninnene Siss og Unn. Olav H. Hauge utviklet seg fra tradisjonalist til en av etterkrigslyrikkens viktigste fornyere."
+        "Knut Hamsun brøt med 1880-årenes samfunnsdiktning. Romanen «Sult» (1890) skildrer et menneskes sammensatte sjeleliv og regnes som et pionerarbeid i europeisk modernisme. For «Markens grøde» (1917), om nybyggeren Isak Sellanrå, fikk Hamsun nobelprisen i litteratur i 1920. Han støttet nazistene og den tyske okkupasjonen. Etter krigen slapp han tiltale, men ble i 1948 dømt til å betale erstatning til staten.",
+        "Sigrid Undset (født 1882) er Norges internasjonalt mest kjente kvinnelige forfatter. Hovedverket er trilogien «Kristin Lavransdatter» (1920–1922), om en kvinne som vokser opp i Gudbrandsdalen på 1300-tallet og trosser farens valg av ektemann. Undset fikk nobelprisen i 1928 for skildringene av middelalderen i Norden. Hun advarte tidlig mot nazismen og måtte flykte til USA under krigen.",
+        "Etter 1900 vendte romanen tilbake til realismen. Et hovedtema i nyrealismen var konflikten mellom gammel bondekultur og ny tid, som i «Markens grøde». Olav Duun skrev om Namdalen i seksbindsverket «Juvikfolket» (1918–1923). Etter krigen ble Tarjei Vesaas en pioner for modernistisk prosa, blant annet med «Is-slottet» (1963) om venninnene Siss og Unn. Olav H. Hauge utviklet seg fra tradisjonalist til en av etterkrigslyrikkens viktigste fornyere."
       ],
       "keyPoints": [
-        "Hamsuns Sult (1890) regnes som et pionerverk i europeisk modernisme.",
-        "Hamsun fikk Nobelprisen i 1920 for Markens grøde, men støttet nazistene under krigen.",
-        "Undset fikk Nobelprisen i 1928; hovedverket er Kristin Lavransdatter.",
+        "Hamsuns «Sult» (1890) regnes som et pionerverk i europeisk modernisme.",
+        "Hamsun fikk nobelprisen i 1920 for «Markens grøde», men støttet nazistene under krigen.",
+        "Undset fikk nobelprisen i 1928, og hovedverket er «Kristin Lavransdatter».",
         "Nyrealismen etter 1900 skildret konflikten mellom gammel bondekultur og ny tid.",
         "Vesaas og Hauge fornyet prosa og lyrikk etter andre verdenskrig."
       ],
@@ -698,7 +698,7 @@
           "id": "lit-1900-tallet-norsk-sult",
           "step": 1,
           "type": "choice",
-          "prompt": "Hvorfor regnes Hamsuns Sult (1890) som et vendepunkt?",
+          "prompt": "Hvorfor regnes Hamsuns «Sult» (1890) som et vendepunkt?",
           "answer": "Den skildret sjelelivet innenfra og pekte mot modernismen",
           "distractors": [
             "Den var den første norske romanen om bondelivet",
@@ -711,14 +711,14 @@
           "id": "lit-1900-tallet-norsk-kristin-tid",
           "step": 1,
           "type": "choice",
-          "prompt": "Hvilken tid skildrer Sigrid Undset i Kristin Lavransdatter?",
+          "prompt": "Hvilken tid skildrer Sigrid Undset i «Kristin Lavransdatter»?",
           "answer": "Middelalderen, på 1300-tallet",
           "distractors": [
             "Vikingtiden, på 900-tallet",
             "Dansketiden, på 1700-tallet",
             "Okkupasjonen, på 1940-tallet"
           ],
-          "explain": "Kristin vokser opp på en gård i Gudbrandsdalen og dør av pesten i et kloster utenfor Trondheim i 1349. Første bind, Kransen, er blitt lest som Norges fineste kjærlighetsroman."
+          "explain": "Kristin vokser opp på en gård i Gudbrandsdalen og dør av pesten i et kloster utenfor Trondheim i 1349. Første bind, «Kransen», er blitt lest som Norges fineste kjærlighetsroman."
         },
         {
           "id": "lit-1900-tallet-norsk-hamsun-krig",
@@ -727,7 +727,7 @@
           "prompt": "Hva gjør Knut Hamsun til en omstridt forfatter?",
           "answer": "Han støttet nazistene og den tyske okkupasjonen",
           "distractors": [
-            "Han nektet å ta imot Nobelprisen",
+            "Han nektet å ta imot nobelprisen",
             "Han forlot Norge for godt i 1905",
             "Han forbød oversettelser av bøkene"
           ],
@@ -737,7 +737,7 @@
           "id": "lit-1900-tallet-norsk-markens-grode",
           "step": 2,
           "type": "text",
-          "prompt": "Hvilken roman fra 1917, om nybyggeren Isak Sellanrå, ga Hamsun Nobelprisen?",
+          "prompt": "Hvilken roman fra 1917, om nybyggeren Isak Sellanrå, ga Hamsun nobelprisen?",
           "answer": "Markens grøde",
           "accept": [
             "Markens grode",
@@ -754,25 +754,25 @@
           "accept": [
             "Kristin"
           ],
-          "explain": "Gjennombruddsromanen Jenny (1911) hadde skapt heftig debatt. Den historiske romanen om Kristin ble derimot en internasjonal bestselger."
+          "explain": "Gjennombruddsromanen «Jenny» (1911) hadde skapt heftig debatt. Den historiske romanen om Kristin ble derimot en internasjonal bestselger."
         },
         {
           "id": "lit-1900-tallet-norsk-vesaas",
           "step": 2,
           "type": "text",
-          "prompt": "Hvem skrev Is-slottet (1963), om venninnene Siss og Unn?",
+          "prompt": "Hvem skrev «Is-slottet» (1963), om venninnene Siss og Unn?",
           "answer": "Tarjei Vesaas",
           "accept": [
             "Vesaas",
             "Tarjei Vesås"
           ],
-          "explain": "Vesaas er kjent for å skildre sinn og følelser hos barn og unge. For Is-slottet ble han i 1964 den første norske forfatteren som fikk Nordisk råds litteraturpris."
+          "explain": "Vesaas er kjent for å skildre sinn og følelser hos barn og unge. For «Is-slottet» ble han i 1964 den første norske forfatteren som fikk Nordisk råds litteraturpris."
         },
         {
           "id": "lit-1900-tallet-norsk-duun",
           "step": 2,
           "type": "text",
-          "prompt": "Hvilken mellomkrigsforfatter skrev seksbindsverket Juvikfolket?",
+          "prompt": "Hvilken mellomkrigsforfatter skrev seksbindsverket «Juvikfolket»?",
           "answer": "Olav Duun",
           "accept": [
             "Duun"
@@ -802,29 +802,29 @@
               "right": "Is-slottet"
             }
           ],
-          "explain": "Nyrealistene kartla hver sin del av landet; Duun skildret Namdalen. Undset skrev både om middelalderen og om kvinner i samtidens Kristiania. Vesaas lot senere symbolikk og realisme gå hånd i hånd."
+          "explain": "Nyrealistene kartla hver sin del av landet, og Duun skildret Namdalen. Undset skrev både om middelalderen og om kvinner i samtidens Kristiania. Vesaas lot senere symbolikk og realisme gå hånd i hånd."
         },
         {
           "id": "lit-1900-tallet-norsk-nyrealisme",
           "step": 3,
           "type": "choice",
-          "prompt": "Hvilket tema står sentralt i nyrealismen etter 1900, blant annet i Markens grøde?",
+          "prompt": "Hvilket tema står sentralt i nyrealismen etter 1900, blant annet i «Markens grøde»?",
           "answer": "Konflikten mellom gammel bondekultur og ny tid",
           "distractors": [
             "Livet ved kongens hoff i middelalderen",
             "Kampen for en egen norsk grunnlov",
             "Reiser til fremmede land i Asia"
           ],
-          "explain": "Markens grøde følger nybyggeren som bygger gården sin fra grunnen av. Men moderniseringen truer, og Hamsun tok aldri helt entydig stilling for jordbrukssamfunnet."
+          "explain": "«Markens grøde» følger nybyggeren som bygger gården sin fra grunnen av. Men moderniseringen truer, og Hamsun tok aldri helt entydig stilling for jordbrukssamfunnet."
         },
         {
           "id": "lit-1900-tallet-norsk-forklar-hamsun",
           "step": 3,
           "type": "explain",
           "prompt": "Forklar hvorfor Hamsun både er en av de mest leste og en av de mest omstridte norske forfatterne.",
-          "answer": "Hamsun fornyet romanen med Sult og fikk Nobelprisen for Markens grøde, og bøkene hans leses fortsatt mye. Samtidig støttet han Quisling, Hitler og okkupasjonen åpent, og etter krigen ble han dømt til å betale erstatning til staten. Debatten handler om forholdet mellom verket og holdningene.",
+          "answer": "Hamsun fornyet romanen med «Sult» og fikk nobelprisen for «Markens grøde», og bøkene hans leses fortsatt mye. Samtidig støttet han Quisling, Hitler og okkupasjonen åpent, og etter krigen ble han dømt til å betale erstatning til staten. Debatten handler om forholdet mellom verket og holdningene.",
           "checklist": [
-            "Nyskapende romaner og Nobelpris",
+            "Nyskapende romaner og nobelpris",
             "Åpen støtte til nazismen og okkupasjonen",
             "Debatt om forholdet mellom verk og politikk"
           ],
@@ -834,7 +834,7 @@
           "id": "lit-1900-tallet-norsk-aar-hamsun",
           "step": 4,
           "type": "year",
-          "prompt": "Hvilket år fikk Knut Hamsun Nobelprisen i litteratur?",
+          "prompt": "Hvilket år fikk Knut Hamsun nobelprisen i litteratur?",
           "answer": "1920",
           "explain": "Hamsun het opprinnelig Knut Pedersen og vokste opp på gården Hamsund på Hamarøy i Nordland."
         },
@@ -842,7 +842,7 @@
           "id": "lit-1900-tallet-norsk-aar-undset",
           "step": 4,
           "type": "year",
-          "prompt": "Hvilket år fikk Sigrid Undset Nobelprisen i litteratur?",
+          "prompt": "Hvilket år fikk Sigrid Undset nobelprisen i litteratur?",
           "answer": "1928",
           "explain": "Undset ble født i Kalundborg i Danmark, men vokste opp i Kristiania. Hun konverterte til katolisismen, og troen preger flere av de senere bøkene."
         },
@@ -872,16 +872,16 @@
         "from": 1965,
         "to": 2023
       },
-      "summary": "Norsk litteratur fra 1960-årene til i dag: politisk realisme, autofiksjon, krimbølgen og Jon Fosses nobelpris.",
+      "summary": "Hvordan norsk litteratur har utviklet seg fra 1960-årene til i dag, fra politisk realisme og krimbølgen til autofiksjon og Jon Fosses nobelpris.",
       "lesson": [
         "Fra 1960-årene ble norsk litteratur først eksperimenterende og så politisk. Dag Solstad etablerte seg i 1970-årene som sin generasjons sentrale romanforfatter. Fra 1980-årene fikk «den gode fortelling» en renessanse hos blant andre Herbjørg Wassmo og Lars Saabye Christensen. Krimromanen ble «stueren», og etter 1990 utgjør krim- og spenningslitteratur nær halvparten av skjønnlitteraturen som selges.",
-        "Jon Fosse debuterte i 1983 med romanen Raudt, svart og ble på 1990-tallet en av landets viktigste dramatikere og romanforfattere. Han skriver på nynorsk, med gjentakelser, musikalitet og minimalisme. Han er blant de mest spilte levende dramatikerne i verden. I 2023 fikk han Nobelprisen i litteratur «for hans nyskapande dramatikk og prosa som gjev stemme til det useielege».",
-        "Etter 2000 ble selvbiografisk roman og autofiksjon vanlig. Hovedeksempelet er Karl Ove Knausgårds seksbindsverk Min kamp. Norsk litteratur har også nådd et verdenspublikum gjennom Jostein Gaarders Sofies verden (1991), en roman om filosofiens historie som i 1995 solgte mer enn noen annen bok i verden, og Jo Nesbøs kriminalromaner om etterforskeren Harry Hole, oversatt til over 40 språk."
+        "Jon Fosse debuterte i 1983 med romanen «Raudt, svart» og ble på 1990-tallet en av landets viktigste dramatikere og romanforfattere. Han skriver på nynorsk, med gjentakelser, musikalitet og minimalisme. Han er blant de mest spilte levende dramatikerne i verden. I 2023 fikk han nobelprisen i litteratur «for hans nyskapande dramatikk og prosa som gjev stemme til det useielege».",
+        "Etter 2000 ble selvbiografisk roman og autofiksjon vanlig. Hovedeksempelet er Karl Ove Knausgårds seksbindsverk «Min kamp». Norsk litteratur har også nådd et verdenspublikum. Jostein Gaarders «Sofies verden» (1991), en roman om filosofiens historie, var i 1995 verdens mest solgte bok. Jo Nesbøs kriminalromaner om etterforskeren Harry Hole er oversatt til over 40 språk."
       ],
       "keyPoints": [
-        "Jon Fosse skriver på nynorsk og fikk Nobelprisen i litteratur i 2023.",
-        "Knausgårds Min kamp er hovedeksempelet på autofiksjon etter 2000.",
-        "Sofies verden (1991) gjorde Jostein Gaarder verdenskjent.",
+        "Jon Fosse skriver på nynorsk og fikk nobelprisen i litteratur i 2023.",
+        "Knausgårds «Min kamp» er hovedeksempelet på autofiksjon etter 2000.",
+        "«Sofies verden» (1991) gjorde Jostein Gaarder verdenskjent.",
         "Krim er den store salgssjangeren, og Jo Nesbø når et stort publikum i mange land."
       ],
       "sources": [
@@ -907,7 +907,7 @@
           "id": "lit-moderne-norsk-fosse-nobel",
           "step": 1,
           "type": "choice",
-          "prompt": "Hvilken norsk forfatter fikk Nobelprisen i litteratur i 2023?",
+          "prompt": "Hvilken norsk forfatter fikk nobelprisen i litteratur i 2023?",
           "answer": "Jon Fosse",
           "distractors": [
             "Karl Ove Knausgård",
@@ -967,7 +967,7 @@
           "accept": [
             "Hole"
           ],
-          "explain": "Harry Hole ble introdusert i Flaggermusmannen (1997), som foregår i Sydney. Nesbø er også musiker og har skrevet barnebøkene om Doktor Proktor."
+          "explain": "Harry Hole ble introdusert i «Flaggermusmannen» (1997), som foregår i Sydney. Nesbø er også musiker og har skrevet barnebøkene om Doktor Proktor."
         },
         {
           "id": "lit-moderne-norsk-min-kamp",
@@ -1013,17 +1013,17 @@
             "Han er født i samme by som Ibsen",
             "Han har bodd mesteparten av livet i Italia"
           ],
-          "explain": "Det første stykket hans, Nokon kjem til å komme (1992), var inspirert av Samuel Becketts Mens vi venter på Godot. Skuespillene er oversatt til mer enn 50 språk."
+          "explain": "Det første stykket hans, «Nokon kjem til å komme» (1992), var inspirert av Samuel Becketts «Mens vi venter på Godot». Skuespillene er oversatt til mer enn 50 språk."
         },
         {
           "id": "lit-moderne-norsk-forklar-ut",
           "step": 3,
           "type": "explain",
           "prompt": "Forklar hvordan norsk samtidslitteratur har nådd et stort publikum utenfor Norge.",
-          "answer": "Fosses skuespill spilles over hele verden, Sofies verden ble en global bestselger, Min kamp vakte internasjonal oppmerksomhet, og Nesbøs krim er oversatt til over 40 språk. Flere sentrale forfattere er også oversatt til engelsk, noe som lenge var vanskelig.",
+          "answer": "Fosses skuespill spilles over hele verden, «Sofies verden» ble en global bestselger, «Min kamp» vakte internasjonal oppmerksomhet, og Nesbøs krim er oversatt til over 40 språk. Flere sentrale forfattere er også oversatt til engelsk, noe som lenge var vanskelig.",
           "checklist": [
             "Fosse som internasjonalt spilt dramatiker",
-            "Bestselgere som Sofies verden og Nesbøs krim",
+            "Bestselgere som «Sofies verden» og Nesbøs krim",
             "Flere oversettelser, også til engelsk"
           ],
           "explain": "Interessen i utlandet gjelder mest samtidslitteraturen. Særlig krim har nådd store salgstall i land som Tyskland og Frankrike."
@@ -1032,7 +1032,7 @@
           "id": "lit-moderne-norsk-aar-fosse",
           "step": 4,
           "type": "year",
-          "prompt": "Hvilket år debuterte Jon Fosse med romanen Raudt, svart?",
+          "prompt": "Hvilket år debuterte Jon Fosse med romanen «Raudt, svart»?",
           "answer": "1983",
           "explain": "Fosse regnet seg ikke som teatermann i begynnelsen. Han oppdaget talentet for dramatikk etter et kurs ved Skrivekunstakademiet i Hordaland."
         },
@@ -1040,7 +1040,7 @@
           "id": "lit-moderne-norsk-aar-sofie",
           "step": 4,
           "type": "year",
-          "prompt": "Hvilket år kom Sofies verden ut?",
+          "prompt": "Hvilket år kom «Sofies verden» ut?",
           "answer": "1991",
           "explain": "Boken fikk Sonja Hagemanns barnebokpris samme år. Gaarder har vært forfatter på heltid siden 1991."
         },
@@ -1055,7 +1055,7 @@
             "Jostein Gaarder",
             "Jon Fosse"
           ],
-          "explain": "Solstad var med på å utvikle den episke modernismen på slutten av 1960-tallet. I 1970-årene skrev han politiske romaner som 25. septemberplassen (1974), da han hadde tilknytning til AKP."
+          "explain": "Solstad var med på å utvikle den episke modernismen på slutten av 1960-tallet. I 1970-årene skrev han politiske romaner som «25. septemberplassen» (1974), da han hadde tilknytning til AKP."
         }
       ]
     },
@@ -1064,18 +1064,18 @@
       "title": "Verdenslitteraturens klassikere",
       "tier": 1,
       "prerequisites": [],
-      "summary": "Fem verk som har formet europeisk litteratur, fra Homers epos til Goethes Faust.",
+      "summary": "Hvilke fem verk som har formet europeisk litteratur, fra Homers epos til Goethes «Faust», og hva de handler om.",
       "lesson": [
-        "De greske eposene Iliaden og Odysseen tilskrives Homer og ble trolig til omkring 700 før vår tidsregning. Iliaden skildrer konflikten mellom helten Akilles og hærføreren Agamemnon under krigen om Troja, og Odysseen følger Odyssevs' hjemferd etter krigen. Om begge eposene har samme dikter, og hvem Homer var, er usikkert.",
-        "I Den guddommelige komedie, påbegynt omkring 1307, skildrer italieneren Dante Alighieri en reise gjennom Helvete, Skjærsilden og Paradiset. Den romerske dikteren Vergil fører ham gjennom helvete og skjærsild, og Beatrice leder ham videre mot Gud. Dante skrev på tidens talespråk, ikke latin. Engelskmannen William Shakespeare regnes som verdenslitteraturens største dramatiker etter antikken, med tragedier som Hamlet og Romeo og Julie.",
-        "Spanjolen Miguel de Cervantes ga ut Don Quijote i to deler, 1605 og 1615, om en adelsmann som har lest så mange ridderromaner at han ikke skiller dikt fra virkelighet. Boken regnes som den moderne romanens viktigste forløper. Tyskeren Johann Wolfgang von Goethe arbeidet til sin død med Faust, om en lærd mann som selger sjelen sin til djevelen for å vinne erkjennelse."
+        "De greske eposene «Iliaden» og «Odysseen» tilskrives Homer og ble trolig til omkring 700 f.Kr.. «Iliaden» skildrer konflikten mellom helten Akilles og hærføreren Agamemnon under krigen om Troja, og «Odysseen» følger Odyssevs' hjemferd etter krigen. Om begge eposene har samme dikter, og hvem Homer var, er usikkert.",
+        "I «Den guddommelige komedie», påbegynt omkring 1307, skildrer italieneren Dante Alighieri en reise gjennom Helvete, Skjærsilden og Paradiset. Den romerske dikteren Vergil fører ham gjennom helvete og skjærsild, og Beatrice leder ham videre mot Gud. Dante skrev på tidens talespråk, ikke latin. Engelskmannen William Shakespeare regnes som verdenslitteraturens største dramatiker etter antikken, med tragedier som «Hamlet» og «Romeo og Julie».",
+        "Spanjolen Miguel de Cervantes ga ut «Don Quijote» i to deler, 1605 og 1615, om en adelsmann som har lest så mange ridderromaner at han ikke skiller dikt fra virkelighet. Boken regnes som den moderne romanens viktigste forløper. Tyskeren Johann Wolfgang von Goethe arbeidet til sin død med «Faust», om en lærd mann som selger sjelen sin til djevelen for å vinne erkjennelse."
       ],
       "keyPoints": [
-        "Homers Iliaden og Odysseen er de store greske eposene.",
-        "Dantes Den guddommelige komedie skildrer en reise gjennom Helvete, Skjærsilden og Paradiset.",
+        "Homers «Iliaden» og «Odysseen» er de store greske eposene.",
+        "Dantes «Den guddommelige komedie» skildrer en reise gjennom Helvete, Skjærsilden og Paradiset.",
         "Shakespeare regnes som den største dramatikeren etter antikken.",
-        "Cervantes' Don Quijote regnes som den moderne romanens viktigste forløper.",
-        "Goethes Faust handler om en lærd mann som selger sjelen sin for å vinne erkjennelse."
+        "Cervantes' «Don Quijote» regnes som den moderne romanens viktigste forløper.",
+        "Goethes «Faust» handler om en lærd mann som selger sjelen sin for å vinne erkjennelse."
       ],
       "sources": [
         {
@@ -1104,7 +1104,7 @@
           "id": "lit-verdensklassikere-iliaden",
           "step": 1,
           "type": "choice",
-          "prompt": "Hva skildrer Iliaden?",
+          "prompt": "Hva skildrer «Iliaden»?",
           "answer": "En konflikt mellom greske helter under krigen om Troja",
           "distractors": [
             "Odyssevs' lange hjemferd etter krigen",
@@ -1117,12 +1117,12 @@
           "id": "lit-verdensklassikere-vergil",
           "step": 1,
           "type": "choice",
-          "prompt": "Hvem fører Dante gjennom helvete og skjærsild i Den guddommelige komedie?",
+          "prompt": "Hvem fører Dante gjennom helvete og skjærsild i «Den guddommelige komedie»?",
           "answer": "Den romerske dikteren Vergil",
           "distractors": [
             "Den greske dikteren Homer",
             "Den hellige Frans av Assisi",
-            "Filosofen Aristoteles"
+            "Den greske filosofen Aristoteles"
           ],
           "explain": "Vergil var ikke kristen og kan derfor ikke føre Dante inn i Paradiset. Der overtar Beatrice, som symboliserer troen og kjærligheten. Hele verket består av 100 sanger."
         },
@@ -1130,7 +1130,7 @@
           "id": "lit-verdensklassikere-don-quijote",
           "step": 1,
           "type": "choice",
-          "prompt": "Hvorfor regnes Don Quijote som en milepæl i litteraturhistorien?",
+          "prompt": "Hvorfor regnes «Don Quijote» som en milepæl i litteraturhistorien?",
           "answer": "Den regnes som den moderne romanens viktigste forløper",
           "distractors": [
             "Den var den første boken trykt i Europa",
@@ -1154,12 +1154,12 @@
           "id": "lit-verdensklassikere-dante",
           "step": 2,
           "type": "text",
-          "prompt": "Hvilken italiensk dikter skrev Den guddommelige komedie?",
+          "prompt": "Hvilken italiensk dikter skrev «Den guddommelige komedie»?",
           "answer": "Dante Alighieri",
           "accept": [
             "Dante"
           ],
-          "explain": "Dante kalte selv verket Commedia, trolig fordi det ender lykkelig og er skrevet på folkespråket. Tilnavnet «guddommelig» kom senere, på grunn av den høye stilen og det store innholdet."
+          "explain": "Dante kalte selv verket «Commedia», trolig fordi det ender lykkelig og er skrevet på folkespråket. Tilnavnet «guddommelig» kom senere, på grunn av den høye stilen og det store innholdet."
         },
         {
           "id": "lit-verdensklassikere-hamlet",
@@ -1200,7 +1200,7 @@
               "right": "Faust"
             }
           ],
-          "explain": "Verkene spenner over mer enn 2000 år, fra eposene fra omkring 700 før vår tidsregning til Faust, som Goethe arbeidet med til han døde."
+          "explain": "Verkene spenner over mer enn 2000 år, fra eposene fra omkring 700 f.Kr. til «Faust», som Goethe arbeidet med til han døde."
         },
         {
           "id": "lit-verdensklassikere-hvorfor-shakespeare",
@@ -1219,7 +1219,7 @@
           "id": "lit-verdensklassikere-forklar-quijote",
           "step": 3,
           "type": "explain",
-          "prompt": "Forklar hvorfor Don Quijote både er en parodi og en alvorlig roman.",
+          "prompt": "Forklar hvorfor «Don Quijote» både er en parodi og en alvorlig roman.",
           "answer": "Boken gjør narr av ridderromanene gjennom en adelsmann som ikke skiller dikt fra virkelighet. Samtidig viser den en dyp motsetning mellom idealisme og realisme, mellom don Quijotes drømmer og Sancho Panzas jordnære fornuft.",
           "checklist": [
             "Satire over ridderromanene",
@@ -1232,7 +1232,7 @@
           "id": "lit-verdensklassikere-aar-quijote",
           "step": 4,
           "type": "year",
-          "prompt": "Hvilket år kom første del av Don Quijote ut?",
+          "prompt": "Hvilket år kom første del av «Don Quijote» ut?",
           "answer": "1605",
           "explain": "Mens Cervantes arbeidet med fortsettelsen, kom en falsk annen del ut. Det fikk ham til å gi ut sin egen annen del i 1615."
         },
@@ -1249,7 +1249,7 @@
           "id": "lit-verdensklassikere-sanger",
           "step": 4,
           "type": "number",
-          "prompt": "Hvor mange sanger (canti) består Den guddommelige komedie av?",
+          "prompt": "Hvor mange sanger (canti) består «Den guddommelige komedie» av?",
           "answer": "100",
           "unit": "sanger",
           "explain": "Innledningen og Helvete utgjør 34 sanger, Skjærsilden og Paradiset 33 hver. Verset er tersiner som rimer aba, bcb, cdc og så videre."
@@ -1267,17 +1267,17 @@
         "from": 1813,
         "to": 1949
       },
-      "summary": "De store romanene fra 1800-tallets realisme i England, Frankrike og Russland, og 1900-tallets brudd og advarsler.",
+      "summary": "Hvordan realistene i England, Frankrike og Russland skrev 1800-tallets store romaner, og hvordan 1900-tallet brøt med dem og advarte mot diktatur.",
       "lesson": [
-        "På 1800-tallet ble realismen den ledende retningen. Romanene skulle skildre en verden som kunne vært hentet fra virkeligheten, og mange kom først ut som føljetonger i blader. Jane Austen skildret kjærlighet, penger og klasse med ironi, blant annet i Stolthet og fordom (1813). Charles Dickens regnes også som en stor realist, med innslag av melodrama og komikk.",
-        "I Frankrike skildret Honoré de Balzac samfunnet etter revolusjonen, med personer forstått ut fra samfunnsklassen sin. Gustave Flaubert ble tiltalt for usedelighet, men frikjent i 1857, og Madame Bovary markerte gjennombruddet for den realistiske romanen i Frankrike. Victor Hugos De elendige (1862) er en bred skildring av Paris og samfunnets utstøtte, med den tidligere straffangen Jean Valjean i sentrum.",
-        "Russland fikk sine store realister. Lev Tolstojs Krig og fred (1863–1869) er et epos om Russland under Napoleonskrigene, og Anna Karenina (1875–1877) en kjærlighetstragedie. I Fjodor Dostojevskijs Forbrytelse og straff (1866) myrder studenten Raskolnikov en pantelånerske. På 1900-tallet ga modernister som Franz Kafka slipp på den objektive skildringen av den ytre verden, og George Orwells 1984 (1949) advarte mot diktatur og total overvåking."
+        "På 1800-tallet ble realismen den ledende retningen. Romanene skulle skildre en verden som kunne vært hentet fra virkeligheten, og mange kom først ut som føljetonger i blader. Jane Austen skildret kjærlighet, penger og klasse med ironi, blant annet i «Stolthet og fordom» (1813). Charles Dickens regnes også som en stor realist, med innslag av melodrama og komikk.",
+        "I Frankrike skildret Honoré de Balzac samfunnet etter revolusjonen, med personer forstått ut fra samfunnsklassen sin. Gustave Flaubert ble tiltalt for usedelighet, men frikjent i 1857, og «Madame Bovary» markerte gjennombruddet for den realistiske romanen i Frankrike. Victor Hugos «De elendige» (1862) er en bred skildring av Paris og samfunnets utstøtte, med den tidligere straffangen Jean Valjean i sentrum.",
+        "Russland fikk sine store realister. Lev Tolstojs «Krig og fred» (1863–1869) er et epos om Russland under Napoleonskrigene, og «Anna Karenina» (1875–1877) en kjærlighetstragedie. I Fjodor Dostojevskijs «Forbrytelse og straff» (1866) myrder studenten Raskolnikov en pantelånerske. På 1900-tallet ga modernister som Franz Kafka slipp på den objektive skildringen av den ytre verden, og George Orwells «1984» (1949) advarte mot diktatur og total overvåking."
       ],
       "keyPoints": [
         "1800-tallets realisme skildret mennesker i et samfunn som kunne vært virkelig.",
         "Austen, Dickens, Balzac, Flaubert og Hugo er sentrale navn i engelsk og fransk roman.",
         "Med Tolstoj og Dostojevskij ble russisk litteratur for alvor verdenslitteratur.",
-        "Orwells 1984 (1949) er en dystopi om diktatur, propaganda og overvåking."
+        "Orwells «1984» (1949) er en dystopi om diktatur, propaganda og overvåking."
       ],
       "sources": [
         {
@@ -1340,14 +1340,14 @@
           "id": "lit-romanens-storhetstid-1984-samfunn",
           "step": 1,
           "type": "choice",
-          "prompt": "Hva slags samfunn skildrer George Orwell i romanen 1984?",
+          "prompt": "Hva slags samfunn skildrer George Orwell i romanen «1984»?",
           "answer": "Et diktatur med total propaganda og overvåking",
           "distractors": [
             "Et fredelig bondesamfunn i middelalderen",
             "Et fritt demokrati med full ytringsfrihet",
             "Et handelsimperium i 1700-tallets London"
           ],
-          "explain": "Uttrykk som «Big Brother is watching you», «thoughtcrime» og «newspeak» har gått inn i det engelske språket. Orwell hadde selv kjempet på republikansk side i den spanske borgerkrigen, den krigen Picassos Guernica skildrer."
+          "explain": "Uttrykk som «Big Brother is watching you», «thoughtcrime» og «newspeak» har gått inn i det engelske språket. Orwell hadde selv kjempet på republikansk side i den spanske borgerkrigen, den krigen Picassos «Guernica» skildrer."
         },
         {
           "id": "lit-romanens-storhetstid-krig-og-fred",
@@ -1365,7 +1365,7 @@
           "id": "lit-romanens-storhetstid-raskolnikov",
           "step": 2,
           "type": "text",
-          "prompt": "Hva heter studenten som begår mord i Dostojevskijs Forbrytelse og straff?",
+          "prompt": "Hva heter studenten som begår mord i Dostojevskijs «Forbrytelse og straff»?",
           "answer": "Raskolnikov",
           "accept": [
             "Raskolnikoff",
@@ -1378,7 +1378,7 @@
           "id": "lit-romanens-storhetstid-valjean",
           "step": 2,
           "type": "text",
-          "prompt": "Hva heter hovedpersonen i Victor Hugos De elendige?",
+          "prompt": "Hva heter hovedpersonen i Victor Hugos «De elendige»?",
           "answer": "Jean Valjean",
           "accept": [
             "Valjean"
@@ -1419,7 +1419,7 @@
               "right": "Anna Karenina"
             }
           ],
-          "explain": "Tre av dem hører til samme tiår: rettssaken mot Madame Bovary var i 1857, De elendige kom i 1862 og Forbrytelse og straff i 1866. Anna Karenina bruker samtidens russiske samfunn som bakgrunn for en kjærlighetstragedie."
+          "explain": "Tre av dem hører til samme tiår: Rettssaken mot «Madame Bovary» var i 1857, «De elendige» kom i 1862 og «Forbrytelse og straff» i 1866. «Anna Karenina» bruker samtidens russiske samfunn som bakgrunn for en kjærlighetstragedie."
         },
         {
           "id": "lit-romanens-storhetstid-rekkefolge",
@@ -1448,7 +1448,7 @@
               "year": 1949
             }
           ],
-          "explain": "Mange av de store romanene kom først som føljetonger: Forbrytelse og straff kom i tolv deler. De elendige ble oversatt til ni språk allerede før den ble utgitt."
+          "explain": "Mange av de store romanene kom først som føljetonger: «Forbrytelse og straff» kom i tolv deler. «De elendige» ble oversatt til ni språk allerede før den ble utgitt."
         },
         {
           "id": "lit-romanens-storhetstid-forklar-realisme",
@@ -1461,13 +1461,13 @@
             "Mennesket sett i lys av klasse og samfunn",
             "Sosiale og moralske spørsmål"
           ],
-          "explain": "Realismen kom også til Norge: Camilla Colletts Amtmandens Døttre regnes som pionerverket. Ibsen førte den inn i dramaet med samtidsstykker som Et dukkehjem, og Christian Krohg brakte samme samfunnskritikk inn i maleriet."
+          "explain": "Realismen kom også til Norge: Camilla Colletts «Amtmandens Døttre» regnes som pionerverket. Ibsen førte den inn i dramaet med samtidsstykker som «Et dukkehjem», og Christian Krohg brakte samme samfunnskritikk inn i maleriet."
         },
         {
           "id": "lit-romanens-storhetstid-aar-elendige",
           "step": 4,
           "type": "year",
-          "prompt": "Hvilket år kom Victor Hugos De elendige ut?",
+          "prompt": "Hvilket år kom Victor Hugos «De elendige» ut?",
           "answer": "1862",
           "explain": "Romanen skildrer det franske samfunnet fra 1815 til 1832. Den er filmatisert mange ganger og er blitt en svært populær musikal."
         },
@@ -1477,7 +1477,7 @@
           "type": "year",
           "prompt": "Hvilket år ble George Orwells roman om Storebror utgitt?",
           "answer": "1949",
-          "explain": "Det var Orwells siste bok, skrevet mens helsen sviktet. Den fører videre pessimismen fra dyrefabelen Animal Farm, men er dystrere og nærmer seg science fiction."
+          "explain": "Det var Orwells siste bok, skrevet mens helsen sviktet. Den fører videre pessimismen fra dyrefabelen «Animal Farm», men er dystrere og nærmer seg science fiction."
         },
         {
           "id": "lit-romanens-storhetstid-kafka",
@@ -1504,13 +1504,13 @@
       "summary": "Hvordan norsk gikk fra norrønt via dansk skriftspråk til to likestilte målformer, og hvilke andre språk Norge har ansvar for.",
       "lesson": [
         "Norsk har utviklet seg fra urnordisk via norrønt, og den norrøne perioden regnes fra omkring 700 til 1350. Etter Svartedauden ble det norrøne skriftspråket gradvis erstattet av dansk. Under dansk styre (1537–1814) var dansk skriftspråket i Norge, mens folk snakket sine dialekter, som var svært ulike både innbyrdes og fra skriftspråket.",
-        "Etter 1814 ble det strid om hvordan norsk skulle skrives. Ivar Aasen samlet inn dialekter og bygde et nytt skriftspråk på dem, landsmålet, som han la fram i Prøver af Landsmaalet i Norge (1853). Knud Knudsen, ofte kalt «bokmålets far», ville heller fornorske det danske skriftspråket gradvis. I 1885 vedtok Stortinget å sidestille landsmålet med det vanlige skriftspråket. I 1929 fikk de navnene nynorsk og bokmål.",
+        "Etter 1814 ble det strid om hvordan norsk skulle skrives. Ivar Aasen samlet inn dialekter og bygde et nytt skriftspråk på dem, landsmålet, som han la fram i «Prøver af Landsmaalet i Norge» (1853). Knud Knudsen, ofte kalt «bokmålets far», ville heller fornorske det danske skriftspråket gradvis. I 1885 vedtok Stortinget å sidestille landsmålet med det vanlige skriftspråket. I 1929 fikk de navnene nynorsk og bokmål.",
         "I dag skriver rundt 90 prosent bokmål og omtrent ti prosent nynorsk. Språkloven, som gjelder fra 2022, slår fast at norsk er hovedspråket og at bokmål og nynorsk er likeverdige. Offentlige organer har samme ansvar for nordsamisk, lulesamisk og sørsamisk. Loven gir også vern til kvensk, romani, romanes og norsk tegnspråk."
       ],
       "keyPoints": [
         "Etter Svartedauden ble norrønt gradvis avløst av dansk som skriftspråk.",
         "Ivar Aasen skapte landsmålet, dagens nynorsk, på grunnlag av dialektene.",
-        "Knud Knudsen arbeidet for å fornorske dansk; resultatet ble bokmål.",
+        "Knud Knudsen arbeidet for å fornorske dansk, og resultatet ble bokmål.",
         "Jamstillingsvedtaket i 1885 sidestilte de to skriftspråkene.",
         "Språkloven verner også samiske språk, kvensk, romani, romanes og norsk tegnspråk."
       ],
@@ -1635,7 +1635,7 @@
               "year": 1537
             },
             {
-              "label": "Aasen legger fram Prøver af Landsmaalet i Norge",
+              "label": "Aasen legger fram «Prøver af Landsmaalet i Norge»",
               "year": 1853
             },
             {
@@ -1677,13 +1677,13 @@
             "Bokmål er gradvis fornorsket dansk",
             "Aasen og Knudsen som hovedpersoner"
           ],
-          "explain": "Bokmål har siden tatt opp mange former fra dialektene og nynorsk, blant annet hunkjønnsformer på -a, som boka ved siden av boken."
+          "explain": "Bokmål har siden tatt opp mange former fra dialektene og nynorsk, blant annet hunkjønnsformer på -a, som «boka» ved siden av «boken»."
         },
         {
           "id": "lit-norsk-sprak-aar-aasen",
           "step": 4,
           "type": "year",
-          "prompt": "Hvilket år la Ivar Aasen fram Prøver af Landsmaalet i Norge?",
+          "prompt": "Hvilket år la Ivar Aasen fram «Prøver af Landsmaalet i Norge»?",
           "answer": "1853",
           "explain": "Boken var det første utkastet til en felles skriftnorm for hele landet. Fra 1892 kunne skolestyrene ta landsmålet i bruk i folkeskolen."
         },

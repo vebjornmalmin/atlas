@@ -20,10 +20,10 @@
       ],
       "keyPoints": [
         "Norge er et parlamentarisk, demokratisk og konstitusjonelt monarki.",
-        "Stortinget (169 representanter) gir lover og bevilger penger; regjeringen styrer; domstolene dømmer.",
-        "Parlamentarisme: Regjeringen må gå hvis et flertall på Stortinget vedtar mistillit.",
+        "Stortinget (169 representanter) gir lover og bevilger penger, regjeringen styrer, og domstolene dømmer.",
+        "Med parlamentarisme må regjeringen gå hvis et flertall på Stortinget vedtar mistillit.",
         "Kongen er statsoverhode, men har liten reell makt.",
-        "Kommunene har ansvar for blant annet grunnskole og eldreomsorg."
+        "Kommunene har blant annet ansvar for grunnskole og eldreomsorg."
       ],
       "sources": [
         {
@@ -87,12 +87,12 @@
           "id": "sam-norges-styresett-kongen",
           "step": 1,
           "type": "choice",
-          "prompt": "Hvilken rolle har kongen i det norske styresettet i dag?",
-          "answer": "Først og fremst en symbolsk og seremoniell rolle",
+          "prompt": "Hva slags rolle har kongen i det norske styresettet i dag?",
+          "answer": "Symbolsk og seremoniell",
           "distractors": [
-            "Vetorett mot alle lover Stortinget vedtar",
-            "Fri rett til å velge statsminister",
-            "Det øverste ansvaret for statsbudsjettet"
+            "Lovgivende med vetorett",
+            "Dømmende i siste instans",
+            "Ansvarlig for statsbudsjettet"
           ],
           "explain": "Kongen er statens øverste representant, og embetet går i arv. Den reelle utøvende makten ligger hos regjeringen, som må ha Stortingets tillit."
         },
@@ -200,12 +200,12 @@
           "id": "sam-norges-styresett-fylkeskommune",
           "step": 4,
           "type": "choice",
-          "prompt": "Hva er den største oppgaven for fylkeskommunene?",
+          "prompt": "Hva er fylkeskommunenes største oppgave?",
           "answer": "Videregående skole",
           "distractors": [
-            "Grunnskolen",
-            "Sykehusene",
-            "Barnehagene"
+            "Grunnskole",
+            "Sykehus",
+            "Barnehager"
           ],
           "explain": "Fylkeskommunene drev tidligere også de offentlige sykehusene. I 2002 overtok staten dem gjennom regionale helseforetak."
         }
@@ -218,16 +218,16 @@
       "prerequisites": [
         "sam-norges-styresett"
       ],
-      "summary": "Hvordan Stortinget velges, hvem som har stemmerett, og hvordan partiene plasseres og samarbeider om makten.",
+      "summary": "Hvordan Stortinget velges, hvem som har stemmerett, og hvorfor partiene ofte må samarbeide om makten.",
       "lesson": [
         "Stortingsvalg holdes hvert fjerde år i september. Norske statsborgere som fyller 18 år innen utgangen av valgåret, har stemmerett. Norge har forholdstallsvalg: Partienes mandater skal speile andelen stemmer de får. En sperregrense på fire prosent avgjør hvilke partier som får utjevningsmandater.",
-        "Stemmeretten kom gradvis. Menn fikk allmenn stemmerett i 1898, og i 1913 fikk kvinner stemmerett ved stortingsvalg på like vilkår som menn. Norge var blant de første landene i verden; i Europa var bare Finland tidligere ute. Stemmerettsalderen ble senket til 18 år i 1978.",
+        "Stemmeretten kom gradvis. Menn fikk allmenn stemmerett i 1898, og i 1913 fikk kvinner stemmerett ved stortingsvalg på like vilkår som menn. Norge var blant de første landene i verden. I Europa var bare Finland tidligere ute. Stemmerettsalderen ble senket til 18 år i 1978.",
         "Partiene plasseres ofte på en høyre–venstre-akse etter hvor opptatt de er av økonomisk utjevning og statlig styring. Til venstre står Rødt, SV og Arbeiderpartiet, i midten Senterpartiet, KrF og Venstre, og til høyre Høyre og Fremskrittspartiet. Ett parti får sjelden flertall alene, så koalisjonsregjeringer av flere partier er vanlige."
       ],
       "keyPoints": [
-        "Stortingsvalg hvert fjerde år; stemmerett fra 18 år.",
+        "Stortingsvalg holdes hvert fjerde år, og stemmeretten gjelder fra 18 år.",
         "Kvinner fikk stemmerett på like vilkår som menn i 1913.",
-        "Forholdstallsvalg gir mange partier; sperregrensen er fire prosent.",
+        "Forholdstallsvalg gir mange partier på Stortinget, og sperregrensen er fire prosent.",
         "Høyre–venstre-aksen handler mest om økonomisk utjevning og statlig styring.",
         "Koalisjonsregjeringer og mindretallsregjeringer er vanlige i Norge."
       ],
@@ -330,7 +330,7 @@
             "Om et parti får plass i regjeringen",
             "Om et parti får statlig partistøtte"
           ],
-          "explain": "Et parti under grensen kan fortsatt vinne mandater i enkeltfylker, men får færre plasser enn stemmeandelen tilsier. Kristelig Folkeparti falt i 2021 under grensen og gikk fra åtte til tre representanter."
+          "explain": "Et parti under grensen kan fortsatt vinne mandater i enkeltfylker, men får færre plasser enn stemmeandelen tilsier. I 2021 falt Kristelig Folkeparti under grensen og gikk fra åtte til tre representanter."
         },
         {
           "id": "sam-valg-partier-aksen",
@@ -431,15 +431,15 @@
       "prerequisites": [],
       "summary": "Hva som skiller demokrati fra diktatur, og hvordan menneskerettighetene ble formulert og beskyttet etter andre verdenskrig.",
       "lesson": [
-        "Demokrati betyr folkestyre. Ordet er gresk og ble først brukt om bystater i Hellas på 400-tallet før vår tidsregning. I dag er de fleste demokratier representative: Folket velger representanter som lager lovene. Diktatur er en samlebetegnelse for styreformer med lite politisk likhet og folkelig deltakelse, som enevelde, der én person styrer.",
+        "Demokrati betyr folkestyre. Ordet er gresk og ble først brukt om bystater i Hellas på 400-tallet f.Kr.. I dag er de fleste demokratier representative: Folket velger representanter som lager lovene. Diktatur er en samlebetegnelse for styreformer med lite politisk likhet og folkelig deltakelse. Et eksempel er enevelde, der én person styrer.",
         "Et demokrati trenger mer enn valg. Stemmerett, ytringsfrihet og organisasjonsfrihet er demokratiske rettigheter. I en rettsstat er makten bundet av offentlige lover, og myndighetene kan ikke straffe eller fengsle vilkårlig. Motsetningen er en politistat.",
         "Etter to verdenskriger vedtok FNs generalforsamling Verdenserklæringen om menneskerettighetene i Paris 10. desember 1948. Eleanor Roosevelt ledet arbeidet med utkastet. Erklæringen er ikke juridisk bindende, men ideene er tatt inn i bindende konvensjoner. I Europa dømmer Den europeiske menneskerettighetsdomstolen i Strasbourg etter Den europeiske menneskerettskonvensjonen."
       ],
       "keyPoints": [
         "Demokrati er folkestyre, i dag oftest representativt.",
-        "Rettsstat: Makten er bundet av lover og kan ikke brukes vilkårlig.",
+        "I en rettsstat er makten bundet av lover og kan ikke brukes vilkårlig.",
         "FNs verdenserklæring om menneskerettighetene ble vedtatt 10. desember 1948.",
-        "Den europeiske menneskerettighetsdomstolen i Strasbourg dømmer etter EMK."
+        "Den europeiske menneskerettighetsdomstolen i Strasbourg dømmer etter Den europeiske menneskerettskonvensjonen."
       ],
       "sources": [
         {
@@ -514,7 +514,7 @@
             "1945",
             "1966"
           ],
-          "explain": "Erklæringen kom tre år etter at FN ble opprettet, og har 30 artikler. Menneskerettighetsdagen markeres hvert år 10. desember, samme dag som Nobels fredspris deles ut."
+          "explain": "Erklæringen kom tre år etter at FN ble opprettet. Den har 30 artikler. Menneskerettighetsdagen markeres hvert år 10. desember, samme dag som Nobels fredspris deles ut."
         },
         {
           "id": "sam-demokrati-rettigheter-eleanor",
@@ -549,7 +549,7 @@
           "answer": "De ble tatt inn i bindende konvensjoner",
           "distractors": [
             "De ble skrevet inn i alle lands grunnlover",
-            "Sikkerhetsrådet gjorde dem til lov",
+            "De ble vedtatt som lov av Sikkerhetsrådet",
             "De ble en del av FN-pakten fra 1945"
           ],
           "explain": "I 1966 vedtok FN to konvensjoner: én om sivile og politiske rettigheter og én om økonomiske, sosiale og kulturelle rettigheter. Senere kom blant annet barnekonvensjonen i 1989."
@@ -630,7 +630,7 @@
           "type": "number",
           "prompt": "Hvor mange artikler har FNs verdenserklæring om menneskerettighetene?",
           "answer": "30",
-          "explain": "Artikkel 1 slår fast at alle mennesker er født frie og med samme menneskeverd og menneskerettigheter. Erklæringen omfatter både sivile og politiske og økonomiske, sosiale og kulturelle rettigheter."
+          "explain": "Artikkel 1 slår fast at alle mennesker er født frie og med samme menneskeverd og menneskerettigheter. Erklæringen omfatter både sivile og politiske rettigheter og økonomiske, sosiale og kulturelle rettigheter."
         }
       ]
     },
@@ -641,17 +641,17 @@
       "prerequisites": [
         "mh-andre-verdenskrig"
       ],
-      "summary": "De to organisasjonene som formet Norges plass i verden etter andre verdenskrig: FN for fred og samarbeid, NATO for felles forsvar.",
+      "summary": "Hvordan FN og NATO ble opprettet etter andre verdenskrig, og hvorfor de har formet Norges plass i verden.",
       "lesson": [
-        "FN ble opprettet 24. oktober 1945, rett etter andre verdenskrig, for å bevare internasjonal fred og sikkerhet. 51 land skrev under FN-pakten, og Norge var et av dem. FN har hovedkontor i New York og 193 medlemsland. Forløperen var Folkeforbundet, som ikke klarte å hindre en ny verdenskrig.",
+        "FN ble opprettet 24. oktober 1945, rett etter andre verdenskrig, for å bevare internasjonal fred og sikkerhet. Norge var blant de 51 landene som skrev under FN-pakten. FN har hovedkontor i New York og 193 medlemsland. Forløperen var Folkeforbundet, som ikke klarte å hindre en ny verdenskrig.",
         "I Generalforsamlingen møtes alle medlemslandene, og hvert land har én stemme. Sikkerhetsrådet har 15 medlemmer og kan fatte vedtak som er bindende for alle. De fem faste medlemmene, USA, Russland, Kina, Storbritannia og Frankrike, har vetorett. Nordmannen Trygve Lie var FNs første generalsekretær fra 1946 til 1953.",
         "NATO er en forsvarsallianse som ble grunnlagt med Atlanterhavspakten 4. april 1949, ved starten av den kalde krigen. Norge var blant de tolv stifterne. Kjernen er artikkel 5: Et væpnet angrep på ett medlemsland regnes som et angrep på alle. Artikkel 5 er bare utløst én gang, etter terrorangrepene mot USA 11. september 2001."
       ],
       "keyPoints": [
-        "FN ble grunnlagt i 1945; Norge var med fra starten.",
-        "Generalforsamlingen: alle land, én stemme hver. Sikkerhetsrådet: 15 land, fem med vetorett.",
+        "FN ble grunnlagt i 1945, og Norge var med fra starten.",
+        "I Generalforsamlingen har hvert land én stemme, mens fem av de 15 landene i Sikkerhetsrådet har vetorett.",
         "Trygve Lie var FNs første generalsekretær.",
-        "NATO ble grunnlagt i 1949; artikkel 5 sier at et angrep på ett medlem er et angrep på alle."
+        "NATO ble grunnlagt i 1949, og artikkel 5 sier at et angrep på ett medlem er et angrep på alle."
       ],
       "sources": [
         {
@@ -718,7 +718,7 @@
           "prompt": "Hvilken rolle hadde Norge da NATO ble grunnlagt?",
           "answer": "Norge var et av de tolv stifterlandene",
           "distractors": [
-            "Norge stod utenfor som nøytralt land",
+            "Norge sto utenfor som nøytralt land",
             "Norge ble medlem først etter den kalde krigen",
             "Norge ble medlem sammen med Sverige"
           ],
@@ -837,7 +837,7 @@
           "id": "sam-fn-nato-grunnleggere-antall",
           "step": 4,
           "type": "number",
-          "prompt": "Hvor mange land skrev under FN-pakten som grunnleggende medlemmer i 1945?",
+          "prompt": "Hvor mange land skrev under FN-pakten som opprinnelige medlemmer i 1945?",
           "answer": "51",
           "explain": "I dag har FN 193 medlemsland, nesten alle suverene stater i verden. Organisasjonen har seks offisielle språk: arabisk, engelsk, fransk, kinesisk, russisk og spansk."
         }
@@ -852,13 +852,13 @@
       ],
       "summary": "Hvordan europeisk samarbeid vokste fra kull og stål til dagens EU, og hvorfor Norge er knyttet til EU gjennom EØS uten å være medlem.",
       "lesson": [
-        "EU startet som Kull- og stålunionen i 1952, der seks vesteuropeiske land, blant dem Frankrike og Vest-Tyskland, gikk sammen. Romatraktaten fra 1957 regnes som EUs grunndokument. Navnet EU stammer fra 1993, samme år som det indre markedet ble opprettet. I dag har EU 27 medlemsland og hovedsete i Brussel.",
+        "EU startet som Kull- og stålunionen i 1952. Der gikk seks vesteuropeiske land sammen, blant dem Frankrike og Vest-Tyskland. Romatraktaten fra 1957 regnes som EUs grunndokument. Navnet EU stammer fra 1993, samme år som det indre markedet ble opprettet. I dag har EU 27 medlemsland og hovedsete i Brussel.",
         "Kjernen i det indre markedet er de fire friheter: fri bevegelse av varer, tjenester, personer og kapital. Fellesvalutaen euro ble innført i 2002. Gjennom Schengensamarbeidet er personkontrollen på grensene mellom de fleste EU- og EØS-land fjernet, og landene har en felles yttergrense.",
         "Norge har to ganger sagt nei til medlemskap i folkeavstemninger, i 1972 og 1994. I stedet er Norge med i det indre markedet gjennom EØS-avtalen, som trådte i kraft i 1994. Norge må ta inn EUs markedsregler, men har ingen formell innflytelse på dem. Landbruk og fiskeri er holdt utenfor avtalen."
       ],
       "keyPoints": [
-        "EU vokste fram fra Kull- og stålunionen i 1952; navnet EU er fra 1993.",
-        "De fire friheter: fri bevegelse av varer, tjenester, personer og kapital.",
+        "EU vokste fram fra Kull- og stålunionen i 1952, og navnet EU er fra 1993.",
+        "De fire friheter er fri bevegelse av varer, tjenester, personer og kapital.",
         "Folkeavstemningene om medlemskap i 1972 og 1994 endte med nei begge gangene.",
         "EØS-avtalen (1994) gir Norge adgang til EUs indre marked.",
         "Norge er med i Schengen, men ikke i EUs tollunion."
@@ -1041,7 +1041,7 @@
           "answer": "53,5",
           "unit": "prosent",
           "tolerance": 1,
-          "explain": "Motstanden var størst langt fra de sentrale beslutningssentrene, og bønder og fiskere sto sammen med intellektuelle og den radikale delen av arbeiderbevegelsen. Høyre var det eneste partiet som sto samlet på ja-siden."
+          "explain": "Motstanden var størst langt fra de sentrale beslutningssentrene. Bønder og fiskere sto sammen med intellektuelle og den radikale delen av arbeiderbevegelsen. Høyre var det eneste partiet som sto samlet på ja-siden."
         }
       ]
     },
@@ -1050,7 +1050,7 @@
       "title": "Økonomi i hverdagen og samfunnet",
       "tier": 2,
       "prerequisites": [],
-      "summary": "Begrepene som trengs for å forstå priser, renter, skatt og oljepengene i norsk økonomi.",
+      "summary": "Hvordan priser, renter og skatt henger sammen, og hvorfor bruken av oljepengene styres av en egen regel.",
       "lesson": [
         "I et marked bestemmes prisene av tilbud og etterspørsel. Etterspørsel er mengden kjøperne ønsker å kjøpe, og når prisen stiger, synker etterspørselen vanligvis. Er etterspørselen større enn tilbudet, kan prisene presses opp. Bruttonasjonalproduktet, BNP, måler den samlede verdien av varer og tjenester som et land produserer for sluttbrukere.",
         "Inflasjon betyr at prisene i økonomien stiger. Norges Bank er Norges sentralbank og setter styringsrenten med mål om lav og stabil inflasjon. Når renten settes opp, blir lån dyrere, folk og bedrifter bruker mindre, og prisveksten dempes. Arbeidsledig er den som er uten arbeid, men aktivt søker arbeid.",
@@ -1061,7 +1061,7 @@
         "BNP måler den samlede verdiskapingen i et land.",
         "Norges Bank setter styringsrenten for å holde inflasjonen lav og stabil.",
         "Velferdsstaten finansieres i stor grad gjennom skatt.",
-        "Handlingsregelen: Over tid kan om lag 3 prosent av Oljefondet brukes hvert år."
+        "Ifølge handlingsregelen kan om lag 3 prosent av Oljefondet brukes hvert år over tid."
       ],
       "sources": [
         {
@@ -1101,7 +1101,7 @@
             "Forskjellen mellom eksport og import",
             "Statens samlede skatteinntekter"
           ],
-          "explain": "I Norge beregnes BNP av Statistisk sentralbyrå. Varer som selges mellom bedrifter trekkes fra, ellers ville for eksempel osten på en pizza blitt talt to ganger."
+          "explain": "I Norge beregnes BNP av Statistisk sentralbyrå. Varer som selges mellom bedrifter, trekkes fra. Ellers ville for eksempel osten på en pizza blitt talt to ganger."
         },
         {
           "id": "sam-okonomi-ettersporsel",
@@ -1146,14 +1146,14 @@
           "id": "sam-okonomi-oljefondet",
           "step": 2,
           "type": "text",
-          "prompt": "Hva kalles i dagligtale fondet som statens inntekter fra petroleumsvirksomheten går inn i?",
+          "prompt": "Hva kalles fondet for statens inntekter fra petroleumsvirksomheten i dagligtale?",
           "answer": "Oljefondet",
           "accept": [
             "Statens pensjonsfond utland",
             "SPU",
             "Oljefond"
           ],
-          "explain": "Regjeringen kan bruke mer enn regelen tilsier når økonomien går dårlig, og mindre når den går godt. Under koronapandemien i 2020–2021 ble det brukt mer enn regelen tilsa."
+          "explain": "Regjeringen kan bruke mer enn handlingsregelen tilsier når økonomien går dårlig, og mindre når den går godt. Under koronapandemien i 2020–2021 ble det brukt mer enn regelen tilsa."
         },
         {
           "id": "sam-okonomi-handlingsregelen",
@@ -1211,7 +1211,7 @@
           "step": 3,
           "type": "choice",
           "prompt": "Hvorfor skal bare den forventede avkastningen av Oljefondet brukes, ikke selve fondet?",
-          "answer": "Så fondet varer og kommer framtidige generasjoner til gode",
+          "answer": "Fordi fondet skal vare og komme framtidige generasjoner til gode",
           "distractors": [
             "Fordi EØS-avtalen forbyr bruk av fondskapitalen",
             "Fordi fondet eies av dagens pensjonister",
@@ -1248,7 +1248,7 @@
           "id": "sam-okonomi-prosent",
           "step": 4,
           "type": "number",
-          "prompt": "Hvor mange prosent av Oljefondets verdi tilsier handlingsregelen at kan brukes i et normalår?",
+          "prompt": "Hvor mange prosent av Oljefondet kan brukes i et normalår ifølge handlingsregelen?",
           "answer": "3",
           "unit": "prosent",
           "explain": "Tallet tilsvarer den forventede årlige realavkastningen av fondet. I de fleste år siden 2005 har den faktiske bruken ligget godt under denne grensen."
@@ -1268,16 +1268,16 @@
       "title": "Verdensreligionene",
       "tier": 1,
       "prerequisites": [],
-      "summary": "De fem store verdensreligionene, hva de lærer og hvilke skrifter de bygger på, og religionens plass i Norge i dag.",
+      "summary": "Hva de fem store verdensreligionene lærer, hvilke skrifter de bygger på, og hvilken plass religion har i Norge i dag.",
       "lesson": [
         "Jødedom, kristendom og islam deler troen på én Gud og regnes som abrahamittiske religioner. Jødedommens hellige skrift er Tanakh, den hebraiske bibel. Kristendommen bygger på Jesus fra Nasaret, som de kristne tror er Guds sønn, og Bibelen består av Det gamle og Det nye testamentet. Kristendommen er verdens største religion, fulgt av islam.",
-        "Islam oppstod på Den arabiske halvøy på 600-tallet. Muslimer tror at Koranen er Guds ord, åpenbart for profeten Muhammed. Hinduismen har ingen stifter, men er et mangfold av tradisjoner fra India. Buddhismen ble grunnlagt av Buddha i Nord-India omkring 400 før vår tidsregning, og skriftene samles i Tripitaka. Begge lærer om karma og gjenfødelse; målet i buddhismen er nirvana, frihet fra gjenfødelse.",
+        "Islam oppsto på Den arabiske halvøy på 600-tallet. Muslimer tror at Koranen er Guds ord, åpenbart for profeten Muhammed. Hinduismen har ingen stifter, men er et mangfold av tradisjoner fra India. Buddhismen ble grunnlagt av Buddha i Nord-India omkring 400 f.Kr., og skriftene samles i Tripitaka. Begge lærer om karma og gjenfødelse. I buddhismen er målet nirvana, frihet fra gjenfødelse.",
         "Den norske kirke er evangelisk-luthersk og Norges største trossamfunn. Den var statskirke fram til 2012, men står fortsatt i Grunnloven som Norges folkekirke. Sekularisering betyr at religion mister innflytelse over mennesker og samfunn, for eksempel ved at færre tror, deltar i religiøse ritualer eller er medlemmer av et trossamfunn."
       ],
       "keyPoints": [
         "Jødedom, kristendom og islam tror på én Gud og ser Abraham som sin stamfar.",
         "Hellige skrifter: Tanakh (jødedom), Bibelen (kristendom), Koranen (islam), Tripitaka (buddhisme).",
-        "Hinduismen har ingen stifter; buddhismen ble grunnlagt av Buddha.",
+        "Hinduismen har ingen stifter, mens buddhismen ble grunnlagt av Buddha.",
         "Karma og gjenfødelse står sentralt i hinduisme og buddhisme.",
         "Den norske kirke var statskirke til 2012 og ble formelt skilt fra staten i 2017."
       ],
@@ -1360,7 +1360,7 @@
           "distractors": [
             "Evig liv i paradis",
             "Gjenfødelse i en høyere kaste",
-            "Å oppfylle den religiøse loven"
+            "Full lydighet mot den religiøse loven"
           ],
           "explain": "Ifølge De fire edle sannheter skyldes lidelsen begjær, eller «tørst». Veien til lidelsens opphør er den åttefoldige vei, med etikk, konsentrasjon og visdom."
         },
@@ -1472,11 +1472,11 @@
           "step": 4,
           "type": "choice",
           "prompt": "Omtrent når levde Buddha?",
-          "answer": "Omkring 400 før vår tidsregning",
+          "answer": "Omkring 400 f.Kr.",
           "distractors": [
-            "Omkring 1500 før vår tidsregning",
-            "Omkring år 30 etter vår tidsregning",
-            "Omkring år 600 etter vår tidsregning"
+            "Omkring 1500 f.Kr.",
+            "Omkring år 30 e.Kr.",
+            "Omkring år 600 e.Kr."
           ],
           "explain": "Nøyaktig når Buddha levde, er usikkert. Buddhismen er i dag delt i to hovedtradisjoner, theravada og mahayana."
         },
@@ -1497,17 +1497,17 @@
       "prerequisites": [
         "vh-antikkens-hellas"
       ],
-      "summary": "De store tenkerne i vestlig filosofi og hovedretningene i etikken, fra Sokrates' spørsmål til moderne miljøfilosofi.",
+      "summary": "Hva de store tenkerne i vestlig filosofi har spurt om, fra Sokrates til Arne Næss, og hvordan etikken skiller rett fra galt.",
       "lesson": [
-        "Vestlig filosofi begynte i antikkens Hellas. Sokrates skrev ingenting selv, men utfordret athenerne ved å stille spørsmål i samtaler, og ble dømt til døden. Eleven Platon grunnla Akademiet og skilte mellom sansenes verden og en evig ideverden. Platons elev Aristoteles gikk mer empirisk til verks og mente at formene finnes i tingene selv.",
+        "Vestlig filosofi begynte i antikkens Hellas. Sokrates skrev ingenting selv, men utfordret athenerne ved å stille spørsmål i samtaler. Han ble til slutt dømt til døden. Eleven Platon grunnla Akademiet og skilte mellom sansenes verden og en evig ideverden. Platons elev Aristoteles gikk mer empirisk til verks og mente at formene finnes i tingene selv.",
         "René Descartes regnes som grunnleggeren av den nyere filosofien. Han ville tvile på alt, men fant at han ikke kunne tvile på at han selv tvilte: «Jeg tenker, altså er jeg». Immanuel Kant mente at mennesket som fornuftsvesen selv kan finne moralloven, uttrykt i det kategoriske imperativ.",
-        "Etikken har tre hovedretninger. Konsekvensetikk, som utilitarismen, vurderer handlinger etter følgene; Jeremy Bentham og John Stuart Mill ville ha størst mulig lykke for flest mulig. Pliktetikk, med Kant, sier at noen handlinger er rette eller gale i seg selv. Dydsetikk, som går tilbake til Aristoteles, spør hva slags menneske man bør være. Nordmannen Arne Næss grunnla dypøkologien."
+        "Etikken har tre hovedretninger. Konsekvensetikk, som utilitarismen, vurderer handlinger etter følgene. Jeremy Bentham og John Stuart Mill ville ha størst mulig lykke for flest mulig. Pliktetikk, med Kant, sier at noen handlinger er rette eller gale i seg selv. Dydsetikk, som går tilbake til Aristoteles, spør hva slags menneske man bør være. I nyere tid grunnla nordmannen Arne Næss dypøkologien, en miljøfilosofi."
       ],
       "keyPoints": [
-        "Sokrates, Platon og Aristoteles: lærer og elev i tre ledd.",
-        "Platon: Ideenes verden er mer virkelig enn sansenes.",
-        "Descartes: «Jeg tenker, altså er jeg».",
-        "Etikkens tre hovedretninger: konsekvensetikk, pliktetikk og dydsetikk.",
+        "Sokrates var lærer for Platon, som var lærer for Aristoteles.",
+        "Platon mente at ideenes verden er mer virkelig enn sansenes.",
+        "Descartes fant et sikkert utgangspunkt i tanken «Jeg tenker, altså er jeg».",
+        "Etikkens tre hovedretninger er konsekvensetikk, pliktetikk og dydsetikk.",
         "Arne Næss grunnla dypøkologien."
       ],
       "sources": [
@@ -1544,7 +1544,7 @@
             "Sokrates",
             "Descartes"
           ],
-          "explain": "I dialogen Staten tegner Platon også en idealstat med tre klasser: styrere, forsvarere og produsenter. Hos styrerne skulle fornuften være dominerende."
+          "explain": "I dialogen «Staten» tegner Platon også en idealstat med tre klasser: styrere, forsvarere og produsenter. Hos styrerne skulle fornuften være dominerende."
         },
         {
           "id": "sam-filosofi-sokrates-metode",
@@ -1604,7 +1604,7 @@
             "Akademeia",
             "Akademi"
           ],
-          "explain": "Skolen fikk navn etter tempelområdet Akademeia ved Athen. Derfor brukes ordet akademi i dag om høyere lærested."
+          "explain": "Skolen fikk navn etter tempelområdet Akademeia ved Athen. Derfor brukes ordet akademi i dag om høyere læresteder."
         },
         {
           "id": "sam-filosofi-kant",
@@ -1685,14 +1685,14 @@
           "id": "sam-filosofi-bentham",
           "step": 4,
           "type": "choice",
-          "prompt": "Hvilket prinsipp formulerte Jeremy Bentham utilitarismen med?",
-          "answer": "Størst mulig lykke for flest mulig",
+          "prompt": "Med hvilket prinsipp oppsummerte Jeremy Bentham utilitarismen?",
+          "answer": "Skap størst mulig lykke for flest mulig",
           "distractors": [
             "Handle slik at handlingen kan bli allmenn lov",
             "Gjør mot andre det du vil de skal gjøre mot deg",
             "Lev i samsvar med naturen"
           ],
-          "explain": "Bentham la fram den klassiske utilitarismen i 1789. Mill gav ut boken «Utilitarianism» i 1863."
+          "explain": "Bentham la fram den klassiske utilitarismen i 1789. Mill ga ut boken «Utilitarianism» i 1863."
         },
         {
           "id": "sam-filosofi-aar-meditasjoner",
@@ -1714,16 +1714,16 @@
       ],
       "summary": "Hvordan USAs grunnlov fordeler makten, hvordan presidenten velges, og hvilke presidenter som har satt dypest spor.",
       "lesson": [
-        "USA er en forbundsstat med 50 delstater. Grunnloven fra 1787 bygger på Montesquieus maktfordeling, og USA har ikke parlamentarisme. Kongressen er den lovgivende makten og består av Senatet, der hver delstat har to senatorer, og Representantenes hus, der plassene fordeles etter folketall. Presidenten har den utøvende makten, og Høyesterett med ni dommere har den dømmende.",
-        "Statsmaktene kontrollerer hverandre, på engelsk ofte kalt «checks and balances». Presidenten kan nedlegge veto mot lover, men Kongressen kan overstyre vetoet med to tredels flertall i begge kamre. Presidenten velges for fire år og kan gjenvelges én gang. Formelt velges presidenten av et valgmannskollegium på 538 medlemmer, der 270 stemmer gir flertall.",
+        "USA er en forbundsstat med 50 delstater. Grunnloven fra 1787 bygger på Montesquieus maktfordeling, og USA har ikke parlamentarisme. Kongressen er den lovgivende makten. Den består av Senatet, der hver delstat har to senatorer, og Representantenes hus, der plassene fordeles etter folketall. Presidenten har den utøvende makten, og Høyesterett med ni dommere har den dømmende.",
+        "Statsmaktene kontrollerer hverandre. På engelsk kalles dette «checks and balances». Presidenten kan nedlegge veto mot lover, men Kongressen kan overstyre vetoet med to tredjedels flertall i begge kamre. Presidenten velges for fire år og kan gjenvelges én gang. Formelt velges presidenten av et valgmannskollegium på 538 medlemmer, der 270 stemmer gir flertall.",
         "George Washington ble USAs første president i 1789. Abraham Lincoln ledet landet gjennom borgerkrigen og ble drept i 1865. Franklin Roosevelt møtte den økonomiske krisen på 1930-tallet med New Deal og er den eneste som er valgt mer enn to ganger. John Kennedy håndterte Cubakrisen i 1962 og ble skutt i Dallas i 1963. Barack Obama ble i 2009 USAs første svarte president."
       ],
       "keyPoints": [
-        "Grunnloven er fra 1787; de ti første tilleggene fra 1791 kalles Bill of Rights.",
+        "Grunnloven er fra 1787, og de ti første tilleggene fra 1791 kalles Bill of Rights.",
         "Kongressen består av Senatet og Representantenes hus.",
         "Presidenten kan sitte i høyst to perioder på fire år.",
-        "Valgmannskollegiet har 538 medlemmer; 270 gir flertall.",
-        "Lincoln: borgerkrigen. Roosevelt: New Deal. Obama: første svarte president."
+        "Valgmannskollegiet har 538 medlemmer, og 270 stemmer gir flertall.",
+        "Lincoln ledet USA gjennom borgerkrigen, Roosevelt innførte New Deal, og Obama ble den første svarte presidenten."
       ],
       "sources": [
         {
@@ -1773,7 +1773,7 @@
           "id": "sam-usa-styresett-presidentperiode",
           "step": 1,
           "type": "choice",
-          "prompt": "Hvor lenge kan en amerikansk president sitte?",
+          "prompt": "Hvor lenge kan en amerikansk president høyst sitte?",
           "answer": "To perioder på fire år",
           "distractors": [
             "Én periode på seks år",
@@ -1793,7 +1793,7 @@
             "1789",
             "1812"
           ],
-          "explain": "Grunnloven er bare endret 27 ganger. De ti første tilleggene fra 1791 kalles Bill of Rights, og det 19. tillegget fra 1920 gav kvinner stemmerett."
+          "explain": "Grunnloven er bare endret 27 ganger. De ti første tilleggene fra 1791 kalles Bill of Rights, og det 19. tillegget fra 1920 ga kvinner stemmerett."
         },
         {
           "id": "sam-usa-styresett-borgerkrigen",
@@ -1861,7 +1861,7 @@
           "step": 3,
           "type": "explain",
           "prompt": "Forklar hvordan statsmaktene i USA kontrollerer hverandre.",
-          "answer": "Presidenten kan nedlegge veto mot lover, men Kongressen kan overstyre vetoet med to tredels flertall i begge kamre. Presidenten utnevner høyesterettsdommerne, men Senatet må godkjenne dem. Høyesterett har siste ord om hvordan lovene og grunnloven skal tolkes.",
+          "answer": "Presidenten kan nedlegge veto mot lover, men Kongressen kan overstyre vetoet med to tredjedels flertall i begge kamre. Presidenten utnevner høyesterettsdommerne, men Senatet må godkjenne dem. Høyesterett har siste ord om hvordan lovene og grunnloven skal tolkes.",
           "checklist": [
             "Presidentens veto og Kongressens overstyring",
             "Senatet godkjenner utnevnelser",
