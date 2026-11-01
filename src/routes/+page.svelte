@@ -507,6 +507,14 @@
 
 <svelte:head><title>Atlas · Quiz</title></svelte:head>
 
+{#snippet sessionProgress()}
+<div class="session-progress" role="group" aria-label="Fremgang i quizen">{#if session.queue.some(q=>q.sessionRetry)}<p class="muted retry-count">{session.queue.filter(q=>q.sessionRetry).length} ekstra forsøk lagt til etter spørsmålene</p>{/if}
+        <div class="row"><strong>{session.index} av {session.queue.length} fullført</strong><span class="muted">{session.queue.length-session.index} igjen</span></div>
+        <div class="session-steps" role="progressbar" aria-label="Fullførte spørsmål" aria-valuemin="0" aria-valuemax={session.queue.length} aria-valuenow={session.index}>{#each session.queue as item,i}<span class:done={i<session.index} class:independent={session.results[i]?.correct===true && !session.results[i]?.usedHint && !session.results[i]?.learnedFirst} class:active={i===session.index} aria-hidden="true"></span>{/each}</div>
+        <small class="muted">{outcome.independent} riktige uten hjelp · {outcome.supported} med støtte · {outcome.retry} å øve videre på</small>
+      </div>
+{/snippet}
+
 <main id="main-view" tabindex="-1">
   {#if error}<div class="card error" role="alert"><p>{error}</p><button class="quiet" onclick={()=>error=''}>Lukk</button></div>{/if}
   {#if offlineTest}<div class="card"><p class="eyebrow">NETTVERKET ER AVSLÅTT FOR APPEN</p><p class="muted">Frakoblet test: innhold hentes bare fra det som er lagret på enheten.</p><button class="secondary" onclick={()=>run(()=>offlineMode(false))}>Avslutt frakoblet test</button></div>{/if}
@@ -526,7 +534,8 @@
       {#if data.curriculum && !session.objective && selection.queue.length}<button class={retryIds.length?'secondary':'primary'} onclick={()=>run(()=>beginSession(null,session.scope?.unitId?{...session.scope,unitMode:'learn'}:null))}>Lær mer</button>{:else if session.objective}<button class="secondary" onclick={()=>run(()=>beginSession(session.objective || 'mixed',session.scope))}>Ta en quiz til</button>{/if}
       <button class="quiet" onclick={()=>sessionScreen=false}>Ferdig for nå</button></div>
     {:else if sessionScreen && currentLesson}
-      <div class="row"><button class="quiet back-button" onclick={()=>sessionScreen=false}>← Pause</button><span class="muted">{session.index+1} av {session.queue.length}</span></div>
+      <div class="row"><button class="quiet back-button" onclick={()=>sessionScreen=false}>← Pause</button></div>
+      {@render sessionProgress()}
       <section class="exercise lesson-step">
         <p class="eyebrow">Nytt emne · {domainTitle(currentLesson.domainId)}</p>
         <h1 class="lesson-title">{currentLesson.title}</h1>
@@ -538,11 +547,7 @@
     {:else if sessionScreen && current}
       <div class="row"><button class="quiet back-button" onclick={()=>sessionScreen=false}>← Pause</button><span class="muted" aria-hidden="true"></span></div>
       {#if !session.difficultyPolicy && current.difficulty===5}<div class="card"><p>Denne eldre quizen inneholder avanserte spørsmål.</p><button class="secondary" onclick={()=>run(()=>beginSession('mixed',{collectionId:current.collectionIds[0],depth:'foundation',title:titleFor(current.collectionIds[0])}))}>Start på grunnlag</button></div>{/if}
-      <div class="session-progress" role="group" aria-label="Fremgang i quizen">{#if session.queue.some(q=>q.sessionRetry)}<p class="muted retry-count">{session.queue.filter(q=>q.sessionRetry).length} ekstra forsøk lagt til etter spørsmålene</p>{/if}
-        <div class="row"><strong>{session.index} av {session.queue.length} fullført</strong><span class="muted">{session.queue.length-session.index} igjen</span></div>
-        <div class="session-steps" role="progressbar" aria-label="Fullførte spørsmål" aria-valuemin="0" aria-valuemax={session.queue.length} aria-valuenow={session.index}>{#each session.queue as item,i}<span class:done={i<session.index} class:independent={session.results[i]?.correct===true && !session.results[i]?.usedHint && !session.results[i]?.learnedFirst} class:active={i===session.index} aria-hidden="true"></span>{/each}</div>
-        <small class="muted">{outcome.independent} riktige uten hjelp · {outcome.supported} med støtte · {outcome.retry} å øve videre på</small>
-      </div>
+      {@render sessionProgress()}
       <section class="exercise" class:question-step={!revealed}>{#if session.queue[session.index]?.sessionRetry}<p class="retry-banner">Nytt forsøk · hent fram svaret uten hjelp</p>{/if}<p class="eyebrow">{#if current.unitId}{unitTitle(current.unitId)} · {STEP_LABELS[current.step]}{:else}{stageLabel(learningStage(current))} · {modeLabel(current.mode)}{/if}</p>{#if introduction}<div class="card lesson"><h1>Kort fortalt</h1><p>{current.snapshot}</p>{#if currentObjective}<p class="muted">{currentObjective.introduction}</p>{/if}<button class="primary" onclick={()=>{introduction=false;learnedFirst=true;}}>Prøv spørsmålet</button></div>{:else}<h1 class="question" class:answered-question={revealed}>{current.prompt}</h1>
         {#if !revealed}
         {#if session.queue[session.index]?.support?.length}<details class="card"><summary>Holdepunkter før du prøver</summary>{#each session.queue[session.index].support as item}<p><strong>{item.title}</strong></p><p>{item.text}</p>{/each}<p class="muted">Du kan utforske videre selv om dette er nytt.</p></details>{/if}
