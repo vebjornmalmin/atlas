@@ -1,6 +1,8 @@
 // Difficulty describes the knowledge required, not the number of answer choices.
 const assessment=(difficulty,learningStage,family,difficultyReason)=>({difficulty,learningStage,difficultyFamily:family,difficultyReason,difficultyPolicy:'2026-10-11'});
+const CORE_REASONS={1:'Oversikt: hva, når og hvorfor det betyr noe. Svaret er undervist i emnets innledning.',2:'Kjerne: hent fram et sentralt navn, begrep eller sted.',3:'Sammenheng: forklar årsaker, følger eller forskjeller.',4:'Detalj: et presist årstall, tall eller navn.'};
 function familyAssessment(target) {
+ if(target.unitId)return assessment(target.difficulty,target.learningStage,'core-curriculum',CORE_REASONS[target.step] || CORE_REASONS[2]);
  if(target.learningProfile?.reviewed)return assessment(target.answerFormat==='explanation'?3:2,target.learningProfile.stage,'curated-learning',target.answerFormat==='explanation'?'Krever at du forklarer eller sammenligner dokumenterte sammenhenger med egne ord.':'Krever et sentralt holdepunkt før du går videre til detaljer.');
  const id=target.baseId || target.id.replace(/:recognition$/,'');
  const collections=target.collectionIds || [];

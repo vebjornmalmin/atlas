@@ -1,11 +1,6 @@
-import {readdir, readFile} from 'node:fs/promises';
+import {readFile} from 'node:fs/promises';
 import {validateCoreDomains} from '../src/lib/core-curriculum.js';
-
-const directory = new URL('../knowledge-build/core/', import.meta.url);
-export async function readCoreDomains() {
-  const files = (await readdir(directory)).filter(name => name.endsWith('.json')).sort();
-  return Promise.all(files.map(async name => ({file: name, ...JSON.parse(await readFile(new URL(name, directory), 'utf8'))})));
-}
+import {readCoreDomains} from './core-files.mjs';
 
 const only = process.argv[2];
 const all = await readCoreDomains();

@@ -1,4 +1,5 @@
 import {normalizeAnswer} from './exercises.js';
+import {assessDifficulty} from './difficulty.js';
 
 export const CARD_TYPES = ['choice','text','year','number','order','match','explain'];
 export const STEP_LABELS = {1:'Oversikt',2:'Kjerne',3:'Sammenheng',4:'Detalj'};
@@ -145,4 +146,85 @@ function validateCard(unit, card, errors, warnings, {cardIds, prompts, mediaIds}
     if (!Array.isArray(card.checklist) || card.checklist.length < 2 || card.checklist.length > 4) errors.push(`${at}: forklaringskort trenger 2–4 sjekkpunkter.`);
   }
   if (!taughtBefore(unit, card)) warnings.push(`${at}: svaret «${String(card.answer).slice(0, 50)}» ser ikke ut til å være undervist før det testes.`);
+}
+
+const KIND = {choice:'recognition',text:'recall',year:'recall',number:'recall',order:'before-after',match:'connections',explain:'connections'};
+const MODE = {choice:'recognition',text:'recall',year:'recall',number:'recall',order:'timeline',match:'matching',explain:'recall'};
+const STAGE = {1:'foundation',2:'foundation',3:'connections',4:'details'};
+const sourceId = url => `core-source:${url.replace(/^https:\/\//, '').replace(/[^a-z0-9]+/gi, '-').replace(/-+$/, '').toLowerCase()}`;
+export const coreTargetId = cardId => `core:${cardId}`;
+export const unitEntityId = unitId => `unit:${unitId}`;
+
+function targetAnswer(card) {
+  if (card.type === 'order') return [...card.items].sort((a, b) => a.year - b.year).map(item => `${item.label} (${item.year})`).join(' → ');
+  if (card.type === 'match') return card.pairs.map(pair => `${pair.left} – ${pair.right}`).join(' · ');
+  return String(card.answer);
+}
+
+/** Compile authored domains into package rows. Card IDs become stable target and fact IDs. */
+export function compileCore(domains) {
+  const collections = [], entities = [], targets = [], claims = [], exerciseFacts = {}, sources = new Map();
+  const curriculum = {version: 1, domains: [], units: []};
+  for (const file of [...domains].sort((a, b) => a.domain.order - b.domain.order)) {
+    const domain = file.domain;
+    collections.push({id: domain.id, title: domain.title, subject: domain.subject, description: domain.description, core: true, order: domain.order});
+    curriculum.domains.push({id: domain.id, title: domain.title, subject: domain.subject, description: domain.description, order: domain.order, unitIds: file.units.map(unit => unit.id)});
+    file.units.forEach((unit, unitIndex) => {
+      const sourceIds = unit.sources.map(source => {
+        const id = sourceId(source.url);
+        if (!sources.has(id)) sources.set(id, {id, title: source.title, url: source.url, license: 'Fakta og egne formuleringer. Kildeteksten gjengis ikke.'});
+        return id;
+      });
+      const entityId = unitEntityId(unit.id);
+      entities.push({id: entityId, label: unit.title, type: 'topic', summary: unit.summary, collectionIds: [domain.id], sourceIds});
+      const cardIds = unit.cards.map(card => coreTargetId(card.id));
+      curriculum.units.push({id: unit.id, domainId: domain.id, title: unit.title, tier: unit.tier, order: unitIndex,
+        prerequisites: [...unit.prerequisites], summary: unit.summary, lesson: [...unit.lesson], keyPoints: [...unit.keyPoints],
+        ...(unit.years ? {years: {...unit.years}} : {}), sourceIds, cardIds});
+      for (const card of unit.cards) {
+        const id = coreTargetId(card.id), factId = `fact:${id}`;
+        const answer = targetAnswer(card);
+        const target = {
+          id, unitId: unit.id, domainId: domain.id, step: card.step, cardType: card.type, entityId, collectionIds: [domain.id],
+          prompt: card.prompt, answer, acceptedAnswers: [...(card.accept || [])], explanation: card.explain,
+          sourceIds: [...sourceIds], kind: KIND[card.type], mode: MODE[card.type],
+          difficulty: Math.min(5, card.step + (unit.tier > 1 ? 1 : 0)), significance: Math.max(1, 6 - card.step - (unit.tier === 3 ? 1 : 0)),
+          learningStage: STAGE[card.step], learningProfile: {reviewed: true, stage: STAGE[card.step],
+            precision: ['year','number'].includes(card.type) ? 'exact' : card.type === 'match' || card.type === 'order' ? 'complete' : 'broad',
+            reasoning: card.type === 'explain' ? 'explain' : card.type === 'order' ? 'order' : card.type === 'match' ? 'compare' : card.step === 3 ? 'explain' : 'identify'},
+          factId, claimIds: [factId], retrievalRole: 'default', legacyFactId: id,
+          ...(unit.years ? {year: unit.years.from} : {}),
+          ...(card.hint ? {hint: card.hint} : {}),
+          ...(card.media ? {media: card.media} : {})
+        };
+        if (card.type === 'choice') target.options = [String(card.answer), ...card.distractors];
+        if (card.type === 'explain') Object.assign(target, {answerFormat: 'explanation', rubric: card.checklist.map((text, i) => ({id: `${card.id}-c${i}`, text}))});
+        if (card.type === 'year') Object.assign(target, {answerFormat: 'year', tolerance: card.tolerance || 0});
+        if (card.type === 'number') Object.assign(target, {answerFormat: 'number', tolerance: Number(card.tolerance || 0), ...(card.unit ? {numberUnit: card.unit} : {})});
+        if (card.type === 'text') target.answerFormat = 'short';
+        if (card.type === 'order') target.timeline = {id, title: card.prompt, items: card.items.map((item, i) => ({id: `${card.id}-${i}`, label: item.label, year: item.year}))};
+        if (card.type === 'match') target.pairs = card.pairs.map((pair, i) => ({id: `${card.id}-${i}`, label: pair.left, answer: pair.right}));
+        targets.push({...target, ...assessDifficulty(target)});
+        claims.push({id: factId, entityIds: [entityId], relationshipIds: [], statement: card.explain, sourceIds: [...sourceIds], evidenceStatus: 'documented'});
+        exerciseFacts[id] = {factId, claimIds: [factId], retrievalRole: 'default'};
+      }
+    });
+  }
+  return {collections, entities, targets, claims, exerciseFacts, sources: [...sources.values()], curriculum};
+}
+
+/** Replace any previously compiled core rows so the build is idempotent. */
+export function mergeCore(data, core) {
+  const isCore = id => id.startsWith('core:') || id.startsWith('unit:') || id.startsWith('fact:core:') || id.startsWith('core-source:');
+  const coreCollections = new Set(core.collections.map(c => c.id));
+  const exerciseFacts = Object.fromEntries(Object.entries(data.exerciseFacts || {}).filter(([id]) => !isCore(id)));
+  const merged = {...data,
+    collections: [...data.collections.filter(c => !c.core && !coreCollections.has(c.id)), ...core.collections],
+    entities: [...data.entities.filter(e => !isCore(e.id)), ...core.entities],
+    targets: [...data.targets.filter(t => !isCore(t.id)), ...core.targets],
+    sources: [...data.sources.filter(s => !isCore(s.id)), ...core.sources],
+    claims: [...(data.claims || []).filter(c => !isCore(c.id)), ...core.claims],
+    exerciseFacts: {...exerciseFacts, ...core.exerciseFacts},
+    curriculum: core.curriculum};
+  return {...merged, entityCount: merged.entities.length, targetCount: merged.targets.length, relationshipCount: merged.relationships.length};
 }

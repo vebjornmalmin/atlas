@@ -1,6 +1,6 @@
 import {factKey} from './journey.js';
 export function sessionOutcome(attempts) {
-  const results=[...new Map(attempts.map((r,i)=>[r.id ?? i,r])).values()];
+  const results=[...new Map(attempts.filter(r=>!r.lesson).map((r,i)=>[r.id ?? i,r])).values()];
   const independent=results.filter(r=>r.correct===true && !r.usedHint && !r.learnedFirst).length;
   const supported=results.filter(r=>r.usedHint || r.learnedFirst).length;
   return {independent,supported,retry:results.length-independent-supported};

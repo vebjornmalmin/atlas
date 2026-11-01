@@ -13,6 +13,8 @@ export function checkAnswer(target, input) {
 function hash(text) {
   let value = 2166136261;
   for (const char of String(text)) value = Math.imul(value ^ char.charCodeAt(0), 16777619);
+  // Final mixing so strings that differ only at the end still shuffle evenly.
+  value ^= value >>> 16; value = Math.imul(value, 0x85ebca6b); value ^= value >>> 13; value = Math.imul(value, 0xc2b2ae35); value ^= value >>> 16;
   return value >>> 0;
 }
 function answerType(target) {

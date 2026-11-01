@@ -19,4 +19,4 @@ export function nextActionNote(session,result) {
   return attempts<=MAX_SESSION_RETRIES?'Nytt forsøk mot slutten av quizen':'Øv videre i neste quiz';
 }
 
-export function retryTargets(results) {return [...new Map(results.map(r=>[r.id,r])).values()].filter(needsRetry).map(r=>r.id);}
+export function retryTargets(results) {return [...new Map(results.filter(r=>!r.lesson).map(r=>[r.id,r])).values()].filter(needsRetry).map(r=>r.id);}

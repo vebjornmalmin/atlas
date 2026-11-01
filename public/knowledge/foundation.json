@@ -1,8 +1,8 @@
 {
   "id": "atlas-foundation",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "schemaVersion": 1,
-  "generatedAt": "2026-10-11T18:00:00Z",
+  "generatedAt": "2026-11-02T06:00:00Z",
   "collections": [
     {
       "id": "us-presidents",
@@ -105,6 +105,14 @@
       "title": "Sveriges Riksbanks økonomipris",
       "subject": "economics",
       "description": "Komplett prisregister til og med 2025, med utvalgte spørsmål som forbinder personer, bidrag og historisk sammenheng."
+    },
+    {
+      "id": "norgeshistorie",
+      "title": "Norgeshistorie",
+      "subject": "history",
+      "description": "Fra de første menneskene etter istiden til oljealderen: hendelsene og prosessene som formet Norge.",
+      "core": true,
+      "order": 1
     }
   ],
   "entities": [
@@ -65679,6 +65687,21 @@
       ],
       "sourceIds": [
         "event-apollo-11-moon-landing"
+      ]
+    },
+    {
+      "id": "unit:nh-vikingtiden",
+      "label": "Vikingtiden",
+      "type": "topic",
+      "summary": "Perioden da skandinaver reiste ut som plyndrere, handelsfolk og nybyggere, og Norden ble en del av Europa.",
+      "collectionIds": [
+        "norgeshistorie"
+      ],
+      "sourceIds": [
+        "core-source:snl-no-vikingtiden",
+        "core-source:snl-no-lindisfarne",
+        "core-source:snl-no-leiv-eiriksson",
+        "core-source:snl-no-osebergskipet"
       ]
     }
   ],
@@ -185323,6 +185346,621 @@
       "precision": "broad",
       "reasoning": "compare",
       "learningDepth": "connections"
+    },
+    {
+      "id": "core:nh-vikingtiden-periode",
+      "unitId": "nh-vikingtiden",
+      "domainId": "norgeshistorie",
+      "step": 1,
+      "cardType": "choice",
+      "entityId": "unit:nh-vikingtiden",
+      "collectionIds": [
+        "norgeshistorie"
+      ],
+      "prompt": "Omtrent hvilket tidsrom regnes som vikingtiden?",
+      "answer": "Omkring 800–1050",
+      "acceptedAnswers": [],
+      "explanation": "Vikingtiden strekker seg over omtrent 250 år, mellom yngre jernalder og middelalderen. Mye av det vi vet, kommer fra gravfunn som Osebergskipet i Vestfold.",
+      "sourceIds": [
+        "core-source:snl-no-vikingtiden",
+        "core-source:snl-no-lindisfarne",
+        "core-source:snl-no-leiv-eiriksson",
+        "core-source:snl-no-osebergskipet"
+      ],
+      "kind": "recognition",
+      "mode": "recognition",
+      "difficulty": 1,
+      "significance": 5,
+      "learningStage": "foundation",
+      "learningProfile": {
+        "reviewed": true,
+        "stage": "foundation",
+        "precision": "broad",
+        "reasoning": "identify"
+      },
+      "factId": "fact:core:nh-vikingtiden-periode",
+      "claimIds": [
+        "fact:core:nh-vikingtiden-periode"
+      ],
+      "retrievalRole": "default",
+      "legacyFactId": "core:nh-vikingtiden-periode",
+      "year": 793,
+      "options": [
+        "Omkring 800–1050",
+        "Omkring 500–700",
+        "Omkring 1100–1350",
+        "Omkring 1400–1536"
+      ],
+      "difficultyFamily": "core-curriculum",
+      "difficultyReason": "Oversikt: hva, når og hvorfor det betyr noe. Svaret er undervist i emnets innledning.",
+      "difficultyPolicy": "2026-10-11",
+      "precision": "broad",
+      "reasoning": "identify",
+      "learningDepth": "foundation"
+    },
+    {
+      "id": "core:nh-vikingtiden-lindisfarne",
+      "unitId": "nh-vikingtiden",
+      "domainId": "norgeshistorie",
+      "step": 1,
+      "cardType": "choice",
+      "entityId": "unit:nh-vikingtiden",
+      "collectionIds": [
+        "norgeshistorie"
+      ],
+      "prompt": "Hvilket angrep i 793 regnes ofte som starten på vikingtiden?",
+      "answer": "Angrepet på klosteret Lindisfarne",
+      "acceptedAnswers": [],
+      "explanation": "Klosteret på Lindisfarne i Nord-England var et rikt lærdomssete. Klostre var lette mål fordi de hadde verdier og lå ubeskyttet ved kysten.",
+      "sourceIds": [
+        "core-source:snl-no-vikingtiden",
+        "core-source:snl-no-lindisfarne",
+        "core-source:snl-no-leiv-eiriksson",
+        "core-source:snl-no-osebergskipet"
+      ],
+      "kind": "recognition",
+      "mode": "recognition",
+      "difficulty": 1,
+      "significance": 5,
+      "learningStage": "foundation",
+      "learningProfile": {
+        "reviewed": true,
+        "stage": "foundation",
+        "precision": "broad",
+        "reasoning": "identify"
+      },
+      "factId": "fact:core:nh-vikingtiden-lindisfarne",
+      "claimIds": [
+        "fact:core:nh-vikingtiden-lindisfarne"
+      ],
+      "retrievalRole": "default",
+      "legacyFactId": "core:nh-vikingtiden-lindisfarne",
+      "year": 793,
+      "options": [
+        "Angrepet på klosteret Lindisfarne",
+        "Slaget ved Stiklestad",
+        "Erobringen av Konstantinopel",
+        "Slaget ved Hastings"
+      ],
+      "difficultyFamily": "core-curriculum",
+      "difficultyReason": "Oversikt: hva, når og hvorfor det betyr noe. Svaret er undervist i emnets innledning.",
+      "difficultyPolicy": "2026-10-11",
+      "precision": "broad",
+      "reasoning": "identify",
+      "learningDepth": "foundation"
+    },
+    {
+      "id": "core:nh-vikingtiden-ting",
+      "unitId": "nh-vikingtiden",
+      "domainId": "norgeshistorie",
+      "step": 1,
+      "cardType": "choice",
+      "entityId": "unit:nh-vikingtiden",
+      "collectionIds": [
+        "norgeshistorie"
+      ],
+      "prompt": "Hva var tinget i vikingtiden?",
+      "answer": "En forsamling som løste tvister og vedtok lover",
+      "acceptedAnswers": [],
+      "explanation": "På de store lagtingene ble lovene gjort kjent, konflikter forsøkt løst og konger hyllet. Den verste straffen var å bli dømt fredløs og miste lovens beskyttelse.",
+      "sourceIds": [
+        "core-source:snl-no-vikingtiden",
+        "core-source:snl-no-lindisfarne",
+        "core-source:snl-no-leiv-eiriksson",
+        "core-source:snl-no-osebergskipet"
+      ],
+      "kind": "recognition",
+      "mode": "recognition",
+      "difficulty": 1,
+      "significance": 5,
+      "learningStage": "foundation",
+      "learningProfile": {
+        "reviewed": true,
+        "stage": "foundation",
+        "precision": "broad",
+        "reasoning": "identify"
+      },
+      "factId": "fact:core:nh-vikingtiden-ting",
+      "claimIds": [
+        "fact:core:nh-vikingtiden-ting"
+      ],
+      "retrievalRole": "default",
+      "legacyFactId": "core:nh-vikingtiden-ting",
+      "year": 793,
+      "options": [
+        "En forsamling som løste tvister og vedtok lover",
+        "Kongens personlige livvakt",
+        "Et tempel for de norrøne gudene",
+        "En handelsby ved kysten"
+      ],
+      "difficultyFamily": "core-curriculum",
+      "difficultyReason": "Oversikt: hva, når og hvorfor det betyr noe. Svaret er undervist i emnets innledning.",
+      "difficultyPolicy": "2026-10-11",
+      "precision": "broad",
+      "reasoning": "identify",
+      "learningDepth": "foundation"
+    },
+    {
+      "id": "core:nh-vikingtiden-sprak",
+      "unitId": "nh-vikingtiden",
+      "domainId": "norgeshistorie",
+      "step": 2,
+      "cardType": "text",
+      "entityId": "unit:nh-vikingtiden",
+      "collectionIds": [
+        "norgeshistorie"
+      ],
+      "prompt": "Hva kalles språket som ble snakket i Skandinavia i vikingtiden?",
+      "answer": "Norrønt",
+      "acceptedAnswers": [
+        "norrønt språk",
+        "norrøn",
+        "gammelnorsk",
+        "oldnorsk"
+      ],
+      "explanation": "Norrønt er opphavet til norsk, svensk, dansk, islandsk og færøysk. Islandsk har endret seg minst og ligner fortsatt mye på norrønt.",
+      "sourceIds": [
+        "core-source:snl-no-vikingtiden",
+        "core-source:snl-no-lindisfarne",
+        "core-source:snl-no-leiv-eiriksson",
+        "core-source:snl-no-osebergskipet"
+      ],
+      "kind": "recall",
+      "mode": "recall",
+      "difficulty": 2,
+      "significance": 4,
+      "learningStage": "foundation",
+      "learningProfile": {
+        "reviewed": true,
+        "stage": "foundation",
+        "precision": "broad",
+        "reasoning": "identify"
+      },
+      "factId": "fact:core:nh-vikingtiden-sprak",
+      "claimIds": [
+        "fact:core:nh-vikingtiden-sprak"
+      ],
+      "retrievalRole": "default",
+      "legacyFactId": "core:nh-vikingtiden-sprak",
+      "year": 793,
+      "answerFormat": "short",
+      "difficultyFamily": "core-curriculum",
+      "difficultyReason": "Kjerne: hent fram et sentralt navn, begrep eller sted.",
+      "difficultyPolicy": "2026-10-11",
+      "precision": "broad",
+      "reasoning": "identify",
+      "learningDepth": "foundation"
+    },
+    {
+      "id": "core:nh-vikingtiden-bosetting",
+      "unitId": "nh-vikingtiden",
+      "domainId": "norgeshistorie",
+      "step": 2,
+      "cardType": "choice",
+      "entityId": "unit:nh-vikingtiden",
+      "collectionIds": [
+        "norgeshistorie"
+      ],
+      "prompt": "Hvilke øyer i Nord-Atlanteren bosatte nordmenn seg på i vikingtiden?",
+      "answer": "Island og Grønland",
+      "acceptedAnswers": [],
+      "explanation": "Eirik Raude dro til Grønland i 982 og grunnla en bosetting der. Sønnen hans, Leiv Eiriksson, seilte videre vestover til Vinland i Nord-Amerika omkring år 1000.",
+      "sourceIds": [
+        "core-source:snl-no-vikingtiden",
+        "core-source:snl-no-lindisfarne",
+        "core-source:snl-no-leiv-eiriksson",
+        "core-source:snl-no-osebergskipet"
+      ],
+      "kind": "recognition",
+      "mode": "recognition",
+      "difficulty": 2,
+      "significance": 4,
+      "learningStage": "foundation",
+      "learningProfile": {
+        "reviewed": true,
+        "stage": "foundation",
+        "precision": "broad",
+        "reasoning": "identify"
+      },
+      "factId": "fact:core:nh-vikingtiden-bosetting",
+      "claimIds": [
+        "fact:core:nh-vikingtiden-bosetting"
+      ],
+      "retrievalRole": "default",
+      "legacyFactId": "core:nh-vikingtiden-bosetting",
+      "year": 793,
+      "options": [
+        "Island og Grønland",
+        "Azorene og Kanariøyene",
+        "Sicilia og Sardinia",
+        "Malta og Kypros"
+      ],
+      "difficultyFamily": "core-curriculum",
+      "difficultyReason": "Kjerne: hent fram et sentralt navn, begrep eller sted.",
+      "difficultyPolicy": "2026-10-11",
+      "precision": "broad",
+      "reasoning": "identify",
+      "learningDepth": "foundation"
+    },
+    {
+      "id": "core:nh-vikingtiden-leiv",
+      "unitId": "nh-vikingtiden",
+      "domainId": "norgeshistorie",
+      "step": 2,
+      "cardType": "text",
+      "entityId": "unit:nh-vikingtiden",
+      "collectionIds": [
+        "norgeshistorie"
+      ],
+      "prompt": "Hvem ledet ferden til Vinland i Nord-Amerika omkring år 1000?",
+      "answer": "Leiv Eiriksson",
+      "acceptedAnswers": [
+        "Leif Eriksson",
+        "Leiv Eirikson",
+        "Leif Eiriksson",
+        "Leiv"
+      ],
+      "explanation": "Leiv Eiriksson vokste opp på Grønland. Han og følget hans kan ha vært de første europeerne i Amerika, nesten 500 år før Columbus.",
+      "sourceIds": [
+        "core-source:snl-no-vikingtiden",
+        "core-source:snl-no-lindisfarne",
+        "core-source:snl-no-leiv-eiriksson",
+        "core-source:snl-no-osebergskipet"
+      ],
+      "kind": "recall",
+      "mode": "recall",
+      "difficulty": 2,
+      "significance": 4,
+      "learningStage": "foundation",
+      "learningProfile": {
+        "reviewed": true,
+        "stage": "foundation",
+        "precision": "broad",
+        "reasoning": "identify"
+      },
+      "factId": "fact:core:nh-vikingtiden-leiv",
+      "claimIds": [
+        "fact:core:nh-vikingtiden-leiv"
+      ],
+      "retrievalRole": "default",
+      "legacyFactId": "core:nh-vikingtiden-leiv",
+      "year": 793,
+      "answerFormat": "short",
+      "difficultyFamily": "core-curriculum",
+      "difficultyReason": "Kjerne: hent fram et sentralt navn, begrep eller sted.",
+      "difficultyPolicy": "2026-10-11",
+      "precision": "broad",
+      "reasoning": "identify",
+      "learningDepth": "foundation"
+    },
+    {
+      "id": "core:nh-vikingtiden-oseberg",
+      "unitId": "nh-vikingtiden",
+      "domainId": "norgeshistorie",
+      "step": 2,
+      "cardType": "text",
+      "entityId": "unit:nh-vikingtiden",
+      "collectionIds": [
+        "norgeshistorie"
+      ],
+      "prompt": "Hva heter vikingskipet fra Vestfold som er et av verdens best bevarte, og som ble funnet i en rik grav?",
+      "answer": "Osebergskipet",
+      "acceptedAnswers": [
+        "Oseberg",
+        "Oseberg-skipet"
+      ],
+      "explanation": "Osebergskipet er bygd av eik og er omtrent 22 meter langt. Graven var den rikest utstyrte fra vikingtiden i Europa, og skipet kunne både ros og seiles.",
+      "sourceIds": [
+        "core-source:snl-no-vikingtiden",
+        "core-source:snl-no-lindisfarne",
+        "core-source:snl-no-leiv-eiriksson",
+        "core-source:snl-no-osebergskipet"
+      ],
+      "kind": "recall",
+      "mode": "recall",
+      "difficulty": 2,
+      "significance": 4,
+      "learningStage": "foundation",
+      "learningProfile": {
+        "reviewed": true,
+        "stage": "foundation",
+        "precision": "broad",
+        "reasoning": "identify"
+      },
+      "factId": "fact:core:nh-vikingtiden-oseberg",
+      "claimIds": [
+        "fact:core:nh-vikingtiden-oseberg"
+      ],
+      "retrievalRole": "default",
+      "legacyFactId": "core:nh-vikingtiden-oseberg",
+      "year": 793,
+      "answerFormat": "short",
+      "difficultyFamily": "core-curriculum",
+      "difficultyReason": "Kjerne: hent fram et sentralt navn, begrep eller sted.",
+      "difficultyPolicy": "2026-10-11",
+      "precision": "broad",
+      "reasoning": "identify",
+      "learningDepth": "foundation"
+    },
+    {
+      "id": "core:nh-vikingtiden-hvorfor-klostre",
+      "unitId": "nh-vikingtiden",
+      "domainId": "norgeshistorie",
+      "step": 3,
+      "cardType": "choice",
+      "entityId": "unit:nh-vikingtiden",
+      "collectionIds": [
+        "norgeshistorie"
+      ],
+      "prompt": "Hvorfor var klostre som Lindisfarne attraktive mål for vikingene?",
+      "answer": "De hadde verdisaker og lå ubeskyttet ved kysten",
+      "acceptedAnswers": [],
+      "explanation": "Kristne klostre samlet gull, sølv og bøker. Vikingenes raske skip gjorde det mulig å angripe kystnære mål og forsvinne før forsvar ble organisert.",
+      "sourceIds": [
+        "core-source:snl-no-vikingtiden",
+        "core-source:snl-no-lindisfarne",
+        "core-source:snl-no-leiv-eiriksson",
+        "core-source:snl-no-osebergskipet"
+      ],
+      "kind": "recognition",
+      "mode": "recognition",
+      "difficulty": 3,
+      "significance": 3,
+      "learningStage": "connections",
+      "learningProfile": {
+        "reviewed": true,
+        "stage": "connections",
+        "precision": "broad",
+        "reasoning": "explain"
+      },
+      "factId": "fact:core:nh-vikingtiden-hvorfor-klostre",
+      "claimIds": [
+        "fact:core:nh-vikingtiden-hvorfor-klostre"
+      ],
+      "retrievalRole": "default",
+      "legacyFactId": "core:nh-vikingtiden-hvorfor-klostre",
+      "year": 793,
+      "options": [
+        "De hadde verdisaker og lå ubeskyttet ved kysten",
+        "De var militære festninger med våpenlagre",
+        "Vikingene ville spre kristendommen",
+        "De var sentre for kornhandel med Norden"
+      ],
+      "difficultyFamily": "core-curriculum",
+      "difficultyReason": "Sammenheng: forklar årsaker, følger eller forskjeller.",
+      "difficultyPolicy": "2026-10-11",
+      "precision": "broad",
+      "reasoning": "explain",
+      "learningDepth": "connections"
+    },
+    {
+      "id": "core:nh-vikingtiden-slutt",
+      "unitId": "nh-vikingtiden",
+      "domainId": "norgeshistorie",
+      "step": 3,
+      "cardType": "choice",
+      "entityId": "unit:nh-vikingtiden",
+      "collectionIds": [
+        "norgeshistorie"
+      ],
+      "prompt": "Hva forklarer best at vikingtiden tok slutt?",
+      "answer": "Kristendom, kirke og byvekst knyttet Norden til resten av Europa",
+      "acceptedAnswers": [],
+      "explanation": "Slutten var en gradvis overgang. Svartedauden kom først i 1349, nesten 300 år senere.",
+      "sourceIds": [
+        "core-source:snl-no-vikingtiden",
+        "core-source:snl-no-lindisfarne",
+        "core-source:snl-no-leiv-eiriksson",
+        "core-source:snl-no-osebergskipet"
+      ],
+      "kind": "recognition",
+      "mode": "recognition",
+      "difficulty": 3,
+      "significance": 3,
+      "learningStage": "connections",
+      "learningProfile": {
+        "reviewed": true,
+        "stage": "connections",
+        "precision": "broad",
+        "reasoning": "explain"
+      },
+      "factId": "fact:core:nh-vikingtiden-slutt",
+      "claimIds": [
+        "fact:core:nh-vikingtiden-slutt"
+      ],
+      "retrievalRole": "default",
+      "legacyFactId": "core:nh-vikingtiden-slutt",
+      "year": 793,
+      "options": [
+        "Kristendom, kirke og byvekst knyttet Norden til resten av Europa",
+        "Vikingene tapte ett avgjørende slag mot England",
+        "Skipsbyggingen i Norden stanset helt",
+        "Svartedauden la øde store deler av Norden"
+      ],
+      "difficultyFamily": "core-curriculum",
+      "difficultyReason": "Sammenheng: forklar årsaker, følger eller forskjeller.",
+      "difficultyPolicy": "2026-10-11",
+      "precision": "broad",
+      "reasoning": "explain",
+      "learningDepth": "connections"
+    },
+    {
+      "id": "core:nh-vikingtiden-forklar-skip",
+      "unitId": "nh-vikingtiden",
+      "domainId": "norgeshistorie",
+      "step": 3,
+      "cardType": "explain",
+      "entityId": "unit:nh-vikingtiden",
+      "collectionIds": [
+        "norgeshistorie"
+      ],
+      "prompt": "Forklar hvorfor skipene var avgjørende for vikingenes ferder.",
+      "answer": "Lette, havgående skip kunne både ros og seiles. De tålte åpent hav og kunne gå langt opp elver og inn på grunt vann, så vikingene kunne nå fjerne steder raskt og overraske.",
+      "acceptedAnswers": [],
+      "explanation": "Uten havgående skip ville verken plyndringstokt, handel langs russiske elver eller bosetting på Island vært mulig.",
+      "sourceIds": [
+        "core-source:snl-no-vikingtiden",
+        "core-source:snl-no-lindisfarne",
+        "core-source:snl-no-leiv-eiriksson",
+        "core-source:snl-no-osebergskipet"
+      ],
+      "kind": "connections",
+      "mode": "recall",
+      "difficulty": 3,
+      "significance": 3,
+      "learningStage": "connections",
+      "learningProfile": {
+        "reviewed": true,
+        "stage": "connections",
+        "precision": "broad",
+        "reasoning": "explain"
+      },
+      "factId": "fact:core:nh-vikingtiden-forklar-skip",
+      "claimIds": [
+        "fact:core:nh-vikingtiden-forklar-skip"
+      ],
+      "retrievalRole": "default",
+      "legacyFactId": "core:nh-vikingtiden-forklar-skip",
+      "year": 793,
+      "answerFormat": "explanation",
+      "rubric": [
+        {
+          "id": "nh-vikingtiden-forklar-skip-c0",
+          "text": "Skipene tålte åpent hav"
+        },
+        {
+          "id": "nh-vikingtiden-forklar-skip-c1",
+          "text": "De kunne både ros og seiles"
+        },
+        {
+          "id": "nh-vikingtiden-forklar-skip-c2",
+          "text": "Grunt skrog gav tilgang til elver og strender"
+        }
+      ],
+      "difficultyFamily": "core-curriculum",
+      "difficultyReason": "Sammenheng: forklar årsaker, følger eller forskjeller.",
+      "difficultyPolicy": "2026-10-11",
+      "precision": "broad",
+      "reasoning": "explain",
+      "learningDepth": "connections"
+    },
+    {
+      "id": "core:nh-vikingtiden-aar-lindisfarne",
+      "unitId": "nh-vikingtiden",
+      "domainId": "norgeshistorie",
+      "step": 4,
+      "cardType": "year",
+      "entityId": "unit:nh-vikingtiden",
+      "collectionIds": [
+        "norgeshistorie"
+      ],
+      "prompt": "Hvilket år angrep vikinger Lindisfarne?",
+      "answer": "793",
+      "acceptedAnswers": [],
+      "explanation": "Angrepet skjedde 8. juni 793. Det er den første norske historiske hendelsen som kan tidfestes noenlunde sikkert med skriftlige kilder.",
+      "sourceIds": [
+        "core-source:snl-no-vikingtiden",
+        "core-source:snl-no-lindisfarne",
+        "core-source:snl-no-leiv-eiriksson",
+        "core-source:snl-no-osebergskipet"
+      ],
+      "kind": "recall",
+      "mode": "recall",
+      "difficulty": 4,
+      "significance": 2,
+      "learningStage": "details",
+      "learningProfile": {
+        "reviewed": true,
+        "stage": "details",
+        "precision": "exact",
+        "reasoning": "identify"
+      },
+      "factId": "fact:core:nh-vikingtiden-aar-lindisfarne",
+      "claimIds": [
+        "fact:core:nh-vikingtiden-aar-lindisfarne"
+      ],
+      "retrievalRole": "default",
+      "legacyFactId": "core:nh-vikingtiden-aar-lindisfarne",
+      "year": 793,
+      "answerFormat": "year",
+      "tolerance": 0,
+      "difficultyFamily": "core-curriculum",
+      "difficultyReason": "Detalj: et presist årstall, tall eller navn.",
+      "difficultyPolicy": "2026-10-11",
+      "precision": "exact",
+      "reasoning": "identify",
+      "learningDepth": "details"
+    },
+    {
+      "id": "core:nh-vikingtiden-treller",
+      "unitId": "nh-vikingtiden",
+      "domainId": "norgeshistorie",
+      "step": 4,
+      "cardType": "choice",
+      "entityId": "unit:nh-vikingtiden",
+      "collectionIds": [
+        "norgeshistorie"
+      ],
+      "prompt": "Omtrent hvor stor del av befolkningen kan ha vært treller (ufrie) i vikingtiden?",
+      "answer": "En fjerdedel til en tredjedel",
+      "acceptedAnswers": [],
+      "explanation": "Treller var ufrie og ble behandlet som eiendom. De var en viktig del av arbeidskraften på gårdene, og plyndringstokt skaffet nye treller.",
+      "sourceIds": [
+        "core-source:snl-no-vikingtiden",
+        "core-source:snl-no-lindisfarne",
+        "core-source:snl-no-leiv-eiriksson",
+        "core-source:snl-no-osebergskipet"
+      ],
+      "kind": "recognition",
+      "mode": "recognition",
+      "difficulty": 4,
+      "significance": 2,
+      "learningStage": "details",
+      "learningProfile": {
+        "reviewed": true,
+        "stage": "details",
+        "precision": "broad",
+        "reasoning": "identify"
+      },
+      "factId": "fact:core:nh-vikingtiden-treller",
+      "claimIds": [
+        "fact:core:nh-vikingtiden-treller"
+      ],
+      "retrievalRole": "default",
+      "legacyFactId": "core:nh-vikingtiden-treller",
+      "year": 793,
+      "options": [
+        "En fjerdedel til en tredjedel",
+        "Under en av hundre",
+        "Omtrent halvparten",
+        "Tre av fire"
+      ],
+      "difficultyFamily": "core-curriculum",
+      "difficultyReason": "Detalj: et presist årstall, tall eller navn.",
+      "difficultyPolicy": "2026-10-11",
+      "precision": "broad",
+      "reasoning": "identify",
+      "learningDepth": "details"
     }
   ],
   "sources": [
@@ -199284,6 +199922,30 @@
       "title": "Barack Obama – presidentbiblioteket",
       "url": "https://www.obamalibrary.gov/obamas/president-barack-obama",
       "license": "Kun fakta og egne sammendrag. Kildetekst og medier videreformidles ikke."
+    },
+    {
+      "id": "core-source:snl-no-vikingtiden",
+      "title": "Vikingtiden – Store norske leksikon",
+      "url": "https://snl.no/vikingtiden",
+      "license": "Fakta og egne formuleringer. Kildeteksten gjengis ikke."
+    },
+    {
+      "id": "core-source:snl-no-lindisfarne",
+      "title": "Lindisfarne – Store norske leksikon",
+      "url": "https://snl.no/Lindisfarne",
+      "license": "Fakta og egne formuleringer. Kildeteksten gjengis ikke."
+    },
+    {
+      "id": "core-source:snl-no-leiv-eiriksson",
+      "title": "Leiv Eiriksson – Store norske leksikon",
+      "url": "https://snl.no/Leiv_Eiriksson",
+      "license": "Fakta og egne formuleringer. Kildeteksten gjengis ikke."
+    },
+    {
+      "id": "core-source:snl-no-osebergskipet",
+      "title": "Osebergskipet – Store norske leksikon",
+      "url": "https://snl.no/Osebergskipet",
+      "license": "Fakta og egne formuleringer. Kildeteksten gjengis ikke."
     }
   ],
   "timelines": [
@@ -200007,9 +200669,9 @@
       ]
     }
   ],
-  "entityCount": 3178,
+  "entityCount": 3179,
   "relationshipCount": 6446,
-  "targetCount": 808,
+  "targetCount": 820,
   "compatibility": {
     "minSchemaVersion": 1,
     "maxSchemaVersion": 1
@@ -321552,6 +322214,186 @@
         "presidents-timeline"
       ],
       "evidenceStatus": "documented"
+    },
+    {
+      "id": "fact:core:nh-vikingtiden-periode",
+      "entityIds": [
+        "unit:nh-vikingtiden"
+      ],
+      "relationshipIds": [],
+      "statement": "Vikingtiden strekker seg over omtrent 250 år, mellom yngre jernalder og middelalderen. Mye av det vi vet, kommer fra gravfunn som Osebergskipet i Vestfold.",
+      "sourceIds": [
+        "core-source:snl-no-vikingtiden",
+        "core-source:snl-no-lindisfarne",
+        "core-source:snl-no-leiv-eiriksson",
+        "core-source:snl-no-osebergskipet"
+      ],
+      "evidenceStatus": "documented"
+    },
+    {
+      "id": "fact:core:nh-vikingtiden-lindisfarne",
+      "entityIds": [
+        "unit:nh-vikingtiden"
+      ],
+      "relationshipIds": [],
+      "statement": "Klosteret på Lindisfarne i Nord-England var et rikt lærdomssete. Klostre var lette mål fordi de hadde verdier og lå ubeskyttet ved kysten.",
+      "sourceIds": [
+        "core-source:snl-no-vikingtiden",
+        "core-source:snl-no-lindisfarne",
+        "core-source:snl-no-leiv-eiriksson",
+        "core-source:snl-no-osebergskipet"
+      ],
+      "evidenceStatus": "documented"
+    },
+    {
+      "id": "fact:core:nh-vikingtiden-ting",
+      "entityIds": [
+        "unit:nh-vikingtiden"
+      ],
+      "relationshipIds": [],
+      "statement": "På de store lagtingene ble lovene gjort kjent, konflikter forsøkt løst og konger hyllet. Den verste straffen var å bli dømt fredløs og miste lovens beskyttelse.",
+      "sourceIds": [
+        "core-source:snl-no-vikingtiden",
+        "core-source:snl-no-lindisfarne",
+        "core-source:snl-no-leiv-eiriksson",
+        "core-source:snl-no-osebergskipet"
+      ],
+      "evidenceStatus": "documented"
+    },
+    {
+      "id": "fact:core:nh-vikingtiden-sprak",
+      "entityIds": [
+        "unit:nh-vikingtiden"
+      ],
+      "relationshipIds": [],
+      "statement": "Norrønt er opphavet til norsk, svensk, dansk, islandsk og færøysk. Islandsk har endret seg minst og ligner fortsatt mye på norrønt.",
+      "sourceIds": [
+        "core-source:snl-no-vikingtiden",
+        "core-source:snl-no-lindisfarne",
+        "core-source:snl-no-leiv-eiriksson",
+        "core-source:snl-no-osebergskipet"
+      ],
+      "evidenceStatus": "documented"
+    },
+    {
+      "id": "fact:core:nh-vikingtiden-bosetting",
+      "entityIds": [
+        "unit:nh-vikingtiden"
+      ],
+      "relationshipIds": [],
+      "statement": "Eirik Raude dro til Grønland i 982 og grunnla en bosetting der. Sønnen hans, Leiv Eiriksson, seilte videre vestover til Vinland i Nord-Amerika omkring år 1000.",
+      "sourceIds": [
+        "core-source:snl-no-vikingtiden",
+        "core-source:snl-no-lindisfarne",
+        "core-source:snl-no-leiv-eiriksson",
+        "core-source:snl-no-osebergskipet"
+      ],
+      "evidenceStatus": "documented"
+    },
+    {
+      "id": "fact:core:nh-vikingtiden-leiv",
+      "entityIds": [
+        "unit:nh-vikingtiden"
+      ],
+      "relationshipIds": [],
+      "statement": "Leiv Eiriksson vokste opp på Grønland. Han og følget hans kan ha vært de første europeerne i Amerika, nesten 500 år før Columbus.",
+      "sourceIds": [
+        "core-source:snl-no-vikingtiden",
+        "core-source:snl-no-lindisfarne",
+        "core-source:snl-no-leiv-eiriksson",
+        "core-source:snl-no-osebergskipet"
+      ],
+      "evidenceStatus": "documented"
+    },
+    {
+      "id": "fact:core:nh-vikingtiden-oseberg",
+      "entityIds": [
+        "unit:nh-vikingtiden"
+      ],
+      "relationshipIds": [],
+      "statement": "Osebergskipet er bygd av eik og er omtrent 22 meter langt. Graven var den rikest utstyrte fra vikingtiden i Europa, og skipet kunne både ros og seiles.",
+      "sourceIds": [
+        "core-source:snl-no-vikingtiden",
+        "core-source:snl-no-lindisfarne",
+        "core-source:snl-no-leiv-eiriksson",
+        "core-source:snl-no-osebergskipet"
+      ],
+      "evidenceStatus": "documented"
+    },
+    {
+      "id": "fact:core:nh-vikingtiden-hvorfor-klostre",
+      "entityIds": [
+        "unit:nh-vikingtiden"
+      ],
+      "relationshipIds": [],
+      "statement": "Kristne klostre samlet gull, sølv og bøker. Vikingenes raske skip gjorde det mulig å angripe kystnære mål og forsvinne før forsvar ble organisert.",
+      "sourceIds": [
+        "core-source:snl-no-vikingtiden",
+        "core-source:snl-no-lindisfarne",
+        "core-source:snl-no-leiv-eiriksson",
+        "core-source:snl-no-osebergskipet"
+      ],
+      "evidenceStatus": "documented"
+    },
+    {
+      "id": "fact:core:nh-vikingtiden-slutt",
+      "entityIds": [
+        "unit:nh-vikingtiden"
+      ],
+      "relationshipIds": [],
+      "statement": "Slutten var en gradvis overgang. Svartedauden kom først i 1349, nesten 300 år senere.",
+      "sourceIds": [
+        "core-source:snl-no-vikingtiden",
+        "core-source:snl-no-lindisfarne",
+        "core-source:snl-no-leiv-eiriksson",
+        "core-source:snl-no-osebergskipet"
+      ],
+      "evidenceStatus": "documented"
+    },
+    {
+      "id": "fact:core:nh-vikingtiden-forklar-skip",
+      "entityIds": [
+        "unit:nh-vikingtiden"
+      ],
+      "relationshipIds": [],
+      "statement": "Uten havgående skip ville verken plyndringstokt, handel langs russiske elver eller bosetting på Island vært mulig.",
+      "sourceIds": [
+        "core-source:snl-no-vikingtiden",
+        "core-source:snl-no-lindisfarne",
+        "core-source:snl-no-leiv-eiriksson",
+        "core-source:snl-no-osebergskipet"
+      ],
+      "evidenceStatus": "documented"
+    },
+    {
+      "id": "fact:core:nh-vikingtiden-aar-lindisfarne",
+      "entityIds": [
+        "unit:nh-vikingtiden"
+      ],
+      "relationshipIds": [],
+      "statement": "Angrepet skjedde 8. juni 793. Det er den første norske historiske hendelsen som kan tidfestes noenlunde sikkert med skriftlige kilder.",
+      "sourceIds": [
+        "core-source:snl-no-vikingtiden",
+        "core-source:snl-no-lindisfarne",
+        "core-source:snl-no-leiv-eiriksson",
+        "core-source:snl-no-osebergskipet"
+      ],
+      "evidenceStatus": "documented"
+    },
+    {
+      "id": "fact:core:nh-vikingtiden-treller",
+      "entityIds": [
+        "unit:nh-vikingtiden"
+      ],
+      "relationshipIds": [],
+      "statement": "Treller var ufrie og ble behandlet som eiendom. De var en viktig del av arbeidskraften på gårdene, og plyndringstokt skaffet nye treller.",
+      "sourceIds": [
+        "core-source:snl-no-vikingtiden",
+        "core-source:snl-no-lindisfarne",
+        "core-source:snl-no-leiv-eiriksson",
+        "core-source:snl-no-osebergskipet"
+      ],
+      "evidenceStatus": "documented"
     }
   ],
   "exerciseFacts": {
@@ -327613,6 +328455,90 @@
         "fact:foundation:period:joe-biden"
       ],
       "retrievalRole": "default"
+    },
+    "core:nh-vikingtiden-periode": {
+      "factId": "fact:core:nh-vikingtiden-periode",
+      "claimIds": [
+        "fact:core:nh-vikingtiden-periode"
+      ],
+      "retrievalRole": "default"
+    },
+    "core:nh-vikingtiden-lindisfarne": {
+      "factId": "fact:core:nh-vikingtiden-lindisfarne",
+      "claimIds": [
+        "fact:core:nh-vikingtiden-lindisfarne"
+      ],
+      "retrievalRole": "default"
+    },
+    "core:nh-vikingtiden-ting": {
+      "factId": "fact:core:nh-vikingtiden-ting",
+      "claimIds": [
+        "fact:core:nh-vikingtiden-ting"
+      ],
+      "retrievalRole": "default"
+    },
+    "core:nh-vikingtiden-sprak": {
+      "factId": "fact:core:nh-vikingtiden-sprak",
+      "claimIds": [
+        "fact:core:nh-vikingtiden-sprak"
+      ],
+      "retrievalRole": "default"
+    },
+    "core:nh-vikingtiden-bosetting": {
+      "factId": "fact:core:nh-vikingtiden-bosetting",
+      "claimIds": [
+        "fact:core:nh-vikingtiden-bosetting"
+      ],
+      "retrievalRole": "default"
+    },
+    "core:nh-vikingtiden-leiv": {
+      "factId": "fact:core:nh-vikingtiden-leiv",
+      "claimIds": [
+        "fact:core:nh-vikingtiden-leiv"
+      ],
+      "retrievalRole": "default"
+    },
+    "core:nh-vikingtiden-oseberg": {
+      "factId": "fact:core:nh-vikingtiden-oseberg",
+      "claimIds": [
+        "fact:core:nh-vikingtiden-oseberg"
+      ],
+      "retrievalRole": "default"
+    },
+    "core:nh-vikingtiden-hvorfor-klostre": {
+      "factId": "fact:core:nh-vikingtiden-hvorfor-klostre",
+      "claimIds": [
+        "fact:core:nh-vikingtiden-hvorfor-klostre"
+      ],
+      "retrievalRole": "default"
+    },
+    "core:nh-vikingtiden-slutt": {
+      "factId": "fact:core:nh-vikingtiden-slutt",
+      "claimIds": [
+        "fact:core:nh-vikingtiden-slutt"
+      ],
+      "retrievalRole": "default"
+    },
+    "core:nh-vikingtiden-forklar-skip": {
+      "factId": "fact:core:nh-vikingtiden-forklar-skip",
+      "claimIds": [
+        "fact:core:nh-vikingtiden-forklar-skip"
+      ],
+      "retrievalRole": "default"
+    },
+    "core:nh-vikingtiden-aar-lindisfarne": {
+      "factId": "fact:core:nh-vikingtiden-aar-lindisfarne",
+      "claimIds": [
+        "fact:core:nh-vikingtiden-aar-lindisfarne"
+      ],
+      "retrievalRole": "default"
+    },
+    "core:nh-vikingtiden-treller": {
+      "factId": "fact:core:nh-vikingtiden-treller",
+      "claimIds": [
+        "fact:core:nh-vikingtiden-treller"
+      ],
+      "retrievalRole": "default"
     }
   },
   "learningObjectives": [
@@ -327963,5 +328889,66 @@
         "jefferson-explain"
       ]
     }
-  ]
+  ],
+  "curriculum": {
+    "version": 1,
+    "domains": [
+      {
+        "id": "norgeshistorie",
+        "title": "Norgeshistorie",
+        "subject": "history",
+        "description": "Fra de første menneskene etter istiden til oljealderen: hendelsene og prosessene som formet Norge.",
+        "order": 1,
+        "unitIds": [
+          "nh-vikingtiden"
+        ]
+      }
+    ],
+    "units": [
+      {
+        "id": "nh-vikingtiden",
+        "domainId": "norgeshistorie",
+        "title": "Vikingtiden",
+        "tier": 1,
+        "order": 0,
+        "prerequisites": [],
+        "summary": "Perioden da skandinaver reiste ut som plyndrere, handelsfolk og nybyggere, og Norden ble en del av Europa.",
+        "lesson": [
+          "Vikingtiden er perioden fra omkring 800 til omkring 1050. Den knyttes ofte til angrepet på klosteret Lindisfarne i Nord-England i 793, den første norske hendelsen som kan tidfestes noenlunde sikkert i skriftlige kilder.",
+          "Skandinaver dro ut med havgående skip, både for å plyndre, handle og bosette seg. Nordmenn slo seg ned på Island, Grønland og de britiske øyer. Hjemme var gården den viktigste enheten. Kanskje en fjerdedel til en tredjedel av folket var treller, ufrie mennesker som ble behandlet som eiendom. Frie menn møttes på tinget for å avgjøre tvister og vedta lover.",
+          "Perioden tok slutt gjennom lange prosesser snarere enn ett slag: kristendommen og kirken fikk fotfeste, byer vokste fram og kongedømmene ble en del av det kristne Europa. Språket var norrønt."
+        ],
+        "keyPoints": [
+          "Omkring 800–1050; Lindisfarne 793 regnes ofte som starten.",
+          "Vikingene plyndret, handlet og bosatte seg – fra Nord-Amerika til Russland.",
+          "Tinget løste konflikter og vedtok lover; gården var samfunnets kjerne.",
+          "Slutten kom med kristendom, kirkeorganisasjon og byvekst."
+        ],
+        "years": {
+          "from": 793,
+          "to": 1066
+        },
+        "sourceIds": [
+          "core-source:snl-no-vikingtiden",
+          "core-source:snl-no-lindisfarne",
+          "core-source:snl-no-leiv-eiriksson",
+          "core-source:snl-no-osebergskipet"
+        ],
+        "cardIds": [
+          "core:nh-vikingtiden-periode",
+          "core:nh-vikingtiden-lindisfarne",
+          "core:nh-vikingtiden-ting",
+          "core:nh-vikingtiden-sprak",
+          "core:nh-vikingtiden-bosetting",
+          "core:nh-vikingtiden-leiv",
+          "core:nh-vikingtiden-oseberg",
+          "core:nh-vikingtiden-hvorfor-klostre",
+          "core:nh-vikingtiden-slutt",
+          "core:nh-vikingtiden-forklar-skip",
+          "core:nh-vikingtiden-aar-lindisfarne",
+          "core:nh-vikingtiden-treller"
+        ]
+      }
+    ]
+  }
 }

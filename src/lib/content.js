@@ -1,7 +1,7 @@
 import {validateCurriculum} from './connected-learning.js';
 import {validateKnowledgeModel} from './knowledge-model.js';
 /** Validate a complete package before it can replace an installed version. */
-function validateKnowledge(data) {
+export function validateKnowledge(data) {
   const errors = [];
   const warnings = [];
   if (!data || typeof data !== 'object') return { valid: false, errors: ['Package must be an object.'], warnings, counts: {} };
@@ -94,6 +94,23 @@ function validateKnowledge(data) {
   }
   const counts = Object.fromEntries(sections.map(x => [x, maps[x].size]));
   for (const [key, section] of [['entityCount','entities'],['relationshipCount','relationships'],['targetCount','targets']]) if (data[key] !== undefined && data[key] !== counts[section]) errors.push(`${key} disagrees with contents.`);
+  if (data.curriculum !== undefined) {
+    const curriculum = data.curriculum;
+    if (!curriculum || !Array.isArray(curriculum.domains) || !Array.isArray(curriculum.units)) errors.push('Curriculum must list domains and units.');
+    else {
+      const unitIds = new Set(curriculum.units.map(unit => unit?.id));
+      if (unitIds.size !== curriculum.units.length) errors.push('Curriculum: duplicate unit ID.');
+      for (const domain of curriculum.domains) {
+        if (!maps.collections.has(domain?.id)) errors.push(`Curriculum: unknown domain collection ${domain?.id}.`);
+        for (const id of domain?.unitIds || []) if (!unitIds.has(id)) errors.push(`Curriculum ${domain.id}: unknown unit ${id}.`);
+      }
+      for (const unit of curriculum.units) {
+        if (!unit?.title || !Array.isArray(unit.lesson) || !unit.lesson.length || !Array.isArray(unit.cardIds) || !unit.cardIds.length) { errors.push(`Curriculum ${unit?.id}: incomplete unit.`); continue; }
+        for (const id of unit.cardIds) if (maps.targets.get(id)?.unitId !== unit.id) errors.push(`Curriculum ${unit.id}: unknown card ${id}.`);
+        for (const id of unit.prerequisites || []) if (!unitIds.has(id)) errors.push(`Curriculum ${unit.id}: unknown prerequisite ${id}.`);
+      }
+    }
+  }
   errors.push(...validateKnowledgeModel(data),...validateCurriculum(data));
   return { valid: errors.length === 0, errors, warnings, counts };
 }
