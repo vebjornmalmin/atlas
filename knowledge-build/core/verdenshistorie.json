@@ -16,17 +16,17 @@
         "from": -3600,
         "to": -1046
       },
-      "summary": "Jordbruket gjorde fast bosetting mulig, og langs store elver i Midtøsten, India og Kina vokste de første byene, statene og skriftsystemene fram.",
+      "summary": "Jordbruket forklarer hvorfor de første byene, statene og skriftsystemene vokste fram langs store elver i Midtøsten, India og Kina.",
       "lesson": [
-        "Jordbruket begynte i den fruktbare halvmåne, en landstripe fra Israel og Palestina via Syria og Sør-Tyrkia til Irak og Iran. For omkring 12 000 år siden begynte folk her å dyrke bygg og hvete, og senere holdt de husdyr. Overgangen tok flere tusen år og markerer starten på yngre steinalder. Ved Huangelva i Nord-Kina ble hirse dyrket for om lag 10 000 år siden.",
-        "Mesopotamia, landet mellom elvene Eufrat og Tigris i dagens Irak, fikk noen av de første byene. Fra omkring 3600 fvt. vokste det fram selvstendige bystater, blant dem Uruk og Ur i Sumer. Her oppstod kileskriften mellom 3600 og 3000 fvt. Den ble skrevet på leirtavler, som har bevart alt fra regnskap og kongelister til heltediktet om Gilgamesj.",
-        "Egypt langs Nilen ble samlet under én konge omkring 2900 fvt. Kongene, faraoene, ble regnet som solgudens sønner. I det gamle riket ble de store pyramidene bygd som gravmonumenter, og egypterne skrev med hieroglyfer. Ved Indus oppstod byer og skrift i tredje årtusen fvt., og i Kina gir Shang-dynastiet de første sikre skriftlige kildene i andre årtusen fvt."
+        "Jordbruket begynte i Den fruktbare halvmåne, en landstripe fra Israel og Palestina via Syria og Sør-Tyrkia til Irak og Iran. For omkring 12 000 år siden begynte folk her å dyrke bygg og hvete, og senere holdt de husdyr. Overgangen tok flere tusen år og markerer starten på yngre steinalder. Ved Huang He i Nord-Kina ble hirse dyrket for om lag 10 000 år siden.",
+        "Mesopotamia, landet mellom elvene Eufrat og Tigris i dagens Irak, fikk noen av de første byene. Fra omkring 3600 f.Kr. vokste det fram selvstendige bystater, blant dem Uruk og Ur i Sumer. Her oppsto kileskriften mellom 3600 og 3000 f.Kr. Den ble skrevet på leirtavler, som har bevart alt fra regnskap og kongelister til heltediktet om Gilgamesj.",
+        "Egypt langs Nilen ble samlet under én konge omkring 2900 f.Kr. Kongene, faraoene, ble regnet som solgudens sønner. I Det gamle riket ble de store pyramidene bygd som gravmonumenter, og egypterne skrev med hieroglyfer. Ved Indus oppsto byer og skrift i det tredje årtusen f.Kr. I Kina er Shang-dynastiet i det andre årtusen f.Kr. det første med sikre skriftlige kilder."
       ],
       "keyPoints": [
-        "Jordbruket begynte i den fruktbare halvmåne for omkring 12 000 år siden.",
+        "Jordbruket begynte i Den fruktbare halvmåne for omkring 12 000 år siden.",
         "Mesopotamia mellom Eufrat og Tigris fikk de første bystatene og kileskriften.",
-        "Egypt ble samlet omkring 2900 fvt. og styrt av faraoer; pyramidene var kongegraver.",
-        "Ved Indus og i Kina oppstod byer og skrift uavhengig av Mesopotamia."
+        "Egypt ble samlet omkring 2900 f.Kr. og styrt av faraoer, og pyramidene var kongegraver.",
+        "Ved Indus og i Kina oppsto byer og skrift uavhengig av Mesopotamia."
       ],
       "sources": [
         {
@@ -52,11 +52,11 @@
           "step": 1,
           "type": "choice",
           "prompt": "Hvor begynte folk først å dyrke korn?",
-          "answer": "I den fruktbare halvmåne",
+          "answer": "I Den fruktbare halvmåne",
           "distractors": [
             "I Nildeltaet i Egypt",
             "Langs Indus i Pakistan",
-            "Ved Huangelva i Kina"
+            "Ved Huang He i Kina"
           ],
           "explain": "Med jordbruket ble fast bosetting i landsbyer mer utbredt. Kornslagene og husdyrene spredte seg derfra til Mesopotamia, Iran, India, Europa og Nord-Afrika."
         },
@@ -71,7 +71,7 @@
             "Nilen og Jordan",
             "Donau og Rhinen"
           ],
-          "explain": "Området tilsvarer omtrent dagens Irak, nordøstlige Syria og sørøstlige Tyrkia. Utenom dyrkingsjord og vann var det nesten uten naturressurser: stein, tømmer og metaller måtte importeres."
+          "explain": "Området tilsvarer omtrent dagens Irak, nordøstlige Syria og sørøstlige Tyrkia. Bortsett fra dyrkingsjord og vann hadde området nesten ingen naturressurser. Stein, tømmer og metaller måtte importeres."
         },
         {
           "id": "vh-forste-sivilisasjoner-farao",
@@ -103,13 +103,13 @@
           "id": "vh-forste-sivilisasjoner-kileskrift",
           "step": 2,
           "type": "text",
-          "prompt": "Hva heter skriftsystemet som oppstod i Mesopotamia og ble skrevet på leirtavler?",
+          "prompt": "Hva heter skriftsystemet som oppsto i Mesopotamia og ble skrevet på leirtavler?",
           "answer": "Kileskrift",
           "accept": [
             "kileskriften",
             "kileskrifta"
           ],
-          "explain": "Skriften ble overtatt av en rekke av nabokulturene. De første som brukte den fullt ut, skrev sumerisk, men om sumererne selv fant den opp, er omstridt."
+          "explain": "Mange nabokulturer tok skriften i bruk. De første som brukte den fullt ut, skrev sumerisk. Om sumererne selv fant den opp, er omstridt."
         },
         {
           "id": "vh-forste-sivilisasjoner-hieroglyfer",
@@ -123,7 +123,7 @@
             "hieroglyfskrift",
             "hieroglyffer"
           ],
-          "explain": "Hieroglyfene ble tydet tidlig på 1800-tallet av franskmannen Jean-François Champollion. Det gammelegyptiske språket døde ut på 700-tallet evt."
+          "explain": "Hieroglyfene ble tydet tidlig på 1800-tallet av franskmannen Jean-François Champollion. Det gammelegyptiske språket døde ut på 700-tallet e.Kr."
         },
         {
           "id": "vh-forste-sivilisasjoner-nilen",
@@ -146,14 +146,14 @@
             "Shang-dynastiet",
             "Shangdynastiet"
           ],
-          "explain": "De eldste kinesiske skrifttegnene står på såkalte orakelbein fra Shang-tiden. Dynastiet regnes som høydepunktet for kinesisk bronsestøping og tok slutt omkring 1046 fvt."
+          "explain": "De eldste kinesiske skrifttegnene står på såkalte orakelbein fra Shang-tiden. Dynastiet regnes som høydepunktet for kinesisk bronsestøping og tok slutt omkring 1046 f.Kr."
         },
         {
           "id": "vh-forste-sivilisasjoner-hvorfor-elver",
           "step": 3,
           "type": "choice",
-          "prompt": "Hvorfor oppstod de første sivilisasjonene langs store elver?",
-          "answer": "Elvene gav vann og fruktbar jord til jordbruket",
+          "prompt": "Hvorfor oppsto de første sivilisasjonene langs store elver?",
+          "answer": "Elvene ga vann og fruktbar jord til jordbruket",
           "distractors": [
             "Elvene beskyttet mot alle fiender",
             "Elvene førte gull og sølv med seg",
@@ -180,17 +180,17 @@
               "right": "Tegn på orakelbein"
             }
           ],
-          "explain": "Skrift oppstod flere steder uavhengig av hverandre. I Mesopotamia ble den brukt til regnskap, kongelister og lover, men også til bønner, myter og heltedikt."
+          "explain": "Skrift oppsto flere steder uavhengig av hverandre. I Mesopotamia ble den brukt til regnskap, kongelister og lover, men også til bønner, myter og heltedikt."
         },
         {
           "id": "vh-forste-sivilisasjoner-forklar-byer",
           "step": 3,
           "type": "explain",
           "prompt": "Forklar hvordan jordbruket la grunnlaget for de første byene og statene.",
-          "answer": "Jordbruk og husdyrhold gjorde at folk kunne bo fast og skaffe mer mat. Landsbyene vokste, og langs elvene ble det bygd felles anlegg for kunstvanning og flomkontroll. Etter hvert oppstod byer med konger, templer, administrasjon og skrift.",
+          "answer": "Jordbruk og husdyrhold gjorde at folk kunne bo fast og skaffe mer mat. Landsbyene vokste, og langs elvene ble det bygd felles anlegg for kunstvanning og flomkontroll. Etter hvert oppsto byer med konger, templer, administrasjon og skrift.",
           "checklist": [
             "Jordbruk gjorde fast bosetting mulig",
-            "Mer mat gav større landsbyer",
+            "Mer mat ga større landsbyer",
             "Felles kunstvanning langs elvene",
             "Byer med styre, templer og skrift"
           ],
@@ -201,39 +201,39 @@
           "step": 4,
           "type": "choice",
           "prompt": "Omtrent når ble Egypt samlet under én konge?",
-          "answer": "Omkring 2900 fvt.",
+          "answer": "Omkring 2900 f.Kr.",
           "distractors": [
-            "Omkring 4500 fvt.",
-            "Omkring 1500 fvt.",
-            "Omkring 500 fvt."
+            "Omkring 4500 f.Kr.",
+            "Omkring 1500 f.Kr.",
+            "Omkring 500 f.Kr."
           ],
-          "explain": "Egypt ble samlet tidlig, mens Mesopotamia lenge besto av løst tilknyttede bystater. Den gammelegyptiske historien varte i nesten 3000 år, til romerne erobret landet i år 30 fvt."
+          "explain": "Egypt ble samlet tidlig, mens Mesopotamia lenge besto av løst tilknyttede bystater. Den gammelegyptiske historien varte i nesten 3000 år, til romerne erobret landet i år 30 f.Kr."
         },
         {
           "id": "vh-forste-sivilisasjoner-kheops",
           "step": 4,
           "type": "choice",
-          "prompt": "Hvilken farao er særlig kjent for sin store pyramide fra det gamle riket?",
+          "prompt": "Hvilken farao er særlig kjent for sin store pyramide fra Det gamle riket?",
           "answer": "Kheops",
           "distractors": [
             "Tutankhamon",
             "Hatshepsut",
             "Kleopatra"
           ],
-          "explain": "Det gamle riket (om lag 2543–2120 fvt.) var pyramidenes tid. Forskerne diskuterer fortsatt hvordan egypterne bygde Kheops' pyramide med datidens hjelpemidler."
+          "explain": "Det gamle riket (om lag 2543–2120 f.Kr.) var pyramidenes tid. Forskerne diskuterer fortsatt hvordan egypterne bygde Kheops' pyramide med datidens hjelpemidler."
         },
         {
           "id": "vh-forste-sivilisasjoner-tidspunkt-jordbruk",
           "step": 4,
           "type": "choice",
-          "prompt": "Omtrent når begynte folk i den fruktbare halvmåne å dyrke korn?",
+          "prompt": "Omtrent når begynte folk i Den fruktbare halvmåne å dyrke korn?",
           "answer": "For omkring 12 000 år siden",
           "distractors": [
             "For omkring 50 000 år siden",
             "For omkring 5000 år siden",
             "For omkring 2500 år siden"
           ],
-          "explain": "Husdyrhold med geit, sau, svin og storfe kom fra omkring 10 000 år siden. I Kina ble ris dyrket ved Chang Jiang omtrent like tidlig som hirse ved Huangelva."
+          "explain": "Husdyrhold med geit, sau, svin og storfe kom fra omkring 10 000 år siden. I Kina ble ris dyrket ved Chang Jiang omtrent like tidlig som hirse ved Huang He."
         }
       ]
     },
@@ -248,18 +248,18 @@
         "from": -800,
         "to": -323
       },
-      "summary": "De greske bystatene skapte demokrati, filosofi og idrettsleker som fortsatt preger Europa, før Aleksander den store spredte gresk kultur mot øst.",
+      "summary": "Antikkens Hellas er opphavet til demokratiet, filosofien og idrettslekene som fortsatt preger Europa.",
       "lesson": [
-        "Etter 800 fvt. vokste det fram hundrevis av selvstyrte bystater i Hellas, hver kalt en polis. Grekerne grunnla kolonier rundt Middelhavet og Svartehavet. Tilhørigheten til egen bystat var viktigst, men grekerne delte språk, guder og helligdommer som Olympia, der de olympiske leker ble holdt hvert fjerde år.",
-        "Athen og Sparta ble de mektigste. Athen innførte demokrati i 508/507 fvt., måtte importere korn sjøveien og bygde en stor flåte. Sparta var en landmakt styrt av et fåtall, og ufrie heloter dyrket jorden. Da Athen støttet et gresk opprør i Lilleasia, svarte Perserriket med invasjoner, perserkrigene. Grekerne slo dem tilbake, blant annet ved Marathon i 490 fvt. og Salamis i 480 fvt.",
-        "Under Perikles på 400-tallet fvt. var Athen sentrum for drama, filosofi og byggverk som Parthenon. Byen fostret Sokrates, og senere virket Platon og Aristoteles der. I 338 fvt. tok kong Filip 2. av Makedonia kontroll over Hellas. Sønnen hans, Aleksander den store, som hadde hatt Aristoteles som lærer, erobret Perserriket helt til Indus."
+        "Etter 800 f.Kr. vokste det fram hundrevis av selvstyrte bystater i Hellas. En slik bystat ble kalt en polis. Grekerne grunnla kolonier rundt Middelhavet og Svartehavet. Tilhørigheten til egen bystat var viktigst. Likevel delte grekerne språk, guder og helligdommer som Olympia, der de olympiske leker ble holdt hvert fjerde år.",
+        "Athen og Sparta ble de mektigste. Athen innførte demokrati i 508/507 f.Kr. Byen måtte importere korn sjøveien og bygde en stor flåte. Sparta var en landmakt styrt av et fåtall, og ufrie heloter dyrket jorden. Da Athen støttet et gresk opprør i Lilleasia, svarte Perserriket med invasjoner, de såkalte perserkrigene. Grekerne slo dem tilbake, blant annet ved Marathon i 490 f.Kr. og Salamis i 480 f.Kr.",
+        "Under Perikles på 400-tallet f.Kr. var Athen sentrum for drama, filosofi og byggverk som Parthenon. Byen fostret Sokrates, og senere virket Platon og Aristoteles der. I 338 f.Kr. tok kong Filip 2. av Makedonia kontroll over Hellas. Sønnen hans, Aleksander den store, som hadde hatt Aristoteles som lærer, erobret Perserriket helt til Indus."
       ],
       "keyPoints": [
         "Hellas besto av mange selvstendige bystater (poleis).",
-        "Athen ble et demokrati i 508/507 fvt.; Sparta var et oligarki og en landmakt.",
-        "Grekerne slo tilbake perserne i 490 og 480–479 fvt.",
+        "Athen ble et demokrati i 508/507 f.Kr., mens Sparta var et oligarki og en landmakt.",
+        "Grekerne slo tilbake perserne i 490 og 480–479 f.Kr.",
         "Athen var sentrum for filosofer som Sokrates, Platon og Aristoteles.",
-        "Aleksander den store spredte gresk kultur til Egypt og Asia, det som kalles hellenismen."
+        "Aleksander den store spredte gresk kultur til Egypt og Asia, og dette kulturfellesskapet kalles hellenismen."
       ],
       "sources": [
         {
@@ -297,20 +297,20 @@
           "id": "vh-antikkens-hellas-demokrati",
           "step": 1,
           "type": "choice",
-          "prompt": "Hvilken styreform innførte Athen like før 500 fvt.?",
+          "prompt": "Hvilken styreform innførte Athen like før 500 f.Kr.?",
           "answer": "Demokrati",
           "distractors": [
             "Oligarki",
             "Tyranni",
             "Kongedømme"
           ],
-          "explain": "Reformene ble gjennomført av Kleisthenes. Folkestyret var direkte: borgerne møtte selv i folkeforsamlingen, og embeter ble fordelt ved loddtrekning. Bare voksne mannlige borgere kunne delta; kvinner, slaver og innflyttere stod utenfor."
+          "explain": "Reformene ble gjennomført av Kleisthenes. Folkestyret var direkte: Borgerne møtte selv i folkeforsamlingen, og embeter ble fordelt ved loddtrekning. Bare voksne mannlige borgere kunne delta, mens kvinner, slaver og innflyttere sto utenfor."
         },
         {
           "id": "vh-antikkens-hellas-perserriket",
           "step": 1,
           "type": "choice",
-          "prompt": "Hvilken stormakt invaderte Hellas i 490 og 480 fvt.?",
+          "prompt": "Hvilken stormakt invaderte Hellas i 490 og 480 f.Kr.?",
           "answer": "Perserriket",
           "distractors": [
             "Egypt",
@@ -330,13 +330,13 @@
             "Hvert andre år",
             "Hvert tiende år"
           ],
-          "explain": "Ifølge en bevart seiersliste startet lekene i 776 fvt., men de kan være eldre. Lekene var religiøse fester for Zevs og Hera, og vinneren fikk en krans fra et hellig oliventre."
+          "explain": "Ifølge en bevart seiersliste startet lekene i 776 f.Kr., men de kan være eldre. Lekene var religiøse fester for Zevs og Hera, og vinneren fikk en krans fra et hellig oliventre."
         },
         {
           "id": "vh-antikkens-hellas-perikles",
           "step": 2,
           "type": "text",
-          "prompt": "Hvilken athensk statsmann var den ledende skikkelsen i byens politikk fra 450-årene til 429 fvt.?",
+          "prompt": "Hvilken athensk statsmann var den ledende skikkelsen i byens politikk fra 450-årene til 429 f.Kr.?",
           "answer": "Perikles",
           "accept": [
             "Pericles",
@@ -354,7 +354,7 @@
             "helotene",
             "helot"
           ],
-          "explain": "Sparta fikk maten sin fra det fruktbare Messene, der helotene dyrket jorden. Etter perserkrigene ville Sparta ikke forsvare grekerne i Lilleasia, blant annet fordi den måtte holde kontroll på helotene."
+          "explain": "Sparta fikk maten sin fra det fruktbare Messene, der helotene dyrket jorden. Etter perserkrigene ville Sparta ikke forsvare grekerne i Lilleasia, blant annet fordi bystaten måtte holde kontroll på helotene."
         },
         {
           "id": "vh-antikkens-hellas-aristoteles",
@@ -379,7 +379,7 @@
             "Romaniseringen",
             "Renessansen"
           ],
-          "explain": "Aleksander døde 32 år gammel i Babylon i 323 fvt., og riket falt raskt fra hverandre. Overklassen i Egypt og Midtøsten ble likevel lenge knyttet til gresk kultur, og mange tok i bruk gresk språk."
+          "explain": "Aleksander døde 32 år gammel i Babylon i 323 f.Kr., og riket falt raskt fra hverandre. Overklassen i Egypt og Midtøsten ble likevel lenge knyttet til gresk kultur, og mange tok i bruk gresk språk."
         },
         {
           "id": "vh-antikkens-hellas-hvorfor-flate",
@@ -392,7 +392,7 @@
             "Sparta forbød athenerne å ha en hær",
             "Perserne kontrollerte alle veier over land"
           ],
-          "explain": "Attika var karrig jordbruksland, og Athen hentet korn blant annet fra Krim. Flåten gav også fattige athenere arbeid og mer politisk makt, og demokratiet ble mer radikalt."
+          "explain": "Attika var karrig jordbruksland, og Athen hentet korn blant annet fra Krim. Flåten ga også fattige athenere arbeid og mer politisk makt, og demokratiet ble mer radikalt."
         },
         {
           "id": "vh-antikkens-hellas-personer",
@@ -417,45 +417,45 @@
               "right": "Lærer for Aleksander den store"
             }
           ],
-          "explain": "Filip vant slaget ved Khaironeia i 338 fvt., der den unge Aleksander ledet rytteriet. Både Filip og Aleksander begrunnet krigen mot Persia med hevn for ødeleggelsene perserne hadde påført greske helligdommer."
+          "explain": "Filip vant slaget ved Khaironeia i 338 f.Kr., der den unge Aleksander ledet rytteriet. Både Filip og Aleksander begrunnet krigen mot Persia med hevn for ødeleggelsene perserne hadde påført greske helligdommer."
         },
         {
           "id": "vh-antikkens-hellas-forklar-demokrati",
           "step": 3,
           "type": "explain",
           "prompt": "Forklar hvordan det athenske demokratiet skilte seg fra et moderne demokrati.",
-          "answer": "Det var et direkte folkestyre der borgerne selv møtte i folkeforsamlingen og vedtok lover, og mange embeter ble fordelt ved loddtrekning. Bare mannlige borgere deltok; kvinner, slaver og frie innflyttere uten borgerrett var utenfor.",
+          "answer": "Det var et direkte folkestyre der borgerne selv møtte i folkeforsamlingen og vedtok lover, og mange embeter ble fordelt ved loddtrekning. Bare mannlige borgere deltok. Kvinner, slaver og frie innflyttere uten borgerrett sto utenfor.",
           "checklist": [
             "Direkte, ikke representativt styre",
             "Loddtrekning til embeter",
             "Bare mannlige borgere deltok",
             "Kvinner, slaver og innflyttere var utelukket"
           ],
-          "explain": "Rundt 430 fvt. hadde Athen trolig om lag 40 000 borgere, mens slavene kanskje var over 100 000. Tanken var likevel at makten skulle ligge hos borgerne, ikke hos eksperter og mektige enkeltmenn."
+          "explain": "Rundt 430 f.Kr. hadde Athen trolig om lag 40 000 borgere, mens slavene kanskje var over 100 000. Tanken var likevel at makten skulle ligge hos borgerne, ikke hos eksperter og mektige enkeltmenn."
         },
         {
           "id": "vh-antikkens-hellas-ol-start",
           "step": 4,
           "type": "choice",
           "prompt": "Hvilket år regnes tradisjonelt som starten på de olympiske leker i antikken?",
-          "answer": "776 fvt.",
+          "answer": "776 f.Kr.",
           "distractors": [
-            "753 fvt.",
-            "508 fvt.",
-            "490 fvt."
+            "753 f.Kr.",
+            "508 f.Kr.",
+            "490 f.Kr."
           ],
-          "explain": "Årstallet bygger på en liste over seierherrer. Lekene ble holdt for siste gang i 393 evt., da den kristne keiseren Theodosius forbød dem som hedenske."
+          "explain": "Årstallet bygger på en liste over seierherrer. Lekene ble holdt for siste gang i 393 e.Kr., da den kristne keiseren Theodosius forbød dem som hedenske."
         },
         {
           "id": "vh-antikkens-hellas-marathon",
           "step": 4,
           "type": "choice",
-          "prompt": "Når stod slaget ved Marathon?",
-          "answer": "490 fvt.",
+          "prompt": "Hvilket år sto slaget ved Marathon?",
+          "answer": "490 f.Kr.",
           "distractors": [
-            "480 fvt.",
-            "508 fvt.",
-            "431 fvt."
+            "480 f.Kr.",
+            "508 f.Kr.",
+            "431 f.Kr."
           ],
           "explain": "Ved Marathon slo athenerne og deres allierte den første persiske invasjonen. Ti år senere kom perserne tilbake og ødela Akropolis i Athen."
         },
@@ -485,18 +485,18 @@
         "from": -509,
         "to": 476
       },
-      "summary": "Fra bystat til verdensrike: hvordan Roma gikk fra republikk til keiserdømme, ble kristent og delte seg i øst og vest.",
+      "summary": "Romerriket viser hvordan en bystat ble et verdensrike, gikk fra republikk til keiserdømme og ble kristent.",
       "lesson": [
-        "Ifølge romernes egen tradisjon ble Roma grunnlagt i 753 fvt. Rundt 509 fvt. ble kongene fjernet, og Roma ble en republikk. To konsuler valgt for ett år hadde den utøvende makten, mens senatet av tidligere embetsmenn i praksis styrte finanser og utenrikspolitikk. Gjennom kriger, blant annet mot Kartago, ble Roma herre over Middelhavet.",
-        "I senrepublikken kjempet mektige hærførere om makten, med hærer som var mer lojale mot dem enn mot staten. Julius Cæsar erobret Gallia, krysset elven Rubicon med hæren og ble diktator, men ble drept 15. mars 44 fvt. Adoptivsønnen Octavian vant borgerkrigen, fikk ærestittelen Augustus i 27 fvt. og regnes som den første keiseren. Han regnes som grunnleggeren av Pax Romana, rundt 200 år med stabile forhold innad i riket.",
+        "Ifølge romernes egen tradisjon ble Roma grunnlagt i 753 f.Kr. Rundt 509 f.Kr. ble kongene fjernet, og Roma ble en republikk. To konsuler, valgt for ett år om gangen, hadde den utøvende makten. Senatet, som besto av tidligere embetsmenn, styrte i praksis finanser og utenrikspolitikk. Gjennom kriger, blant annet mot Kartago, ble Roma herre over Middelhavet.",
+        "I senrepublikken kjempet mektige hærførere om makten, med hærer som var mer lojale mot dem enn mot staten. Julius Cæsar erobret Gallia, krysset elven Rubicon med hæren og ble diktator, men ble drept 15. mars 44 f.Kr. Adoptivsønnen Octavian vant borgerkrigen, fikk ærestittelen Augustus i 27 f.Kr. og regnes som den første keiseren. Han la grunnlaget for Pax Romana, rundt 200 år med stabile forhold innad i riket.",
         "Kristendommen spredte seg tross forfølgelser. Keiser Konstantin begunstiget de kristne og flyttet hovedstaden til Konstantinopel i 330. På slutten av 300-tallet ble kristendommen statsreligion. Riket ble delt for godt i 395. Vestriket hadde lang grense mot germanske folk og svakere økonomi, og i 476 ble den siste vestromerske keiseren avsatt. Østromerriket levde videre i nesten tusen år."
       ],
       "keyPoints": [
-        "Roma var republikk fra omkring 509 fvt., styrt av konsuler og senat.",
-        "Cæsar ble drept i 44 fvt.; Augustus regnes som den første keiseren.",
-        "Pax Romana var rundt 200 år med indre fred fra Augustus' tid.",
+        "Roma var republikk fra omkring 509 f.Kr. og ble styrt av konsuler og senat.",
+        "Cæsar ble drept i 44 f.Kr., og Augustus regnes som den første keiseren.",
+        "Pax Romana var rundt 200 år med indre fred fra Augustus’ tid.",
         "Kristendommen ble statsreligion på slutten av 300-tallet.",
-        "Vest-Rom falt i 476; Øst-Rom med Konstantinopel bestod til 1453."
+        "Vestromerriket falt i 476, mens Østromerriket med Konstantinopel besto til 1453."
       ],
       "sources": [
         {
@@ -554,7 +554,7 @@
             "Paven overtok makten i Italia",
             "Keiseren flyttet til Konstantinopel"
           ],
-          "explain": "Germanske folk hadde da allerede tatt over Britannia, Gallia, Spania og Nord-Afrika. Det er vanlig å regne dette som slutten på Romerriket, selv om østriket bestod."
+          "explain": "Germanske folk hadde da allerede tatt over Britannia, Gallia, Spania og Nord-Afrika. Det er vanlig å regne dette som slutten på Romerriket, selv om østriket besto."
         },
         {
           "id": "vh-romerriket-pax-romana",
@@ -573,7 +573,7 @@
           "id": "vh-romerriket-caesar",
           "step": 2,
           "type": "text",
-          "prompt": "Hvilken romersk hærfører erobret Gallia og ble drept av sammensvorne republikanere i 44 fvt.?",
+          "prompt": "Hvilken romersk hærfører erobret Gallia og ble drept av sammensvorne republikanere i 44 f.Kr.?",
           "answer": "Julius Cæsar",
           "accept": [
             "Cæsar",
@@ -587,7 +587,7 @@
           "id": "vh-romerriket-rubicon",
           "step": 2,
           "type": "text",
-          "prompt": "Hva het grenseelven Cæsar krysset med hæren sin, slik at borgerkrigen brøt ut?",
+          "prompt": "Hvilken grenseelv krysset Cæsar med hæren sin, slik at borgerkrigen brøt ut?",
           "answer": "Rubicon",
           "accept": [
             "Rubikon"
@@ -604,7 +604,7 @@
             "senat",
             "det romerske senatet"
           ],
-          "explain": "Senatet hadde opprinnelig rundt 300 medlemmer, senere flere. De eldste tidligere konsulene stod øverst, og deres mening var normalt utslagsgivende."
+          "explain": "Senatet hadde opprinnelig rundt 300 medlemmer, senere flere. De eldste tidligere konsulene sto øverst, og deres mening var normalt utslagsgivende."
         },
         {
           "id": "vh-romerriket-konstantin",
@@ -625,11 +625,11 @@
           "step": 3,
           "type": "choice",
           "prompt": "Hvorfor var Vestromerriket mer utsatt enn Østromerriket på 400-tallet?",
-          "answer": "Det hadde lang grense mot germanske folk og svakere økonomi",
+          "answer": "Det hadde lang grense mot germanerne og svakere økonomi",
           "distractors": [
-            "Det hadde ingen hær etter delingen i 395",
-            "Det ble rammet av en pest som spartet øst",
-            "Paven forbød keiseren å føre krig"
+            "Det hadde ingen egen hær etter delingen i 395",
+            "Det ble rammet av en pest som spartet østriket",
+            "Paven forbød keiseren å føre krig mot germanerne"
           ],
           "explain": "Vestriket var også tynnere befolket, og keisermakten var svekket av indre strid. Østriket, senere kalt Bysants, overlevde og ble sett som Romerrikets naturlige fortsettelse."
         },
@@ -663,7 +663,7 @@
           "step": 3,
           "type": "explain",
           "prompt": "Forklar hvordan Roma gikk fra republikk til keiserdømme.",
-          "answer": "Erobringene gav hærførerne store hærer som var mer lojale mot dem enn mot staten. Senrepublikken ble preget av borgerkriger mellom slike hærførere, og Cæsar gjorde seg til diktator. Etter Cæsars død vant Octavian, og som Augustus samlet han makten hos seg selv mens republikkens embeter levde videre i navnet.",
+          "answer": "Erobringene ga hærførerne store hærer som var mer lojale mot dem enn mot staten. Senrepublikken ble preget av borgerkriger mellom slike hærførere, og Cæsar gjorde seg til diktator. Etter Cæsars død vant Octavian. Som Augustus samlet han makten hos seg selv, mens republikkens embeter levde videre i navnet.",
           "checklist": [
             "Yrkeshærer lojale mot hærføreren",
             "Borgerkriger i senrepublikken",
@@ -698,13 +698,13 @@
           "step": 4,
           "type": "choice",
           "prompt": "Hvilket år ble Roma grunnlagt ifølge romernes egen tradisjon?",
-          "answer": "753 fvt.",
+          "answer": "753 f.Kr.",
           "distractors": [
-            "509 fvt.",
-            "776 fvt.",
-            "1000 fvt."
+            "509 f.Kr.",
+            "776 f.Kr.",
+            "1000 f.Kr."
           ],
-          "explain": "Årstallet bygger på romernes egen opphavshistorie og er ingen sikker datering. Byen lå gunstig til ved Tiberen og var en betydelig handelsplass fra 600-tallet fvt."
+          "explain": "Årstallet bygger på romernes egen opphavshistorie og er ingen sikker datering. Byen lå gunstig til ved Tiberen og var en betydelig handelsplass fra 600-tallet f.Kr."
         }
       ]
     },
@@ -719,17 +719,17 @@
         "from": 500,
         "to": 1500
       },
-      "summary": "Tusen år mellom antikken og moderne tid, da kirken, kongene og personlige maktbånd formet Europa, og islam ble en ny stormakt.",
+      "summary": "Middelalderen er de tusen årene da kirken, kongene og personlige maktbånd formet Europa, og islam ble en ny stormakt.",
       "lesson": [
         "Middelalderen regnes vanligvis fra omkring 500 til omkring 1500, mellom antikken og moderne tid. Der Vestromerriket hadde vært, vokste nye germanske riker fram. Frankerkongen Karl den store samlet et rike som nærmet seg Vestromerrikets omfang, og juledag år 800 ble han kronet til keiser av paven i Peterskirken i Roma.",
-        "Samfunnet bygde på personlige bånd i et strengt hierarki, ofte kalt føydalisme. Kongen gav jord som len til vasaller, som til gjengjeld lovet troskap og tjeneste, særlig i krig. Kirken ble friere fra kongemakten og spredte seg til nye land, og høymiddelalderen ble pavekirkens glansperiode. I 1054 ble kristenheten splittet i en katolsk kirke i vest og en ortodoks i øst.",
-        "Etter profeten Muhammads død i 632 ble det islamske riket styrt av kalifer, fra 661 fra Damaskus. Abbasidene, som tok over i 750, grunnla Bagdad som ny hovedstad. Fra 1095 oppfordret pavene til korstog for å vinne Jerusalem, og korsfarerne inntok byen i 1099. I 1453 erobret osmanerne Konstantinopel, og Østromerriket gikk under."
+        "Samfunnet bygde på personlige bånd i et strengt hierarki, ofte kalt føydalisme. Kongen ga jord som len til vasaller, som til gjengjeld lovet troskap og tjeneste, særlig i krig. Kirken ble friere fra kongemakten og spredte seg til nye land, og høymiddelalderen ble pavekirkens glansperiode. I 1054 ble kristenheten splittet i en katolsk kirke i vest og en ortodoks i øst.",
+        "Etter profeten Muhammads død i 632 ble det islamske riket styrt av kalifer, fra 661 med Damaskus som hovedstad. Abbasidene, som tok over i 750, grunnla Bagdad som ny hovedstad. Fra 1095 oppfordret pavene til korstog for å vinne Jerusalem, og korsfarerne inntok byen i 1099. I 1453 erobret osmanerne Konstantinopel, og Østromerriket gikk under."
       ],
       "keyPoints": [
-        "Middelalderen: omtrent 500–1500.",
+        "Middelalderen varte fra omkring 500 til omkring 1500.",
         "Karl den store ble kronet til keiser av paven i år 800.",
-        "Føydale bånd: len mot troskap og krigstjeneste.",
-        "Islamske kalifer styrte fra Damaskus og senere fra Bagdad; korstogene startet i 1095.",
+        "I føydale bånd fikk vasaller jord som len mot troskap og krigstjeneste.",
+        "Islamske kalifer styrte først fra Damaskus og senere fra Bagdad, og korstogene startet i 1095.",
         "Konstantinopel falt til osmanerne i 1453."
       ],
       "sources": [
@@ -851,7 +851,7 @@
             "tyrkerne",
             "ottomanerne"
           ],
-          "explain": "Det østromerske riket hadde da lenge vært svekket av borgerkrig og tyrkisk framrykning. Tyrkerne fortsatte framover på Balkan gjennom 1400-tallet."
+          "explain": "Østromerriket hadde da lenge vært svekket av borgerkrig og tyrkisk framrykning. Tyrkerne fortsatte framover på Balkan gjennom 1400-tallet."
         },
         {
           "id": "vh-middelalderen-tidslinje",
@@ -887,20 +887,20 @@
           "step": 3,
           "type": "choice",
           "prompt": "Hvorfor ble kirken så mektig i høymiddelalderen?",
-          "answer": "Den ble friere fra kongemakten og spredte seg til nye land",
+          "answer": "Den ble friere fra kongene og nådde nye land",
           "distractors": [
-            "Den eide alle hærene i Europa",
-            "Kongene fikk ikke lenger eie jord",
-            "Paven valgte alle konger i Europa"
+            "Den eide og ledet alle hærene i Europa",
+            "Kongene fikk ikke lenger lov til å eie jord",
+            "Paven fikk rett til å velge alle konger"
           ],
-          "explain": "Skandinavia, Polen og Ungarn ble kristnet og innlemmet i kirkens organisasjon, og det ble bygd kirker over hele Europa. I investiturstriden kjempet pave og keiser om retten til å innsette biskoper, og kirken styrket sin stilling."
+          "explain": "Skandinavia, Polen og Ungarn ble kristnet og innlemmet i kirkens organisasjon, og det ble bygd kirker over hele Europa. I investiturstriden kjempet pave og keiser om retten til å innsette biskoper, og kirken kom styrket ut."
         },
         {
           "id": "vh-middelalderen-forklar-foydal",
           "step": 3,
           "type": "explain",
           "prompt": "Forklar hvordan føydale bånd holdt et middelalderrike sammen.",
-          "answer": "Kongen gav jord som len til stormenn, som ble hans vasaller. De lovte troskap og tjeneste, særlig i krig, og fikk til gjengjeld inntekter og makt over lenet. Slik ble makten fordelt gjennom personlige bånd i et hierarki, ikke gjennom et sterkt statsapparat.",
+          "answer": "Kongen ga jord som len til stormenn, som ble hans vasaller. De lovet troskap og tjeneste, særlig i krig, og fikk til gjengjeld inntekter og makt over lenet. Slik ble makten fordelt gjennom personlige bånd i et hierarki, ikke gjennom et sterkt statsapparat.",
           "checklist": [
             "Len mot troskap og tjeneste",
             "Vasallen fikk inntekter og lokal makt",
@@ -937,17 +937,17 @@
         "from": 1400,
         "to": 1600
       },
-      "summary": "Fra Firenze på 1400-tallet spredte en ny interesse for antikken seg i kunst og tenkning, hjulpet av boktrykkerkunsten.",
+      "summary": "Renessansen er den nye interessen for antikken som spredte seg fra Firenze på 1400-tallet og fornyet kunst og tenkning i Europa.",
       "lesson": [
         "Renessanse betyr gjenfødelse. Bevegelsen startet i Italia på begynnelsen av 1400-tallet, særlig i Firenze, og hadde spredt seg til store deler av Europa ved begynnelsen av 1600-tallet. Man så til antikken med beundring, og humanistene fant fram, studerte og oversatte antikke tekster. Det var renessansens lærde som kalte tiden før dem middelalderen.",
-        "De rike, selvstyrte bystatene i Italia gav grunnlaget. Kirken, bystatene og rike familier som Medici i Firenze bestilte kunst. Malerne studerte anatomi og utviklet perspektivet, som gir et flatt bilde dybde. Leonardo da Vinci og Michelangelo regnes blant høyrenessansens største mestere.",
-        "Fram til midten av 1400-tallet måtte hver bok skrives av for hånd, ofte på dyrt pergament. Johann Gutenberg fra Mainz trykket med løse metalltyper, og hans store bibel kom i 1455. Boktrykket mangfoldiggjorde tekster, og på 1500-tallet spredte trykt grafikk også kunsten over hele Europa."
+        "De rike, selvstyrte bystatene i Italia la grunnlaget. Kirken, bystatene og rike familier som Medici i Firenze bestilte kunst. Malerne studerte anatomi og utviklet perspektivet, som gir et flatt bilde dybde. Leonardo da Vinci og Michelangelo regnes blant høyrenessansens største mestere.",
+        "Fram til midten av 1400-tallet måtte hver bok skrives av for hånd, ofte på dyrt pergament. Johann Gutenberg fra Mainz trykket med løse metalltyper, og den store bibelen hans kom i 1455. Med boktrykket kunne tekster lages i mange eksemplarer, og på 1500-tallet spredte trykt grafikk også kunsten over hele Europa."
       ],
       "keyPoints": [
-        "Renessanse betyr gjenfødelse – av antikkens kultur.",
-        "Den begynte i Firenze tidlig på 1400-tallet.",
+        "Renessanse betyr gjenfødelse av antikkens kultur.",
+        "Renessansen begynte i Firenze tidlig på 1400-tallet.",
         "Humanistene studerte og oversatte antikke tekster.",
-        "Leonardo da Vinci og Michelangelo var høyrenessansens mestere.",
+        "Leonardo da Vinci og Michelangelo regnes blant høyrenessansens største mestere.",
         "Gutenbergs boktrykk med løse typer gjorde tekster langt lettere å spre."
       ],
       "sources": [
@@ -1006,7 +1006,7 @@
             "Å forsvare middelalderens skolastikk",
             "Å avskaffe latin som lærdomsspråk"
           ],
-          "explain": "Kunnskap om klassisk latin ble igjen viktig, og greske tekster ble oversatt til latin. Da Konstantinopel falt i 1453, flyktet mange lærde til Italia og gav nye impulser."
+          "explain": "Kunnskap om klassisk latin ble igjen viktig, og greske tekster ble oversatt til latin. Da Konstantinopel falt i 1453, flyktet mange lærde til Italia og ga nye impulser."
         },
         {
           "id": "vh-renessansen-oppdragsgivere",
@@ -1025,7 +1025,7 @@
           "id": "vh-renessansen-leonardo",
           "step": 2,
           "type": "text",
-          "prompt": "Hvem malte Mona Lisa og Nattverden?",
+          "prompt": "Hvem malte «Mona Lisa» og «Nattverden»?",
           "answer": "Leonardo da Vinci",
           "accept": [
             "Leonardo",
@@ -1045,7 +1045,7 @@
             "Michaelangelo",
             "Mikelangelo"
           ],
-          "explain": "Arbeidet tok fra 1508 til 1512. Michelangelo så likevel på seg selv først og fremst som billedhugger, og skulpturen Pietà gjorde ham berømt før han var 25 år."
+          "explain": "Arbeidet tok fra 1508 til 1512. Michelangelo så likevel på seg selv først og fremst som billedhugger, og skulpturen «Pietà» gjorde ham berømt før han var 25 år."
         },
         {
           "id": "vh-renessansen-gutenberg",
@@ -1076,8 +1076,8 @@
           "id": "vh-renessansen-hvorfor-italia",
           "step": 3,
           "type": "choice",
-          "prompt": "Hvorfor oppstod renessansen nettopp i Italia?",
-          "answer": "Rike, selvstyrte bystater hadde penger til kunst og lærdom",
+          "prompt": "Hvorfor oppsto renessansen nettopp i Italia?",
+          "answer": "Rike bystater hadde penger til kunst og lærdom",
           "distractors": [
             "Italia var det eneste landet uten pest",
             "Paven forbød kunst nord for Alpene",
@@ -1108,7 +1108,7 @@
               "right": "Kuppelen på katedralen i Firenze"
             }
           ],
-          "explain": "Fra tidlig renessanse til høyrenessanse steg kunstnerens status: fra håndverker i middelalderen til skapende kunstner. Flere av dem var både malere, billedhuggere, arkitekter og ingeniører."
+          "explain": "Fra tidlig renessanse til høyrenessanse steg kunstnerens status: fra håndverker i middelalderen til skapende kunstner. Flere av dem var på én gang malere, billedhuggere, arkitekter og ingeniører."
         },
         {
           "id": "vh-renessansen-forklar-boktrykk",
@@ -1118,7 +1118,7 @@
           "answer": "Før boktrykket måtte hver bok skrives av for hånd, ofte på dyrt pergament. Med løse typer og papir kunne mange like eksemplarer lages raskt og billigere. Tekster og ideer kunne dermed spre seg langt raskere og bredere enn før.",
           "checklist": [
             "Håndskrevne bøker var dyre og få",
-            "Løse typer og papir gav mange like eksemplarer",
+            "Løse typer og papir ga mange like eksemplarer",
             "Ideer spredte seg raskere og bredere"
           ],
           "explain": "Papiret var en kinesisk oppfinnelse som kom til Europa på midten av 1200-tallet. Uten papir hadde Gutenbergs teknikk fått langt mindre betydning: til de 40 pergamentbiblene gikk det med 3200 dyrehuder."
@@ -1157,15 +1157,15 @@
         "from": 1517,
         "to": 1648
       },
-      "summary": "Luthers kritikk av kirken i 1517 splittet vestlig kristendom og endret forholdet mellom tro, kirke og stat i Europa.",
+      "summary": "Luthers kritikk av kirken i 1517 forklarer hvorfor vestlig kristendom ble splittet, og hvordan forholdet mellom tro, kirke og stat endret seg.",
       "lesson": [
-        "Reformasjonen var de religiøse og kulturelle omveltningene i Europa på 1500-tallet. Den startet da den tyske teologen Martin Luther 31. oktober 1517 offentliggjorde 95 teser mot avlatshandelen, der folk kunne betale penger til kirken for syndene sine i stedet for å vise anger og gjøre bot.",
+        "Reformasjonen var de religiøse og kulturelle omveltningene i Europa på 1500-tallet. Den startet 31. oktober 1517, da den tyske teologen Martin Luther offentliggjorde 95 teser mot avlatshandelen. Med avlat kunne folk betale penger til kirken for syndene sine i stedet for å vise anger og gjøre bot.",
         "Luther ville føre kirken tilbake til Bibelen og ble bannlyst i 1521. Kurfyrsten av Sachsen beskyttet ham, og trykte skrifter spredte ideene raskt. Mange fyrster brøt med paven og tok kontroll over kirken og kirkens eiendom i sine land. I Genève ledet Jean Calvin en egen, reformert retning. Danmark-Norge ble luthersk i 1536.",
-        "Den katolske kirken svarte med motreformasjonen: Trientkonsilet (1545–1563) vedtok reformer, og jesuittordenen fra 1540 arbeidet for å vinne tapte land tilbake. Religiøse og politiske motsetninger utløste trettiårskrigen (1618–1648), den mest ødeleggende krigen Europa til da hadde sett."
+        "Den katolske kirken svarte med motreformasjonen. Trientkonsilet (1545–1563) vedtok reformer, og jesuittordenen, grunnlagt i 1540, arbeidet for å vinne tapte land tilbake. Religiøse og politiske motsetninger utløste trettiårskrigen (1618–1648), den mest ødeleggende krigen Europa til da hadde sett."
       ],
       "keyPoints": [
         "Luthers 95 teser i 1517 regnes som starten på reformasjonen.",
-        "Kritikken rettet seg først mot avlatshandelen.",
+        "Luthers kritikk rettet seg først mot avlatshandelen.",
         "Vestlig kristendom ble delt i katolsk, luthersk og reformert kirke.",
         "Motreformasjonen var den katolske kirkens svar.",
         "Trettiårskrigen 1618–1648 endte med freden i Westfalen."
@@ -1251,7 +1251,7 @@
             "Luther",
             "Morten Luther"
           ],
-          "explain": "Luther var augustinermunk og professor i teologi ved universitetet i Wittenberg. I 1522 kom hans første tyske oversettelse av Det nye testamentet."
+          "explain": "Luther var augustinermunk og professor i teologi ved universitetet i Wittenberg. I 1522 kom hans første oversettelse av Det nye testamentet til tysk."
         },
         {
           "id": "vh-reformasjonen-calvin",
@@ -1304,7 +1304,7 @@
             "Han flyktet til Genève",
             "Keiseren gikk over til lutherdommen"
           ],
-          "explain": "Fredrik den vise lot ham føre i skjul på borgen Wartburg. Der levde Luther i ti måneder før han vendte tilbake til Wittenberg."
+          "explain": "Kurfyrst Fredrik den vise lot ham føre i skjul til borgen Wartburg. Der levde Luther i ti måneder før han vendte tilbake til Wittenberg."
         },
         {
           "id": "vh-reformasjonen-hvorfor-fyrster",
@@ -1375,7 +1375,7 @@
           "type": "year",
           "prompt": "Hvilket år begynte trettiårskrigen?",
           "answer": "1618",
-          "explain": "Krigen startet med et opprør i Böhmen, der protestanter gjorde opprør mot den katolske keiserens styre. Den svenske kongen Gustav 2. Adolf falt i slaget ved Lützen i 1632."
+          "explain": "Krigen startet i Böhmen, der protestanter gjorde opprør mot den katolske keiserens styre. Den svenske kongen Gustav 2. Adolf falt i slaget ved Lützen i 1632."
         }
       ]
     },
@@ -1390,15 +1390,15 @@
         "from": 1450,
         "to": 1600
       },
-      "summary": "Portugisiske og spanske sjøreiser fra 1400-tallet knyttet verdensdelene sammen, med erobring, kolonier og slavehandel som følge.",
+      "summary": "De portugisiske og spanske sjøreisene fra 1400-tallet forklarer hvordan verdensdelene ble knyttet sammen gjennom erobring, kolonier og slavehandel.",
       "lesson": [
         "Portugal og Spania ledet de første europeiske oppdagelsesreisene. Fra midten av 1400-tallet seilte portugisiske skip stadig lenger sør langs Afrikas vestkyst, på jakt etter gull, slaver og en sjøvei til Asias rikdommer. Bartolomeo Diaz rundet Kapp det gode håp i 1488, og Vasco da Gama nådde India i 1498.",
         "Kristoffer Columbus ville finne en vestlig rute til Asia. Med støtte fra de spanske monarkene nådde han en av Bahamas-øyene 12. oktober 1492, men innrømmet aldri at han hadde funnet et ukjent kontinent. Ekspedisjonen til Ferdinand Magellan fullførte den første jordomseilingen i 1522, men Magellan selv ble drept underveis.",
-        "Spania og Portugal la under seg store deler av Amerika. Sykdommer fra Europa, som kopper og meslinger, sammen med krig og tvangsarbeid, reduserte urbefolkningen med kanskje 90 prosent på 150 år. Til plantasjene ble minst 12,5 millioner afrikanere skipet over Atlanterhavet som slaver mellom 1450 og 1850. Denne trekanthandelen bandt Europa, Afrika og Amerika sammen."
+        "Spania og Portugal la under seg store deler av Amerika. Sammen med krig og tvangsarbeid reduserte sykdommer fra Europa, som kopper og meslinger, urbefolkningen med kanskje 90 prosent på 150 år. Mellom 1450 og 1850 ble minst 12,5 millioner afrikanere skipet over Atlanterhavet som slaver til plantasjene. Denne trekanthandelen bandt Europa, Afrika og Amerika sammen."
       ],
       "keyPoints": [
         "Portugal og Spania ledet de første oppdagelsesreisene.",
-        "Diaz rundet Afrika i 1488, Columbus nådde Amerika i 1492, da Gama India i 1498.",
+        "Diaz rundet Kapp det gode håp i 1488, Columbus nådde Amerika i 1492, og da Gama kom til India i 1498.",
         "Europeiske sykdommer var hovedårsaken til at urbefolkningen i Amerika sank kraftig.",
         "Minst 12,5 millioner afrikanere ble ført over Atlanterhavet som slaver."
       ],
@@ -1432,7 +1432,7 @@
             "Gullgruvene i Vest-Afrika",
             "Vinland fra de norrøne sagaene"
           ],
-          "explain": "Han fant i stedet et kontinent som var ukjent i Europa og Asia. Columbus foretok i alt fire reiser til Amerika."
+          "explain": "Han fant i stedet et kontinent som var ukjent i Europa og Asia. Columbus reiste i alt fire ganger til Amerika."
         },
         {
           "id": "vh-oppdagelsesreisene-land",
@@ -1452,7 +1452,7 @@
           "step": 1,
           "type": "choice",
           "prompt": "Hva var hovedårsaken til at urbefolkningen i Amerika sank så kraftig etter 1492?",
-          "answer": "Sykdommer fra Europa som kopper og meslinger",
+          "answer": "Sykdommer som kopper og meslinger",
           "distractors": [
             "Hungersnød etter lange tørkeår",
             "Utvandring vestover til Asia",
@@ -1547,7 +1547,7 @@
               "right": "Ledet den første jordomseilingen"
             }
           ],
-          "explain": "Bak de portugisiske reisene stod Henrik Sjøfareren, som sendte skip sørover langs Afrika uten selv å reise. Da Gamas og Columbus' reiser regnes gjerne som innledningen til den første globale tidsalder."
+          "explain": "Bak de portugisiske reisene sto Henrik Sjøfareren, som sendte skip sørover langs Afrika uten selv å reise. Da Gamas og Columbus' reiser regnes gjerne som innledningen til den første globale tidsalder."
         },
         {
           "id": "vh-oppdagelsesreisene-forklar-folger",
@@ -1569,18 +1569,18 @@
           "type": "year",
           "prompt": "Hvilket år nådde Columbus Amerika første gang?",
           "answer": "1492",
-          "explain": "Samme år falt Granada, det siste muslimske kongedømmet på Den iberiske halvøya. Den kristne gjenerobringen var en viktig bakgrunn for de iberiske sjøreisene."
+          "explain": "Samme år falt Granada, det siste muslimske kongedømmet på Den iberiske halvøy. Den kristne gjenerobringen var en viktig bakgrunn for de iberiske sjøreisene."
         },
         {
           "id": "vh-oppdagelsesreisene-antall-slaver",
           "step": 4,
           "type": "choice",
-          "prompt": "Hvor mange afrikanere ble minst skipet over Atlanterhavet som slaver mellom 1450 og 1850?",
+          "prompt": "Hvor mange afrikanere ble skipet over Atlanterhavet som slaver mellom 1450 og 1850?",
           "answer": "Minst 12,5 millioner",
           "distractors": [
-            "Omkring 2 millioner",
-            "Omkring 50 millioner",
-            "Omkring 500 000"
+            "Under 2 millioner",
+            "Over 50 millioner",
+            "Under 500 000"
           ],
           "explain": "Anslaget bygger på data fra over 35 000 skipsanløp. Om lag to millioner døde under overfarten, og mer enn 40 prosent av alle ble solgt til Brasil."
         },
@@ -1608,17 +1608,17 @@
         "from": 1688,
         "to": 1815
       },
-      "summary": "Opplysningstidens tro på fornuft og frihet gav ideene bak den amerikanske uavhengigheten og den franske revolusjonen.",
+      "summary": "Opplysningstidens tro på fornuft og frihet er grunnlaget for den amerikanske uavhengigheten og den franske revolusjonen.",
       "lesson": [
         "Opplysningstiden var en epoke i europeisk tenkning fra slutten av 1600-tallet til den franske revolusjonen. Fornuft, vitenskap, frihet, toleranse og framskritt ble nye idealer, og tenkerne kritiserte religiøse dogmer og nedarvet makt. De argumenterte for ytringsfrihet, religionsfrihet og likhet for loven, og ideen om menneskerettigheter vokste fram.",
-        "John Locke la vekt på retten til liv, frihet og eiendom. Montesquieu ville dele statsmakten for å hindre at makten ble misbrukt, og Rousseau skrev Om samfunnspakten. Voltaire hyllet religiøs toleranse. I 1776 erklærte de amerikanske koloniene seg uavhengige av Storbritannia i en erklæring bygd på slike ideer.",
+        "John Locke la vekt på retten til liv, frihet og eiendom. Montesquieu ville dele statsmakten for å hindre at makten ble misbrukt, og Rousseau skrev «Om samfunnspakten». Voltaire hyllet religiøs toleranse. I 1776 erklærte de amerikanske koloniene seg uavhengige av Storbritannia i en erklæring bygd på slike ideer.",
         "I Frankrike godtok folk ikke lenger stendersamfunnet, der adel og geistlige hadde privilegier. Revolusjonen brøt ut i 1789: Bastillen ble stormet 14. juli, eneveldet falt, og en erklæring slo fast at alle mennesker er født frie og like. Kongen ble henrettet i 1793. Etter en periode med terror tok general Napoleon Bonaparte makten i 1799. Han ble keiser i 1804 og ble endelig slått ved Waterloo i 1815."
       ],
       "keyPoints": [
         "Opplysningstiden satte fornuft, frihet og toleranse som idealer.",
         "Locke, Montesquieu, Rousseau og Voltaire var sentrale tenkere.",
         "De amerikanske koloniene erklærte seg uavhengige i 1776.",
-        "Den franske revolusjon i 1789 avskaffet eneveldet og stendersamfunnets privilegier.",
+        "Den franske revolusjonen i 1789 avskaffet eneveldet og stendersamfunnets privilegier.",
         "Napoleon tok makten i 1799 og ble keiser i 1804."
       ],
       "sources": [
@@ -1657,7 +1657,7 @@
           "id": "vh-opplysningstiden-revolusjonene-bastillen",
           "step": 1,
           "type": "choice",
-          "prompt": "Hvilken hendelse i 1789 regnes tradisjonelt som starten på den franske revolusjon?",
+          "prompt": "Hvilken hendelse i 1789 regnes tradisjonelt som starten på den franske revolusjonen?",
           "answer": "Stormingen av Bastillen",
           "distractors": [
             "Henrettelsen av kongen",
@@ -1703,7 +1703,7 @@
             "Montesquie",
             "Charles Montesquieu"
           ],
-          "explain": "Ideen står i verket Lovenes ånd fra 1748. Tankene hans preget USAs grunnlov, den franske grunnloven av 1791 og den norske Grunnloven av 1814."
+          "explain": "Ideen står i verket «Lovenes ånd» fra 1748. Tankene hans preget USAs grunnlov, den franske grunnloven av 1791 og den norske Grunnloven av 1814."
         },
         {
           "id": "vh-opplysningstiden-revolusjonene-locke",
@@ -1720,20 +1720,20 @@
           "id": "vh-opplysningstiden-revolusjonene-rousseau",
           "step": 2,
           "type": "text",
-          "prompt": "Hvem skrev Om samfunnspakten fra 1762?",
+          "prompt": "Hvem skrev «Om samfunnspakten» fra 1762?",
           "answer": "Jean-Jacques Rousseau",
           "accept": [
             "Rousseau",
             "Jean Jacques Rousseau",
             "Rosseau"
           ],
-          "explain": "Rousseau var en ideolog for folkesuvereniteten. Samtidig argumenterte han i Emile for ulikhet mellom kjønnene, noe som fikk langvarig innflytelse."
+          "explain": "Rousseau var en ideolog for folkesuvereniteten. Samtidig argumenterte han i «Emile» for ulikhet mellom kjønnene, noe som fikk langvarig innflytelse."
         },
         {
           "id": "vh-opplysningstiden-revolusjonene-terroren",
           "step": 2,
           "type": "text",
-          "prompt": "Hva kalles perioden fra sommeren 1793 til sommeren 1794 i den franske revolusjon?",
+          "prompt": "Hva kalles perioden fra sommeren 1793 til sommeren 1794 i den franske revolusjonen?",
           "answer": "Terroren",
           "accept": [
             "Skrekkveldet",
@@ -1759,7 +1759,7 @@
           "id": "vh-opplysningstiden-revolusjonene-hvorfor-revolusjon",
           "step": 3,
           "type": "choice",
-          "prompt": "Hva var en viktig årsak til den franske revolusjon?",
+          "prompt": "Hva var en viktig årsak til den franske revolusjonen?",
           "answer": "Folk godtok ikke lenger stendersamfunnets privilegier",
           "distractors": [
             "Napoleon ville gjøre seg til keiser",
@@ -1775,11 +1775,11 @@
           "prompt": "Sett hendelsene fra opplysningstiden og revolusjonene i riktig rekkefølge.",
           "items": [
             {
-              "label": "Montesquieu utgir Lovenes ånd",
+              "label": "Montesquieu utgir «Lovenes ånd»",
               "year": 1748
             },
             {
-              "label": "Rousseau utgir Om samfunnspakten",
+              "label": "Rousseau utgir «Om samfunnspakten»",
               "year": 1762
             },
             {
@@ -1816,7 +1816,7 @@
           "type": "year",
           "prompt": "Hvilket år ble Napoleon kronet til keiser?",
           "answer": "1804",
-          "explain": "Samme år ble lovboken Code civil fullført, med likhet for loven og privat eiendomsrett som bærende prinsipper. Med kroningen var revolusjonen definitivt over."
+          "explain": "Samme år ble lovboken «Code civil» fullført, med likhet for loven og privat eiendomsrett som bærende prinsipper. Med kroningen var revolusjonen definitivt over."
         },
         {
           "id": "vh-opplysningstiden-revolusjonene-waterloo",
@@ -1844,17 +1844,17 @@
         "from": 1760,
         "to": 1840
       },
-      "summary": "Fra slutten av 1700-tallet flyttet produksjonen fra hjem og verksted til dampdrevne fabrikker, og samfunnet ble forandret fra grunnen.",
+      "summary": "Den industrielle revolusjonen forklarer hvordan dampdrevne fabrikker fra slutten av 1700-tallet forandret arbeid, byer og samfunn fra grunnen.",
       "lesson": [
-        "Den industrielle revolusjon begynte i England på slutten av 1700-tallet. Tekstilindustrien gikk fra hjemmearbeid til store fabrikker, og ny teknikk gjorde det mulig å lage jern med steinkull. James Watt forbedret dampmaskinen så den ble langt mer effektiv. Fabrikkene var ikke lenger bundet til vannkraft og kunne ligge ved gruver og i havnebyer.",
+        "Den industrielle revolusjonen begynte i England på slutten av 1700-tallet. Tekstilindustrien gikk fra hjemmearbeid til store fabrikker, og ny teknikk gjorde det mulig å lage jern med steinkull. James Watt forbedret dampmaskinen slik at den ble langt mer effektiv. Fabrikkene var ikke lenger bundet til vannkraft og kunne ligge ved gruver og i havnebyer.",
         "England hadde oppfinnelser, kull og jern, et investeringsvillig borgerskap og markeder sikret gjennom kriger. Da fellesjord på landsbygda ble privatisert, mistet mange livsgrunnlaget og ble arbeidskraft i industrien. Jernbanen mellom Liverpool og Manchester åpnet i 1830, og jernbaner og dampskip bandt markedene sammen.",
-        "Fabrikkene lå ofte i byer, og folk flyttet fra landsbygda til byene. Arbeidsdagen var lang, og boligene var trange. Arbeiderne begynte å se seg som en egen klasse og organiserte seg i fagforeninger og partier for å få bedre lønn og levekår, først i England. Karl Marx og Friedrich Engels skrev Det kommunistiske manifest i 1848."
+        "Fabrikkene lå ofte i byer, og folk flyttet fra landsbygda til byene. Arbeidsdagen var lang, og boligene var trange. Arbeiderne begynte å se seg som en egen klasse og organiserte seg i fagforeninger og partier for å få bedre lønn og levekår, først i England. Karl Marx og Friedrich Engels skrev «Det kommunistiske manifest» i 1848."
       ],
       "keyPoints": [
-        "Den industrielle revolusjon startet i England omkring 1760–1840.",
+        "Den industrielle revolusjonen startet i England og varte omtrent fra 1760 til 1840.",
         "Dampmaskinen, tekstilfabrikker og jern laget med steinkull var drivkreftene.",
         "Industrien førte til urbanisering og en ny arbeiderklasse.",
-        "Arbeiderbevegelsen vokste fram, og Marx gav den en ideologi."
+        "Arbeiderbevegelsen vokste fram, og Marx ga den en ideologi."
       ],
       "sources": [
         {
@@ -1879,7 +1879,7 @@
           "id": "vh-industrielle-revolusjon-england",
           "step": 1,
           "type": "choice",
-          "prompt": "I hvilket land begynte den industrielle revolusjon?",
+          "prompt": "I hvilket land begynte den industrielle revolusjonen?",
           "answer": "England",
           "distractors": [
             "Frankrike",
@@ -1925,7 +1925,7 @@
             "Å stanse all bruk av maskiner",
             "Å gi fabrikkeierne mer makt"
           ],
-          "explain": "Bevegelsen vokste først fram rundt streiker for bedre lønn, krav om alminnelig stemmerett og selvhjelpsforeninger. I Norge var Thranebevegelsen et tidlig eksempel."
+          "explain": "Bevegelsen vokste først fram rundt streiker for bedre lønn, krav om alminnelig stemmerett og selvhjelpsforeninger. I Norge var thranebevegelsen et tidlig eksempel."
         },
         {
           "id": "vh-industrielle-revolusjon-watt",
@@ -1953,12 +1953,12 @@
           "id": "vh-industrielle-revolusjon-marx",
           "step": 2,
           "type": "text",
-          "prompt": "Hvem skrev Det kommunistiske manifest sammen med Friedrich Engels?",
+          "prompt": "Hvem skrev «Det kommunistiske manifest» sammen med Friedrich Engels?",
           "answer": "Karl Marx",
           "accept": [
             "Marx"
           ],
-          "explain": "Manifestet beskrev klassekampen i det nye industrisamfunnet og gav et program for arbeiderklassens revolusjonære kamp. Marx' teoretiske hovedverk, Kapitalen, kom i 1867."
+          "explain": "Manifestet beskrev klassekampen i det nye industrisamfunnet og ga et program for arbeiderklassens revolusjonære kamp. Marx’ teoretiske hovedverk, «Kapitalen», kom i 1867."
         },
         {
           "id": "vh-industrielle-revolusjon-jernbane",
@@ -1969,7 +1969,7 @@
           "accept": [
             "Manchester og Liverpool"
           ],
-          "explain": "Jernbaner og dampskip fikk så stor betydning i årene 1830–1870 at perioden til dels kalles den andre industrielle revolusjon. Betegnelsen brukes også om elektrisitetens gjennombrudd fra slutten av 1800-tallet."
+          "explain": "Jernbaner og dampskip fikk så stor betydning i årene 1830–1870 at perioden til dels kalles den andre industrielle revolusjonen. Betegnelsen brukes også om elektrisitetens gjennombrudd fra slutten av 1800-tallet."
         },
         {
           "id": "vh-industrielle-revolusjon-hvorfor-byer",
@@ -1979,7 +1979,7 @@
           "answer": "Fabrikkene kunne ligge ved gruver og i havnebyer",
           "distractors": [
             "Dampmaskiner var forbudt på landsbygda",
-            "Den gav byene billig oppvarming",
+            "Den ga byene billig oppvarming",
             "Den krevde tusenvis av fyrbøtere"
           ],
           "explain": "Med vannkraft måtte fabrikkene ligge ved elver og fossefall. Den nye industrien skapte også et enormt transportbehov for kull, råvarer og mat, og kanaler og veier ble bygd ut."
@@ -1995,7 +1995,7 @@
             "Kongen eide alle fabrikkene",
             "England var det eneste landet med kull"
           ],
-          "explain": "Ingen enkeltfaktor forklarer revolusjonen. Kriger som sjuårskrigen og Napoleonskrigene gav Storbritannia markeder for både råvarer og ferdigvarer. I kolonien India sank andelen av verdens produksjon fra 25 prosent midt på 1700-tallet til 2 prosent i 1900."
+          "explain": "Ingen enkeltfaktor forklarer revolusjonen. Kriger som sjuårskrigen og Napoleonskrigene ga Storbritannia markeder for både råvarer og ferdigvarer. I kolonien India sank andelen av verdens produksjon fra 25 prosent midt på 1700-tallet til 2 prosent i 1900."
         },
         {
           "id": "vh-industrielle-revolusjon-forklar-arbeiderbevegelse",
@@ -2005,7 +2005,7 @@
           "answer": "Fabrikkene samlet mange arbeidere med like kår under én arbeidsgiver. De eide verken maskinene eller produktene og begynte å se seg som en egen klasse. Sammen kunne de organisere seg i fagforeninger og partier og kreve bedre lønn, bedre arbeidsvilkår og stemmerett.",
           "checklist": [
             "Mange arbeidere samlet på samme sted",
-            "Eide ikke produksjonsmidlene",
+            "Arbeiderne eide ikke produksjonsmidlene",
             "Felles klassefølelse",
             "Organisering for lønn, arbeidsvilkår og stemmerett"
           ],
@@ -2015,7 +2015,7 @@
           "id": "vh-industrielle-revolusjon-manifest-aar",
           "step": 4,
           "type": "year",
-          "prompt": "Hvilket år kom Det kommunistiske manifest?",
+          "prompt": "Hvilket år kom «Det kommunistiske manifest»?",
           "answer": "1848",
           "explain": "Det ble utgitt anonymt i London i februar, dagen før februarrevolusjonen brøt ut i Paris. Først fra 1860-årene fikk det stor innflytelse på arbeiderbevegelsen i Europa."
         },
@@ -2053,17 +2053,17 @@
         "from": 1773,
         "to": 1865
       },
-      "summary": "Hvordan 13 britiske kolonier ble en selvstendig føderal stat, vokste mot vest og splittet seg i borgerkrig om slaveriet.",
+      "summary": "USAs tidlige historie viser hvordan 13 britiske kolonier ble en føderal stat som vokste mot vest og splittet seg i borgerkrig om slaveriet.",
       "lesson": [
-        "Fra begynnelsen av 1600-tallet ble det etablert 13 britiske kolonier langs østkysten av Nord-Amerika. Striden om Storbritannias rett til å skattlegge koloniene, som ikke var representert i det britiske parlamentet, førte til krig i 1775. 4. juli 1776 erklærte koloniene seg uavhengige. Uavhengighetskrigen varte til 1783, med George Washington som øverstkommanderende.",
-        "I 1787 laget en forsamling i Philadelphia en ny grunnlov med tre likeverdige statsmakter: Kongressen, presidenten og den føderale domstolen. Washington ble den første presidenten i 1789. USA vokste vestover gjennom kjøp, kriger og fortrengning av urbefolkningen, og i midten av 1800-tallet nådde landet Stillehavet.",
+        "Fra begynnelsen av 1600-tallet ble det etablert 13 britiske kolonier langs østkysten av Nord-Amerika. Striden om Storbritannias rett til å skattlegge koloniene, som ikke var representert i det britiske parlamentet, førte til krig i 1775. Den 4. juli 1776 erklærte koloniene seg uavhengige. Uavhengighetskrigen varte til 1783, med George Washington som øverstkommanderende.",
+        "I 1787 laget en forsamling i Philadelphia en ny grunnlov med tre likeverdige statsmakter: Kongressen, presidenten og den føderale domstolen. Washington ble den første presidenten i 1789. USA vokste vestover gjennom kjøp, kriger og fortrengning av urbefolkningen, og midt på 1800-tallet nådde landet Stillehavet.",
         "Slaveriet delte landet. En ny maskin for å rense bomull gjorde bomullsdyrking svært lønnsom i sør, og plantasjene bygde på slaver. Da Abraham Lincoln ble valgt til president i 1860, meldte sørstatene seg ut og dannet Amerikas konfødererte stater. Borgerkrigen 1861–1865 kostet over 620 000 liv og endte med at nordstatene vant. Etter krigen avskaffet det 13. grunnlovstillegget slaveriet i hele USA."
       ],
       "keyPoints": [
-        "13 britiske kolonier erklærte seg uavhengige 4. juli 1776.",
+        "De 13 britiske koloniene erklærte seg uavhengige 4. juli 1776.",
         "Grunnloven fra 1787 delte makten mellom Kongressen, presidenten og domstolene.",
         "USA vokste vestover til Stillehavet i første halvdel av 1800-tallet.",
-        "Den grunnleggende årsaken til borgerkrigen (1861–1865) var slaveriet.",
+        "Slaveriet var den grunnleggende årsaken til borgerkrigen (1861–1865).",
         "Det 13. grunnlovstillegget avskaffet slaveriet i 1865."
       ],
       "sources": [
@@ -2157,7 +2157,7 @@
           "accept": [
             "Jefferson"
           ],
-          "explain": "Jefferson ble selv president og kjøpte i 1803 den franske kolonien Louisiana. Kjøpet utvidet USA fra Mississippi til Rocky Mountains."
+          "explain": "Jefferson ble selv president og kjøpte i 1803 den franske kolonien Louisiana. Kjøpet utvidet USA fra elven Mississippi til Klippefjellene."
         },
         {
           "id": "vh-usa-fram-til-1865-lincoln",
@@ -2231,10 +2231,10 @@
           "step": 3,
           "type": "explain",
           "prompt": "Forklar hvorfor utvidelsen vestover skjerpet konflikten om slaveriet.",
-          "answer": "Hver ny delstat kunne bli enten slavestat eller fristat, og det påvirket maktbalansen i Kongressen, særlig i Senatet der hver stat har to plasser. Sørstatene ville spre slaveriet til de nye områdene, mens mange i nord ville holde vest for frie, hvite bosettere.",
+          "answer": "Hver ny delstat kunne bli enten slavestat eller fristat, og det påvirket maktbalansen i Kongressen, særlig i Senatet, der hver stat har to plasser. Sørstatene ville spre slaveriet til de nye områdene, mens mange i nord ville holde Vesten åpen for frie, hvite bosettere.",
           "checklist": [
             "Nye stater ble slavestater eller fristater",
-            "Maktbalansen i Kongressen stod på spill",
+            "Maktbalansen i Kongressen sto på spill",
             "Sør ville spre slaveriet, nord ville begrense det"
           ],
           "explain": "Missouri-kompromisset i 1820 tok opp én slavestat og én fristat samtidig. Slike kompromisser holdt i noen tiår, men brøt sammen i 1850-årene."
@@ -2259,12 +2259,12 @@
           "id": "vh-usa-fram-til-1865-dode",
           "step": 4,
           "type": "choice",
-          "prompt": "Omtrent hvor mange mennesker døde i den amerikanske borgerkrigen?",
+          "prompt": "Hvor mange mennesker døde i den amerikanske borgerkrigen?",
           "answer": "Over 620 000",
           "distractors": [
-            "Omkring 60 000",
-            "Omkring 200 000",
-            "Omkring 2 millioner"
+            "Under 60 000",
+            "Under 200 000",
+            "Over 2 millioner"
           ],
           "explain": "Enda flere ble såret. Krigen avgjorde også hvor mye makt delstatene skulle ha overfor unionen."
         }

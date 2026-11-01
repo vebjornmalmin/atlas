@@ -12,17 +12,17 @@
       "title": "Fra istid til jernalder",
       "tier": 1,
       "prerequisites": [],
-      "summary": "De første menneskene kom etter istiden, og gjennom mer enn 10 000 år gikk samfunnet fra jakt og fangst til jordbruk, metall og skrift.",
+      "summary": "Funnene fra steinalder, bronsealder og jernalder viser hvordan samfunnet i Norge gikk fra jakt og fangst til jordbruk, metall og skrift.",
       "lesson": [
-        "Da isen trakk seg tilbake etter siste istid, kom de første menneskene til Norge, for over 11 000 år siden. De sikrest daterte boplassene, i Brunlanes ved Larvik, er inntil 11 800 år gamle. Folk levde som jegere, fangstfolk og sankere, flyttet med årstidene og laget redskaper av flint, stein, bein og tre. De første tusen årene bodde det kanskje bare noen få hundre mennesker i landet.",
-        "Arkeologene deler forhistorien inn etter materialet i redskaper og våpen: steinalder, bronsealder og jernalder. Omkring 4000 før vår tidsregning (fvt.) begynte yngre steinalder. Da lærte folk i deler av landet å holde husdyr og dyrke korn. Bronsealderen (omkring 1700–500 fvt.) har navn etter bronse, en blanding av kobber og tinn som måtte hentes langveisfra.",
-        "Jernalderen varte fra omkring 500 fvt. til omkring 1050. Jern kunne utvinnes av myrmalm her i landet, og i romertiden, da kontakten med Romerriket var stor, ble runeskriften kjent i Norden. Helleristningene, bilder hugget inn i berg, viser hva folk var opptatt av. I Alta i Finnmark avbildet fangstfolk rein, elg og bjørn, mens bøndene i bronsealderen blant annet ristet inn skip."
+        "Da isen trakk seg tilbake etter siste istid, kom de første menneskene til Norge, for over 11 000 år siden. De sikrest daterte boplassene ligger i Brunlanes ved Larvik og er inntil 11 800 år gamle. Folk levde som jegere, fangstfolk og sankere, flyttet med årstidene og laget redskaper av flint, stein, bein og tre. De første tusen årene bodde det kanskje bare noen få hundre mennesker i landet.",
+        "Arkeologene deler forhistorien inn etter materialet i redskaper og våpen: steinalder, bronsealder og jernalder. Omkring 4000 f.Kr. begynte yngre steinalder. Da lærte folk i deler av landet å holde husdyr og dyrke korn. Bronsealderen (omkring 1700–500 f.Kr.) har navn etter bronse, en blanding av kobber og tinn. Begge metallene måtte hentes langveisfra.",
+        "Jernalderen varte fra omkring 500 f.Kr. til omkring 1050. Jern kunne utvinnes av myrmalm her i landet. I romertiden hadde Norden mye kontakt med Romerriket, og da ble runeskriften kjent. Helleristninger er bilder hugget inn i berg, og de viser hva folk var opptatt av. I Alta i Finnmark avbildet fangstfolk rein, elg og bjørn, mens bøndene i bronsealderen blant annet ristet inn skip."
       ],
       "keyPoints": [
         "De første menneskene kom etter istiden, for over 11 000 år siden.",
-        "Husdyrhold og korndyrking kom med yngre steinalder, fra omkring 4000 fvt.",
-        "Bronsealderen (omkring 1700–500 fvt.) bygde på handel, fordi kobber og tinn måtte hentes utenfra.",
-        "Jernalderen (omkring 500 fvt.–1050) gav jern av myrmalm og runeskrift.",
+        "Husdyrhold og korndyrking kom med yngre steinalder, fra omkring 4000 f.Kr.",
+        "Bronsealderen (omkring 1700–500 f.Kr.) bygde på handel fordi kobber og tinn måtte hentes utenfra.",
+        "I jernalderen (omkring 500 f.Kr.–1050) utvant folk jern av myrmalm, og runeskriften kom til Norden.",
         "Helleristningene i Alta er Nord-Europas største samling med jaktmotiver."
       ],
       "sources": [
@@ -55,7 +55,7 @@
             "For omkring 6000 år siden, med jordbruket",
             "For omkring 2000 år siden, i romertiden"
           ],
-          "explain": "Funnene på Høgnipen i Sarpsborg stammer fra en tid da iskanten lå bare noen få mil lenger nord. Funnene ligner dem fra de tidligste boplassene i Sør-Sverige og Danmark."
+          "explain": "Funnene på Høgnipen i Sarpsborg er fra en tid da iskanten lå bare noen få mil lenger nord. De ligner funnene fra de tidligste boplassene i Sør-Sverige og Danmark."
         },
         {
           "id": "nh-forhistorie-inndeling",
@@ -74,14 +74,14 @@
           "id": "nh-forhistorie-jordbruk",
           "step": 1,
           "type": "choice",
-          "prompt": "Hva var det store nye i yngre steinalder, fra omkring 4000 fvt.?",
+          "prompt": "Hva var den store nyvinningen i yngre steinalder, fra omkring 4000 f.Kr.?",
           "answer": "Husdyrhold og korndyrking",
           "distractors": [
             "Smiing av jernredskaper",
             "Runeskrift på steiner",
             "Byer med handelsplasser"
           ],
-          "explain": "De første sporene etter februk og korndyrking finnes særlig langs Oslofjorden. I bronsealderen ble gården med langhus og faste, gjødslede åkrer rammen for livet, men jakt, fangst og fiske var fortsatt viktig."
+          "explain": "De første sporene etter februk og korndyrking finnes særlig langs Oslofjorden. I bronsealderen ble gården med langhus og faste, gjødslede åkrer rammen for livet. Jakt, fangst og fiske var likevel fortsatt viktig."
         },
         {
           "id": "nh-forhistorie-bronse",
@@ -92,7 +92,7 @@
           "accept": [
             "bronsen"
           ],
-          "explain": "Kobberet kom blant annet fra Alpene og Den iberiske halvøy, tinnet fra Cornwall. Andre veien gikk pelsverk, kleberstein og rav, og havgående skip var en forutsetning for handelen."
+          "explain": "Kobberet kom blant annet fra Alpene og Den iberiske halvøy, tinnet fra Cornwall. Motsatt vei gikk pelsverk, kleberstein og rav. Handelen krevde havgående skip."
         },
         {
           "id": "nh-forhistorie-runer",
@@ -106,7 +106,7 @@
             "runealfabetet",
             "futhark"
           ],
-          "explain": "Noen av de eldste runeinnskriftene som er kjent, er funnet i Norge. Også vektenhetene øre og ertog går tilbake på romersk myntfot."
+          "explain": "Noen av de eldste kjente runeinnskriftene er funnet i Norge. Også vektenhetene øre og ertog går tilbake på romersk myntfot."
         },
         {
           "id": "nh-forhistorie-alta",
@@ -130,7 +130,7 @@
           "accept": [
             "myrmalmen"
           ],
-          "explain": "Ved Fet i Sysendalen på Hardangervidda var et anlegg for jernutvinning i drift allerede i førromersk jernalder. I fjellet ble det også brutt kleberstein til gryter i stor skala."
+          "explain": "Ved Fet i Sysendalen på Hardangervidda var et anlegg for jernutvinning i drift allerede i førromersk jernalder. I fjellet brøt folk også kleberstein til gryter i stor skala."
         },
         {
           "id": "nh-forhistorie-perioder",
@@ -162,7 +162,7 @@
           "step": 3,
           "type": "choice",
           "prompt": "Hvorfor var bronsealderen i Norden avhengig av handel over lange avstander?",
-          "answer": "Kobber og tinn måtte hentes langt borte",
+          "answer": "Kobber og tinn måtte hentes langveisfra",
           "distractors": [
             "Bøndene manglet korn til eget bruk",
             "Høvdingene krevde skatt i sølv",
@@ -178,7 +178,7 @@
           "answer": "Med husdyr og korn kunne folk bli boende på samme sted i stedet for å flytte med årstidene. I bronsealderen ble gården med langhus en fast ramme for livet, og åkrene ble gjødslet. Jakt, fangst og fiske fortsatte likevel ved siden av.",
           "checklist": [
             "Fastere bosetting i stedet for flytting",
-            "Gården ble livets faste ramme",
+            "Gården ble den faste rammen for livet",
             "Jakt, fangst og fiske fortsatte"
           ],
           "explain": "Overgangen tok lang tid. I yngre steinalder ble fangstfolkenes boplasser tvert imot flere og større, ikke minst i Nord-Norge."
@@ -188,13 +188,13 @@
           "step": 4,
           "type": "choice",
           "prompt": "Omtrent når var bronsealderen i Sør- og Midt-Norge?",
-          "answer": "Omkring 1700–500 fvt.",
+          "answer": "Omkring 1700–500 f.Kr.",
           "distractors": [
-            "Omkring 4000–2000 fvt.",
-            "Omkring 500 fvt.–550",
-            "Omkring 10 000–8000 fvt."
+            "Omkring 4000–2000 f.Kr.",
+            "Omkring 500 f.Kr.–550 e.Kr.",
+            "Omkring 10 000–8000 f.Kr."
           ],
-          "explain": "Lenger nord brukes ikke betegnelsen bronsealder. Der snakker arkeologene om tidlig metalltid, fra omkring 2000 fvt. til 300 etter vår tidsregning."
+          "explain": "Lenger nord brukes ikke betegnelsen bronsealder. Der snakker arkeologene om tidlig metalltid, fra omkring 2000 f.Kr. til 300 e.Kr."
         },
         {
           "id": "nh-forhistorie-alta-funnet",
@@ -202,7 +202,7 @@
           "type": "year",
           "prompt": "Hvilket år ble de første helleristningene i Alta oppdaget?",
           "answer": "1973",
-          "explain": "Ristningene er datert til mellom omkring 4200 og 500 fvt., blant annet ut fra hvordan havnivået har endret seg. Alta museum åpnet ved feltet i 1991."
+          "explain": "Ristningene er datert til mellom omkring 4200 og 500 f.Kr., blant annet ut fra hvordan havnivået har endret seg. Alta museum åpnet ved feltet i 1991."
         }
       ]
     },
@@ -215,17 +215,17 @@
         "from": 793,
         "to": 1066
       },
-      "summary": "Perioden da skandinaver reiste ut som plyndrere, handelsfolk og nybyggere, og Norden ble en del av Europa.",
+      "summary": "Vikingtiden viser hvordan skandinaviske plyndrere, handelsfolk og nybyggere knyttet Norden til resten av Europa.",
       "lesson": [
-        "Vikingtiden er perioden fra omkring 800 til omkring 1050. Den knyttes ofte til angrepet på klosteret Lindisfarne i Nord-England i 793, den første norske hendelsen som kan tidfestes noenlunde sikkert i skriftlige kilder. Vikingenes lette skip kunne både ros og seiles, krysse åpent hav og gå langt opp elver.",
-        "Skandinaver dro ut med havgående skip, både for å plyndre, handle og bosette seg. Nordmenn slo seg ned på Island, Grønland og de britiske øyer. Hjemme var gården den viktigste enheten. Kanskje en fjerdedel til en tredjedel av folket var treller, ufrie mennesker som ble behandlet som eiendom. Frie menn møttes på tinget for å avgjøre tvister og vedta lover.",
-        "Perioden tok slutt gjennom lange prosesser snarere enn ett slag: kristendommen og kirken fikk fotfeste, byer vokste fram og kongedømmene ble en del av det kristne Europa. Språket var norrønt."
+        "Vikingtiden er perioden fra omkring 800 til omkring 1050. Starten knyttes ofte til angrepet på klosteret Lindisfarne i Nord-England i 793. Det er den første norske hendelsen som kan tidfestes noenlunde sikkert i skriftlige kilder. Vikingenes lette skip kunne både ros og seiles, krysse åpent hav og gå langt opp elver.",
+        "Skandinavene snakket norrønt og dro ut med havgående skip for å plyndre, handle og bosette seg. Nordmenn slo seg ned på Island, Grønland og De britiske øyer. Hjemme var gården den viktigste enheten. Kanskje en fjerdedel til en tredjedel av folket var treller, ufrie mennesker som ble behandlet som eiendom. Frie menn møttes på tinget, en forsamling som avgjorde tvister og vedtok lover.",
+        "Vikingtiden tok slutt gradvis, ikke med ett slag. Kristendommen og kirken fikk fotfeste, byer vokste fram, og kongedømmene ble en del av det kristne Europa."
       ],
       "keyPoints": [
-        "Omkring 800–1050; Lindisfarne 793 regnes ofte som starten.",
-        "Vikingene plyndret, handlet og bosatte seg – fra Nord-Amerika til Russland.",
-        "Tinget løste konflikter og vedtok lover; gården var samfunnets kjerne.",
-        "Slutten kom med kristendom, kirkeorganisasjon og byvekst."
+        "Vikingtiden varte fra omkring 800 til 1050, og angrepet på Lindisfarne i 793 regnes ofte som starten.",
+        "Vikingene plyndret, handlet og bosatte seg fra Nord-Amerika i vest til Russland i øst.",
+        "Gården var samfunnets kjerne, og på tinget løste frie menn konflikter og vedtok lover.",
+        "Vikingtiden tok slutt gradvis, med kristendom, kirkeorganisasjon og byvekst."
       ],
       "sources": [
         {
@@ -263,8 +263,8 @@
           "id": "nh-vikingtiden-lindisfarne",
           "step": 1,
           "type": "choice",
-          "prompt": "Hvilket angrep i 793 regnes ofte som starten på vikingtiden?",
-          "answer": "Angrepet på klosteret Lindisfarne",
+          "prompt": "Hvilken hendelse i 793 regnes ofte som starten på vikingtiden?",
+          "answer": "Angrepet på Lindisfarne",
           "distractors": [
             "Slaget ved Stiklestad",
             "Erobringen av Konstantinopel",
@@ -277,13 +277,13 @@
           "step": 1,
           "type": "choice",
           "prompt": "Hva var tinget i vikingtiden?",
-          "answer": "En forsamling som løste tvister og vedtok lover",
+          "answer": "En forsamling for lover og tvister",
           "distractors": [
             "Kongens personlige livvakt",
             "Et tempel for de norrøne gudene",
             "En handelsby ved kysten"
           ],
-          "explain": "På de store lagtingene ble lovene gjort kjent, konflikter forsøkt løst og konger hyllet. Den verste straffen var å bli dømt fredløs og miste lovens beskyttelse."
+          "explain": "På de store lagtingene ble lovene kunngjort, konflikter forsøkt løst og konger hyllet. Den verste straffen var å bli dømt fredløs og miste lovens beskyttelse."
         },
         {
           "id": "nh-vikingtiden-sprak",
@@ -330,7 +330,7 @@
           "id": "nh-vikingtiden-oseberg",
           "step": 2,
           "type": "text",
-          "prompt": "Hva heter vikingskipet fra Vestfold som er et av verdens best bevarte, og som ble funnet i en rik grav?",
+          "prompt": "Hvilket vikingskip fra en rik grav i Vestfold er blant verdens best bevarte?",
           "answer": "Osebergskipet",
           "accept": [
             "Oseberg",
@@ -343,7 +343,7 @@
           "step": 3,
           "type": "choice",
           "prompt": "Hvorfor var klostre som Lindisfarne attraktive mål for vikingene?",
-          "answer": "De hadde verdisaker og lå ubeskyttet ved kysten",
+          "answer": "De hadde verdier og lå ubeskyttet ved kysten",
           "distractors": [
             "De var militære festninger med våpenlagre",
             "Vikingene ville spre kristendommen",
@@ -356,7 +356,7 @@
           "step": 3,
           "type": "choice",
           "prompt": "Hva forklarer best at vikingtiden tok slutt?",
-          "answer": "Kristendom, kirke og byvekst knyttet Norden til resten av Europa",
+          "answer": "Kristendom, kirke og byer knyttet Norden til Europa",
           "distractors": [
             "Vikingene tapte ett avgjørende slag mot England",
             "Skipsbyggingen i Norden stanset helt",
@@ -369,11 +369,11 @@
           "step": 3,
           "type": "explain",
           "prompt": "Forklar hvorfor skipene var avgjørende for vikingenes ferder.",
-          "answer": "Lette, havgående skip kunne både ros og seiles. De tålte åpent hav og kunne gå langt opp elver og inn på grunt vann, så vikingene kunne nå fjerne steder raskt og overraske.",
+          "answer": "Lette, havgående skip kunne både ros og seiles. De tålte åpent hav og kunne gå langt opp elver og inn på grunt vann. Dermed kunne vikingene raskt nå fjerne steder og komme overraskende.",
           "checklist": [
             "Skipene tålte åpent hav",
             "De kunne både ros og seiles",
-            "Grunt skrog gav tilgang til elver og strender"
+            "Det grunne skroget ga tilgang til elver og strender"
           ],
           "explain": "Uten havgående skip ville verken plyndringstokt, handel langs russiske elver eller bosetting på Island vært mulig."
         },
@@ -389,10 +389,10 @@
           "id": "nh-vikingtiden-treller",
           "step": 4,
           "type": "choice",
-          "prompt": "Omtrent hvor stor del av befolkningen kan ha vært treller (ufrie) i vikingtiden?",
+          "prompt": "Omtrent hvor stor del av befolkningen i vikingtiden kan ha vært treller?",
           "answer": "En fjerdedel til en tredjedel",
           "distractors": [
-            "Under en av hundre",
+            "Under én av hundre",
             "Omtrent halvparten",
             "Tre av fire"
           ],
@@ -411,14 +411,14 @@
         "from": 865,
         "to": 1035
       },
-      "summary": "Hvordan Norge gradvis ble ett kongerike og et kristent land, fra Harald Hårfagre til Olav den hellige – og hvor lite vi sikkert vet.",
+      "summary": "Rikssamlingen og kristningen forklarer hvordan Norge ble ett kristent kongerike, og hvorfor historikere er forsiktige med sagaene.",
       "lesson": [
-        "I vikingtiden var Norge delt i mange små riker og høvdingdømmer. Tradisjonen gjør Harald Hårfagre til kongen som samlet landet, etter slaget i Hafrsfjord ved Stavanger, ifølge Are Frode i 872. Men dette bildet ble skapt av sagaforfattere på 1100- og 1200-tallet. Haralds rike var trolig først og fremst Sør-Vestlandet, og årstallet for slaget er usikkert.",
-        "Rikssamlingen var en lang prosess. Olav Tryggvason, konge fra omkring 995 til 1000, regnes som en av kristningskongene og skal ifølge sagaene ha grunnlagt Nidaros. Han falt i slaget ved Svolder. Olav Haraldsson, konge 1015–1028, styrte et større område enn noen konge før ham. På Mostertinget i 1024 ble kristendommen trolig gjort til rikets eneste tillatte religion.",
-        "Olavs harde styre skapte mange fiender, og stormenn gikk over til den dansk-engelske kongen Knut den mektige. Da Olav kom tilbake fra Gardarike, falt han i slaget på Stiklestad 29. juli 1030 mot en bondehær. Kort etter ble han erklært hellig. Som Olav den hellige ble han Norges «evige konge», og Nidaros ble landets kirkelige sentrum."
+        "I vikingtiden var Norge delt i mange små riker og høvdingdømmer. Ifølge tradisjonen samlet Harald Hårfagre landet etter slaget i Hafrsfjord ved Stavanger, som Are Frode daterte til 872. Dette bildet ble likevel skapt av sagaforfattere på 1100- og 1200-tallet. Haralds rike var trolig først og fremst Sør-Vestlandet, og årstallet for slaget er usikkert.",
+        "Rikssamlingen var en lang prosess. Olav Tryggvason var konge fra omkring 995 til 1000. Han regnes som en av kristningskongene, og ifølge sagaene grunnla han Nidaros. Han falt i slaget ved Svolder. Olav Haraldsson var konge 1015–1028 og styrte et større område enn noen konge før ham. På Mostertinget i 1024 ble kristendommen trolig gjort til rikets eneste tillatte religion.",
+        "Olavs harde styre skapte mange fiender, og stormenn gikk over til den dansk-engelske kongen Knut den mektige. Da Olav kom tilbake fra Gardarike, falt han mot en bondehær i slaget på Stiklestad 29. juli 1030. Kort etter ble han erklært hellig. Som Olav den hellige ble han Norges «evige konge», og Nidaros ble landets kirkelige sentrum."
       ],
       "keyPoints": [
-        "Harald Hårfagre samlet tradisjonelt Norge i Hafrsfjord, men både omfang og årstall er omstridt.",
+        "Ifølge tradisjonen samlet Harald Hårfagre Norge i slaget i Hafrsfjord, men både omfanget og årstallet er omstridt.",
         "Rikssamlingen var en prosess som varte minst til Olav Haraldssons tid.",
         "Olav Tryggvason og Olav Haraldsson var de viktigste kristningskongene.",
         "Olav Haraldsson falt på Stiklestad i 1030 og ble helgen kort etter.",
@@ -447,7 +447,7 @@
           "id": "nh-rikssamling-kristning-hafrsfjord",
           "step": 1,
           "type": "choice",
-          "prompt": "Hvilket slag har tradisjonen sett som slaget der Norge ble samlet til ett rike?",
+          "prompt": "I hvilket slag ble Norge ifølge tradisjonen samlet til ett rike?",
           "answer": "Slaget i Hafrsfjord",
           "distractors": [
             "Slaget på Stiklestad",
@@ -520,7 +520,7 @@
             "St. Olav",
             "Hellig-Olav"
           ],
-          "explain": "Dyrkingen av ham spredte seg raskt, og det ble bygd Olavskirker i byer som Novgorod, London og York. Olav ble det mest populære mannsnavnet i Norge fram til reformasjonen."
+          "explain": "Olavskulten spredte seg raskt, og det ble bygd Olavskirker i blant annet Novgorod, London og York. Olav ble det mest populære mannsnavnet i Norge fram til reformasjonen."
         },
         {
           "id": "nh-rikssamling-kristning-nidaros",
@@ -533,7 +533,7 @@
             "Tønsberg",
             "Oslo"
           ],
-          "explain": "Olav ble først gravlagt i hemmelighet utenfor byen. Året etter ble liket lagt i et skrin på høyalteret i Klemenskirken, og alt i 1070-årene kalte Adam av Bremen byen Norges kirkelige hovedstad."
+          "explain": "Olav ble først gravlagt i hemmelighet utenfor byen. Året etter ble liket lagt i et skrin på høyalteret i Klemenskirken, og allerede i 1070-årene kalte Adam av Bremen byen Norges kirkelige hovedstad."
         },
         {
           "id": "nh-rikssamling-kristning-rekkefolge",
@@ -546,7 +546,7 @@
               "year": 872
             },
             {
-              "label": "Olav Tryggvason faller ved Svolder",
+              "label": "Slaget ved Svolder",
               "year": 1000
             },
             {
@@ -565,7 +565,7 @@
           "step": 3,
           "type": "explain",
           "prompt": "Forklar hvorfor historikere i dag kaller rikssamlingen en prosess og ikke én hendelse.",
-          "answer": "Harald Hårfagre kontrollerte trolig mest Sør-Vestlandet. Kongemakten over hele landet ble bygd opp gjennom flere generasjoner, i kamp mot ladejarler og danske konger. Olav Haraldsson var den første som styrte et større område enn alle før ham, og bildet av Harald som rikssamler ble skapt av senere sagaer.",
+          "answer": "Harald Hårfagre kontrollerte trolig mest Sør-Vestlandet. Kongemakten over hele landet ble bygd opp gjennom flere generasjoner, i kamp mot ladejarler og danske konger. Olav Haraldsson styrte et større område enn noen konge før ham, og bildet av Harald som rikssamler ble skapt av senere sagaer.",
           "checklist": [
             "Haralds rike var trolig mest Sør-Vestlandet",
             "Flere konger bygde videre over lang tid",
@@ -584,7 +584,7 @@
             "Han tapte flåten sin i en storm",
             "Bøndene ville heller ha en svensk konge"
           ],
-          "explain": "Knut den mektige, konge av England og Danmark, gav norske stormenn gaver og sølv. I 1028 ble Knut hyllet som konge, og Olav måtte flykte til Gardarike."
+          "explain": "Knut den mektige, konge av England og Danmark, ga norske stormenn gaver og sølv. I 1028 ble Knut hyllet som konge, og Olav måtte flykte til Gardarike."
         },
         {
           "id": "nh-rikssamling-kristning-tryggvason-lengde",
@@ -605,7 +605,7 @@
           "type": "year",
           "prompt": "Hvilket år holdt Olav Haraldsson det store kirke- og riksmøtet på Moster?",
           "answer": "1024",
-          "explain": "Møtet gav trolig Norge en kirkeorganisasjon og en kristen rettsordning. Det er likevel usikkert om kristenretten ble skrevet ned allerede da; de eldste bevarte håndskriftene er fra 1100-tallet."
+          "explain": "Møtet ga trolig Norge en kirkeorganisasjon og en kristen rettsordning. Det er likevel usikkert om kristenretten ble skrevet ned allerede da. De eldste bevarte håndskriftene er fra 1100-tallet."
         },
         {
           "id": "nh-rikssamling-kristning-aar-stiklestad",
@@ -613,7 +613,7 @@
           "type": "year",
           "prompt": "Hvilket år falt Olav Haraldsson på Stiklestad?",
           "answer": "1030",
-          "explain": "Datoen var 29. juli. Ifølge tradisjonen var det Tore Hund som gav kongen banesåret."
+          "explain": "Datoen var 29. juli. Ifølge tradisjonen var det Tore Hund som ga kongen banesåret."
         }
       ]
     },
@@ -628,17 +628,17 @@
         "from": 1130,
         "to": 1350
       },
-      "summary": "Fra borgerkrigene via en sterk kongemakt og felles lov til pestens store manndaude: perioden som formet middelalderens Norge.",
+      "summary": "Borgerkrigene, landsloven, Hansaen og Svartedauden viser hvordan Norge fikk sterk kongemakt og felles lov, og hvordan pesten rammet landet.",
       "lesson": [
-        "Fra 1130 til 1240 kjempet rivaliserende kongsemner og flokkene deres om hvem som skulle være konge. I denne borgerkrigstiden ble Magnus Erlingsson i 1163 eller 1164 kronet som den første kongen i Norden, med kirkens støtte. Birkebeinerne ble til slutt den sterkeste flokken. Deres konge Håkon Håkonsson ble valgt i 1217, og da jarlen Skule Bårdsson gjorde opprør og ble felt i 1240, var borgerkrigene over.",
-        "Håkon var konge til 1263. Sønnen Magnus Lagabøte gav landet en felles lovbok, landsloven, som trådte i kraft i 1274 og ble brukt i over 400 år. Tyske hanseater etablerte seg fast i Bergen på 1240-tallet. Handelen dreide seg mye om tørrfisk fra Nord-Norge mot korn fra Østersjøområdet, og rundt 1360 fikk Hansaen et eget kontor i byen. Etter Svartedauden kjøpte hanseatene opp stadig flere gårder på Bryggen.",
-        "I 1349 kom pesten til Bergen med et skip fra England. Svartedauden spredte seg over hele landet, og nye pestutbrudd fulgte i århundrene etter. Rundt 1500 var folketallet trolig drygt 60 prosent lavere enn før pestene. Kongen den gang, Magnus Eriksson, styrte både Norge og Sverige. Nyere forskning mener at Norges svekkede stilling senere skyldtes politiske og økonomiske forhold, ikke pesten."
+        "Fra 1130 til 1240 kjempet rivaliserende kongsemner og flokkene deres om hvem som skulle være konge. I denne borgerkrigstiden ble Magnus Erlingsson den første kongen i Norden som ble kronet, i 1163 eller 1164, med kirkens støtte. Birkebeinerne ble til slutt den sterkeste flokken. Kongen deres, Håkon Håkonsson, ble valgt i 1217. Da jarlen Skule Bårdsson gjorde opprør og ble felt i 1240, var borgerkrigene over.",
+        "Håkon var konge til 1263. Sønnen Magnus Lagabøte ga landet en felles lovbok, landsloven, som trådte i kraft i 1274 og ble brukt i over 400 år. Tyske hanseater slo seg fast ned i Bergen på 1240-tallet. Handelen dreide seg i stor grad om tørrfisk fra Nord-Norge mot korn fra Østersjøområdet. Rundt 1360 fikk Hansaen et eget kontor i byen, og etter Svartedauden kjøpte hanseatene opp stadig flere gårder på Bryggen.",
+        "I 1349 kom pesten til Bergen med et skip fra England. Svartedauden spredte seg over hele landet, og nye pestutbrudd fulgte i århundrene etter. Rundt 1500 var folketallet trolig drøyt 60 prosent lavere enn før pestene. Kongen på den tiden, Magnus Eriksson, styrte både Norge og Sverige. Ifølge nyere forskning skyldtes Norges svekkede stilling senere politiske og økonomiske forhold, ikke pesten."
       ],
       "keyPoints": [
         "Borgerkrigstiden (1130–1240) endte da Håkon Håkonsson vant over Skule Bårdsson.",
-        "Magnus Lagabøtes landslov fra 1274 gav hele riket én felles lov.",
-        "Hanseatene dominerte handelen i Bergen: tørrfisk ut, korn inn.",
-        "Svartedauden kom til Bergen i 1349; pestene mer enn halverte trolig folketallet fram mot 1500."
+        "Magnus Lagabøtes landslov fra 1274 ga hele riket én felles lov.",
+        "Hanseatene dominerte handelen i Bergen, der tørrfisk ble byttet mot korn.",
+        "Svartedauden kom til Bergen i 1349, og fram mot 1500 mer enn halverte pestene trolig folketallet."
       ],
       "sources": [
         {
@@ -735,13 +735,13 @@
           "accept": [
             "Bjørgvin"
           ],
-          "explain": "De andre kontorene lå i London, Brugge og Novgorod. Kontoret i Bergen var det som holdt lengst, til midten av 1700-tallet."
+          "explain": "De andre kontorene lå i London, Brugge og Novgorod. Kontoret i Bergen holdt lengst, til midten av 1700-tallet."
         },
         {
           "id": "nh-middelalder-svartedauden-torrfisk",
           "step": 2,
           "type": "text",
-          "prompt": "Hvilken norsk vare var hanseatenes viktigste i handelen i Bergen?",
+          "prompt": "Hvilken norsk vare var den viktigste for hanseatene i Bergen?",
           "answer": "Tørrfisk",
           "accept": [
             "tørrfisken",
@@ -760,7 +760,7 @@
             "Norge var avhengig av importert korn",
             "Tørrfisk var en verdifull eksportvare",
             "Blokaden i 1284 viste hanseatenes pressmiddel",
-            "Svekkelsen etter Svartedauden"
+            "Byen og riket var svekket etter Svartedauden"
           ],
           "explain": "I 1522 fantes det ikke lenger norske eiere på Bryggen. Først rundt 1560 ble de tyske kjøpmennene innordnet i det norske borgersamfunnet."
         },
@@ -808,14 +808,14 @@
           "type": "year",
           "prompt": "Hvilket år trådte Magnus Lagabøtes landslov i kraft?",
           "answer": "1274",
-          "explain": "Loven ble først avløst av Christian 5.s Norske Lov i 1687. Til 750-årsjubileet i 2024 gav Nasjonalbiblioteket ut en ny oversettelse på bokmål."
+          "explain": "Loven ble først avløst av Christian 5.s Norske Lov i 1687. Til 750-årsjubileet i 2024 ga Nasjonalbiblioteket ut en ny oversettelse på bokmål."
         },
         {
           "id": "nh-middelalder-svartedauden-folketall",
           "step": 4,
           "type": "choice",
           "prompt": "Omtrent hvor mye lavere var folketallet i Norge rundt 1500 enn før pestene, ifølge forskningen på øde gårder?",
-          "answer": "Drygt 60 prosent lavere",
+          "answer": "Drøyt 60 prosent lavere",
           "distractors": [
             "Omtrent 10 prosent lavere",
             "Omtrent 30 prosent lavere",
@@ -834,7 +834,7 @@
             "Magnus 7",
             "Magnus VII"
           ],
-          "explain": "Høsten 1349 påla han folk prosesjoner, messer og faste for å stanse pesten. Brevet viser at kongen kjente til pestutbruddene i England og på øyene i vest."
+          "explain": "I et brev høsten 1349 påla han folk prosesjoner, messer og faste for å stanse pesten. Brevet viser at kongen kjente til pestutbruddene i England og på øyene i vest."
         }
       ]
     },
@@ -849,18 +849,18 @@
         "from": 1397,
         "to": 1814
       },
-      "summary": "Fra Kalmarunionen til 1814: over 400 år der Norge ble styrt fra København, fikk luthersk kirke, enevelde og en egen embetsstand.",
+      "summary": "Over 400 år med styre fra København forklarer hvorfor Norge fikk luthersk kirke, enevelde og en egen embetsstand.",
       "lesson": [
         "I 1397 ble Erik av Pommern kronet til konge over Danmark, Norge og Sverige i Kalmar. Bak Kalmarunionen sto dronning Margrete, som hadde den reelle makten til hun døde i 1412. Rikene hadde felles konge og utenrikspolitikk, men egne lover. Sverige sto i lange perioder utenfor og brøt helt ut på 1520-tallet, mens Norge ble stadig tettere knyttet til Danmark.",
-        "I 1536 lovet Christian 3. den danske adelen at Norge skulle underordnes Danmarks krone. Året etter innførte han reformasjonen: den siste katolske erkebiskopen, Olav Engelbrektsson, flyktet, og det norske riksrådet ble ikke lenger innkalt. Kirken ble luthersk og en del av statsapparatet. I 1660 ble eneveldet innført, og kongen i København fikk i prinsippet all makt.",
-        "Christian 4. (konge 1588–1648) interesserte seg mer for Norge enn noen annen dansk-norsk konge. Da Oslo brant i 1624, flyttet han byen inn under Akershus og kalte den Christiania. Han grunnla også bergstaden Kongsberg, der det var funnet sølv. Landet ble styrt av embetsmenn – prester, offiserer, fogder og sorenskrivere – som tjente kongen."
+        "I 1536 lovet Christian 3. den danske adelen at Norge skulle underordnes Danmarks krone. Året etter innførte han reformasjonen. Den siste katolske erkebiskopen, Olav Engelbrektsson, flyktet, og det norske riksrådet ble ikke lenger kalt inn. Kirken ble luthersk og en del av statsapparatet. I 1660 ble eneveldet innført, og kongen i København fikk i prinsippet all makt.",
+        "Christian 4. (konge 1588–1648) interesserte seg mer for Norge enn noen annen dansk-norsk konge. Da Oslo brant i 1624, flyttet han byen inn under Akershus og kalte den Christiania. Han grunnla også bergstaden Kongsberg, der det var funnet sølv. Landet ble styrt av kongens embetsmenn, som prester, offiserer, fogder og sorenskrivere."
       ],
       "keyPoints": [
         "Kalmarunionen fra 1397 samlet Danmark, Norge og Sverige under én konge.",
         "I 1536–1537 ble Norge underlagt Danmark, og reformasjonen gjorde kirken luthersk.",
-        "Eneveldet fra 1660 samlet i prinsippet all makt hos kongen; embetsmenn styrte landet.",
+        "Med eneveldet fra 1660 fikk kongen i prinsippet all makt, og embetsmenn styrte landet på hans vegne.",
         "Christian 4. grunnla Christiania etter bybrannen i Oslo i 1624.",
-        "Perioden var en vekstperiode med flere folk og nye næringer som trelast og bergverk."
+        "Under dansk styre vokste folketallet, og nye næringer som trelast og bergverk kom til."
       ],
       "sources": [
         {
@@ -892,7 +892,7 @@
             "Danmark, Norge og Skottland",
             "Danmark, Sverige og Polen"
           ],
-          "explain": "Et kongefellesskap stod sterkere mot stater og aktører som Hansaen. Norge hadde i tillegg skattlandene Island, Færøyene, Grønland, Shetland og Orknøyene."
+          "explain": "Sammen sto rikene sterkere mot andre stater og mot Hansaen. Norge hadde i tillegg skattlandene Island, Færøyene, Grønland, Shetland og Orknøyene."
         },
         {
           "id": "nh-dansketiden-1537",
@@ -905,7 +905,7 @@
             "Norge gikk i union med Sverige",
             "Norge ble delt mellom nabolandene"
           ],
-          "explain": "Norge ble ikke fullt innlemmet i Danmark og ble fortsatt omtalt som et eget rike. Men det norske riksrådet døde hen, og den norske kirkeprovinsen ble avskaffet."
+          "explain": "Norge ble ikke fullt innlemmet i Danmark og ble fortsatt omtalt som et eget rike. Det norske riksrådet døde likevel hen, og den norske kirkeprovinsen ble avskaffet."
         },
         {
           "id": "nh-dansketiden-enevelde",
@@ -938,7 +938,7 @@
           "id": "nh-dansketiden-reformasjonen",
           "step": 2,
           "type": "text",
-          "prompt": "Hva kalles overgangen fra katolsk til luthersk kirke, som ble gjennomført i Norge i 1537?",
+          "prompt": "Hva kalles overgangen fra katolsk til luthersk kirke i Norge i 1537?",
           "answer": "Reformasjonen",
           "accept": [
             "reformasjon",
@@ -965,7 +965,7 @@
           "answer": "Embetsmenn utnevnt av kongen",
           "distractors": [
             "Ordførere valgt av bøndene",
-            "Lokale jarler og høvdinger",
+            "Høvdinger valgt på tinget",
             "Biskoper valgt av allmuen"
           ],
           "explain": "Etter 1660 ble lensherrene avløst av amtmenn på fast lønn. Embetsmennene fortsatte å styre også etter 1814, og årene 1814–1884 kalles embetsmannsstaten."
@@ -1013,7 +1013,7 @@
           "step": 3,
           "type": "choice",
           "prompt": "Hvordan utviklet folketallet og økonomien i Norge seg under dansk styre?",
-          "answer": "Det var en vekstperiode med flere folk og nye næringer",
+          "answer": "Folketallet vokste, og nye næringer kom til",
           "distractors": [
             "Det var en lang nedgangstid etter Svartedauden",
             "Folketallet sto stille fordi pesten kom tilbake",
@@ -1048,16 +1048,16 @@
         "from": 1814,
         "to": 1814
       },
-      "summary": "Året Norge gikk fra å være en del av Danmark-Norge til å bli en egen stat med en av Europas mest demokratiske grunnlover – og endte i union med Sverige.",
+      "summary": "Året 1814 forklarer hvordan Norge fikk en av Europas mest demokratiske grunnlover og ble en egen stat, men i union med Sverige.",
       "lesson": [
         "Danmark-Norge havnet på den tapende siden i Napoleonskrigene. Ved Kieltraktaten 14. januar 1814 måtte kong Frederik 6. avstå Norge til kongen av Sverige. Ingen hadde spurt nordmennene. Den danske prinsen Christian Frederik, som var stattholder i Norge, ledet et opprør mot avtalen og kalte inn en riksforsamling til Eidsvoll for å gi landet en grunnlov.",
         "Riksforsamlingen hadde 112 representanter, og embetsmennene var den største gruppen. Grunnloven ble vedtatt 16. mai og datert og underskrevet 17. mai. Den bygde på maktfordeling, og en større andel av folket fikk stemmerett enn i noe annet europeisk land. Men paragraf 2 nektet jøder adgang til riket. Denne jødeparagrafen ble først opphevet i 1851.",
-        "Den 17. mai valgte forsamlingen Christian Frederik til konge, men selvstendigheten varte bare noen måneder. Sommeren 1814 angrep den svenske kronprinsen Karl Johan, og etter en kort krig ble Mossekonvensjonen inngått 14. august. Norge måtte gå i union med Sverige, men fikk beholde Grunnloven, og Christian Frederik forlot landet. Den reviderte grunnloven av 4. november 1814 gjorde Norge til en egen stat med felles konge med Sverige."
+        "Den 17. mai valgte forsamlingen Christian Frederik til konge, men selvstendigheten varte bare noen måneder. Sommeren 1814 angrep den svenske kronprinsen Karl Johan, og etter en kort krig ble Mossekonvensjonen inngått 14. august. Norge måtte gå i union med Sverige, men fikk beholde Grunnloven. Christian Frederik forlot landet. Den reviderte grunnloven av 4. november 1814 gjorde Norge til en egen stat med felles konge med Sverige."
       ],
       "keyPoints": [
-        "Kieltraktaten i januar 1814 avsto Norge fra Danmark til Sverige.",
-        "Riksforsamlingen på Eidsvoll gav Norge en grunnlov, datert 17. mai 1814.",
-        "Grunnloven bygde på maktfordeling og gav uvanlig mange menn stemmerett, men stengte jøder ute til 1851.",
+        "Ved Kieltraktaten i januar 1814 måtte Danmark avstå Norge til Sverige.",
+        "Riksforsamlingen på Eidsvoll ga Norge en grunnlov, datert 17. mai 1814.",
+        "Grunnloven bygde på maktfordeling og ga uvanlig mange menn stemmerett, men stengte jøder ute til 1851.",
         "Etter en kort krig måtte Norge gå i union med Sverige, men beholdt Grunnloven."
       ],
       "sources": [
@@ -1120,7 +1120,7 @@
             "Parlamentarisme",
             "Enevelde"
           ],
-          "explain": "Prinsippet skulle begrense statens samlede makt, i motsetning til eneveldet. Det viktigste utkastet var skrevet av Christian Magnus Falsen og Johan Gunder Adler, med inspirasjon fra USAs grunnlov, de franske revolusjonsforfatningene og Montesquieus lære om maktfordeling."
+          "explain": "Prinsippet skulle begrense statens samlede makt, i motsetning til eneveldet. Det viktigste utkastet var skrevet av Christian Magnus Falsen og Johan Gunder Adler. De hentet inspirasjon fra USAs grunnlov, de franske revolusjonsforfatningene og Montesquieus lære om maktfordeling."
         },
         {
           "id": "nh-1814-christian-frederik",
@@ -1147,7 +1147,7 @@
             "Eidsvold Værk",
             "Eidsvollsbygningen"
           ],
-          "explain": "Forhandlingene foregikk i hovedbygningen på Eidsvoll verk. Nord-Norge var ikke representert, fordi avstandene var for store og tiden for knapp."
+          "explain": "Forhandlingene foregikk i hovedbygningen på Eidsvoll verk. Nord-Norge var ikke representert fordi avstandene var for store og tiden for knapp."
         },
         {
           "id": "nh-1814-moss",
@@ -1200,7 +1200,7 @@
             "Bare adelen og embetsmennene fikk stemme",
             "Stemmeretten ble knyttet til kirkemedlemskap"
           ],
-          "explain": "Om lag 40 prosent av mennene over 25 år fikk stemmerett. Mange av dem var selveiende bønder, fordi eie eller leie av matrikulert jord gav rett til å stemme."
+          "explain": "Om lag 40 prosent av mennene over 25 år fikk stemmerett. Eie eller leie av matrikulert jord ga stemmerett, så mange av dem var selveiende bønder."
         },
         {
           "id": "nh-1814-datoer",
@@ -1210,7 +1210,7 @@
           "pairs": [
             {
               "left": "14. januar",
-              "right": "Kieltraktaten undertegnes"
+              "right": "Kieltraktaten underskrives"
             },
             {
               "left": "17. mai",
@@ -1222,10 +1222,10 @@
             },
             {
               "left": "4. november",
-              "right": "Revidert grunnlov og union med Sverige"
+              "right": "Grunnloven revideres for unionen"
             }
           ],
-          "explain": "På mindre enn ett år gikk Norge fra å være del av Danmark-Norge til å bli en egen stat i union med Sverige. Med novembergrunnloven fikk Stortinget større tyngde enn i 17. mai-grunnloven."
+          "explain": "På mindre enn ett år gikk Norge fra å være en del av Danmark-Norge til å bli en egen stat i union med Sverige. Med novembergrunnloven fikk Stortinget større tyngde enn i 17. mai-grunnloven."
         },
         {
           "id": "nh-1814-jodeparagrafen",
@@ -1247,20 +1247,20 @@
           "prompt": "Hvor mange representanter hadde riksforsamlingen på Eidsvoll?",
           "answer": "112",
           "unit": "representanter",
-          "explain": "Embetsmennene var flest med 57. I tillegg var det 37 bønder og 18 handelsmenn og brukseiere."
+          "explain": "Embetsmennene var flest, med 57. I tillegg var det 37 bønder og 18 handelsmenn og brukseiere."
         },
         {
           "id": "nh-1814-falsen",
           "step": 4,
           "type": "text",
-          "prompt": "Hvem skrev sammen med Johan Gunder Adler det grunnlovsutkastet som ble viktigst på Eidsvoll?",
+          "prompt": "Hvem skrev det viktigste grunnlovsutkastet på Eidsvoll sammen med Johan Gunder Adler?",
           "answer": "Christian Magnus Falsen",
           "accept": [
             "Falsen",
             "C.M. Falsen",
             "Christian Falsen"
           ],
-          "explain": "Falsen ledet selvstendighetspartiet, som var i flertall, og var president i riksforsamlingen i den avgjørende tiden fram til vedtaket. Stemmerettsreglene i utkastet hans gav færre bønder stemmerett enn den endelige Grunnloven."
+          "explain": "Falsen ledet selvstendighetspartiet, som var i flertall, og var president i riksforsamlingen i den avgjørende tiden fram til vedtaket. Stemmerettsreglene i utkastet hans ga færre bønder stemmerett enn den endelige Grunnloven."
         }
       ]
     },
@@ -1275,17 +1275,17 @@
         "from": 1814,
         "to": 1905
       },
-      "summary": "Hvordan unionen med Sverige fungerte, hvorfor den ble stadig vanskeligere, og hvordan den ble oppløst uten krig i 1905.",
+      "summary": "Unionen med Sverige viser hvordan Norge fikk stadig mer selvstyre, og hvordan striden endte med en fredelig oppløsning i 1905.",
       "lesson": [
         "Unionen med Sverige fra 1814 var nesten en ren personalunion. Norge hadde egen regjering, eget storting, egne lover og egen hær, men felles konge og utenrikspolitikk med Sverige. Kong Karl Johan forsøkte å styrke kongemakten og knytte rikene tettere sammen, men møtte sterk motstand fra Stortinget.",
         "Fra 1880-årene vokste motsetningene. Venstre kom til makten i 1884 og krevde et eget norsk konsulatvesen, slik at norske konsuler kunne ivareta norsk handel og skipsfart i utlandet. Konsulatsaken ble den formelle årsaken til bruddet. Da kong Oscar 2. i 1905 nektet å godkjenne en lov om norske konsuler, gikk regjeringen til statsminister Christian Michelsen av.",
         "Den 7. juni 1905 vedtok Stortinget at kongen hadde sluttet å virke som norsk konge, og at unionen var oppløst. For å mildne det ensidige bruddet ble tronen tilbudt en av Oscars sønner. I folkeavstemningen 13. august stemte 368 208 ja og 184 nei. Etter forhandlinger i Karlstad ble bruddet fredelig, og den danske prins Carl ble konge som Haakon 7."
       ],
       "keyPoints": [
-        "Unionen var en personalunion: felles konge og utenrikspolitikk, ellers norsk selvstyre.",
+        "Unionen var nesten en ren personalunion med felles konge og utenrikspolitikk, men ellers norsk selvstyre.",
         "Kravet om egne norske konsuler utløste bruddet.",
         "Stortinget erklærte unionen oppløst 7. juni 1905.",
-        "Folkeavstemningen i august gav et nesten enstemmig ja.",
+        "Folkeavstemningen i august ga et nesten enstemmig ja.",
         "Prins Carl av Danmark ble konge som Haakon 7."
       ],
       "sources": [
@@ -1383,7 +1383,7 @@
             "Oskar II",
             "Oscar"
           ],
-          "explain": "Han nektet å godkjenne loven om norske konsuler i 1905. Den 26. oktober samme år gav han formelt avkall på den norske tronen, og i Sverige regnes den dagen som oppløsningsdagen."
+          "explain": "Han nektet å godkjenne loven om norske konsuler i 1905. Den 26. oktober samme år ga han formelt avkall på den norske tronen, og i Sverige regnes den dagen som oppløsningsdagen."
         },
         {
           "id": "nh-unionstiden-1905-haakon",
@@ -1407,9 +1407,9 @@
           "prompt": "Forklar hvorfor spørsmålet om egne konsuler ble så viktig for nordmennene.",
           "answer": "Norsk handel og skipsfart vokste, og mange mente at felles konsuler under det svenske utenriksstyret ivaretok norske interesser dårlig. Saken handlet også om nasjonal ære og om retten til å føre egen utenrikspolitikk.",
           "checklist": [
-            "Økende handel og skipsfart",
+            "Handel og skipsfart vokste",
             "Utenriksstyret var felles og svenskdominert",
-            "Nasjonal selvfølelse"
+            "Saken handlet om nasjonal ære"
           ],
           "explain": "Konflikten ble skjerpet fordi den norske venstrebevegelsen koblet krav om mer demokrati med krav om mer selvstendighet. I Sverige brukte de konservative unionssaken på motsatt måte."
         },
@@ -1441,7 +1441,7 @@
               "year": 1884
             },
             {
-              "label": "Krise i konsulatsaken, Sverige truer med krig",
+              "label": "Sverige truer med krig i konsulatsaken",
               "year": 1895
             },
             {
@@ -1449,7 +1449,7 @@
               "year": 1905
             }
           ],
-          "explain": "Etter Karl Johans død i 1844 kom en roligere tid, og 1850-årene er kalt unionens lykkelige tid. Fra 1880-årene trakk norske radikale og svenske konservative i hver sin retning."
+          "explain": "Etter Karl Johans død i 1844 kom en roligere tid, og 1850-årene har blitt kalt unionens lykkelige tid. Fra 1880-årene trakk norske radikale og svenske konservative i hver sin retning."
         },
         {
           "id": "nh-unionstiden-1905-nei",
@@ -1458,7 +1458,7 @@
           "prompt": "Hvor mange stemte nei i folkeavstemningen om unionsoppløsningen 13. august 1905?",
           "answer": "184",
           "unit": "stemmer",
-          "explain": "Det gav 99,95 prosent oppslutning. Kvinner hadde ikke stemmerett, men samlet inn nesten 280 000 underskrifter for oppløsningen."
+          "explain": "Det ga ja-siden 99,95 prosent. Kvinner hadde ikke stemmerett, men samlet inn nesten 280 000 underskrifter for oppløsningen."
         },
         {
           "id": "nh-unionstiden-1905-svensk-dato",
@@ -1471,7 +1471,7 @@
             "13. august 1905",
             "18. november 1905"
           ],
-          "explain": "Det svenske synet var at Norge ikke kunne oppløse unionen alene. Først da kongen gav avkall på tronen etter forhandlingene i Karlstad, var unionen oppløst i svensk forstand."
+          "explain": "Det svenske synet var at Norge ikke kunne oppløse unionen alene. Først da kongen ga avkall på tronen etter forhandlingene i Karlstad, var unionen oppløst i svensk forstand."
         }
       ]
     },
@@ -1486,18 +1486,18 @@
         "from": 1836,
         "to": 1915
       },
-      "summary": "Befolkningsvekst, utvandring, industri, arbeiderbevegelse, parlamentarisme og nasjonalromantikk: hvordan Norge ble et moderne samfunn på 1800-tallet.",
+      "summary": "Befolkningsvekst, utvandring, industri og nye folkebevegelser forklarer hvordan Norge ble et moderne samfunn på 1800-tallet.",
       "lesson": [
         "Norge var lenge et bondesamfunn, men fra midten av 1800-tallet endret landet seg raskt. Grunnlaget for moderne industri ble lagt i 1840-årene med tekstilfabrikker og mekaniske verksteder. Folketallet økte fra under 900 000 i 1801 til omtrent 2,2 millioner i 1900, og andelen som bodde i byer, steg fra under 9 til 28 prosent.",
-        "Mange søkte framtiden et annet sted. Mellom 1836 og 1915 utvandret over 750 000 nordmenn til Nord-Amerika; bare Irland mistet en større del av folket. Samtidig krevde nye grupper innflytelse. Marcus Thrane stiftet i 1848 den første arbeiderforeningen, og thranebevegelsen kjempet for allmenn stemmerett og bedre kår for husmenn og arbeidere.",
-        "Embetsmennene dominerte regjeringen fram til 1884. Da ble regjeringen Selmer dømt i riksrett, og Venstres leder Johan Sverdrup dannet regjering med støtte fra flertallet i Stortinget. Dermed var parlamentarismen innført. I kulturen søkte nasjonalromantikken det særegent norske i bondekulturen: Asbjørnsen og Moes folkeeventyr, folkemusikk og malerier som Brudeferd i Hardanger."
+        "Mange søkte framtiden et annet sted. Mellom 1836 og 1915 utvandret over 750 000 nordmenn til Nord-Amerika. Bare Irland mistet en større del av befolkningen. Samtidig krevde nye grupper innflytelse. Marcus Thrane stiftet i 1848 den første arbeiderforeningen, og thranebevegelsen kjempet for allmenn stemmerett og bedre kår for husmenn og arbeidere.",
+        "Embetsmennene dominerte regjeringen fram til 1884. Da ble regjeringen Selmer dømt i riksrett, og Venstres leder Johan Sverdrup dannet regjering med støtte fra flertallet i Stortinget. Dermed var parlamentarismen innført. Nasjonalromantikken søkte det særegent norske i bondekulturen. Eksempler er Asbjørnsen og Moes folkeeventyr, folkemusikken og malerier som «Brudeferd i Hardanger»."
       ],
       "keyPoints": [
         "Folketallet ble mer enn doblet på 1800-tallet, og byene vokste.",
         "Over 750 000 nordmenn utvandret til Nord-Amerika mellom 1836 og 1915.",
         "Thranebevegelsen var Norges første politiske massebevegelse.",
-        "Parlamentarismen ble innført i 1884: regjeringen må ha Stortingets tillit.",
-        "Nasjonalromantikken fant det norske i bondekulturen."
+        "Parlamentarismen ble innført i 1884, og siden har regjeringen måttet ha Stortingets tillit.",
+        "Nasjonalromantikken søkte det særegent norske i bondekulturen."
       ],
       "sources": [
         {
@@ -1529,7 +1529,7 @@
             "Over 250 000",
             "Over 2 millioner"
           ],
-          "explain": "Det var nesten like mange som bodde i Norge i 1801. Fra 1862 gav homestead-loven i USA innvandrere rett til egen jord, og den største bølgen kom i 1880-årene, med rekordåret 1882 og 29 000 utvandrere."
+          "explain": "Det var nesten like mange som bodde i Norge i 1801. Fra 1862 ga homestead-loven i USA innvandrere rett til egen jord. Den største bølgen kom i 1880-årene, med rekordåret 1882 og 29 000 utvandrere."
         },
         {
           "id": "nh-1800-tallets-norge-parlamentarisme",
@@ -1555,7 +1555,7 @@
             "I den danske hoffkulturen",
             "I arbeiderkulturen i byene"
           ],
-          "explain": "Tanken kom fra den tyske filosofen Herder: hver nasjon har en egen folkeånd. Det var likevel embetsmennene, eliten, som avgjorde hva som skulle regnes som norsk."
+          "explain": "Tanken kom fra den tyske filosofen Herder: Hver nasjon har en egen folkeånd. Likevel var det embetsmannseliten som avgjorde hva som skulle regnes som norsk."
         },
         {
           "id": "nh-1800-tallets-norge-thrane",
@@ -1584,14 +1584,14 @@
           "id": "nh-1800-tallets-norge-eventyr",
           "step": 2,
           "type": "text",
-          "prompt": "Hvilke to menn samlet inn og gav ut de norske folkeeventyrene?",
+          "prompt": "Hvilke to menn samlet inn og ga ut de norske folkeeventyrene?",
           "answer": "Asbjørnsen og Moe",
           "accept": [
             "Peter Christen Asbjørnsen og Jørgen Moe",
             "Asbjornsen og Moe",
             "Moe og Asbjørnsen"
           ],
-          "explain": "De begynte innsamlingen i 1837, inspirert av brødrene Grimm i Tyskland. Mange norske eventyr ligner eventyr fra andre land; det særegne lå mye i språket de skrev dem ned på."
+          "explain": "De begynte innsamlingen i 1837, inspirert av brødrene Grimm i Tyskland. Mange norske eventyr ligner eventyr fra andre land. Det særegne lå mye i språket de brukte."
         },
         {
           "id": "nh-1800-tallets-norge-brudeferd",
@@ -1612,7 +1612,7 @@
           "step": 3,
           "type": "explain",
           "prompt": "Forklar hvorfor utvandringen til Amerika ble så stor i siste halvdel av 1800-tallet.",
-          "answer": "Folketallet vokste kraftig, og i dårlige tider økte utvandringen. Fra 1862 gav homestead-loven innvandrere jord i USA. Når noen fra bygda hadde reist, fulgte ofte flere etter.",
+          "answer": "Folketallet vokste kraftig, og i dårlige tider økte utvandringen. Fra 1862 ga homestead-loven innvandrere jord i USA. Når noen fra bygda hadde reist, fulgte ofte flere etter.",
           "checklist": [
             "Sterk befolkningsvekst",
             "Dårlige tider hjemme",
@@ -1693,17 +1693,17 @@
         "from": 1940,
         "to": 1945
       },
-      "summary": "Fem år med tysk okkupasjon: angrepet 9. april 1940, kongen og regjeringen i London, NS-styret, motstandskampen, jødeforfølgelsen og oppgjøret etterpå.",
+      "summary": "Fem år med tysk okkupasjon forklarer hvorfor motstandskampen, jødeforfølgelsen og landssvikoppgjøret fortsatt preger synet på krigen i Norge.",
       "lesson": [
-        "Norge var nøytralt, men 9. april 1940 angrep Tyskland. Tyskerne ville ha baser for flåten og kontroll med jernmalmen som ble skipet ut fra Narvik. I Oslofjorden ble krysseren Blücher senket av kanonene på Oscarsborg festning ved Drøbak. Det gav kongen og regjeringen tid til å flykte fra Oslo. Etter to måneders kamper overga de norske styrkene seg 10. juni.",
+        "Norge var nøytralt, men 9. april 1940 angrep Tyskland. Tyskerne ville ha baser for flåten og kontroll med jernmalmen som ble skipet ut fra Narvik. I Oslofjorden senket kanonene på Oscarsborg festning ved Drøbak krysseren Blücher. Det ga kongen og regjeringen tid til å flykte fra Oslo. Etter to måneders kamper overga de norske styrkene seg 10. juni.",
         "Kong Haakon 7. og regjeringen Nygaardsvold dro 7. juni 1940 til London og førte krigen videre derfra. I Norge styrte den tyske rikskommissæren Josef Terboven. Nasjonal Samling (NS), ledet av Vidkun Quisling, var det eneste lovlige partiet. Hjemmefronten drev en våpenløs holdningskamp mot nazifiseringen og bygde opp Milorg. Den mest kjente sabotasjen var tungtvannsaksjonen på Rjukan.",
         "Over 770 norske jøder ble deportert i 1942–1943, de fleste til Auschwitz, og færre enn 40 overlevde. Det var norsk politi som arresterte dem. Høsten 1944 rykket sovjetiske tropper inn i Øst-Finnmark, mens tyskerne brente resten av Finnmark og Nord-Troms. Tyskerne i Norge overga seg 8. mai 1945. I landssvikoppgjøret ble over 90 000 saker etterforsket, men deportasjonen av jødene fikk liten plass."
       ],
       "keyPoints": [
-        "Tyskland angrep 9. april 1940; senkingen av Blücher gav kongen og regjeringen tid til å flykte.",
+        "Tyskland angrep 9. april 1940, og senkingen av Blücher ga kongen og regjeringen tid til å flykte.",
         "Kongen og regjeringen førte krigen videre fra London.",
         "Quisling og NS styrte under rikskommissær Terboven.",
-        "Over 770 norske jøder ble arrestert av norsk politi og deportert; nesten alle ble drept.",
+        "Over 770 norske jøder ble arrestert av norsk politi og deportert, og nesten alle ble drept.",
         "Tyskerne overga seg i mai 1945, og landssvikoppgjøret fulgte."
       ],
       "sources": [
@@ -1730,11 +1730,11 @@
           "step": 1,
           "type": "choice",
           "prompt": "Hvorfor ville Tyskland ha kontroll over Norge i 1940?",
-          "answer": "For baser til flåten og kontroll med jernmalmen fra Narvik",
+          "answer": "For flåtebaser og jernmalmen fra Narvik",
           "distractors": [
             "For å få tilgang til norsk olje i Nordsjøen",
             "For å hente arbeidskraft til tyske fabrikker",
-            "For å hindre at Norge sluttet seg til Sovjet"
+            "For å hindre en allianse med Sovjetunionen"
           ],
           "explain": "Også Storbritannia og Frankrike hadde planer i nord. De minela norske farvann 8. april for å stanse malmtrafikken, dagen før det tyske angrepet."
         },
@@ -1749,7 +1749,7 @@
             "Den stanset den britiske mineleggingen",
             "Den gjorde at Oslo aldri ble okkupert"
           ],
-          "explain": "Kommandant Birger Eriksen gav ordre om å åpne ild klokken 04.21. Skipet ble også truffet av to torpedoer og sank etter omtrent to timer."
+          "explain": "Kommandant Birger Eriksen ga ordre om å åpne ild klokken 04.21. Skipet ble også truffet av to torpedoer og sank etter omtrent to timer."
         },
         {
           "id": "nh-andre-verdenskrig-london",
@@ -1813,10 +1813,10 @@
           "id": "nh-andre-verdenskrig-forklar-jodene",
           "step": 3,
           "type": "explain",
-          "prompt": "Forklar hvorfor jødeforfølgelsen i Norge i dag sees som et norsk og ikke bare et tysk ansvar.",
+          "prompt": "Forklar hvorfor jødeforfølgelsen i Norge i dag ses som et norsk og ikke bare et tysk ansvar.",
           "answer": "Det var norsk politi, først og fremst Statspolitiet, som arresterte jødene, og tyskerne var avhengige av denne medvirkningen for å få dem ut av landet. Etter krigen ble deportasjonene i liten grad et tema i landssvikoppgjøret.",
           "checklist": [
-            "Norsk politi foretok arrestasjonene",
+            "Norsk politi arresterte jødene",
             "Tyskerne var avhengige av norsk medvirkning",
             "Oppgjøret etter krigen overså i stor grad jødenes skjebne"
           ],
@@ -1864,7 +1864,7 @@
           "id": "nh-andre-verdenskrig-kapitulasjon",
           "step": 4,
           "type": "choice",
-          "prompt": "Når overga de norske styrkene seg etter felttoget i 1940?",
+          "prompt": "Hvilken dato overga de norske styrkene seg etter felttoget i 1940?",
           "answer": "10. juni 1940",
           "distractors": [
             "9. april 1940",
@@ -1895,17 +1895,17 @@
         "from": 1945,
         "to": 1972
       },
-      "summary": "Fra gjenreisningen etter krigen til EF-striden: årene da Arbeiderpartiet styrte, Norge gikk inn i NATO og velferdsstaten ble bygd ut.",
+      "summary": "Gjenreisningen, NATO-medlemskapet og velferdsstaten viser hvordan Arbeiderpartiet formet Norge fra 1945 til EF-striden i 1972.",
       "lesson": [
-        "Etter frigjøringen ledet Arbeiderpartiets formann Einar Gerhardsen først en samlingsregjering, og etter valget i 1945 fikk partiet flertall alene på Stortinget. Gjenreisningen gikk raskere enn ventet, blant annet fordi tyskerne hadde bygd ut kraftverk, veier og havner under krigen. Allerede i 1946 var forbruk og produksjon tilbake på førkrigsnivå, og Marshallhjelpen fra USA bidro.",
+        "Etter frigjøringen ledet Arbeiderpartiets formann Einar Gerhardsen først en samlingsregjering. Ved valget i 1945 fikk partiet flertall alene på Stortinget. Gjenreisningen gikk raskere enn ventet, blant annet fordi tyskerne hadde bygd ut kraftverk, veier og havner under krigen. Allerede i 1946 var forbruk og produksjon tilbake på førkrigsnivå. Marshallhjelpen fra USA bidro også.",
         "Gerhardsen var statsminister i 17 år, lenger enn noen annen, og fikk tilnavnet «landsfaderen». Perioden fra 1935 til slutten av 1960-årene, da Arbeiderpartiet var det dominerende regjeringspartiet, kalles ofte arbeiderpartistaten. I 1949 ble Norge med i forsvarsalliansen NATO etter strid i Arbeiderpartiet, mens Sverige ble stående utenfor.",
-        "Velferdsstaten ble bygd ut, båret av lang økonomisk vekst, kraftig økte skatter og bred politisk enighet fra Fellesprogrammet i 1945. Kronen på verket var folketrygden, vedtatt i 1966 og i kraft fra 1. januar 1967. Mot slutten av perioden ble politikken mer omstridt. I folkeavstemningen 25. september 1972 stemte 53,5 prosent nei til medlemskap i EF, etter den bitreste politiske striden i norsk etterkrigstid."
+        "Lang økonomisk vekst, kraftig økte skatter og bred politisk enighet fra Fellesprogrammet i 1945 gjorde det mulig å bygge ut velferdsstaten. Kronen på verket var folketrygden, som ble vedtatt i 1966 og trådte i kraft 1. januar 1967. Mot slutten av perioden ble politikken mer omstridt. I folkeavstemningen 25. september 1972 stemte 53,5 prosent nei til medlemskap i EF, etter den bitreste politiske striden i norsk etterkrigstid."
       ],
       "keyPoints": [
         "Einar Gerhardsen ledet gjenreisningen og var statsminister i 17 år.",
         "Arbeiderpartiet dominerte politikken fra 1935 til slutten av 1960-årene.",
         "Norge ble med i NATO i 1949.",
-        "Folketrygden fra 1967 ble kronen på velferdsstaten.",
+        "Folketrygden fra 1967 ble kronen på verket i velferdsstaten.",
         "I 1972 sa 53,5 prosent nei til EF-medlemskap."
       ],
       "sources": [
@@ -1944,7 +1944,7 @@
           "id": "nh-etterkrigstiden-nato",
           "step": 1,
           "type": "choice",
-          "prompt": "Hvilket valg tok Norge i 1949 i den kalde krigen?",
+          "prompt": "Hva gjorde Norge i 1949, tidlig i den kalde krigen?",
           "answer": "Gikk inn i forsvarsalliansen NATO",
           "distractors": [
             "Erklærte seg nøytralt som Sverige",
@@ -1975,7 +1975,7 @@
           "accept": [
             "Gerhardsen"
           ],
-          "explain": "Gerhardsen satt i konsentrasjonsleiren Sachsenhausen under krigen. Bakgrunnen fra motstandsarbeidet gav ham stor tillit i folket i 1945."
+          "explain": "Gerhardsen satt i konsentrasjonsleiren Sachsenhausen under krigen. Bakgrunnen fra motstandsarbeidet ga ham stor tillit i folket i 1945."
         },
         {
           "id": "nh-etterkrigstiden-folketrygden",
@@ -2006,7 +2006,7 @@
           "step": 3,
           "type": "choice",
           "prompt": "Hvorfor gikk gjenreisningen etter krigen raskere enn mange ventet?",
-          "answer": "Tyskerne hadde bygd ut kraft, veier og havner under krigen",
+          "answer": "Tyskerne hadde bygd kraftverk, veier og havner",
           "distractors": [
             "Norge slapp krigsskader i nesten hele landet",
             "Oljeinntektene finansierte byggingen",
@@ -2019,7 +2019,7 @@
           "step": 3,
           "type": "explain",
           "prompt": "Forklar hva som gjorde det mulig å bygge ut velferdsstaten i etterkrigstiden.",
-          "answer": "Lang tids økonomisk vekst gav høyere inntekter, og skattene ble kraftig økt. Erfaringene fra krigen skapte samhold, og partiene var enige om hovedlinjene allerede i Fellesprogrammet fra 1945.",
+          "answer": "Lang tids økonomisk vekst ga høyere inntekter, og skattene ble kraftig økt. Erfaringene fra krigen skapte samhold, og partiene var enige om hovedlinjene allerede i Fellesprogrammet fra 1945.",
           "checklist": [
             "Økonomisk vekst over lang tid",
             "Høyere skatter",
@@ -2080,7 +2080,7 @@
           "answer": "53,5",
           "unit": "prosent",
           "tolerance": 0.5,
-          "explain": "Nei-flertallet var størst i distriktene; i Nordland stemte 72,5 prosent nei. I Oslo stemte to av tre ja."
+          "explain": "Nei-flertallet var størst i distriktene. I Nordland stemte 72,5 prosent nei, mens to av tre stemte ja i Oslo."
         }
       ]
     },
@@ -2095,18 +2095,18 @@
         "from": 1969,
         "to": 2017
       },
-      "summary": "Hvordan funnet av olje i Nordsjøen forvandlet Norge, og hvordan landet bygde opp statlig kontroll og et fond for å forvalte rikdommen.",
+      "summary": "Oljefunnet i Nordsjøen i 1969 forklarer hvordan Norge ble rikt, og hvorfor staten bygde opp nasjonal kontroll og et fond for rikdommen.",
       "lesson": [
         "I 1969 fant riggen Ocean Viking olje på Ekofiskfeltet i Nordsjøen, og like før jul ble feltet erklært drivverdig. Det var det første drivverdige funnet på norsk sokkel. Allerede i 1963 hadde Norge erklært at havbunnen utenfor kysten var under norsk statshøyhet, og i 1965 ble Nordsjøen delt med Storbritannia og Danmark etter midtlinjeprinsippet.",
         "Politikerne ville ha «nasjonal styring og kontroll», som det het i de ti oljebudene fra 1971. I 1972 ble det statlige oljeselskapet Statoil opprettet, i dag Equinor. Oljevirksomheten er blitt Norges største næring målt i verdiskaping, statlige inntekter, investeringer og eksport.",
-        "Oljeinntektene skulle brukes i et forsiktig tempo, så økonomien ikke ble ubalansert. Derfor ble Statens petroleumsfond opprettet i 1990, med første innskudd i 1996. I dag heter det Statens pensjonsfond utland. Handlingsregelen fra 2001 sier at staten over tid bare skal bruke den forventede avkastningen, nå 3 prosent. I 1994 sa 52,2 prosent nei til EU, særlig av frykt for å miste kontrollen over fisket."
+        "Oljeinntektene skulle brukes i et forsiktig tempo, slik at økonomien ikke kom i ubalanse. Derfor ble Statens petroleumsfond opprettet i 1990, med første innskudd i 1996. I dag heter det Statens pensjonsfond utland. Handlingsregelen fra 2001 sier at staten over tid bare skal bruke den forventede avkastningen, nå 3 prosent. I 1994 sa 52,2 prosent nei til EU, særlig av frykt for å miste kontrollen over fisket."
       ],
       "keyPoints": [
         "Ekofisk ble funnet i 1969 og innledet oljealderen.",
         "Statoil, i dag Equinor, ble opprettet i 1972 for å sikre nasjonal kontroll.",
         "Oljefondet ble opprettet i 1990 og fikk første innskudd i 1996.",
         "Handlingsregelen fra 2001 begrenser bruken av oljepenger til forventet avkastning.",
-        "Norge sa nei til EU i 1994, som til EF i 1972."
+        "Norge sa nei til EU i 1994, slik landet hadde sagt nei til EF i 1972."
       ],
       "sources": [
         {
@@ -2145,7 +2145,7 @@
           "step": 1,
           "type": "choice",
           "prompt": "Hvorfor ble oljefondet opprettet?",
-          "answer": "For at oljeinntektene skulle brukes i et forsiktig tempo",
+          "answer": "For å bruke oljeinntektene i et forsiktig tempo",
           "distractors": [
             "For å finansiere utbyggingen av nye oljefelt",
             "For å betale ned Norges gjeld fra krigen",
@@ -2158,11 +2158,11 @@
           "step": 1,
           "type": "choice",
           "prompt": "Hvorfor opprettet staten et eget oljeselskap i 1972?",
-          "answer": "For å bygge opp et norsk oljemiljø under nasjonal kontroll",
+          "answer": "For å bygge et norsk oljemiljø under nasjonal kontroll",
           "distractors": [
             "For å selge norsk olje billig til nabolandene",
             "For å overta all fiskeeksport fra Norge",
-            "For å stanse utenlandske selskaper fra å bore"
+            "For å hindre utenlandske selskaper i å bore"
           ],
           "explain": "Utbyggingen var først dominert av utenlandske selskaper. Statoil fikk i en periode 50 prosent av alle nye tildelinger og sikret seg kontrollen over rørledningene fra Ekofisk."
         },
@@ -2195,7 +2195,7 @@
           "type": "text",
           "prompt": "Hva heter det statlige oljeselskapet Statoil i dag?",
           "answer": "Equinor",
-          "explain": "Selskapet startet sitt første hele år i januar 1973 med to ansatte. Arve Johnsen ville gjøre det til et fullverdig oljeselskap som selv kunne finne, bygge ut og drive felt."
+          "explain": "Selskapet gikk inn i sitt første hele driftsår i januar 1973, med to ansatte. Arve Johnsen ville gjøre det til et fullverdig oljeselskap som selv kunne finne, bygge ut og drive felt."
         },
         {
           "id": "nh-oljealderen-forklar-handlingsregel",
@@ -2215,7 +2215,7 @@
           "step": 3,
           "type": "choice",
           "prompt": "Hva var det avgjørende argumentet mot EU-medlemskap i 1994?",
-          "answer": "Frykt for å gi fra seg makt og kontroll over fisket",
+          "answer": "Frykt for å miste kontrollen over fisket",
           "distractors": [
             "Frykt for at oljeprisen skulle falle",
             "Motstand mot å bli med i NATO",
@@ -2250,7 +2250,7 @@
               "year": 2001
             }
           ],
-          "explain": "Fra 1990 til 1995 gikk statsbudsjettene med underskudd, så fondet stod tomt i flere år. Etter 2009 har avkastningen de fleste år vært større enn de nye oljeinntektene."
+          "explain": "Fra 1990 til 1995 gikk statsbudsjettene med underskudd, så fondet sto tomt i flere år. Etter 2009 har avkastningen de fleste år vært større enn de nye oljeinntektene."
         },
         {
           "id": "nh-oljealderen-prosent",
@@ -2267,7 +2267,7 @@
           "type": "year",
           "prompt": "Hvilket år ble Ekofiskfeltet funnet?",
           "answer": "1969",
-          "explain": "Delelinjeavtalene fra 1965 gav Norge en andel av Nordsjøen som var nesten like stor som fastlandet. De første letebrønnene ble boret i 1966."
+          "explain": "Delelinjeavtalene fra 1965 ga Norge en andel av Nordsjøen som var nesten like stor som fastlandet. De første letebrønnene ble boret i 1966."
         },
         {
           "id": "nh-oljealderen-eu-prosent",
@@ -2277,7 +2277,7 @@
           "answer": "52,2",
           "unit": "prosent",
           "tolerance": 0.5,
-          "explain": "Sverige, Finland og Østerrike hadde alle sagt ja i sine folkeavstemninger. Nei-flertallet var størst i distriktene; i Finnmark stemte 74,5 prosent nei."
+          "explain": "Sverige, Finland og Østerrike hadde alle sagt ja i sine folkeavstemninger. Nei-flertallet var størst i distriktene, og i Finnmark stemte 74,5 prosent nei."
         }
       ]
     },
@@ -2290,17 +2290,17 @@
         "from": 1850,
         "to": 1990
       },
-      "summary": "Samene er et urfolk med egen historie, språk og kultur; fornorskingspolitikken og Alta-saken forklarer hvorfor samepolitikken i dag ser ut som den gjør.",
+      "summary": "Samene er et urfolk med egen historie, språk og kultur, og fornorskingen og Alta-saken forklarer dagens samepolitikk.",
       "lesson": [
         "Samene er et urfolk med tradisjonelle bosettingsområder i Norge, Sverige, Finland og Russland. Området kalles Sápmi. Samisk er en gruppe språk i den finsk-ugriske språkfamilien, og nordsamisk er størst. Fiske, jakt, fangst, sanking, håndverk og reindrift har vært sentrale næringer. Samefolkets dag, 6. februar, minner om det første internasjonale samemøtet i Trondheim i 1917.",
-        "Fra 1850-tallet til 1960-tallet førte Norge en målrettet fornorskingspolitikk mot samer og kvener. Skolen var det viktigste redskapet. Etter Wexelsenplakaten fra 1898 skulle undervisningen foregå på norsk, og fra 1901 ble mange barn sendt på internatskoler i Finnmark, borte fra familien og eget språk. Først skoleloven av 1959 åpnet igjen for samisk i skolen.",
-        "Alta-saken (1968–1982) handlet om en kraftutbygging i Alta–Kautokeino-vassdraget som ville ramme samisk reindrift og en viktig lakseelv. Sultestreik og sivil ulydighet stanset ikke utbyggingen, men saken førte til en ny samepolitikk: sameloven i 1987, en egen grunnlovsparagraf i 1988 og Sametinget i 1989. I 1990 ble Norge første stat som ratifiserte ILO-konvensjon 169 om urfolk."
+        "Fra 1850-tallet til 1960-tallet førte Norge en målrettet fornorskingspolitikk mot samer og kvener. Skolen var det viktigste redskapet. Ifølge Wexelsenplakaten fra 1898 skulle undervisningen foregå på norsk. Fra 1901 ble mange barn sendt på internatskoler i Finnmark, borte fra familien og sitt eget språk. Først skoleloven av 1959 åpnet igjen for samisk i skolen.",
+        "Alta-saken (1968–1982) handlet om en kraftutbygging i Alta–Kautokeino-vassdraget som ville ramme samisk reindrift og en viktig lakseelv. Sultestreik og sivil ulydighet stanset ikke utbyggingen, men saken førte til en ny samepolitikk: sameloven i 1987, en egen grunnlovsparagraf i 1988 og Sametinget i 1989. I 1990 ble Norge den første staten som ratifiserte ILO-konvensjon 169 om urfolk."
       ],
       "keyPoints": [
-        "Samene er et urfolk; Sápmi strekker seg over fire land.",
+        "Samene er et urfolk, og Sápmi strekker seg over fire land.",
         "Fornorskingspolitikken varte fra 1850-tallet til 1960-tallet, med skolen som hovedredskap.",
         "Alta-saken (1968–1982) førte til en ny samepolitikk.",
-        "Sametinget ble åpnet i 1989; Norge ratifiserte ILO-konvensjon 169 i 1990."
+        "Sametinget ble åpnet i 1989, og i 1990 ratifiserte Norge ILO-konvensjon 169."
       ],
       "sources": [
         {
@@ -2371,7 +2371,7 @@
             "Saepmie",
             "Sábme"
           ],
-          "explain": "På sørsamisk heter området Saepmie og på lulesamisk Sábme. Tidligere kalte nordmenn samene «lapper» eller «finner»; i dag brukes samenes egen betegnelse."
+          "explain": "På sørsamisk heter området Saepmie og på lulesamisk Sábme. Tidligere kalte nordmenn samene «lapper» eller «finner», men i dag brukes samenes egen betegnelse."
         },
         {
           "id": "nh-samisk-historie-sametinget",
@@ -2418,7 +2418,7 @@
           "answer": "Konflikten satte samenes rettigheter på dagsordenen i Norge og internasjonalt. Den viste at samene manglet lovvern og et eget folkevalgt organ. Resultatet ble Samerettsutvalget, sameloven, en grunnlovsparagraf og Sametinget.",
           "checklist": [
             "Samenes rettigheter fikk nasjonal og internasjonal oppmerksomhet",
-            "Behov for lovvern og eget folkevalgt organ",
+            "Samene manglet lovvern og et eget folkevalgt organ",
             "Sameloven 1987, grunnlovsparagrafen 1988, Sametinget 1989"
           ],
           "explain": "Norge fikk hard kritikk internasjonalt for spriket mellom det landet sa om urfolk i FN og måten samene ble behandlet på hjemme."
@@ -2475,7 +2475,7 @@
           "id": "nh-samisk-historie-kommisjon",
           "step": 4,
           "type": "choice",
-          "prompt": "Hva granskte Sannhets- og forsoningskommisjonen, som la fram rapporten sin i 2023?",
+          "prompt": "Hva gransket Sannhets- og forsoningskommisjonen, som la fram rapporten sin i 2023?",
           "answer": "Fornorskingen av samer, kvener og skogfinner",
           "distractors": [
             "Alta-utbyggingen og politiets aksjoner",
