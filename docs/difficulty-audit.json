@@ -1,7 +1,7 @@
 {
   "policy": "2026-10-11",
   "method": "Gjennomgang etter oppgavetype og nødvendige forkunnskaper. Redaksjonelle anslag, ikke målt vanskelighetsgrad.",
-  "baseQuestions": 1896,
+  "baseQuestions": 1901,
   "introductions": 57,
   "families": {
     "presidential-year": {
@@ -131,7 +131,7 @@
       "reason": "Krever et sentralt holdepunkt før du går videre til detaljer."
     },
     "core-curriculum": {
-      "count": 1088,
+      "count": 1093,
       "difficulty": 1,
       "stage": "foundation",
       "reason": "Oversikt: hva, når og hvorfor det betyr noe. Svaret er undervist i emnets innledning."
@@ -12296,7 +12296,7 @@
     },
     {
       "id": "core:nh-forhistorie-jordbruk",
-      "prompt": "Hva var det store nye i yngre steinalder, fra omkring 4000 fvt.?",
+      "prompt": "Hva var den store nyvinningen i yngre steinalder, fra omkring 4000 f.Kr.?",
       "answer": "Husdyrhold og korndyrking",
       "entityId": "unit:nh-forhistorie",
       "previousDifficulty": 1,
@@ -12387,7 +12387,7 @@
     {
       "id": "core:nh-forhistorie-hvorfor-handel",
       "prompt": "Hvorfor var bronsealderen i Norden avhengig av handel over lange avstander?",
-      "answer": "Kobber og tinn måtte hentes langt borte",
+      "answer": "Kobber og tinn måtte hentes langveisfra",
       "entityId": "unit:nh-forhistorie",
       "previousDifficulty": 3,
       "difficulty": 3,
@@ -12417,7 +12417,7 @@
     {
       "id": "core:nh-forhistorie-bronse-periode",
       "prompt": "Omtrent når var bronsealderen i Sør- og Midt-Norge?",
-      "answer": "Omkring 1700–500 fvt.",
+      "answer": "Omkring 1700–500 f.Kr.",
       "entityId": "unit:nh-forhistorie",
       "previousDifficulty": 4,
       "difficulty": 4,
@@ -12461,8 +12461,8 @@
     },
     {
       "id": "core:nh-vikingtiden-lindisfarne",
-      "prompt": "Hvilket angrep i 793 regnes ofte som starten på vikingtiden?",
-      "answer": "Angrepet på klosteret Lindisfarne",
+      "prompt": "Hvilken hendelse i 793 regnes ofte som starten på vikingtiden?",
+      "answer": "Angrepet på Lindisfarne",
       "entityId": "unit:nh-vikingtiden",
       "previousDifficulty": 1,
       "difficulty": 1,
@@ -12477,7 +12477,7 @@
     {
       "id": "core:nh-vikingtiden-ting",
       "prompt": "Hva var tinget i vikingtiden?",
-      "answer": "En forsamling som løste tvister og vedtok lover",
+      "answer": "En forsamling for lover og tvister",
       "entityId": "unit:nh-vikingtiden",
       "previousDifficulty": 1,
       "difficulty": 1,
@@ -12536,7 +12536,7 @@
     },
     {
       "id": "core:nh-vikingtiden-oseberg",
-      "prompt": "Hva heter vikingskipet fra Vestfold som er et av verdens best bevarte, og som ble funnet i en rik grav?",
+      "prompt": "Hvilket vikingskip fra en rik grav i Vestfold er blant verdens best bevarte?",
       "answer": "Osebergskipet",
       "entityId": "unit:nh-vikingtiden",
       "previousDifficulty": 2,
@@ -12552,7 +12552,7 @@
     {
       "id": "core:nh-vikingtiden-hvorfor-klostre",
       "prompt": "Hvorfor var klostre som Lindisfarne attraktive mål for vikingene?",
-      "answer": "De hadde verdisaker og lå ubeskyttet ved kysten",
+      "answer": "De hadde verdier og lå ubeskyttet ved kysten",
       "entityId": "unit:nh-vikingtiden",
       "previousDifficulty": 3,
       "difficulty": 3,
@@ -12567,7 +12567,7 @@
     {
       "id": "core:nh-vikingtiden-slutt",
       "prompt": "Hva forklarer best at vikingtiden tok slutt?",
-      "answer": "Kristendom, kirke og byvekst knyttet Norden til resten av Europa",
+      "answer": "Kristendom, kirke og byer knyttet Norden til Europa",
       "entityId": "unit:nh-vikingtiden",
       "previousDifficulty": 3,
       "difficulty": 3,
@@ -12582,7 +12582,7 @@
     {
       "id": "core:nh-vikingtiden-forklar-skip",
       "prompt": "Forklar hvorfor skipene var avgjørende for vikingenes ferder.",
-      "answer": "Lette, havgående skip kunne både ros og seiles. De tålte åpent hav og kunne gå langt opp elver og inn på grunt vann, så vikingene kunne nå fjerne steder raskt og overraske.",
+      "answer": "Lette, havgående skip kunne både ros og seiles. De tålte åpent hav og kunne gå langt opp elver og inn på grunt vann. Dermed kunne vikingene raskt nå fjerne steder og komme overraskende.",
       "entityId": "unit:nh-vikingtiden",
       "previousDifficulty": 3,
       "difficulty": 3,
@@ -12611,7 +12611,7 @@
     },
     {
       "id": "core:nh-vikingtiden-treller",
-      "prompt": "Omtrent hvor stor del av befolkningen kan ha vært treller (ufrie) i vikingtiden?",
+      "prompt": "Omtrent hvor stor del av befolkningen i vikingtiden kan ha vært treller?",
       "answer": "En fjerdedel til en tredjedel",
       "entityId": "unit:nh-vikingtiden",
       "previousDifficulty": 4,
@@ -12626,7 +12626,7 @@
     },
     {
       "id": "core:nh-rikssamling-kristning-hafrsfjord",
-      "prompt": "Hvilket slag har tradisjonen sett som slaget der Norge ble samlet til ett rike?",
+      "prompt": "I hvilket slag ble Norge ifølge tradisjonen samlet til ett rike?",
       "answer": "Slaget i Hafrsfjord",
       "entityId": "unit:nh-rikssamling-kristning",
       "previousDifficulty": 1,
@@ -12732,7 +12732,7 @@
     {
       "id": "core:nh-rikssamling-kristning-rekkefolge",
       "prompt": "Sett hendelsene fra rikssamlingen og kristningen i riktig rekkefølge.",
-      "answer": "Slaget i Hafrsfjord (ifølge Are Frode) (872) → Olav Tryggvason faller ved Svolder (1000) → Kirke- og riksmøtet på Moster (1024) → Slaget på Stiklestad (1030)",
+      "answer": "Slaget i Hafrsfjord (ifølge Are Frode) (872) → Slaget ved Svolder (1000) → Kirke- og riksmøtet på Moster (1024) → Slaget på Stiklestad (1030)",
       "entityId": "unit:nh-rikssamling-kristning",
       "previousDifficulty": 3,
       "difficulty": 3,
@@ -12747,7 +12747,7 @@
     {
       "id": "core:nh-rikssamling-kristning-forklar-prosess",
       "prompt": "Forklar hvorfor historikere i dag kaller rikssamlingen en prosess og ikke én hendelse.",
-      "answer": "Harald Hårfagre kontrollerte trolig mest Sør-Vestlandet. Kongemakten over hele landet ble bygd opp gjennom flere generasjoner, i kamp mot ladejarler og danske konger. Olav Haraldsson var den første som styrte et større område enn alle før ham, og bildet av Harald som rikssamler ble skapt av senere sagaer.",
+      "answer": "Harald Hårfagre kontrollerte trolig mest Sør-Vestlandet. Kongemakten over hele landet ble bygd opp gjennom flere generasjoner, i kamp mot ladejarler og danske konger. Olav Haraldsson styrte et større område enn noen konge før ham, og bildet av Harald som rikssamler ble skapt av senere sagaer.",
       "entityId": "unit:nh-rikssamling-kristning",
       "previousDifficulty": 3,
       "difficulty": 3,
@@ -12911,7 +12911,7 @@
     },
     {
       "id": "core:nh-middelalder-svartedauden-torrfisk",
-      "prompt": "Hvilken norsk vare var hanseatenes viktigste i handelen i Bergen?",
+      "prompt": "Hvilken norsk vare var den viktigste for hanseatene i Bergen?",
       "answer": "Tørrfisk",
       "entityId": "unit:nh-middelalder-svartedauden",
       "previousDifficulty": 3,
@@ -12987,7 +12987,7 @@
     {
       "id": "core:nh-middelalder-svartedauden-folketall",
       "prompt": "Omtrent hvor mye lavere var folketallet i Norge rundt 1500 enn før pestene, ifølge forskningen på øde gårder?",
-      "answer": "Drygt 60 prosent lavere",
+      "answer": "Drøyt 60 prosent lavere",
       "entityId": "unit:nh-middelalder-svartedauden",
       "previousDifficulty": 5,
       "difficulty": 5,
@@ -13076,7 +13076,7 @@
     },
     {
       "id": "core:nh-dansketiden-reformasjonen",
-      "prompt": "Hva kalles overgangen fra katolsk til luthersk kirke, som ble gjennomført i Norge i 1537?",
+      "prompt": "Hva kalles overgangen fra katolsk til luthersk kirke i Norge i 1537?",
       "answer": "Reformasjonen",
       "entityId": "unit:nh-dansketiden",
       "previousDifficulty": 3,
@@ -13152,7 +13152,7 @@
     {
       "id": "core:nh-dansketiden-vekst",
       "prompt": "Hvordan utviklet folketallet og økonomien i Norge seg under dansk styre?",
-      "answer": "Det var en vekstperiode med flere folk og nye næringer",
+      "answer": "Folketallet vokste, og nye næringer kom til",
       "entityId": "unit:nh-dansketiden",
       "previousDifficulty": 4,
       "difficulty": 4,
@@ -13332,7 +13332,7 @@
     {
       "id": "core:nh-1814-datoer",
       "prompt": "Koble datoene i 1814 med det som skjedde.",
-      "answer": "14. januar – Kieltraktaten undertegnes · 17. mai – Grunnloven dateres og underskrives · 14. august – Mossekonvensjonen inngås · 4. november – Revidert grunnlov og union med Sverige",
+      "answer": "14. januar – Kieltraktaten underskrives · 17. mai – Grunnloven dateres og underskrives · 14. august – Mossekonvensjonen inngås · 4. november – Grunnloven revideres for unionen",
       "entityId": "unit:nh-1814",
       "previousDifficulty": 3,
       "difficulty": 3,
@@ -13342,6 +13342,21 @@
       "difficultyPolicy": "2026-10-11",
       "precision": "complete",
       "reasoning": "compare",
+      "learningDepth": "connections"
+    },
+    {
+      "id": "core:nh-1814-jodeparagrafen",
+      "prompt": "På hvilket punkt brøt Grunnloven av 1814 tydelig med opplysningstidens ideal om religiøs toleranse?",
+      "answer": "Den nektet jøder adgang til riket",
+      "entityId": "unit:nh-1814",
+      "previousDifficulty": 3,
+      "difficulty": 3,
+      "learningStage": "connections",
+      "difficultyFamily": "core-curriculum",
+      "difficultyReason": "Sammenheng: forklar årsaker, følger eller forskjeller.",
+      "difficultyPolicy": "2026-10-11",
+      "precision": "broad",
+      "reasoning": "explain",
       "learningDepth": "connections"
     },
     {
@@ -13361,7 +13376,7 @@
     },
     {
       "id": "core:nh-1814-falsen",
-      "prompt": "Hvem skrev sammen med Johan Gunder Adler det grunnlovsutkastet som ble viktigst på Eidsvoll?",
+      "prompt": "Hvem skrev det viktigste grunnlovsutkastet på Eidsvoll sammen med Johan Gunder Adler?",
       "answer": "Christian Magnus Falsen",
       "entityId": "unit:nh-1814",
       "previousDifficulty": 4,
@@ -13512,7 +13527,7 @@
     {
       "id": "core:nh-unionstiden-1905-rekkefolge",
       "prompt": "Sett hendelsene fra unionstiden med Sverige i riktig rekkefølge.",
-      "answer": "Karl Johan blir konge av Sverige og Norge (1818) → Venstre kommer til makten (1884) → Krise i konsulatsaken, Sverige truer med krig (1895) → Unionen oppløses (1905)",
+      "answer": "Karl Johan blir konge av Sverige og Norge (1818) → Venstre kommer til makten (1884) → Sverige truer med krig i konsulatsaken (1895) → Unionen oppløses (1905)",
       "entityId": "unit:nh-unionstiden-1905",
       "previousDifficulty": 4,
       "difficulty": 4,
@@ -13631,7 +13646,7 @@
     },
     {
       "id": "core:nh-1800-tallets-norge-eventyr",
-      "prompt": "Hvilke to menn samlet inn og gav ut de norske folkeeventyrene?",
+      "prompt": "Hvilke to menn samlet inn og ga ut de norske folkeeventyrene?",
       "answer": "Asbjørnsen og Moe",
       "entityId": "unit:nh-1800-tallets-norge",
       "previousDifficulty": 3,
@@ -13662,7 +13677,7 @@
     {
       "id": "core:nh-1800-tallets-norge-forklar-utvandring",
       "prompt": "Forklar hvorfor utvandringen til Amerika ble så stor i siste halvdel av 1800-tallet.",
-      "answer": "Folketallet vokste kraftig, og i dårlige tider økte utvandringen. Fra 1862 gav homestead-loven innvandrere jord i USA. Når noen fra bygda hadde reist, fulgte ofte flere etter.",
+      "answer": "Folketallet vokste kraftig, og i dårlige tider økte utvandringen. Fra 1862 ga homestead-loven innvandrere jord i USA. Når noen fra bygda hadde reist, fulgte ofte flere etter.",
       "entityId": "unit:nh-1800-tallets-norge",
       "previousDifficulty": 4,
       "difficulty": 4,
@@ -13737,7 +13752,7 @@
     {
       "id": "core:nh-andre-verdenskrig-hvorfor",
       "prompt": "Hvorfor ville Tyskland ha kontroll over Norge i 1940?",
-      "answer": "For baser til flåten og kontroll med jernmalmen fra Narvik",
+      "answer": "For flåtebaser og jernmalmen fra Narvik",
       "entityId": "unit:nh-andre-verdenskrig",
       "previousDifficulty": 1,
       "difficulty": 1,
@@ -13841,8 +13856,8 @@
     },
     {
       "id": "core:nh-andre-verdenskrig-forklar-jodene",
-      "prompt": "Forklar hvorfor jødeforfølgelsen i Norge i dag sees som et norsk og ikke bare et tysk ansvar.",
-      "answer": "Det var norsk politi, først og fremst Statspolitiet (Stapo), som arresterte jødene før tyskerne sendte dem ut av landet. Også nordmenn utenfor NS bidro til at aksjonen kunne gjennomføres. Etter krigen ble deportasjonene i liten grad et tema i landssvikoppgjøret.",
+      "prompt": "Forklar hvorfor jødeforfølgelsen i Norge i dag ses som et norsk og ikke bare et tysk ansvar.",
+      "answer": "Det var norsk politi, først og fremst Statspolitiet, som arresterte jødene, og tyskerne var avhengige av denne medvirkningen for å få dem ut av landet. Etter krigen ble deportasjonene i liten grad et tema i landssvikoppgjøret.",
       "entityId": "unit:nh-andre-verdenskrig",
       "previousDifficulty": 3,
       "difficulty": 3,
@@ -13886,7 +13901,7 @@
     },
     {
       "id": "core:nh-andre-verdenskrig-kapitulasjon",
-      "prompt": "Når overga de norske styrkene seg etter felttoget i 1940?",
+      "prompt": "Hvilken dato overga de norske styrkene seg etter felttoget i 1940?",
       "answer": "10. juni 1940",
       "entityId": "unit:nh-andre-verdenskrig",
       "previousDifficulty": 4,
@@ -13901,7 +13916,7 @@
     },
     {
       "id": "core:nh-andre-verdenskrig-henrettet",
-      "prompt": "Hvor mange personer ble henrettet etter dom i landssvikoppgjøret?",
+      "prompt": "Hvor mange nordmenn ble henrettet etter dom i landssvikoppgjøret?",
       "answer": "25",
       "entityId": "unit:nh-andre-verdenskrig",
       "previousDifficulty": 4,
@@ -13931,7 +13946,7 @@
     },
     {
       "id": "core:nh-etterkrigstiden-nato",
-      "prompt": "Hvilket valg tok Norge i 1949 i den kalde krigen?",
+      "prompt": "Hva gjorde Norge i 1949, tidlig i den kalde krigen?",
       "answer": "Gikk inn i forsvarsalliansen NATO",
       "entityId": "unit:nh-etterkrigstiden",
       "previousDifficulty": 2,
@@ -14007,7 +14022,7 @@
     {
       "id": "core:nh-etterkrigstiden-gjenreisning",
       "prompt": "Hvorfor gikk gjenreisningen etter krigen raskere enn mange ventet?",
-      "answer": "Tyskerne hadde bygd ut kraft, veier og havner under krigen",
+      "answer": "Tyskerne hadde bygd kraftverk, veier og havner",
       "entityId": "unit:nh-etterkrigstiden",
       "previousDifficulty": 4,
       "difficulty": 4,
@@ -14022,7 +14037,7 @@
     {
       "id": "core:nh-etterkrigstiden-forklar-velferd",
       "prompt": "Forklar hva som gjorde det mulig å bygge ut velferdsstaten i etterkrigstiden.",
-      "answer": "Lang tids økonomisk vekst gav høyere inntekter, og skattene ble kraftig økt. Erfaringene fra krigen skapte samhold, og partiene var enige om hovedlinjene allerede i Fellesprogrammet fra 1945.",
+      "answer": "Lang tids økonomisk vekst ga høyere inntekter, og skattene ble kraftig økt. Erfaringene fra krigen skapte samhold, og partiene var enige om hovedlinjene allerede i Fellesprogrammet fra 1945.",
       "entityId": "unit:nh-etterkrigstiden",
       "previousDifficulty": 4,
       "difficulty": 4,
@@ -14112,7 +14127,7 @@
     {
       "id": "core:nh-oljealderen-fond-formaal",
       "prompt": "Hvorfor ble oljefondet opprettet?",
-      "answer": "For at oljeinntektene skulle brukes i et forsiktig tempo",
+      "answer": "For å bruke oljeinntektene i et forsiktig tempo",
       "entityId": "unit:nh-oljealderen",
       "previousDifficulty": 2,
       "difficulty": 2,
@@ -14127,7 +14142,7 @@
     {
       "id": "core:nh-oljealderen-statoil",
       "prompt": "Hvorfor opprettet staten et eget oljeselskap i 1972?",
-      "answer": "For å bygge opp et norsk oljemiljø under nasjonal kontroll",
+      "answer": "For å bygge et norsk oljemiljø under nasjonal kontroll",
       "entityId": "unit:nh-oljealderen",
       "previousDifficulty": 2,
       "difficulty": 2,
@@ -14202,7 +14217,7 @@
     {
       "id": "core:nh-oljealderen-eu94",
       "prompt": "Hva var det avgjørende argumentet mot EU-medlemskap i 1994?",
-      "answer": "Frykt for å gi fra seg makt og kontroll over fisket",
+      "answer": "Frykt for å miste kontrollen over fisket",
       "entityId": "unit:nh-oljealderen",
       "previousDifficulty": 4,
       "difficulty": 4,
@@ -14441,7 +14456,7 @@
     },
     {
       "id": "core:nh-samisk-historie-kommisjon",
-      "prompt": "Hva granskte Sannhets- og forsoningskommisjonen, som la fram rapporten sin i 2023?",
+      "prompt": "Hva gransket Sannhets- og forsoningskommisjonen, som la fram rapporten sin i 2023?",
       "answer": "Fornorskingen av samer, kvener og skogfinner",
       "entityId": "unit:nh-samisk-historie",
       "previousDifficulty": 5,
@@ -14457,7 +14472,7 @@
     {
       "id": "core:vh-forste-sivilisasjoner-jordbruk",
       "prompt": "Hvor begynte folk først å dyrke korn?",
-      "answer": "I den fruktbare halvmåne",
+      "answer": "I Den fruktbare halvmåne",
       "entityId": "unit:vh-forste-sivilisasjoner",
       "previousDifficulty": 1,
       "difficulty": 1,
@@ -14516,7 +14531,7 @@
     },
     {
       "id": "core:vh-forste-sivilisasjoner-kileskrift",
-      "prompt": "Hva heter skriftsystemet som oppstod i Mesopotamia og ble skrevet på leirtavler?",
+      "prompt": "Hva heter skriftsystemet som oppsto i Mesopotamia og ble skrevet på leirtavler?",
       "answer": "Kileskrift",
       "entityId": "unit:vh-forste-sivilisasjoner",
       "previousDifficulty": 2,
@@ -14576,8 +14591,8 @@
     },
     {
       "id": "core:vh-forste-sivilisasjoner-hvorfor-elver",
-      "prompt": "Hvorfor oppstod de første sivilisasjonene langs store elver?",
-      "answer": "Elvene gav vann og fruktbar jord til jordbruket",
+      "prompt": "Hvorfor oppsto de første sivilisasjonene langs store elver?",
+      "answer": "Elvene ga vann og fruktbar jord til jordbruket",
       "entityId": "unit:vh-forste-sivilisasjoner",
       "previousDifficulty": 3,
       "difficulty": 3,
@@ -14607,7 +14622,7 @@
     {
       "id": "core:vh-forste-sivilisasjoner-forklar-byer",
       "prompt": "Forklar hvordan jordbruket la grunnlaget for de første byene og statene.",
-      "answer": "Jordbruk og husdyrhold gjorde at folk kunne bo fast og skaffe mer mat. Landsbyene vokste, og langs elvene ble det bygd felles anlegg for kunstvanning og flomkontroll. Etter hvert oppstod byer med konger, templer, administrasjon og skrift.",
+      "answer": "Jordbruk og husdyrhold gjorde at folk kunne bo fast og skaffe mer mat. Landsbyene vokste, og langs elvene ble det bygd felles anlegg for kunstvanning og flomkontroll. Etter hvert oppsto byer med konger, templer, administrasjon og skrift.",
       "entityId": "unit:vh-forste-sivilisasjoner",
       "previousDifficulty": 3,
       "difficulty": 3,
@@ -14622,7 +14637,7 @@
     {
       "id": "core:vh-forste-sivilisasjoner-samling-egypt",
       "prompt": "Omtrent når ble Egypt samlet under én konge?",
-      "answer": "Omkring 2900 fvt.",
+      "answer": "Omkring 2900 f.Kr.",
       "entityId": "unit:vh-forste-sivilisasjoner",
       "previousDifficulty": 4,
       "difficulty": 4,
@@ -14636,7 +14651,7 @@
     },
     {
       "id": "core:vh-forste-sivilisasjoner-kheops",
-      "prompt": "Hvilken farao er særlig kjent for sin store pyramide fra det gamle riket?",
+      "prompt": "Hvilken farao er særlig kjent for sin store pyramide fra Det gamle riket?",
       "answer": "Kheops",
       "entityId": "unit:vh-forste-sivilisasjoner",
       "previousDifficulty": 4,
@@ -14651,7 +14666,7 @@
     },
     {
       "id": "core:vh-forste-sivilisasjoner-tidspunkt-jordbruk",
-      "prompt": "Omtrent når begynte folk i den fruktbare halvmåne å dyrke korn?",
+      "prompt": "Omtrent når begynte folk i Den fruktbare halvmåne å dyrke korn?",
       "answer": "For omkring 12 000 år siden",
       "entityId": "unit:vh-forste-sivilisasjoner",
       "previousDifficulty": 4,
@@ -14681,7 +14696,7 @@
     },
     {
       "id": "core:vh-antikkens-hellas-demokrati",
-      "prompt": "Hvilken styreform innførte Athen like før 500 fvt.?",
+      "prompt": "Hvilken styreform innførte Athen like før 500 f.Kr.?",
       "answer": "Demokrati",
       "entityId": "unit:vh-antikkens-hellas",
       "previousDifficulty": 1,
@@ -14696,7 +14711,7 @@
     },
     {
       "id": "core:vh-antikkens-hellas-perserriket",
-      "prompt": "Hvilken stormakt invaderte Hellas i 490 og 480 fvt.?",
+      "prompt": "Hvilken stormakt invaderte Hellas i 490 og 480 f.Kr.?",
       "answer": "Perserriket",
       "entityId": "unit:vh-antikkens-hellas",
       "previousDifficulty": 1,
@@ -14726,7 +14741,7 @@
     },
     {
       "id": "core:vh-antikkens-hellas-perikles",
-      "prompt": "Hvilken athensk statsmann var den ledende skikkelsen i byens politikk fra 450-årene til 429 fvt.?",
+      "prompt": "Hvilken athensk statsmann var den ledende skikkelsen i byens politikk fra 450-årene til 429 f.Kr.?",
       "answer": "Perikles",
       "entityId": "unit:vh-antikkens-hellas",
       "previousDifficulty": 2,
@@ -14817,7 +14832,7 @@
     {
       "id": "core:vh-antikkens-hellas-forklar-demokrati",
       "prompt": "Forklar hvordan det athenske demokratiet skilte seg fra et moderne demokrati.",
-      "answer": "Det var et direkte folkestyre der borgerne selv møtte i folkeforsamlingen og vedtok lover, og mange embeter ble fordelt ved loddtrekning. Bare mannlige borgere deltok; kvinner, slaver og frie innflyttere uten borgerrett var utenfor.",
+      "answer": "Det var et direkte folkestyre der borgerne selv møtte i folkeforsamlingen og vedtok lover, og mange embeter ble fordelt ved loddtrekning. Bare mannlige borgere deltok. Kvinner, slaver og frie innflyttere uten borgerrett sto utenfor.",
       "entityId": "unit:vh-antikkens-hellas",
       "previousDifficulty": 3,
       "difficulty": 3,
@@ -14832,7 +14847,7 @@
     {
       "id": "core:vh-antikkens-hellas-ol-start",
       "prompt": "Hvilket år regnes tradisjonelt som starten på de olympiske leker i antikken?",
-      "answer": "776 fvt.",
+      "answer": "776 f.Kr.",
       "entityId": "unit:vh-antikkens-hellas",
       "previousDifficulty": 4,
       "difficulty": 4,
@@ -14846,8 +14861,8 @@
     },
     {
       "id": "core:vh-antikkens-hellas-marathon",
-      "prompt": "Når stod slaget ved Marathon?",
-      "answer": "490 fvt.",
+      "prompt": "Hvilket år sto slaget ved Marathon?",
+      "answer": "490 f.Kr.",
       "entityId": "unit:vh-antikkens-hellas",
       "previousDifficulty": 4,
       "difficulty": 4,
@@ -14936,7 +14951,7 @@
     },
     {
       "id": "core:vh-romerriket-caesar",
-      "prompt": "Hvilken romersk hærfører erobret Gallia og ble drept av sammensvorne republikanere i 44 fvt.?",
+      "prompt": "Hvilken romersk hærfører erobret Gallia og ble drept av sammensvorne republikanere i 44 f.Kr.?",
       "answer": "Julius Cæsar",
       "entityId": "unit:vh-romerriket",
       "previousDifficulty": 2,
@@ -14951,7 +14966,7 @@
     },
     {
       "id": "core:vh-romerriket-rubicon",
-      "prompt": "Hva het grenseelven Cæsar krysset med hæren sin, slik at borgerkrigen brøt ut?",
+      "prompt": "Hvilken grenseelv krysset Cæsar med hæren sin, slik at borgerkrigen brøt ut?",
       "answer": "Rubicon",
       "entityId": "unit:vh-romerriket",
       "previousDifficulty": 2,
@@ -14997,7 +15012,7 @@
     {
       "id": "core:vh-romerriket-hvorfor-vest",
       "prompt": "Hvorfor var Vestromerriket mer utsatt enn Østromerriket på 400-tallet?",
-      "answer": "Det hadde lang grense mot germanske folk og svakere økonomi",
+      "answer": "Det hadde lang grense mot germanerne og svakere økonomi",
       "entityId": "unit:vh-romerriket",
       "previousDifficulty": 3,
       "difficulty": 3,
@@ -15027,7 +15042,7 @@
     {
       "id": "core:vh-romerriket-forklar-keiserdomme",
       "prompt": "Forklar hvordan Roma gikk fra republikk til keiserdømme.",
-      "answer": "Erobringene gav hærførerne store hærer som var mer lojale mot dem enn mot staten. Senrepublikken ble preget av borgerkriger mellom slike hærførere, og Cæsar gjorde seg til diktator. Etter Cæsars død vant Octavian, og som Augustus samlet han makten hos seg selv mens republikkens embeter levde videre i navnet.",
+      "answer": "Erobringene ga hærførerne store hærer som var mer lojale mot dem enn mot staten. Senrepublikken ble preget av borgerkriger mellom slike hærførere, og Cæsar gjorde seg til diktator. Etter Cæsars død vant Octavian. Som Augustus samlet han makten hos seg selv, mens republikkens embeter levde videre i navnet.",
       "entityId": "unit:vh-romerriket",
       "previousDifficulty": 3,
       "difficulty": 3,
@@ -15072,7 +15087,7 @@
     {
       "id": "core:vh-romerriket-grunnleggelse",
       "prompt": "Hvilket år ble Roma grunnlagt ifølge romernes egen tradisjon?",
-      "answer": "753 fvt.",
+      "answer": "753 f.Kr.",
       "entityId": "unit:vh-romerriket",
       "previousDifficulty": 4,
       "difficulty": 4,
@@ -15161,7 +15176,7 @@
     },
     {
       "id": "core:vh-middelalderen-bagdad",
-      "prompt": "Hvilken by ble sentrum for kalifatet i 750?",
+      "prompt": "Hvilken by grunnla abbasidene som ny hovedstad for kalifatet?",
       "answer": "Bagdad",
       "entityId": "unit:vh-middelalderen",
       "previousDifficulty": 3,
@@ -15222,7 +15237,7 @@
     {
       "id": "core:vh-middelalderen-hvorfor-kirken",
       "prompt": "Hvorfor ble kirken så mektig i høymiddelalderen?",
-      "answer": "Den ble friere fra kongemakten og spredte seg til nye land",
+      "answer": "Den ble friere fra kongene og nådde nye land",
       "entityId": "unit:vh-middelalderen",
       "previousDifficulty": 4,
       "difficulty": 4,
@@ -15237,7 +15252,7 @@
     {
       "id": "core:vh-middelalderen-forklar-foydal",
       "prompt": "Forklar hvordan føydale bånd holdt et middelalderrike sammen.",
-      "answer": "Kongen gav jord som len til stormenn, som ble hans vasaller. De lovte troskap og tjeneste, særlig i krig, og fikk til gjengjeld inntekter og makt over lenet. Slik ble makten fordelt gjennom personlige bånd i et hierarki, ikke gjennom et sterkt statsapparat.",
+      "answer": "Kongen ga jord som len til stormenn, som ble hans vasaller. De lovet troskap og tjeneste, særlig i krig, og fikk til gjengjeld inntekter og makt over lenet. Slik ble makten fordelt gjennom personlige bånd i et hierarki, ikke gjennom et sterkt statsapparat.",
       "entityId": "unit:vh-middelalderen",
       "previousDifficulty": 4,
       "difficulty": 4,
@@ -15341,7 +15356,7 @@
     },
     {
       "id": "core:vh-renessansen-leonardo",
-      "prompt": "Hvem malte Mona Lisa og Nattverden?",
+      "prompt": "Hvem malte «Mona Lisa» og «Nattverden»?",
       "answer": "Leonardo da Vinci",
       "entityId": "unit:vh-renessansen",
       "previousDifficulty": 3,
@@ -15401,8 +15416,8 @@
     },
     {
       "id": "core:vh-renessansen-hvorfor-italia",
-      "prompt": "Hvorfor oppstod renessansen nettopp i Italia?",
-      "answer": "Rike, selvstyrte bystater hadde penger til kunst og lærdom",
+      "prompt": "Hvorfor oppsto renessansen nettopp i Italia?",
+      "answer": "Rike bystater hadde penger til kunst og lærdom",
       "entityId": "unit:vh-renessansen",
       "previousDifficulty": 4,
       "difficulty": 4,
@@ -15717,7 +15732,7 @@
     {
       "id": "core:vh-oppdagelsesreisene-sykdom",
       "prompt": "Hva var hovedårsaken til at urbefolkningen i Amerika sank så kraftig etter 1492?",
-      "answer": "Sykdommer fra Europa som kopper og meslinger",
+      "answer": "Sykdommer som kopper og meslinger",
       "entityId": "unit:vh-oppdagelsesreisene",
       "previousDifficulty": 2,
       "difficulty": 2,
@@ -15851,7 +15866,7 @@
     },
     {
       "id": "core:vh-oppdagelsesreisene-antall-slaver",
-      "prompt": "Hvor mange afrikanere ble minst skipet over Atlanterhavet som slaver mellom 1450 og 1850?",
+      "prompt": "Hvor mange afrikanere ble skipet over Atlanterhavet som slaver mellom 1450 og 1850?",
       "answer": "Minst 12,5 millioner",
       "entityId": "unit:vh-oppdagelsesreisene",
       "previousDifficulty": 5,
@@ -15896,7 +15911,7 @@
     },
     {
       "id": "core:vh-opplysningstiden-revolusjonene-bastillen",
-      "prompt": "Hvilken hendelse i 1789 regnes tradisjonelt som starten på den franske revolusjon?",
+      "prompt": "Hvilken hendelse i 1789 regnes tradisjonelt som starten på den franske revolusjonen?",
       "answer": "Stormingen av Bastillen",
       "entityId": "unit:vh-opplysningstiden-revolusjonene",
       "previousDifficulty": 2,
@@ -15971,7 +15986,7 @@
     },
     {
       "id": "core:vh-opplysningstiden-revolusjonene-rousseau",
-      "prompt": "Hvem skrev Om samfunnspakten fra 1762?",
+      "prompt": "Hvem skrev «Om samfunnspakten» fra 1762?",
       "answer": "Jean-Jacques Rousseau",
       "entityId": "unit:vh-opplysningstiden-revolusjonene",
       "previousDifficulty": 3,
@@ -15986,7 +16001,7 @@
     },
     {
       "id": "core:vh-opplysningstiden-revolusjonene-terroren",
-      "prompt": "Hva kalles perioden fra sommeren 1793 til sommeren 1794 i den franske revolusjon?",
+      "prompt": "Hva kalles perioden fra sommeren 1793 til sommeren 1794 i den franske revolusjonen?",
       "answer": "Terroren",
       "entityId": "unit:vh-opplysningstiden-revolusjonene",
       "previousDifficulty": 3,
@@ -16016,7 +16031,7 @@
     },
     {
       "id": "core:vh-opplysningstiden-revolusjonene-hvorfor-revolusjon",
-      "prompt": "Hva var en viktig årsak til den franske revolusjon?",
+      "prompt": "Hva var en viktig årsak til den franske revolusjonen?",
       "answer": "Folk godtok ikke lenger stendersamfunnets privilegier",
       "entityId": "unit:vh-opplysningstiden-revolusjonene",
       "previousDifficulty": 4,
@@ -16032,7 +16047,7 @@
     {
       "id": "core:vh-opplysningstiden-revolusjonene-tidslinje",
       "prompt": "Sett hendelsene fra opplysningstiden og revolusjonene i riktig rekkefølge.",
-      "answer": "Montesquieu utgir Lovenes ånd (1748) → Rousseau utgir Om samfunnspakten (1762) → Den amerikanske uavhengighetserklæringen (1776) → Stormingen av Bastillen (1789) → Napoleon blir keiser (1804)",
+      "answer": "Montesquieu utgir «Lovenes ånd» (1748) → Rousseau utgir «Om samfunnspakten» (1762) → Den amerikanske uavhengighetserklæringen (1776) → Stormingen av Bastillen (1789) → Napoleon blir keiser (1804)",
       "entityId": "unit:vh-opplysningstiden-revolusjonene",
       "previousDifficulty": 4,
       "difficulty": 4,
@@ -16091,7 +16106,7 @@
     },
     {
       "id": "core:vh-industrielle-revolusjon-england",
-      "prompt": "I hvilket land begynte den industrielle revolusjon?",
+      "prompt": "I hvilket land begynte den industrielle revolusjonen?",
       "answer": "England",
       "entityId": "unit:vh-industrielle-revolusjon",
       "previousDifficulty": 2,
@@ -16181,7 +16196,7 @@
     },
     {
       "id": "core:vh-industrielle-revolusjon-marx",
-      "prompt": "Hvem skrev Det kommunistiske manifest sammen med Friedrich Engels?",
+      "prompt": "Hvem skrev «Det kommunistiske manifest» sammen med Friedrich Engels?",
       "answer": "Karl Marx",
       "entityId": "unit:vh-industrielle-revolusjon",
       "previousDifficulty": 3,
@@ -16256,7 +16271,7 @@
     },
     {
       "id": "core:vh-industrielle-revolusjon-manifest-aar",
-      "prompt": "Hvilket år kom Det kommunistiske manifest?",
+      "prompt": "Hvilket år kom «Det kommunistiske manifest»?",
       "answer": "1848",
       "entityId": "unit:vh-industrielle-revolusjon",
       "previousDifficulty": 5,
@@ -16452,7 +16467,7 @@
     {
       "id": "core:vh-usa-fram-til-1865-forklar-vest",
       "prompt": "Forklar hvorfor utvidelsen vestover skjerpet konflikten om slaveriet.",
-      "answer": "Hver ny delstat kunne bli enten slavestat eller fristat, og det påvirket maktbalansen i Kongressen, særlig i Senatet der hver stat har to plasser. Sørstatene ville spre slaveriet til de nye områdene, mens mange i nord ville holde vest for frie, hvite bosettere.",
+      "answer": "Hver ny delstat kunne bli enten slavestat eller fristat, og det påvirket maktbalansen i Kongressen, særlig i Senatet, der hver stat har to plasser. Sørstatene ville spre slaveriet til de nye områdene, mens mange i nord ville holde Vesten åpen for frie, hvite bosettere.",
       "entityId": "unit:vh-usa-fram-til-1865",
       "previousDifficulty": 4,
       "difficulty": 4,
@@ -16496,7 +16511,7 @@
     },
     {
       "id": "core:vh-usa-fram-til-1865-dode",
-      "prompt": "Omtrent hvor mange mennesker døde i den amerikanske borgerkrigen?",
+      "prompt": "Hvor mange mennesker døde i den amerikanske borgerkrigen?",
       "answer": "Over 620 000",
       "entityId": "unit:vh-usa-fram-til-1865",
       "previousDifficulty": 5,
@@ -16571,7 +16586,7 @@
     },
     {
       "id": "core:mh-imperialismen-etiopia",
-      "prompt": "Hvilket av disse afrikanske landene var fortsatt selvstendig i 1895?",
+      "prompt": "Hvilket av disse afrikanske landene var fortsatt selvstendig da første verdenskrig brøt ut?",
       "answer": "Etiopia",
       "entityId": "unit:mh-imperialismen",
       "previousDifficulty": 3,
@@ -16676,7 +16691,7 @@
     },
     {
       "id": "core:mh-imperialismen-aar-berlin",
-      "prompt": "I hvilket år ble sluttavtalen fra Berlinkonferansen undertegnet?",
+      "prompt": "Hvilket år ble sluttavtalen fra Berlinkonferansen undertegnet?",
       "answer": "1885",
       "entityId": "unit:mh-imperialismen",
       "previousDifficulty": 5,
@@ -16886,7 +16901,7 @@
     },
     {
       "id": "core:mh-forste-verdenskrig-vapenstillstand",
-      "prompt": "Hvilken dato trådte våpenstillstanden i kraft og ilden opphørte på vestfronten?",
+      "prompt": "Hvilken dato trådte våpenstillstanden på vestfronten i kraft?",
       "answer": "11. november 1918",
       "entityId": "unit:mh-forste-verdenskrig",
       "previousDifficulty": 4,
@@ -16961,7 +16976,7 @@
     },
     {
       "id": "core:mh-russiske-revolusjon-sovjet",
-      "prompt": "Når ble Sovjetunionen opprettet?",
+      "prompt": "Hvilket år ble Sovjetunionen opprettet?",
       "answer": "1922",
       "entityId": "unit:mh-russiske-revolusjon",
       "previousDifficulty": 2,
@@ -17036,7 +17051,7 @@
     },
     {
       "id": "core:mh-russiske-revolusjon-kulakker",
-      "prompt": "Hva ble de mer velstående bøndene kalt, som ble stemplet som klassefiender under kollektiviseringen?",
+      "prompt": "Under kollektiviseringen ble de mer velstående bøndene stemplet som klassefiender. Hva ble de kalt?",
       "answer": "Kulakker",
       "entityId": "unit:mh-russiske-revolusjon",
       "previousDifficulty": 3,
@@ -17096,7 +17111,7 @@
     },
     {
       "id": "core:mh-russiske-revolusjon-aar-lenin",
-      "prompt": "I hvilket år døde Lenin?",
+      "prompt": "Hvilket år døde Lenin?",
       "answer": "1924",
       "entityId": "unit:mh-russiske-revolusjon",
       "previousDifficulty": 5,
@@ -17246,7 +17261,7 @@
     },
     {
       "id": "core:mh-mellomkrigstiden-hyperinflasjon",
-      "prompt": "Hva var det som rammet Tyskland i 1923 og gjorde pengene nesten verdiløse?",
+      "prompt": "Hva rammet Tyskland i 1923 og gjorde pengene nesten verdiløse?",
       "answer": "En ekstrem prisstigning, hyperinflasjon",
       "entityId": "unit:mh-mellomkrigstiden",
       "previousDifficulty": 3,
@@ -17306,7 +17321,7 @@
     },
     {
       "id": "core:mh-mellomkrigstiden-aar-hitler",
-      "prompt": "I hvilket år ble Hitler rikskansler i Tyskland?",
+      "prompt": "Hvilket år ble Hitler rikskansler i Tyskland?",
       "answer": "1933",
       "entityId": "unit:mh-mellomkrigstiden",
       "previousDifficulty": 5,
@@ -17381,8 +17396,8 @@
     },
     {
       "id": "core:mh-andre-verdenskrig-lynkrig",
-      "prompt": "Hva var den tyske krigføringen kalt lynkrig?",
-      "answer": "Raske angrep med stridsvogner og fly som brøt gjennom fiendens linjer",
+      "prompt": "Hva gikk den tyske krigføringen kalt lynkrig ut på?",
+      "answer": "Raske gjennombrudd med stridsvogner og fly",
       "entityId": "unit:mh-andre-verdenskrig",
       "previousDifficulty": 1,
       "difficulty": 1,
@@ -17502,7 +17517,7 @@
     {
       "id": "core:mh-andre-verdenskrig-forklar-stalingrad",
       "prompt": "Forklar hvorfor slaget ved Stalingrad regnes som et vendepunkt i krigen.",
-      "answer": "En hel tysk armé ble omringet og måtte overgi seg, Tysklands første store nederlag. Slaget viste at den tyske offensive kraften hadde passert sitt høydepunkt. Seieren fikk også stor symbolsk betydning fordi byen bar Stalins navn.",
+      "answer": "En hel tysk armé ble omringet og måtte overgi seg. Det var Tysklands første store nederlag, og det viste at den tyske offensive kraften hadde passert sitt høydepunkt. Seieren fikk også stor symbolsk betydning fordi byen bar Stalins navn.",
       "entityId": "unit:mh-andre-verdenskrig",
       "previousDifficulty": 3,
       "difficulty": 3,
@@ -17531,7 +17546,7 @@
     },
     {
       "id": "core:mh-andre-verdenskrig-aar-ddagen",
-      "prompt": "I hvilket år var D-dagen?",
+      "prompt": "Hvilket år var D-dagen?",
       "answer": "1944",
       "entityId": "unit:mh-andre-verdenskrig",
       "previousDifficulty": 4,
@@ -17636,7 +17651,7 @@
     },
     {
       "id": "core:mh-holocaust-krystallnatten",
-      "prompt": "Hva kalles pogromen natten mellom 9. og 10. november 1938 ofte?",
+      "prompt": "Hvilket navn brukes ofte om pogromen natten mellom 9. og 10. november 1938?",
       "answer": "Krystallnatten",
       "entityId": "unit:mh-holocaust",
       "previousDifficulty": 3,
@@ -17666,7 +17681,7 @@
     },
     {
       "id": "core:mh-holocaust-auschwitz",
-      "prompt": "Hva het den største av nazistenes leirer, bygd for masseutrydding i det okkuperte Polen?",
+      "prompt": "Hva het den største dødsleiren nazistene bygde i det okkuperte Polen?",
       "answer": "Auschwitz",
       "entityId": "unit:mh-holocaust",
       "previousDifficulty": 3,
@@ -17771,7 +17786,7 @@
     },
     {
       "id": "core:mh-kalde-krigen-allianser",
-      "prompt": "Hvilke militære allianser stod mot hverandre under den kalde krigen?",
+      "prompt": "Hvilke militære allianser sto mot hverandre under den kalde krigen?",
       "answer": "NATO og Warszawapakten",
       "entityId": "unit:mh-kalde-krigen",
       "previousDifficulty": 2,
@@ -17816,7 +17831,7 @@
     },
     {
       "id": "core:mh-kalde-krigen-ledere",
-      "prompt": "Hvilke to statsledere stod mot hverandre under Cubakrisen?",
+      "prompt": "Hvilke to statsledere sto mot hverandre under Cubakrisen?",
       "answer": "John F. Kennedy og Nikita Khrusjtsjov",
       "entityId": "unit:mh-kalde-krigen",
       "previousDifficulty": 3,
@@ -17921,7 +17936,7 @@
     },
     {
       "id": "core:mh-kalde-krigen-aar-muren",
-      "prompt": "I hvilket år begynte byggingen av Berlinmuren?",
+      "prompt": "Hvilket år begynte byggingen av Berlinmuren?",
       "answer": "1961",
       "entityId": "unit:mh-kalde-krigen",
       "previousDifficulty": 5,
@@ -17936,7 +17951,7 @@
     },
     {
       "id": "core:mh-kalde-krigen-aar-warszawa",
-      "prompt": "I hvilket år ble Warszawapakten opprettet?",
+      "prompt": "Hvilket år ble Warszawapakten opprettet?",
       "answer": "1955",
       "entityId": "unit:mh-kalde-krigen",
       "previousDifficulty": 5,
@@ -17981,7 +17996,7 @@
     },
     {
       "id": "core:mh-avkolonisering-india-aar",
-      "prompt": "Når ble India selvstendig?",
+      "prompt": "Hvilket år ble India selvstendig?",
       "answer": "1947",
       "entityId": "unit:mh-avkolonisering",
       "previousDifficulty": 2,
@@ -18087,7 +18102,7 @@
     {
       "id": "core:mh-avkolonisering-forklar-vold",
       "prompt": "Forklar hvorfor frigjøringen ble langt mer voldelig i noen kolonier enn i andre.",
-      "answer": "Der kolonimakten kunne forhandle med lokale eliter, gikk overgangen raskt og fredelig. Der et hvitt mindretall eide jorda og dominerte politikken, som i Algerie, Kenya og Sør-Rhodesia, ville de ikke gi fra seg makten, og frigjøringsbevegelsene grep til væpnet kamp.",
+      "answer": "Der kolonimakten kunne forhandle med lokale eliter, gikk overgangen raskt og fredelig. Der et hvitt mindretall eide jorden og dominerte politikken, som i Algerie, Kenya og Sør-Rhodesia, ville de ikke gi fra seg makten, og frigjøringsbevegelsene grep til væpnet kamp.",
       "entityId": "unit:mh-avkolonisering",
       "previousDifficulty": 4,
       "difficulty": 4,
@@ -18131,7 +18146,7 @@
     },
     {
       "id": "core:mh-avkolonisering-aar-mandela",
-      "prompt": "I hvilket år ble Nelson Mandela løslatt?",
+      "prompt": "Hvilket år ble Nelson Mandela løslatt?",
       "answer": "1990",
       "entityId": "unit:mh-avkolonisering",
       "previousDifficulty": 5,
@@ -18146,7 +18161,7 @@
     },
     {
       "id": "core:mh-avkolonisering-aar-algerie",
-      "prompt": "I hvilket år begynte frigjøringskrigen i Algerie?",
+      "prompt": "Hvilket år begynte frigjøringskrigen i Algerie?",
       "answer": "1954",
       "entityId": "unit:mh-avkolonisering",
       "previousDifficulty": 5,
@@ -18536,7 +18551,7 @@
     },
     {
       "id": "core:mh-2000-tallet-aar-bin-laden",
-      "prompt": "I hvilket år ble Osama bin Laden drept av amerikanske spesialsoldater?",
+      "prompt": "Hvilket år ble Osama bin Laden drept av amerikanske spesialsoldater?",
       "answer": "2011",
       "entityId": "unit:mh-2000-tallet",
       "previousDifficulty": 5,
@@ -18566,7 +18581,7 @@
     },
     {
       "id": "core:geo-kontinenter-hav-antall",
-      "prompt": "Hvor mange verdensdeler deler vi vanligvis Jorden inn i på norsk?",
+      "prompt": "Hvor mange verdensdeler deler vi vanligvis Jorda inn i på norsk?",
       "answer": "Sju",
       "entityId": "unit:geo-kontinenter-hav",
       "previousDifficulty": 1,
@@ -18731,7 +18746,7 @@
     },
     {
       "id": "core:geo-kontinenter-hav-aar-greenwich",
-      "prompt": "Fra hvilket år har meridianen gjennom Greenwich vært felles nullmeridian for hele Jorden?",
+      "prompt": "Fra hvilket år har meridianen gjennom Greenwich vært felles nullmeridian for hele Jorda?",
       "answer": "1884",
       "entityId": "unit:geo-kontinenter-hav",
       "previousDifficulty": 4,
@@ -18746,7 +18761,7 @@
     },
     {
       "id": "core:geo-kontinenter-hav-omkrets",
-      "prompt": "Omtrent hvor lang er ekvator rundt Jorden?",
+      "prompt": "Omtrent hvor lang er ekvator rundt Jorda?",
       "answer": "Omtrent 40 000 kilometer",
       "entityId": "unit:geo-kontinenter-hav",
       "previousDifficulty": 4,
@@ -18814,6 +18829,21 @@
       "learningStage": "foundation",
       "difficultyFamily": "core-curriculum",
       "difficultyReason": "Oversikt: hva, når og hvorfor det betyr noe. Svaret er undervist i emnets innledning.",
+      "difficultyPolicy": "2026-10-11",
+      "precision": "broad",
+      "reasoning": "identify",
+      "learningDepth": "foundation"
+    },
+    {
+      "id": "core:geo-norges-landskap-polarsirkelen",
+      "prompt": "Hvilken breddesirkel krysser Nordland og markerer grensen for midnattssol og mørketid?",
+      "answer": "Polarsirkelen",
+      "entityId": "unit:geo-norges-landskap",
+      "previousDifficulty": 2,
+      "difficulty": 2,
+      "learningStage": "foundation",
+      "difficultyFamily": "core-curriculum",
+      "difficultyReason": "Kjerne: hent fram et sentralt navn, begrep eller sted.",
       "difficultyPolicy": "2026-10-11",
       "precision": "broad",
       "reasoning": "identify",
@@ -19033,6 +19063,21 @@
       "id": "core:geo-norges-fylker-byer-nord-norge",
       "prompt": "Hva heter landsdelen som består av Nordland, Troms og Finnmark?",
       "answer": "Nord-Norge",
+      "entityId": "unit:geo-norges-fylker-byer",
+      "previousDifficulty": 3,
+      "difficulty": 3,
+      "learningStage": "foundation",
+      "difficultyFamily": "core-curriculum",
+      "difficultyReason": "Kjerne: hent fram et sentralt navn, begrep eller sted.",
+      "difficultyPolicy": "2026-10-11",
+      "precision": "broad",
+      "reasoning": "identify",
+      "learningDepth": "foundation"
+    },
+    {
+      "id": "core:geo-norges-fylker-byer-sorlandet",
+      "prompt": "Hva heter landsdelen som svarer til Agder fylke?",
+      "answer": "Sørlandet",
       "entityId": "unit:geo-norges-fylker-byer",
       "previousDifficulty": 3,
       "difficulty": 3,
@@ -19406,7 +19451,7 @@
     },
     {
       "id": "core:geo-asia-everest",
-      "prompt": "Hva heter Jordens høyeste fjell?",
+      "prompt": "Hva heter Jordas høyeste fjell?",
       "answer": "Mount Everest",
       "entityId": "unit:geo-asia",
       "previousDifficulty": 3,
@@ -19497,7 +19542,7 @@
     {
       "id": "core:geo-asia-forklar-elver",
       "prompt": "Forklar hvorfor så mange mennesker i Asia bor langs de store elvene.",
-      "answer": "Elvene har bygd opp store, fruktbare lavland. Der er det vann og god jord til jordbruk, og derfor kan mange mennesker leve tett. Lavlandet i Kina, India og Sørøst-Asia er derfor svært tett befolket.",
+      "answer": "Elvene har bygd opp store, fruktbare lavland. Der er det vann og god jord til jordbruk, og derfor kan mange mennesker leve tett. Lavlandet i Kina, India og Sørøst-Asia er svært tett befolket.",
       "entityId": "unit:geo-asia",
       "previousDifficulty": 4,
       "difficulty": 4,
@@ -19557,7 +19602,7 @@
     {
       "id": "core:geo-afrika-sahara",
       "prompt": "Hva er Sahara?",
-      "answer": "Jordens største varme ørken",
+      "answer": "Jordas største varme ørken",
       "entityId": "unit:geo-afrika",
       "previousDifficulty": 2,
       "difficulty": 2,
@@ -19947,7 +19992,7 @@
     {
       "id": "core:geo-oseania-polar-barrier-reef",
       "prompt": "Hva er Great Barrier Reef?",
-      "answer": "Jordens største korallrev",
+      "answer": "Jordas største korallrev",
       "entityId": "unit:geo-oseania-polar",
       "previousDifficulty": 2,
       "difficulty": 2,
@@ -20021,7 +20066,7 @@
     },
     {
       "id": "core:geo-oseania-polar-gronland",
-      "prompt": "Hva heter den store øya i Arktis der om lag 85 prosent er dekket av innlandsis?",
+      "prompt": "Hva heter den store øya i Arktis der over 80 prosent er dekket av innlandsis?",
       "answer": "Grønland",
       "entityId": "unit:geo-oseania-polar",
       "previousDifficulty": 3,
@@ -20111,7 +20156,7 @@
     },
     {
       "id": "core:geo-oseania-polar-andel-is",
-      "prompt": "Omtrent hvor mange prosent av all is på Jorden finnes i Antarktis?",
+      "prompt": "Omtrent hvor mange prosent av all is på Jorda finnes i Antarktis?",
       "answer": "90",
       "entityId": "unit:geo-oseania-polar",
       "previousDifficulty": 5,
@@ -20232,7 +20277,7 @@
     {
       "id": "core:geo-klima-vegetasjon-forklar-monsun",
       "prompt": "Forklar hvordan monsunen oppstår.",
-      "answer": "Om sommeren varmes landet raskere opp enn havet. Varm luft stiger over land og gir lavtrykk, så fuktig luft strømmer inn fra havet og gir mye regn. Om vinteren snur det: kaldt land gir høytrykk og tørr vind ut mot havet.",
+      "answer": "Om sommeren varmes landet raskere opp enn havet. Varm luft stiger over land og gir lavtrykk, så fuktig luft strømmer inn fra havet og gir mye regn. Om vinteren snur det: Kaldt land gir høytrykk og tørr vind ut mot havet.",
       "entityId": "unit:geo-klima-vegetasjon",
       "previousDifficulty": 4,
       "difficulty": 4,
@@ -20321,7 +20366,7 @@
     },
     {
       "id": "core:geo-befolkning-byer-folketall",
-      "prompt": "Omtrent hvor mange mennesker lever på Jorden i dag?",
+      "prompt": "Omtrent hvor mange mennesker lever på Jorda i dag?",
       "answer": "Omtrent 8 milliarder",
       "entityId": "unit:geo-befolkning-byer",
       "previousDifficulty": 2,
@@ -20486,7 +20531,7 @@
     },
     {
       "id": "core:geo-befolkning-byer-topp",
-      "prompt": "Omtrent hvor mange milliarder mennesker venter FN at Jorden vil ha på det meste, i 2080-årene?",
+      "prompt": "Omtrent hvor mange milliarder mennesker venter FN at Jorda vil ha på det meste, i 2080-årene?",
       "answer": "10,4",
       "entityId": "unit:geo-befolkning-byer",
       "previousDifficulty": 5,
@@ -20500,9 +20545,9 @@
       "learningDepth": "details"
     },
     {
-      "id": "core:geo-befolkning-byer-byandel-1900",
-      "prompt": "Hvor mange prosent av verdens befolkning bodde i byer i 1900?",
-      "answer": "3",
+      "id": "core:geo-befolkning-byer-byandel-1950",
+      "prompt": "Omtrent hvor mange prosent av verdens befolkning bodde i byer i 1950?",
+      "answer": "29",
       "entityId": "unit:geo-befolkning-byer",
       "previousDifficulty": 5,
       "difficulty": 5,
@@ -21042,7 +21087,7 @@
     {
       "id": "core:nat-jordas-indre-forklar-island",
       "prompt": "Forklar hvorfor Island har så mange vulkaner og jordskjelv.",
-      "answer": "Island ligger på Atlanterhavsryggen, der den amerikanske platen og platen under Europa og Afrika glir fra hverandre. Magma fra dypet trenger opp i sprekken og danner ny skorpe, og bevegelsene gir jordskjelv.",
+      "answer": "Island ligger på Atlanterhavsryggen, der den nordamerikanske og den eurasiske platen glir fra hverandre. Magma fra dypet trenger opp i sprekken og danner ny skorpe, og bevegelsene gir jordskjelv.",
       "entityId": "unit:nat-jordas-indre",
       "previousDifficulty": 3,
       "difficulty": 3,
@@ -21177,7 +21222,7 @@
     {
       "id": "core:nat-atomer-vann",
       "prompt": "Hvilken kjemisk formel har vann?",
-      "answer": "H2O",
+      "answer": "H₂O",
       "entityId": "unit:nat-atomer",
       "previousDifficulty": 2,
       "difficulty": 2,
@@ -21416,7 +21461,7 @@
     },
     {
       "id": "core:nat-kjemiske-reaksjoner-forklar-katalysator",
-      "prompt": "Forklar hva en katalysator gjør, og hvorfor den ikke må fylles på hele tiden.",
+      "prompt": "Forklar hva en katalysator gjør, og hvorfor den ikke trenger å fylles på hele tiden.",
       "answer": "En katalysator senker energien som trengs for å sette i gang reaksjonen, så den går raskere. Den forbrukes ikke selv, og derfor kan en liten mengde omsette store mengder stoff over lang tid.",
       "entityId": "unit:nat-kjemiske-reaksjoner",
       "previousDifficulty": 4,
@@ -21626,7 +21671,7 @@
     },
     {
       "id": "core:nat-krefter-bevegelse-principia",
-      "prompt": "Hvilket år kom Newtons Principia, der bevegelseslovene ble gitt ut?",
+      "prompt": "Hvilket år kom Newtons «Principia», der bevegelseslovene ble gitt ut?",
       "answer": "1687",
       "entityId": "unit:nat-krefter-bevegelse",
       "previousDifficulty": 4,
@@ -21791,7 +21836,7 @@
     },
     {
       "id": "core:nat-energi-elektrisitet-forklar-ball",
-      "prompt": "En ball slippes fra et bord og blir til slutt liggende stille på gulvet. Forklar hvor energien har blitt av.",
+      "prompt": "En ball slippes fra et bord og blir til slutt liggende stille på gulvet. Forklar hvor energien har tatt veien.",
       "answer": "Stillingsenergien ble omdannet til bevegelsesenergi i fallet. Ved støtene mot gulvet og gjennom lufta gikk energien gradvis over til varme og litt lyd. Ingen energi forsvant; den skiftet bare form.",
       "entityId": "unit:nat-energi-elektrisitet",
       "previousDifficulty": 4,
@@ -22061,7 +22106,7 @@
     },
     {
       "id": "core:nat-vitenskapens-gjennombrudd-newton",
-      "prompt": "Hvem ga ut Principia i 1687?",
+      "prompt": "Hvem ga ut «Principia» i 1687?",
       "answer": "Isaac Newton",
       "entityId": "unit:nat-vitenskapens-gjennombrudd",
       "previousDifficulty": 3,
@@ -22076,7 +22121,7 @@
     },
     {
       "id": "core:nat-vitenskapens-gjennombrudd-galilei",
-      "prompt": "Hvem rettet i 1609 en kikkert mot himmelen og fant fire måner rundt Jupiter?",
+      "prompt": "Hvem fant i 1610 fire måner rundt Jupiter med en kikkert?",
       "answer": "Galileo Galilei",
       "entityId": "unit:nat-vitenskapens-gjennombrudd",
       "previousDifficulty": 3,
@@ -22152,7 +22197,7 @@
     {
       "id": "core:nat-vitenskapens-gjennombrudd-rekkefolge",
       "prompt": "Sett gjennombruddene i kronologisk rekkefølge.",
-      "answer": "Kopernikus' bok om et heliosentrisk verdensbilde (1543) → Galilei ser Jupiters måner i kikkert (1609) → Newtons Principia (1687) → Darwins teori om naturlig utvalg (1859) → Einsteins spesielle relativitetsteori (1905)",
+      "answer": "Kopernikus' bok om et heliosentrisk verdensbilde (1543) → Galilei ser Jupiters måner i kikkert (1610) → Newtons «Principia» (1687) → Darwins teori om naturlig utvalg (1859) → Einsteins spesielle relativitetsteori (1905)",
       "entityId": "unit:nat-vitenskapens-gjennombrudd",
       "previousDifficulty": 4,
       "difficulty": 4,
@@ -22331,7 +22376,7 @@
     },
     {
       "id": "core:nat-moderne-fysikk-myoner",
-      "prompt": "Myoner dannes høyt i atmosfæren og lever bare to milliondels sekunder. Hvorfor når mange likevel ned til bakken?",
+      "prompt": "Myoner dannes høyt i atmosfæren og lever bare to milliondeler av et sekund. Hvorfor når mange likevel ned til bakken?",
       "answer": "Tiden deres går saktere sett fra Jorda",
       "entityId": "unit:nat-moderne-fysikk",
       "previousDifficulty": 4,
@@ -22720,9 +22765,24 @@
       "learningDepth": "connections"
     },
     {
+      "id": "core:bio-arv-dna-hvorfor-mutasjon-sykdom",
+      "prompt": "Hvorfor kan en mutasjon i ett eneste gen gi en alvorlig sykdom?",
+      "answer": "Proteinet som lages etter genet, kan bli feil eller mangle",
+      "entityId": "unit:bio-arv-dna",
+      "previousDifficulty": 4,
+      "difficulty": 4,
+      "learningStage": "connections",
+      "difficultyFamily": "core-curriculum",
+      "difficultyReason": "Sammenheng: forklar årsaker, følger eller forskjeller.",
+      "difficultyPolicy": "2026-10-11",
+      "precision": "broad",
+      "reasoning": "explain",
+      "learningDepth": "connections"
+    },
+    {
       "id": "core:bio-arv-dna-forklar-crispr",
       "prompt": "Forklar kort hvordan genredigering med CRISPR fungerer, og hvor metoden kommer fra.",
-      "answer": "CRISPR er hentet fra bakterienes forsvar mot virus. Et RNA-molekyl leder et Cas-protein, en slags gensaks, til et bestemt sted i DNA-et, der proteinet kutter. Slik kan forskere endre DNA målrettet.",
+      "answer": "CRISPR er hentet fra bakterienes forsvar mot virus. En kort RNA-bit leder et Cas-protein, en slags gensaks, til et bestemt sted i DNA-et, der proteinet kutter. Slik kan forskere endre DNA målrettet.",
       "entityId": "unit:bio-arv-dna",
       "previousDifficulty": 4,
       "difficulty": 4,
@@ -22766,7 +22826,7 @@
     },
     {
       "id": "core:bio-evolusjon-darwin",
-      "prompt": "Hvem la fram teorien om evolusjon ved naturlig utvalg i boka Artenes opprinnelse?",
+      "prompt": "Hvem la fram teorien om evolusjon ved naturlig utvalg i boka «Artenes opprinnelse»?",
       "answer": "Charles Darwin",
       "entityId": "unit:bio-evolusjon",
       "previousDifficulty": 2,
@@ -22781,8 +22841,8 @@
     },
     {
       "id": "core:bio-evolusjon-hva-endrer-seg",
-      "prompt": "Hva er det som endrer seg når en art utvikler seg?",
-      "answer": "Hvor vanlige ulike arvelige egenskaper er i populasjonen",
+      "prompt": "Hva skjer når en art utvikler seg?",
+      "answer": "Arvelige egenskaper blir vanligere eller sjeldnere i populasjonen",
       "entityId": "unit:bio-evolusjon",
       "previousDifficulty": 2,
       "difficulty": 2,
@@ -22796,7 +22856,7 @@
     },
     {
       "id": "core:bio-evolusjon-felles-opphav",
-      "prompt": "Hva sier evolusjonsteorien om slektskapet mellom alle livsformer på jorda?",
+      "prompt": "Hva sier evolusjonsteorien om slektskapet mellom alle livsformer på Jorda?",
       "answer": "Alt liv har et felles opphav",
       "entityId": "unit:bio-evolusjon",
       "previousDifficulty": 2,
@@ -22841,8 +22901,8 @@
     },
     {
       "id": "core:bio-evolusjon-sjimpansen",
-      "prompt": "Hvilken nålevende art er menneskets nærmeste slektning?",
-      "answer": "Sjimpansen",
+      "prompt": "Hvilke nålevende aper er menneskets nærmeste slektninger?",
+      "answer": "Sjimpansene",
       "entityId": "unit:bio-evolusjon",
       "previousDifficulty": 3,
       "difficulty": 3,
@@ -22901,8 +22961,8 @@
     },
     {
       "id": "core:bio-evolusjon-forklar-bevis",
-      "prompt": "Nevn og forklar to typer bevis for at livet har utviklet seg gjennom evolusjon.",
-      "answer": "Fossiler viser at livet har endret seg over tid, med overgangsformer for eksempel mellom fisk og firfotede dyr. Menneskearmen, hvalens luffe og fuglevingen har samme grunnstruktur, som tyder på felles stamform. Arter som ligner hverandre, har også svært likt DNA.",
+      "prompt": "Nevn og forklar tre typer bevis for at livet har utviklet seg gjennom evolusjon.",
+      "answer": "Fossiler viser at livet har endret seg over tid, med overgangsformer for eksempel mellom fisk og firfotede dyr. Menneskearmen, hvalens luffe og fuglevingen har samme grunnstruktur, noe som tyder på felles stamform. Arter som ligner hverandre, har også svært likt DNA.",
       "entityId": "unit:bio-evolusjon",
       "previousDifficulty": 4,
       "difficulty": 4,
@@ -22931,7 +22991,7 @@
     },
     {
       "id": "core:bio-evolusjon-homo-sapiens",
-      "prompt": "Omtrent hvor lenge har mennesker av arten Homo sapiens levd på jorda?",
+      "prompt": "Omtrent hvor lenge har mennesker av arten Homo sapiens levd på Jorda?",
       "answer": "Omtrent 300 000 år",
       "entityId": "unit:bio-evolusjon",
       "previousDifficulty": 5,
@@ -23021,7 +23081,7 @@
     },
     {
       "id": "core:bio-livets-mangfold-amfibier",
-      "prompt": "Hvilken gruppe virveldyr er avhengig av vann for å fullføre livssyklusen sin?",
+      "prompt": "Hvilken gruppe virveldyr må som regel tilbake til vann for å formere seg, selv om de voksne ofte lever på land?",
       "answer": "Amfibier",
       "entityId": "unit:bio-livets-mangfold",
       "previousDifficulty": 2,
@@ -23036,7 +23096,7 @@
     },
     {
       "id": "core:bio-livets-mangfold-biologisk-mangfold",
-      "prompt": "Hva kalles samlet variasjonen av arter, gener og leveområder?",
+      "prompt": "Hva kalles variasjonen av arter, gener og leveområder under ett?",
       "answer": "Biologisk mangfold",
       "entityId": "unit:bio-livets-mangfold",
       "previousDifficulty": 2,
@@ -23276,7 +23336,7 @@
     },
     {
       "id": "core:bio-menneskekroppen-forklar-oksygen",
-      "prompt": "Forklar veien et oksygenmolekyl tar fra du puster inn til det når en muskel i beinet.",
+      "prompt": "Forklar veien et oksygenmolekyl tar fra du puster det inn, til det når en muskel i beinet.",
       "answer": "Oksygenet går ned i lungeblærene og over i blodet i hårkarene. Blodet går til venstre side av hjertet, som pumper det ut gjennom aorta og arteriene til muskelen, der oksygenet avgis.",
       "entityId": "unit:bio-menneskekroppen",
       "previousDifficulty": 3,
@@ -23457,7 +23517,7 @@
     {
       "id": "core:bio-sykdom-immunforsvar-forklar-vaksine",
       "prompt": "Forklar hvorfor en vaksinert person ofte ikke blir syk når smittestoffet kommer.",
-      "answer": "Vaksinen har fått immunforsvaret til å lage antistoffer mot smittestoffet uten at personen ble syk. Når det samme smittestoffet kommer, øker antistoffproduksjonen raskt, og smittestoffet bekjempes før det rekker å gi sykdom.",
+      "answer": "Vaksinen har fått immunforsvaret til å lage antistoffer og hukommelsesceller mot smittestoffet uten at personen ble syk. Når det samme smittestoffet kommer, svarer hukommelsescellene raskt, og smittestoffet bekjempes før det rekker å gi sykdom.",
       "entityId": "unit:bio-sykdom-immunforsvar",
       "previousDifficulty": 4,
       "difficulty": 4,
@@ -23652,7 +23712,7 @@
     {
       "id": "core:bio-okologi-forklar-energi-og-stoff",
       "prompt": "Forklar forskjellen på hvordan energi og stoffer beveger seg gjennom et økosystem.",
-      "answer": "Energien kommer inn som sollys, går gjennom næringskjeden og tapes til slutt som varme, så den må hele tiden tilføres. Stoffer som karbon og nitrogen går derimot i kretsløp: nedbryterne gjør dem tilgjengelige for produsentene igjen.",
+      "answer": "Energien kommer inn som sollys, går gjennom næringskjeden og tapes til slutt som varme, så den må hele tiden tilføres. Stoffer som karbon og nitrogen går derimot i kretsløp: Nedbryterne gjør dem tilgjengelige for produsentene igjen.",
       "entityId": "unit:bio-okologi",
       "previousDifficulty": 4,
       "difficulty": 4,
@@ -23697,7 +23757,7 @@
     {
       "id": "core:bio-klima-miljo-drivhuseffekten",
       "prompt": "Hva er drivhuseffekten?",
-      "answer": "At gasser i atmosfæren holder på varme fra jorda",
+      "answer": "At gasser i atmosfæren holder på varme fra Jorda",
       "entityId": "unit:bio-klima-miljo",
       "previousDifficulty": 2,
       "difficulty": 2,
@@ -23771,7 +23831,7 @@
     },
     {
       "id": "core:bio-klima-miljo-havforsuring",
-      "prompt": "Hva kalles det når havet får lavere pH fordi det tar opp mer CO2?",
+      "prompt": "Hva kalles det når havet får lavere pH fordi det tar opp mer CO₂?",
       "answer": "Havforsuring",
       "entityId": "unit:bio-klima-miljo",
       "previousDifficulty": 3,
@@ -23786,8 +23846,8 @@
     },
     {
       "id": "core:bio-klima-miljo-hvorfor-co2-varmer",
-      "prompt": "Hvorfor gir mer CO2 i atmosfæren høyere temperatur ved bakken?",
-      "answer": "CO2 fanger varmestråling fra jorda og sender noe tilbake",
+      "prompt": "Hvorfor gir mer CO₂ i atmosfæren høyere temperatur ved bakken?",
+      "answer": "CO₂ fanger varmestråling fra Jorda og sender noe tilbake",
       "entityId": "unit:bio-klima-miljo",
       "previousDifficulty": 4,
       "difficulty": 4,
@@ -23816,8 +23876,8 @@
     },
     {
       "id": "core:bio-klima-miljo-forklar-havet",
-      "prompt": "Forklar hvordan utslipp av CO2 på land kan få følger for næringskjedene i havet.",
-      "answer": "Mer CO2 i lufta gir mer CO2 i havet, og vannet blir surere. Da blir det mindre karbonat tilgjengelig for plankton som bygger skall av kalk. Plankton er bunnen av næringskjeden, så endringer der kan forplante seg til fisk og hval.",
+      "prompt": "Forklar hvordan utslipp av CO₂ på land kan få følger for næringskjedene i havet.",
+      "answer": "Mer CO₂ i lufta gir mer CO₂ i havet, og vannet blir surere. Da blir det mindre karbonat tilgjengelig for plankton som bygger skall av kalk. Plankton er bunnen av næringskjeden, så endringer der kan forplante seg til fisk og hval.",
       "entityId": "unit:bio-klima-miljo",
       "previousDifficulty": 4,
       "difficulty": 4,
@@ -23846,7 +23906,7 @@
     },
     {
       "id": "core:bio-klima-miljo-uten-drivhuseffekt",
-      "prompt": "Omtrent hvilken middeltemperatur ville jorda hatt uten drivhuseffekten?",
+      "prompt": "Omtrent hvilken middeltemperatur ville Jorda hatt uten drivhuseffekten?",
       "answer": "Omtrent minus 18 grader",
       "entityId": "unit:bio-klima-miljo",
       "previousDifficulty": 5,
@@ -23936,8 +23996,8 @@
     },
     {
       "id": "core:sam-norges-styresett-kongen",
-      "prompt": "Hvilken rolle har kongen i det norske styresettet i dag?",
-      "answer": "Først og fremst en symbolsk og seremoniell rolle",
+      "prompt": "Hva slags rolle har kongen i det norske styresettet i dag?",
+      "answer": "Symbolsk og seremoniell",
       "entityId": "unit:sam-norges-styresett",
       "previousDifficulty": 1,
       "difficulty": 1,
@@ -24071,7 +24131,7 @@
     },
     {
       "id": "core:sam-norges-styresett-fylkeskommune",
-      "prompt": "Hva er den største oppgaven for fylkeskommunene?",
+      "prompt": "Hva er fylkeskommunenes største oppgave?",
       "answer": "Videregående skole",
       "entityId": "unit:sam-norges-styresett",
       "previousDifficulty": 4,
@@ -24656,7 +24716,7 @@
     },
     {
       "id": "core:sam-fn-nato-grunnleggere-antall",
-      "prompt": "Hvor mange land skrev under FN-pakten som grunnleggende medlemmer i 1945?",
+      "prompt": "Hvor mange land skrev under FN-pakten som opprinnelige medlemmer i 1945?",
       "answer": "51",
       "entityId": "unit:sam-fn-nato",
       "previousDifficulty": 5,
@@ -24911,7 +24971,7 @@
     },
     {
       "id": "core:sam-okonomi-oljefondet",
-      "prompt": "Hva kalles i dagligtale fondet som statens inntekter fra petroleumsvirksomheten går inn i?",
+      "prompt": "Hva kalles fondet for statens inntekter fra petroleumsvirksomheten i dagligtale?",
       "answer": "Oljefondet",
       "entityId": "unit:sam-okonomi",
       "previousDifficulty": 3,
@@ -24987,7 +25047,7 @@
     {
       "id": "core:sam-okonomi-hvorfor-avkastning",
       "prompt": "Hvorfor skal bare den forventede avkastningen av Oljefondet brukes, ikke selve fondet?",
-      "answer": "Så fondet varer og kommer framtidige generasjoner til gode",
+      "answer": "Fordi fondet skal vare og komme framtidige generasjoner til gode",
       "entityId": "unit:sam-okonomi",
       "previousDifficulty": 4,
       "difficulty": 4,
@@ -25016,7 +25076,7 @@
     },
     {
       "id": "core:sam-okonomi-prosent",
-      "prompt": "Hvor mange prosent av Oljefondets verdi tilsier handlingsregelen at kan brukes i et normalår?",
+      "prompt": "Hvor mange prosent av Oljefondet kan brukes i et normalår ifølge handlingsregelen?",
       "answer": "3",
       "entityId": "unit:sam-okonomi",
       "previousDifficulty": 5,
@@ -25212,7 +25272,7 @@
     {
       "id": "core:sam-religioner-buddha-tid",
       "prompt": "Omtrent når levde Buddha?",
-      "answer": "Omkring 400 før vår tidsregning",
+      "answer": "Omkring 400 f.Kr.",
       "entityId": "unit:sam-religioner",
       "previousDifficulty": 4,
       "difficulty": 4,
@@ -25406,8 +25466,8 @@
     },
     {
       "id": "core:sam-filosofi-bentham",
-      "prompt": "Hvilket prinsipp formulerte Jeremy Bentham utilitarismen med?",
-      "answer": "Størst mulig lykke for flest mulig",
+      "prompt": "Med hvilket prinsipp oppsummerte Jeremy Bentham utilitarismen?",
+      "answer": "Skap størst mulig lykke for flest mulig",
       "entityId": "unit:sam-filosofi",
       "previousDifficulty": 5,
       "difficulty": 5,
@@ -25451,7 +25511,7 @@
     },
     {
       "id": "core:sam-usa-styresett-presidentperiode",
-      "prompt": "Hvor lenge kan en amerikansk president sitte?",
+      "prompt": "Hvor lenge kan en amerikansk president høyst sitte?",
       "answer": "To perioder på fire år",
       "entityId": "unit:sam-usa-styresett",
       "previousDifficulty": 2,
@@ -25557,7 +25617,7 @@
     {
       "id": "core:sam-usa-styresett-forklar-kontroll",
       "prompt": "Forklar hvordan statsmaktene i USA kontrollerer hverandre.",
-      "answer": "Presidenten kan nedlegge veto mot lover, men Kongressen kan overstyre vetoet med to tredels flertall i begge kamre. Presidenten utnevner høyesterettsdommerne, men Senatet må godkjenne dem. Høyesterett har siste ord om hvordan lovene og grunnloven skal tolkes.",
+      "answer": "Presidenten kan nedlegge veto mot lover, men Kongressen kan overstyre vetoet med to tredjedels flertall i begge kamre. Presidenten utnevner høyesterettsdommerne, men Senatet må godkjenne dem. Høyesterett har siste ord om hvordan lovene og grunnloven skal tolkes.",
       "entityId": "unit:sam-usa-styresett",
       "previousDifficulty": 4,
       "difficulty": 4,
@@ -25676,7 +25736,7 @@
     },
     {
       "id": "core:kul-kunstepoker-romantikk-tema",
-      "prompt": "Hva stod i sentrum for billedkunstnerne i romantikken?",
+      "prompt": "Hva sto i sentrum for billedkunstnerne i romantikken?",
       "answer": "Følelser, natur og det subjektive",
       "entityId": "unit:kul-kunstepoker",
       "previousDifficulty": 1,
@@ -25812,7 +25872,7 @@
     {
       "id": "core:kul-kunstepoker-gotikk-navn",
       "prompt": "Hvorfor fikk den gotiske stilen sitt navn?",
-      "answer": "Renessansen så den som barbarisk, som goterne",
+      "answer": "Renessansen fant den like barbarisk som goterne",
       "entityId": "unit:kul-kunstepoker",
       "previousDifficulty": 4,
       "difficulty": 4,
@@ -25826,7 +25886,7 @@
     },
     {
       "id": "core:kul-kunstepoker-st-denis",
-      "prompt": "Klosterkirken St. Denis ved Paris regnes som starten på gotikken. Omtrent hvilket år ble koret bygd om?",
+      "prompt": "Klosterkirken Saint-Denis ved Paris regnes som starten på gotikken. Omtrent hvilket år ble koret bygd om?",
       "answer": "1140",
       "entityId": "unit:kul-kunstepoker",
       "previousDifficulty": 4,
@@ -25841,7 +25901,7 @@
     },
     {
       "id": "core:kul-mesterverk-mona-lisa",
-      "prompt": "Hvor henger Leonardo da Vincis Mona Lisa i dag?",
+      "prompt": "Hvor henger Leonardo da Vincis «Mona Lisa» i dag?",
       "answer": "I Louvre i Paris",
       "entityId": "unit:kul-mesterverk",
       "previousDifficulty": 2,
@@ -25856,7 +25916,7 @@
     },
     {
       "id": "core:kul-mesterverk-nattverden",
-      "prompt": "Hvilket øyeblikk viser Leonardos veggmaleri Nattverden i Milano?",
+      "prompt": "Hvilket øyeblikk viser Leonardos veggmaleri «Nattverden» i Milano?",
       "answer": "Jesus sier at en av disiplene skal forråde ham",
       "entityId": "unit:kul-mesterverk",
       "previousDifficulty": 2,
@@ -25886,7 +25946,7 @@
     },
     {
       "id": "core:kul-mesterverk-guernica",
-      "prompt": "Hva skildrer Picassos Guernica fra 1937?",
+      "prompt": "Hva skildrer Picassos «Guernica» fra 1937?",
       "answer": "Bombingen av en by under den spanske borgerkrigen",
       "entityId": "unit:kul-mesterverk",
       "previousDifficulty": 2,
@@ -25930,9 +25990,9 @@
       "learningDepth": "foundation"
     },
     {
-      "id": "core:kul-mesterverk-van-gogh",
-      "prompt": "Hvem malte denne versjonen av blomstermotivet i Arles i 1888?",
-      "answer": "Vincent van Gogh",
+      "id": "core:kul-mesterverk-van-gogh-retning",
+      "prompt": "Hvilken retning regnes maleren av dette bildet som en viktig forløper for?",
+      "answer": "Ekspresjonismen",
       "entityId": "unit:kul-mesterverk",
       "previousDifficulty": 3,
       "difficulty": 3,
@@ -25976,7 +26036,7 @@
     },
     {
       "id": "core:kul-mesterverk-nattevakten-navn",
-      "prompt": "Hvorfor fikk Rembrandts store gruppeportrett navnet Nattevakten?",
+      "prompt": "Hvorfor fikk Rembrandts store gruppeportrett navnet «Nattevakten»?",
       "answer": "Mørk ferniss fikk dagscenen til å se ut som natt",
       "entityId": "unit:kul-mesterverk",
       "previousDifficulty": 4,
@@ -25991,7 +26051,7 @@
     },
     {
       "id": "core:kul-mesterverk-nattverden-bevaring",
-      "prompt": "Hvorfor er Leonardos Nattverden så dårlig bevart?",
+      "prompt": "Hvorfor er Leonardos «Nattverden» så dårlig bevart?",
       "answer": "Den er malt på tørr puss, ikke som fresko",
       "entityId": "unit:kul-mesterverk",
       "previousDifficulty": 4,
@@ -26006,7 +26066,7 @@
     },
     {
       "id": "core:kul-mesterverk-forklar-mona-lisa",
-      "prompt": "Forklar hvordan Leonardo skaper det gåtefulle uttrykket i Mona Lisa.",
+      "prompt": "Forklar hvordan Leonardo skaper det gåtefulle uttrykket i «Mona Lisa».",
       "answer": "Han brukte sfumato: myke overganger uten skarpe konturer, som om motivet er sett gjennom et lett røykslør. Kontraster mellom lys og skygge gir ansiktet volum. Uklarheten gjør uttrykket vanskelig å lese entydig.",
       "entityId": "unit:kul-mesterverk",
       "previousDifficulty": 4,
@@ -26066,7 +26126,7 @@
     },
     {
       "id": "core:kul-norsk-kunst-brudeferd",
-      "prompt": "Hvilke to malere laget Brudeferd i Hardanger sammen?",
+      "prompt": "Hvilke to malere laget «Brudeferd i Hardanger» sammen?",
       "answer": "Adolph Tidemand og Hans Gude",
       "entityId": "unit:kul-norsk-kunst",
       "previousDifficulty": 1,
@@ -26111,7 +26171,7 @@
     },
     {
       "id": "core:kul-norsk-kunst-krohg",
-      "prompt": "Hvilken maler ville gjøre naturalismen til et samfunnskritisk verktøy, blant annet i bildet Albertine i politilægens venteværelse?",
+      "prompt": "Hvilken maler ville gjøre naturalismen til et samfunnskritisk verktøy, blant annet i bildet «Albertine i politilægens venteværelse»?",
       "answer": "Christian Krohg",
       "entityId": "unit:kul-norsk-kunst",
       "previousDifficulty": 2,
@@ -26157,7 +26217,7 @@
     {
       "id": "core:kul-norsk-kunst-backer",
       "prompt": "Hva var Harriet Backers hovedinteresse som maler?",
-      "answer": "Farge, komposisjon og forholdet flate–rom",
+      "answer": "Lys og farge i stille interiører",
       "entityId": "unit:kul-norsk-kunst",
       "previousDifficulty": 2,
       "difficulty": 2,
@@ -26187,7 +26247,7 @@
     {
       "id": "core:kul-norsk-kunst-rekkefolge",
       "prompt": "Sett bildene i rekkefølge etter når de ble malt.",
-      "answer": "Brudeferd i Hardanger (Tidemand og Gude) (1848) → Morgen (Munch) (1884) → Sommernatt (Kitty Kielland) (1886) → Skrik, det første maleriet (Munch) (1893)",
+      "answer": "«Brudeferd i Hardanger», originalen (Tidemand og Gude) (1848) → «Morgen» (Munch) (1884) → «Sommernatt» (Kitty Kielland) (1886) → «Skrik», det første maleriet (Munch) (1893)",
       "entityId": "unit:kul-norsk-kunst",
       "previousDifficulty": 3,
       "difficulty": 3,
@@ -26202,7 +26262,7 @@
     {
       "id": "core:kul-norsk-kunst-kobling",
       "prompt": "Koble kunstneren med det som kjennetegner kunsten.",
-      "answer": "J.C. Dahl – Romantiske norske landskap · Adolph Tidemand – Bondeliv i nasjonalromantikken · Christian Krohg – Samfunnskritisk naturalisme · Kitty Kielland – Stemningsfulle Jær-landskap",
+      "answer": "J.C. Dahl – Romantiske norske landskap · Adolph Tidemand – Bondeliv i nasjonalromantikken · Christian Krohg – Samfunnskritisk naturalisme · Kitty Kielland – Stemningsfulle landskap fra Jæren",
       "entityId": "unit:kul-norsk-kunst",
       "previousDifficulty": 3,
       "difficulty": 3,
@@ -26216,7 +26276,7 @@
     },
     {
       "id": "core:kul-norsk-kunst-skrik-versjon",
-      "prompt": "Hvor henger det første malte Skrik fra 1893?",
+      "prompt": "Hvor henger det første malte «Skrik» fra 1893?",
       "answer": "I Nasjonalmuseet i Oslo",
       "entityId": "unit:kul-norsk-kunst",
       "previousDifficulty": 4,
@@ -26231,7 +26291,7 @@
     },
     {
       "id": "core:kul-norsk-kunst-brudeferd-aar",
-      "prompt": "Hvilket år ble Brudeferd i Hardanger fullført?",
+      "prompt": "Hvilket år ble originalen av «Brudeferd i Hardanger», som Nasjonalmuseet eier, fullført?",
       "answer": "1848",
       "entityId": "unit:kul-norsk-kunst",
       "previousDifficulty": 4,
@@ -26321,7 +26381,7 @@
     },
     {
       "id": "core:kul-moderne-kunst-kandinskij",
-      "prompt": "Hvilken russisk maler fremstilte ikke lenger en synlig virkelighet fra omkring 1909, og skrev boken Om det åndelige i kunsten?",
+      "prompt": "Hvilken russisk maler sluttet omkring 1909 å fremstille en synlig virkelighet og skrev boken «Om det åndelige i kunsten»?",
       "answer": "Vasilij Kandinskij",
       "entityId": "unit:kul-moderne-kunst",
       "previousDifficulty": 3,
@@ -26367,7 +26427,7 @@
     {
       "id": "core:kul-moderne-kunst-rekkefolge",
       "prompt": "Sett hendelsene i moderne kunst i rekkefølge.",
-      "answer": "Hilma af Klints første abstrakte bilder (1906) → Picassos Les Demoiselles d'Avignon (1907) → Duchamps Fountain (1917) → Det første surrealistiske manifestet (1924) → Popkunstutstillingen This Is Tomorrow i London (1956)",
+      "answer": "Hilma af Klints første abstrakte bilder (1906) → Picassos «Les Demoiselles d'Avignon» (1907) → Duchamps «Fountain» (1917) → Det første surrealistiske manifestet (1924) → Popkunstutstillingen «This Is Tomorrow» i London (1956)",
       "entityId": "unit:kul-moderne-kunst",
       "previousDifficulty": 4,
       "difficulty": 4,
@@ -26381,7 +26441,7 @@
     },
     {
       "id": "core:kul-moderne-kunst-forklar-fountain",
-      "prompt": "Forklar hvorfor Duchamps Fountain regnes som et vendepunkt i kunsthistorien.",
+      "prompt": "Forklar hvorfor Duchamps «Fountain» regnes som et vendepunkt i kunsthistorien.",
       "answer": "Duchamp laget ikke gjenstanden selv, men valgte et masseprodusert urinal og stilte det ut som kunst. Dermed ble ideen og valget viktigere enn håndverk og skjønnhet. Verket reiste spørsmålet om hva kunst er og hvem som bestemmer det, og fikk stor betydning for konseptkunsten.",
       "entityId": "unit:kul-moderne-kunst",
       "previousDifficulty": 4,
@@ -26621,7 +26681,7 @@
     },
     {
       "id": "core:kul-arkitektur-opera-aar",
-      "prompt": "Hvilket år stod operahuset i Bjørvika ferdig?",
+      "prompt": "Hvilket år sto operahuset i Bjørvika ferdig?",
       "answer": "2008",
       "entityId": "unit:kul-arkitektur",
       "previousDifficulty": 5,
@@ -26681,7 +26741,7 @@
     },
     {
       "id": "core:kul-klassisk-musikk-romantikk",
-      "prompt": "Hva satte musikken i romantikken i sentrum?",
+      "prompt": "Hva satte romantikkens musikk i sentrum?",
       "answer": "Følelser, naturen og enkeltmennesket",
       "entityId": "unit:kul-klassisk-musikk",
       "previousDifficulty": 1,
@@ -26711,7 +26771,7 @@
     },
     {
       "id": "core:kul-klassisk-musikk-vivaldi",
-      "prompt": "Hvilken italiensk komponist skrev fiolinkonsertene De fire årstider?",
+      "prompt": "Hvilken italiensk komponist skrev fiolinkonsertene «De fire årstider»?",
       "answer": "Antonio Vivaldi",
       "entityId": "unit:kul-klassisk-musikk",
       "previousDifficulty": 2,
@@ -26741,7 +26801,7 @@
     },
     {
       "id": "core:kul-klassisk-musikk-tsjajkovskij",
-      "prompt": "Hvilken russisk komponist skrev ballettene Svanesjøen og Nøtteknekkeren?",
+      "prompt": "Hvilken russisk komponist skrev ballettene «Svanesjøen» og «Nøtteknekkeren»?",
       "answer": "Pjotr Tsjajkovskij",
       "entityId": "unit:kul-klassisk-musikk",
       "previousDifficulty": 2,
@@ -26772,7 +26832,7 @@
     {
       "id": "core:kul-klassisk-musikk-forklar-beethoven",
       "prompt": "Forklar hvorfor Beethoven regnes som en overgangsfigur mellom wienerklassisismen og romantikken.",
-      "answer": "Han bygde på Haydns og Mozarts former, men utvidet dem: symfoniene ble lengre og mer personlige, og i den 9. symfonien tok han inn kor og solister. Som fri kunstner uten fast fyrstetjeneste ble han et forbilde for romantikkens kunstnergeni.",
+      "answer": "Han bygde på Haydns og Mozarts former, men utvidet dem: Symfoniene ble lengre og mer personlige, og i den 9. symfonien tok han inn kor og solister. Som fri kunstner uten fast fyrstetjeneste ble han et forbilde for romantikkens kunstnergeni.",
       "entityId": "unit:kul-klassisk-musikk",
       "previousDifficulty": 3,
       "difficulty": 3,
@@ -26876,8 +26936,8 @@
     },
     {
       "id": "core:kul-norsk-musikk-peer-gynt",
-      "prompt": "Til hvilket skuespill skrev Grieg scenemusikken med Morgenstemning og I Dovregubbens hall?",
-      "answer": "Henrik Ibsens Peer Gynt",
+      "prompt": "Til hvilket skuespill skrev Grieg scenemusikken med «Morgenstemning» og «I Dovregubbens hall»?",
+      "answer": "Henrik Ibsens «Peer Gynt»",
       "entityId": "unit:kul-norsk-musikk",
       "previousDifficulty": 2,
       "difficulty": 2,
@@ -26921,7 +26981,7 @@
     },
     {
       "id": "core:kul-norsk-musikk-halvorsen",
-      "prompt": "Hvilken komponist og dirigent skrev Bojarenes inntogsmarsj?",
+      "prompt": "Hvilken komponist og dirigent skrev «Bojarenes inntogsmarsj»?",
       "answer": "Johan Halvorsen",
       "entityId": "unit:kul-norsk-musikk",
       "previousDifficulty": 3,
@@ -26936,7 +26996,7 @@
     },
     {
       "id": "core:kul-norsk-musikk-backer-grondahl",
-      "prompt": "Hva var Agathe Backer Grøndahl best kjent for?",
+      "prompt": "Hva var Agathe Backer Grøndahl best kjent som?",
       "answer": "Pianist og komponist av romanser og klaverstykker",
       "entityId": "unit:kul-norsk-musikk",
       "previousDifficulty": 3,
@@ -26967,7 +27027,7 @@
     {
       "id": "core:kul-norsk-musikk-rekkefolge",
       "prompt": "Sett hendelsene i norsk musikkhistorie i rekkefølge.",
-      "answer": "Ole Bull møter Myllarguten (1831) → Det Norske Theater åpner i Bergen (1850) → Den unge Grieg reiser til Leipzig (1858) → Peer Gynt-musikken uroppføres (1876) → Troldhaugen bygges (1885)",
+      "answer": "Ole Bull møter Myllarguten (1831) → Det Norske Theater åpner i Bergen (1850) → Den unge Grieg reiser til Leipzig (1858) → «Peer Gynt»-musikken uroppføres (1876) → Troldhaugen bygges (1885)",
       "entityId": "unit:kul-norsk-musikk",
       "previousDifficulty": 4,
       "difficulty": 4,
@@ -26983,6 +27043,21 @@
       "id": "core:kul-norsk-musikk-kobling",
       "prompt": "Koble personen med rollen i norsk musikkliv.",
       "answer": "Ole Bull – Fiolinvirtuos · Rikard Nordraak – Melodien til nasjonalsangen · Agathe Backer Grøndahl – Pianist og romansekomponist · Johan Halvorsen – Dirigent ved Nationaltheatret",
+      "entityId": "unit:kul-norsk-musikk",
+      "previousDifficulty": 4,
+      "difficulty": 4,
+      "learningStage": "connections",
+      "difficultyFamily": "core-curriculum",
+      "difficultyReason": "Sammenheng: forklar årsaker, følger eller forskjeller.",
+      "difficultyPolicy": "2026-10-11",
+      "precision": "complete",
+      "reasoning": "compare",
+      "learningDepth": "connections"
+    },
+    {
+      "id": "core:kul-norsk-musikk-nasjonalromantikk",
+      "prompt": "Koble nasjonalromantikerne med det de samlet eller skapte.",
+      "answer": "Asbjørnsen og Moe – Folkeeventyr · Ivar Aasen – Dialekter · L.M. Lindeman – Folketoner · Tidemand og Gude – Brudeferd i Hardanger",
       "entityId": "unit:kul-norsk-musikk",
       "previousDifficulty": 4,
       "difficulty": 4,
@@ -27131,7 +27206,7 @@
     },
     {
       "id": "core:lit-norron-litteratur-hvorfor-havamal",
-      "prompt": "Hvorfor er Håvamål en viktig kilde for historikere?",
+      "prompt": "Hvorfor er «Håvamål» en viktig kilde for historikere?",
       "answer": "Det viser moral og levesett i norrøn tid",
       "entityId": "unit:lit-norron-litteratur",
       "previousDifficulty": 3,
@@ -27191,7 +27266,7 @@
     },
     {
       "id": "core:lit-norron-litteratur-strofer",
-      "prompt": "Hvor mange strofer har Håvamål?",
+      "prompt": "Hvor mange strofer har «Håvamål»?",
       "answer": "164",
       "entityId": "unit:lit-norron-litteratur",
       "previousDifficulty": 4,
@@ -27236,7 +27311,7 @@
     },
     {
       "id": "core:lit-norske-klassikere-collett",
-      "prompt": "Hvorfor regnes Camilla Colletts Amtmandens Døttre som en milepæl?",
+      "prompt": "Hvorfor regnes Camilla Colletts «Amtmandens Døttre» som en milepæl?",
       "answer": "Den var Norges første samfunnskritiske roman",
       "entityId": "unit:lit-norske-klassikere",
       "previousDifficulty": 1,
@@ -27311,7 +27386,7 @@
     },
     {
       "id": "core:lit-norske-klassikere-kielland",
-      "prompt": "Hvem av «de fire store» skrev Garman & Worse (1880)?",
+      "prompt": "Hvem av «de fire store» skrev «Garman & Worse» (1880)?",
       "answer": "Alexander Kielland",
       "entityId": "unit:lit-norske-klassikere",
       "previousDifficulty": 2,
@@ -27371,7 +27446,7 @@
     },
     {
       "id": "core:lit-norske-klassikere-aar-nobel",
-      "prompt": "Hvilket år fikk Bjørnstjerne Bjørnson Nobelprisen i litteratur?",
+      "prompt": "Hvilket år fikk Bjørnstjerne Bjørnson nobelprisen i litteratur?",
       "answer": "1903",
       "entityId": "unit:lit-norske-klassikere",
       "previousDifficulty": 4,
@@ -27401,7 +27476,7 @@
     },
     {
       "id": "core:lit-norske-klassikere-aar-eventyr",
-      "prompt": "Hvilket år begynte Norske Folkeeventyr å komme ut?",
+      "prompt": "Hvilket år begynte «Norske Folkeeventyr» å komme ut?",
       "answer": "1841",
       "entityId": "unit:lit-norske-klassikere",
       "previousDifficulty": 4,
@@ -27461,7 +27536,7 @@
     },
     {
       "id": "core:lit-ibsen-nora",
-      "prompt": "Hva heter hovedpersonen i Et dukkehjem, som forlater mann og barn?",
+      "prompt": "Hva heter hovedpersonen i «Et dukkehjem», som forlater mann og barn?",
       "answer": "Nora",
       "entityId": "unit:lit-ibsen",
       "previousDifficulty": 3,
@@ -27536,7 +27611,7 @@
     },
     {
       "id": "core:lit-ibsen-gengangere",
-      "prompt": "Hvorfor ble Gengangere så kontroversielt da det kom ut?",
+      "prompt": "Hvorfor ble «Gengangere» så kontroversielt da det kom ut?",
       "answer": "Det tok opp utroskap, kjønnssykdom og dobbeltmoral",
       "entityId": "unit:lit-ibsen",
       "previousDifficulty": 4,
@@ -27551,7 +27626,7 @@
     },
     {
       "id": "core:lit-ibsen-forklar-vildanden",
-      "prompt": "Forklar hvordan Ibsen i Vildanden setter sannhetskravet på prøve.",
+      "prompt": "Forklar hvordan Ibsen i «Vildanden» setter sannhetskravet på prøve.",
       "answer": "Gregers Werle tror han kan ta livsløgnen fra familien Ekdal og sette dem fri. Men Hjalmar Ekdal tåler ikke å få illusjonene sine avslørt, og avsløringen får skjebnesvangre følger. Sannhetssøkeren gjør mer skade enn nytte.",
       "entityId": "unit:lit-ibsen",
       "previousDifficulty": 4,
@@ -27597,7 +27672,7 @@
     {
       "id": "core:lit-ibsen-teater",
       "prompt": "Hvilket teater ga Ibsen erfaring med scenografi, kostymer og instruksjon på 1850-tallet?",
-      "answer": "Det norske Theater i Bergen",
+      "answer": "Det Norske Theater i Bergen",
       "entityId": "unit:lit-ibsen",
       "previousDifficulty": 5,
       "difficulty": 5,
@@ -27611,7 +27686,7 @@
     },
     {
       "id": "core:lit-1900-tallet-norsk-sult",
-      "prompt": "Hvorfor regnes Hamsuns Sult (1890) som et vendepunkt?",
+      "prompt": "Hvorfor regnes Hamsuns «Sult» (1890) som et vendepunkt?",
       "answer": "Den skildret sjelelivet innenfra og pekte mot modernismen",
       "entityId": "unit:lit-1900-tallet-norsk",
       "previousDifficulty": 2,
@@ -27626,7 +27701,7 @@
     },
     {
       "id": "core:lit-1900-tallet-norsk-kristin-tid",
-      "prompt": "Hvilken tid skildrer Sigrid Undset i Kristin Lavransdatter?",
+      "prompt": "Hvilken tid skildrer Sigrid Undset i «Kristin Lavransdatter»?",
       "answer": "Middelalderen, på 1300-tallet",
       "entityId": "unit:lit-1900-tallet-norsk",
       "previousDifficulty": 2,
@@ -27656,7 +27731,7 @@
     },
     {
       "id": "core:lit-1900-tallet-norsk-markens-grode",
-      "prompt": "Hvilken roman fra 1917, om nybyggeren Isak Sellanrå, ga Hamsun Nobelprisen?",
+      "prompt": "Hvilken roman fra 1917, om nybyggeren Isak Sellanrå, ga Hamsun nobelprisen?",
       "answer": "Markens grøde",
       "entityId": "unit:lit-1900-tallet-norsk",
       "previousDifficulty": 3,
@@ -27686,7 +27761,7 @@
     },
     {
       "id": "core:lit-1900-tallet-norsk-vesaas",
-      "prompt": "Hvem skrev Is-slottet (1963), om venninnene Siss og Unn?",
+      "prompt": "Hvem skrev «Is-slottet» (1963), om venninnene Siss og Unn?",
       "answer": "Tarjei Vesaas",
       "entityId": "unit:lit-1900-tallet-norsk",
       "previousDifficulty": 3,
@@ -27701,7 +27776,7 @@
     },
     {
       "id": "core:lit-1900-tallet-norsk-duun",
-      "prompt": "Hvilken mellomkrigsforfatter skrev seksbindsverket Juvikfolket?",
+      "prompt": "Hvilken mellomkrigsforfatter skrev seksbindsverket «Juvikfolket»?",
       "answer": "Olav Duun",
       "entityId": "unit:lit-1900-tallet-norsk",
       "previousDifficulty": 3,
@@ -27731,7 +27806,7 @@
     },
     {
       "id": "core:lit-1900-tallet-norsk-nyrealisme",
-      "prompt": "Hvilket tema står sentralt i nyrealismen etter 1900, blant annet i Markens grøde?",
+      "prompt": "Hvilket tema står sentralt i nyrealismen etter 1900, blant annet i «Markens grøde»?",
       "answer": "Konflikten mellom gammel bondekultur og ny tid",
       "entityId": "unit:lit-1900-tallet-norsk",
       "previousDifficulty": 4,
@@ -27747,7 +27822,7 @@
     {
       "id": "core:lit-1900-tallet-norsk-forklar-hamsun",
       "prompt": "Forklar hvorfor Hamsun både er en av de mest leste og en av de mest omstridte norske forfatterne.",
-      "answer": "Hamsun fornyet romanen med Sult og fikk Nobelprisen for Markens grøde, og bøkene hans leses fortsatt mye. Samtidig støttet han Quisling, Hitler og okkupasjonen åpent, og etter krigen ble han dømt til å betale erstatning til staten. Debatten handler om forholdet mellom verket og holdningene.",
+      "answer": "Hamsun fornyet romanen med «Sult» og fikk nobelprisen for «Markens grøde», og bøkene hans leses fortsatt mye. Samtidig støttet han Quisling, Hitler og okkupasjonen åpent, og etter krigen ble han dømt til å betale erstatning til staten. Debatten handler om forholdet mellom verket og holdningene.",
       "entityId": "unit:lit-1900-tallet-norsk",
       "previousDifficulty": 4,
       "difficulty": 4,
@@ -27761,7 +27836,7 @@
     },
     {
       "id": "core:lit-1900-tallet-norsk-aar-hamsun",
-      "prompt": "Hvilket år fikk Knut Hamsun Nobelprisen i litteratur?",
+      "prompt": "Hvilket år fikk Knut Hamsun nobelprisen i litteratur?",
       "answer": "1920",
       "entityId": "unit:lit-1900-tallet-norsk",
       "previousDifficulty": 5,
@@ -27776,7 +27851,7 @@
     },
     {
       "id": "core:lit-1900-tallet-norsk-aar-undset",
-      "prompt": "Hvilket år fikk Sigrid Undset Nobelprisen i litteratur?",
+      "prompt": "Hvilket år fikk Sigrid Undset nobelprisen i litteratur?",
       "answer": "1928",
       "entityId": "unit:lit-1900-tallet-norsk",
       "previousDifficulty": 5,
@@ -27806,7 +27881,7 @@
     },
     {
       "id": "core:lit-moderne-norsk-fosse-nobel",
-      "prompt": "Hvilken norsk forfatter fikk Nobelprisen i litteratur i 2023?",
+      "prompt": "Hvilken norsk forfatter fikk nobelprisen i litteratur i 2023?",
       "answer": "Jon Fosse",
       "entityId": "unit:lit-moderne-norsk",
       "previousDifficulty": 2,
@@ -27942,7 +28017,7 @@
     {
       "id": "core:lit-moderne-norsk-forklar-ut",
       "prompt": "Forklar hvordan norsk samtidslitteratur har nådd et stort publikum utenfor Norge.",
-      "answer": "Fosses skuespill spilles over hele verden, Sofies verden ble en global bestselger, Min kamp vakte internasjonal oppmerksomhet, og Nesbøs krim er oversatt til over 40 språk. Flere sentrale forfattere er også oversatt til engelsk, noe som lenge var vanskelig.",
+      "answer": "Fosses skuespill spilles over hele verden, «Sofies verden» ble en global bestselger, «Min kamp» vakte internasjonal oppmerksomhet, og Nesbøs krim er oversatt til over 40 språk. Flere sentrale forfattere er også oversatt til engelsk, noe som lenge var vanskelig.",
       "entityId": "unit:lit-moderne-norsk",
       "previousDifficulty": 4,
       "difficulty": 4,
@@ -27956,7 +28031,7 @@
     },
     {
       "id": "core:lit-moderne-norsk-aar-fosse",
-      "prompt": "Hvilket år debuterte Jon Fosse med romanen Raudt, svart?",
+      "prompt": "Hvilket år debuterte Jon Fosse med romanen «Raudt, svart»?",
       "answer": "1983",
       "entityId": "unit:lit-moderne-norsk",
       "previousDifficulty": 5,
@@ -27971,7 +28046,7 @@
     },
     {
       "id": "core:lit-moderne-norsk-aar-sofie",
-      "prompt": "Hvilket år kom Sofies verden ut?",
+      "prompt": "Hvilket år kom «Sofies verden» ut?",
       "answer": "1991",
       "entityId": "unit:lit-moderne-norsk",
       "previousDifficulty": 5,
@@ -28001,7 +28076,7 @@
     },
     {
       "id": "core:lit-verdensklassikere-iliaden",
-      "prompt": "Hva skildrer Iliaden?",
+      "prompt": "Hva skildrer «Iliaden»?",
       "answer": "En konflikt mellom greske helter under krigen om Troja",
       "entityId": "unit:lit-verdensklassikere",
       "previousDifficulty": 1,
@@ -28016,7 +28091,7 @@
     },
     {
       "id": "core:lit-verdensklassikere-vergil",
-      "prompt": "Hvem fører Dante gjennom helvete og skjærsild i Den guddommelige komedie?",
+      "prompt": "Hvem fører Dante gjennom helvete og skjærsild i «Den guddommelige komedie»?",
       "answer": "Den romerske dikteren Vergil",
       "entityId": "unit:lit-verdensklassikere",
       "previousDifficulty": 1,
@@ -28031,7 +28106,7 @@
     },
     {
       "id": "core:lit-verdensklassikere-don-quijote",
-      "prompt": "Hvorfor regnes Don Quijote som en milepæl i litteraturhistorien?",
+      "prompt": "Hvorfor regnes «Don Quijote» som en milepæl i litteraturhistorien?",
       "answer": "Den regnes som den moderne romanens viktigste forløper",
       "entityId": "unit:lit-verdensklassikere",
       "previousDifficulty": 1,
@@ -28061,7 +28136,7 @@
     },
     {
       "id": "core:lit-verdensklassikere-dante",
-      "prompt": "Hvilken italiensk dikter skrev Den guddommelige komedie?",
+      "prompt": "Hvilken italiensk dikter skrev «Den guddommelige komedie»?",
       "answer": "Dante Alighieri",
       "entityId": "unit:lit-verdensklassikere",
       "previousDifficulty": 2,
@@ -28136,7 +28211,7 @@
     },
     {
       "id": "core:lit-verdensklassikere-forklar-quijote",
-      "prompt": "Forklar hvorfor Don Quijote både er en parodi og en alvorlig roman.",
+      "prompt": "Forklar hvorfor «Don Quijote» både er en parodi og en alvorlig roman.",
       "answer": "Boken gjør narr av ridderromanene gjennom en adelsmann som ikke skiller dikt fra virkelighet. Samtidig viser den en dyp motsetning mellom idealisme og realisme, mellom don Quijotes drømmer og Sancho Panzas jordnære fornuft.",
       "entityId": "unit:lit-verdensklassikere",
       "previousDifficulty": 3,
@@ -28151,7 +28226,7 @@
     },
     {
       "id": "core:lit-verdensklassikere-aar-quijote",
-      "prompt": "Hvilket år kom første del av Don Quijote ut?",
+      "prompt": "Hvilket år kom første del av «Don Quijote» ut?",
       "answer": "1605",
       "entityId": "unit:lit-verdensklassikere",
       "previousDifficulty": 4,
@@ -28181,7 +28256,7 @@
     },
     {
       "id": "core:lit-verdensklassikere-sanger",
-      "prompt": "Hvor mange sanger (canti) består Den guddommelige komedie av?",
+      "prompt": "Hvor mange sanger (canti) består «Den guddommelige komedie» av?",
       "answer": "100",
       "entityId": "unit:lit-verdensklassikere",
       "previousDifficulty": 4,
@@ -28226,7 +28301,7 @@
     },
     {
       "id": "core:lit-romanens-storhetstid-1984-samfunn",
-      "prompt": "Hva slags samfunn skildrer George Orwell i romanen 1984?",
+      "prompt": "Hva slags samfunn skildrer George Orwell i romanen «1984»?",
       "answer": "Et diktatur med total propaganda og overvåking",
       "entityId": "unit:lit-romanens-storhetstid",
       "previousDifficulty": 2,
@@ -28256,7 +28331,7 @@
     },
     {
       "id": "core:lit-romanens-storhetstid-raskolnikov",
-      "prompt": "Hva heter studenten som begår mord i Dostojevskijs Forbrytelse og straff?",
+      "prompt": "Hva heter studenten som begår mord i Dostojevskijs «Forbrytelse og straff»?",
       "answer": "Raskolnikov",
       "entityId": "unit:lit-romanens-storhetstid",
       "previousDifficulty": 3,
@@ -28271,7 +28346,7 @@
     },
     {
       "id": "core:lit-romanens-storhetstid-valjean",
-      "prompt": "Hva heter hovedpersonen i Victor Hugos De elendige?",
+      "prompt": "Hva heter hovedpersonen i Victor Hugos «De elendige»?",
       "answer": "Jean Valjean",
       "entityId": "unit:lit-romanens-storhetstid",
       "previousDifficulty": 3,
@@ -28346,7 +28421,7 @@
     },
     {
       "id": "core:lit-romanens-storhetstid-aar-elendige",
-      "prompt": "Hvilket år kom Victor Hugos De elendige ut?",
+      "prompt": "Hvilket år kom Victor Hugos «De elendige» ut?",
       "answer": "1862",
       "entityId": "unit:lit-romanens-storhetstid",
       "previousDifficulty": 5,
@@ -28497,7 +28572,7 @@
     {
       "id": "core:lit-norsk-sprak-rekkefolge",
       "prompt": "Sett hendelsene i norsk språkhistorie i rekkefølge.",
-      "answer": "Unionen med Danmark begynner, og dansk blir skriftspråk (1537) → Aasen legger fram Prøver af Landsmaalet i Norge (1853) → Jamstillingsvedtaket i Stortinget (1885) → Navnene bokmål og nynorsk innføres (1929) → Språkloven trer i kraft (2022)",
+      "answer": "Norge kommer under dansk styre, og dansk blir skriftspråk (1537) → Aasen legger fram «Prøver af Landsmaalet i Norge» (1853) → Jamstillingsvedtaket i Stortinget (1885) → Navnene bokmål og nynorsk innføres (1929) → Språkloven trer i kraft (2022)",
       "entityId": "unit:lit-norsk-sprak",
       "previousDifficulty": 4,
       "difficulty": 4,
@@ -28541,7 +28616,7 @@
     },
     {
       "id": "core:lit-norsk-sprak-aar-aasen",
-      "prompt": "Hvilket år la Ivar Aasen fram Prøver af Landsmaalet i Norge?",
+      "prompt": "Hvilket år la Ivar Aasen fram «Prøver af Landsmaalet i Norge»?",
       "answer": "1853",
       "entityId": "unit:lit-norsk-sprak",
       "previousDifficulty": 5,

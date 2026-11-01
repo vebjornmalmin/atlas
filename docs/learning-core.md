@@ -52,7 +52,8 @@ Svar rett etter innføringen viser lite om hva som huskes. Derfor krever «Grunn
 ## Svar og vurdering
 
 - Flervalg stokkes jevnt. Riktig alternativ er like ofte på hver plass.
-- Tekstsvar godtar dokumenterte varianter, små skrivefeil i lengre navn (én feil fra 5 tegn, to fra 10) og etternavn alene når spørsmålet gjelder en person. Korte svar må være eksakte.
+- Tekstsvar godtar dokumenterte varianter, små skrivefeil i lengre navn (én feil fra 5 tegn, to fra 10, samme forbokstav) og etternavn alene når spørsmålet gjelder en person. Korte svar må være eksakte. Et annet kjent navn godtas aldri som skrivefeil (Irland for Island, Zambia for Gambia).
+- Autokorrektur er slått av for korte svar på iPhone, slik at navn ikke byttes ut med engelske ord.
 - Årstall og tall kan ha en dokumentert toleranse når kildene sier «omkring».
 - Eleven kan godkjenne et tekstsvar selv når appen ikke kjente igjen en riktig formulering.
 - Forklaringskort vurderes mot sjekklisten: alt med gir «riktig», noe gir «delvis».
@@ -66,4 +67,12 @@ Svar rett etter innføringen viser lite om hva som huskes. Derfor krever «Grunn
 
 - `node scripts/validate-core.mjs` – struktur, svar i spørsmålet, distraktorer, svarformer og om svaret er undervist før det testes.
 - `tests/progression.test.mjs` – status, opplåsing, øktsammensetning, avstand etter innføring og vurdering.
-- Faktainnholdet er skrevet fra kildene i hvert emne og deretter faglig gjennomgått. Strukturkontroll erstatter ikke faglig kontroll.
+- Faktainnholdet er skrevet fra kildene i hvert emne og deretter gjennomgått i egne runder for historie, naturfag, geografi/samfunn og kunst/litteratur, fulgt av språkvask. Rundene rettet rundt hundre feil og hull, blant annet årstall, foreldede formuleringer og svar som ble testet før de var undervist. Strukturkontroll erstatter ikke faglig kontroll.
+
+## Omfang i 1.0.0
+
+84 emner og 1093 kort: 300 oversikt, 333 kjerne, 264 sammenheng og 196 detalj. Kortformene er 500 flervalg, 302 korte tekstsvar, 132 årstall og tall, 84 forklaringer, 38 koblinger og 37 rekkefølger. `docs/core-report.json` viser fordelingen per emne.
+
+## Kart
+
+Emnene om verdensdeler og Norge kobles til kartøving. Kartet bruker de 176 landene i kartpakken med norske navn fra registeret; land som er for små til å treffes med en finger på telefonen, er utelatt.

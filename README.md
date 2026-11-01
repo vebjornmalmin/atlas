@@ -8,7 +8,7 @@ Live app: https://atlas-first-app.atlas-memory.workers.dev
 
 Atlas er bygd om rundt et kuratert pensum for én voksen elev på iPhone 17 Pro.
 
-- **Læringskjernen**: 9 fagområder, 84 emner og over 1000 kort, skrevet fra Store norske leksikon og faglig gjennomgått. Hvert emne har en kort innføring, punkter som skal sitte, kilder og kort i fire steg: oversikt, kjerne, sammenheng og detalj.
+- **Læringskjernen**: 9 fagområder, 84 emner og 1093 kort, skrevet fra Store norske leksikon, faglig gjennomgått av fire fagspesialister og språkvasket. Hvert emne har en kort innføring, punkter som skal sitte, kilder og kort i fire steg: oversikt, kjerne, sammenheng og detalj.
 - **Progresjon**: emner bygger på hverandre på tvers av fag. Dagens økt starter med repetisjoner, åpner nye emner med innføringen som eget steg, og sprer spørsmålene slik at eleven henter fram i stedet for å kopiere. Et emnes grunnlag regnes som på plass først når det er husket også en annen dag.
 - **Skjermer**: I dag (dagens økt og læringsvei), Emner (fagområder, tidslinje, emnesider), Søk, Fremgang (kunnskapskart) og Innstillinger.
 - **Svar**: jevn stokking av alternativer, toleranse for skrivefeil, årstall og tall, egen godkjenning av tekstsvar, sjekkliste for forklaringer og ett trykk på «Neste».
