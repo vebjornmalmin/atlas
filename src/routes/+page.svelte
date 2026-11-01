@@ -6,7 +6,7 @@
   import {sourceQueries,loadSourceContent,mergeSourceContent,downloadSourceImage} from '../lib/source-loading.js';
   import StructuredQuiz from '../lib/StructuredQuiz.svelte';
   import LearningPath from '../lib/LearningPath.svelte';
-  import {buildDailySession,buildUnitReview,curriculumProgress,recommendedUnits,gradeAnswer,isLessonEntry,UNIT_STATUS} from '../lib/progression.js';
+  import {buildDailySession,buildUnitReview,curriculumProgress,recommendedUnits,gradeAnswer,isLessonEntry,practiceStreak,UNIT_STATUS} from '../lib/progression.js';
   import {STEP_LABELS} from '../lib/core-curriculum.js';
   import {FORMAT_CHOICES,STRUCTURED_MODES,buildFormatTargets,gradeStructured,structuredReady} from '../lib/quiz-formats.js';
   import {advanceSession,nextActionNote,retryTargets} from '../lib/repetition.js';
@@ -175,6 +175,7 @@
   let coreProgress = $derived(data?.curriculum ? curriculumProgress(data.curriculum,targets,states,reviews) : null);
   let selection = $derived(!data ? {queue:[],dueCount:0,newCount:0,eligibleCount:0} : data.curriculum ? buildDailySession({data,targets,states,reviews,preferences:prefs,now:new Date()}) : selectConnectedSession(data,targets, states, prefs, new Date(), data.collections, reviews));
   let selectedUnit = $state('');
+  let streak = $derived(practiceStreak(reviews));
   let gradeNote = $state('');
   let currentEntry = $derived(session?.queue[session.index] || null);
   let currentLesson = $derived(isLessonEntry(currentEntry) ? data?.curriculum?.units.find(u=>u.id===currentEntry.unitId) : null);
@@ -585,7 +586,7 @@
         {/if}
       {/if}</section>
     {:else}
-      {#if !quizSetup}<section class="hero today-hero"><p class="eyebrow">{new Date().toLocaleDateString('nb-NO',{weekday:'long',day:'numeric',month:'long'})}</p><h1>{reviewedToday?'Godt i gang':'Dagens økt'}</h1><p class="lead">{reviewedToday?`${reviewedToday} svar i dag`:'Noen minutter om dagen bygger kunnskap som varer.'}</p></section>
+      {#if !quizSetup}<section class="hero today-hero"><p class="eyebrow">{new Date().toLocaleDateString('nb-NO',{weekday:'long',day:'numeric',month:'long'})}{#if streak>1} · {streak} dager på rad{/if}</p><h1>{reviewedToday?'Godt i gang':'Dagens økt'}</h1><p class="lead">{reviewedToday?`${reviewedToday} svar i dag`:'Noen minutter om dagen bygger kunnskap som varer.'}</p></section>
       {#if session?.status==='active' && (current || currentLesson)}<div class="card resume-card"><h2>{session.title || 'Påbegynt økt'}</h2><p class="muted">{session.index} av {session.queue.length} gjort</p><button class="primary" onclick={()=>run(()=>resumeSession())}>Fortsett der du var</button></div>{/if}
       {#if data.curriculum}
         {@const plan=selection.queue}

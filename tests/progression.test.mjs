@@ -125,3 +125,13 @@ test('teaching check finds answers in the lesson or earlier explanations', () =>
   const untaught = {...u.cards[3], answer: 'Noe helt ukjent', id: 'x'};
   assert.equal(taughtBefore({...u, cards: [...u.cards, untaught]}, untaught), false);
 });
+
+test('streak counts consecutive practice days up to today or yesterday', async () => {
+  const {practiceStreak} = await import('../src/lib/progression.js');
+  const now = new Date('2026-11-05T12:00:00');
+  const at = day => ({timestamp: new Date(`2026-11-0${day}T10:00:00`).toISOString()});
+  assert.equal(practiceStreak([at(3), at(4), at(5)], now), 3);
+  assert.equal(practiceStreak([at(3), at(4)], now), 2, 'yesterday still counts before today is done');
+  assert.equal(practiceStreak([at(2), at(4)], now), 1);
+  assert.equal(practiceStreak([], now), 0);
+});

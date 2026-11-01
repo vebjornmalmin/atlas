@@ -145,3 +145,6 @@ button{min-height:46px;border:1px solid var(--line);background:var(--surface);co
 .app-header{padding-right:150px}
 .today-links{display:flex;flex-direction:column;gap:6px;margin-top:10px}
 .today-links>button{width:100%}
+.layout-switch{margin:-6px 0 14px}
+.unit-years{flex:none;width:52px;font-size:13px;font-weight:600;line-height:1.2;font-variant-numeric:tabular-nums}
+.unit-years small{font-weight:400;color:var(--muted)}

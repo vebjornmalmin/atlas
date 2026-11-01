@@ -3,6 +3,9 @@
   import {STEP_LABELS} from './core-curriculum.js';
   let {curriculum, progress, sources = [], selectedUnit = $bindable(''), onstart, onreview, busy = false} = $props();
   let openDomain = $state('');
+  let layout = $state('domains');
+  const yearLabel = year => year < 0 ? `${-year} f.Kr.` : String(year);
+  const dated = $derived(curriculum.units.filter(u => u.years).sort((a, b) => a.years.from - b.years.from || a.years.to - b.years.to));
   const unitById = $derived(new Map(curriculum.units.map(unit => [unit.id, unit])));
   const unit = $derived(unitById.get(selectedUnit));
   const state = $derived(unit ? progress.units.get(unit.id) : null);
@@ -51,6 +54,18 @@
   <details class="card"><summary>Kilder</summary>{#each unit.sourceIds as id}{@const source = sourceFor(id)}{#if source}<p><a class="source-link" href={source.url} target="_blank" rel="noreferrer">{source.title} ↗</a></p>{/if}{/each}</details>
 {:else}
   <section class="hero"><h1>Emner</h1><p class="lead">Hvert emne starter med en kort innføring og bygger seg opp fra oversikt til detaljer.</p></section>
+  {#if dated.length > 2}<div class="chips layout-switch" role="group" aria-label="Visning"><button class="chip" class:active={layout === 'domains'} aria-pressed={layout === 'domains'} onclick={() => layout = 'domains'}>Fagområder</button><button class="chip" class:active={layout === 'timeline'} aria-pressed={layout === 'timeline'} onclick={() => layout = 'timeline'}>Tidslinje</button></div>{/if}
+  {#if layout === 'timeline'}
+    <div class="card"><p class="muted">Emner med en tydelig periode, på tvers av fagområdene.</p><ol class="unit-list timeline-units">
+      {#each dated as item}{@const row = progress.units.get(item.id)}
+        <li><button class="unit-row" data-status={row.status} onclick={() => selectedUnit = item.id}>
+          <span class="unit-years">{yearLabel(item.years.from)}<br><small>{yearLabel(item.years.to)}</small></span>
+          <span class="unit-dot" aria-hidden="true"></span>
+          <span class="unit-text"><strong>{item.title}</strong><small class="muted">{curriculum.domains.find(d => d.id === item.domainId)?.title} · {UNIT_STATUS[row.status].label}</small></span>
+        </button></li>
+      {/each}
+    </ol></div>
+  {:else}
   {#each curriculum.domains as domain}
     {@const summary = progress.domains.get(domain.id)}
     <section class="card domain-card">
@@ -72,4 +87,5 @@
       {/if}
     </section>
   {/each}
+  {/if}
 {/if}

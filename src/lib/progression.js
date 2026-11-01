@@ -228,3 +228,14 @@ function distance(a, b, limit) {
   }
   return previous[b.length];
 }
+
+/** Consecutive days with at least one answer, counting today or yesterday as the latest day. */
+export function practiceStreak(reviews, now = new Date()) {
+  const key = date => `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`;
+  const days = new Set(reviews.map(review => key(new Date(review.timestamp))));
+  const day = new Date(now);
+  if (!days.has(key(day))) day.setDate(day.getDate() - 1);
+  let streak = 0;
+  while (days.has(key(day))) { streak++; day.setDate(day.getDate() - 1); }
+  return streak;
+}
