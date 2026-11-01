@@ -152,12 +152,13 @@ export function buildDailySession({data, targets, states, reviews, preferences =
   const coreDomains = new Set((curriculum?.domains || []).map(d => d.id));
   const domainIds = (preferences.collectionIds || []).filter(id => coreDomains.has(id));
   const recentlyAnswered = new Set(reviews.filter(r => now - new Date(r.timestamp) < 6 * 3600000).map(r => r.targetId));
-  const dueAll = targets.filter(t => !t.baseId && index.has(schedulingKey(t)) && new Date(index.get(schedulingKey(t)).due) <= now && !recentlyAnswered.has(t.id))
+  const dueAll = targets.filter(t => index.has(schedulingKey(t)) && new Date(index.get(schedulingKey(t)).due) <= now && !recentlyAnswered.has(t.id))
     .filter(t => !domainIds.length || !t.unitId || domainIds.includes(t.domainId))
     .filter(t => !unitIds || unitIds.includes(t.unitId))
     .sort((a, b) => new Date(index.get(schedulingKey(a)).due) - new Date(index.get(schedulingKey(b)).due));
   const seenKeys = new Set();
-  const due = dueAll.filter(t => { const key = schedulingKey(t); if (seenKeys.has(key)) return false; seenKeys.add(key); return true; });
+  // Text and multiple-choice variants of one register fact share a review; ask it once.
+  const due = dueAll.filter(t => { const keys = [schedulingKey(t), t.factId || t.id]; if (keys.some(k => seenKeys.has(k))) return false; keys.forEach(k => seenKeys.add(k)); return true; });
   const newTarget = preferences.newRatio === 0 ? 0 : Math.max(3, Math.round(size * Number(preferences.newRatio ?? 0.4)));
   const dueRows = due.slice(0, Math.max(0, size - newTarget)).map(target => ({target, reason: 'Due review', unitId: target.unitId}));
   const room = preferences.newRatio === 0 && due.length ? 0 : size - dueRows.length;
