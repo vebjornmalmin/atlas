@@ -7,7 +7,7 @@
   import StructuredQuiz from '../lib/StructuredQuiz.svelte';
   import LearningPath from '../lib/LearningPath.svelte';
   import {buildDailySession,buildUnitReview,curriculumProgress,recommendedUnits,gradeAnswer,isLessonEntry,practiceStreak,UNIT_STATUS} from '../lib/progression.js';
-  import {STEP_LABELS} from '../lib/core-curriculum.js';
+  import {STEP_LABELS,formatYear} from '../lib/core-curriculum.js';
   import {FORMAT_CHOICES,STRUCTURED_MODES,buildFormatTargets,gradeStructured,structuredReady} from '../lib/quiz-formats.js';
   import {advanceSession,nextActionNote,retryTargets} from '../lib/repetition.js';
   import {progressDetails,sessionOutcome} from '../lib/progress.js';
@@ -565,7 +565,7 @@
           <div class="map-board"><svg viewBox={mapViewBox} role="img" aria-label="Geografisk omriss uten navn"><path d={currentDataset.regions.find(r=>r.id===current.regionId).path} fill-rule="evenodd"/></svg></div>
           <p class="muted detail">{currentDataset.source.attribution || currentDataset.source.title}</p>
         {:else if current.mode === 'timeline'}
-          <ol class="timeline-list">{#each timelineOrder as item,index}<li class="timeline-item"><span>{item.label}{#if revealed}<small class="muted"> · {item.year}</small>{/if}</span>{#if !revealed}<div class="row"><button class="quiet" aria-label={`Flytt ${item.label} tidligere`} disabled={index===0} onclick={()=>moveTimeline(index,-1)}>↑</button><button class="quiet" aria-label={`Flytt ${item.label} senere`} disabled={index===timelineOrder.length-1} onclick={()=>moveTimeline(index,1)}>↓</button></div>{/if}</li>{/each}</ol>
+          <ol class="timeline-list">{#each timelineOrder as item,index}<li class="timeline-item"><span>{item.label}{#if revealed}<small class="muted"> · {formatYear(item.year)}</small>{/if}</span>{#if !revealed}<div class="row"><button class="quiet" aria-label={`Flytt ${item.label} tidligere`} disabled={index===0} onclick={()=>moveTimeline(index,-1)}>↑</button><button class="quiet" aria-label={`Flytt ${item.label} senere`} disabled={index===timelineOrder.length-1} onclick={()=>moveTimeline(index,1)}>↓</button></div>{/if}</li>{/each}</ol>
         {/if}
         {#if !revealed}
           {#if current.mode === 'recognition'}

@@ -1,6 +1,7 @@
 import {normalizeAnswer} from './exercises.js';
 import {assessDifficulty} from './difficulty.js';
 
+export const formatYear = year => year < 0 ? `${-year} f.Kr.` : String(year);
 export const CARD_TYPES = ['choice','text','year','number','order','match','explain'];
 export const STEP_LABELS = {1:'Oversikt',2:'Kjerne',3:'Sammenheng',4:'Detalj'};
 const FILLER = [/konkret holdepunkt/i, /det er viktig å/i, /spennende/i, /!/, /\bselvfølgelig\b/i, /som vi vet/i];
@@ -157,7 +158,7 @@ export const coreTargetId = cardId => `core:${cardId}`;
 export const unitEntityId = unitId => `unit:${unitId}`;
 
 function targetAnswer(card) {
-  if (card.type === 'order') return [...card.items].sort((a, b) => a.year - b.year).map(item => `${item.label} (${item.year})`).join(' → ');
+  if (card.type === 'order') return [...card.items].sort((a, b) => a.year - b.year).map(item => `${item.label} (${formatYear(item.year)})`).join(' → ');
   if (card.type === 'match') return card.pairs.map(pair => `${pair.left} – ${pair.right}`).join(' · ');
   return String(card.answer);
 }

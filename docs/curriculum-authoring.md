@@ -56,7 +56,7 @@ Felles felt: `id` (begynner med emne-ID-en), `step`, `type`, `prompt`, `explain`
 | `text` | `answer` (1–4 ord), `accept` (alternative skrivemåter) | Fri gjenhenting av navn, begrep eller sted. Ta med vanlige stavevarianter og kortformer. |
 | `year` | `answer` (f.eks. `"1814"`), valgfritt `tolerance` (antall år) | Årstall. Bruk `tolerance` når kildene sier «omkring». Før vår tidsregning: bruk `choice`. |
 | `number` | `answer`, valgfritt `unit` og `tolerance` | Tall, f.eks. antall fylker eller prosent. |
-| `order` | `items`: 3–5 `{ "label", "year" }` | Kronologi. Årstallene vises etter svaret. |
+| `order` | `items`: 3–5 `{ "label", "year" }` | Kronologi. Årstallene vises etter svaret. År før vår tidsregning skrives som negative tall og vises som «480 f.Kr.». |
 | `match` | `pairs`: 3–4 `{ "left", "right" }` | Koble person–verk, land–hovedstad, begrep–forklaring. |
 | `explain` | `answer` (modellsvar, 1–3 setninger), `checklist` (2–4 punkter) | Forklar med egne ord. Eleven vurderer seg selv mot sjekklisten. |
 
