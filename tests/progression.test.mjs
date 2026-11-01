@@ -145,3 +145,13 @@ test('negative numbers are read from a typographic minus or the word minus', () 
   for (const input of ['-18', '−18', 'minus 18', '– 18']) assert.equal(gradeAnswer(card, input).correct, true, input);
   assert.equal(gradeAnswer(card, '18').correct, false);
 });
+
+test('due reviews from different units are interleaved', () => {
+  const {data, targets} = fixture();
+  const cards = [...targets.filter(t => t.unitId === 'a-en').slice(0, 3), ...targets.filter(t => t.unitId === 'b-en').slice(0, 3)];
+  const states = cards.map((t, i) => ({id: schedulingKey(t), due: `2026-11-02T0${i}:00:00Z`, stability: 3, difficulty: 5, reps: 2, lapses: 0, state: 2, last_review: '2026-10-30T08:00:00Z'}));
+  const session = buildDailySession({data, targets, states, reviews: [], preferences: {dailyMinutes: 3, newRatio: 0}, now: new Date('2026-11-03T09:00:00Z')});
+  const units = session.queue.map(row => row.unitId);
+  assert.equal(units.length, 6);
+  for (let i = 1; i < units.length; i++) assert.notEqual(units[i], units[i - 1], units.join(','));
+});

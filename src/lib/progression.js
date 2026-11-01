@@ -130,7 +130,12 @@ function arrange(lessons, due, fresh) {
   const pendingFresh = [...fresh], pendingDue = [...due];
   while (pendingDue.length || pendingFresh.length) {
     const lastUnit = queue.at(-1)?.unitId;
-    if (pendingDue.length && (!pendingFresh.length || queue.length % 2 === 1)) { queue.push(pendingDue.shift()); continue; }
+    if (pendingDue.length && (!pendingFresh.length || queue.length % 2 === 1)) {
+      // Interleave reviews from different units instead of drilling one unit in a row.
+      let next = pendingDue.findIndex(row => !row.unitId || row.unitId !== lastUnit);
+      queue.push(pendingDue.splice(next < 0 ? 0 : next, 1)[0]);
+      continue;
+    }
     let index = pendingFresh.findIndex(row => row.unitId !== lastUnit);
     if (index < 0) index = 0;
     queue.push(pendingFresh.splice(index, 1)[0]);
