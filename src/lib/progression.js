@@ -197,7 +197,7 @@ export function gradeAnswer(target, input) {
   const text = String(input ?? '').trim();
   if (!text) return {correct: null};
   if (['year', 'number'].includes(target.answerFormat)) {
-    const value = Number(text.replace(/\s/g, '').replace(',', '.').replace(/[^\d.-]/g, ''));
+    const value = Number(text.replace(/\s/g, '').replace(/^minus/i, '-').replace(/[−–]/g, '-').replace(',', '.').replace(/[^\d.-]/g, ''));
     const expected = Number(String(target.answer).replace(',', '.'));
     if (!Number.isFinite(value)) return {correct: false};
     const tolerance = Number(target.tolerance || 0);

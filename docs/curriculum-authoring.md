@@ -32,7 +32,7 @@ Hvert fagområde ligger i `knowledge-build/core/<fagområde>.json`:
 | `summary` | Én setning: hva emnet handler om og hvorfor det betyr noe. |
 | `lesson` | 2–3 korte avsnitt (maks ca. 70 ord hvert). «Kort fortalt» som eleven leser før første oppgave. Forklar det store bildet og de viktigste navnene. |
 | `keyPoints` | 3–5 korte setninger eleven skal sitte igjen med. |
-| `sources` | 1–4 kilder. Bruk Store norske leksikon med URL nøyaktig slik `node scripts/snl.mjs search …` gir den, og kontroller innholdet med `node scripts/snl.mjs read <url>`. Andre autoritative kilder (museer, offentlige etater, NASA, FN) er tillatt. |
+| `sources` | 1–6 kilder. Bruk Store norske leksikon med URL nøyaktig slik `node scripts/snl.mjs search …` gir den, og kontroller innholdet med `node scripts/snl.mjs read <url>`. Andre autoritative kilder (museer, offentlige etater, NASA, FN) er tillatt. |
 | `cards` | 10–14 kort fordelt på fire steg. |
 
 ### Steg

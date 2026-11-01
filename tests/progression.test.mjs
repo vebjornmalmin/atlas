@@ -135,3 +135,9 @@ test('streak counts consecutive practice days up to today or yesterday', async (
   assert.equal(practiceStreak([at(2), at(4)], now), 1);
   assert.equal(practiceStreak([], now), 0);
 });
+
+test('negative numbers are read from a typographic minus or the word minus', () => {
+  const card = {answer: '-18', answerFormat: 'number', tolerance: 0};
+  for (const input of ['-18', '−18', 'minus 18', '– 18']) assert.equal(gradeAnswer(card, input).correct, true, input);
+  assert.equal(gradeAnswer(card, '18').correct, false);
+});
