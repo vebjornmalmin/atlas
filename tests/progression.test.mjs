@@ -64,11 +64,15 @@ test('a new learner starts with lessons from two subjects and never meets a late
   assert.ok(cards.length <= 10, "lessons do not use question slots");
 });
 
-test('a unit is grounded when its first two steps are answered, which unlocks the next unit', () => {
+test('a unit is grounded when its foundation is answered and has survived a later review, which unlocks the next unit', () => {
   const {data, targets} = fixture();
   const base = targets.filter(t => t.unitId === 'a-en' && t.step <= 2);
   const reviews = base.map(t => answer(t, true));
-  const progress = curriculumProgress(data.curriculum, targets, [], reviews);
+  const state = (t, reps) => ({id: schedulingKey(t), due: '2026-11-09T08:00:00Z', stability: 5, difficulty: 5, reps, lapses: 0, state: 2, last_review: '2026-11-03T08:00:00Z'});
+  const sameDay = curriculumProgress(data.curriculum, targets, base.map(t => state(t, 1)), reviews);
+  assert.equal(sameDay.units.get('a-en').status, 'started', 'answers straight after the lesson are not yet a foundation');
+  assert.equal(sameDay.units.get('a-to').ready, false);
+  const progress = curriculumProgress(data.curriculum, targets, base.map(t => state(t, 2)), reviews);
   assert.equal(progress.units.get('a-en').status, 'grounded');
   assert.equal(progress.units.get('a-to').ready, true);
   const order = recommendedUnits(data.curriculum, progress).map(u => u.id);

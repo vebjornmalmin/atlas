@@ -31,7 +31,7 @@ export function cardEvidence(targets, states, reviews) {
   for (const target of core) {
     const review = latest.get(target.id), state = index.get(schedulingKey(target)) || null;
     result.set(target.id, {attempted: Boolean(review), correct: Boolean(review && independent(review)), attempts: attempts.get(target.id) || 0,
-      lastTimestamp: review?.timestamp || '', state, stability: state?.stability || 0, due: state?.due || null});
+      lastTimestamp: review?.timestamp || '', state, stability: state?.stability || 0, reps: state?.reps || 0, due: state?.due || null});
   }
   return result;
 }
@@ -45,8 +45,10 @@ export function unitProgress(unit, targetsById, evidence) {
   }));
   const attempted = rows.filter(r => r.attempted).length, correct = rows.filter(r => r.correct).length;
   const base = rows.filter(r => r.card.step <= 2);
-  const grounded = base.length > 0 && base.every(r => r.attempted) && base.filter(r => r.correct).length / base.length >= 0.7;
-  const complete = rows.length > 0 && rows.every(r => r.attempted) && correct / rows.length >= 0.8;
+  // Answers given minutes after the lesson prove little; half the foundation must also survive a later review.
+  const spaced = base.filter(r => r.correct && r.reps >= 2).length;
+  const grounded = base.length > 0 && base.every(r => r.attempted) && base.filter(r => r.correct).length / base.length >= 0.7 && spaced / base.length >= 0.5;
+  const complete = grounded && rows.every(r => r.attempted) && correct / rows.length >= 0.8;
   const secure = complete && rows.every(r => r.correct && r.stability >= SECURE_STABILITY_DAYS);
   const status = secure ? 'secure' : complete ? 'complete' : grounded ? 'grounded' : attempted ? 'started' : 'new';
   const nextStep = [1, 2, 3, 4].find(step => steps[step].total && steps[step].correct < steps[step].total) || null;

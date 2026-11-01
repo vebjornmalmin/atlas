@@ -31,11 +31,11 @@ Innholdet skrives i `knowledge-build/core/*.json` etter reglene i [curriculum-au
 |---|---|
 | Ikke startet | Ingen kort besvart. |
 | Påbegynt | Minst ett kort besvart. |
-| Grunnlaget sitter | Alle kort i steg 1–2 besvart, minst 70 % riktig uten hjelp sist. Låser opp emner som bygger på dette. |
-| Gjennomført | Alle kort besvart, minst 80 % riktig uten hjelp sist. |
+| Grunnlaget sitter | Alle kort i steg 1–2 besvart, minst 70 % riktig uten hjelp sist, og minst halvparten husket riktig også ved en senere repetisjon. Låser opp emner som bygger på dette. |
+| Gjennomført | Grunnlaget sitter, alle kort er besvart og minst 80 % var riktige uten hjelp sist. |
 | Sitter godt | Gjennomført, og alle kort har FSRS-stabilitet på minst 21 dager. |
 
-Forkunnskaper styrer bare anbefalingene. Eleven kan alltid åpne og begynne på et hvilket som helst emne.
+Svar rett etter innføringen viser lite om hva som huskes. Derfor krever «Grunnlaget sitter» at stoffet også er hentet fram en annen dag. Forkunnskaper styrer bare anbefalingene. Eleven kan alltid åpne og begynne på et hvilket som helst emne.
 
 ## Dagens økt
 
