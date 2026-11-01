@@ -438,8 +438,13 @@
     if(!registration?.waiting) {updateReady=false;return;}
     if(registration?.waiting) {
       if(session)await put(db,'sessions',{...session,draft:draftNow()});
-      navigator.serviceWorker.addEventListener('controllerchange',()=>window.location.reload(),{once:true});
-      registration.waiting.postMessage({type:'ACTIVATE'});
+      const waiting=registration.waiting;let reloaded=false;
+      const reload=()=>{if(!reloaded){reloaded=true;window.location.reload();}};
+      // Safari does not always report the controller change; the worker's own state and a timeout are fallbacks.
+      navigator.serviceWorker.addEventListener('controllerchange',reload,{once:true});
+      waiting.addEventListener('statechange',()=>{if(waiting.state==='activated')reload();});
+      setTimeout(reload,4000);
+      waiting.postMessage({type:'ACTIVATE'});
     }
   }
   async function offlineMode(enabled) {
