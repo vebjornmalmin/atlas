@@ -740,7 +740,7 @@
           "id": "geo-europa-beograd",
           "step": 2,
           "type": "text",
-          "prompt": "Hva er hovedstaden i Serbia?",
+          "prompt": "Hvilken by ved Donau er Serbias hovedstad?",
           "answer": "Beograd",
           "accept": [
             "Belgrad",

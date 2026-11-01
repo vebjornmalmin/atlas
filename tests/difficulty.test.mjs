@@ -8,7 +8,7 @@ test('every published question and introduction has a reviewed family and ration
  for(const target of data.targets)assert.deepEqual({...target,...assessDifficulty(target)},target);
 });
 test('all 46 presidential succession questions stay advanced in both recall and multiple choice',()=>{
- const rows=data.targets.filter(t=>t.kind==='before-after');assert.equal(rows.length,46);
+ const rows=data.targets.filter(t=>t.kind==='before-after' && !t.unitId);assert.equal(rows.length,46);
  for(const row of rows)for(const mode of ['recall','recognition']){const a=assessDifficulty({...row,mode,id:mode==='recognition'?row.id+':recognition':row.id,baseId:row.id});assert.equal(a.difficulty,5);assert.equal(a.learningStage,'connections');}
  const targets=assessTargets([...data.targets,...foundationTargets(data)]);
  for(const depth of ['foundation','intermediate']){const quiz=selectPracticeSession(targets,[],{collectionIds:['us-presidents'],depth},'mixed');assert.ok(quiz.queue.length);assert.ok(quiz.queue.every(q=>q.target.kind!=='before-after'));}
