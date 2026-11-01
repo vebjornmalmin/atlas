@@ -2,7 +2,7 @@
   import {UNIT_STATUS} from './progression.js';
   import {STEP_LABELS} from './core-curriculum.js';
   let {curriculum, progress, sources = [], selectedUnit = $bindable(''), onstart, onreview, onmap = null, mapFor = () => null, busy = false} = $props();
-  let openDomain = $state('');
+  let openDomain = $state(curriculum.domains[0]?.id ?? '');
   let layout = $state('domains');
   const yearLabel = year => year < 0 ? `${-year} f.Kr.` : String(year);
   const dated = $derived(curriculum.units.filter(u => u.years).sort((a, b) => a.years.from - b.years.from || a.years.to - b.years.to));
@@ -12,7 +12,6 @@
   const sourceFor = id => sources.find(source => source.id === id);
   const percent = row => row?.total ? Math.round(100 * row.correct / row.total) : 0;
   const tierLabel = tier => ({1: 'Grunnmur', 2: 'Bygger videre', 3: 'Fordypning'}[tier]);
-  $effect(() => { if (!openDomain && curriculum.domains.length) openDomain = curriculum.domains[0].id; });
 </script>
 
 {#if unit && state}

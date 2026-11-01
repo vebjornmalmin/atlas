@@ -112,7 +112,7 @@ function revealedBy(target, text) {
 /** Next unseen cards in step order; a later step waits until the earlier steps have been tried. */
 export function nextCards(unit, unitState, limit, disclosed = '') {
   const unseen = new Set(unitState.unseen.map(card => card.id));
-  const cards = unit.cardIds.map(id => unitState.unseen.find(card => card.id === id)).filter(Boolean);
+  const cards = unit.cardIds.map(id => unitState.unseen.find(card => card.id === id)).filter(Boolean).sort((a, b) => a.step - b.step);
   const result = [];
   let text = disclosed;
   for (const card of cards) {
@@ -160,8 +160,9 @@ export function buildDailySession({data, targets, states, reviews, preferences =
   const index = schedulingIndex(targets, states, reviews);
   const coreDomains = new Set((curriculum?.domains || []).map(d => d.id));
   const domainIds = (preferences.collectionIds || []).filter(id => coreDomains.has(id));
-  const recentlyAnswered = new Set(reviews.filter(r => now - new Date(r.timestamp) < 6 * 3600000).map(r => r.targetId));
-  const dueAll = targets.filter(t => index.has(schedulingKey(t)) && new Date(index.get(schedulingKey(t)).due) <= now && !recentlyAnswered.has(t.id))
+  const recentReviews = reviews.filter(r => now - new Date(r.timestamp) < 6 * 3600000);
+  const recentlyAnswered = new Set([...recentReviews.map(r => r.targetId), ...recentReviews.map(r => r.factId).filter(Boolean)]);
+  const dueAll = targets.filter(t => index.has(schedulingKey(t)) && new Date(index.get(schedulingKey(t)).due) <= now && !recentlyAnswered.has(t.id) && !recentlyAnswered.has(t.factId))
     .filter(t => !domainIds.length || !t.unitId || domainIds.includes(t.domainId))
     .filter(t => !unitIds || unitIds.includes(t.unitId))
     .sort((a, b) => new Date(index.get(schedulingKey(a)).due) - new Date(index.get(schedulingKey(b)).due));
@@ -196,34 +197,58 @@ export function buildUnitReview({data, targets, states, reviews, unitId, prefere
   const unit = data.curriculum.units.find(u => u.id === unitId);
   const progress = curriculumProgress(data.curriculum, targets, states, reviews);
   const evidence = progress.evidence;
-  const cards = unit.cardIds.map(id => targets.find(t => t.id === id)).filter(Boolean)
+  const cards = unit.cardIds.map(id => targets.find(t => t.id === id)).filter(card => card && evidence.get(card.id)?.attempted)
     .sort((a, b) => Number(evidence.get(a.id)?.correct) - Number(evidence.get(b.id)?.correct) || (evidence.get(a.id)?.stability || 0) - (evidence.get(b.id)?.stability || 0) || a.step - b.step);
   return {queue: cards.slice(0, sessionSize(preferences)).map(target => ({target, reason: 'Extra practice', unitId}))};
 }
 
 /** Accept typing slips in longer names, and documented tolerances for years and numbers. */
-export function gradeAnswer(target, input) {
+/** Read a typed year or number; accepts «ca. 1814», «5 000», «5.000», «−18» and «minus 18». */
+export function parseNumber(text) {
+  const cleaned = String(text).replace(/^\s*minus\s*/i, '-').replace(/[−–]/g, '-');
+  const match = cleaned.match(/-?\s*\d[\d\s.,]*/);
+  if (!match) return NaN;
+  let token = match[0].replace(/\s/g, '');
+  if (/^-?\d{1,3}(\.\d{3})+$/.test(token)) token = token.replace(/\./g, '');
+  return Number(token.replace(',', '.').replace(/[.,]$/, ''));
+}
+
+/**
+ * Accept typing slips in longer names, and documented tolerances for years and numbers.
+ * A slip is never accepted when the typed text is itself another known name (Irland for Island).
+ */
+export function gradeAnswer(target, input, knownNames = null) {
   const text = String(input ?? '').trim();
   if (!text) return {correct: null};
   if (['year', 'number'].includes(target.answerFormat)) {
-    const value = Number(text.replace(/\s/g, '').replace(/^minus/i, '-').replace(/[−–]/g, '-').replace(',', '.').replace(/[^\d.-]/g, ''));
+    const value = parseNumber(text);
     const expected = Number(String(target.answer).replace(',', '.'));
     if (!Number.isFinite(value)) return {correct: false};
     const tolerance = Number(target.tolerance || 0);
-    const exact = value === expected;
-    return {correct: Math.abs(value - expected) <= tolerance, close: !exact && Math.abs(value - expected) <= tolerance, note: !exact && Math.abs(value - expected) <= tolerance ? `Godkjent innenfor ±${tolerance}. Riktig er ${target.answer}.` : ''};
+    const exact = value === expected, within = Math.abs(value - expected) <= tolerance;
+    return {correct: within, close: within && !exact, note: within && !exact ? `Godkjent innenfor ±${tolerance}. Riktig er ${target.answer}.` : ''};
   }
   const given = normalizeAnswer(text);
   const options = [target.answer, ...(target.acceptedAnswers || []), ...(target.aliases || [])].map(normalizeAnswer).filter(Boolean);
   if (options.includes(given)) return {correct: true};
+  if (knownNames?.has(given)) return {correct: false};
   for (const option of options) {
     const limit = option.length >= 10 ? 2 : option.length >= 5 ? 1 : 0;
-    if (limit && distance(given, option, limit) <= limit) return {correct: true, close: true, note: `Godkjent. Skrivemåten er «${target.answer}».`};
+    if (limit && given[0] === option[0] && distance(given, option, limit) <= limit) return {correct: true, close: true, note: `Godkjent. Skrivemåten er «${target.answer}».`};
   }
   // Surname alone for a person: accept when the last word matches and is distinctive.
   const answerWords = normalizeAnswer(target.answer).split(' ');
   if (answerWords.length > 1 && given.length >= 4 && given === answerWords.at(-1) && /hvem/i.test(target.prompt)) return {correct: true, close: true, note: `Godkjent. Fullt navn: ${target.answer}.`};
   return {correct: false};
+}
+
+/** Every name and answer the learner could mean instead, used to refuse look-alike slips. */
+export function knownNameSet(data) {
+  const names = new Set();
+  for (const entity of data?.entities || []) names.add(normalizeAnswer(entity.label));
+  for (const target of data?.targets || []) for (const value of [target.answer, ...(target.acceptedAnswers || []), ...(target.options || [])]) if (typeof value === 'string' && value.length < 60) names.add(normalizeAnswer(value));
+  names.delete('');
+  return names;
 }
 
 function distance(a, b, limit) {

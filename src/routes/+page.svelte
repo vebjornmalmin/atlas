@@ -6,7 +6,7 @@
   import {sourceQueries,loadSourceContent,mergeSourceContent,downloadSourceImage} from '../lib/source-loading.js';
   import StructuredQuiz from '../lib/StructuredQuiz.svelte';
   import LearningPath from '../lib/LearningPath.svelte';
-  import {buildDailySession,buildUnitReview,curriculumProgress,recommendedUnits,gradeAnswer,isLessonEntry,practiceStreak,UNIT_STATUS} from '../lib/progression.js';
+  import {buildDailySession,buildUnitReview,curriculumProgress,recommendedUnits,gradeAnswer,knownNameSet,isLessonEntry,practiceStreak,UNIT_STATUS} from '../lib/progression.js';
   import {STEP_LABELS,formatYear} from '../lib/core-curriculum.js';
   import {FORMAT_CHOICES,STRUCTURED_MODES,buildFormatTargets,gradeStructured,structuredReady} from '../lib/quiz-formats.js';
   import {advanceSession,nextActionNote,retryTargets} from '../lib/repetition.js';
@@ -57,7 +57,7 @@
   const stageLabel = stage => ({foundation:'Grunnlag',details:'Detaljer',connections:'Avansert'}[stage] || stage);
   function draftNow() { return questionDraft(current?.id,{answer,formatDraft,correct,revealed,usedHint,timelineOrder,selectedRegion,mapZoom,mapPanX,mapPanY,introduction,learnedFirst,gradeNote}); }
   $effect(()=>{
-    if(loading || !session || (current && preparedTargetId!==current.id) || currentLesson)return;
+    if(loading || !session || (current && preparedTargetId!==current.id))return;
     const draft=draftNow();
     try {saveJournal(localStorage,session,draft,sessionScreen,view,detailId);}
     catch {if(!journalWarning){journalWarning=true;notify('Kunne ikke lagre det påbegynte svaret.');}}
@@ -144,6 +144,7 @@
   function titleFor(id) { return data?.collections.find(c => c.id === id)?.title || id; }
 
   let recognitionIndex = $derived(buildRecognitionIndex(data?.targets || []));
+  let knownNames = $derived(knownNameSet(data));
   let targets = $derived.by(() => {
     if (!data) return [];
     const core = data.targets.filter(t => t.unitId);
@@ -181,8 +182,9 @@
     return targets.some(t=>targetMatches(t,{...prefs,collectionIds:quizCollection?[quizCollection]:[],subject:'all',fromYear:'',toYear:'',depth,objective:mode},data.collections) && (mode!=='chronology' || t.mode==='timeline'));
   }
   let coreProgress = $derived(data?.curriculum ? curriculumProgress(data.curriculum,targets,states,reviews) : null);
-  let selection = $derived(!data ? {queue:[],dueCount:0,newCount:0,eligibleCount:0} : data.curriculum ? buildDailySession({data,targets,states,reviews,preferences:prefs,now:new Date()}) : selectConnectedSession(data,targets, states, prefs, new Date(), data.collections, reviews));
+  let selection = $derived(!data ? {queue:[],dueCount:0,newCount:0,eligibleCount:0} : data.curriculum ? buildDailySession({data,targets,states,reviews,preferences:prefs,now:new Date(clock)}) : selectConnectedSession(data,targets, states, prefs, new Date(), data.collections, reviews));
   let selectedUnit = $state('');
+  let clock = $state(Date.now());
   // Geography units practise place knowledge on the offline maps.
   const UNIT_MAPS = {'geo-norges-fylker-byer':/^/,'geo-norges-landskap':/^/,'geo-kontinenter-hav':/./,'geo-europa':/Europa/,'geo-asia':/Asia/,'geo-afrika':/Afrika/,'geo-amerika':/Amerika|Karibia/,'geo-oseania-polar':/Australia|Melanesia|Mikronesia|Polynesia/};
   function unitMapTargets(unitId) {
@@ -194,7 +196,8 @@
     const regionsOf = id => { const seen = new Set(); let frontier = parents(id); while (frontier.length) { frontier.forEach(r => seen.add(r)); frontier = frontier.flatMap(parents).filter(r => !seen.has(r)); } return [...seen].map(r => labels.get(r)).join(' '); };
     return targets.filter(t => t.mode === 'map' && (norway ? t.datasetId === 'norway' : t.datasetId === 'world' && pattern.test(regionsOf(t.entityId)))).map(t => t.id);
   }
-  let streak = $derived(practiceStreak(reviews));
+  let dailyInProgress = $derived(session?.status==='active' && session.title==='Dagens økt' && Boolean(current || currentLesson) && dayKey(new Date(session.startedAt))===dayKey(new Date(clock)));
+  let streak = $derived(practiceStreak(reviews,new Date(clock)));
   let gradeNote = $state('');
   let currentEntry = $derived(session?.queue[session.index] || null);
   let currentLesson = $derived(isLessonEntry(currentEntry) ? data?.curriculum?.units.find(u=>u.id===currentEntry.unitId) : null);
@@ -225,7 +228,7 @@
     `${e.label} ${e.summary}`.toLowerCase().includes(query.toLowerCase())) || []).sort((a,b)=>Number(b.type==='topic')-Number(a.type==='topic') || Number(b.label.toLowerCase().startsWith(query.toLowerCase()))-Number(a.label.toLowerCase().startsWith(query.toLowerCase()))));
   let matchingEntities = $derived(allMatchingEntities.slice(0,exploreLimit));
   $effect(() => { query; collectionFilter; exploreLimit = 60; });
-  let reviewedToday = $derived(reviews.filter(r => dayKey(new Date(r.timestamp)) === dayKey(new Date())).length);
+  let reviewedToday = $derived(reviews.filter(r => dayKey(new Date(r.timestamp)) === dayKey(new Date(clock))).length);
   let currentDataset = $derived(current ? maps.find(m=>m.id===current.datasetId) : null);
   let currentMap = $derived(current?.mode === 'map' && currentDataset ? createMapExercise(currentDataset,current.regionId) : null);
 
@@ -344,7 +347,7 @@
     if (STRUCTURED_MODES.includes(current?.mode)) correct=gradeStructured(current,formatDraft).correct;
     else if (current?.mode === 'timeline') correct = gradeTimeline(timelineOrder,current.timeline).correct;
     else if(current?.answerFormat==='explanation')correct=null;
-    else if (current?.unitId && !['map','recognition'].includes(current.mode)) {const grade=gradeAnswer(current,answer);correct=grade.correct;gradeNote=grade.note || '';}
+    else if (current?.unitId && !['map','recognition'].includes(current.mode)) {const grade=gradeAnswer(current,answer,knownNames);correct=grade.correct;gradeNote=grade.note || '';}
     else if (!['map','recognition'].includes(current?.mode)) correct = answer.trim() ? checkAnswer(current,answer) : null;
     revealed = true;
   }
@@ -369,7 +372,8 @@
     const result=scheduleReview(schedulingKey(target),currentState,rating,now);
     const event={id:`${session.sessionId}:${session.index}`,targetId:target.id,entityId:target.entityId || null,timestamp:now.toISOString(),rating,mode:target.mode,correct,usedHint,learnedFirst,
       factId:factKey(target),claimIds:target.claimIds,evidenceKind:evidenceKind(target),answerFormat:target.answerFormat,assessment:target.answerFormat==='explanation'?'self':'answer',reason:entry.reason,schedulerId:schedulingKey(target),sessionRetry:Boolean(entry.sessionRetry),nextDue:result.card.due,log:result.log};
-    const practice=session.practice || entry.sessionRetry;
+    // A first answer always starts the long-term schedule, even in free practice; otherwise the card would never return.
+    const practice=(session.practice || entry.sessionRetry) && Boolean(currentState);
     const saved=practice?{...event,practice:true,nextDue:null,log:null}:event, mirror={...result.card,id:legacyFactKey(target)};
     const applied=practice?await recordReview(db,null,saved):await recordReview(db,result.card,event,mirror);
     // Update memory directly; reading every store back after each answer made phones lag.
@@ -487,7 +491,9 @@
     window.addEventListener('beforeinstallprompt',prompt);
     const reconnect=()=>{if(db){void checkUpdates().catch(failure=>recordError('updates',failure));void checkAppUpdate();}};
     const timer=setInterval(()=>{if(document.visibilityState==='visible')void checkAppUpdate();},APP_CHECK_INTERVAL);
-    const visible=()=>{if(document.visibilityState==='visible')reconnect();};
+    // The daily plan depends on the time of day; a home-screen app can stay open overnight.
+    const tickClock=()=>{clock=Date.now();};const clockTimer=setInterval(tickClock,60000);
+    const visible=()=>{if(document.visibilityState==='visible'){tickClock();reconnect();}};
     window.addEventListener('online',reconnect);document.addEventListener('visibilitychange',visible);
     const unhandled=event=>{if(db)void logEvent(db,'unhandled',String(event.reason?.message || event.reason),'error').catch(()=>{});};
     window.addEventListener('unhandledrejection',unhandled);
@@ -529,7 +535,7 @@
       finally{if(!disposed)loading=false;}
     };
     void boot();
-    return ()=>{disposed=true;clearInterval(timer);window.removeEventListener('hashchange',route);window.removeEventListener('beforeinstallprompt',prompt);window.removeEventListener('online',reconnect);document.removeEventListener('visibilitychange',visible);window.removeEventListener('unhandledrejection',unhandled);db?.close();};
+    return ()=>{disposed=true;clearInterval(timer);clearInterval(clockTimer);window.removeEventListener('hashchange',route);window.removeEventListener('beforeinstallprompt',prompt);window.removeEventListener('online',reconnect);document.removeEventListener('visibilitychange',visible);window.removeEventListener('unhandledrejection',unhandled);db?.close();};
   });
 </script>
 
@@ -629,7 +635,7 @@
           {#if plan.length}
             <div class="plan-counts"><span><strong>{plan.filter(q=>q.reason==='Due review').length}</strong>repetisjoner</span><span><strong>{fresh.length}</strong>nye kort</span><span><strong>{plan.filter(isLessonEntry).length}</strong>{plan.filter(isLessonEntry).length===1?'nytt emne':'nye emner'}</span></div>
             {#if selection.units?.length}<p class="muted">Nytt i dag: {selection.units.map(unitTitle).join(' og ')}</p>{/if}
-            <button class="primary" disabled={busy || (session?.status==='active' && Boolean(current || currentLesson) && session.title==='Dagens økt')} onclick={()=>run(()=>beginSession())}>{session?.status==='active' && session.title==='Dagens økt' && (current || currentLesson)?'Økten er påbegynt':'Start dagens økt'}</button>
+            <button class="primary" disabled={busy || dailyInProgress} onclick={()=>run(()=>beginSession())}>{dailyInProgress?'Økten er påbegynt':'Start dagens økt'}</button>
           {:else}
             <h2>Ferdig for i dag</h2><p class="muted">Alt som skulle repeteres er gjort, og nye kort i de aktive emnene kommer når du har repetert de forrige. Velg et emne for å lære mer nå.</p>
           {/if}

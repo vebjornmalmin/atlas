@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {compileCore, mergeCore, validateCoreDomains, taughtBefore} from '../src/lib/core-curriculum.js';
-import {buildDailySession, curriculumProgress, gradeAnswer, isLessonEntry, recommendedUnits, buildUnitReview} from '../src/lib/progression.js';
+import {buildDailySession, curriculumProgress, gradeAnswer, isLessonEntry, recommendedUnits, buildUnitReview, nextCards} from '../src/lib/progression.js';
 import {attachKnowledge, schedulingKey} from '../src/lib/knowledge-model.js';
 import {validatePackage} from '../src/lib/content.js';
 
@@ -167,4 +167,48 @@ test('after upgrading, reviews of earlier register questions still come back in 
   assert.ok(session.queue.some(row => row.reason === 'Due review' && row.target.id === legacy.id), 'the old review is kept');
   assert.ok(session.queue.some(row => isLessonEntry(row)), 'new curriculum is offered alongside');
   assert.deepEqual(validatePackage(data), []);
+});
+
+test('look-alike names are refused even when they are one letter away', async () => {
+  const {knownNameSet} = await import('../src/lib/progression.js');
+  const known = knownNameSet({entities: [{label: 'Irland'}, {label: 'Zambia'}, {label: 'Nord-Korea'}], targets: []});
+  assert.equal(gradeAnswer({prompt: 'Hvilken øy?', answer: 'Island', acceptedAnswers: []}, 'Irland', known).correct, false);
+  assert.equal(gradeAnswer({prompt: 'Hvilket land?', answer: 'Gambia', acceptedAnswers: []}, 'Zambia', known).correct, false);
+  assert.equal(gradeAnswer({prompt: 'Hvilket land?', answer: 'Gambia', acceptedAnswers: []}, 'Zambia').correct, false, 'a slip must keep the first letter');
+  assert.equal(gradeAnswer({prompt: 'Hvilken landsdel?', answer: 'Nord-Norge', acceptedAnswers: []}, 'Nord-Korea', known).correct, false);
+  assert.equal(gradeAnswer({prompt: 'Hvem?', answer: 'Alfred Wegener', acceptedAnswers: []}, 'Alfred Wegner', known).correct, true);
+});
+
+test('typed numbers tolerate everyday Norwegian forms but not missing digits', async () => {
+  const {parseNumber} = await import('../src/lib/progression.js');
+  assert.equal(parseNumber('ca. 1814'), 1814);
+  assert.equal(parseNumber('5 000'), 5000);
+  assert.equal(parseNumber('5.000'), 5000);
+  assert.equal(parseNumber('52,2 %'), 52.2);
+  assert.equal(parseNumber('omtrent 340 m/s'), 340);
+  assert.ok(Number.isNaN(parseNumber('abc')));
+  assert.equal(gradeAnswer({answer: '0', answerFormat: 'number'}, 'abc').correct, false);
+});
+
+test('unit review practises only cards the learner has met, and cards are taken in step order whatever their listing', () => {
+  const {data, targets} = fixture();
+  const seen = targets.filter(t => t.unitId === 'b-en').slice(0, 2);
+  const review = buildUnitReview({data, targets, states: [], reviews: seen.map(t => answer(t, false)), unitId: 'b-en'});
+  assert.deepEqual(review.queue.map(row => row.target.id).sort(), seen.map(t => t.id).sort());
+  const unit = {...data.curriculum.units.find(u => u.id === 'a-en')};
+  unit.cardIds = [...unit.cardIds].reverse();
+  const progress = curriculumProgress({...data.curriculum, units: [unit]}, targets, [], []);
+  const cards = nextCards(unit, progress.units.get('a-en'), 3);
+  assert.deepEqual(cards.map(c => c.step), [1, 1, 1]);
+});
+
+test('a fact answered in one form is not asked again in the other form within hours', () => {
+  const {data, targets} = fixture();
+  const card = targets.find(t => t.id === 'core:a-en-k1');
+  const twin = {...card, id: 'core:a-en-k1:other', mode: 'recall', cardType: 'text'};
+  const all = [...targets, twin];
+  const states = [card, twin].map(t => ({id: schedulingKey(t), due: '2026-11-02T08:00:00Z', stability: 3, difficulty: 5, reps: 2, lapses: 0, state: 2, last_review: '2026-10-30T08:00:00Z'}));
+  const reviews = [{id: 'r', targetId: card.id, factId: card.factId, timestamp: '2026-11-03T08:30:00Z', correct: true}];
+  const session = buildDailySession({data, targets: all, states, reviews, preferences: {dailyMinutes: 5}, now: new Date('2026-11-03T09:00:00Z')});
+  assert.ok(!session.queue.some(row => row.target?.factId === card.factId));
 });
