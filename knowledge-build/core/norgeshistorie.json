@@ -1,0 +1,205 @@
+{
+  "domain": {
+    "id": "norgeshistorie",
+    "title": "Norgeshistorie",
+    "subject": "history",
+    "order": 1,
+    "description": "Fra de første menneskene etter istiden til oljealderen: hendelsene og prosessene som formet Norge."
+  },
+  "units": [
+    {
+      "id": "nh-vikingtiden",
+      "title": "Vikingtiden",
+      "tier": 1,
+      "prerequisites": [],
+      "years": {
+        "from": 793,
+        "to": 1066
+      },
+      "summary": "Perioden da skandinaver reiste ut som plyndrere, handelsfolk og nybyggere, og Norden ble en del av Europa.",
+      "lesson": [
+        "Vikingtiden er perioden fra omkring 800 til omkring 1050. Den knyttes ofte til angrepet på klosteret Lindisfarne i Nord-England i 793, den første norske hendelsen som kan tidfestes noenlunde sikkert i skriftlige kilder.",
+        "Skandinaver dro ut med havgående skip, både for å plyndre, handle og bosette seg. Nordmenn slo seg ned på Island, Grønland og de britiske øyer. Hjemme var gården den viktigste enheten. Kanskje en fjerdedel til en tredjedel av folket var treller, ufrie mennesker som ble behandlet som eiendom. Frie menn møttes på tinget for å avgjøre tvister og vedta lover.",
+        "Perioden tok slutt gjennom lange prosesser snarere enn ett slag: kristendommen og kirken fikk fotfeste, byer vokste fram og kongedømmene ble en del av det kristne Europa. Språket var norrønt."
+      ],
+      "keyPoints": [
+        "Omkring 800–1050; Lindisfarne 793 regnes ofte som starten.",
+        "Vikingene plyndret, handlet og bosatte seg – fra Nord-Amerika til Russland.",
+        "Tinget løste konflikter og vedtok lover; gården var samfunnets kjerne.",
+        "Slutten kom med kristendom, kirkeorganisasjon og byvekst."
+      ],
+      "sources": [
+        {
+          "title": "Vikingtiden – Store norske leksikon",
+          "url": "https://snl.no/vikingtiden"
+        },
+        {
+          "title": "Lindisfarne – Store norske leksikon",
+          "url": "https://snl.no/Lindisfarne"
+        },
+        {
+          "title": "Leiv Eiriksson – Store norske leksikon",
+          "url": "https://snl.no/Leiv_Eiriksson"
+        },
+        {
+          "title": "Osebergskipet – Store norske leksikon",
+          "url": "https://snl.no/Osebergskipet"
+        }
+      ],
+      "cards": [
+        {
+          "id": "nh-vikingtiden-periode",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Omtrent hvilket tidsrom regnes som vikingtiden?",
+          "answer": "Omkring 800–1050",
+          "distractors": [
+            "Omkring 500–700",
+            "Omkring 1100–1350",
+            "Omkring 1400–1536"
+          ],
+          "explain": "Vikingtiden strekker seg over omtrent 250 år, mellom yngre jernalder og middelalderen. Mye av det vi vet, kommer fra gravfunn som Osebergskipet i Vestfold."
+        },
+        {
+          "id": "nh-vikingtiden-lindisfarne",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilket angrep i 793 regnes ofte som starten på vikingtiden?",
+          "answer": "Angrepet på klosteret Lindisfarne",
+          "distractors": [
+            "Slaget ved Stiklestad",
+            "Erobringen av Konstantinopel",
+            "Slaget ved Hastings"
+          ],
+          "explain": "Klosteret på Lindisfarne i Nord-England var et rikt lærdomssete. Klostre var lette mål fordi de hadde verdier og lå ubeskyttet ved kysten."
+        },
+        {
+          "id": "nh-vikingtiden-ting",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hva var tinget i vikingtiden?",
+          "answer": "En forsamling som løste tvister og vedtok lover",
+          "distractors": [
+            "Kongens personlige livvakt",
+            "Et tempel for de norrøne gudene",
+            "En handelsby ved kysten"
+          ],
+          "explain": "På de store lagtingene ble lovene gjort kjent, konflikter forsøkt løst og konger hyllet. Den verste straffen var å bli dømt fredløs og miste lovens beskyttelse."
+        },
+        {
+          "id": "nh-vikingtiden-sprak",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva kalles språket som ble snakket i Skandinavia i vikingtiden?",
+          "answer": "Norrønt",
+          "accept": [
+            "norrønt språk",
+            "norrøn",
+            "gammelnorsk",
+            "oldnorsk"
+          ],
+          "explain": "Norrønt er opphavet til norsk, svensk, dansk, islandsk og færøysk. Islandsk har endret seg minst og ligner fortsatt mye på norrønt."
+        },
+        {
+          "id": "nh-vikingtiden-bosetting",
+          "step": 2,
+          "type": "choice",
+          "prompt": "Hvilke øyer i Nord-Atlanteren bosatte nordmenn seg på i vikingtiden?",
+          "answer": "Island og Grønland",
+          "distractors": [
+            "Azorene og Kanariøyene",
+            "Sicilia og Sardinia",
+            "Malta og Kypros"
+          ],
+          "explain": "Eirik Raude dro til Grønland i 982 og grunnla en bosetting der. Sønnen hans, Leiv Eiriksson, seilte videre vestover til Vinland i Nord-Amerika omkring år 1000."
+        },
+        {
+          "id": "nh-vikingtiden-leiv",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvem ledet ferden til Vinland i Nord-Amerika omkring år 1000?",
+          "answer": "Leiv Eiriksson",
+          "accept": [
+            "Leif Eriksson",
+            "Leiv Eirikson",
+            "Leif Eiriksson",
+            "Leiv"
+          ],
+          "explain": "Leiv Eiriksson vokste opp på Grønland. Han og følget hans kan ha vært de første europeerne i Amerika, nesten 500 år før Columbus."
+        },
+        {
+          "id": "nh-vikingtiden-oseberg",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva heter vikingskipet fra Vestfold som er et av verdens best bevarte, og som ble funnet i en rik grav?",
+          "answer": "Osebergskipet",
+          "accept": [
+            "Oseberg",
+            "Oseberg-skipet"
+          ],
+          "explain": "Osebergskipet er bygd av eik og er omtrent 22 meter langt. Graven var den rikest utstyrte fra vikingtiden i Europa, og skipet kunne både ros og seiles."
+        },
+        {
+          "id": "nh-vikingtiden-hvorfor-klostre",
+          "step": 3,
+          "type": "choice",
+          "prompt": "Hvorfor var klostre som Lindisfarne attraktive mål for vikingene?",
+          "answer": "De hadde verdisaker og lå ubeskyttet ved kysten",
+          "distractors": [
+            "De var militære festninger med våpenlagre",
+            "Vikingene ville spre kristendommen",
+            "De var sentre for kornhandel med Norden"
+          ],
+          "explain": "Kristne klostre samlet gull, sølv og bøker. Vikingenes raske skip gjorde det mulig å angripe kystnære mål og forsvinne før forsvar ble organisert."
+        },
+        {
+          "id": "nh-vikingtiden-slutt",
+          "step": 3,
+          "type": "choice",
+          "prompt": "Hva forklarer best at vikingtiden tok slutt?",
+          "answer": "Kristendom, kirke og byvekst knyttet Norden til resten av Europa",
+          "distractors": [
+            "Vikingene tapte ett avgjørende slag mot England",
+            "Skipsbyggingen i Norden stanset helt",
+            "Svartedauden la øde store deler av Norden"
+          ],
+          "explain": "Slutten var en gradvis overgang. Svartedauden kom først i 1349, nesten 300 år senere."
+        },
+        {
+          "id": "nh-vikingtiden-forklar-skip",
+          "step": 3,
+          "type": "explain",
+          "prompt": "Forklar hvorfor skipene var avgjørende for vikingenes ferder.",
+          "answer": "Lette, havgående skip kunne både ros og seiles. De tålte åpent hav og kunne gå langt opp elver og inn på grunt vann, så vikingene kunne nå fjerne steder raskt og overraske.",
+          "checklist": [
+            "Skipene tålte åpent hav",
+            "De kunne både ros og seiles",
+            "Grunt skrog gav tilgang til elver og strender"
+          ],
+          "explain": "Uten havgående skip ville verken plyndringstokt, handel langs russiske elver eller bosetting på Island vært mulig."
+        },
+        {
+          "id": "nh-vikingtiden-aar-lindisfarne",
+          "step": 4,
+          "type": "year",
+          "prompt": "Hvilket år angrep vikinger Lindisfarne?",
+          "answer": "793",
+          "explain": "Angrepet skjedde 8. juni 793. Det er den første norske historiske hendelsen som kan tidfestes noenlunde sikkert med skriftlige kilder."
+        },
+        {
+          "id": "nh-vikingtiden-treller",
+          "step": 4,
+          "type": "choice",
+          "prompt": "Omtrent hvor stor del av befolkningen kan ha vært treller (ufrie) i vikingtiden?",
+          "answer": "En fjerdedel til en tredjedel",
+          "distractors": [
+            "Under en av hundre",
+            "Omtrent halvparten",
+            "Tre av fire"
+          ],
+          "explain": "Treller var ufrie og ble behandlet som eiendom. De var en viktig del av arbeidskraften på gårdene, og plyndringstokt skaffet nye treller."
+        }
+      ]
+    }
+  ]
+}
