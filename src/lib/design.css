@@ -148,3 +148,5 @@ button{min-height:46px;border:1px solid var(--line);background:var(--surface);co
 .layout-switch{margin:-6px 0 14px}
 .unit-years{flex:none;width:52px;font-size:13px;font-weight:600;line-height:1.2;font-variant-numeric:tabular-nums}
 .unit-years small{font-weight:400;color:var(--muted)}
+#answer-heading:focus,#answer-heading:focus-visible{outline:none}
+.unit-row{border-radius:0}
