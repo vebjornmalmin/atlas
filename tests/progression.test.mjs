@@ -155,3 +155,16 @@ test('due reviews from different units are interleaved', () => {
   assert.equal(units.length, 6);
   for (let i = 1; i < units.length; i++) assert.notEqual(units[i], units[i - 1], units.join(','));
 });
+
+test('after upgrading, reviews of earlier register questions still come back in the daily session', () => {
+  const data = JSON.parse(readFileSync(new URL('../public/knowledge/foundation.json', import.meta.url), 'utf8'));
+  assert.ok(data.curriculum.units.length >= 80);
+  const targets = attachKnowledge(data.targets, data);
+  const legacy = targets.find(t => t.id === 'capital-norway') || targets.find(t => !t.unitId && /hovedstaden i/.test(t.prompt));
+  const state = {id: schedulingKey(legacy), due: '2026-11-02T08:00:00Z', stability: 4, difficulty: 5, reps: 3, lapses: 0, state: 2, last_review: '2026-10-29T08:00:00Z'};
+  const reviews = [{id: 'old', targetId: legacy.id, timestamp: '2026-10-29T08:00:00Z', correct: true, rating: 3}];
+  const session = buildDailySession({data, targets, states: [state], reviews, preferences: {dailyMinutes: 5}, now: new Date('2026-11-02T09:00:00Z')});
+  assert.ok(session.queue.some(row => row.reason === 'Due review' && row.target.id === legacy.id), 'the old review is kept');
+  assert.ok(session.queue.some(row => isLessonEntry(row)), 'new curriculum is offered alongside');
+  assert.deepEqual(validatePackage(data), []);
+});
