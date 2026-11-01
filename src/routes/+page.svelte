@@ -100,7 +100,12 @@
   const subjectLabel = subject => ({history:'Historie',geography:'Geografi',politics:'Politikk',literature:'Litteratur',art:'Kunst',science:'Vitenskap',philosophy:'Filosofi',economics:'Økonomi',nobel:'Nobelpriser'}[subject] || subject);
   const typeLabel = type => ({'topic':'Emne','document':'Dokument','space-mission':'Romoppdrag','military-operation':'Militær operasjon','fictional-character':'Litterær figur',person:'Person','country-area':'Land eller område','municipality':'Kommune','award-event':'Pristildeling',country:'Land',city:'By',region:'Region',event:'Hendelse',work:'Verk',concept:'Begrep',organization:'Organisasjon',award:'Pris',discovery:'Oppdagelse',movement:'Bevegelse',office:'Embete',period:'Periode',artwork:'Kunstverk',scientific_discovery:'Vitenskapelig oppdagelse',historical_event:'Historisk hendelse',literary_work:'Litterært verk','literary-work':'Litterært verk','political-office':'Politisk embete','former-county':'Tidligere fylke',county:'Fylke'}[type] || type);
   const relationLabel = type => ({'born-in':'Født i','died-in':'Døde i','located-in':'Ligger i','part-of':'Del av','located-in-country':'Ligger i landet','birthplace-in-current-country':'Fødested ligger i dagens land','award-time-affiliation':'Tilknytning da prisen ble tildelt','awarded-prize':'Pristildeling','award-category':'Priskategori','recognized-contribution':'Anerkjente bidraget',awarded:'Ble tildelt','held-office':'Hadde embetet','succeeded':'Etterfulgte','capital-of':'Hovedstad i','in-region':'Ligger i','formerly-part-of':'Tidligere del av',received:'Mottok','recognized-for':'Anerkjent for','written-by':'Skrevet av','created-by':'Skapt av','prepared-for-visit':'Laget før besøk av','depicts-place':'Viser stedet','concerns-document':'Gjelder dokumentet','involves-person':'Omfatter personen','took-place-in':'Fant sted i',adopted:'Vedtok',drafted:'Skrev utkast til',commanded:'Ledet',established:'Opprettet','founded-under':'Grunnlagt under','crew-member':'Medlem av besetningen','author-of':'Forfatter av','features-character':'Har figuren','uses-device':'Bruker virkemiddelet','work-type':'Verkstype'}[type] || type);
-  const worldIds = ['nor','fra','ita','bra','jpn','egy','usa','ind','aus','deu','esp','zaf'];
+  const worldIds = ['nor','fra','ita','bra','jpn','egy','usa','ind','aus','deu','esp','zaf','gbr','swe','fin','dnk','pol'];
+  function regionSpan(region) {
+    const numbers = region.path.match(/-?\d+(?:\.\d+)?/g)?.map(Number) || [];
+    const xs = numbers.filter((_,i)=>i%2===0), ys = numbers.filter((_,i)=>i%2===1);
+    return xs.length ? (Math.max(...xs)-Math.min(...xs))*(Math.max(...ys)-Math.min(...ys)) : 0;
+  }
 
   let toastTimer;
   function notify(text) { toast = text; clearTimeout(toastTimer); toastTimer = setTimeout(() => { if (toast === text) toast = ''; }, Math.max(3500, text.length * 70)); }
@@ -146,8 +151,11 @@
     const base = legacy.map(t => ({...t, mode:'recall'}));
     const recognition = legacy.filter(t => t.answerFormat!=='explanation' && hasRecognitionOptions(t, recognitionIndex))
       .map(t => ({...t, id:`${t.id}:recognition`, baseId:t.id, mode:'recognition', significance:Math.max(1,t.significance-1)}));
-    const mapTargets = maps.flatMap(dataset => dataset.regions.filter(r => dataset.id === 'norway' || worldIds.includes(r.id)).flatMap(region => {
-      const countryEntity = data.entities.find(e => e.label.toLowerCase() === region.label.toLowerCase());
+    const byIso = new Map(data.entities.filter(e => e.iso3).map(e => [e.iso3.toLowerCase(), e]));
+    const mapTargets = maps.flatMap(dataset => dataset.regions.filter(r => dataset.id === 'norway' || worldIds.includes(r.id) || (byIso.has(r.id) && regionSpan(r) >= 450 && !['fji','atf'].includes(r.id))).flatMap(rawRegion => {
+      // Country names come from the Norwegian register; the map file only has English names for most countries.
+      const region = dataset.id === 'world' && byIso.has(rawRegion.id) ? {...rawRegion, label: byIso.get(rawRegion.id).label} : rawRegion;
+      const countryEntity = (dataset.id === 'world' && byIso.get(region.id)) || data.entities.find(e => e.label.toLowerCase() === region.label.toLowerCase());
       const collectionIds = dataset.id === 'norway' ? ['norway'] : ['world-geography'];
       const common = { entityId:countryEntity?.id, collectionIds, datasetId:dataset.id, regionId:region.id, answer:region.label,
         acceptedAnswers:[], explanation:`${region.label} er markert på det publiserte kartet over ${dataset.id === 'norway' ? 'norske fylker' : 'verdens land'}.`,
@@ -175,6 +183,17 @@
   let coreProgress = $derived(data?.curriculum ? curriculumProgress(data.curriculum,targets,states,reviews) : null);
   let selection = $derived(!data ? {queue:[],dueCount:0,newCount:0,eligibleCount:0} : data.curriculum ? buildDailySession({data,targets,states,reviews,preferences:prefs,now:new Date()}) : selectConnectedSession(data,targets, states, prefs, new Date(), data.collections, reviews));
   let selectedUnit = $state('');
+  // Geography units practise place knowledge on the offline maps.
+  const UNIT_MAPS = {'geo-norges-fylker-byer':/^/,'geo-norges-landskap':/^/,'geo-kontinenter-hav':/./,'geo-europa':/Europa/,'geo-asia':/Asia/,'geo-afrika':/Afrika/,'geo-amerika':/Amerika|Karibia/,'geo-oseania-polar':/Australia|Melanesia|Mikronesia|Polynesia/};
+  function unitMapTargets(unitId) {
+    const pattern = UNIT_MAPS[unitId];
+    if (!pattern) return [];
+    const norway = unitId.startsWith('geo-norges');
+    const labels = new Map(data.entities.map(e => [e.id, e.label]));
+    const parents = id => data.relationships.filter(r => ['in-region','located-in','part-of'].includes(r.type) && r.from === id && data.entities.find(e => e.id === r.to)?.type === 'region').map(r => r.to);
+    const regionsOf = id => { const seen = new Set(); let frontier = parents(id); while (frontier.length) { frontier.forEach(r => seen.add(r)); frontier = frontier.flatMap(parents).filter(r => !seen.has(r)); } return [...seen].map(r => labels.get(r)).join(' '); };
+    return targets.filter(t => t.mode === 'map' && (norway ? t.datasetId === 'norway' : t.datasetId === 'world' && pattern.test(regionsOf(t.entityId)))).map(t => t.id);
+  }
   let streak = $derived(practiceStreak(reviews));
   let gradeNote = $state('');
   let currentEntry = $derived(session?.queue[session.index] || null);
@@ -636,7 +655,8 @@
     {#if data.curriculum && coreProgress}
       <LearningPath curriculum={data.curriculum} progress={coreProgress} sources={data.sources} bind:selectedUnit {busy}
         onstart={id=>run(()=>beginSession(null,{unitId:id,unitMode:'learn',title:unitTitle(id)}))}
-        onreview={id=>run(()=>beginSession(null,{unitId:id,unitMode:'review',title:unitTitle(id)}))} />
+        onreview={id=>run(()=>beginSession(null,{unitId:id,unitMode:'review',title:unitTitle(id)}))}
+        mapFor={id=>unitMapTargets(id).length>2} onmap={id=>run(()=>beginSession('geography',{targetIds:unitMapTargets(id),depth:'advanced',title:`Kart: ${unitTitle(id)}`}))} />
       {#if !selectedUnit}<button class="quiet" onclick={()=>navigate('focus')}>Tilpass dagens økt →</button>{/if}
     {:else}<section class="hero"><h1>Emner</h1><p class="lead">Oppdater innholdet for å få emnene.</p></section>{/if}
   {:else if view === 'focus'}

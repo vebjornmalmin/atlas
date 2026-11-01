@@ -1,7 +1,7 @@
 <script>
   import {UNIT_STATUS} from './progression.js';
   import {STEP_LABELS} from './core-curriculum.js';
-  let {curriculum, progress, sources = [], selectedUnit = $bindable(''), onstart, onreview, busy = false} = $props();
+  let {curriculum, progress, sources = [], selectedUnit = $bindable(''), onstart, onreview, onmap = null, mapFor = () => null, busy = false} = $props();
   let openDomain = $state('');
   let layout = $state('domains');
   const yearLabel = year => year < 0 ? `${-year} f.Kr.` : String(year);
@@ -34,6 +34,7 @@
       <button class="primary" disabled={busy} onclick={() => onstart(unit.id)}>{state.status === 'new' ? 'Begynn på emnet' : `Fortsett · ${state.unseen.length} nye kort`}</button>
     {/if}
     {#if state.attempted}<button class="secondary" disabled={busy} onclick={() => onreview(unit.id)}>Øv på emnet{state.weak.length ? ` · ${state.weak.length} å styrke` : ''}</button>{/if}
+    {#if onmap && mapFor(unit.id)}<button class="secondary" disabled={busy} onclick={() => onmap(unit.id)}>Øv på kartet</button>{/if}
   </div>
   {#if state.status !== 'new'}
     <div class="card lesson-card">
