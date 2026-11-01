@@ -151,3 +151,5 @@ button{min-height:46px;border:1px solid var(--line);background:var(--surface);co
 #answer-heading:focus,#answer-heading:focus-visible{outline:none}
 .unit-row{border-radius:0}
 .unit-row[data-status="practiced"] .unit-dot{border-color:var(--accent);background:linear-gradient(90deg,var(--accent) 65%,transparent 65%)}
+/* A typed answer keeps its button next to the field so it stays visible above the iPhone keyboard. */
+.quiz-active .question-step form .primary{position:static;transform:none;width:100%;max-width:none;margin-top:12px;box-shadow:none}

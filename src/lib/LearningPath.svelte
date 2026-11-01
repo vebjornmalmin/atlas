@@ -23,7 +23,7 @@
     <p class="lead">{unit.summary}</p>
   </section>
   <div class="card unit-status">
-    <div class="row"><strong>{UNIT_STATUS[state.status].label}</strong><span class="muted">{state.correct} av {state.total} riktig sist</span></div>
+    <div class="row"><strong>{UNIT_STATUS[state.status].label}</strong><span class="muted">{state.attempted ? `${state.correct} av ${state.total} riktig sist` : `${state.total} kort`}</span></div>
     <div class="step-bars" aria-label="Fremgang per steg">
       {#each [1, 2, 3, 4] as step}{#if state.steps[step].total}
         <div class="step-bar"><span class="bar"><span style={`width:${100 * state.steps[step].correct / state.steps[step].total}%`}></span></span><small>{STEP_LABELS[step]}</small></div>
