@@ -7636,7 +7636,7 @@
     },
     {
       "id": "city-uz-tashkent",
-      "label": "Tashkent",
+      "label": "Tasjkent",
       "type": "city",
       "summary": "Oppført som hovedstad i UNdata-profilen for Usbekistan.",
       "collectionIds": [
@@ -7812,7 +7812,7 @@
     },
     {
       "id": "city-mn-ulaanbaatar",
-      "label": "Ulaanbaatar",
+      "label": "Ulan Bator",
       "type": "city",
       "summary": "Oppført som hovedstad i UNdata-profilen for Mongolia.",
       "collectionIds": [
@@ -8031,7 +8031,7 @@
     },
     {
       "id": "city-mm-nay-pyi-taw",
-      "label": "Nay Pyi Taw",
+      "label": "Naypyidaw",
       "type": "city",
       "summary": "Oppført som hovedstad i UNdata-profilen for Myanmar (Burma).",
       "collectionIds": [
@@ -8399,7 +8399,7 @@
     },
     {
       "id": "city-ir-tehran",
-      "label": "Tehran",
+      "label": "Teheran",
       "type": "city",
       "summary": "Oppført som hovedstad i UNdata-profilen for Iran.",
       "collectionIds": [
@@ -8461,7 +8461,7 @@
     },
     {
       "id": "city-np-kathmandu",
-      "label": "Kathmandu",
+      "label": "Katmandu",
       "type": "city",
       "summary": "Oppført som hovedstad i UNdata-profilen for Nepal.",
       "collectionIds": [
@@ -8563,7 +8563,7 @@
     },
     {
       "id": "city-am-yerevan",
-      "label": "Yerevan",
+      "label": "Jerevan",
       "type": "city",
       "summary": "Oppført som hovedstad i UNdata-profilen for Armenia.",
       "collectionIds": [
@@ -8663,7 +8663,7 @@
     },
     {
       "id": "city-cy-nicosia",
-      "label": "Nicosia",
+      "label": "Nikosia",
       "type": "city",
       "summary": "Oppført som hovedstad i UNdata-profilen for Kypros.",
       "collectionIds": [
@@ -8729,7 +8729,7 @@
     },
     {
       "id": "city-iq-baghdad",
-      "label": "Baghdad",
+      "label": "Bagdad",
       "type": "city",
       "summary": "Oppført som hovedstad i UNdata-profilen for Irak.",
       "collectionIds": [
@@ -8828,7 +8828,7 @@
     },
     {
       "id": "city-kw-kuwait-city",
-      "label": "Kuwait City",
+      "label": "Kuwait by",
       "type": "city",
       "summary": "Oppført som hovedstad i UNdata-profilen for Kuwait.",
       "collectionIds": [
@@ -9433,7 +9433,7 @@
     },
     {
       "id": "city-ro-bucharest",
-      "label": "Bucharest",
+      "label": "București",
       "type": "city",
       "summary": "Oppført som hovedstad i UNdata-profilen for Romania.",
       "collectionIds": [
@@ -10510,7 +10510,7 @@
     },
     {
       "id": "city-rs-belgrade",
-      "label": "Belgrade",
+      "label": "Beograd",
       "type": "city",
       "summary": "Oppført som hovedstad i UNdata-profilen for Serbia.",
       "collectionIds": [
@@ -22918,7 +22918,7 @@
       "id": "nobel-laureate-858",
       "label": "Christopher A. Pissarides",
       "type": "person",
-      "summary": "Prisvinner: Økonomi 2010. Født i Nicosia, Kypros i 1948.",
+      "summary": "Prisvinner: Økonomi 2010. Født i Nikosia, Kypros i 1948.",
       "collectionIds": [
         "nobel",
         "nobel-economics"
@@ -71929,7 +71929,7 @@
       "from": "city-uz-tashkent",
       "to": "geo-uzb",
       "type": "capital-of",
-      "context": "Tashkent er hovedstad i Usbekistan.",
+      "context": "Tasjkent er hovedstad i Usbekistan.",
       "sourceIds": [
         "un-capital-uz"
       ],
@@ -71941,7 +71941,7 @@
       "from": "city-uz-tashkent",
       "to": "geo-uzb",
       "type": "located-in",
-      "context": "Tashkent ligger i Usbekistan.",
+      "context": "Tasjkent ligger i Usbekistan.",
       "sourceIds": [
         "un-capital-uz"
       ],
@@ -72157,7 +72157,7 @@
       "from": "city-mn-ulaanbaatar",
       "to": "geo-mng",
       "type": "capital-of",
-      "context": "Ulaanbaatar er hovedstad i Mongolia.",
+      "context": "Ulan Bator er hovedstad i Mongolia.",
       "sourceIds": [
         "un-capital-mn"
       ],
@@ -72169,7 +72169,7 @@
       "from": "city-mn-ulaanbaatar",
       "to": "geo-mng",
       "type": "located-in",
-      "context": "Ulaanbaatar ligger i Mongolia.",
+      "context": "Ulan Bator ligger i Mongolia.",
       "sourceIds": [
         "un-capital-mn"
       ],
@@ -72373,7 +72373,7 @@
       "from": "city-mm-nay-pyi-taw",
       "to": "geo-mmr",
       "type": "capital-of",
-      "context": "Nay Pyi Taw er hovedstad i Myanmar (Burma).",
+      "context": "Naypyidaw er hovedstad i Myanmar (Burma).",
       "sourceIds": [
         "un-capital-mm"
       ],
@@ -72385,7 +72385,7 @@
       "from": "city-mm-nay-pyi-taw",
       "to": "geo-mmr",
       "type": "located-in",
-      "context": "Nay Pyi Taw ligger i Myanmar (Burma).",
+      "context": "Naypyidaw ligger i Myanmar (Burma).",
       "sourceIds": [
         "un-capital-mm"
       ],
@@ -72745,7 +72745,7 @@
       "from": "city-ir-tehran",
       "to": "geo-irn",
       "type": "capital-of",
-      "context": "Tehran er hovedstad i Iran.",
+      "context": "Teheran er hovedstad i Iran.",
       "sourceIds": [
         "un-capital-ir"
       ],
@@ -72757,7 +72757,7 @@
       "from": "city-ir-tehran",
       "to": "geo-irn",
       "type": "located-in",
-      "context": "Tehran ligger i Iran.",
+      "context": "Teheran ligger i Iran.",
       "sourceIds": [
         "un-capital-ir"
       ],
@@ -72817,7 +72817,7 @@
       "from": "city-np-kathmandu",
       "to": "geo-npl",
       "type": "capital-of",
-      "context": "Kathmandu er hovedstad i Nepal.",
+      "context": "Katmandu er hovedstad i Nepal.",
       "sourceIds": [
         "un-capital-np"
       ],
@@ -72829,7 +72829,7 @@
       "from": "city-np-kathmandu",
       "to": "geo-npl",
       "type": "located-in",
-      "context": "Kathmandu ligger i Nepal.",
+      "context": "Katmandu ligger i Nepal.",
       "sourceIds": [
         "un-capital-np"
       ],
@@ -72913,7 +72913,7 @@
       "from": "city-am-yerevan",
       "to": "geo-arm",
       "type": "capital-of",
-      "context": "Yerevan er hovedstad i Armenia.",
+      "context": "Jerevan er hovedstad i Armenia.",
       "sourceIds": [
         "un-capital-am"
       ],
@@ -72925,7 +72925,7 @@
       "from": "city-am-yerevan",
       "to": "geo-arm",
       "type": "located-in",
-      "context": "Yerevan ligger i Armenia.",
+      "context": "Jerevan ligger i Armenia.",
       "sourceIds": [
         "un-capital-am"
       ],
@@ -73021,7 +73021,7 @@
       "from": "city-cy-nicosia",
       "to": "geo-cyp",
       "type": "capital-of",
-      "context": "Nicosia er hovedstad i Kypros.",
+      "context": "Nikosia er hovedstad i Kypros.",
       "sourceIds": [
         "un-capital-cy"
       ],
@@ -73033,7 +73033,7 @@
       "from": "city-cy-nicosia",
       "to": "geo-cyp",
       "type": "located-in",
-      "context": "Nicosia ligger i Kypros.",
+      "context": "Nikosia ligger i Kypros.",
       "sourceIds": [
         "un-capital-cy"
       ],
@@ -73093,7 +73093,7 @@
       "from": "city-iq-baghdad",
       "to": "geo-irq",
       "type": "capital-of",
-      "context": "Baghdad er hovedstad i Irak.",
+      "context": "Bagdad er hovedstad i Irak.",
       "sourceIds": [
         "un-capital-iq"
       ],
@@ -73105,7 +73105,7 @@
       "from": "city-iq-baghdad",
       "to": "geo-irq",
       "type": "located-in",
-      "context": "Baghdad ligger i Irak.",
+      "context": "Bagdad ligger i Irak.",
       "sourceIds": [
         "un-capital-iq"
       ],
@@ -73177,7 +73177,7 @@
       "from": "city-kw-kuwait-city",
       "to": "geo-kwt",
       "type": "capital-of",
-      "context": "Kuwait City er hovedstad i Kuwait.",
+      "context": "Kuwait by er hovedstad i Kuwait.",
       "sourceIds": [
         "un-capital-kw"
       ],
@@ -73189,7 +73189,7 @@
       "from": "city-kw-kuwait-city",
       "to": "geo-kwt",
       "type": "located-in",
-      "context": "Kuwait City ligger i Kuwait.",
+      "context": "Kuwait by ligger i Kuwait.",
       "sourceIds": [
         "un-capital-kw"
       ],
@@ -73729,7 +73729,7 @@
       "from": "city-ro-bucharest",
       "to": "geo-rou",
       "type": "capital-of",
-      "context": "Bucharest er hovedstad i Romania.",
+      "context": "București er hovedstad i Romania.",
       "sourceIds": [
         "un-capital-ro"
       ],
@@ -73741,7 +73741,7 @@
       "from": "city-ro-bucharest",
       "to": "geo-rou",
       "type": "located-in",
-      "context": "Bucharest ligger i Romania.",
+      "context": "București ligger i Romania.",
       "sourceIds": [
         "un-capital-ro"
       ],
@@ -74845,7 +74845,7 @@
       "from": "city-rs-belgrade",
       "to": "geo-srb",
       "type": "capital-of",
-      "context": "Belgrade er hovedstad i Serbia.",
+      "context": "Beograd er hovedstad i Serbia.",
       "sourceIds": [
         "un-capital-rs"
       ],
@@ -74857,7 +74857,7 @@
       "from": "city-rs-belgrade",
       "to": "geo-srb",
       "type": "located-in",
-      "context": "Belgrade ligger i Serbia.",
+      "context": "Beograd ligger i Serbia.",
       "sourceIds": [
         "un-capital-rs"
       ],
@@ -154840,9 +154840,7 @@
       ],
       "prompt": "Hvem var president rett før John Adams overtok i 1797?",
       "answer": "George Washington",
-      "acceptedAnswers": [
-        "George Washington"
-      ],
+      "acceptedAnswers": [],
       "explanation": "George Washington ble etterfulgt av John Adams i 1797.",
       "sourceIds": [
         "presidents-timeline"
@@ -154906,9 +154904,7 @@
       ],
       "prompt": "Hvem var president rett før Thomas Jefferson overtok i 1801?",
       "answer": "John Adams",
-      "acceptedAnswers": [
-        "John Adams"
-      ],
+      "acceptedAnswers": [],
       "explanation": "John Adams ble etterfulgt av Thomas Jefferson i 1801.",
       "sourceIds": [
         "presidents-timeline"
@@ -154972,9 +154968,7 @@
       ],
       "prompt": "Hvem var president rett før James Madison overtok i 1809?",
       "answer": "Thomas Jefferson",
-      "acceptedAnswers": [
-        "Thomas Jefferson"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Thomas Jefferson ble etterfulgt av James Madison i 1809.",
       "sourceIds": [
         "presidents-timeline"
@@ -155038,9 +155032,7 @@
       ],
       "prompt": "Hvem var president rett før James Monroe overtok i 1817?",
       "answer": "James Madison",
-      "acceptedAnswers": [
-        "James Madison"
-      ],
+      "acceptedAnswers": [],
       "explanation": "James Madison ble etterfulgt av James Monroe i 1817.",
       "sourceIds": [
         "presidents-timeline"
@@ -155104,9 +155096,7 @@
       ],
       "prompt": "Hvem var president rett før John Quincy Adams overtok i 1825?",
       "answer": "James Monroe",
-      "acceptedAnswers": [
-        "James Monroe"
-      ],
+      "acceptedAnswers": [],
       "explanation": "James Monroe ble etterfulgt av John Quincy Adams i 1825.",
       "sourceIds": [
         "presidents-timeline"
@@ -155170,9 +155160,7 @@
       ],
       "prompt": "Hvem var president rett før Andrew Jackson overtok i 1829?",
       "answer": "John Quincy Adams",
-      "acceptedAnswers": [
-        "John Quincy Adams"
-      ],
+      "acceptedAnswers": [],
       "explanation": "John Quincy Adams ble etterfulgt av Andrew Jackson i 1829.",
       "sourceIds": [
         "presidents-timeline"
@@ -155236,9 +155224,7 @@
       ],
       "prompt": "Hvem var president rett før Martin Van Buren overtok i 1837?",
       "answer": "Andrew Jackson",
-      "acceptedAnswers": [
-        "Andrew Jackson"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Andrew Jackson ble etterfulgt av Martin Van Buren i 1837.",
       "sourceIds": [
         "presidents-timeline"
@@ -155302,9 +155288,7 @@
       ],
       "prompt": "Hvem var president rett før William Henry Harrison overtok i 1841?",
       "answer": "Martin Van Buren",
-      "acceptedAnswers": [
-        "Martin Van Buren"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Martin Van Buren ble etterfulgt av William Henry Harrison i 1841.",
       "sourceIds": [
         "presidents-timeline"
@@ -155368,9 +155352,7 @@
       ],
       "prompt": "Hvem var president rett før John Tyler overtok i 1841?",
       "answer": "William Henry Harrison",
-      "acceptedAnswers": [
-        "William Henry Harrison"
-      ],
+      "acceptedAnswers": [],
       "explanation": "William Henry Harrison ble etterfulgt av John Tyler i 1841.",
       "sourceIds": [
         "presidents-timeline"
@@ -155434,9 +155416,7 @@
       ],
       "prompt": "Hvem var president rett før James K. Polk overtok i 1845?",
       "answer": "John Tyler",
-      "acceptedAnswers": [
-        "John Tyler"
-      ],
+      "acceptedAnswers": [],
       "explanation": "John Tyler ble etterfulgt av James K. Polk i 1845.",
       "sourceIds": [
         "presidents-timeline"
@@ -155500,9 +155480,7 @@
       ],
       "prompt": "Hvem var president rett før Zachary Taylor overtok i 1849?",
       "answer": "James K. Polk",
-      "acceptedAnswers": [
-        "James K. Polk"
-      ],
+      "acceptedAnswers": [],
       "explanation": "James K. Polk ble etterfulgt av Zachary Taylor i 1849.",
       "sourceIds": [
         "presidents-timeline"
@@ -155566,9 +155544,7 @@
       ],
       "prompt": "Hvem var president rett før Millard Fillmore overtok i 1850?",
       "answer": "Zachary Taylor",
-      "acceptedAnswers": [
-        "Zachary Taylor"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Zachary Taylor ble etterfulgt av Millard Fillmore i 1850.",
       "sourceIds": [
         "presidents-timeline"
@@ -155632,9 +155608,7 @@
       ],
       "prompt": "Hvem var president rett før Franklin Pierce overtok i 1853?",
       "answer": "Millard Fillmore",
-      "acceptedAnswers": [
-        "Millard Fillmore"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Millard Fillmore ble etterfulgt av Franklin Pierce i 1853.",
       "sourceIds": [
         "presidents-timeline"
@@ -155698,9 +155672,7 @@
       ],
       "prompt": "Hvem var president rett før James Buchanan overtok i 1857?",
       "answer": "Franklin Pierce",
-      "acceptedAnswers": [
-        "Franklin Pierce"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Franklin Pierce ble etterfulgt av James Buchanan i 1857.",
       "sourceIds": [
         "presidents-timeline"
@@ -155764,9 +155736,7 @@
       ],
       "prompt": "Hvem var president rett før Abraham Lincoln overtok i 1861?",
       "answer": "James Buchanan",
-      "acceptedAnswers": [
-        "James Buchanan"
-      ],
+      "acceptedAnswers": [],
       "explanation": "James Buchanan ble etterfulgt av Abraham Lincoln i 1861.",
       "sourceIds": [
         "presidents-timeline"
@@ -155830,9 +155800,7 @@
       ],
       "prompt": "Hvem var president rett før Andrew Johnson overtok i 1865?",
       "answer": "Abraham Lincoln",
-      "acceptedAnswers": [
-        "Abraham Lincoln"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Abraham Lincoln ble etterfulgt av Andrew Johnson i 1865.",
       "sourceIds": [
         "presidents-timeline"
@@ -155896,9 +155864,7 @@
       ],
       "prompt": "Hvem var president rett før Ulysses S. Grant overtok i 1869?",
       "answer": "Andrew Johnson",
-      "acceptedAnswers": [
-        "Andrew Johnson"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Andrew Johnson ble etterfulgt av Ulysses S. Grant i 1869.",
       "sourceIds": [
         "presidents-timeline"
@@ -156028,9 +155994,7 @@
       ],
       "prompt": "Hvem var president rett før James A. Garfield overtok i 1881?",
       "answer": "Rutherford B. Hayes",
-      "acceptedAnswers": [
-        "Rutherford B. Hayes"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Rutherford B. Hayes ble etterfulgt av James A. Garfield i 1881.",
       "sourceIds": [
         "presidents-timeline"
@@ -156094,9 +156058,7 @@
       ],
       "prompt": "Hvem var president rett før Chester A. Arthur overtok i 1881?",
       "answer": "James A. Garfield",
-      "acceptedAnswers": [
-        "James A. Garfield"
-      ],
+      "acceptedAnswers": [],
       "explanation": "James A. Garfield ble etterfulgt av Chester A. Arthur i 1881.",
       "sourceIds": [
         "presidents-timeline"
@@ -156160,9 +156122,7 @@
       ],
       "prompt": "Hvem var president rett før Grover Cleveland overtok i 1885?",
       "answer": "Chester A. Arthur",
-      "acceptedAnswers": [
-        "Chester A. Arthur"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Chester A. Arthur ble etterfulgt av Grover Cleveland i 1885.",
       "sourceIds": [
         "presidents-timeline"
@@ -156226,9 +156186,7 @@
       ],
       "prompt": "Hvem var president rett før Benjamin Harrison overtok i 1889?",
       "answer": "Grover Cleveland",
-      "acceptedAnswers": [
-        "Grover Cleveland"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Grover Cleveland ble etterfulgt av Benjamin Harrison i 1889.",
       "sourceIds": [
         "presidents-timeline"
@@ -156292,9 +156250,7 @@
       ],
       "prompt": "Hvem var president rett før Grover Cleveland overtok i 1893?",
       "answer": "Benjamin Harrison",
-      "acceptedAnswers": [
-        "Benjamin Harrison"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Benjamin Harrison ble etterfulgt av Grover Cleveland i 1893.",
       "sourceIds": [
         "presidents-timeline"
@@ -156358,9 +156314,7 @@
       ],
       "prompt": "Hvem var president rett før William McKinley overtok i 1897?",
       "answer": "Grover Cleveland",
-      "acceptedAnswers": [
-        "Grover Cleveland"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Grover Cleveland ble etterfulgt av William McKinley i 1897.",
       "sourceIds": [
         "presidents-timeline"
@@ -156424,9 +156378,7 @@
       ],
       "prompt": "Hvem var president rett før Theodore Roosevelt overtok i 1901?",
       "answer": "William McKinley",
-      "acceptedAnswers": [
-        "William McKinley"
-      ],
+      "acceptedAnswers": [],
       "explanation": "William McKinley ble etterfulgt av Theodore Roosevelt i 1901.",
       "sourceIds": [
         "presidents-timeline"
@@ -156490,9 +156442,7 @@
       ],
       "prompt": "Hvem var president rett før William Howard Taft overtok i 1909?",
       "answer": "Theodore Roosevelt",
-      "acceptedAnswers": [
-        "Theodore Roosevelt"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Theodore Roosevelt ble etterfulgt av William Howard Taft i 1909.",
       "sourceIds": [
         "presidents-timeline"
@@ -156556,9 +156506,7 @@
       ],
       "prompt": "Hvem var president rett før Woodrow Wilson overtok i 1913?",
       "answer": "William Howard Taft",
-      "acceptedAnswers": [
-        "William Howard Taft"
-      ],
+      "acceptedAnswers": [],
       "explanation": "William Howard Taft ble etterfulgt av Woodrow Wilson i 1913.",
       "sourceIds": [
         "presidents-timeline"
@@ -156622,9 +156570,7 @@
       ],
       "prompt": "Hvem var president rett før Warren G. Harding overtok i 1921?",
       "answer": "Woodrow Wilson",
-      "acceptedAnswers": [
-        "Woodrow Wilson"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Woodrow Wilson ble etterfulgt av Warren G. Harding i 1921.",
       "sourceIds": [
         "presidents-timeline"
@@ -156688,9 +156634,7 @@
       ],
       "prompt": "Hvem var president rett før Calvin Coolidge overtok i 1923?",
       "answer": "Warren G. Harding",
-      "acceptedAnswers": [
-        "Warren G. Harding"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Warren G. Harding ble etterfulgt av Calvin Coolidge i 1923.",
       "sourceIds": [
         "presidents-timeline"
@@ -156754,9 +156698,7 @@
       ],
       "prompt": "Hvem var president rett før Herbert Hoover overtok i 1929?",
       "answer": "Calvin Coolidge",
-      "acceptedAnswers": [
-        "Calvin Coolidge"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Calvin Coolidge ble etterfulgt av Herbert Hoover i 1929.",
       "sourceIds": [
         "presidents-timeline"
@@ -156820,9 +156762,7 @@
       ],
       "prompt": "Hvem var president rett før Franklin D. Roosevelt overtok i 1933?",
       "answer": "Herbert Hoover",
-      "acceptedAnswers": [
-        "Herbert Hoover"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Herbert Hoover ble etterfulgt av Franklin D. Roosevelt i 1933.",
       "sourceIds": [
         "presidents-timeline"
@@ -157084,9 +157024,7 @@
       ],
       "prompt": "Hvem var president rett før Lyndon B. Johnson overtok i 1963?",
       "answer": "John F. Kennedy",
-      "acceptedAnswers": [
-        "John F. Kennedy"
-      ],
+      "acceptedAnswers": [],
       "explanation": "John F. Kennedy ble etterfulgt av Lyndon B. Johnson i 1963.",
       "sourceIds": [
         "presidents-timeline"
@@ -157150,9 +157088,7 @@
       ],
       "prompt": "Hvem var president rett før Richard Nixon overtok i 1969?",
       "answer": "Lyndon B. Johnson",
-      "acceptedAnswers": [
-        "Lyndon B. Johnson"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Lyndon B. Johnson ble etterfulgt av Richard Nixon i 1969.",
       "sourceIds": [
         "presidents-timeline"
@@ -157216,9 +157152,7 @@
       ],
       "prompt": "Hvem var president rett før Gerald Ford overtok i 1974?",
       "answer": "Richard Nixon",
-      "acceptedAnswers": [
-        "Richard Nixon"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Richard Nixon ble etterfulgt av Gerald Ford i 1974.",
       "sourceIds": [
         "presidents-timeline"
@@ -157282,9 +157216,7 @@
       ],
       "prompt": "Hvem var president rett før Jimmy Carter overtok i 1977?",
       "answer": "Gerald Ford",
-      "acceptedAnswers": [
-        "Gerald Ford"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Gerald Ford ble etterfulgt av Jimmy Carter i 1977.",
       "sourceIds": [
         "presidents-timeline"
@@ -157348,9 +157280,7 @@
       ],
       "prompt": "Hvem var president rett før Ronald Reagan overtok i 1981?",
       "answer": "Jimmy Carter",
-      "acceptedAnswers": [
-        "Jimmy Carter"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Jimmy Carter ble etterfulgt av Ronald Reagan i 1981.",
       "sourceIds": [
         "presidents-timeline"
@@ -157414,9 +157344,7 @@
       ],
       "prompt": "Hvem var president rett før George H. W. Bush overtok i 1989?",
       "answer": "Ronald Reagan",
-      "acceptedAnswers": [
-        "Ronald Reagan"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Ronald Reagan ble etterfulgt av George H. W. Bush i 1989.",
       "sourceIds": [
         "presidents-timeline"
@@ -157480,9 +157408,7 @@
       ],
       "prompt": "Hvem var president rett før Bill Clinton overtok i 1993?",
       "answer": "George H. W. Bush",
-      "acceptedAnswers": [
-        "George H. W. Bush"
-      ],
+      "acceptedAnswers": [],
       "explanation": "George H. W. Bush ble etterfulgt av Bill Clinton i 1993.",
       "sourceIds": [
         "presidents-timeline"
@@ -157546,9 +157472,7 @@
       ],
       "prompt": "Hvem var president rett før George W. Bush overtok i 2001?",
       "answer": "Bill Clinton",
-      "acceptedAnswers": [
-        "Bill Clinton"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Bill Clinton ble etterfulgt av George W. Bush i 2001.",
       "sourceIds": [
         "presidents-timeline"
@@ -157612,9 +157536,7 @@
       ],
       "prompt": "Hvem var president rett før Barack Obama overtok i 2009?",
       "answer": "George W. Bush",
-      "acceptedAnswers": [
-        "George W. Bush"
-      ],
+      "acceptedAnswers": [],
       "explanation": "George W. Bush ble etterfulgt av Barack Obama i 2009.",
       "sourceIds": [
         "presidents-timeline"
@@ -157678,9 +157600,7 @@
       ],
       "prompt": "Hvem var president rett før Donald Trump overtok i 2017?",
       "answer": "Barack Obama",
-      "acceptedAnswers": [
-        "Barack Obama"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Barack Obama ble etterfulgt av Donald Trump i 2017.",
       "sourceIds": [
         "presidents-timeline"
@@ -157744,9 +157664,7 @@
       ],
       "prompt": "Hvem var president rett før Joe Biden overtok i 2021?",
       "answer": "Donald Trump",
-      "acceptedAnswers": [
-        "Donald Trump"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Donald Trump ble etterfulgt av Joe Biden i 2021.",
       "sourceIds": [
         "presidents-timeline"
@@ -157810,9 +157728,7 @@
       ],
       "prompt": "Hvem var president rett før Donald Trump overtok i 2025?",
       "answer": "Joe Biden",
-      "acceptedAnswers": [
-        "Joe Biden"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Joe Biden ble etterfulgt av Donald Trump i 2025.",
       "sourceIds": [
         "presidents-timeline"
@@ -157912,7 +157828,6 @@
       "prompt": "Hva er hovedstaden i Danmark?",
       "answer": "København",
       "acceptedAnswers": [
-        "København",
         "Copenhagen"
       ],
       "explanation": "København er hovedstaden i Danmark, i Nord-Europa. Land, hovedstad og region er tre ulike holdepunkter i det samme geografiske nettverket.",
@@ -159905,8 +159820,7 @@
       "prompt": "I hvilket land er Alger hovedstad?",
       "answer": "Algerie",
       "acceptedAnswers": [
-        "Algeria",
-        "Algerie"
+        "Algeria"
       ],
       "explanation": "Alger er hovedstad i Algerie.",
       "sourceIds": [
@@ -160019,10 +159933,7 @@
       ],
       "prompt": "I hvilket land er Kairo hovedstad?",
       "answer": "Egypt",
-      "acceptedAnswers": [
-        "Egypt",
-        "Egypt"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Kairo er hovedstad i Egypt.",
       "sourceIds": [
         "un-capital-eg"
@@ -160097,9 +160008,7 @@
       ],
       "prompt": "Hva er hovedstaden i Marokko?",
       "answer": "Rabat",
-      "acceptedAnswers": [
-        "Rabat"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Rabat er hovedstad i Marokko. Landet inngår i Nord-Afrika etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-ma",
@@ -160135,8 +160044,7 @@
       "prompt": "I hvilket land er Rabat hovedstad?",
       "answer": "Marokko",
       "acceptedAnswers": [
-        "Morocco",
-        "Marokko"
+        "Morocco"
       ],
       "explanation": "Rabat er hovedstad i Marokko.",
       "sourceIds": [
@@ -160212,9 +160120,7 @@
       ],
       "prompt": "Hva er hovedstaden i Tunisia?",
       "answer": "Tunis",
-      "acceptedAnswers": [
-        "Tunis"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Tunis er hovedstad i Tunisia. Landet inngår i Nord-Afrika etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-tn",
@@ -160249,10 +160155,7 @@
       ],
       "prompt": "I hvilket land er Tunis hovedstad?",
       "answer": "Tunisia",
-      "acceptedAnswers": [
-        "Tunisia",
-        "Tunisia"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Tunis er hovedstad i Tunisia.",
       "sourceIds": [
         "un-capital-tn"
@@ -160327,9 +160230,7 @@
       ],
       "prompt": "Hva er hovedstaden i Etiopia?",
       "answer": "Addis Ababa",
-      "acceptedAnswers": [
-        "Addis Ababa"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Addis Ababa er hovedstad i Etiopia. Landet inngår i Afrika sør for Sahara etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-et",
@@ -160365,8 +160266,7 @@
       "prompt": "I hvilket land er Addis Ababa hovedstad?",
       "answer": "Etiopia",
       "acceptedAnswers": [
-        "Ethiopia",
-        "Etiopia"
+        "Ethiopia"
       ],
       "explanation": "Addis Ababa er hovedstad i Etiopia.",
       "sourceIds": [
@@ -160442,9 +160342,7 @@
       ],
       "prompt": "Hva er hovedstaden i Kenya?",
       "answer": "Nairobi",
-      "acceptedAnswers": [
-        "Nairobi"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Nairobi er hovedstad i Kenya. Landet inngår i Afrika sør for Sahara etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-ke",
@@ -160479,10 +160377,7 @@
       ],
       "prompt": "I hvilket land er Nairobi hovedstad?",
       "answer": "Kenya",
-      "acceptedAnswers": [
-        "Kenya",
-        "Kenya"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Nairobi er hovedstad i Kenya.",
       "sourceIds": [
         "un-capital-ke"
@@ -160557,9 +160452,7 @@
       ],
       "prompt": "Hva er hovedstaden i Madagaskar?",
       "answer": "Antananarivo",
-      "acceptedAnswers": [
-        "Antananarivo"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Antananarivo er hovedstad i Madagaskar. Landet inngår i Afrika sør for Sahara etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-mg",
@@ -160595,8 +160488,7 @@
       "prompt": "I hvilket land er Antananarivo hovedstad?",
       "answer": "Madagaskar",
       "acceptedAnswers": [
-        "Madagascar",
-        "Madagaskar"
+        "Madagascar"
       ],
       "explanation": "Antananarivo er hovedstad i Madagaskar.",
       "sourceIds": [
@@ -160672,9 +160564,7 @@
       ],
       "prompt": "Hva er hovedstaden i Mauritius?",
       "answer": "Port Louis",
-      "acceptedAnswers": [
-        "Port Louis"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Port Louis er hovedstad i Mauritius. Landet inngår i Afrika sør for Sahara etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-mu",
@@ -160709,10 +160599,7 @@
       ],
       "prompt": "I hvilket land er Port Louis hovedstad?",
       "answer": "Mauritius",
-      "acceptedAnswers": [
-        "Mauritius",
-        "Mauritius"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Port Louis er hovedstad i Mauritius.",
       "sourceIds": [
         "un-capital-mu"
@@ -160787,9 +160674,7 @@
       ],
       "prompt": "Hva er hovedstaden i Rwanda?",
       "answer": "Kigali",
-      "acceptedAnswers": [
-        "Kigali"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Kigali er hovedstad i Rwanda. Landet inngår i Afrika sør for Sahara etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-rw",
@@ -160824,10 +160709,7 @@
       ],
       "prompt": "I hvilket land er Kigali hovedstad?",
       "answer": "Rwanda",
-      "acceptedAnswers": [
-        "Rwanda",
-        "Rwanda"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Kigali er hovedstad i Rwanda.",
       "sourceIds": [
         "un-capital-rw"
@@ -160902,9 +160784,7 @@
       ],
       "prompt": "Hva er hovedstaden i Uganda?",
       "answer": "Kampala",
-      "acceptedAnswers": [
-        "Kampala"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Kampala er hovedstad i Uganda. Landet inngår i Afrika sør for Sahara etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-ug",
@@ -160939,10 +160819,7 @@
       ],
       "prompt": "I hvilket land er Kampala hovedstad?",
       "answer": "Uganda",
-      "acceptedAnswers": [
-        "Uganda",
-        "Uganda"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Kampala er hovedstad i Uganda.",
       "sourceIds": [
         "un-capital-ug"
@@ -161017,9 +160894,7 @@
       ],
       "prompt": "Hva er hovedstaden i Tanzania?",
       "answer": "Dodoma",
-      "acceptedAnswers": [
-        "Dodoma"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Dodoma er hovedstad i Tanzania. Landet inngår i Afrika sør for Sahara etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-tz",
@@ -161055,8 +160930,7 @@
       "prompt": "I hvilket land er Dodoma hovedstad?",
       "answer": "Tanzania",
       "acceptedAnswers": [
-        "United Republic of Tanzania",
-        "Tanzania"
+        "United Republic of Tanzania"
       ],
       "explanation": "Dodoma er hovedstad i Tanzania.",
       "sourceIds": [
@@ -161132,9 +161006,7 @@
       ],
       "prompt": "Hva er hovedstaden i Zambia?",
       "answer": "Lusaka",
-      "acceptedAnswers": [
-        "Lusaka"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Lusaka er hovedstad i Zambia. Landet inngår i Afrika sør for Sahara etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-zm",
@@ -161169,10 +161041,7 @@
       ],
       "prompt": "I hvilket land er Lusaka hovedstad?",
       "answer": "Zambia",
-      "acceptedAnswers": [
-        "Zambia",
-        "Zambia"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Lusaka er hovedstad i Zambia.",
       "sourceIds": [
         "un-capital-zm"
@@ -161247,9 +161116,7 @@
       ],
       "prompt": "Hva er hovedstaden i Zimbabwe?",
       "answer": "Harare",
-      "acceptedAnswers": [
-        "Harare"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Harare er hovedstad i Zimbabwe. Landet inngår i Afrika sør for Sahara etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-zw",
@@ -161284,10 +161151,7 @@
       ],
       "prompt": "I hvilket land er Harare hovedstad?",
       "answer": "Zimbabwe",
-      "acceptedAnswers": [
-        "Zimbabwe",
-        "Zimbabwe"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Harare er hovedstad i Zimbabwe.",
       "sourceIds": [
         "un-capital-zw"
@@ -161362,9 +161226,7 @@
       ],
       "prompt": "Hva er hovedstaden i Botswana?",
       "answer": "Gaborone",
-      "acceptedAnswers": [
-        "Gaborone"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Gaborone er hovedstad i Botswana. Landet inngår i Afrika sør for Sahara etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-bw",
@@ -161399,10 +161261,7 @@
       ],
       "prompt": "I hvilket land er Gaborone hovedstad?",
       "answer": "Botswana",
-      "acceptedAnswers": [
-        "Botswana",
-        "Botswana"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Gaborone er hovedstad i Botswana.",
       "sourceIds": [
         "un-capital-bw"
@@ -161477,9 +161336,7 @@
       ],
       "prompt": "Hva er hovedstaden i Namibia?",
       "answer": "Windhoek",
-      "acceptedAnswers": [
-        "Windhoek"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Windhoek er hovedstad i Namibia. Landet inngår i Afrika sør for Sahara etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-na",
@@ -161514,10 +161371,7 @@
       ],
       "prompt": "I hvilket land er Windhoek hovedstad?",
       "answer": "Namibia",
-      "acceptedAnswers": [
-        "Namibia",
-        "Namibia"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Windhoek er hovedstad i Namibia.",
       "sourceIds": [
         "un-capital-na"
@@ -161631,9 +161485,7 @@
       ],
       "prompt": "Hva er hovedstaden i Ghana?",
       "answer": "Accra",
-      "acceptedAnswers": [
-        "Accra"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Accra er hovedstad i Ghana. Landet inngår i Afrika sør for Sahara etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-gh",
@@ -161668,10 +161520,7 @@
       ],
       "prompt": "I hvilket land er Accra hovedstad?",
       "answer": "Ghana",
-      "acceptedAnswers": [
-        "Ghana",
-        "Ghana"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Accra er hovedstad i Ghana.",
       "sourceIds": [
         "un-capital-gh"
@@ -161746,9 +161595,7 @@
       ],
       "prompt": "Hva er hovedstaden i Nigeria?",
       "answer": "Abuja",
-      "acceptedAnswers": [
-        "Abuja"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Abuja er hovedstad i Nigeria. Landet inngår i Afrika sør for Sahara etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-ng",
@@ -161783,10 +161630,7 @@
       ],
       "prompt": "I hvilket land er Abuja hovedstad?",
       "answer": "Nigeria",
-      "acceptedAnswers": [
-        "Nigeria",
-        "Nigeria"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Abuja er hovedstad i Nigeria.",
       "sourceIds": [
         "un-capital-ng"
@@ -161861,9 +161705,7 @@
       ],
       "prompt": "Hva er hovedstaden i Senegal?",
       "answer": "Dakar",
-      "acceptedAnswers": [
-        "Dakar"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Dakar er hovedstad i Senegal. Landet inngår i Afrika sør for Sahara etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-sn",
@@ -161898,10 +161740,7 @@
       ],
       "prompt": "I hvilket land er Dakar hovedstad?",
       "answer": "Senegal",
-      "acceptedAnswers": [
-        "Senegal",
-        "Senegal"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Dakar er hovedstad i Senegal.",
       "sourceIds": [
         "un-capital-sn"
@@ -162013,10 +161852,7 @@
       ],
       "prompt": "I hvilket land er Mexico by hovedstad?",
       "answer": "Mexico",
-      "acceptedAnswers": [
-        "Mexico",
-        "Mexico"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Mexico by er hovedstad i Mexico.",
       "sourceIds": [
         "un-capital-mx"
@@ -162091,9 +161927,7 @@
       ],
       "prompt": "Hva er hovedstaden i Argentina?",
       "answer": "Buenos Aires",
-      "acceptedAnswers": [
-        "Buenos Aires"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Buenos Aires er hovedstad i Argentina. Landet inngår i Latin-Amerika og Karibia etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-ar",
@@ -162128,10 +161962,7 @@
       ],
       "prompt": "I hvilket land er Buenos Aires hovedstad?",
       "answer": "Argentina",
-      "acceptedAnswers": [
-        "Argentina",
-        "Argentina"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Buenos Aires er hovedstad i Argentina.",
       "sourceIds": [
         "un-capital-ar"
@@ -162244,8 +162075,7 @@
       "prompt": "I hvilket land er Brasília hovedstad?",
       "answer": "Brasil",
       "acceptedAnswers": [
-        "Brazil",
-        "Brasil"
+        "Brazil"
       ],
       "explanation": "Brasília er hovedstad i Brasil.",
       "sourceIds": [
@@ -162321,9 +162151,7 @@
       ],
       "prompt": "Hva er hovedstaden i Chile?",
       "answer": "Santiago",
-      "acceptedAnswers": [
-        "Santiago"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Santiago er hovedstad i Chile. Landet inngår i Latin-Amerika og Karibia etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-cl",
@@ -162358,10 +162186,7 @@
       ],
       "prompt": "I hvilket land er Santiago hovedstad?",
       "answer": "Chile",
-      "acceptedAnswers": [
-        "Chile",
-        "Chile"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Santiago er hovedstad i Chile.",
       "sourceIds": [
         "un-capital-cl"
@@ -162473,10 +162298,7 @@
       ],
       "prompt": "I hvilket land er Bogotá hovedstad?",
       "answer": "Colombia",
-      "acceptedAnswers": [
-        "Colombia",
-        "Colombia"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Bogotá er hovedstad i Colombia.",
       "sourceIds": [
         "un-capital-co"
@@ -162551,9 +162373,7 @@
       ],
       "prompt": "Hva er hovedstaden i Ecuador?",
       "answer": "Quito",
-      "acceptedAnswers": [
-        "Quito"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Quito er hovedstad i Ecuador. Landet inngår i Latin-Amerika og Karibia etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-ec",
@@ -162588,10 +162408,7 @@
       ],
       "prompt": "I hvilket land er Quito hovedstad?",
       "answer": "Ecuador",
-      "acceptedAnswers": [
-        "Ecuador",
-        "Ecuador"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Quito er hovedstad i Ecuador.",
       "sourceIds": [
         "un-capital-ec"
@@ -162666,9 +162483,7 @@
       ],
       "prompt": "Hva er hovedstaden i Paraguay?",
       "answer": "Asunción",
-      "acceptedAnswers": [
-        "Asunción"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Asunción er hovedstad i Paraguay. Landet inngår i Latin-Amerika og Karibia etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-py",
@@ -162703,10 +162518,7 @@
       ],
       "prompt": "I hvilket land er Asunción hovedstad?",
       "answer": "Paraguay",
-      "acceptedAnswers": [
-        "Paraguay",
-        "Paraguay"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Asunción er hovedstad i Paraguay.",
       "sourceIds": [
         "un-capital-py"
@@ -162781,9 +162593,7 @@
       ],
       "prompt": "Hva er hovedstaden i Peru?",
       "answer": "Lima",
-      "acceptedAnswers": [
-        "Lima"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Lima er hovedstad i Peru. Landet inngår i Latin-Amerika og Karibia etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-pe",
@@ -162818,10 +162628,7 @@
       ],
       "prompt": "I hvilket land er Lima hovedstad?",
       "answer": "Peru",
-      "acceptedAnswers": [
-        "Peru",
-        "Peru"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Lima er hovedstad i Peru.",
       "sourceIds": [
         "un-capital-pe"
@@ -162896,9 +162703,7 @@
       ],
       "prompt": "Hva er hovedstaden i Uruguay?",
       "answer": "Montevideo",
-      "acceptedAnswers": [
-        "Montevideo"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Montevideo er hovedstad i Uruguay. Landet inngår i Latin-Amerika og Karibia etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-uy",
@@ -162933,10 +162738,7 @@
       ],
       "prompt": "I hvilket land er Montevideo hovedstad?",
       "answer": "Uruguay",
-      "acceptedAnswers": [
-        "Uruguay",
-        "Uruguay"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Montevideo er hovedstad i Uruguay.",
       "sourceIds": [
         "un-capital-uy"
@@ -163011,9 +162813,7 @@
       ],
       "prompt": "Hva er hovedstaden i Venezuela?",
       "answer": "Caracas",
-      "acceptedAnswers": [
-        "Caracas"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Caracas er hovedstad i Venezuela. Landet inngår i Latin-Amerika og Karibia etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-ve",
@@ -163049,8 +162849,7 @@
       "prompt": "I hvilket land er Caracas hovedstad?",
       "answer": "Venezuela",
       "acceptedAnswers": [
-        "Venezuela (Bolivarian Republic of)",
-        "Venezuela"
+        "Venezuela (Bolivarian Republic of)"
       ],
       "explanation": "Caracas er hovedstad i Venezuela.",
       "sourceIds": [
@@ -163127,10 +162926,7 @@
       ],
       "prompt": "I hvilket land er Ottawa hovedstad?",
       "answer": "Canada",
-      "acceptedAnswers": [
-        "Canada",
-        "Canada"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Ottawa er hovedstad i Canada.",
       "sourceIds": [
         "un-capital-ca"
@@ -163205,9 +163001,7 @@
       ],
       "prompt": "Hva er hovedstaden i USA?",
       "answer": "Washington, D.C.",
-      "acceptedAnswers": [
-        "Washington, D.C."
-      ],
+      "acceptedAnswers": [],
       "explanation": "Washington, D.C. er hovedstad i USA. Landet inngår i Nord-Amerika etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-us",
@@ -163243,8 +163037,7 @@
       "prompt": "I hvilket land er Washington, D.C. hovedstad?",
       "answer": "USA",
       "acceptedAnswers": [
-        "United States of America",
-        "USA"
+        "United States of America"
       ],
       "explanation": "Washington, D.C. er hovedstad i USA.",
       "sourceIds": [
@@ -163320,9 +163113,7 @@
       ],
       "prompt": "Hva er hovedstaden i Kasakhstan?",
       "answer": "Astana",
-      "acceptedAnswers": [
-        "Astana"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Astana er hovedstad i Kasakhstan. Landet inngår i Sentral-Asia etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-kz",
@@ -163358,8 +163149,7 @@
       "prompt": "I hvilket land er Astana hovedstad?",
       "answer": "Kasakhstan",
       "acceptedAnswers": [
-        "Kazakhstan",
-        "Kasakhstan"
+        "Kazakhstan"
       ],
       "explanation": "Astana er hovedstad i Kasakhstan.",
       "sourceIds": [
@@ -163434,11 +163224,11 @@
         "world-geography"
       ],
       "prompt": "Hva er hovedstaden i Usbekistan?",
-      "answer": "Tashkent",
+      "answer": "Tasjkent",
       "acceptedAnswers": [
         "Tashkent"
       ],
-      "explanation": "Tashkent er hovedstad i Usbekistan. Landet inngår i Sentral-Asia etter FNs geografiske inndeling.",
+      "explanation": "Tasjkent er hovedstad i Usbekistan. Landet inngår i Sentral-Asia etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-uz",
         "un-m49-geography"
@@ -163470,13 +163260,12 @@
         "world-geography",
         "geography-connections"
       ],
-      "prompt": "I hvilket land er Tashkent hovedstad?",
+      "prompt": "I hvilket land er Tasjkent hovedstad?",
       "answer": "Usbekistan",
       "acceptedAnswers": [
-        "Uzbekistan",
-        "Usbekistan"
+        "Uzbekistan"
       ],
-      "explanation": "Tashkent er hovedstad i Usbekistan.",
+      "explanation": "Tasjkent er hovedstad i Usbekistan.",
       "sourceIds": [
         "un-capital-uz"
       ],
@@ -163550,9 +163339,7 @@
       ],
       "prompt": "Hva er hovedstaden i Kina?",
       "answer": "Beijing",
-      "acceptedAnswers": [
-        "Beijing"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Beijing er hovedstad i Kina. Landet inngår i Øst-Asia etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-cn",
@@ -163588,8 +163375,7 @@
       "prompt": "I hvilket land er Beijing hovedstad?",
       "answer": "Kina",
       "acceptedAnswers": [
-        "China",
-        "Kina"
+        "China"
       ],
       "explanation": "Beijing er hovedstad i Kina.",
       "sourceIds": [
@@ -163666,10 +163452,7 @@
       ],
       "prompt": "I hvilket land er Tokyo hovedstad?",
       "answer": "Japan",
-      "acceptedAnswers": [
-        "Japan",
-        "Japan"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Tokyo er hovedstad i Japan.",
       "sourceIds": [
         "un-capital-jp"
@@ -163743,11 +163526,11 @@
         "world-geography"
       ],
       "prompt": "Hva er hovedstaden i Mongolia?",
-      "answer": "Ulaanbaatar",
+      "answer": "Ulan Bator",
       "acceptedAnswers": [
         "Ulaanbaatar"
       ],
-      "explanation": "Ulaanbaatar er hovedstad i Mongolia. Landet inngår i Øst-Asia etter FNs geografiske inndeling.",
+      "explanation": "Ulan Bator er hovedstad i Mongolia. Landet inngår i Øst-Asia etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-mn",
         "un-m49-geography"
@@ -163779,13 +163562,10 @@
         "world-geography",
         "geography-connections"
       ],
-      "prompt": "I hvilket land er Ulaanbaatar hovedstad?",
+      "prompt": "I hvilket land er Ulan Bator hovedstad?",
       "answer": "Mongolia",
-      "acceptedAnswers": [
-        "Mongolia",
-        "Mongolia"
-      ],
-      "explanation": "Ulaanbaatar er hovedstad i Mongolia.",
+      "acceptedAnswers": [],
+      "explanation": "Ulan Bator er hovedstad i Mongolia.",
       "sourceIds": [
         "un-capital-mn"
       ],
@@ -163859,9 +163639,7 @@
       ],
       "prompt": "Hva er hovedstaden i Sør-Korea?",
       "answer": "Seoul",
-      "acceptedAnswers": [
-        "Seoul"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Seoul er hovedstad i Sør-Korea. Landet inngår i Øst-Asia etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-kr",
@@ -163897,8 +163675,7 @@
       "prompt": "I hvilket land er Seoul hovedstad?",
       "answer": "Sør-Korea",
       "acceptedAnswers": [
-        "Republic of Korea",
-        "Sør-Korea"
+        "Republic of Korea"
       ],
       "explanation": "Seoul er hovedstad i Sør-Korea.",
       "sourceIds": [
@@ -163974,9 +163751,7 @@
       ],
       "prompt": "Hva er hovedstaden i Kambodsja?",
       "answer": "Phnom Penh",
-      "acceptedAnswers": [
-        "Phnom Penh"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Phnom Penh er hovedstad i Kambodsja. Landet inngår i Sørøst-Asia etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-kh",
@@ -164012,8 +163787,7 @@
       "prompt": "I hvilket land er Phnom Penh hovedstad?",
       "answer": "Kambodsja",
       "acceptedAnswers": [
-        "Cambodia",
-        "Kambodsja"
+        "Cambodia"
       ],
       "explanation": "Phnom Penh er hovedstad i Kambodsja.",
       "sourceIds": [
@@ -164128,9 +163902,7 @@
       ],
       "prompt": "Hva er hovedstaden i Laos?",
       "answer": "Vientiane",
-      "acceptedAnswers": [
-        "Vientiane"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Vientiane er hovedstad i Laos. Landet inngår i Sørøst-Asia etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-la",
@@ -164166,8 +163938,7 @@
       "prompt": "I hvilket land er Vientiane hovedstad?",
       "answer": "Laos",
       "acceptedAnswers": [
-        "Lao People's Democratic Republic",
-        "Laos"
+        "Lao People's Democratic Republic"
       ],
       "explanation": "Vientiane er hovedstad i Laos.",
       "sourceIds": [
@@ -164281,11 +164052,11 @@
         "world-geography"
       ],
       "prompt": "Hva er hovedstaden i Myanmar (Burma)?",
-      "answer": "Nay Pyi Taw",
+      "answer": "Naypyidaw",
       "acceptedAnswers": [
         "Nay Pyi Taw"
       ],
-      "explanation": "Nay Pyi Taw er hovedstad i Myanmar (Burma). Landet inngår i Sørøst-Asia etter FNs geografiske inndeling.",
+      "explanation": "Naypyidaw er hovedstad i Myanmar (Burma). Landet inngår i Sørøst-Asia etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-mm",
         "un-m49-geography"
@@ -164317,13 +164088,12 @@
         "world-geography",
         "geography-connections"
       ],
-      "prompt": "I hvilket land er Nay Pyi Taw hovedstad?",
+      "prompt": "I hvilket land er Naypyidaw hovedstad?",
       "answer": "Myanmar (Burma)",
       "acceptedAnswers": [
-        "Myanmar",
-        "Myanmar (Burma)"
+        "Myanmar"
       ],
-      "explanation": "Nay Pyi Taw er hovedstad i Myanmar (Burma).",
+      "explanation": "Naypyidaw er hovedstad i Myanmar (Burma).",
       "sourceIds": [
         "un-capital-mm"
       ],
@@ -164397,9 +164167,7 @@
       ],
       "prompt": "Hva er hovedstaden i Filippinene?",
       "answer": "Manila",
-      "acceptedAnswers": [
-        "Manila"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Manila er hovedstad i Filippinene. Landet inngår i Sørøst-Asia etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-ph",
@@ -164435,8 +164203,7 @@
       "prompt": "I hvilket land er Manila hovedstad?",
       "answer": "Filippinene",
       "acceptedAnswers": [
-        "Philippines",
-        "Filippinene"
+        "Philippines"
       ],
       "explanation": "Manila er hovedstad i Filippinene.",
       "sourceIds": [
@@ -164512,9 +164279,7 @@
       ],
       "prompt": "Hva er hovedstaden i Singapore?",
       "answer": "Singapore",
-      "acceptedAnswers": [
-        "Singapore"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Singapore er hovedstad i Singapore. Landet inngår i Sørøst-Asia etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-sg",
@@ -164549,10 +164314,7 @@
       ],
       "prompt": "I hvilket land er Singapore hovedstad?",
       "answer": "Singapore",
-      "acceptedAnswers": [
-        "Singapore",
-        "Singapore"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Singapore er hovedstad i Singapore.",
       "sourceIds": [
         "un-capital-sg"
@@ -164627,9 +164389,7 @@
       ],
       "prompt": "Hva er hovedstaden i Thailand?",
       "answer": "Bangkok",
-      "acceptedAnswers": [
-        "Bangkok"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Bangkok er hovedstad i Thailand. Landet inngår i Sørøst-Asia etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-th",
@@ -164664,10 +164424,7 @@
       ],
       "prompt": "I hvilket land er Bangkok hovedstad?",
       "answer": "Thailand",
-      "acceptedAnswers": [
-        "Thailand",
-        "Thailand"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Bangkok er hovedstad i Thailand.",
       "sourceIds": [
         "un-capital-th"
@@ -164742,9 +164499,7 @@
       ],
       "prompt": "Hva er hovedstaden i Øst-Timor?",
       "answer": "Dili",
-      "acceptedAnswers": [
-        "Dili"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Dili er hovedstad i Øst-Timor. Landet inngår i Sørøst-Asia etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-tl",
@@ -164780,8 +164535,7 @@
       "prompt": "I hvilket land er Dili hovedstad?",
       "answer": "Øst-Timor",
       "acceptedAnswers": [
-        "Timor-Leste",
-        "Øst-Timor"
+        "Timor-Leste"
       ],
       "explanation": "Dili er hovedstad i Øst-Timor.",
       "sourceIds": [
@@ -164857,9 +164611,7 @@
       ],
       "prompt": "Hva er hovedstaden i Vietnam?",
       "answer": "Hanoi",
-      "acceptedAnswers": [
-        "Hanoi"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Hanoi er hovedstad i Vietnam. Landet inngår i Sørøst-Asia etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-vn",
@@ -164895,8 +164647,7 @@
       "prompt": "I hvilket land er Hanoi hovedstad?",
       "answer": "Vietnam",
       "acceptedAnswers": [
-        "Viet Nam",
-        "Vietnam"
+        "Viet Nam"
       ],
       "explanation": "Hanoi er hovedstad i Vietnam.",
       "sourceIds": [
@@ -164972,9 +164723,7 @@
       ],
       "prompt": "Hva er hovedstaden i Afghanistan?",
       "answer": "Kabul",
-      "acceptedAnswers": [
-        "Kabul"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Kabul er hovedstad i Afghanistan. Landet inngår i Sør-Asia etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-af",
@@ -165009,10 +164758,7 @@
       ],
       "prompt": "I hvilket land er Kabul hovedstad?",
       "answer": "Afghanistan",
-      "acceptedAnswers": [
-        "Afghanistan",
-        "Afghanistan"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Kabul er hovedstad i Afghanistan.",
       "sourceIds": [
         "un-capital-af"
@@ -165087,9 +164833,7 @@
       ],
       "prompt": "Hva er hovedstaden i Bangladesh?",
       "answer": "Dhaka",
-      "acceptedAnswers": [
-        "Dhaka"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Dhaka er hovedstad i Bangladesh. Landet inngår i Sør-Asia etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-bd",
@@ -165124,10 +164868,7 @@
       ],
       "prompt": "I hvilket land er Dhaka hovedstad?",
       "answer": "Bangladesh",
-      "acceptedAnswers": [
-        "Bangladesh",
-        "Bangladesh"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Dhaka er hovedstad i Bangladesh.",
       "sourceIds": [
         "un-capital-bd"
@@ -165202,9 +164943,7 @@
       ],
       "prompt": "Hva er hovedstaden i Bhutan?",
       "answer": "Thimphu",
-      "acceptedAnswers": [
-        "Thimphu"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Thimphu er hovedstad i Bhutan. Landet inngår i Sør-Asia etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-bt",
@@ -165239,10 +164978,7 @@
       ],
       "prompt": "I hvilket land er Thimphu hovedstad?",
       "answer": "Bhutan",
-      "acceptedAnswers": [
-        "Bhutan",
-        "Bhutan"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Thimphu er hovedstad i Bhutan.",
       "sourceIds": [
         "un-capital-bt"
@@ -165317,9 +165053,7 @@
       ],
       "prompt": "Hva er hovedstaden i India?",
       "answer": "New Delhi",
-      "acceptedAnswers": [
-        "New Delhi"
-      ],
+      "acceptedAnswers": [],
       "explanation": "New Delhi er hovedstad i India. Landet inngår i Sør-Asia etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-in",
@@ -165354,10 +165088,7 @@
       ],
       "prompt": "I hvilket land er New Delhi hovedstad?",
       "answer": "India",
-      "acceptedAnswers": [
-        "India",
-        "India"
-      ],
+      "acceptedAnswers": [],
       "explanation": "New Delhi er hovedstad i India.",
       "sourceIds": [
         "un-capital-in"
@@ -165431,11 +165162,11 @@
         "world-geography"
       ],
       "prompt": "Hva er hovedstaden i Iran?",
-      "answer": "Tehran",
+      "answer": "Teheran",
       "acceptedAnswers": [
         "Tehran"
       ],
-      "explanation": "Tehran er hovedstad i Iran. Landet inngår i Sør-Asia etter FNs geografiske inndeling.",
+      "explanation": "Teheran er hovedstad i Iran. Landet inngår i Sør-Asia etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-ir",
         "un-m49-geography"
@@ -165467,13 +165198,12 @@
         "world-geography",
         "geography-connections"
       ],
-      "prompt": "I hvilket land er Tehran hovedstad?",
+      "prompt": "I hvilket land er Teheran hovedstad?",
       "answer": "Iran",
       "acceptedAnswers": [
-        "Iran (Islamic Republic of)",
-        "Iran"
+        "Iran (Islamic Republic of)"
       ],
-      "explanation": "Tehran er hovedstad i Iran.",
+      "explanation": "Teheran er hovedstad i Iran.",
       "sourceIds": [
         "un-capital-ir"
       ],
@@ -165546,11 +165276,11 @@
         "world-geography"
       ],
       "prompt": "Hva er hovedstaden i Nepal?",
-      "answer": "Kathmandu",
+      "answer": "Katmandu",
       "acceptedAnswers": [
         "Kathmandu"
       ],
-      "explanation": "Kathmandu er hovedstad i Nepal. Landet inngår i Sør-Asia etter FNs geografiske inndeling.",
+      "explanation": "Katmandu er hovedstad i Nepal. Landet inngår i Sør-Asia etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-np",
         "un-m49-geography"
@@ -165582,13 +165312,10 @@
         "world-geography",
         "geography-connections"
       ],
-      "prompt": "I hvilket land er Kathmandu hovedstad?",
+      "prompt": "I hvilket land er Katmandu hovedstad?",
       "answer": "Nepal",
-      "acceptedAnswers": [
-        "Nepal",
-        "Nepal"
-      ],
-      "explanation": "Kathmandu er hovedstad i Nepal.",
+      "acceptedAnswers": [],
+      "explanation": "Katmandu er hovedstad i Nepal.",
       "sourceIds": [
         "un-capital-np"
       ],
@@ -165662,9 +165389,7 @@
       ],
       "prompt": "Hva er hovedstaden i Pakistan?",
       "answer": "Islamabad",
-      "acceptedAnswers": [
-        "Islamabad"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Islamabad er hovedstad i Pakistan. Landet inngår i Sør-Asia etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-pk",
@@ -165699,10 +165424,7 @@
       ],
       "prompt": "I hvilket land er Islamabad hovedstad?",
       "answer": "Pakistan",
-      "acceptedAnswers": [
-        "Pakistan",
-        "Pakistan"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Islamabad er hovedstad i Pakistan.",
       "sourceIds": [
         "un-capital-pk"
@@ -165776,11 +165498,11 @@
         "world-geography"
       ],
       "prompt": "Hva er hovedstaden i Armenia?",
-      "answer": "Yerevan",
+      "answer": "Jerevan",
       "acceptedAnswers": [
         "Yerevan"
       ],
-      "explanation": "Yerevan er hovedstad i Armenia. Landet inngår i Vest-Asia etter FNs geografiske inndeling.",
+      "explanation": "Jerevan er hovedstad i Armenia. Landet inngår i Vest-Asia etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-am",
         "un-m49-geography"
@@ -165812,13 +165534,10 @@
         "world-geography",
         "geography-connections"
       ],
-      "prompt": "I hvilket land er Yerevan hovedstad?",
+      "prompt": "I hvilket land er Jerevan hovedstad?",
       "answer": "Armenia",
-      "acceptedAnswers": [
-        "Armenia",
-        "Armenia"
-      ],
-      "explanation": "Yerevan er hovedstad i Armenia.",
+      "acceptedAnswers": [],
+      "explanation": "Jerevan er hovedstad i Armenia.",
       "sourceIds": [
         "un-capital-am"
       ],
@@ -165892,9 +165611,7 @@
       ],
       "prompt": "Hva er hovedstaden i Aserbajdsjan?",
       "answer": "Baku",
-      "acceptedAnswers": [
-        "Baku"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Baku er hovedstad i Aserbajdsjan. Landet inngår i Vest-Asia etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-az",
@@ -165930,8 +165647,7 @@
       "prompt": "I hvilket land er Baku hovedstad?",
       "answer": "Aserbajdsjan",
       "acceptedAnswers": [
-        "Azerbaijan",
-        "Aserbajdsjan"
+        "Azerbaijan"
       ],
       "explanation": "Baku er hovedstad i Aserbajdsjan.",
       "sourceIds": [
@@ -166007,9 +165723,7 @@
       ],
       "prompt": "Hva er hovedstaden i Bahrain?",
       "answer": "Manama",
-      "acceptedAnswers": [
-        "Manama"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Manama er hovedstad i Bahrain. Landet inngår i Vest-Asia etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-bh",
@@ -166044,10 +165758,7 @@
       ],
       "prompt": "I hvilket land er Manama hovedstad?",
       "answer": "Bahrain",
-      "acceptedAnswers": [
-        "Bahrain",
-        "Bahrain"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Manama er hovedstad i Bahrain.",
       "sourceIds": [
         "un-capital-bh"
@@ -166121,11 +165832,11 @@
         "world-geography"
       ],
       "prompt": "Hva er hovedstaden i Kypros?",
-      "answer": "Nicosia",
+      "answer": "Nikosia",
       "acceptedAnswers": [
         "Nicosia"
       ],
-      "explanation": "Nicosia er hovedstad i Kypros. Landet inngår i Vest-Asia etter FNs geografiske inndeling.",
+      "explanation": "Nikosia er hovedstad i Kypros. Landet inngår i Vest-Asia etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-cy",
         "un-m49-geography"
@@ -166157,13 +165868,12 @@
         "world-geography",
         "geography-connections"
       ],
-      "prompt": "I hvilket land er Nicosia hovedstad?",
+      "prompt": "I hvilket land er Nikosia hovedstad?",
       "answer": "Kypros",
       "acceptedAnswers": [
-        "Cyprus",
-        "Kypros"
+        "Cyprus"
       ],
-      "explanation": "Nicosia er hovedstad i Kypros.",
+      "explanation": "Nikosia er hovedstad i Kypros.",
       "sourceIds": [
         "un-capital-cy"
       ],
@@ -166237,9 +165947,7 @@
       ],
       "prompt": "Hva er hovedstaden i Georgia?",
       "answer": "Tbilisi",
-      "acceptedAnswers": [
-        "Tbilisi"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Tbilisi er hovedstad i Georgia. Landet inngår i Vest-Asia etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-ge",
@@ -166274,10 +165982,7 @@
       ],
       "prompt": "I hvilket land er Tbilisi hovedstad?",
       "answer": "Georgia",
-      "acceptedAnswers": [
-        "Georgia",
-        "Georgia"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Tbilisi er hovedstad i Georgia.",
       "sourceIds": [
         "un-capital-ge"
@@ -166351,11 +166056,11 @@
         "world-geography"
       ],
       "prompt": "Hva er hovedstaden i Irak?",
-      "answer": "Baghdad",
+      "answer": "Bagdad",
       "acceptedAnswers": [
         "Baghdad"
       ],
-      "explanation": "Baghdad er hovedstad i Irak. Landet inngår i Vest-Asia etter FNs geografiske inndeling.",
+      "explanation": "Bagdad er hovedstad i Irak. Landet inngår i Vest-Asia etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-iq",
         "un-m49-geography"
@@ -166387,13 +166092,12 @@
         "world-geography",
         "geography-connections"
       ],
-      "prompt": "I hvilket land er Baghdad hovedstad?",
+      "prompt": "I hvilket land er Bagdad hovedstad?",
       "answer": "Irak",
       "acceptedAnswers": [
-        "Iraq",
-        "Irak"
+        "Iraq"
       ],
-      "explanation": "Baghdad er hovedstad i Irak.",
+      "explanation": "Bagdad er hovedstad i Irak.",
       "sourceIds": [
         "un-capital-iq"
       ],
@@ -166467,9 +166171,7 @@
       ],
       "prompt": "Hva er hovedstaden i Jordan?",
       "answer": "Amman",
-      "acceptedAnswers": [
-        "Amman"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Amman er hovedstad i Jordan. Landet inngår i Vest-Asia etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-jo",
@@ -166504,10 +166206,7 @@
       ],
       "prompt": "I hvilket land er Amman hovedstad?",
       "answer": "Jordan",
-      "acceptedAnswers": [
-        "Jordan",
-        "Jordan"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Amman er hovedstad i Jordan.",
       "sourceIds": [
         "un-capital-jo"
@@ -166581,11 +166280,11 @@
         "world-geography"
       ],
       "prompt": "Hva er hovedstaden i Kuwait?",
-      "answer": "Kuwait City",
+      "answer": "Kuwait by",
       "acceptedAnswers": [
         "Kuwait City"
       ],
-      "explanation": "Kuwait City er hovedstad i Kuwait. Landet inngår i Vest-Asia etter FNs geografiske inndeling.",
+      "explanation": "Kuwait by er hovedstad i Kuwait. Landet inngår i Vest-Asia etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-kw",
         "un-m49-geography"
@@ -166617,13 +166316,10 @@
         "world-geography",
         "geography-connections"
       ],
-      "prompt": "I hvilket land er Kuwait City hovedstad?",
+      "prompt": "I hvilket land er Kuwait by hovedstad?",
       "answer": "Kuwait",
-      "acceptedAnswers": [
-        "Kuwait",
-        "Kuwait"
-      ],
-      "explanation": "Kuwait City er hovedstad i Kuwait.",
+      "acceptedAnswers": [],
+      "explanation": "Kuwait by er hovedstad i Kuwait.",
       "sourceIds": [
         "un-capital-kw"
       ],
@@ -166697,9 +166393,7 @@
       ],
       "prompt": "Hva er hovedstaden i Libanon?",
       "answer": "Beirut",
-      "acceptedAnswers": [
-        "Beirut"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Beirut er hovedstad i Libanon. Landet inngår i Vest-Asia etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-lb",
@@ -166735,8 +166429,7 @@
       "prompt": "I hvilket land er Beirut hovedstad?",
       "answer": "Libanon",
       "acceptedAnswers": [
-        "Lebanon",
-        "Libanon"
+        "Lebanon"
       ],
       "explanation": "Beirut er hovedstad i Libanon.",
       "sourceIds": [
@@ -166812,9 +166505,7 @@
       ],
       "prompt": "Hva er hovedstaden i Oman?",
       "answer": "Muscat",
-      "acceptedAnswers": [
-        "Muscat"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Muscat er hovedstad i Oman. Landet inngår i Vest-Asia etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-om",
@@ -166849,10 +166540,7 @@
       ],
       "prompt": "I hvilket land er Muscat hovedstad?",
       "answer": "Oman",
-      "acceptedAnswers": [
-        "Oman",
-        "Oman"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Muscat er hovedstad i Oman.",
       "sourceIds": [
         "un-capital-om"
@@ -166927,9 +166615,7 @@
       ],
       "prompt": "Hva er hovedstaden i Qatar?",
       "answer": "Doha",
-      "acceptedAnswers": [
-        "Doha"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Doha er hovedstad i Qatar. Landet inngår i Vest-Asia etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-qa",
@@ -166964,10 +166650,7 @@
       ],
       "prompt": "I hvilket land er Doha hovedstad?",
       "answer": "Qatar",
-      "acceptedAnswers": [
-        "Qatar",
-        "Qatar"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Doha er hovedstad i Qatar.",
       "sourceIds": [
         "un-capital-qa"
@@ -167042,9 +166725,7 @@
       ],
       "prompt": "Hva er hovedstaden i Saudi-Arabia?",
       "answer": "Riyadh",
-      "acceptedAnswers": [
-        "Riyadh"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Riyadh er hovedstad i Saudi-Arabia. Landet inngår i Vest-Asia etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-sa",
@@ -167080,8 +166761,7 @@
       "prompt": "I hvilket land er Riyadh hovedstad?",
       "answer": "Saudi-Arabia",
       "acceptedAnswers": [
-        "Saudi Arabia",
-        "Saudi-Arabia"
+        "Saudi Arabia"
       ],
       "explanation": "Riyadh er hovedstad i Saudi-Arabia.",
       "sourceIds": [
@@ -167157,9 +166837,7 @@
       ],
       "prompt": "Hva er hovedstaden i Tyrkia?",
       "answer": "Ankara",
-      "acceptedAnswers": [
-        "Ankara"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Ankara er hovedstad i Tyrkia. Landet inngår i Vest-Asia etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-tr",
@@ -167195,8 +166873,7 @@
       "prompt": "I hvilket land er Ankara hovedstad?",
       "answer": "Tyrkia",
       "acceptedAnswers": [
-        "Türkiye",
-        "Tyrkia"
+        "Türkiye"
       ],
       "explanation": "Ankara er hovedstad i Tyrkia.",
       "sourceIds": [
@@ -167272,9 +166949,7 @@
       ],
       "prompt": "Hva er hovedstaden i De forente arabiske emirater?",
       "answer": "Abu Dhabi",
-      "acceptedAnswers": [
-        "Abu Dhabi"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Abu Dhabi er hovedstad i De forente arabiske emirater. Landet inngår i Vest-Asia etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-ae",
@@ -167310,8 +166985,7 @@
       "prompt": "I hvilket land er Abu Dhabi hovedstad?",
       "answer": "De forente arabiske emirater",
       "acceptedAnswers": [
-        "United Arab Emirates",
-        "De forente arabiske emirater"
+        "United Arab Emirates"
       ],
       "explanation": "Abu Dhabi er hovedstad i De forente arabiske emirater.",
       "sourceIds": [
@@ -167387,9 +167061,7 @@
       ],
       "prompt": "Hva er hovedstaden i Bulgaria?",
       "answer": "Sofia",
-      "acceptedAnswers": [
-        "Sofia"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Sofia er hovedstad i Bulgaria. Landet inngår i Øst-Europa etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-bg",
@@ -167424,10 +167096,7 @@
       ],
       "prompt": "I hvilket land er Sofia hovedstad?",
       "answer": "Bulgaria",
-      "acceptedAnswers": [
-        "Bulgaria",
-        "Bulgaria"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Sofia er hovedstad i Bulgaria.",
       "sourceIds": [
         "un-capital-bg"
@@ -167540,8 +167209,7 @@
       "prompt": "I hvilket land er Praha hovedstad?",
       "answer": "Tsjekkia",
       "acceptedAnswers": [
-        "Czechia",
-        "Tsjekkia"
+        "Czechia"
       ],
       "explanation": "Praha er hovedstad i Tsjekkia.",
       "sourceIds": [
@@ -167617,9 +167285,7 @@
       ],
       "prompt": "Hva er hovedstaden i Ungarn?",
       "answer": "Budapest",
-      "acceptedAnswers": [
-        "Budapest"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Budapest er hovedstad i Ungarn. Landet inngår i Øst-Europa etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-hu",
@@ -167655,8 +167321,7 @@
       "prompt": "I hvilket land er Budapest hovedstad?",
       "answer": "Ungarn",
       "acceptedAnswers": [
-        "Hungary",
-        "Ungarn"
+        "Hungary"
       ],
       "explanation": "Budapest er hovedstad i Ungarn.",
       "sourceIds": [
@@ -167770,8 +167435,7 @@
       "prompt": "I hvilket land er Warszawa hovedstad?",
       "answer": "Polen",
       "acceptedAnswers": [
-        "Poland",
-        "Polen"
+        "Poland"
       ],
       "explanation": "Warszawa er hovedstad i Polen.",
       "sourceIds": [
@@ -167846,11 +167510,13 @@
         "world-geography"
       ],
       "prompt": "Hva er hovedstaden i Romania?",
-      "answer": "Bucharest",
+      "answer": "București",
       "acceptedAnswers": [
-        "Bucharest"
+        "Bucharest",
+        "Bucuresti",
+        "Bukarest"
       ],
-      "explanation": "Bucharest er hovedstad i Romania. Landet inngår i Øst-Europa etter FNs geografiske inndeling.",
+      "explanation": "București er hovedstad i Romania. Landet inngår i Øst-Europa etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-ro",
         "un-m49-geography"
@@ -167882,13 +167548,10 @@
         "world-geography",
         "geography-connections"
       ],
-      "prompt": "I hvilket land er Bucharest hovedstad?",
+      "prompt": "I hvilket land er București hovedstad?",
       "answer": "Romania",
-      "acceptedAnswers": [
-        "Romania",
-        "Romania"
-      ],
-      "explanation": "Bucharest er hovedstad i Romania.",
+      "acceptedAnswers": [],
+      "explanation": "București er hovedstad i Romania.",
       "sourceIds": [
         "un-capital-ro"
       ],
@@ -167962,9 +167625,7 @@
       ],
       "prompt": "Hva er hovedstaden i Slovakia?",
       "answer": "Bratislava",
-      "acceptedAnswers": [
-        "Bratislava"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Bratislava er hovedstad i Slovakia. Landet inngår i Øst-Europa etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-sk",
@@ -167999,10 +167660,7 @@
       ],
       "prompt": "I hvilket land er Bratislava hovedstad?",
       "answer": "Slovakia",
-      "acceptedAnswers": [
-        "Slovakia",
-        "Slovakia"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Bratislava er hovedstad i Slovakia.",
       "sourceIds": [
         "un-capital-sk"
@@ -168077,9 +167735,7 @@
       ],
       "prompt": "Hva er hovedstaden i Ukraina?",
       "answer": "Kyiv",
-      "acceptedAnswers": [
-        "Kyiv"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Kyiv er hovedstad i Ukraina. Landet inngår i Øst-Europa etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-ua",
@@ -168115,8 +167771,7 @@
       "prompt": "I hvilket land er Kyiv hovedstad?",
       "answer": "Ukraina",
       "acceptedAnswers": [
-        "Ukraine",
-        "Ukraina"
+        "Ukraine"
       ],
       "explanation": "Kyiv er hovedstad i Ukraina.",
       "sourceIds": [
@@ -168194,8 +167849,7 @@
       "prompt": "I hvilket land er København hovedstad?",
       "answer": "Danmark",
       "acceptedAnswers": [
-        "Denmark",
-        "Danmark"
+        "Denmark"
       ],
       "explanation": "København er hovedstad i Danmark.",
       "sourceIds": [
@@ -168271,9 +167925,7 @@
       ],
       "prompt": "Hva er hovedstaden i Estland?",
       "answer": "Tallinn",
-      "acceptedAnswers": [
-        "Tallinn"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Tallinn er hovedstad i Estland. Landet inngår i Nord-Europa etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-ee",
@@ -168309,8 +167961,7 @@
       "prompt": "I hvilket land er Tallinn hovedstad?",
       "answer": "Estland",
       "acceptedAnswers": [
-        "Estonia",
-        "Estland"
+        "Estonia"
       ],
       "explanation": "Tallinn er hovedstad i Estland.",
       "sourceIds": [
@@ -168387,10 +168038,7 @@
       ],
       "prompt": "I hvilket land er Helsinki hovedstad?",
       "answer": "Finland",
-      "acceptedAnswers": [
-        "Finland",
-        "Finland"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Helsinki er hovedstad i Finland.",
       "sourceIds": [
         "un-capital-fi"
@@ -168503,8 +168151,7 @@
       "prompt": "I hvilket land er Reykjavík hovedstad?",
       "answer": "Island",
       "acceptedAnswers": [
-        "Iceland",
-        "Island"
+        "Iceland"
       ],
       "explanation": "Reykjavík er hovedstad i Island.",
       "sourceIds": [
@@ -168580,9 +168227,7 @@
       ],
       "prompt": "Hva er hovedstaden i Irland?",
       "answer": "Dublin",
-      "acceptedAnswers": [
-        "Dublin"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Dublin er hovedstad i Irland. Landet inngår i Nord-Europa etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-ie",
@@ -168618,8 +168263,7 @@
       "prompt": "I hvilket land er Dublin hovedstad?",
       "answer": "Irland",
       "acceptedAnswers": [
-        "Ireland",
-        "Irland"
+        "Ireland"
       ],
       "explanation": "Dublin er hovedstad i Irland.",
       "sourceIds": [
@@ -168695,9 +168339,7 @@
       ],
       "prompt": "Hva er hovedstaden i Latvia?",
       "answer": "Riga",
-      "acceptedAnswers": [
-        "Riga"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Riga er hovedstad i Latvia. Landet inngår i Nord-Europa etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-lv",
@@ -168732,10 +168374,7 @@
       ],
       "prompt": "I hvilket land er Riga hovedstad?",
       "answer": "Latvia",
-      "acceptedAnswers": [
-        "Latvia",
-        "Latvia"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Riga er hovedstad i Latvia.",
       "sourceIds": [
         "un-capital-lv"
@@ -168810,9 +168449,7 @@
       ],
       "prompt": "Hva er hovedstaden i Litauen?",
       "answer": "Vilnius",
-      "acceptedAnswers": [
-        "Vilnius"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Vilnius er hovedstad i Litauen. Landet inngår i Nord-Europa etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-lt",
@@ -168848,8 +168485,7 @@
       "prompt": "I hvilket land er Vilnius hovedstad?",
       "answer": "Litauen",
       "acceptedAnswers": [
-        "Lithuania",
-        "Litauen"
+        "Lithuania"
       ],
       "explanation": "Vilnius er hovedstad i Litauen.",
       "sourceIds": [
@@ -168927,8 +168563,7 @@
       "prompt": "I hvilket land er Oslo hovedstad?",
       "answer": "Norge",
       "acceptedAnswers": [
-        "Norway",
-        "Norge"
+        "Norway"
       ],
       "explanation": "Oslo er hovedstad i Norge.",
       "sourceIds": [
@@ -169006,8 +168641,7 @@
       "prompt": "I hvilket land er Stockholm hovedstad?",
       "answer": "Sverige",
       "acceptedAnswers": [
-        "Sweden",
-        "Sverige"
+        "Sweden"
       ],
       "explanation": "Stockholm er hovedstad i Sverige.",
       "sourceIds": [
@@ -169083,9 +168717,7 @@
       ],
       "prompt": "Hva er hovedstaden i Storbritannia?",
       "answer": "London",
-      "acceptedAnswers": [
-        "London"
-      ],
+      "acceptedAnswers": [],
       "explanation": "London er hovedstad i Storbritannia. Landet inngår i Nord-Europa etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-gb",
@@ -169121,8 +168753,7 @@
       "prompt": "I hvilket land er London hovedstad?",
       "answer": "Storbritannia",
       "acceptedAnswers": [
-        "United Kingdom of Great Britain and Northern Ireland",
-        "Storbritannia"
+        "United Kingdom of Great Britain and Northern Ireland"
       ],
       "explanation": "London er hovedstad i Storbritannia.",
       "sourceIds": [
@@ -169198,9 +168829,7 @@
       ],
       "prompt": "Hva er hovedstaden i Albania?",
       "answer": "Tirana",
-      "acceptedAnswers": [
-        "Tirana"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Tirana er hovedstad i Albania. Landet inngår i Sør-Europa etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-al",
@@ -169235,10 +168864,7 @@
       ],
       "prompt": "I hvilket land er Tirana hovedstad?",
       "answer": "Albania",
-      "acceptedAnswers": [
-        "Albania",
-        "Albania"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Tirana er hovedstad i Albania.",
       "sourceIds": [
         "un-capital-al"
@@ -169313,9 +168939,7 @@
       ],
       "prompt": "Hva er hovedstaden i Bosnia-Hercegovina?",
       "answer": "Sarajevo",
-      "acceptedAnswers": [
-        "Sarajevo"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Sarajevo er hovedstad i Bosnia-Hercegovina. Landet inngår i Sør-Europa etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-ba",
@@ -169351,8 +168975,7 @@
       "prompt": "I hvilket land er Sarajevo hovedstad?",
       "answer": "Bosnia-Hercegovina",
       "acceptedAnswers": [
-        "Bosnia and Herzegovina",
-        "Bosnia-Hercegovina"
+        "Bosnia and Herzegovina"
       ],
       "explanation": "Sarajevo er hovedstad i Bosnia-Hercegovina.",
       "sourceIds": [
@@ -169428,9 +169051,7 @@
       ],
       "prompt": "Hva er hovedstaden i Kroatia?",
       "answer": "Zagreb",
-      "acceptedAnswers": [
-        "Zagreb"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Zagreb er hovedstad i Kroatia. Landet inngår i Sør-Europa etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-hr",
@@ -169466,8 +169087,7 @@
       "prompt": "I hvilket land er Zagreb hovedstad?",
       "answer": "Kroatia",
       "acceptedAnswers": [
-        "Croatia",
-        "Kroatia"
+        "Croatia"
       ],
       "explanation": "Zagreb er hovedstad i Kroatia.",
       "sourceIds": [
@@ -169581,8 +169201,7 @@
       "prompt": "I hvilket land er Athen hovedstad?",
       "answer": "Hellas",
       "acceptedAnswers": [
-        "Greece",
-        "Hellas"
+        "Greece"
       ],
       "explanation": "Athen er hovedstad i Hellas.",
       "sourceIds": [
@@ -169660,8 +169279,7 @@
       "prompt": "I hvilket land er Roma hovedstad?",
       "answer": "Italia",
       "acceptedAnswers": [
-        "Italy",
-        "Italia"
+        "Italy"
       ],
       "explanation": "Roma er hovedstad i Italia.",
       "sourceIds": [
@@ -169737,9 +169355,7 @@
       ],
       "prompt": "Hva er hovedstaden i Malta?",
       "answer": "Valletta",
-      "acceptedAnswers": [
-        "Valletta"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Valletta er hovedstad i Malta. Landet inngår i Sør-Europa etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-mt",
@@ -169774,10 +169390,7 @@
       ],
       "prompt": "I hvilket land er Valletta hovedstad?",
       "answer": "Malta",
-      "acceptedAnswers": [
-        "Malta",
-        "Malta"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Valletta er hovedstad i Malta.",
       "sourceIds": [
         "un-capital-mt"
@@ -169852,9 +169465,7 @@
       ],
       "prompt": "Hva er hovedstaden i Montenegro?",
       "answer": "Podgorica",
-      "acceptedAnswers": [
-        "Podgorica"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Podgorica er hovedstad i Montenegro. Landet inngår i Sør-Europa etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-me",
@@ -169889,10 +169500,7 @@
       ],
       "prompt": "I hvilket land er Podgorica hovedstad?",
       "answer": "Montenegro",
-      "acceptedAnswers": [
-        "Montenegro",
-        "Montenegro"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Podgorica er hovedstad i Montenegro.",
       "sourceIds": [
         "un-capital-me"
@@ -169967,9 +169575,7 @@
       ],
       "prompt": "Hva er hovedstaden i Nord-Makedonia?",
       "answer": "Skopje",
-      "acceptedAnswers": [
-        "Skopje"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Skopje er hovedstad i Nord-Makedonia. Landet inngår i Sør-Europa etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-mk",
@@ -170005,8 +169611,7 @@
       "prompt": "I hvilket land er Skopje hovedstad?",
       "answer": "Nord-Makedonia",
       "acceptedAnswers": [
-        "North Macedonia",
-        "Nord-Makedonia"
+        "North Macedonia"
       ],
       "explanation": "Skopje er hovedstad i Nord-Makedonia.",
       "sourceIds": [
@@ -170119,10 +169724,7 @@
       ],
       "prompt": "I hvilket land er Lisboa hovedstad?",
       "answer": "Portugal",
-      "acceptedAnswers": [
-        "Portugal",
-        "Portugal"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Lisboa er hovedstad i Portugal.",
       "sourceIds": [
         "un-capital-pt"
@@ -170196,11 +169798,11 @@
         "world-geography"
       ],
       "prompt": "Hva er hovedstaden i Serbia?",
-      "answer": "Belgrade",
+      "answer": "Beograd",
       "acceptedAnswers": [
         "Belgrade"
       ],
-      "explanation": "Belgrade er hovedstad i Serbia. Landet inngår i Sør-Europa etter FNs geografiske inndeling.",
+      "explanation": "Beograd er hovedstad i Serbia. Landet inngår i Sør-Europa etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-rs",
         "un-m49-geography"
@@ -170232,13 +169834,10 @@
         "world-geography",
         "geography-connections"
       ],
-      "prompt": "I hvilket land er Belgrade hovedstad?",
+      "prompt": "I hvilket land er Beograd hovedstad?",
       "answer": "Serbia",
-      "acceptedAnswers": [
-        "Serbia",
-        "Serbia"
-      ],
-      "explanation": "Belgrade er hovedstad i Serbia.",
+      "acceptedAnswers": [],
+      "explanation": "Beograd er hovedstad i Serbia.",
       "sourceIds": [
         "un-capital-rs"
       ],
@@ -170312,9 +169911,7 @@
       ],
       "prompt": "Hva er hovedstaden i Slovenia?",
       "answer": "Ljubljana",
-      "acceptedAnswers": [
-        "Ljubljana"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Ljubljana er hovedstad i Slovenia. Landet inngår i Sør-Europa etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-si",
@@ -170349,10 +169946,7 @@
       ],
       "prompt": "I hvilket land er Ljubljana hovedstad?",
       "answer": "Slovenia",
-      "acceptedAnswers": [
-        "Slovenia",
-        "Slovenia"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Ljubljana er hovedstad i Slovenia.",
       "sourceIds": [
         "un-capital-si"
@@ -170429,8 +170023,7 @@
       "prompt": "I hvilket land er Madrid hovedstad?",
       "answer": "Spania",
       "acceptedAnswers": [
-        "Spain",
-        "Spania"
+        "Spain"
       ],
       "explanation": "Madrid er hovedstad i Spania.",
       "sourceIds": [
@@ -170544,8 +170137,7 @@
       "prompt": "I hvilket land er Wien hovedstad?",
       "answer": "Østerrike",
       "acceptedAnswers": [
-        "Austria",
-        "Østerrike"
+        "Austria"
       ],
       "explanation": "Wien er hovedstad i Østerrike.",
       "sourceIds": [
@@ -170659,8 +170251,7 @@
       "prompt": "I hvilket land er Brussel hovedstad?",
       "answer": "Belgia",
       "acceptedAnswers": [
-        "Belgium",
-        "Belgia"
+        "Belgium"
       ],
       "explanation": "Brussel er hovedstad i Belgia.",
       "sourceIds": [
@@ -170738,8 +170329,7 @@
       "prompt": "I hvilket land er Paris hovedstad?",
       "answer": "Frankrike",
       "acceptedAnswers": [
-        "France",
-        "Frankrike"
+        "France"
       ],
       "explanation": "Paris er hovedstad i Frankrike.",
       "sourceIds": [
@@ -170817,8 +170407,7 @@
       "prompt": "I hvilket land er Berlin hovedstad?",
       "answer": "Tyskland",
       "acceptedAnswers": [
-        "Germany",
-        "Tyskland"
+        "Germany"
       ],
       "explanation": "Berlin er hovedstad i Tyskland.",
       "sourceIds": [
@@ -170894,9 +170483,7 @@
       ],
       "prompt": "Hva er hovedstaden i Luxemburg?",
       "answer": "Luxembourg",
-      "acceptedAnswers": [
-        "Luxembourg"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Luxembourg er hovedstad i Luxemburg. Landet inngår i Vest-Europa etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-lu",
@@ -170932,8 +170519,7 @@
       "prompt": "I hvilket land er Luxembourg hovedstad?",
       "answer": "Luxemburg",
       "acceptedAnswers": [
-        "Luxembourg",
-        "Luxemburg"
+        "Luxembourg"
       ],
       "explanation": "Luxembourg er hovedstad i Luxemburg.",
       "sourceIds": [
@@ -171087,9 +170673,7 @@
       ],
       "prompt": "Hva er hovedstaden i Australia?",
       "answer": "Canberra",
-      "acceptedAnswers": [
-        "Canberra"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Canberra er hovedstad i Australia. Landet inngår i Australia og New Zealand etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-au",
@@ -171124,10 +170708,7 @@
       ],
       "prompt": "I hvilket land er Canberra hovedstad?",
       "answer": "Australia",
-      "acceptedAnswers": [
-        "Australia",
-        "Australia"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Canberra er hovedstad i Australia.",
       "sourceIds": [
         "un-capital-au"
@@ -171202,9 +170783,7 @@
       ],
       "prompt": "Hva er hovedstaden i New Zealand?",
       "answer": "Wellington",
-      "acceptedAnswers": [
-        "Wellington"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Wellington er hovedstad i New Zealand. Landet inngår i Australia og New Zealand etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-nz",
@@ -171239,10 +170818,7 @@
       ],
       "prompt": "I hvilket land er Wellington hovedstad?",
       "answer": "New Zealand",
-      "acceptedAnswers": [
-        "New Zealand",
-        "New Zealand"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Wellington er hovedstad i New Zealand.",
       "sourceIds": [
         "un-capital-nz"
@@ -171279,9 +170855,7 @@
       ],
       "prompt": "I hvilken geografisk delregion plasserer FN Fiji?",
       "answer": "Melanesia",
-      "acceptedAnswers": [
-        "Melanesia"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Fiji inngår i Melanesia i FNs statistiske M49-inndeling. Dette er en statistisk inndeling, ikke en politisk allianse.",
       "sourceIds": [
         "un-m49-geography"
@@ -171317,9 +170891,7 @@
       ],
       "prompt": "Hva er hovedstaden i Fiji?",
       "answer": "Suva",
-      "acceptedAnswers": [
-        "Suva"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Suva er hovedstad i Fiji. Landet inngår i Melanesia etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-fj",
@@ -171354,10 +170926,7 @@
       ],
       "prompt": "I hvilket land er Suva hovedstad?",
       "answer": "Fiji",
-      "acceptedAnswers": [
-        "Fiji",
-        "Fiji"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Suva er hovedstad i Fiji.",
       "sourceIds": [
         "un-capital-fj"
@@ -171394,9 +170963,7 @@
       ],
       "prompt": "I hvilken geografisk delregion plasserer FN Papua Ny-Guinea?",
       "answer": "Melanesia",
-      "acceptedAnswers": [
-        "Melanesia"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Papua Ny-Guinea inngår i Melanesia i FNs statistiske M49-inndeling. Dette er en statistisk inndeling, ikke en politisk allianse.",
       "sourceIds": [
         "un-m49-geography"
@@ -171432,9 +170999,7 @@
       ],
       "prompt": "Hva er hovedstaden i Papua Ny-Guinea?",
       "answer": "Port Moresby",
-      "acceptedAnswers": [
-        "Port Moresby"
-      ],
+      "acceptedAnswers": [],
       "explanation": "Port Moresby er hovedstad i Papua Ny-Guinea. Landet inngår i Melanesia etter FNs geografiske inndeling.",
       "sourceIds": [
         "un-capital-pg",
@@ -171470,8 +171035,7 @@
       "prompt": "I hvilket land er Port Moresby hovedstad?",
       "answer": "Papua Ny-Guinea",
       "acceptedAnswers": [
-        "Papua New Guinea",
-        "Papua Ny-Guinea"
+        "Papua New Guinea"
       ],
       "explanation": "Port Moresby er hovedstad i Papua Ny-Guinea.",
       "sourceIds": [
@@ -172496,9 +172060,7 @@
       "id": "nobel-people-physics-1901-r-ntgenstraler",
       "prompt": "Hvilken prisvinner ble anerkjent i 1901 for røntgenstråler?",
       "answer": "Wilhelm Conrad Röntgen",
-      "acceptedAnswers": [
-        "Wilhelm Conrad Röntgen"
-      ],
+      "acceptedAnswers": [],
       "answerType": "person",
       "learningStage": "details",
       "difficultyFamily": "award-person",
@@ -172617,7 +172179,6 @@
       "answer": "Pierre Curie, Marie Curie",
       "answerFormat": "explanation",
       "acceptedAnswers": [
-        "Pierre Curie, Marie Curie",
         "Pierre Curie og Marie Curie",
         "Pierre Curie; Marie Curie",
         "Marie Curie, Pierre Curie",
@@ -172737,9 +172298,7 @@
       "id": "nobel-people-chemistry-1911-radium-og-polonium",
       "prompt": "Hvilken prisvinner ble anerkjent i 1911 for radium og polonium?",
       "answer": "Marie Curie",
-      "acceptedAnswers": [
-        "Marie Curie"
-      ],
+      "acceptedAnswers": [],
       "answerType": "person",
       "learningStage": "details",
       "difficultyFamily": "award-person",
@@ -172853,9 +172412,7 @@
       "id": "nobel-people-physics-1918-energikvanter",
       "prompt": "Hvilken prisvinner ble anerkjent i 1918 for energikvanter?",
       "answer": "Max Planck",
-      "acceptedAnswers": [
-        "Max Planck"
-      ],
+      "acceptedAnswers": [],
       "answerType": "person",
       "learningStage": "details",
       "difficultyFamily": "award-person",
@@ -172969,9 +172526,7 @@
       "id": "nobel-people-physics-1921-fotoelektrisk-effekt",
       "prompt": "Hvilken prisvinner ble anerkjent i 1921 for fotoelektrisk effekt?",
       "answer": "Albert Einstein",
-      "acceptedAnswers": [
-        "Albert Einstein"
-      ],
+      "acceptedAnswers": [],
       "answerType": "person",
       "learningStage": "details",
       "difficultyFamily": "award-person",
@@ -173085,9 +172640,7 @@
       "id": "nobel-people-physics-1922-atomstruktur",
       "prompt": "Hvilken prisvinner ble anerkjent i 1922 for atomstruktur?",
       "answer": "Niels Bohr",
-      "acceptedAnswers": [
-        "Niels Bohr"
-      ],
+      "acceptedAnswers": [],
       "answerType": "person",
       "learningStage": "details",
       "difficultyFamily": "award-person",
@@ -173201,9 +172754,7 @@
       "id": "nobel-people-chemistry-1908-radioaktiv-nedbrytning",
       "prompt": "Hvilken prisvinner ble anerkjent i 1908 for radioaktiv nedbrytning?",
       "answer": "Ernest Rutherford",
-      "acceptedAnswers": [
-        "Ernest Rutherford"
-      ],
+      "acceptedAnswers": [],
       "answerType": "person",
       "learningStage": "details",
       "difficultyFamily": "award-person",
@@ -173433,9 +172984,7 @@
       "id": "nobel-people-physics-1932-kvantemekanikk",
       "prompt": "Hvilken prisvinner ble anerkjent i 1932 for kvantemekanikk?",
       "answer": "Werner Heisenberg",
-      "acceptedAnswers": [
-        "Werner Heisenberg"
-      ],
+      "acceptedAnswers": [],
       "answerType": "person",
       "learningStage": "details",
       "difficultyFamily": "award-person",
@@ -173554,7 +173103,6 @@
       "answer": "Erwin Schrödinger, Paul A.M. Dirac",
       "answerFormat": "explanation",
       "acceptedAnswers": [
-        "Erwin Schrödinger, Paul A.M. Dirac",
         "Erwin Schrödinger og Paul A.M. Dirac",
         "Erwin Schrödinger; Paul A.M. Dirac",
         "Paul A.M. Dirac, Erwin Schrödinger",
@@ -173674,9 +173222,7 @@
       "id": "nobel-people-physics-1935-n-ytronet",
       "prompt": "Hvilken prisvinner ble anerkjent i 1935 for nøytronet?",
       "answer": "James Chadwick",
-      "acceptedAnswers": [
-        "James Chadwick"
-      ],
+      "acceptedAnswers": [],
       "answerType": "person",
       "learningStage": "details",
       "difficultyFamily": "award-person",
@@ -173795,7 +173341,6 @@
       "answer": "Frédéric Joliot, Irène Joliot-Curie",
       "answerFormat": "explanation",
       "acceptedAnswers": [
-        "Frédéric Joliot, Irène Joliot-Curie",
         "Frédéric Joliot og Irène Joliot-Curie",
         "Frédéric Joliot; Irène Joliot-Curie",
         "Irène Joliot-Curie, Frédéric Joliot",
@@ -173915,9 +173460,7 @@
       "id": "nobel-people-physics-1938-langsomme-n-ytroner",
       "prompt": "Hvilken prisvinner ble anerkjent i 1938 for langsomme nøytroner?",
       "answer": "Enrico Fermi",
-      "acceptedAnswers": [
-        "Enrico Fermi"
-      ],
+      "acceptedAnswers": [],
       "answerType": "person",
       "learningStage": "details",
       "difficultyFamily": "award-person",
@@ -174031,9 +173574,7 @@
       "id": "nobel-people-chemistry-1944-kjernefysisk-fisjon",
       "prompt": "Hvilken prisvinner ble anerkjent i 1944 for kjernefysisk fisjon?",
       "answer": "Otto Hahn",
-      "acceptedAnswers": [
-        "Otto Hahn"
-      ],
+      "acceptedAnswers": [],
       "answerType": "person",
       "learningStage": "details",
       "difficultyFamily": "award-person",
@@ -174155,7 +173696,6 @@
       "answer": "Alexander Fleming, Ernst B. Chain, Howard Florey",
       "answerFormat": "explanation",
       "acceptedAnswers": [
-        "Alexander Fleming, Ernst B. Chain, Howard Florey",
         "Alexander Fleming og Ernst B. Chain og Howard Florey",
         "Alexander Fleming; Ernst B. Chain; Howard Florey",
         "Alexander Fleming, Ernst B. Chain og Howard Florey",
@@ -174293,9 +173833,7 @@
       "id": "nobel-people-chemistry-1954-kjemiske-bindinger",
       "prompt": "Hvilken prisvinner ble anerkjent i 1954 for kjemiske bindinger?",
       "answer": "Linus Pauling",
-      "acceptedAnswers": [
-        "Linus Pauling"
-      ],
+      "acceptedAnswers": [],
       "answerType": "person",
       "learningStage": "details",
       "difficultyFamily": "award-person",
@@ -174417,7 +173955,6 @@
       "answer": "William B. Shockley, John Bardeen, Walter H. Brattain",
       "answerFormat": "explanation",
       "acceptedAnswers": [
-        "William B. Shockley, John Bardeen, Walter H. Brattain",
         "William B. Shockley og John Bardeen og Walter H. Brattain",
         "William B. Shockley; John Bardeen; Walter H. Brattain",
         "William B. Shockley, John Bardeen og Walter H. Brattain",
@@ -174555,9 +174092,7 @@
       "id": "nobel-people-chemistry-1958-insulinets-struktur",
       "prompt": "Hvilken prisvinner ble anerkjent i 1958 for insulinets struktur?",
       "answer": "Frederick Sanger",
-      "acceptedAnswers": [
-        "Frederick Sanger"
-      ],
+      "acceptedAnswers": [],
       "answerType": "person",
       "learningStage": "details",
       "difficultyFamily": "award-person",
@@ -174679,7 +174214,6 @@
       "answer": "Francis Crick, James Watson, Maurice Wilkins",
       "answerFormat": "explanation",
       "acceptedAnswers": [
-        "Francis Crick, James Watson, Maurice Wilkins",
         "Francis Crick og James Watson og Maurice Wilkins",
         "Francis Crick; James Watson; Maurice Wilkins",
         "Francis Crick, James Watson og Maurice Wilkins",
@@ -174822,7 +174356,6 @@
       "answer": "Maria Goeppert Mayer, J. Hans D. Jensen",
       "answerFormat": "explanation",
       "acceptedAnswers": [
-        "Maria Goeppert Mayer, J. Hans D. Jensen",
         "Maria Goeppert Mayer og J. Hans D. Jensen",
         "Maria Goeppert Mayer; J. Hans D. Jensen",
         "J. Hans D. Jensen, Maria Goeppert Mayer",
@@ -174942,9 +174475,7 @@
       "id": "nobel-people-chemistry-1964-r-ntgenanalyse-av-biokjemiske-strukturer",
       "prompt": "Hvilken prisvinner ble anerkjent i 1964 for røntgenanalyse av biokjemiske strukturer?",
       "answer": "Dorothy Crowfoot Hodgkin",
-      "acceptedAnswers": [
-        "Dorothy Crowfoot Hodgkin"
-      ],
+      "acceptedAnswers": [],
       "answerType": "person",
       "learningStage": "details",
       "difficultyFamily": "award-person",
@@ -175066,7 +174597,6 @@
       "answer": "Sin-Itiro Tomonaga, Julian Schwinger, Richard P. Feynman",
       "answerFormat": "explanation",
       "acceptedAnswers": [
-        "Sin-Itiro Tomonaga, Julian Schwinger, Richard P. Feynman",
         "Sin-Itiro Tomonaga og Julian Schwinger og Richard P. Feynman",
         "Sin-Itiro Tomonaga; Julian Schwinger; Richard P. Feynman",
         "Sin-Itiro Tomonaga, Julian Schwinger og Richard P. Feynman",
@@ -175212,7 +174742,6 @@
       "answer": "Robert W. Holley, H. Gobind Khorana, Marshall W. Nirenberg",
       "answerFormat": "explanation",
       "acceptedAnswers": [
-        "Robert W. Holley, H. Gobind Khorana, Marshall W. Nirenberg",
         "Robert W. Holley og H. Gobind Khorana og Marshall W. Nirenberg",
         "Robert W. Holley; H. Gobind Khorana; Marshall W. Nirenberg",
         "Robert W. Holley, H. Gobind Khorana og Marshall W. Nirenberg",
@@ -175358,7 +174887,6 @@
       "answer": "John Bardeen, Leon N. Cooper, Robert Schrieffer",
       "answerFormat": "explanation",
       "acceptedAnswers": [
-        "John Bardeen, Leon N. Cooper, Robert Schrieffer",
         "John Bardeen og Leon N. Cooper og Robert Schrieffer",
         "John Bardeen; Leon N. Cooper; Robert Schrieffer",
         "John Bardeen, Leon N. Cooper og Robert Schrieffer",
@@ -175501,7 +175029,6 @@
       "answer": "Walter Gilbert, Frederick Sanger",
       "answerFormat": "explanation",
       "acceptedAnswers": [
-        "Walter Gilbert, Frederick Sanger",
         "Walter Gilbert og Frederick Sanger",
         "Walter Gilbert; Frederick Sanger",
         "Frederick Sanger, Walter Gilbert",
@@ -175621,9 +175148,7 @@
       "id": "nobel-people-medicine-1983-bevegelige-genetiske-elementer",
       "prompt": "Hvilken prisvinner ble anerkjent i 1983 for bevegelige genetiske elementer?",
       "answer": "Barbara McClintock",
-      "acceptedAnswers": [
-        "Barbara McClintock"
-      ],
+      "acceptedAnswers": [],
       "answerType": "person",
       "learningStage": "details",
       "difficultyFamily": "award-person",
@@ -175737,9 +175262,7 @@
       "id": "nobel-people-physics-1983-stjerners-struktur-og-utvikling",
       "prompt": "Hvilken prisvinner ble anerkjent i 1983 for stjerners struktur og utvikling?",
       "answer": "Subrahmanyan Chandrasekhar",
-      "acceptedAnswers": [
-        "Subrahmanyan Chandrasekhar"
-      ],
+      "acceptedAnswers": [],
       "answerType": "person",
       "learningStage": "details",
       "difficultyFamily": "award-person",
@@ -175858,7 +175381,6 @@
       "answer": "Barry J. Marshall, J. Robin Warren",
       "answerFormat": "explanation",
       "acceptedAnswers": [
-        "Barry J. Marshall, J. Robin Warren",
         "Barry J. Marshall og J. Robin Warren",
         "Barry J. Marshall; J. Robin Warren",
         "J. Robin Warren, Barry J. Marshall",
@@ -175986,7 +175508,6 @@
       "answer": "Elizabeth H. Blackburn, Carol W. Greider, Jack W. Szostak",
       "answerFormat": "explanation",
       "acceptedAnswers": [
-        "Elizabeth H. Blackburn, Carol W. Greider, Jack W. Szostak",
         "Elizabeth H. Blackburn og Carol W. Greider og Jack W. Szostak",
         "Elizabeth H. Blackburn; Carol W. Greider; Jack W. Szostak",
         "Elizabeth H. Blackburn, Carol W. Greider og Jack W. Szostak",
@@ -176132,7 +175653,6 @@
       "answer": "Venkatraman Ramakrishnan, Thomas A. Steitz, Ada E. Yonath",
       "answerFormat": "explanation",
       "acceptedAnswers": [
-        "Venkatraman Ramakrishnan, Thomas A. Steitz, Ada E. Yonath",
         "Venkatraman Ramakrishnan og Thomas A. Steitz og Ada E. Yonath",
         "Venkatraman Ramakrishnan; Thomas A. Steitz; Ada E. Yonath",
         "Venkatraman Ramakrishnan, Thomas A. Steitz og Ada E. Yonath",
@@ -176275,7 +175795,6 @@
       "answer": "Andre Geim, Konstantin Novoselov",
       "answerFormat": "explanation",
       "acceptedAnswers": [
-        "Andre Geim, Konstantin Novoselov",
         "Andre Geim og Konstantin Novoselov",
         "Andre Geim; Konstantin Novoselov",
         "Konstantin Novoselov, Andre Geim",
@@ -176400,7 +175919,6 @@
       "answer": "John B. Gurdon, Shinya Yamanaka",
       "answerFormat": "explanation",
       "acceptedAnswers": [
-        "John B. Gurdon, Shinya Yamanaka",
         "John B. Gurdon og Shinya Yamanaka",
         "John B. Gurdon; Shinya Yamanaka",
         "Shinya Yamanaka, John B. Gurdon",
@@ -176525,7 +176043,6 @@
       "answer": "François Englert, Peter Higgs",
       "answerFormat": "explanation",
       "acceptedAnswers": [
-        "François Englert, Peter Higgs",
         "François Englert og Peter Higgs",
         "François Englert; Peter Higgs",
         "Peter Higgs, François Englert",
@@ -176653,7 +176170,6 @@
       "answer": "Isamu Akasaki, Hiroshi Amano, Shuji Nakamura",
       "answerFormat": "explanation",
       "acceptedAnswers": [
-        "Isamu Akasaki, Hiroshi Amano, Shuji Nakamura",
         "Isamu Akasaki og Hiroshi Amano og Shuji Nakamura",
         "Isamu Akasaki; Hiroshi Amano; Shuji Nakamura",
         "Isamu Akasaki, Hiroshi Amano og Shuji Nakamura",
@@ -176799,7 +176315,6 @@
       "answer": "John O'Keefe, May-Britt Moser, Edvard I. Moser",
       "answerFormat": "explanation",
       "acceptedAnswers": [
-        "John O'Keefe, May-Britt Moser, Edvard I. Moser",
         "John O'Keefe og May-Britt Moser og Edvard I. Moser",
         "John O'Keefe; May-Britt Moser; Edvard I. Moser",
         "John O'Keefe, May-Britt Moser og Edvard I. Moser",
@@ -176937,9 +176452,7 @@
       "id": "nobel-people-medicine-2015-behandling-mot-malaria",
       "prompt": "Hvilken prisvinner ble anerkjent i 2015 for behandling mot malaria?",
       "answer": "Tu Youyou",
-      "acceptedAnswers": [
-        "Tu Youyou"
-      ],
+      "acceptedAnswers": [],
       "answerType": "person",
       "learningStage": "details",
       "difficultyFamily": "award-person",
@@ -177053,9 +176566,7 @@
       "id": "nobel-people-medicine-2016-autofagi",
       "prompt": "Hvilken prisvinner ble anerkjent i 2016 for autofagi?",
       "answer": "Yoshinori Ohsumi",
-      "acceptedAnswers": [
-        "Yoshinori Ohsumi"
-      ],
+      "acceptedAnswers": [],
       "answerType": "person",
       "learningStage": "details",
       "difficultyFamily": "award-person",
@@ -177177,7 +176688,6 @@
       "answer": "Rainer Weiss, Barry C. Barish, Kip S. Thorne",
       "answerFormat": "explanation",
       "acceptedAnswers": [
-        "Rainer Weiss, Barry C. Barish, Kip S. Thorne",
         "Rainer Weiss og Barry C. Barish og Kip S. Thorne",
         "Rainer Weiss; Barry C. Barish; Kip S. Thorne",
         "Rainer Weiss, Barry C. Barish og Kip S. Thorne",
@@ -177323,7 +176833,6 @@
       "answer": "John B. Goodenough, M. Stanley Whittingham, Akira Yoshino",
       "answerFormat": "explanation",
       "acceptedAnswers": [
-        "John B. Goodenough, M. Stanley Whittingham, Akira Yoshino",
         "John B. Goodenough og M. Stanley Whittingham og Akira Yoshino",
         "John B. Goodenough; M. Stanley Whittingham; Akira Yoshino",
         "John B. Goodenough, M. Stanley Whittingham og Akira Yoshino",
@@ -177466,7 +176975,6 @@
       "answer": "Emmanuelle Charpentier, Jennifer A. Doudna",
       "answerFormat": "explanation",
       "acceptedAnswers": [
-        "Emmanuelle Charpentier, Jennifer A. Doudna",
         "Emmanuelle Charpentier og Jennifer A. Doudna",
         "Emmanuelle Charpentier; Jennifer A. Doudna",
         "Jennifer A. Doudna, Emmanuelle Charpentier",
@@ -177586,9 +177094,7 @@
       "id": "nobel-people-physics-2020-dannelse-av-svarte-hull",
       "prompt": "Hvilken prisvinner ble anerkjent i 2020 for dannelse av svarte hull?",
       "answer": "Roger Penrose",
-      "acceptedAnswers": [
-        "Roger Penrose"
-      ],
+      "acceptedAnswers": [],
       "answerType": "person",
       "learningStage": "details",
       "difficultyFamily": "award-person",
@@ -177707,7 +177213,6 @@
       "answer": "Reinhard Genzel, Andrea Ghez",
       "answerFormat": "explanation",
       "acceptedAnswers": [
-        "Reinhard Genzel, Andrea Ghez",
         "Reinhard Genzel og Andrea Ghez",
         "Reinhard Genzel; Andrea Ghez",
         "Andrea Ghez, Reinhard Genzel",
@@ -177832,7 +177337,6 @@
       "answer": "Katalin Karikó, Drew Weissman",
       "answerFormat": "explanation",
       "acceptedAnswers": [
-        "Katalin Karikó, Drew Weissman",
         "Katalin Karikó og Drew Weissman",
         "Katalin Karikó; Drew Weissman",
         "Drew Weissman, Katalin Karikó",
@@ -177960,7 +177464,6 @@
       "answer": "Susumu Kitagawa, Richard Robson, Omar M. Yaghi",
       "answerFormat": "explanation",
       "acceptedAnswers": [
-        "Susumu Kitagawa, Richard Robson, Omar M. Yaghi",
         "Susumu Kitagawa og Richard Robson og Omar M. Yaghi",
         "Susumu Kitagawa; Richard Robson; Omar M. Yaghi",
         "Susumu Kitagawa, Richard Robson og Omar M. Yaghi",
@@ -178106,7 +177609,6 @@
       "answer": "John Clarke, Michel H. Devoret, John M. Martinis",
       "answerFormat": "explanation",
       "acceptedAnswers": [
-        "John Clarke, Michel H. Devoret, John M. Martinis",
         "John Clarke og Michel H. Devoret og John M. Martinis",
         "John Clarke; Michel H. Devoret; John M. Martinis",
         "John Clarke, Michel H. Devoret og John M. Martinis",
@@ -178252,7 +177754,6 @@
       "answer": "Mary E. Brunkow, Fred Ramsdell, Shimon Sakaguchi",
       "answerFormat": "explanation",
       "acceptedAnswers": [
-        "Mary E. Brunkow, Fred Ramsdell, Shimon Sakaguchi",
         "Mary E. Brunkow og Fred Ramsdell og Shimon Sakaguchi",
         "Mary E. Brunkow; Fred Ramsdell; Shimon Sakaguchi",
         "Mary E. Brunkow, Fred Ramsdell og Shimon Sakaguchi",
@@ -178390,9 +177891,7 @@
       "id": "nobel-people-peace-1964-ikkevoldelig-kamp-for-borgerrettigheter",
       "prompt": "Hvilken prisvinner ble anerkjent i 1964 for ikkevoldelig kamp for borgerrettigheter?",
       "answer": "Martin Luther King Jr.",
-      "acceptedAnswers": [
-        "Martin Luther King Jr."
-      ],
+      "acceptedAnswers": [],
       "answerType": "person",
       "learningStage": "details",
       "difficultyFamily": "award-person",
@@ -178506,9 +178005,7 @@
       "id": "nobel-people-peace-1962-kamp-mot-atomkappl-pet",
       "prompt": "Hvilken prisvinner ble anerkjent i 1962 for kamp mot atomkappløpet?",
       "answer": "Linus Pauling",
-      "acceptedAnswers": [
-        "Linus Pauling"
-      ],
+      "acceptedAnswers": [],
       "answerType": "person",
       "learningStage": "details",
       "difficultyFamily": "award-person",
@@ -178622,9 +178119,7 @@
       "id": "nobel-people-peace-1953-marshallplanen",
       "prompt": "Hvilken prisvinner ble anerkjent i 1953 for Marshallplanen?",
       "answer": "George C. Marshall",
-      "acceptedAnswers": [
-        "George C. Marshall"
-      ],
+      "acceptedAnswers": [],
       "answerType": "person",
       "learningStage": "details",
       "difficultyFamily": "award-person",
@@ -178743,7 +178238,6 @@
       "answer": "Nelson Mandela, F.W. de Klerk",
       "answerFormat": "explanation",
       "acceptedAnswers": [
-        "Nelson Mandela, F.W. de Klerk",
         "Nelson Mandela og F.W. de Klerk",
         "Nelson Mandela; F.W. de Klerk",
         "F.W. de Klerk, Nelson Mandela",
@@ -178863,9 +178357,7 @@
       "id": "nobel-people-peace-2004-b-rekraft-demokrati-og-fred",
       "prompt": "Hvilken prisvinner ble anerkjent i 2004 for bærekraft, demokrati og fred?",
       "answer": "Wangari Maathai",
-      "acceptedAnswers": [
-        "Wangari Maathai"
-      ],
+      "acceptedAnswers": [],
       "answerType": "person",
       "learningStage": "details",
       "difficultyFamily": "award-person",
@@ -178984,7 +178476,6 @@
       "answer": "Kailash Satyarthi, Malala Yousafzai",
       "answerFormat": "explanation",
       "acceptedAnswers": [
-        "Kailash Satyarthi, Malala Yousafzai",
         "Kailash Satyarthi og Malala Yousafzai",
         "Kailash Satyarthi; Malala Yousafzai",
         "Malala Yousafzai, Kailash Satyarthi",
@@ -179220,9 +178711,7 @@
       "id": "nobel-people-literature-1920-markens-gr-de",
       "prompt": "Hvilken prisvinner ble anerkjent i 1920 for Markens grøde?",
       "answer": "Knut Hamsun",
-      "acceptedAnswers": [
-        "Knut Hamsun"
-      ],
+      "acceptedAnswers": [],
       "answerType": "person",
       "learningStage": "details",
       "difficultyFamily": "award-person",
@@ -179336,9 +178825,7 @@
       "id": "nobel-people-literature-1928-nordisk-middelalderliv",
       "prompt": "Hvilken prisvinner ble anerkjent i 1928 for nordisk middelalderliv?",
       "answer": "Sigrid Undset",
-      "acceptedAnswers": [
-        "Sigrid Undset"
-      ],
+      "acceptedAnswers": [],
       "answerType": "person",
       "learningStage": "details",
       "difficultyFamily": "award-person",
@@ -179452,9 +178939,7 @@
       "id": "nobel-people-literature-1982-fantastisk-og-realistisk-fortelling",
       "prompt": "Hvilken prisvinner ble anerkjent i 1982 for fantastisk og realistisk fortelling?",
       "answer": "Gabriel García Márquez",
-      "acceptedAnswers": [
-        "Gabriel García Márquez"
-      ],
+      "acceptedAnswers": [],
       "answerType": "person",
       "learningStage": "details",
       "difficultyFamily": "award-person",
@@ -179568,9 +179053,7 @@
       "id": "nobel-people-literature-1993-afroamerikansk-livserfaring",
       "prompt": "Hvilken prisvinner ble anerkjent i 1993 for afroamerikansk livserfaring?",
       "answer": "Toni Morrison",
-      "acceptedAnswers": [
-        "Toni Morrison"
-      ],
+      "acceptedAnswers": [],
       "answerType": "person",
       "learningStage": "details",
       "difficultyFamily": "award-person",
@@ -179684,9 +179167,7 @@
       "id": "nobel-people-literature-2016-poetiske-uttrykk-i-sangtradisjonen",
       "prompt": "Hvilken prisvinner ble anerkjent i 2016 for poetiske uttrykk i sangtradisjonen?",
       "answer": "Bob Dylan",
-      "acceptedAnswers": [
-        "Bob Dylan"
-      ],
+      "acceptedAnswers": [],
       "answerType": "person",
       "learningStage": "details",
       "difficultyFamily": "award-person",
@@ -179800,9 +179281,7 @@
       "id": "nobel-people-literature-2023-dramatikk-og-prosa",
       "prompt": "Hvilken prisvinner ble anerkjent i 2023 for dramatikk og prosa?",
       "answer": "Jon Fosse",
-      "acceptedAnswers": [
-        "Jon Fosse"
-      ],
+      "acceptedAnswers": [],
       "answerType": "person",
       "learningStage": "details",
       "difficultyFamily": "award-person",
@@ -179921,7 +179400,6 @@
       "answer": "George A. Akerlof, A. Michael Spence, Joseph E. Stiglitz",
       "answerFormat": "explanation",
       "acceptedAnswers": [
-        "George A. Akerlof, A. Michael Spence, Joseph E. Stiglitz",
         "George A. Akerlof og A. Michael Spence og Joseph E. Stiglitz",
         "George A. Akerlof; A. Michael Spence; Joseph E. Stiglitz",
         "George A. Akerlof, A. Michael Spence og Joseph E. Stiglitz",
@@ -180056,9 +179534,7 @@
       "id": "nobel-people-economic-sciences-2002-psykologi-i-konomi",
       "prompt": "Hvilken prisvinner ble anerkjent i 2002 for psykologi i økonomi?",
       "answer": "Daniel Kahneman",
-      "acceptedAnswers": [
-        "Daniel Kahneman"
-      ],
+      "acceptedAnswers": [],
       "answerType": "person",
       "learningStage": "details",
       "difficultyFamily": "award-person",
@@ -180169,9 +179645,7 @@
       "id": "nobel-people-economic-sciences-2009-forvaltning-av-felleseide-ressurser",
       "prompt": "Hvilken prisvinner ble anerkjent i 2009 for forvaltning av felleseide ressurser?",
       "answer": "Elinor Ostrom",
-      "acceptedAnswers": [
-        "Elinor Ostrom"
-      ],
+      "acceptedAnswers": [],
       "answerType": "person",
       "learningStage": "details",
       "difficultyFamily": "award-person",
@@ -180282,9 +179756,7 @@
       "id": "nobel-people-economic-sciences-2023-kvinners-arbeidsmarkedsutfall",
       "prompt": "Hvilken prisvinner ble anerkjent i 2023 for kvinners arbeidsmarkedsutfall?",
       "answer": "Claudia Goldin",
-      "acceptedAnswers": [
-        "Claudia Goldin"
-      ],
+      "acceptedAnswers": [],
       "answerType": "person",
       "learningStage": "details",
       "difficultyFamily": "award-person",
@@ -208872,7 +208344,7 @@
       "relationshipIds": [
         "geo-city-uz-tashkent-capital-of-geo-uzb"
       ],
-      "statement": "Tashkent er hovedstad i Usbekistan.",
+      "statement": "Tasjkent er hovedstad i Usbekistan.",
       "sourceIds": [
         "un-capital-uz",
         "un-m49-geography"
@@ -208888,7 +208360,7 @@
       "relationshipIds": [
         "geo-city-uz-tashkent-located-in-geo-uzb"
       ],
-      "statement": "Tashkent ligger i Usbekistan.",
+      "statement": "Tasjkent ligger i Usbekistan.",
       "sourceIds": [
         "un-capital-uz"
       ],
@@ -209159,7 +208631,7 @@
       "relationshipIds": [
         "geo-city-mn-ulaanbaatar-capital-of-geo-mng"
       ],
-      "statement": "Ulaanbaatar er hovedstad i Mongolia.",
+      "statement": "Ulan Bator er hovedstad i Mongolia.",
       "sourceIds": [
         "un-capital-mn",
         "un-m49-geography"
@@ -209175,7 +208647,7 @@
       "relationshipIds": [
         "geo-city-mn-ulaanbaatar-located-in-geo-mng"
       ],
-      "statement": "Ulaanbaatar ligger i Mongolia.",
+      "statement": "Ulan Bator ligger i Mongolia.",
       "sourceIds": [
         "un-capital-mn"
       ],
@@ -209433,7 +208905,7 @@
       "relationshipIds": [
         "geo-city-mm-nay-pyi-taw-capital-of-geo-mmr"
       ],
-      "statement": "Nay Pyi Taw er hovedstad i Myanmar (Burma).",
+      "statement": "Naypyidaw er hovedstad i Myanmar (Burma).",
       "sourceIds": [
         "un-capital-mm",
         "un-m49-geography"
@@ -209449,7 +208921,7 @@
       "relationshipIds": [
         "geo-city-mm-nay-pyi-taw-located-in-geo-mmr"
       ],
-      "statement": "Nay Pyi Taw ligger i Myanmar (Burma).",
+      "statement": "Naypyidaw ligger i Myanmar (Burma).",
       "sourceIds": [
         "un-capital-mm"
       ],
@@ -209908,7 +209380,7 @@
       "relationshipIds": [
         "geo-city-ir-tehran-capital-of-geo-irn"
       ],
-      "statement": "Tehran er hovedstad i Iran.",
+      "statement": "Teheran er hovedstad i Iran.",
       "sourceIds": [
         "un-capital-ir",
         "un-m49-geography"
@@ -209924,7 +209396,7 @@
       "relationshipIds": [
         "geo-city-ir-tehran-located-in-geo-irn"
       ],
-      "statement": "Tehran ligger i Iran.",
+      "statement": "Teheran ligger i Iran.",
       "sourceIds": [
         "un-capital-ir"
       ],
@@ -209999,7 +209471,7 @@
       "relationshipIds": [
         "geo-city-np-kathmandu-capital-of-geo-npl"
       ],
-      "statement": "Kathmandu er hovedstad i Nepal.",
+      "statement": "Katmandu er hovedstad i Nepal.",
       "sourceIds": [
         "un-capital-np",
         "un-m49-geography"
@@ -210015,7 +209487,7 @@
       "relationshipIds": [
         "geo-city-np-kathmandu-located-in-geo-npl"
       ],
-      "statement": "Kathmandu ligger i Nepal.",
+      "statement": "Katmandu ligger i Nepal.",
       "sourceIds": [
         "un-capital-np"
       ],
@@ -210121,7 +209593,7 @@
       "relationshipIds": [
         "geo-city-am-yerevan-capital-of-geo-arm"
       ],
-      "statement": "Yerevan er hovedstad i Armenia.",
+      "statement": "Jerevan er hovedstad i Armenia.",
       "sourceIds": [
         "un-capital-am",
         "un-m49-geography"
@@ -210137,7 +209609,7 @@
       "relationshipIds": [
         "geo-city-am-yerevan-located-in-geo-arm"
       ],
-      "statement": "Yerevan ligger i Armenia.",
+      "statement": "Jerevan ligger i Armenia.",
       "sourceIds": [
         "un-capital-am"
       ],
@@ -210259,7 +209731,7 @@
       "relationshipIds": [
         "geo-city-cy-nicosia-capital-of-geo-cyp"
       ],
-      "statement": "Nicosia er hovedstad i Kypros.",
+      "statement": "Nikosia er hovedstad i Kypros.",
       "sourceIds": [
         "un-capital-cy",
         "un-m49-geography"
@@ -210275,7 +209747,7 @@
       "relationshipIds": [
         "geo-city-cy-nicosia-located-in-geo-cyp"
       ],
-      "statement": "Nicosia ligger i Kypros.",
+      "statement": "Nikosia ligger i Kypros.",
       "sourceIds": [
         "un-capital-cy"
       ],
@@ -210351,7 +209823,7 @@
       "relationshipIds": [
         "geo-city-iq-baghdad-capital-of-geo-irq"
       ],
-      "statement": "Baghdad er hovedstad i Irak.",
+      "statement": "Bagdad er hovedstad i Irak.",
       "sourceIds": [
         "un-capital-iq",
         "un-m49-geography"
@@ -210367,7 +209839,7 @@
       "relationshipIds": [
         "geo-city-iq-baghdad-located-in-geo-irq"
       ],
-      "statement": "Baghdad ligger i Irak.",
+      "statement": "Bagdad ligger i Irak.",
       "sourceIds": [
         "un-capital-iq"
       ],
@@ -210458,7 +209930,7 @@
       "relationshipIds": [
         "geo-city-kw-kuwait-city-capital-of-geo-kwt"
       ],
-      "statement": "Kuwait City er hovedstad i Kuwait.",
+      "statement": "Kuwait by er hovedstad i Kuwait.",
       "sourceIds": [
         "un-capital-kw",
         "un-m49-geography"
@@ -210474,7 +209946,7 @@
       "relationshipIds": [
         "geo-city-kw-kuwait-city-located-in-geo-kwt"
       ],
-      "statement": "Kuwait City ligger i Kuwait.",
+      "statement": "Kuwait by ligger i Kuwait.",
       "sourceIds": [
         "un-capital-kw"
       ],
@@ -211159,7 +210631,7 @@
       "relationshipIds": [
         "geo-city-ro-bucharest-capital-of-geo-rou"
       ],
-      "statement": "Bucharest er hovedstad i Romania.",
+      "statement": "București er hovedstad i Romania.",
       "sourceIds": [
         "un-capital-ro",
         "un-m49-geography"
@@ -211175,7 +210647,7 @@
       "relationshipIds": [
         "geo-city-ro-bucharest-located-in-geo-rou"
       ],
-      "statement": "Bucharest ligger i Romania.",
+      "statement": "București ligger i Romania.",
       "sourceIds": [
         "un-capital-ro"
       ],
@@ -212571,7 +212043,7 @@
       "relationshipIds": [
         "geo-city-rs-belgrade-capital-of-geo-srb"
       ],
-      "statement": "Belgrade er hovedstad i Serbia.",
+      "statement": "Beograd er hovedstad i Serbia.",
       "sourceIds": [
         "un-capital-rs",
         "un-m49-geography"
@@ -212587,7 +212059,7 @@
       "relationshipIds": [
         "geo-city-rs-belgrade-located-in-geo-srb"
       ],
-      "statement": "Belgrade ligger i Serbia.",
+      "statement": "Beograd ligger i Serbia.",
       "sourceIds": [
         "un-capital-rs"
       ],

@@ -228,3 +228,19 @@ export function mergeCore(data, core) {
     curriculum: core.curriculum};
   return {...merged, entityCount: merged.entities.length, targetCount: merged.targets.length, relationshipCount: merged.relationships.length};
 }
+
+/** Apply curated name corrections to register rows; the earlier form stays an accepted answer. */
+export function applyCorrections(data, corrections) {
+  const pairs = Object.entries(corrections.labels || {});
+  const swap = text => typeof text === 'string' ? pairs.reduce((value, [from, to]) => value.replace(new RegExp(`(^|[^\\p{L}])${from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?=$|[^\\p{L}])`, 'gu'), `$1${to}`), text) : text;
+  const entities = data.entities.map(e => ({...e, label: swap(e.label), summary: swap(e.summary)}));
+  const targets = data.targets.map(t => {
+    const answer = swap(t.answer);
+    const accepted = [...new Set([...(t.acceptedAnswers || []).map(a => a), ...(answer !== t.answer ? [t.answer] : []), ...(corrections.accept?.[answer] || [])])].filter(a => a !== answer);
+    return {...t, prompt: swap(t.prompt), answer, explanation: swap(t.explanation), acceptedAnswers: accepted, ...(t.options ? {options: t.options.map(swap)} : {})};
+  });
+  const relationships = data.relationships.map(r => ({...r, context: swap(r.context)}));
+  const claims = (data.claims || []).map(c => ({...c, statement: swap(c.statement)}));
+  const timelines = data.timelines.map(t => ({...t, items: t.items.map(item => ({...item, label: swap(item.label)}))}));
+  return {...data, entities, targets, relationships, claims, timelines};
+}

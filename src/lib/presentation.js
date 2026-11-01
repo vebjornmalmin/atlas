@@ -1,4 +1,7 @@
 export function answerPresentation(target) {
+  if(target?.answerFormat==='year')return {extended:false,inputMode:'numeric',label:'Årstall',placeholder:'Skriv årstallet'};
+  if(target?.answerFormat==='number')return {extended:false,inputMode:'decimal',label:target.numberUnit?`Tall (${target.numberUnit})`:'Tall',placeholder:'Skriv tallet'};
+  if(target?.answerFormat==='short')return {extended:false,inputMode:'text',label:'Kort svar',placeholder:'Skriv svaret'};
   const answer=String(target?.answer || '');
   const year=/^-?\d{1,4}$/.test(answer) && /år|year|dato|date/i.test(target?.prompt || '');
   const extended=target?.answerFormat==='explanation' || answer.length>90 || (answer.includes(',') && answer.length>45);

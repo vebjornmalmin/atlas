@@ -142,3 +142,6 @@ button{min-height:46px;border:1px solid var(--line);background:var(--surface);co
 .grade-note{margin:6px 0 0;font-size:14px}
 .override{padding:6px 0;min-height:36px;font-size:14px}
 .resume-card .primary{width:100%}
+.app-header{padding-right:150px}
+.today-links{display:flex;flex-direction:column;gap:6px;margin-top:10px}
+.today-links>button{width:100%}
