@@ -21,7 +21,7 @@
       "summary": "Tiden da europeiske stormakter delte Afrika og store deler av Asia mellom seg, med grenser og konflikter som fortsatt preger verden.",
       "lesson": [
         "Imperialisme betyr at en stat legger under seg andre land og folk og styrer dem fra et fjernt sentrum. Industrialiseringen på 1800-tallet skapte behov for råvarer og nye markeder, og dampskip, jernbane og telegraf gjorde det mulig å styre områder langt unna. Nasjonal prestisje og en utbredt tro på europeisk overlegenhet, uttrykt som «den hvite manns byrde», ga politikken oppslutning.",
-        "Afrika ble i hovedsak delt opp på slutten av 1800-tallet. På Berlinkonferansen i 1884–1885 trakk europeiske stater opp regler og grenser, uten at noen afrikanere var med. I 1895 var bare Marokko, Etiopia, Liberia og to sultanater i dagens Somalia selvstendige. Kongo ble den belgiske kong Leopold 2.s private eiendom. Tvangsarbeidet for å skaffe naturgummi kostet etter historikernes anslag mellom én og ti millioner mennesker livet.",
+        "Afrika ble i hovedsak delt opp på slutten av 1800-tallet. På Berlinkonferansen i 1884–1885 trakk europeiske stater opp regler og grenser, uten at noen afrikanere var med. Da første verdenskrig brøt ut i 1914, var bare Etiopia og Liberia selvstendige. Kongo ble den belgiske kong Leopold 2.s private eiendom. Tvangsarbeidet for å skaffe naturgummi kostet etter historikernes anslag mellom én og ti millioner mennesker livet.",
         "Britisk India var lenge styrt av Det ostindiske kompani. Etter et stort opprør i 1857–1859, som begynte blant indiske soldater, overtok den britiske kronen styret, og India ble kronkoloni. Imperiene ga stormaktene rikdom og makt, men skjerpet også rivaliseringen mellom dem."
       ],
       "keyPoints": [
@@ -87,7 +87,7 @@
             "Delingen av Kina i europeiske handelssoner",
             "Grensene mellom stormaktene på Balkan"
           ],
-          "explain": "Den tyske rikskansleren Otto von Bismarck tok initiativet, fordi han mente den nye stormakten Tyskland også burde ha kolonier. Grensene skar ofte gjennom tidligere afrikanske riker, men er i hovedsak blitt stående til i dag."
+          "explain": "Den tyske rikskansleren Otto von Bismarck tok initiativet. Grensene skar ofte gjennom tidligere afrikanske riker, men ved selvstendigheten valgte de nye statene å beholde dem for å unngå nye konflikter, og de fleste står fortsatt."
         },
         {
           "id": "mh-imperialismen-motiver",
@@ -106,14 +106,14 @@
           "id": "mh-imperialismen-etiopia",
           "step": 2,
           "type": "choice",
-          "prompt": "Hvilket av disse afrikanske landene var fortsatt selvstendig i 1895?",
+          "prompt": "Hvilket av disse afrikanske landene var fortsatt selvstendig da første verdenskrig brøt ut?",
           "answer": "Etiopia",
           "distractors": [
             "Kongo",
             "Egypt",
             "Algerie"
           ],
-          "explain": "Etiopia var en av svært få selvstendige stater i Afrika. Mussolinis Italia angrep landet i 1935–1936, se emnet om mellomkrigstiden."
+          "explain": "Etiopia slo en italiensk invasjon tilbake ved Adwa i 1896 og var den eneste afrikanske staten som stanset en europeisk erobring. Mussolinis Italia angrep landet på nytt i 1935–1936, se emnet om mellomkrigstiden."
         },
         {
           "id": "mh-imperialismen-leopold",
@@ -156,7 +156,7 @@
             "East India Company",
             "Ostindiakompaniet"
           ],
-          "explain": "Britene kontrollerte et område fra Calcutta til Kabul med hjelp av indiske soldater, kalt sepoyer. Opprøret startet blant disse soldatene og regnes i India som begynnelsen på uavhengighetsbevegelsen."
+          "explain": "Britene kontrollerte et område fra Bengal til Punjab med hjelp av indiske soldater, kalt sepoyer. Opprøret startet blant disse soldatene og regnes i India som begynnelsen på uavhengighetsbevegelsen."
         },
         {
           "id": "mh-imperialismen-hvorfor-industri",
@@ -575,7 +575,7 @@
             "Nedrustning og tett samarbeid med vestmaktene",
             "Desentralisering og fritt jordbruk for bøndene"
           ],
-          "explain": "Fra slutten av 1930-årene hadde Stalin i praksis diktatorisk makt. Historikere anslår at politikken hans kostet mellom 3 og 9 millioner mennesker livet, avhengig av hva som regnes med."
+          "explain": "Fra slutten av 1930-årene hadde Stalin i praksis diktatorisk makt. Fangeleirene, GULag, nådde et høydepunkt i 1952 med omkring 2,5 millioner fanger."
         },
         {
           "id": "mh-russiske-revolusjon-bolsjevikene",
@@ -655,7 +655,7 @@
             "Kulakker ble deportert",
             "Kornrekvirering ga hungersnød med millioner av døde"
           ],
-          "explain": "Hungersnøden kalles Holodomor og regnes som den verste i Europas moderne historie. Samtidig ble industrien bygd ut i et tempo som gjorde Sovjetunionen til en industristat på få tiår."
+          "explain": "Hungersnøden rammet særlig Ukraina, der den kalles Holodomor, og regnes som den verste i Europas moderne historie. Samtidig ble industrien bygd ut i et tempo som gjorde Sovjetunionen til en industristat på få tiår."
         },
         {
           "id": "mh-russiske-revolusjon-rekkefolge",
@@ -1263,7 +1263,7 @@
             "Jødene ble bare forfulgt i de okkuperte landene",
             "Forfølgelsen stanset da krigen brøt ut i 1939"
           ],
-          "explain": "Ofte kom boikott og vold fra nazistiske aktivister først, og deretter lover fra statsledelsen. Krigsutbruddet og okkupasjonen av Polen radikaliserte politikken ytterligere."
+          "explain": "Ofte kom boikott og vold fra nazistiske aktivister først, og deretter lover. Mange håpet at hvert nytt tiltak skulle bli det siste, og de som emigrerte, måtte gi fra seg mye av formuen. Krigsutbruddet og okkupasjonen av Polen radikaliserte politikken ytterligere."
         },
         {
           "id": "mh-holocaust-andre-grupper",
@@ -1328,7 +1328,7 @@
             "Birkenau",
             "Oświęcim"
           ],
-          "explain": "Man regner nå at mellom 1,1 og 2 millioner mennesker ble drept der, de fleste jøder, men også polakker, romer og andre. Sovjetiske soldater inntok leiren 27. januar 1945, dagen som i dag er internasjonal holocaustdag."
+          "explain": "Man regner nå at minst 1,1 millioner mennesker ble drept der, de fleste jøder, men også polakker, romer og andre. Sovjetiske soldater inntok leiren 27. januar 1945, dagen som i dag er internasjonal holocaustdag."
         },
         {
           "id": "mh-holocaust-nurnbergprosessen",
@@ -1409,7 +1409,7 @@
             "Om lag 30 prosent",
             "Om lag 90 prosent"
           ],
-          "explain": "I 1939 bodde det knappe ti millioner jøder i Europa. Norge og Danmark var blant de få landene i vest der jødene ikke ble tvunget til å bære gul stjerne."
+          "explain": "I 1939 bodde det knappe ti millioner jøder i Europa. I Norge ble 772 jøder deportert etter at norsk politi hadde arrestert dem, og bare noen få dusin overlevde, se emnet om Norge under andre verdenskrig."
         }
       ]
     },
@@ -1698,7 +1698,7 @@
             "På slutten av 1800-tallet",
             "Etter den kalde krigens slutt"
           ],
-          "explain": "I 1950 fantes det bare tre selvstendige stater i Afrika; i dag er det 54. Sammen med den kalde krigen var framveksten av de nye statene den største omveltningen i verdenssamfunnet etter 1945."
+          "explain": "I 1950 fantes det bare en håndfull selvstendige stater i Afrika; i dag er det 54. Sammen med den kalde krigen var framveksten av de nye statene den største omveltningen i verdenssamfunnet etter 1945."
         },
         {
           "id": "mh-avkolonisering-india-aar",
@@ -2071,7 +2071,7 @@
             "Rundt 500 000",
             "Rundt 2 millioner"
           ],
-          "explain": "Mellom 35 og 40 prosent av de drepte var sivile. Krigen var den største væpnede konflikten i Europa etter andre verdenskrig."
+          "explain": "Mellom 35 og 40 prosent av de drepte var sivile. Krigen var den største i Europa siden andre verdenskrig fram til Russlands angrep på Ukraina i 2022."
         }
       ]
     },
@@ -2089,7 +2089,7 @@
       "summary": "Terror, kriger, finanskrise, folkelige opprør og en pandemi som har formet verden i det 21. århundret.",
       "lesson": [
         "Terrorangrepet mot USA 11. september 2001, da passasjerfly ble brukt som bomber mot mål i New York og mot Pentagon, kostet nesten 3000 mennesker livet. Amerikanske myndigheter pekte raskt ut terrornettverket al-Qaida og lederen Osama bin Laden. President George W. Bush erklærte en «krig mot terror», og i oktober 2001 angrep USA-ledede styrker Afghanistan og fordrev Taliban-regimet, som hadde latt bin Laden operere fra landet.",
-        "I mars 2003 gikk USA til krig mot Irak uten samtykke fra FN. Begrunnelsen var påståtte masseødeleggelsesvåpen, men ingen ble funnet. Saddam Hussein ble styrtet, men landet ble preget av opprør og vold i årene etter. I 2008 rammet en finanskrise, den verste siden 1930-årene, USA og resten av verden.",
+        "I mars 2003 gikk USA til krig mot Irak uten samtykke fra FN. Begrunnelsen var påståtte masseødeleggelsesvåpen, men ingen ble funnet. Saddam Hussein ble styrtet, men landet ble preget av opprør og vold i årene etter. I 2008 rammet en finanskrise, den verste siden 1930-årene, USA og resten av verden, og arbeidsledigheten steg kraftig.",
         "Fra desember 2010 spredte folkelige opprør seg fra Tunisia til flere arabiske land, den arabiske våren. Regimene i Tunisia, Egypt og Libya falt, mens Syria og Jemen havnet i borgerkrig. I 2014 annekterte Russland Krim-halvøya, og 24. februar 2022 gikk Russland til fullskala angrep på Ukraina, i strid med folkeretten. I mars 2020 erklærte Verdens helseorganisasjon covid-19-utbruddet for en pandemi."
       ],
       "keyPoints": [
@@ -2142,7 +2142,7 @@
             "Taliban tok makten i landet for første gang",
             "FN overtok styret etter en fredsavtale"
           ],
-          "explain": "Osama bin Laden slapp unna og ble først drept av amerikanske spesialsoldater i 2011. USA og NATO avsluttet formelt kampoperasjonene i Afghanistan i 2014."
+          "explain": "Osama bin Laden slapp unna og ble først drept av amerikanske spesialsoldater i 2011. Krigen varte i nesten tjue år: da de siste amerikanske styrkene trakk seg ut i august 2021, tok Taliban makten igjen."
         },
         {
           "id": "mh-2000-tallet-ukraina",
@@ -2227,7 +2227,7 @@
             "Krigen ble ført med atomvåpen mot irakiske byer",
             "USA invaderte uten å ha varslet sine egne allierte"
           ],
-          "explain": "Uenigheten om det folkerettslige grunnlaget skadet forholdet mellom USA og flere allierte. Etterretningen før krigen viste seg å bygge på usannheter, noe som svekket tilliten til myndighetene."
+          "explain": "Uenigheten om det folkerettslige grunnlaget skadet forholdet mellom USA og flere allierte. Etterretningen før krigen viste seg å bygge på feilaktige opplysninger, noe som svekket tilliten til myndighetene."
         },
         {
           "id": "mh-2000-tallet-forklar-finanskrise",
@@ -2303,7 +2303,7 @@
             "Rundt 70 millioner",
             "Over 700 millioner"
           ],
-          "explain": "Det reelle tallet kan være betydelig høyere. Arbeidet med vaksiner ga et gjennombrudd for såkalte RNA-vaksiner, og vaksineringen startet i desember 2020."
+          "explain": "Det reelle tallet kan være betydelig høyere. Arbeidet med vaksiner ga et gjennombrudd for såkalte mRNA-vaksiner, og vaksineringen startet i desember 2020."
         }
       ]
     }
