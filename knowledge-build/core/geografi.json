@@ -12,17 +12,17 @@
       "title": "Kontinenter og hav",
       "tier": 1,
       "prerequisites": [],
-      "summary": "Jordens sju verdensdeler, de fem verdenshavene og linjene vi bruker for å finne fram på kloden.",
+      "summary": "Jorda deles i sju verdensdeler og fem verdenshav, og bredde- og lengdegrader hjelper oss å finne fram på kloden.",
       "lesson": [
-        "På norsk deler vi Jorden inn i sju verdensdeler: Asia, Afrika, Nord-Amerika, Sør-Amerika, Antarktis, Europa og Oseania. Asia er størst og har flest mennesker, Oseania er minst. Verdensdel og kontinent er ikke helt det samme: Europa og Asia henger sammen som ett kontinent, Eurasia. På engelsk kan man derfor regne med alt fra fire til sju kontinenter.",
+        "På norsk deler vi Jorda inn i sju verdensdeler: Asia, Afrika, Nord-Amerika, Sør-Amerika, Antarktis, Europa og Oseania. Asia er størst og har flest mennesker, Oseania er minst. Verdensdel og kontinent er ikke helt det samme: Europa og Asia henger sammen som ett kontinent, Eurasia. På engelsk kan man derfor regne med alt fra fire til sju kontinenter.",
         "Verdenshavene skiller verdensdelene. Vi regner vanligvis med fem: Stillehavet, Atlanterhavet, Indiahavet, Sørishavet og Polhavet. Stillehavet er klart størst, omtrent dobbelt så stort som Atlanterhavet. Polhavet rundt Nordpolen er minst. Sørishavet rundt Antarktis regnes ikke alltid med, fordi grensen mot nord er vanskelig å trekke.",
-        "For å angi posisjon bruker vi bredde- og lengdegrader. Ekvator er en tenkt sirkel midt mellom Nordpolen og Sørpolen. Den deler Jorden i en nordlig og en sørlig halvkule og har bredden 0°. Lengden regnes fra nullmeridianen gjennom Greenwich i Storbritannia, som har vært felles for hele Jorden siden 1884."
+        "For å angi posisjon bruker vi bredde- og lengdegrader. Ekvator er en tenkt sirkel midt mellom Nordpolen og Sydpolen. Den deler Jorda i en nordlig og en sørlig halvkule og har bredden 0°. Lengden regnes fra nullmeridianen gjennom Greenwich i Storbritannia. Den har vært felles for hele Jorda siden 1884."
       ],
       "keyPoints": [
-        "Sju verdensdeler: Asia, Afrika, Nord-Amerika, Sør-Amerika, Antarktis, Europa og Oseania.",
+        "Vi regner med sju verdensdeler: Asia, Afrika, Nord-Amerika, Sør-Amerika, Antarktis, Europa og Oseania.",
         "Asia er størst, Oseania minst; Europa er nest minst.",
-        "Fem verdenshav: Stillehavet er størst, Polhavet minst.",
-        "Ekvator (0° bredde) deler Jorden i to halvkuler; lengden regnes fra nullmeridianen gjennom Greenwich."
+        "Av de fem verdenshavene er Stillehavet størst og Polhavet minst.",
+        "Ekvator (0° bredde) deler Jorda i to halvkuler; lengden regnes fra nullmeridianen gjennom Greenwich."
       ],
       "sources": [
         {
@@ -47,7 +47,7 @@
           "id": "geo-kontinenter-hav-antall",
           "step": 1,
           "type": "choice",
-          "prompt": "Hvor mange verdensdeler deler vi vanligvis Jorden inn i på norsk?",
+          "prompt": "Hvor mange verdensdeler deler vi vanligvis Jorda inn i på norsk?",
           "answer": "Sju",
           "distractors": [
             "Fem",
@@ -198,7 +198,7 @@
           "id": "geo-kontinenter-hav-aar-greenwich",
           "step": 4,
           "type": "year",
-          "prompt": "Fra hvilket år har meridianen gjennom Greenwich vært felles nullmeridian for hele Jorden?",
+          "prompt": "Fra hvilket år har meridianen gjennom Greenwich vært felles nullmeridian for hele Jorda?",
           "answer": "1884",
           "explain": "Valget ble gjort på en internasjonal meridiankonferanse. I dag regnes lengde og tid fra en referansemeridian som ligger drøyt 100 meter øst for den gamle Greenwich-linjen."
         },
@@ -206,14 +206,14 @@
           "id": "geo-kontinenter-hav-omkrets",
           "step": 4,
           "type": "choice",
-          "prompt": "Omtrent hvor lang er ekvator rundt Jorden?",
+          "prompt": "Omtrent hvor lang er ekvator rundt Jorda?",
           "answer": "Omtrent 40 000 kilometer",
           "distractors": [
             "Omtrent 12 000 kilometer",
             "Omtrent 100 000 kilometer",
             "Omtrent 400 000 kilometer"
           ],
-          "explain": "Jorden er litt sammenklemt ved polene og buler ut ved ekvator fordi den roterer. Derfor er omkretsen størst rundt ekvator."
+          "explain": "Jorda er litt sammenklemt ved polene og buler ut ved ekvator fordi den roterer. Derfor er omkretsen størst rundt ekvator."
         }
       ]
     },
@@ -222,7 +222,7 @@
       "title": "Norges landskap",
       "tier": 1,
       "prerequisites": [],
-      "summary": "Hvordan istidene formet fjordene, fjellene og viddene, og hvilke landskapsformer som er Norges største.",
+      "summary": "Istidene formet fjordene, fjellene og viddene, og fjordene og øyene gir Norge en av verdens lengste kystlinjer.",
       "lesson": [
         "Norge ligger på den vestlige og nordlige delen av Den skandinaviske halvøy. Landet er langt og smalt og grenser i øst mot Sverige, Finland og Russland. Ellers er det omgitt av hav: Barentshavet, Norskehavet, Nordsjøen og Skagerrak. Polarsirkelen krysser landet i Nordland, litt nord for Mo i Rana. Nord for den er det midnattssol om sommeren og mørketid om vinteren.",
         "Landskapet er formet av istidene, da tykke isdekker lå over landet. Isbreene gravde ut daler og fjorder. En fjord er en dal som isen har gravd så dyp at havet har fylt den. Sognefjorden er landets lengste og dypeste fjord, 1303 meter på det dypeste. Mellom fjordene ligger flatere vidder. Hardangervidda regnes som Europas største høyfjellsplatå.",
@@ -313,7 +313,7 @@
           "id": "geo-norges-landskap-polarsirkelen",
           "step": 2,
           "type": "text",
-          "prompt": "Hva kalles breddesirkelen som krysser Nordland litt nord for Mo i Rana og markerer grensen for midnattssol og mørketid?",
+          "prompt": "Hvilken breddesirkel krysser Nordland og markerer grensen for midnattssol og mørketid?",
           "answer": "Polarsirkelen",
           "accept": [
             "Den nordlige polarsirkelen",
@@ -450,16 +450,16 @@
       "prerequisites": [
         "geo-norges-landskap"
       ],
-      "summary": "Hvordan Norge er delt inn i fylker og landsdeler, hvor folk bor, og hvilke områder i nord og sør som hører til Norge.",
+      "summary": "Norge er delt i fylker og landsdeler med svært ulikt folketall, og øyer i nord og biland i sør hører også til landet.",
       "lesson": [
-        "Fra 1. januar 2024 har Norge 15 fylker. Før regionreformen var det 19. Sammenslåinger gav blant annet Innlandet (Hedmark og Oppland), Vestland (Hordaland og Sogn og Fjordane), Agder og Trøndelag. Oslo er både en kommune og et fylke. Fylkeskommunene har blant annet ansvar for videregående skole og fylkesveier.",
-        "Landet deles også i fem landsdeler: Østlandet, Sørlandet, Vestlandet, Trøndelag, også kalt Midt-Norge, og Nord-Norge. Østlandet har omtrent halvparten av innbyggerne og Vestlandet rundt en firedel. Sørlandet svarer til Agder fylke. Nord-Norge består av Nordland, Troms og Finnmark, er størst i areal og har rundt 9 prosent av folket.",
+        "Fra 1. januar 2024 har Norge 15 fylker. Før regionreformen var det 19. Sammenslåinger ga blant annet Innlandet (Hedmark og Oppland), Vestland (Hordaland og Sogn og Fjordane), Agder og Trøndelag. Oslo er både en kommune og et fylke. Fylkeskommunene har blant annet ansvar for videregående skole og fylkesveier.",
+        "Landet deles også i fem landsdeler: Østlandet, Sørlandet, Vestlandet, Trøndelag, også kalt Midt-Norge, og Nord-Norge. Østlandet har omtrent halvparten av innbyggerne og Vestlandet rundt en firedel. Sørlandet svarer til Agder fylke. Nord-Norge består av Nordland, Troms og Finnmark, er størst i areal og har rundt 9 prosent av befolkningen.",
         "De største byene, målt som tettsteder, er Oslo, Bergen, Stavanger/Sandnes og Trondheim. Tettstedet Oslo har over én million innbyggere. I nord er Bodø og Tromsø størst. Kongeriket omfatter også Svalbard og Jan Mayen. I tillegg har Norge tre biland i sør: Bouvetøya, Peter I Øy og Dronning Maud Land i Antarktis."
       ],
       "keyPoints": [
-        "15 fylker fra 2024; Oslo er både kommune og fylke.",
-        "Fem landsdeler: Østlandet, Sørlandet, Vestlandet, Trøndelag (Midt-Norge) og Nord-Norge. Østlandet har flest innbyggere.",
-        "Største tettsteder: Oslo, Bergen, Stavanger/Sandnes og Trondheim.",
+        "Norge har hatt 15 fylker siden 2024, og Oslo er både kommune og fylke.",
+        "Av de fem landsdelene Østlandet, Sørlandet, Vestlandet, Trøndelag (Midt-Norge) og Nord-Norge har Østlandet flest innbyggere.",
+        "De største tettstedene er Oslo, Bergen, Stavanger/Sandnes og Trondheim.",
         "Svalbard og Jan Mayen hører til kongeriket; Bouvetøya, Peter I Øy og Dronning Maud Land er biland."
       ],
       "sources": [
@@ -678,10 +678,10 @@
       "prerequisites": [
         "geo-kontinenter-hav"
       ],
-      "summary": "Europas grenser, fjell, elver og land, og hvorfor grensen mot Asia er en avtale snarere enn et naturlig skille.",
+      "summary": "Europa har mange land, fjell og elver, og grensen mot Asia er en avtale snarere enn et naturlig skille.",
       "lesson": [
         "Europa er den vestligste delen av kontinentet Eurasia. Grensen mot Asia er ikke fast. Uralfjellene regnes som en klar grense i øst; videre sørover trekkes den gjerne ved Det kaspiske hav, Kaukasus og Bosporos. I sør skiller Middelhavet og Gibraltarstredet Europa fra Afrika. Europa er sterkt innskåret, og de fleste land har kort vei til havet.",
-        "Europa deles ofte i regioner som Nord-, Vest-, Sør- og Øst-Europa og har 46 land. Russland er størst, Vatikanstaten minst. Donau er Europas nest lengste elv etter Volga og den eneste av de store elvene som renner fra vest mot øst. Den passerer fire hovedsteder: Wien, Bratislava, Budapest og Beograd.",
+        "Europa har 46 land og deles ofte i regioner som Nord-, Vest-, Sør- og Øst-Europa. Russland er størst, Vatikanstaten minst. Donau er Europas nest lengste elv etter Volga og den eneste av de store elvene som renner fra vest mot øst. Den passerer fire hovedsteder: Wien, Bratislava, Budapest og Beograd.",
         "Alpene er Europas største fjellkompleks og strekker seg fra Frankrike til Østerrike. Mont Blanc på 4809 meter er Alpenes høyeste. Europas høyeste fjell regnes vanligvis som Elbrus i Kaukasus, over 5600 meter. Men regnes Kaukasus til Asia, blir Mont Blanc høyest."
       ],
       "keyPoints": [
@@ -772,7 +772,7 @@
             "Duna",
             "Dunaj"
           ],
-          "explain": "Donau er 2850 kilometer lang. Nedbørfeltet berører hele 19 land, og hele Ungarn ligger innenfor det."
+          "explain": "Donau er 2850 kilometer lang. Nedbørfeltet berører 19 land, og hele Ungarn ligger innenfor det."
         },
         {
           "id": "geo-europa-beograd",
@@ -890,11 +890,11 @@
       "prerequisites": [
         "geo-kontinenter-hav"
       ],
-      "summary": "Verdens største og mest folkerike verdensdel: Himalaya, de store elvene, monsunen og regionene fra Sibir til Midtøsten.",
+      "summary": "Asia er verdens største og mest folkerike verdensdel og strekker seg fra Sibir i nord til Midtøsten i sørvest.",
       "lesson": [
         "Asia er den største verdensdelen og har omtrent 60 prosent av verdens befolkning. India og Kina er de to mest folkerike landene; India gikk forbi Kina i 2023. Mange bor tett i fruktbare lavland langs store elver. Den lengste elva er Chang Jiang (Yangtze) i Kina, omtrent 6300 kilometer.",
-        "I tertiærtiden kolliderte India med resten av Asia. Sammenstøtet presset opp Himalaya, verdens høyeste fjellsystem, og den tibetanske høysletta. Mount Everest på grensen mellom Nepal og Kina er Jordens høyeste fjell, 8849 meter over havet. Lenger øst gir platebevegelser jordskjelv og vulkanutbrudd i Japan, Indonesia og Filippinene.",
-        "Klimaet styres i stor grad av monsunen. I nord ligger Sibir med tundra og store barskoger. I de indre delene finnes ørkener som Gobi i Kina og Mongolia. Midtøsten i sørvest er et vagt avgrenset område; kristendommen og islam oppsto der."
+        "I tertiærtiden kolliderte India med resten av Asia. Sammenstøtet presset opp Himalaya, verdens høyeste fjellsystem, og den tibetanske høysletta. Mount Everest på grensen mellom Nepal og Kina er Jordas høyeste fjell, 8849 meter over havet. Lenger øst gir platebevegelser jordskjelv og vulkanutbrudd i Japan, Indonesia og Filippinene.",
+        "Klimaet styres i stor grad av monsunen. I nord ligger Sibir med tundra og store barskoger. I de indre delene finnes ørkener som Gobi i Kina og Mongolia. Midtøsten i sørvest er et vagt avgrenset område. Der oppsto kristendommen og islam."
       ],
       "keyPoints": [
         "Asia har omtrent 60 prosent av verdens befolkning; India og Kina er de mest folkerike landene.",
@@ -977,7 +977,7 @@
           "id": "geo-asia-everest",
           "step": 2,
           "type": "text",
-          "prompt": "Hva heter Jordens høyeste fjell?",
+          "prompt": "Hva heter Jordas høyeste fjell?",
           "answer": "Mount Everest",
           "accept": [
             "Everest",
@@ -1069,7 +1069,7 @@
           "step": 3,
           "type": "explain",
           "prompt": "Forklar hvorfor så mange mennesker i Asia bor langs de store elvene.",
-          "answer": "Elvene har bygd opp store, fruktbare lavland. Der er det vann og god jord til jordbruk, og derfor kan mange mennesker leve tett. Lavlandet i Kina, India og Sørøst-Asia er derfor svært tett befolket.",
+          "answer": "Elvene har bygd opp store, fruktbare lavland. Der er det vann og god jord til jordbruk, og derfor kan mange mennesker leve tett. Lavlandet i Kina, India og Sørøst-Asia er svært tett befolket.",
           "checklist": [
             "Fruktbare lavland langs elvene",
             "Vann og jord til jordbruk",
@@ -1085,7 +1085,7 @@
           "answer": "8849",
           "unit": "moh.",
           "tolerance": 10,
-          "explain": "Fjellet er målt flere ganger, blant annet til 8848 og 8850 meter. Målingen fra 2020 gav 8849 meter med snø."
+          "explain": "Fjellet er målt flere ganger, blant annet til 8848 og 8850 meter. Målingen fra 2020 ga 8849 meter med snø."
         },
         {
           "id": "geo-asia-aar-everest",
@@ -1104,15 +1104,15 @@
       "prerequisites": [
         "geo-kontinenter-hav"
       ],
-      "summary": "Den nest største verdensdelen: Nilen og Sahara i nord, regnskog rundt ekvator, savanne og de store sjøene i øst.",
+      "summary": "Afrika er den nest største verdensdelen, med ørken i nord, regnskog rundt ekvator og savanne og store sjøer i øst.",
       "lesson": [
         "Afrika er den nest største verdensdelen og har 54 selvstendige stater. Ekvator går gjennom kontinentet, men omtrent to tredjedeler av landmassen ligger nord for den. Algerie er det største landet. Nigeria har flest innbyggere, over 220 millioner. Suezkanalen regnes som grensen mot Asia.",
-        "Nord-Afrika domineres av Sahara, Jordens største varme ørken. Sør for den ligger Sahel, et tørt savannebelte fra Atlanterhavet til Rødehavet. Rundt ekvator, i Sentral-Afrika og langs Guineabukta, er det tropisk regnskog. Kongoelva, Afrikas mest vannrike elv, renner her. Mot sør og øst går skogen over i savanne med et rikt dyreliv.",
-        "Nilen er Afrikas lengste elv, 6671 kilometer. Den hvite Nilen renner ut av Victoriasjøen, Afrikas største innsjø, og møter Den blå Nilen fra Etiopia ved Khartoum. Elva ender i et stort delta ved Middelhavet. Jordbruket i Egypt har alltid vært avhengig av Nilen. Afrikas høyeste fjell er Kilimanjaro i Tanzania, 5895 meter over havet."
+        "Nord-Afrika domineres av Sahara, Jordas største varme ørken. Sør for den ligger Sahel, et tørt savannebelte fra Atlanterhavet til Rødehavet. Rundt ekvator, i Sentral-Afrika og langs Guineabukta, er det tropisk regnskog. Kongoelva, Afrikas mest vannrike elv, renner her. Mot sør og øst går skogen over i savanne med et rikt dyreliv.",
+        "Nilen er Afrikas lengste elv, 6671 kilometer. Den hvite Nil renner ut av Victoriasjøen, Afrikas største innsjø, og møter Den blå Nil fra Etiopia ved Khartoum. Elva ender i et stort delta ved Middelhavet. Jordbruket i Egypt har alltid vært avhengig av Nilen. Afrikas høyeste fjell er Kilimanjaro i Tanzania, 5895 meter over havet."
       ],
       "keyPoints": [
         "54 stater; Nigeria har flest innbyggere, Algerie er størst i areal.",
-        "Sahara er Jordens største varme ørken; Sahel er det tørre beltet sør for den.",
+        "Sahara er Jordas største varme ørken; Sahel er det tørre beltet sør for den.",
         "Regnskogen ligger rundt ekvator i Sentral-Afrika, der Kongoelva renner.",
         "Nilen er Afrikas lengste elv, Victoriasjøen største innsjø og Kilimanjaro høyeste fjell."
       ],
@@ -1153,7 +1153,7 @@
           "step": 1,
           "type": "choice",
           "prompt": "Hva er Sahara?",
-          "answer": "Jordens største varme ørken",
+          "answer": "Jordas største varme ørken",
           "distractors": [
             "Afrikas største regnskog",
             "Et tørt savannebelte i øst",
@@ -1211,7 +1211,7 @@
             "Lake Victoria",
             "Victoria Nyanza"
           ],
-          "explain": "Sjøen dekker 68 800 kvadratkilometer. Ved byen Jinja i Uganda renner Den hvite Nilen ut av den."
+          "explain": "Sjøen dekker 68 800 kvadratkilometer. Ved byen Jinja i Uganda renner Den hvite Nil ut av den."
         },
         {
           "id": "geo-afrika-sahel",
@@ -1316,7 +1316,7 @@
       "prerequisites": [
         "geo-kontinenter-hav"
       ],
-      "summary": "Dobbeltkontinentet fra Arktis til Kapp Horn: fjellkjedene i vest, de store elvene og landene som formet verdensdelene.",
+      "summary": "Nord- og Sør-Amerika er et dobbeltkontinent fra Arktis til Kapp Horn, med fjellkjeder i vest, store elver og språk fra Europa.",
       "lesson": [
         "Amerika er et dobbeltkontinent. Nord- og Sør-Amerika møtes ved Panamaeidet, og grensen går mellom Panama og Colombia. Navnet kommer fra sjøfareren Amerigo Vespucci. Langs vestsiden går lange fjellkjeder: i nord blant annet Rocky Mountains gjennom Canada og USA, i sør Andesfjellene, verdens lengste fjellkjede.",
         "Øst for fjellene ligger store sletter og prærier som dreneres av Mississippi, Nord-Amerikas lengste elvesystem. Canada er det største landet i verdensdelen, men omtrent 60 prosent av folket bor i USA. Innvandrere tok med seg språkene: engelsk til USA og Canada, fransk til Canada og spansk til Mexico og Mellom-Amerika.",
@@ -1489,7 +1489,7 @@
           "prompt": "Hvorfor ble Panamakanalen så viktig for skipsfarten?",
           "answer": "Skip slapp å seile rundt Sør-Amerika",
           "distractors": [
-            "Den gav USA en ny havn i Atlanterhavet",
+            "Den ga USA en ny havn i Atlanterhavet",
             "Den knyttet Mexicogolfen til Polhavet",
             "Den gjorde Panama til en del av Colombia"
           ],
@@ -1522,16 +1522,16 @@
       "prerequisites": [
         "geo-kontinenter-hav"
       ],
-      "summary": "Den minste verdensdelen og de to polområdene: Australia og øyene i Stillehavet, havet i Arktis og isen i Antarktis.",
+      "summary": "Oseania er den minste verdensdelen, og polområdene er motsetninger, med hav i Arktis og et iskledd kontinent i Antarktis.",
       "lesson": [
         "Oseania er den minste verdensdelen. Den består av Australia, New Zealand og mange øyer i Stillehavet, ofte delt i Melanesia, Mikronesia og Polynesia. Australia er det største landet. Det ligger i et høytrykksområde, og store deler av innlandet er tørr steppe og ørken. Utenfor nordøstkysten ligger Great Barrier Reef. Aboriginene er Australias urfolk, maoriene New Zealands.",
-        "Polområdene er svært forskjellige. Arktis rundt Nordpolen er for det meste hav, Polhavet, omgitt av land som Grønland, Svalbard og nordkysten av Russland, Canada og Alaska. Antarktis rundt Sørpolen er et kontinent dekket av innlandsis og omgitt av hav. Det er det kaldeste, mest forblåste og tørreste kontinentet og har 90 prosent av all is på Jorden.",
+        "Polområdene er svært forskjellige. Arktis rundt Nordpolen er for det meste hav, Polhavet, omgitt av land som Grønland, Svalbard og nordkysten av Russland, Canada og Alaska. Antarktis rundt Sydpolen er et kontinent dekket av innlandsis og omgitt av hav. Det er det kaldeste, mest forblåste og tørreste kontinentet og har 90 prosent av all is på Jorda.",
         "Roald Amundsen ledet den første ekspedisjonen som nådde Sydpolen, 14. desember 1911, fem uker før briten Robert F. Scott. Norge er blant landene som har gjort krav på områder i Antarktis. Ifølge Antarktistraktaten fra 1959 skal området bare brukes til fredelige formål, med frihet til forskning."
       ],
       "keyPoints": [
         "Oseania er minst; Australia er det største landet, med tørt innland og Great Barrier Reef utenfor kysten.",
         "Arktis er hav omgitt av land; Antarktis er land omgitt av hav.",
-        "Antarktis har 90 prosent av Jordens is og er det kaldeste kontinentet.",
+        "Antarktis har 90 prosent av Jordas is og er det kaldeste kontinentet.",
         "Roald Amundsen nådde Sydpolen først, 14. desember 1911."
       ],
       "sources": [
@@ -1562,7 +1562,7 @@
           "distractors": [
             "Arktis er et kontinent, Antarktis er en øygruppe i Stillehavet",
             "Arktis har innlandsis, Antarktis har bare havis og drivis",
-            "Arktis ligger på sørlige halvkule, Antarktis på den nordlige"
+            "Arktis ligger på den sørlige halvkule, Antarktis på den nordlige"
           ],
           "explain": "Polhavet er forbundet med Stillehavet bare gjennom det grunne Beringstredet. Antarktis er derimot omgitt av Sørishavet på alle kanter."
         },
@@ -1571,7 +1571,7 @@
           "step": 1,
           "type": "choice",
           "prompt": "Hva er Great Barrier Reef?",
-          "answer": "Jordens største korallrev",
+          "answer": "Jordas største korallrev",
           "distractors": [
             "Australias største ørken",
             "En fjellkjede på New Zealand",
@@ -1590,7 +1590,7 @@
             "Robert F. Scott",
             "Ernest Shackleton"
           ],
-          "explain": "Amundsen seilte til Antarktis med polarskipet Fram i 1910. Allerede i 1903 hadde han dratt ut med jakten Gjøa og ble den første som seilte gjennom Nordvestpassasjen i ett og samme skip."
+          "explain": "Amundsen seilte til Antarktis med polarskipet Fram i 1910. Allerede i 1903 dro han ut med jakta Gjøa, og han ble den første som seilte gjennom Nordvestpassasjen med ett og samme skip."
         },
         {
           "id": "geo-oseania-polar-klima-antarktis",
@@ -1601,9 +1601,9 @@
           "distractors": [
             "Mildt ved kysten, men med mye regn i innlandet",
             "Kaldt om vinteren, men med varme og fuktige somre",
-            "Kaldere enn Arktis, men med mest nedbør på Jorden"
+            "Kaldere enn Arktis, men med mest nedbør på Jorda"
           ],
-          "explain": "Den laveste temperaturen som er målt på Jorden, −89,2 °C, ble registrert på den russiske stasjonen Vostok i 1983."
+          "explain": "Den laveste temperaturen som er målt på Jorda, −89,2 °C, ble registrert på den russiske stasjonen Vostok i 1983."
         },
         {
           "id": "geo-oseania-polar-aboriginer",
@@ -1691,7 +1691,7 @@
             "Antarktis er lite påvirket og fungerer som referanseområde",
             "Forskningen gjelder klima, ozonlaget og miljøgifter"
           ],
-          "explain": "Norsk Polarinstitutt har målt havisen som strømmer gjennom Framstredet siden 1990. Fra 2015 har isen sent på sommeren vært helt nede i 1,1 meter tykk."
+          "explain": "Norsk Polarinstitutt har målt havisen som strømmer gjennom Framstredet siden 1990. Siden 2015 har isen sent på sommeren vært så tynn som 1,1 meter."
         },
         {
           "id": "geo-oseania-polar-australia-torr",
@@ -1700,9 +1700,9 @@
           "prompt": "Hvorfor er store deler av Australia så tørre?",
           "answer": "Landet ligger i et høytrykksområde",
           "distractors": [
-            "Kalde havstrømmer langs hele kysten",
+            "Kalde havstrømmer går langs hele kysten",
             "Fjellkjeder stenger all fuktig luft ute",
-            "Landet ligger nær Sørpolen"
+            "Landet ligger nær Sydpolen"
           ],
           "explain": "Det gir vidstrakte steppe- og ørkenområder, særlig i vest og i de sentrale delene. Mesteparten av resten av Oseania har derimot fuktig tropeklima med jevne temperaturer."
         },
@@ -1718,7 +1718,7 @@
           "id": "geo-oseania-polar-andel-is",
           "step": 4,
           "type": "number",
-          "prompt": "Omtrent hvor mange prosent av all is på Jorden finnes i Antarktis?",
+          "prompt": "Omtrent hvor mange prosent av all is på Jorda finnes i Antarktis?",
           "answer": "90",
           "unit": "prosent",
           "tolerance": 5,
@@ -1733,15 +1733,15 @@
       "prerequisites": [
         "geo-kontinenter-hav"
       ],
-      "summary": "Hvordan Jorden deles i klimasoner, hvilken vegetasjon som hører til dem, og hvordan hav og vind gjør klimaet annerledes enn breddegraden tilsier.",
+      "summary": "Jorda deles i klimasoner med hver sin vegetasjon, men hav og vind kan gjøre klimaet annerledes enn breddegraden tilsier.",
       "lesson": [
         "En klimasone er et område med en bestemt type klima. Rundt ekvator er det tropisk klima, nær polene polarklima. Den vanligste inndelingen er Köppens klimaklassifikasjon fra 1884. Den har fem hovedgrupper: tropisk, tørt, varmtemperert, kaldtemperert og polarklima. Norge har tre av dem: polarklima, kaldtemperert og varmtemperert klima.",
         "Vegetasjonen følger klimaet. I tropisk regnklima, varmt og vått hele året, vokser regnskog. Der tropene har en tydelig tørketid, blir det savanne. Ørken får svært lite nedbør. Lenger nord ligger taigaen, et belte av barskog fra Norge gjennom Russland til Canada. Nærmest polene ligger tundra, der den varmeste måneden har under 10 grader i snitt.",
         "Havet påvirker også klimaet. Golfstrømmen fører varmt vann langs kysten av USA og ut i Atlanterhavet, og lavtrykk frakter varme og fuktighet til Vest-Europa. Derfor er Norge mye mildere enn Alaska, som ligger like langt nord. I Sør- og Øst-Asia styres klimaet av monsunen, en vind som skifter retning med årstidene og gir lang regntid om sommeren."
       ],
       "keyPoints": [
-        "Köppen deler Jorden i fem hovedklimaer: tropisk, tørt, varmtemperert, kaldtemperert og polar.",
-        "Regnskog: varmt og vått hele året. Savanne: tropisk med tørketid. Ørken: svært lite nedbør.",
+        "Köppen deler Jorda i fem hovedklimaer: tropisk, tørt, varmtemperert, kaldtemperert og polar.",
+        "Regnskog vokser der det er varmt og vått hele året, savanne der tropene har tørketid, og ørken der det kommer svært lite nedbør.",
         "Taigaen er barskogbeltet i nord; tundraen ligger nærmest polene.",
         "Golfstrømmen og strømmene videre nordover gjør Norge mildt; monsunen gir regntid i Asia."
       ],
@@ -1828,7 +1828,7 @@
             "den boreale barskogen",
             "boreal skog"
           ],
-          "explain": "Taigaen dekker om lag 11–12 prosent av landarealet og er Jordens største sammenhengende skogområde. De største områdene ligger i Russland og Canada."
+          "explain": "Taigaen dekker om lag 11–12 prosent av landarealet og er Jordas største sammenhengende skogområde. De største områdene ligger i Russland og Canada."
         },
         {
           "id": "geo-klima-vegetasjon-tundra",
@@ -1860,7 +1860,7 @@
           "step": 3,
           "type": "explain",
           "prompt": "Forklar hvordan monsunen oppstår.",
-          "answer": "Om sommeren varmes landet raskere opp enn havet. Varm luft stiger over land og gir lavtrykk, så fuktig luft strømmer inn fra havet og gir mye regn. Om vinteren snur det: kaldt land gir høytrykk og tørr vind ut mot havet.",
+          "answer": "Om sommeren varmes landet raskere opp enn havet. Varm luft stiger over land og gir lavtrykk, så fuktig luft strømmer inn fra havet og gir mye regn. Om vinteren snur det: Kaldt land gir høytrykk og tørr vind ut mot havet.",
           "checklist": [
             "Land varmes opp og kjøles ned raskere enn hav",
             "Sommer: fuktig luft fra havet gir regntid",
@@ -1946,17 +1946,17 @@
         "geo-europa",
         "geo-asia"
       ],
-      "summary": "Hvor mange vi er, hvorfor folketallet vokste så raskt, hvor veksten skjer nå, og hvorfor stadig flere bor i byer.",
+      "summary": "Folketallet har vokst raskt siden 1800-tallet, veksten skjer nå mest i Afrika, og stadig flere bor i byer.",
       "lesson": [
-        "Det lever omtrent 8,3 milliarder mennesker på Jorden. Folketallet passerte 8 milliarder i november 2022, elleve år etter at det nådde 7 milliarder. Rundt år 1800 var vi under én milliard. Veksten skjøt fart på 1800-tallet med industri, nye transportmidler og bedre hygiene, som fikk dødeligheten ned.",
-        "Mønsteret kalles den demografiske overgangen: først faller dødeligheten, senere fødselstallene, og i mellomtiden vokser befolkningen raskt. Den prosentvise veksten var størst på 1960-tallet, over 2 prosent i året. I 2020 falt den under 1 prosent. FN venter en topp på rundt 10,4 milliarder i midten av 2080-årene, men slike framskrivinger er usikre.",
+        "Det lever omtrent 8,3 milliarder mennesker på Jorda. Folketallet passerte 8 milliarder i november 2022, elleve år etter at det nådde 7 milliarder. Rundt år 1800 var vi under én milliard. Veksten skjøt fart på 1800-tallet med industri, nye transportmidler og bedre hygiene, som fikk dødeligheten ned.",
+        "Mønsteret kalles den demografiske overgangen: Først faller dødeligheten, senere fødselstallene, og i mellomtiden vokser befolkningen raskt. Den prosentvise veksten var størst på 1960-tallet, over 2 prosent i året. I 2020 falt den under 1 prosent. FN venter en topp på rundt 10,4 milliarder i midten av 2080-årene, men slike framskrivinger er usikre.",
         "Asia har 59 prosent av verdens befolkning, Afrika 18 og Europa bare 9. Afrika vokser raskest fordi fruktbarheten fortsatt er høy, mens flere land i Europa og Øst-Asia krymper. De mest folkerike landene er Kina og India, fulgt av USA og Indonesia. Samtidig flytter folk til byene, såkalt urbanisering. I 1950 bodde 29 prosent i byer; i dag gjør over halvparten det."
       ],
       "keyPoints": [
-        "Omtrent 8,3 milliarder mennesker; 8 milliarder ble passert i 2022.",
+        "Jorda har omtrent 8,3 milliarder mennesker, og folketallet passerte 8 milliarder i 2022.",
         "Den prosentvise veksten toppet seg på 1960-tallet og er nå under 1 prosent i året.",
         "Afrika vokser raskest; Europas andel av verden synker.",
-        "Andelen som bor i byer har økt fra 29 prosent i 1950 til over halvparten i dag."
+        "Andelen som bor i byer, har økt fra 29 prosent i 1950 til over halvparten i dag."
       ],
       "sources": [
         {
@@ -1981,7 +1981,7 @@
           "id": "geo-befolkning-byer-folketall",
           "step": 1,
           "type": "choice",
-          "prompt": "Omtrent hvor mange mennesker lever på Jorden i dag?",
+          "prompt": "Omtrent hvor mange mennesker lever på Jorda i dag?",
           "answer": "Omtrent 8 milliarder",
           "distractors": [
             "Omtrent 4 milliarder",
@@ -2128,7 +2128,7 @@
           "id": "geo-befolkning-byer-topp",
           "step": 4,
           "type": "number",
-          "prompt": "Omtrent hvor mange milliarder mennesker venter FN at Jorden vil ha på det meste, i 2080-årene?",
+          "prompt": "Omtrent hvor mange milliarder mennesker venter FN at Jorda vil ha på det meste, i 2080-årene?",
           "answer": "10,4",
           "unit": "milliarder",
           "tolerance": 0.3,

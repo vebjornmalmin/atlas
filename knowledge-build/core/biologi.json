@@ -12,10 +12,10 @@
       "title": "Cellen",
       "tier": 1,
       "prerequisites": [],
-      "summary": "Cellen er livets minste enhet, og hvordan den er bygd opp, er nøkkelen til å forstå arv, sykdom og økosystemer.",
+      "summary": "Cellen er livets minste enhet, og oppbygningen dens er nøkkelen til å forstå arv, sykdom og økosystemer.",
       "lesson": [
         "Cellen er den minste enheten for liv. Alle organismer består av én eller flere celler. Bakterier er encellede, mens planter og dyr er flercellede og har mange ulike celletyper; et menneske har omtrent 220. De fleste celler kan bare ses i mikroskop. Alle celler stammer fra andre celler, og trolig fra én felles urcelle.",
-        "Alle celler er omgitt av cellemembranen, en tynn, fettaktig hinne som skiller cellens indre fra omgivelsene. Celler med cellekjerne kalles eukaryote; her ligger arvestoffet, DNA, beskyttet inne i kjernen. Planter, dyr og sopp er bygd av eukaryote celler. Celler uten kjerne kalles prokaryote. Bakterier er prokaryote. Arvestoffet ligger fritt inne i cellen, og bakterier kan dele seg raskt og utveksle arvestoff med hverandre.",
+        "Alle celler er omgitt av cellemembranen, en tynn, fettaktig hinne som skiller cellens indre fra omgivelsene. Celler med cellekjerne kalles eukaryote. Hos dem ligger arvestoffet, DNA, beskyttet inne i kjernen. Planter, dyr og sopp er bygd av eukaryote celler. Celler uten kjerne kalles prokaryote. Bakterier er prokaryote, og arvestoffet deres ligger fritt i cellen. De kan dele seg raskt og utveksle arvestoff med hverandre.",
         "Mitokondriene er cellens energiverk. Der brytes næringsstoffer ned ved hjelp av oksygen i celleåndingen. Planteceller har i tillegg en stiv cellevegg av cellulose og kloroplaster, også kalt grønnkorn, der fotosyntesen foregår. Det grønne fargestoffet klorofyll fanger energien i sollyset."
       ],
       "keyPoints": [
@@ -207,14 +207,14 @@
       "prerequisites": [
         "bio-cellen"
       ],
-      "summary": "Hvordan oppskriften på en organisme er lagret i DNA, og hvordan den føres videre fra foreldre til barn.",
+      "summary": "DNA lagrer oppskriften på en organisme, og arven føres videre fra foreldre til barn.",
       "lesson": [
-        "DNA er arvestoffet i alle celler. Molekylet er formet som en vridd stige, en dobbelheliks, der trinnene er par av fire baser: A, T, C og G. Gener er avsnitt av DNA med oppskrifter på det cellen skal lage, oftest proteiner. Cellen kopierer genet til RNA, og ribosomene bygger proteinet etter kopien. Hos mennesket er DNA-et pakket i 46 kromosomer, 23 par: ett av hvert par fra mor og ett fra far.",
+        "DNA er arvestoffet i alle celler. Molekylet ligner en vridd stige, en dobbelheliks, der trinnene er par av fire baser: A, T, C og G. Gener er avsnitt av DNA med oppskrifter på det cellen skal lage, oftest proteiner. Cellen kopierer genet til RNA, og ribosomene bygger proteinet etter kopien. Hos mennesket er DNA-et pakket i 46 kromosomer, 23 par: ett av hvert par fra mor og ett fra far.",
         "Munken Gregor Mendel krysset erteplanter og publiserte i 1866 resultater som regnes som starten på genetikken. Han viste at egenskaper ikke blandes, men går i arv som egne enheter i par. Noen anlegg er dominante, andre vikende (recessive). Et vikende anlegg kan være skjult i én generasjon og komme til syne i den neste. Arbeidet ble først gjenoppdaget i 1900.",
         "I 1953 la James Watson og Francis Crick fram modellen av DNA som en dobbelheliks. De bygde blant annet på et røntgenbilde tatt av Rosalind Franklin og studenten hennes. Varige endringer i DNA kalles mutasjoner; de kan gi sykdom, men også ny variasjon. Metoden CRISPR er hentet fra bakterienes forsvar mot virus: En kort RNA-bit leder en «gensaks», et Cas-protein, til et bestemt sted i DNA-et, der den kutter."
       ],
       "keyPoints": [
-        "Gener er oppskrifter i DNA, de fleste på proteiner; cellen kopierer genet til RNA og bygger proteinet etter det.",
+        "Gener er oppskrifter i DNA, oftest på proteiner, og cellen bygger proteinet etter en RNA-kopi av genet.",
         "Mennesket har 46 kromosomer i 23 par, ett av hvert par fra hver forelder.",
         "Mendel viste at anlegg arves som egne enheter og kan være dominante eller vikende.",
         "Dobbelheliksen ble beskrevet i 1953, blant annet på grunnlag av Rosalind Franklins røntgenbilde.",
@@ -309,7 +309,7 @@
             "Hugo de Vries og Carl Correns",
             "Emmanuelle Charpentier og Jennifer Doudna"
           ],
-          "explain": "Modellen ble publisert i Nature i april 1953. Watson, Crick og Maurice Wilkins fikk Nobelprisen i fysiologi eller medisin i 1962; Franklin døde i 1958, og prisen deles ikke ut posthumt."
+          "explain": "Modellen ble publisert i Nature i april 1953. Watson, Crick og Maurice Wilkins fikk nobelprisen i fysiologi eller medisin i 1962; Franklin døde i 1958, og prisen deles ikke ut posthumt."
         },
         {
           "id": "bio-arv-dna-franklin",
@@ -387,7 +387,7 @@
             "RNA fører en gensaks (Cas) til riktig sted",
             "Brukes til målrettede endringer i DNA"
           ],
-          "explain": "Bakteriene lagrer biter av virusarvestoff og bruker dem til å kjenne igjen og kutte viruset ved et nytt angrep. Emmanuelle Charpentier og Jennifer Doudna fikk Nobelprisen i kjemi i 2020 for å ha gjort systemet om til en programmerbar gensaks."
+          "explain": "Bakteriene lagrer biter av virusarvestoff og bruker dem til å kjenne igjen og kutte viruset ved et nytt angrep. Emmanuelle Charpentier og Jennifer Doudna fikk nobelprisen i kjemi i 2020 for å ha gjort systemet om til en programmerbar gensaks."
         },
         {
           "id": "bio-arv-dna-aar-mendel",
@@ -414,14 +414,14 @@
       "prerequisites": [
         "bio-arv-dna"
       ],
-      "summary": "Hvordan arter endrer seg over generasjoner gjennom naturlig utvalg, og hvorfor alt liv på jorda er i slekt.",
+      "summary": "Arter endrer seg over generasjoner gjennom naturlig utvalg, og derfor er alt liv på Jorda i slekt.",
       "lesson": [
-        "Evolusjon betyr at arvelige egenskaper blir vanligere eller sjeldnere i en populasjon over generasjoner. Det er populasjonen som endrer seg, ikke enkeltindividet. Charles Darwin la grunnlaget for evolusjonsbiologien i boka Artenes opprinnelse fra 1859. Ideene vokste fram etter en fem år lang jordomseiling med skipet Beagle. Alfred Russel Wallace kom omtrent samtidig fram til den samme teorien.",
+        "Evolusjon betyr at arvelige egenskaper blir vanligere eller sjeldnere i en populasjon over generasjoner. Det er populasjonen som endrer seg, ikke enkeltindividet. Charles Darwin la grunnlaget for evolusjonsbiologien i boka «Artenes opprinnelse» fra 1859. Ideene vokste fram etter en fem år lang jordomseiling med skipet Beagle. Alfred Russel Wallace kom omtrent samtidig fram til den samme teorien.",
         "Naturlig utvalg bygger på tre forutsetninger: Det fødes flere individer enn miljøet kan bære, individene varierer, og variasjonen er delvis arvelig. De best tilpassede overlever oftere og får flere avkom. Er det etter en tørke mest store frø igjen, klarer fugler med store nebb seg best, og andelen med store nebb øker. Mutasjoner er den opprinnelige kilden til variasjon, og de oppstår tilfeldig, uavhengig av hva organismen trenger.",
         "Ifølge evolusjonsteorien har alt liv et felles opphav. Fossiler, likheter i anatomi og likheter i DNA peker samme vei. Mennesket hører til de store menneskeapene, sammen med sjimpanser, gorillaer og orangutanger. Sjimpansene, vanlig sjimpanse og bonobo, er våre nærmeste nålevende slektninger, men vi stammer ikke fra dem; vi har felles forfedre. Vår egen art, Homo sapiens, har levd i omtrent 300 000 år."
       ],
       "keyPoints": [
-        "Darwin la fram teorien om evolusjon ved naturlig utvalg i Artenes opprinnelse (1859).",
+        "Darwin la fram teorien om evolusjon ved naturlig utvalg i «Artenes opprinnelse» (1859).",
         "Naturlig utvalg krever overproduksjon av avkom, variasjon og arv.",
         "Det er populasjoner, ikke enkeltindivider, som utvikler seg.",
         "Alt liv har felles opphav; sjimpansen er vår nærmeste nålevende slektning."
@@ -453,7 +453,7 @@
           "id": "bio-evolusjon-darwin",
           "step": 1,
           "type": "choice",
-          "prompt": "Hvem la fram teorien om evolusjon ved naturlig utvalg i boka Artenes opprinnelse?",
+          "prompt": "Hvem la fram teorien om evolusjon ved naturlig utvalg i boka «Artenes opprinnelse»?",
           "answer": "Charles Darwin",
           "distractors": [
             "Gregor Mendel",
@@ -466,8 +466,8 @@
           "id": "bio-evolusjon-hva-endrer-seg",
           "step": 1,
           "type": "choice",
-          "prompt": "Hva er det som endrer seg når en art utvikler seg?",
-          "answer": "Hvor vanlige ulike arvelige egenskaper er i populasjonen",
+          "prompt": "Hva skjer når en art utvikler seg?",
+          "answer": "Arvelige egenskaper blir vanligere eller sjeldnere i populasjonen",
           "distractors": [
             "Hvert individ tilpasser seg i løpet av livet",
             "Egenskaper individene lærer, går videre i arv",
@@ -479,7 +479,7 @@
           "id": "bio-evolusjon-felles-opphav",
           "step": 1,
           "type": "choice",
-          "prompt": "Hva sier evolusjonsteorien om slektskapet mellom alle livsformer på jorda?",
+          "prompt": "Hva sier evolusjonsteorien om slektskapet mellom alle livsformer på Jorda?",
           "answer": "Alt liv har et felles opphav",
           "distractors": [
             "Hver hovedgruppe oppsto for seg",
@@ -513,7 +513,7 @@
             "Alfred Wallace",
             "A. R. Wallace"
           ],
-          "explain": "Wallace sendte Darwin et manuskript i 1858. Darwins venner sørget for at Wallaces tekst og et kort utdrag av Darwins arbeid ble lagt fram sammen samme år, og året etter kom Artenes opprinnelse."
+          "explain": "Wallace sendte Darwin et manuskript i 1858. Darwins venner sørget for at Wallaces tekst og et kort utdrag av Darwins arbeid ble lagt fram sammen samme år, og året etter kom «Artenes opprinnelse»."
         },
         {
           "id": "bio-evolusjon-sjimpansen",
@@ -561,7 +561,7 @@
           "prompt": "Hvorfor er det feil å si at mennesket stammer fra sjimpansen?",
           "answer": "Begge stammer fra felles forfedre og har endret seg siden",
           "distractors": [
-            "Mennesket stammer i stedet fra gorillaen, ikke sjimpansen",
+            "Mennesket stammer fra gorillaen, ikke fra sjimpansen",
             "Sjimpansen stammer fra mennesket, og ikke omvendt",
             "Mennesket og sjimpansen er ikke i slekt med hverandre"
           ],
@@ -572,13 +572,13 @@
           "step": 3,
           "type": "explain",
           "prompt": "Nevn og forklar tre typer bevis for at livet har utviklet seg gjennom evolusjon.",
-          "answer": "Fossiler viser at livet har endret seg over tid, med overgangsformer for eksempel mellom fisk og firfotede dyr. Menneskearmen, hvalens luffe og fuglevingen har samme grunnstruktur, som tyder på felles stamform. Arter som ligner hverandre, har også svært likt DNA.",
+          "answer": "Fossiler viser at livet har endret seg over tid, med overgangsformer for eksempel mellom fisk og firfotede dyr. Menneskearmen, hvalens luffe og fuglevingen har samme grunnstruktur, noe som tyder på felles stamform. Arter som ligner hverandre, har også svært likt DNA.",
           "checklist": [
             "Fossiler og overgangsformer",
             "Lik grunnstruktur i anatomien, for eksempel forlemmer",
             "Likheter i DNA mellom beslektede arter"
           ],
-          "explain": "Bevisene kommer fra flere uavhengige fagfelt. I forskningen er det i dag ingen tvil om at livet på jorda er et resultat av evolusjon."
+          "explain": "Bevisene kommer fra flere uavhengige fagfelt. I forskningen er det i dag ingen tvil om at livet på Jorda er et resultat av evolusjon."
         },
         {
           "id": "bio-evolusjon-aar-artenes-opprinnelse",
@@ -592,7 +592,7 @@
           "id": "bio-evolusjon-homo-sapiens",
           "step": 4,
           "type": "choice",
-          "prompt": "Omtrent hvor lenge har mennesker av arten Homo sapiens levd på jorda?",
+          "prompt": "Omtrent hvor lenge har mennesker av arten Homo sapiens levd på Jorda?",
           "answer": "Omtrent 300 000 år",
           "distractors": [
             "Omtrent 30 000 år",
@@ -608,10 +608,10 @@
       "title": "Livets mangfold",
       "tier": 1,
       "prerequisites": [],
-      "summary": "Hvordan biologer ordner millioner av arter i et system, og hvorfor mangfoldet av liv er verdt å forstå og ta vare på.",
+      "summary": "Biologer ordner millioner av arter i et system, og mangfoldet av liv er verdt å forstå og ta vare på.",
       "lesson": [
         "Den svenske naturforskeren Carl von Linné ordnet på 1700-tallet artene i et hierarkisk system: arter samles i slekter, slekter i familier og videre i ordener, klasser, rekker og riker. Han innførte også vitenskapelige navn med to ledd, slektsnavn og artsnavn. Systemet kalles binær nomenklatur. Hegg heter for eksempel Prunus padus.",
-        "Linné delte livet i to riker, dyr og planter. I dag regner de fleste med tre domener: bakterier, arker og eukaryoter. Eukaryotene omfatter blant annet dyr, planter og sopp. Sopp er et eget rike: de driver ikke fotosyntese, men lever av organisk stoff, og de regnes å stå nærmere dyrene enn plantene. En art er vanligvis alle individer som kan få forplantningsdyktige avkom sammen.",
+        "Linné delte livet i to riker, dyr og planter. I dag regner de fleste med tre domener: bakterier, arker og eukaryoter. Eukaryotene omfatter blant annet dyr, planter og sopp. Sopp er et eget rike. Soppene driver ikke fotosyntese, men lever av organisk stoff, og de regnes for å stå nærmere dyrene enn plantene. En art er vanligvis alle individer som kan få forplantningsdyktige avkom sammen.",
         "Virveldyrene har ryggrad og hodeskalle: fisker, amfibier, reptiler, fugler og pattedyr. Amfibier, som frosker, må som regel tilbake til vann for å formere seg. Biologisk mangfold er variasjonen av liv: arter, genetisk variasjon og leveområder. Nærmere én million arter er truet av utryddelse. Hovedårsaken er menneskelig aktivitet: Natur bygges ned, og fremmede arter, forurensning, overhøsting og klimaendringer svekker bestander."
       ],
       "keyPoints": [
@@ -726,7 +726,7 @@
           "id": "bio-livets-mangfold-biologisk-mangfold",
           "step": 2,
           "type": "text",
-          "prompt": "Hva kalles samlet variasjonen av arter, gener og leveområder?",
+          "prompt": "Hva kalles variasjonen av arter, gener og leveområder under ett?",
           "answer": "Biologisk mangfold",
           "accept": [
             "biodiversitet",
@@ -747,7 +747,7 @@
             "De formerer seg bare ved at cellene deler seg",
             "De mangler arvestoff i form av DNA i cellene"
           ],
-          "explain": "Soppriket ble foreslått av nordmannen Olav Johan Sopp i 1887. Til forskjell fra dyr fordøyer soppen maten utenfor kroppen: Den skiller ut enzymer og tar opp de oppløste stoffene. Soppene lagrer glykogen, slik dyr gjør, og regnes å ha felles rot med dyreriket."
+          "explain": "Soppriket ble foreslått av nordmannen Olav Johan Sopp i 1887. Til forskjell fra dyr fordøyer soppen maten utenfor kroppen: Den skiller ut enzymer og tar opp de oppløste stoffene. Soppene lagrer glykogen, slik dyr gjør, og regnes for å ha felles rot med dyreriket."
         },
         {
           "id": "bio-livets-mangfold-koble-kjennetegn",
@@ -817,11 +817,11 @@
       "title": "Menneskekroppen",
       "tier": 1,
       "prerequisites": [],
-      "summary": "Hvordan kroppens organsystemer samarbeider om å frakte oksygen og næring, styre kroppen og holde den oppe.",
+      "summary": "Kroppens organsystemer samarbeider om å frakte oksygen og næring, styre kroppen og holde den oppe.",
       "lesson": [
         "Hjertet er en muskel som pumper blodet rundt i kroppen. Det er en dobbel pumpe med fire kamre. Høyre side sender oksygenfattig blod til lungene, venstre side sender oksygenrikt blod ut i hovedpulsåren og videre til hele kroppen. Den engelske legen William Harvey viste i 1628 at det samme blodet sirkulerer rundt i kroppen, drevet av hjertet.",
-        "I lungene går luften ned i små lungeblærer. I veggene tar blodet opp oksygen og avgir karbondioksid. Fordøyelsen bryter maten ned til små molekyler. Nesten all nedbryting og nesten alt opptak av næring skjer i tynntarmen, mens tykktarmen først og fremst tar opp vann.",
-        "Nervesystemet styrer kroppen med raske elektriske signaler. Hjernen og ryggmargen utgjør sentralnervesystemet. Hormonsystemet er langsommere: kjertler skiller ut hormoner, kjemiske budbringere som fraktes med blodet og regulerer blant annet vekst, forplantning og blodsukker. Skjelettet bærer kroppen og beskytter organene; et voksent menneske har normalt 206 knokler."
+        "I lungene går lufta ned i små lungeblærer. I veggene deres tar blodet opp oksygen og avgir karbondioksid. Fordøyelsen bryter maten ned til små molekyler. Nesten all nedbryting og nesten alt opptak av næring skjer i tynntarmen, mens tykktarmen først og fremst tar opp vann.",
+        "Nervesystemet styrer kroppen med raske elektriske signaler. Hjernen og ryggmargen utgjør sentralnervesystemet. Hormonsystemet er langsommere. Kjertler skiller ut hormoner, kjemiske budbringere som fraktes med blodet og regulerer blant annet vekst, forplantning og blodsukker. Skjelettet bærer kroppen og beskytter organene; et voksent menneske har normalt 206 knokler."
       ],
       "keyPoints": [
         "Hjertet er en dobbel pumpe med fire kamre; Harvey beskrev blodomløpet i 1628.",
@@ -984,13 +984,13 @@
             "At blodet strømmer gjennom porer i hjerteveggen",
             "At blodet ebber og flor fram og tilbake i årene"
           ],
-          "explain": "Distraktorene bygger på oldtidslegen Galenos, hvis lære hadde dominert i om lag 1500 år. Harvey regnet ut at hjertet pumper langt mer blod enn kroppen kan lage, og konkluderte med at det samme blodet må gå i et sammenhengende kretsløp."
+          "explain": "De gale svarene bygger på læren til oldtidslegen Galenos, som hadde dominert i om lag 1500 år. Harvey regnet ut at hjertet pumper langt mer blod enn kroppen kan lage, og konkluderte med at det samme blodet må gå i et sammenhengende kretsløp."
         },
         {
           "id": "bio-menneskekroppen-forklar-oksygen",
           "step": 3,
           "type": "explain",
-          "prompt": "Forklar veien et oksygenmolekyl tar fra du puster inn til det når en muskel i beinet.",
+          "prompt": "Forklar veien et oksygenmolekyl tar fra du puster det inn, til det når en muskel i beinet.",
           "answer": "Oksygenet går ned i lungeblærene og over i blodet i hårkarene. Blodet går til venstre side av hjertet, som pumper det ut gjennom aorta og arteriene til muskelen, der oksygenet avgis.",
           "checklist": [
             "Oksygenet går over i blodet i lungeblærene",
@@ -1013,7 +1013,7 @@
           "type": "year",
           "prompt": "Hvilket år ga William Harvey ut boka der han påviste hjertets pumpefunksjon?",
           "answer": "1628",
-          "explain": "Boka heter på kortform De motu cordis, «Om hjertets bevegelse». Harvey var senere livlege for de engelske kongene Jakob 1. og Karl 1."
+          "explain": "Boka heter på kortform «De motu cordis» («Om hjertets bevegelse»). Harvey var senere livlege for de engelske kongene Jakob 1. og Karl 1."
         }
       ]
     },
@@ -1024,11 +1024,11 @@
       "prerequisites": [
         "bio-menneskekroppen"
       ],
-      "summary": "Hva som skiller bakterier fra virus, hvordan kroppen forsvarer seg, og hvorfor vaksiner og antibiotika virker – og hvor grensene går.",
+      "summary": "Bakterier og virus er ulike smittestoffer, og forskjellen avgjør hva immunforsvaret, vaksiner og antibiotika kan stanse.",
       "lesson": [
         "Mange sykdommer skyldes smittestoffer, særlig bakterier og virus. Bakterier er encellede organismer som formerer seg på egen hånd. Virus er langt mindre og består av arvestoff i en kapsel av protein. De kan bare formere seg inne i en vertscelle, og det er uklart om de kan regnes som levende.",
-        "Immunforsvaret bruker blant annet antistoffer: proteiner som binder seg til et bestemt smittestoff og hjelper resten av forsvaret å uskadeliggjøre det. Etter en infeksjon beholder kroppen hukommelsesceller. Møter den samme smittestoff igjen, svarer den raskt, og man er immun. Vaksiner utnytter dette og gir immunitet uten at man gjennomgår sykdommen. Edward Jenner la i 1798 fram bevis for at kukopper beskyttet mot kopper.",
-        "Antibiotika er legemidler mot bakterier. Alexander Fleming beskrev i 1928 at muggsoppen Penicillium dreper bakterier, og kalte stoffet penicillin. Antibiotika virker ikke mot virus. Overforbruk gir antibiotikaresistens: resistente bakterier overlever, formerer seg og blir en stadig større andel. En pandemi er en epidemi over store deler av verden, som spanskesyken 1918–1920 og koronapandemien fra 2020."
+        "Immunforsvaret bruker blant annet antistoffer: proteiner som binder seg til et bestemt smittestoff og hjelper resten av forsvaret å uskadeliggjøre det. Etter en infeksjon beholder kroppen hukommelsesceller. Møter kroppen det samme smittestoffet igjen, svarer den raskt, og man er immun. Vaksiner utnytter dette og gir immunitet uten at man gjennomgår sykdommen. Edward Jenner la i 1798 fram bevis for at kukopper beskyttet mot kopper.",
+        "Antibiotika er legemidler mot bakterier. Alexander Fleming beskrev i 1928 at muggsoppen Penicillium dreper bakterier, og kalte stoffet penicillin. Antibiotika virker ikke mot virus. Overforbruk gir antibiotikaresistens: Resistente bakterier overlever, formerer seg og blir en stadig større andel. En pandemi er en epidemi over store deler av verden, som spanskesyken 1918–1920 og koronapandemien fra 2020."
       ],
       "keyPoints": [
         "Virus kan bare formere seg inne i levende celler; bakterier er selvstendige celler.",
@@ -1158,7 +1158,7 @@
             "en pandemi",
             "pandemier"
           ],
-          "explain": "Verdens helseorganisasjon erklærte 11. mars 2020 utbruddet av koronavirus som en pandemi. Det er særlig nye influensavirus myndighetene frykter kan gi nye pandemier."
+          "explain": "Verdens helseorganisasjon erklærte 11. mars 2020 utbruddet av koronaviruset for en pandemi. Det er særlig nye influensavirus myndighetene frykter kan gi nye pandemier."
         },
         {
           "id": "bio-sykdom-immunforsvar-hvorfor-ikke-forkjolelse",
@@ -1206,7 +1206,7 @@
           "prompt": "Hvilket år beskrev Fleming den bakteriedrepende virkningen av muggsoppen Penicillium?",
           "answer": "1928",
           "tolerance": 1,
-          "explain": "Fleming, Chain og Florey fikk Nobelprisen i fysiologi eller medisin i 1945. Samme år ble penicillin tilgjengelig for allmennheten."
+          "explain": "Fleming, Chain og Florey fikk nobelprisen i fysiologi eller medisin i 1945. Samme år ble penicillin tilgjengelig for allmennheten."
         },
         {
           "id": "bio-sykdom-immunforsvar-aar-jenner",
@@ -1238,14 +1238,14 @@
       "prerequisites": [
         "bio-cellen"
       ],
-      "summary": "Hvordan energi strømmer og stoffer går i kretsløp mellom levende organismer og miljøet de lever i.",
+      "summary": "Energi strømmer gjennom økosystemene, mens stoffene går i kretsløp mellom organismene og miljøet de lever i.",
       "lesson": [
-        "Et økosystem er alle organismene på et sted og miljøet de lever i, fra en pytt til en hel skog. Grunnlaget er fotosyntesen: planter, alger og noen bakterier bruker lysenergi til å lage sukker av karbondioksid og vann, og slipper ut oksygen. I celleåndingen bryter både planter og dyr sukkeret ned igjen med oksygen og frigjør energi.",
+        "Et økosystem er alle organismene på et sted og miljøet de lever i, fra en pytt til en hel skog. Grunnlaget er fotosyntesen: Planter, alger og noen bakterier bruker lysenergi til å lage sukker av karbondioksid og vann, og slipper ut oksygen. I celleåndingen bryter både planter og dyr sukkeret ned igjen med oksygen og frigjør energi.",
         "Organismer som lager organisk stoff selv, kalles produsenter. Planteetere og rovdyr er konsumenter. Nedbrytere, som bakterier, sopp og smådyr, bryter ned døde planter og dyr til enkle stoffer som produsentene kan bruke igjen. En næringskjede viser hvem som spiser hvem, for eksempel gran, granborkbille, hakkespett og hønsehauk. I virkeligheten henger kjedene sammen i næringsnett.",
-        "Energien strømmer gjennom økosystemet og går til slutt tapt som varme; for hvert ledd i næringskjeden forsvinner omtrent 90 prosent. Stoffene går derimot i kretsløp. I karbonkretsløpet tar fotosyntesen opp CO2, mens celleånding og nedbryting slipper den ut igjen. Nitrogen utgjør 78 prosent av lufta, men bare noen få bakteriegrupper kan ta det opp direkte."
+        "Energien strømmer gjennom økosystemet og går til slutt tapt som varme; for hvert ledd i næringskjeden forsvinner omtrent 90 prosent. Stoffene går derimot i kretsløp. I karbonkretsløpet tar fotosyntesen opp CO₂, mens celleånding og nedbryting slipper den ut igjen. Nitrogen utgjør 78 prosent av lufta, men bare noen få bakteriegrupper kan ta det opp direkte."
       ],
       "keyPoints": [
-        "Fotosyntese lager sukker og oksygen av CO2, vann og lys; celleånding går motsatt vei.",
+        "Fotosyntese lager sukker og oksygen av CO₂, vann og lys; celleånding går motsatt vei.",
         "Produsenter lager organisk stoff, konsumenter spiser det, nedbrytere resirkulerer det.",
         "Energi strømmer gjennom og tapes som varme; stoffer går i kretsløp.",
         "For hvert ledd i næringskjeden går omtrent 90 prosent av energien tapt."
@@ -1337,7 +1337,7 @@
             "aerob celleånding",
             "cellulær respirasjon"
           ],
-          "explain": "Prosessen er omvendt av fotosyntesen: sukker og oksygen blir til karbondioksid, vann og energi. Lufta vi puster inn, har rundt 0,04 prosent CO2, lufta vi puster ut rundt 5 prosent."
+          "explain": "Prosessen er det motsatte av fotosyntesen: Sukker og oksygen blir til karbondioksid, vann og energi. Lufta vi puster inn, har rundt 0,04 prosent CO₂, lufta vi puster ut rundt 5 prosent."
         },
         {
           "id": "bio-okologi-naeringsnett",
@@ -1395,7 +1395,7 @@
           "step": 3,
           "type": "explain",
           "prompt": "Forklar forskjellen på hvordan energi og stoffer beveger seg gjennom et økosystem.",
-          "answer": "Energien kommer inn som sollys, går gjennom næringskjeden og tapes til slutt som varme, så den må hele tiden tilføres. Stoffer som karbon og nitrogen går derimot i kretsløp: nedbryterne gjør dem tilgjengelige for produsentene igjen.",
+          "answer": "Energien kommer inn som sollys, går gjennom næringskjeden og tapes til slutt som varme, så den må hele tiden tilføres. Stoffer som karbon og nitrogen går derimot i kretsløp: Nedbryterne gjør dem tilgjengelige for produsentene igjen.",
           "checklist": [
             "Energien kommer fra sola og tapes som varme",
             "Energien må derfor tilføres hele tiden",
@@ -1411,7 +1411,7 @@
           "answer": "90",
           "unit": "prosent",
           "tolerance": 5,
-          "explain": "Miljøgifter som ikke brytes ned, oppfører seg motsatt: de hopes opp oppover i kjeden, fordi rovdyrene må spise mange ganger sin egen vekt."
+          "explain": "Miljøgifter som ikke brytes ned, oppfører seg motsatt: De hoper seg opp jo høyere i kjeden man kommer, fordi rovdyrene må spise mange ganger sin egen vekt."
         },
         {
           "id": "bio-okologi-co2-i-lufta",
@@ -1424,7 +1424,7 @@
             "4 prosent",
             "21 prosent"
           ],
-          "explain": "Selv om andelen er liten, er CO2 sentral for den naturlige drivhuseffekten, som gjør jorda levelig. Forbrenning av fossilt karbon har økt konsentrasjonen og ført til global oppvarming."
+          "explain": "Selv om andelen er liten, er CO₂ sentral for den naturlige drivhuseffekten, som gjør Jorda levelig. Forbrenning av fossilt karbon har økt konsentrasjonen og ført til global oppvarming."
         }
       ]
     },
@@ -1435,17 +1435,17 @@
       "prerequisites": [
         "bio-okologi"
       ],
-      "summary": "Hvorfor økte utslipp av klimagasser varmer opp jorda, hva forskningen slår fast, og hvordan verden har forsøkt å svare.",
+      "summary": "Økte utslipp av klimagasser varmer opp Jorda, og verden har svart med klimaforskning og klimaavtaler.",
       "lesson": [
-        "Drivhuseffekten er naturlig. Vanndamp, CO2 og andre drivhusgasser slipper sollyset gjennom, men fanger en del av varmestrålingen fra bakken. Uten dem ville middeltemperaturen på jorda vært omtrent minus 18 grader i stedet for omkring 15. Når vi brenner kull, olje og gass, som kalles fossile brensler, øker mengden CO2 i atmosfæren, og drivhuseffekten forsterkes.",
-        "FNs klimapanel ble opprettet i 1988 og sammenfatter forskningen om klima. Panelet slår fast at menneskelig aktivitet har varmet opp atmosfæren, havet og landjorda. Oppvarmingen gir mer kraftig nedbør, og havet stiger fordi is på land smelter og varmere vann utvider seg. Havet tar også opp mer CO2 og blir surere. Det rammer organismer som bygger skall av kalk, og dermed næringskjedene i havet.",
+        "Drivhuseffekten er naturlig. Vanndamp, CO₂ og andre drivhusgasser slipper sollyset gjennom, men fanger en del av varmestrålingen fra bakken. Uten dem ville middeltemperaturen på Jorda vært omtrent minus 18 grader i stedet for omkring pluss 15. Når vi brenner fossile brensler som kull, olje og gass, øker mengden CO₂ i atmosfæren, og drivhuseffekten forsterkes.",
+        "FNs klimapanel ble opprettet i 1988 og sammenfatter forskningen om klima. Panelet slår fast at menneskelig aktivitet har varmet opp atmosfæren, havet og landjorda. Oppvarmingen gir mer kraftig nedbør, og havet stiger fordi is på land smelter og varmere vann utvider seg. Havet tar også opp mer CO₂ og blir surere. Det rammer organismer som bygger skall av kalk, og dermed næringskjedene i havet.",
         "I Parisavtalen fra 2015 ble praktisk talt alle land enige om å begrense oppvarmingen til godt under 2 grader, og helst til 1,5 grader, sammenlignet med førindustriell tid. Landene setter selv sine utslippsmål og skal skjerpe dem hvert femte år. Klimaendringene får også følger for det biologiske mangfoldet."
       ],
       "keyPoints": [
-        "Drivhuseffekten er naturlig; CO2 fra fossile brensler forsterker den.",
+        "Drivhuseffekten er naturlig; CO₂ fra fossile brensler forsterker den.",
         "FNs klimapanel slår fast at menneskelig aktivitet har ført til global oppvarming.",
-        "Mer CO2 i havet gir havforsuring, som rammer kalkbyggende organismer.",
-        "Parisavtalen (2015): godt under 2 grader, helst 1,5 grader."
+        "Mer CO₂ i havet gir havforsuring, som rammer kalkbyggende organismer.",
+        "Parisavtalen fra 2015 skal begrense oppvarmingen til godt under 2 grader, helst 1,5 grader."
       ],
       "sources": [
         {
@@ -1479,13 +1479,13 @@
           "step": 1,
           "type": "choice",
           "prompt": "Hva er drivhuseffekten?",
-          "answer": "At gasser i atmosfæren holder på varme fra jorda",
+          "answer": "At gasser i atmosfæren holder på varme fra Jorda",
           "distractors": [
             "At hull i ozonlaget slipper inn mer sollys",
             "At forurensning gjør sollyset sterkere",
             "At havet avgir lagret varme om vinteren"
           ],
-          "explain": "Drivhuseffekten i seg selv gjør jorda levelig. Det er forsterkningen av den, gjennom mer CO2 i atmosfæren, som gir global oppvarming."
+          "explain": "Drivhuseffekten i seg selv gjør Jorda levelig. Det er forsterkningen av den, gjennom mer CO₂ i atmosfæren, som gir global oppvarming."
         },
         {
           "id": "bio-klima-miljo-hovedarsak",
@@ -1498,7 +1498,7 @@
             "Naturlige svingninger i havstrømmene",
             "Store utslipp fra vulkanutbrudd"
           ],
-          "explain": "Klimapanelets sjette hovedrapport slår fast at menneskelig aktivitet har varmet opp atmosfæren, havet og landjorda. Mesteparten av oppvarmingen har skjedd etter 1950. Tidligere i jordas historie har klimaendringer hatt naturlige årsaker."
+          "explain": "Klimapanelets sjette hovedrapport slår fast at menneskelig aktivitet har varmet opp atmosfæren, havet og landjorda. Mesteparten av oppvarmingen har skjedd etter 1950. Tidligere i Jordas historie har klimaendringer hatt naturlige årsaker."
         },
         {
           "id": "bio-klima-miljo-parisavtalen",
@@ -1544,7 +1544,7 @@
           "id": "bio-klima-miljo-havforsuring",
           "step": 2,
           "type": "text",
-          "prompt": "Hva kalles det når havet får lavere pH fordi det tar opp mer CO2?",
+          "prompt": "Hva kalles det når havet får lavere pH fordi det tar opp mer CO₂?",
           "answer": "Havforsuring",
           "accept": [
             "havforsuringen",
@@ -1557,14 +1557,14 @@
           "id": "bio-klima-miljo-hvorfor-co2-varmer",
           "step": 3,
           "type": "choice",
-          "prompt": "Hvorfor gir mer CO2 i atmosfæren høyere temperatur ved bakken?",
-          "answer": "CO2 fanger varmestråling fra jorda og sender noe tilbake",
+          "prompt": "Hvorfor gir mer CO₂ i atmosfæren høyere temperatur ved bakken?",
+          "answer": "CO₂ fanger varmestråling fra Jorda og sender noe tilbake",
           "distractors": [
-            "CO2 slipper mer sollys inn gjennom ozonlaget",
-            "CO2 reagerer med oksygen og avgir varme",
-            "CO2 gjør skydekket tynnere så mer sol slipper inn"
+            "CO₂ slipper mer sollys inn gjennom ozonlaget",
+            "CO₂ reagerer med oksygen og avgir varme",
+            "CO₂ gjør skydekket tynnere, så mer sol slipper inn"
           ],
-          "explain": "Sollyset er kortbølget og slipper gjennom, mens jorda sender ut langbølget varmestråling. Omtrent halvparten av strålingen drivhusgassene fanger, sendes tilbake mot bakken."
+          "explain": "Sollyset er kortbølget og slipper gjennom, mens Jorda sender ut langbølget varmestråling. Omtrent halvparten av strålingen drivhusgassene fanger, sendes tilbake mot bakken."
         },
         {
           "id": "bio-klima-miljo-hvorfor-havniva",
@@ -1583,10 +1583,10 @@
           "id": "bio-klima-miljo-forklar-havet",
           "step": 3,
           "type": "explain",
-          "prompt": "Forklar hvordan utslipp av CO2 på land kan få følger for næringskjedene i havet.",
-          "answer": "Mer CO2 i lufta gir mer CO2 i havet, og vannet blir surere. Da blir det mindre karbonat tilgjengelig for plankton som bygger skall av kalk. Plankton er bunnen av næringskjeden, så endringer der kan forplante seg til fisk og hval.",
+          "prompt": "Forklar hvordan utslipp av CO₂ på land kan få følger for næringskjedene i havet.",
+          "answer": "Mer CO₂ i lufta gir mer CO₂ i havet, og vannet blir surere. Da blir det mindre karbonat tilgjengelig for plankton som bygger skall av kalk. Plankton er bunnen av næringskjeden, så endringer der kan forplante seg til fisk og hval.",
           "checklist": [
-            "Havet tar opp CO2 og blir surere",
+            "Havet tar opp CO₂ og blir surere",
             "Kalkbyggende plankton får dårligere vilkår",
             "Plankton er grunnlaget for næringskjeden i havet"
           ],
@@ -1604,14 +1604,14 @@
           "id": "bio-klima-miljo-uten-drivhuseffekt",
           "step": 4,
           "type": "choice",
-          "prompt": "Omtrent hvilken middeltemperatur ville jorda hatt uten drivhuseffekten?",
+          "prompt": "Omtrent hvilken middeltemperatur ville Jorda hatt uten drivhuseffekten?",
           "answer": "Omtrent minus 18 grader",
           "distractors": [
             "Omtrent minus 50 grader",
             "Omtrent 0 grader",
             "Omtrent pluss 5 grader"
           ],
-          "explain": "I dag er middeltemperaturen omkring 15 °C. Venus, med en atmosfære av rundt 96 prosent CO2, har en overflatetemperatur på omkring 470 °C."
+          "explain": "I dag er middeltemperaturen omkring 15 °C. Venus, med en atmosfære av rundt 96 prosent CO₂, har en overflatetemperatur på omkring 470 °C."
         },
         {
           "id": "bio-klima-miljo-aar-klimapanelet",
