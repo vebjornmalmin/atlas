@@ -15,7 +15,7 @@
       "summary": "Sola, de åtte planetene og Månen – og hvorfor vi har døgn, år, årstider og tidevann.",
       "lesson": [
         "Solsystemet består av Sola og alt som holdes fast av tyngdekraften hennes. Sola er systemets eneste stjerne. Rundt den går åtte planeter i nesten samme plan. Nærmest ligger de fire steinplanetene Merkur, Venus, Jorda og Mars. Etter asteroidebeltet følger de fire gassplanetene Jupiter, Saturn, Uranus og Neptun. Utenfor Neptun ligger Kuiperbeltet med objekter av is og støv.",
-        "Pluto ble regnet som den niende planeten fram til 2006. Da bestemte Den internasjonale astronomiske union at en planet også må ha «ryddet» banen sin for andre himmellegemer. Det har ikke Pluto, som nå regnes som en dvergplanet. Månen og Sola trekker i havet og skaper tidevann, flo og fjære, vanligvis to ganger i døgnet. Fordi Månen er så nær, har den over dobbelt så stor virkning som Sola.",
+        "Pluto ble regnet som den niende planeten fram til 2006. Da bestemte Den internasjonale astronomiske union at en planet også må ha «ryddet» banen sin for andre himmellegemer. Pluto har ikke det og regnes nå som en dvergplanet. Tidevann, flo og fjære, skyldes at Månen og Sola trekker sterkere i siden av Jorda som vender mot dem. Fordi Månen er så nær, har den over dobbelt så stor virkning som Sola.",
         "Jorda roterer én gang om sin egen akse i døgnet og går rundt Sola på ett år. Årstidene skyldes at jordaksen står på skrå, med omtrent 23,4 graders helning. Når vår halvkule heller mot Sola, står Sola høyt på himmelen, og hver kvadratmeter mottar mer stråling. Samtidig er det vinter på den sørlige halvkule."
       ],
       "keyPoints": [
@@ -81,7 +81,7 @@
             "Sola lyser sterkere om sommeren",
             "Månen trekker Jorda nærmere Sola"
           ],
-          "explain": "Når en halvkule heller mot Sola, står Sola høyt og strålingen treffer mer direkte. Derfor er det sommer i nord når det er vinter i sør – noe avstanden til Sola ikke kan forklare."
+          "explain": "Når en halvkule heller mot Sola, står Sola høyt og strålingen treffer mer direkte. Derfor er det sommer i nord når det er vinter i sør. Jorda er faktisk nærmest Sola i begynnelsen av januar, midt i den norske vinteren. Avstanden kan altså ikke forklare årstidene."
         },
         {
           "id": "nat-solsystemet-steinplaneter",
@@ -126,7 +126,7 @@
           "accept": [
             "tidevannet"
           ],
-          "explain": "Langs norskekysten går det omtrent 12 timer og 25 minutter mellom to høyvann, et halvt månedøgn. Derfor kommer flo og fjære litt senere hver dag."
+          "explain": "Langs norskekysten går det omtrent 12 timer og 25 minutter mellom to høyvann, et halvt månedøgn. Når Sola og Månen står på linje med Jorda, ved nymåne og fullmåne, blir forskjellen mellom flo og fjære størst: springflo."
         },
         {
           "id": "nat-solsystemet-hvorfor-manen",
@@ -139,7 +139,7 @@
             "Sola trekker bare på land, ikke hav",
             "Månelyset varmer opp havet"
           ],
-          "explain": "Tiltrekningen avtar med avstanden og er sterkest på siden av Jorda som vender mot Månen. Når Sola og Månen trekker på linje, ved nymåne og fullmåne, blir forskjellen mellom flo og fjære størst: springflo."
+          "explain": "Det er forskjellen i tiltrekning mellom den nære og den fjerne siden av Jorda som skaper tidevannet, og den forskjellen avtar svært raskt med avstanden. Derfor teller nærheten mer enn massen. Havet buler ut både på siden mot Månen og på motsatt side, så de fleste steder får to høyvann i døgnet."
         },
         {
           "id": "nat-solsystemet-hvorfor-pluto",
@@ -250,7 +250,7 @@
             "Et stjernebilde slik vi ser det fra Jorda",
             "En sky av gass der det dannes planeter"
           ],
-          "explain": "Melkeveien er en middels stor galakse, og alle stjernene vi ser med det blotte øyet, hører til den. Alt vi kan se av stjerner, gass og støv, er likevel bare omtrent 5 prosent av universet; resten er mørk materie og mørk energi."
+          "explain": "Melkeveien er en middels stor galakse, og nesten alle stjernene vi ser med det blotte øyet, hører til den. Alt som er bygd av atomer – stjerner, planeter, gass og støv – er likevel bare omtrent 5 prosent av universet; resten er mørk materie og mørk energi."
         },
         {
           "id": "nat-universet-lysaar",
@@ -263,7 +263,7 @@
             "Lysstyrke",
             "Fart"
           ],
-          "explain": "Ett lysår er strekningen lyset går på ett år. Lyset fra den nærmeste stjernen utenfor solsystemet, Alfa Centauri, bruker over fire år til oss."
+          "explain": "Ett lysår er strekningen lyset går på ett år. Lyset fra Alfa Centauri, det nærmeste stjernesystemet utenfor solsystemet, bruker over fire år til oss."
         },
         {
           "id": "nat-universet-big-bang",
@@ -288,7 +288,7 @@
             "Melkeveigalaksen",
             "Melkeveiensystemet"
           ],
-          "explain": "Sola ligger omtrent to tredeler av avstanden ut fra sentrum. Selve skiven ser vi som et lysende tåkebånd over nattehimmelen."
+          "explain": "Melkeveien er en flat, roterende skive med spiralarmer, rundt 100 000 lysår på tvers. Sola ligger omtrent 30 000 lysår fra sentrum, og selve skiven ser vi som et lysende bånd over nattehimmelen."
         },
         {
           "id": "nat-universet-svart-hull",
@@ -326,7 +326,7 @@
             "Som en nøytronstjerne",
             "Som en pulsar"
           ],
-          "explain": "Bare kjerner med mer enn omtrent to solmasser kan kollapse til svarte hull. Sola er for lett og vil etter fasen som rød kjempe trekke seg sammen til en hvit dverg på størrelse med Jorda."
+          "explain": "Bare stjerner med mange ganger Solas masse ender i en supernova og kan etterlate et svart hull. Sola er for lett. Etter fasen som rød kjempe vil den støte av de ytre lagene og trekke seg sammen til en hvit dverg på størrelse med Jorda."
         },
         {
           "id": "nat-universet-hvorfor-bakover",
@@ -339,7 +339,7 @@
             "Tiden går saktere langt ute i universet",
             "Teleskopene forsterker lys fra gamle stjerner"
           ],
-          "explain": "Vi ser et objekt slik det var da det sendte ut lyset. Derfor kan vi heller ikke se lenger enn lyset har rukket å reise på 13,8 milliarder år."
+          "explain": "Vi ser et objekt slik det var da det sendte ut lyset. Derfor kan vi heller ikke se lenger tilbake i tid enn til kort etter big bang, for 13,8 milliarder år siden."
         },
         {
           "id": "nat-universet-uten-sentrum",
@@ -365,7 +365,7 @@
             "Kjernen kollapser når brenselet er brukt opp",
             "Tyngdekraften blir så sterk at lys ikke slipper ut"
           ],
-          "explain": "Kollapsen skjer samtidig med en supernovaeksplosjon som slynger ut de ytre lagene. Tunge grunnstoffer fra slike eksplosjoner blir med i nye generasjoner av stjerner, og Sola er en slik senere generasjons stjerne."
+          "explain": "Kollapsen skjer samtidig med en supernovaeksplosjon som slynger ut de ytre lagene. Grunnstoffer som er laget i stjerner og slike eksplosjoner, blir med i nye generasjoner av stjerner og planeter. Mye av jernet i blodet ditt og kalsiumet i skjelettet ble laget på denne måten."
         },
         {
           "id": "nat-universet-lysaar-km",
@@ -399,7 +399,7 @@
       "prerequisites": [],
       "summary": "Jordas lagdelte indre og de langsomme platebevegelsene som skaper vulkaner, jordskjelv og fjellkjeder.",
       "lesson": [
-        "Jorda er omtrent 4,5 milliarder år gammel og bygd opp av lag som blir tyngre innover. Ytterst ligger jordskorpen, som er tynnest under havene. Under den ligger mantelen, som går ned til omtrent 2900 kilometers dyp. Innerst er kjernen, mest av jern og nikkel, med en flytende ytre del og en fast indre del.",
+        "Jorda er omtrent 4,5 milliarder år gammel og bygd opp av lag som blir tettere innover. Ytterst ligger jordskorpen, som er tynnest under havene. Under den ligger mantelen, som går ned til omtrent 2900 kilometers dyp. Innerst er kjernen, mest av jern og nikkel, med en flytende ytre del og en fast indre del.",
         "Det ytterste, stive skallet, litosfæren, er delt i store plater som glir over et mykere lag i mantelen. De beveger seg noen centimeter i året. Der platene glir fra hverandre, som langs Atlanterhavsryggen (Den midtatlantiske rygg), dannes ny havbunn. Der de møtes, kan en plate presses ned under en annen, eller kontinenter kolliderer og presser opp fjellkjeder som Himalaya.",
         "Nesten alle jordskjelv og vulkanutbrudd skjer langs plategrensene. Island ligger på Atlanterhavsryggen og har derfor mange vulkaner. Ideen om at kontinentene flytter seg, ble lagt fram av Alfred Wegener i 1912. Han så at kontinentene på hver side av Atlanterhavet passer sammen som brikker i et puslespill. Teorien møtte sterk motstand og fikk først gjennomslag med havbunnsundersøkelsene fra 1960-årene."
       ],
@@ -466,7 +466,7 @@
             "Der jordskorpen er tykkest",
             "Jevnt over hele kloden"
           ],
-          "explain": "Et kart over jordskjelv er derfor også et kart over plategrensene. Platenes indre, som utgjør det meste av jordoverflaten, er relativt trygge mot overraskende skjelv og utbrudd."
+          "explain": "Et kart over jordskjelv er derfor også et kart over plategrensene. Inne på platene er skjelv og utbrudd langt sjeldnere. Et viktig unntak er varmeflekker som Hawaii, der varmt materiale stiger opp fra dypt i mantelen midt på en plate."
         },
         {
           "id": "nat-jordas-indre-alder",
@@ -491,7 +491,7 @@
             "Wegener",
             "Alfred Lothar Wegener"
           ],
-          "explain": "Wegener var meteorolog og polarforsker og omkom under en ekspedisjon på Grønlandsisen i 1930–1931. Han opplevde aldri at teorien ble anerkjent."
+          "explain": "Wegener var meteorolog og polarforsker og omkom på Grønlandsisen i 1930. Han opplevde aldri at teorien ble anerkjent."
         },
         {
           "id": "nat-jordas-indre-mantelen",
@@ -526,7 +526,7 @@
           "prompt": "Hvilket nordisk land ligger oppå Atlanterhavsryggen?",
           "answer": "Island",
           "accept": [],
-          "explain": "Også Jan Mayen og Asorene ligger på ryggen. Her driver platene under Amerika og Europa-Afrika fra hverandre med omtrent 2,5 centimeter i året."
+          "explain": "Også Jan Mayen og Asorene ligger på ryggen. Ved Island er det den nordamerikanske og den eurasiske platen som driver fra hverandre, og langs ryggen skjer det med omtrent 2,5 centimeter i året."
         },
         {
           "id": "nat-jordas-indre-hvorfor-avvist",
@@ -539,7 +539,7 @@
             "Teorien ble forbudt av kirken fram til 1960",
             "Teorien var bare kjent i Tyskland"
           ],
-          "explain": "Wegener møtte motbør særlig fra geologer. Det var undersøkelser av havbunnen og nøyaktige målinger med radioteleskoper og satellitter som til slutt bekreftet at kontinentene beveger seg."
+          "explain": "Wegener kunne ikke forklare hvilken kraft som skulle flytte kontinentene, og mange geologer avviste derfor ideen. Kartlegging av havbunnen viste senere at ny skorpe dannes langs ryggene, og satellittmålinger har bekreftet at kontinentene beveger seg."
         },
         {
           "id": "nat-jordas-indre-kollisjon",
@@ -552,14 +552,14 @@
             "De glir rolig forbi hverandre",
             "Det åpner seg en dyp havgrøft"
           ],
-          "explain": "Kontinentalskorpe er for lett til å synke dypt ned i mantelen. Himalaya dannes fordi India presses inn mot Eurasia, og Den kaledonske fjellkjeden oppsto da Norge og Grønland kolliderte for rundt 420 millioner år siden."
+          "explain": "Kontinentalskorpe er for lett til å synke dypt ned i mantelen. Himalaya dannes fordi India presses inn mot Asia. Den kaledonske fjellkjeden oppsto på samme måte for rundt 400 millioner år siden, da kontinentet med dagens Norge kolliderte med kontinentet med dagens Grønland."
         },
         {
           "id": "nat-jordas-indre-forklar-island",
           "step": 3,
           "type": "explain",
           "prompt": "Forklar hvorfor Island har så mange vulkaner og jordskjelv.",
-          "answer": "Island ligger på Atlanterhavsryggen, der den amerikanske platen og platen under Europa og Afrika glir fra hverandre. Magma fra dypet trenger opp i sprekken og danner ny skorpe, og bevegelsene gir jordskjelv.",
+          "answer": "Island ligger på Atlanterhavsryggen, der den nordamerikanske og den eurasiske platen glir fra hverandre. Magma fra dypet trenger opp i sprekken og danner ny skorpe, og bevegelsene gir jordskjelv.",
           "checklist": [
             "Island ligger på en plategrense",
             "Platene glir fra hverandre",
@@ -583,7 +583,7 @@
           "answer": "2,5",
           "unit": "cm",
           "tolerance": 1,
-          "explain": "Over 100–150 millioner år har denne langsomme bevegelsen åpnet hele Atlanterhavet. Lava strømmer fortsatt opp i en kløft som løper langs midten av ryggen."
+          "explain": "Med en slik fart har Atlanterhavet åpnet seg gjennom mer enn hundre millioner år. Lava strømmer fortsatt opp i en kløft som løper langs midten av ryggen."
         }
       ]
     },
@@ -596,7 +596,7 @@
       "lesson": [
         "Alt stoff består av atomer. Et atom har en kjerne av positivt ladde protoner og nøytrale nøytroner, omgitt av en sky av negativt ladde elektroner. Et vanlig atom har like mange elektroner som protoner og er elektrisk nøytralt. Får eller mister det elektroner, blir det et ion. Det enkleste atomet er hydrogen, med ett proton og ett elektron.",
         "Antallet protoner, atomnummeret, avgjør hvilket grunnstoff atomet tilhører. Vi kjenner 118 grunnstoffer. Periodesystemet ordner dem etter økende atomnummer, og grunnstoffer i samme kolonne, eller gruppe, har lignende egenskaper. Systemet ble utviklet på 1860-tallet av flere forskere. Mest kjent er russeren Dmitrij Mendelejev, som lot plasser stå tomme for ukjente grunnstoffer og forutså egenskapene deres.",
-        "Atomer kan binde seg sammen til molekyler. Et vannmolekyl, H2O, har to hydrogenatomer og ett oksygenatom. Et stoff kan være fast, flytende eller gass, og hvilken aggregattilstand det har, avhenger av temperatur og trykk. Vann er som regel is under 0 °C og damp over 100 °C. Den fjerde tilstanden, plasma, er sjelden på Jorda, men vanligst i universet."
+        "Atomer kan binde seg sammen til molekyler. Et vannmolekyl, H2O, har to hydrogenatomer og ett oksygenatom. Et stoff kan være fast, flytende eller gass, og hvilken aggregattilstand det har, avhenger av temperatur og trykk. Ved vanlig lufttrykk fryser vann ved 0 °C og koker ved 100 °C. Den fjerde tilstanden, plasma, er sjelden på Jorda, men vanligst i universet."
       ],
       "keyPoints": [
         "Atomet: en kjerne av protoner (+) og nøytroner (0), omgitt av elektroner (–).",
@@ -648,7 +648,7 @@
             "Antallet elektroner i skyen",
             "Hvor tungt atomet er"
           ],
-          "explain": "Atomer av samme grunnstoff kan ha ulikt antall nøytroner. Slike varianter kalles isotoper, og de har de samme kjemiske egenskapene."
+          "explain": "Atomer av samme grunnstoff kan ha ulikt antall nøytroner. Slike varianter kalles isotoper, og de har praktisk talt de samme kjemiske egenskapene."
         },
         {
           "id": "nat-atomer-periodesystemet",
@@ -771,7 +771,7 @@
           "type": "number",
           "prompt": "Hvor mange grunnstoffer kjenner vi i dag?",
           "answer": "118",
-          "explain": "Bare rundt 90 av dem forekommer naturlig på Jorda. Grunnstoffene 93–118 er bare laget i avanserte laboratorier."
+          "explain": "Rundt 90 av dem finnes naturlig på Jorda. De tyngste er laget kunstig i atomreaktorer og partikkelakseleratorer, og mange av dem eksisterer bare i brøkdeler av et sekund."
         },
         {
           "id": "nat-atomer-tiar",
@@ -784,7 +784,7 @@
             "1820-tallet",
             "1900-tallet"
           ],
-          "explain": "Da kjente man rundt 60 grunnstoffer, og ingen visste ennå hvordan atomet var bygd opp. Kunnskapen om atomets partikler kom først tidlig på 1900-tallet."
+          "explain": "Da kjente man rundt 60 grunnstoffer, og ingen visste ennå hvordan atomet var bygd opp. Elektronet ble påvist i 1897 og atomkjernen i 1911."
         }
       ]
     },
@@ -798,7 +798,7 @@
       "summary": "Hva som skjer når stoffer reagerer og danner nye stoffer – fra flammer og rust til syrer, baser og katalysatorer.",
       "lesson": [
         "I en kjemisk reaksjon brytes bindinger mellom atomer, og atomene settes sammen på nye måter. Utgangsstoffene, reaktantene, blir til nye stoffer, produktene, med andre egenskaper. Ingen atomer forsvinner eller oppstår: I en balansert reaksjonsligning er det like mange atomer av hver type på begge sider. Når is smelter, er det derimot ingen kjemisk reaksjon, bare en faseovergang.",
-        "Forbrenning er en reaksjon mellom et stoff og oksygen der det frigjøres varme. Ved og bensin brenner raskt, med flamme. Langsom forbrenning skjer uten flamme, som når cellene bryter ned sukker eller jern ruster. Slike prosesser kalles oksidasjon. De fleste reaksjoner gir fra seg energi og kalles eksoterme. Reaksjoner som må tilføres energi, kalles endoterme.",
+        "Forbrenning er en reaksjon mellom et stoff og oksygen der det frigjøres varme. Ved og bensin brenner raskt, med flamme. Langsom forbrenning skjer uten flamme, som når cellene bryter ned sukker eller jern ruster. Slike prosesser kalles oksidasjon. Reaksjoner som gir fra seg energi, som forbrenning, kalles eksoterme. Reaksjoner som må tilføres energi, kalles endoterme.",
         "Surhet måles med pH-skalaen, som i vann vanligvis går fra 0 til 14. Rent vann er nøytralt med pH 7. Sure løsninger, som sitronsaft, har lavere pH; basiske, som såpe og lut, har høyere. Syrer senker pH, baser hever den. En katalysator får en reaksjon til å gå raskere uten selv å bli brukt opp. Enzymene i kroppen er katalysatorer."
       ],
       "keyPoints": [
@@ -914,7 +914,7 @@
             "Sjøvann",
             "Såpevann"
           ],
-          "explain": "Sitronsaft har pH rundt 2,3, eddik 3,1 og melk 6,5. Jo lavere pH, desto høyere er konsentrasjonen av hydrogenioner."
+          "explain": "Sitronsaft har pH rundt 2,3, eddik 3,1 og melk 6,5. Jo lavere pH, desto flere hydrogenioner. Hvert trinn på skalaen er en tidobling, så en løsning med pH 3 har hundre ganger så mange hydrogenioner som en med pH 5."
         },
         {
           "id": "nat-kjemiske-reaksjoner-ren-oksygen",
@@ -927,7 +927,7 @@
             "Ren oksygen gjør treet mer brennbart for alltid",
             "Oksygengass er varmere enn vanlig luft"
           ],
-          "explain": "I luft er oksygenet blandet med andre gasser, så tilgangen er mindre. Oksygen brenner ikke selv; det er brenselet som reagerer med det."
+          "explain": "Luft er bare omtrent 21 prosent oksygen; resten er mest nitrogen, som ikke tar del i forbrenningen. Oksygen brenner ikke selv; det er brenselet som reagerer med det."
         },
         {
           "id": "nat-kjemiske-reaksjoner-hvor-ble-massen",
@@ -982,7 +982,7 @@
       "summary": "Newtons tre lover forklarer hvordan krefter endrer bevegelse – fra en hockeypuck på isen til tyngden som holder oss på bakken.",
       "lesson": [
         "En kraft er et dytt eller et drag, og den måles i newton. Isaac Newton formulerte tre bevegelseslover på slutten av 1600-tallet. Den første, treghetsloven, sier at en gjenstand blir liggende i ro eller fortsetter med samme fart i rett linje så lenge kreftene på den utligner hverandre. Det trengs altså en kraft for å endre bevegelsen, ikke for å holde den ved like.",
-        "Den andre loven sier at summen av kreftene er lik massen ganger akselerasjonen: F = ma. Akselerasjon er endring i fart per tid. Jo større masse, desto større kraft trengs for samme akselerasjon. Den tredje loven sier at når én gjenstand virker på en annen med en kraft, virker den andre tilbake med like stor kraft i motsatt retning: kraft og motkraft.",
+        "Den andre loven sier at summen av kreftene er lik massen ganger akselerasjonen: F = ma. Akselerasjon er endring i fart eller retning per tid. Jo større masse, desto større kraft trengs for samme akselerasjon. Den tredje loven sier at når én gjenstand virker på en annen med en kraft, virker den andre tilbake med like stor kraft i motsatt retning: kraft og motkraft.",
         "Tyngde er kraften Jorda trekker på en gjenstand med, og den måles i newton. Masse er mengden stoff, målt i kilogram. En astronaut har samme masse på Månen som på Jorda, men mindre tyngde, fordi Månens tyngdefelt er svakere. Friksjon er en kraft mellom to flater som virker mot bevegelsen. Den bremser og omdanner bevegelsesenergi til varme."
       ],
       "keyPoints": [
@@ -1059,7 +1059,8 @@
           "accept": [
             "F=ma",
             "F = m · a",
-            "F = m*a"
+            "F = m*a",
+            "F=m·a"
           ],
           "explain": "F er summen av kreftene, m massen og a akselerasjonen. Loven kan også leses som a = F/m: Samme kraft gir halvparten så stor akselerasjon til dobbelt så stor masse."
         },
@@ -1083,7 +1084,8 @@
           "answer": "Motkraft",
           "accept": [
             "motkraften",
-            "reaksjonskraft"
+            "reaksjonskraft",
+            "reaksjonskraften"
           ],
           "explain": "Kraft og motkraft virker alltid på to forskjellige gjenstander og kan derfor ikke oppheve hverandre. Kølla skyver på pucken, og pucken skyver like hardt tilbake på kølla."
         },
@@ -1169,7 +1171,7 @@
       "lesson": [
         "Energi er evnen til å utføre arbeid, og den måles i joule. Energi kan verken oppstå eller forsvinne, bare omdannes fra én form til en annen. Dette er loven om energibevaring. De to grunnformene er potensiell energi, eller stillingsenergi, og kinetisk energi, eller bevegelsesenergi. Når vi «bruker» energi, går den over til former vi har mindre nytte av, til slutt som varme.",
         "Elektrisk strøm er elektrisk ladning i bevegelse, i metaller frie elektroner. Strøm måles i ampere. Spenningen, målt i volt, driver strømmen, og resistansen er motstanden mot den. Ohms lov sier at strømmen er spenningen delt på resistansen: I = U/R. Effekten, hvor mye energi som overføres hvert sekund, måles i watt og er spenning ganger strøm.",
-        "I et vannkraftverk blir stillingsenergien i vann fra et høyt magasin til bevegelsesenergi i rørene, og en turbin gjør den om til elektrisk energi. Vannkraft er fornybar fordi sola får vann til å fordampe og regne ned igjen. I Norge står vannkraft for rundt 90 prosent av kraftproduksjonen. Kull, olje og gass er fossile, ikke-fornybare kilder som det tok millioner av år å danne."
+        "I et vannkraftverk blir stillingsenergien i vann fra et høyt magasin til bevegelsesenergi i rørene, og turbinen driver en generator som gjør den om til elektrisk energi. Vannkraft er fornybar fordi sola får vann til å fordampe og regne ned igjen. I Norge står vannkraft for rundt 90 prosent av kraftproduksjonen. Kull, olje og gass er fossile, ikke-fornybare kilder som det tok millioner av år å danne."
       ],
       "keyPoints": [
         "Energi kan ikke oppstå eller forsvinne, bare skifte form (energibevaring).",
@@ -1221,7 +1223,7 @@
             "Gasskraft",
             "Kjernekraft"
           ],
-          "explain": "Vindkraft står for en økende andel, rundt 8 prosent i 2020. Norge er blant de sju største vannkraftprodusentene i verden."
+          "explain": "Vindkraft står for en økende andel, rundt 9 prosent i 2023. Norge er blant de sju største vannkraftprodusentene i verden."
         },
         {
           "id": "nat-energi-elektrisitet-fornybar",
@@ -1269,7 +1271,7 @@
             "kinetisk",
             "bevegelsesenergi"
           ],
-          "explain": "Kinetisk energi øker med kvadratet av farten: Dobbel fart gir fire ganger så mye bevegelsesenergi. Varme og stråling er også former for kinetisk energi."
+          "explain": "Kinetisk energi øker med kvadratet av farten: Dobbel fart gir fire ganger så mye bevegelsesenergi. Varme er i bunn og grunn bevegelsesenergi: Molekylene i et varmt stoff beveger seg raskere enn i et kaldt."
         },
         {
           "id": "nat-energi-elektrisitet-ohm",
@@ -1307,7 +1309,7 @@
             "Strålingsenergi blir direkte til elektrisk energi",
             "Elektrisk energi blir til bevegelsesenergi i vannet"
           ],
-          "explain": "I et kraftverk med fossilt brensel frigjøres i stedet kjemisk energi som varme ved forbrenning. En solcelle gjør strålingsenergi direkte om til elektrisk energi."
+          "explain": "I generatoren roterer en magnet inne i spoler av kobbertråd, og det setter opp en elektrisk strøm. I et kraftverk med fossilt brensel frigjøres i stedet kjemisk energi som varme ved forbrenning, mens en solcelle gjør strålingsenergi direkte om til elektrisk energi."
         },
         {
           "id": "nat-energi-elektrisitet-effekt",
@@ -1483,7 +1485,7 @@
             "UV",
             "UV-stråling"
           ],
-          "explain": "Jo kortere bølgelengde, desto mer energi har hvert foton, så ultrafiolett stråling er mer energirik enn lys. På den andre siden av det synlige lyset ligger infrarød stråling med lengre bølgelengde."
+          "explain": "Jo kortere bølgelengde, desto mer energi har hvert foton, så ultrafiolett stråling er mer energirik enn synlig lys og kan skade huden. På den andre siden av det synlige lyset ligger infrarød stråling med lengre bølgelengde."
         },
         {
           "id": "nat-lys-lyd-torden",
@@ -1560,12 +1562,12 @@
       "summary": "Hvordan noen få gjennombrudd fra Kopernikus til Einstein endret synet på naturen – og metoden som gjorde det mulig.",
       "lesson": [
         "Moderne naturvitenskap bygger på en enkel idé: En hypotese må prøves mot naturen. Forskeren utleder en forutsigelse og sjekker den med observasjoner eller eksperimenter. Slår forutsigelsen feil, må hypotesen trolig forkastes. Slår den til, blir hypotesen styrket, men aldri endelig bevist. Denne hypotetisk-deduktive metoden fikk gjennomslag med naturforskerne på 1500- og 1600-tallet.",
-        "I 1543 kom Nikolaus Kopernikus' bok om et heliosentrisk verdensbilde, der Jorda er en planet som går rundt Sola. I 1609 rettet Galileo Galilei en kikkert mot himmelen og fant fire måner rundt Jupiter, himmellegemer som ikke gikk rundt Jorda. I 1687 ga Isaac Newton ut Principia med bevegelseslovene og gravitasjonsloven, grunnlaget for fysikken i århundrene etter.",
+        "I 1543 kom Nikolaus Kopernikus' bok om et heliosentrisk verdensbilde, der Jorda er en planet som går rundt Sola. I 1610 fant Galileo Galilei med kikkerten sin fire måner rundt Jupiter, himmellegemer som ikke gikk rundt Jorda. I 1687 ga Isaac Newton ut Principia med bevegelseslovene og gravitasjonsloven, grunnlaget for fysikken i århundrene etter.",
         "I 1859 la Charles Darwin fram teorien om at artene utvikler seg gjennom naturlig utvalg. Marie Curie viste at radioaktivitet er en egenskap ved selve atomene, oppdaget polonium og radium og fikk nobelpris både i fysikk og kjemi. Albert Einstein la fram den spesielle relativitetsteorien i 1905 og den generelle i 1915. En solformørkelse i 1919 bekreftet at lys bøyes av tyngdekraften."
       ],
       "keyPoints": [
         "Vitenskapelig metode: hypotese, forutsigelse og prøving mot observasjon eller eksperiment.",
-        "Kopernikus (1543) satte Sola i sentrum; Galilei (1609) fant støtte med kikkerten.",
+        "Kopernikus (1543) satte Sola i sentrum; Galilei (1610) fant støtte med kikkerten.",
         "Newtons Principia (1687) ga bevegelseslovene og gravitasjonsloven.",
         "Darwin (1859): Artene utvikler seg gjennom naturlig utvalg.",
         "Curie forsket på radioaktivitet; Einstein ga oss relativitetsteoriene (1905 og 1915)."
@@ -1600,7 +1602,7 @@
             "Jorda står i ro i sentrum av universet",
             "Stjernene går i bane rundt Sola"
           ],
-          "explain": "Han brøt med Ptolemaios' modell, der Jorda sto i sentrum. Det kopernikanske verdensbildet regnes som begynnelsen på moderne fysikk."
+          "explain": "Han brøt med Ptolemaios' modell, der Jorda sto i sentrum. Det kopernikanske verdensbildet regnes ofte som starten på den vitenskapelige revolusjonen."
         },
         {
           "id": "nat-vitenskapens-gjennombrudd-metode",
@@ -1626,7 +1628,7 @@
             "Egenskaper man trener opp, går i arv",
             "Mennesket stammer fra sjimpansen"
           ],
-          "explain": "Darwin mente også at alt liv på jorda er i slekt. Ideene vokste fram etter en fem år lang jordomseiling med skipet Beagle, blant annet gjennom studier av fugler på Galápagos."
+          "explain": "Darwin mente også at alt liv på jorda er i slekt. Han visste ikke hvordan egenskaper arves; svaret lå i Gregor Mendels forsøk med erteplanter, som først ble kjent i 1900."
         },
         {
           "id": "nat-vitenskapens-gjennombrudd-newton",
@@ -1643,13 +1645,13 @@
           "id": "nat-vitenskapens-gjennombrudd-galilei",
           "step": 2,
           "type": "text",
-          "prompt": "Hvem rettet i 1609 en kikkert mot himmelen og fant fire måner rundt Jupiter?",
+          "prompt": "Hvem fant i 1610 fire måner rundt Jupiter med en kikkert?",
           "answer": "Galileo Galilei",
           "accept": [
             "Galilei",
             "Galileo"
           ],
-          "explain": "Galilei krevde matematiske bevis for lovene sine og mente at naturens bok er skrevet i matematikkens språk. Det gjorde ham til et forbilde for den nye naturvitenskapen."
+          "explain": "Galilei hadde året før bygd sine egne kikkerter etter nederlandsk forbilde. Han krevde matematiske bevis for lovene sine og mente at naturens bok er skrevet i matematikkens språk."
         },
         {
           "id": "nat-vitenskapens-gjennombrudd-curie",
@@ -1713,7 +1715,7 @@
             },
             {
               "label": "Galilei ser Jupiters måner i kikkert",
-              "year": 1609
+              "year": 1610
             },
             {
               "label": "Newtons Principia",

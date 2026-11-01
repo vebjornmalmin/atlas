@@ -94,7 +94,7 @@
             "prokaryoter",
             "prokaryot celle"
           ],
-          "explain": "Bakterier og arker er prokaryote. Forskning fra 2020-tallet tyder på at de eukaryote cellene har oppstått fra en gruppe arker kalt Åsgård-arker."
+          "explain": "Bakterier og arker er prokaryote. Forskning fra 2020-tallet tyder på at de eukaryote cellene har oppstått fra en gruppe arker kalt Åsgård-arker. Den første gruppen av dem, Loke-arkene, ble funnet i havbunnen nær den varme kilden Lokeslottet på Atlanterhavsryggen mellom Norge og Grønland."
         },
         {
           "id": "bio-cellen-mitokondrier",
@@ -209,16 +209,16 @@
       ],
       "summary": "Hvordan oppskriften på en organisme er lagret i DNA, og hvordan den føres videre fra foreldre til barn.",
       "lesson": [
-        "DNA er arvestoffet i alle celler. Molekylet er formet som en vridd stige, en dobbelheliks, der trinnene er par av fire baser: A, T, C og G. Avsnitt av DNA som er oppskrifter på det cellen skal lage, kalles gener. DNA-et er pakket rundt proteiner i kromosomer. Mennesket har vanligvis 46 kromosomer, 23 par, der ett av hvert par kommer fra mor og ett fra far.",
+        "DNA er arvestoffet i alle celler. Molekylet er formet som en vridd stige, en dobbelheliks, der trinnene er par av fire baser: A, T, C og G. Gener er avsnitt av DNA med oppskrifter på det cellen skal lage, oftest proteiner. Cellen kopierer genet til RNA, og ribosomene bygger proteinet etter kopien. Hos mennesket er DNA-et pakket i 46 kromosomer, 23 par: ett av hvert par fra mor og ett fra far.",
         "Munken Gregor Mendel krysset erteplanter og publiserte i 1866 resultater som regnes som starten på genetikken. Han viste at egenskaper ikke blandes, men går i arv som egne enheter i par. Noen anlegg er dominante, andre vikende (recessive). Et vikende anlegg kan være skjult i én generasjon og komme til syne i den neste. Arbeidet ble først gjenoppdaget i 1900.",
-        "I 1953 la James Watson og Francis Crick fram modellen av DNA som en dobbelheliks. De bygde blant annet på et røntgenbilde tatt av Rosalind Franklin og studenten hennes. Varige endringer i DNA kalles mutasjoner; de kan gi sykdom, men også ny variasjon. Med metoden CRISPR kan forskere i dag endre DNA målrettet."
+        "I 1953 la James Watson og Francis Crick fram modellen av DNA som en dobbelheliks. De bygde blant annet på et røntgenbilde tatt av Rosalind Franklin og studenten hennes. Varige endringer i DNA kalles mutasjoner; de kan gi sykdom, men også ny variasjon. Metoden CRISPR er hentet fra bakterienes forsvar mot virus: En kort RNA-bit leder en «gensaks», et Cas-protein, til et bestemt sted i DNA-et, der den kutter."
       ],
       "keyPoints": [
-        "Gener er oppskrifter i DNA; DNA-et er pakket i kromosomer.",
+        "Gener er oppskrifter i DNA, de fleste på proteiner; cellen kopierer genet til RNA og bygger proteinet etter det.",
         "Mennesket har 46 kromosomer i 23 par, ett av hvert par fra hver forelder.",
         "Mendel viste at anlegg arves som egne enheter og kan være dominante eller vikende.",
         "Dobbelheliksen ble beskrevet i 1953, blant annet på grunnlag av Rosalind Franklins røntgenbilde.",
-        "Mutasjoner er varige endringer i DNA og kilden til ny variasjon."
+        "Mutasjoner er varige endringer i DNA; bare mutasjoner i kjønnscellene kan gå videre til barn."
       ],
       "sources": [
         {
@@ -240,6 +240,14 @@
         {
           "title": "CRISPR – Store medisinske leksikon",
           "url": "https://sml.snl.no/CRISPR"
+        },
+        {
+          "title": "Proteinsyntese – Store norske leksikon",
+          "url": "https://snl.no/proteinsyntese"
+        },
+        {
+          "title": "Sigdcelleanemi – Store medisinske leksikon",
+          "url": "https://sml.snl.no/sigdcelleanemi"
         }
       ],
       "cards": [
@@ -254,7 +262,7 @@
             "Et protein som kopierer arvestoffet",
             "En celle som fører arvestoffet videre"
           ],
-          "explain": "De fleste gener er oppskrifter på proteiner, som gjør mye av arbeidet i cellen. Hvert gen har sin faste plass på et kromosom."
+          "explain": "Proteiner gjør mye av arbeidet i cellen: De bygger vev, frakter stoffer og styrer kjemiske reaksjoner som enzymer. Hvert gen har sin faste plass på et kromosom."
         },
         {
           "id": "bio-arv-dna-form",
@@ -301,7 +309,7 @@
             "Hugo de Vries og Carl Correns",
             "Emmanuelle Charpentier og Jennifer Doudna"
           ],
-          "explain": "Modellen ble publisert i Nature i april 1953. Watson og Crick fikk Nobelprisen i 1962; Franklin døde i 1958, og prisen deles ikke ut posthumt."
+          "explain": "Modellen ble publisert i Nature i april 1953. Watson, Crick og Maurice Wilkins fikk Nobelprisen i fysiologi eller medisin i 1962; Franklin døde i 1958, og prisen deles ikke ut posthumt."
         },
         {
           "id": "bio-arv-dna-franklin",
@@ -356,17 +364,30 @@
           "explain": "Hos organismer med kjønnet formering føres bare mutasjoner i kjønnscellene videre. Mutasjoner i andre celler dør med individet, men kan for eksempel føre til kreft."
         },
         {
+          "id": "bio-arv-dna-hvorfor-mutasjon-sykdom",
+          "step": 3,
+          "type": "choice",
+          "prompt": "Hvorfor kan en mutasjon i ett eneste gen gi en alvorlig sykdom?",
+          "answer": "Proteinet som lages etter genet, kan bli feil eller mangle",
+          "distractors": [
+            "Mutasjonen smitter over til de andre genene i cellen",
+            "Cellen mister et helt kromosom når genet endres",
+            "Kroppen angriper alle celler som har en mutasjon"
+          ],
+          "explain": "Ved sigdcelleanemi er bare én «bokstav» endret i genet for en del av hemoglobinet. Det endrede proteinet gjør de røde blodcellene sigdformede, så de lettere går i stykker og tetter blodårer. Bærere av mutasjonen er bedre beskyttet mot malaria, og derfor er den vanlig der malaria finnes – naturlig utvalg i praksis."
+        },
+        {
           "id": "bio-arv-dna-forklar-crispr",
           "step": 3,
           "type": "explain",
           "prompt": "Forklar kort hvordan genredigering med CRISPR fungerer, og hvor metoden kommer fra.",
-          "answer": "CRISPR er hentet fra bakterienes forsvar mot virus. Et RNA-molekyl leder et Cas-protein, en slags gensaks, til et bestemt sted i DNA-et, der proteinet kutter. Slik kan forskere endre DNA målrettet.",
+          "answer": "CRISPR er hentet fra bakterienes forsvar mot virus. En kort RNA-bit leder et Cas-protein, en slags gensaks, til et bestemt sted i DNA-et, der proteinet kutter. Slik kan forskere endre DNA målrettet.",
           "checklist": [
             "Opprinnelig bakterienes forsvar mot virus",
             "RNA fører en gensaks (Cas) til riktig sted",
             "Brukes til målrettede endringer i DNA"
           ],
-          "explain": "Metoden fikk sitt gjennombrudd i 2010-årene. Emmanuelle Charpentier og Jennifer Doudna fikk Nobelprisen i kjemi i 2020 for arbeidet med den."
+          "explain": "Bakteriene lagrer biter av virusarvestoff og bruker dem til å kjenne igjen og kutte viruset ved et nytt angrep. Emmanuelle Charpentier og Jennifer Doudna fikk Nobelprisen i kjemi i 2020 for å ha gjort systemet om til en programmerbar gensaks."
         },
         {
           "id": "bio-arv-dna-aar-mendel",
@@ -382,7 +403,7 @@
           "type": "year",
           "prompt": "Hvilket år ble modellen av DNA som en dobbelheliks publisert?",
           "answer": "1953",
-          "explain": "I samme nummer av Nature sto også en artikkel av Franklin og Gosling. Watson og Crick viste ikke til Franklins arbeid i sin egen artikkel."
+          "explain": "I samme nummer av Nature sto også artikler fra Wilkins og fra Franklin og Gosling. Watson og Crick nevnte bare i generelle ordelag at de var inspirert av upubliserte resultater fra Wilkins og Franklin."
         }
       ]
     },
@@ -396,8 +417,8 @@
       "summary": "Hvordan arter endrer seg over generasjoner gjennom naturlig utvalg, og hvorfor alt liv på jorda er i slekt.",
       "lesson": [
         "Evolusjon betyr at arvelige egenskaper blir vanligere eller sjeldnere i en populasjon over generasjoner. Det er populasjonen som endrer seg, ikke enkeltindividet. Charles Darwin la grunnlaget for evolusjonsbiologien i boka Artenes opprinnelse fra 1859. Ideene vokste fram etter en fem år lang jordomseiling med skipet Beagle. Alfred Russel Wallace kom omtrent samtidig fram til den samme teorien.",
-        "Naturlig utvalg bygger på tre forutsetninger: Det fødes flere individer enn miljøet kan bære, individene varierer, og variasjonen er delvis arvelig. De best tilpassede overlever oftere og får flere avkom. Er det etter en tørke mest store frø igjen, klarer fugler med store nebb seg best, og andelen med store nebb øker. Mutasjoner er den opprinnelige kilden til variasjon.",
-        "Ifølge evolusjonsteorien har alt liv et felles opphav. Fossiler, likheter i anatomi og likheter i DNA peker samme vei. Mennesket hører til de store menneskeapene, sammen med sjimpanser, gorillaer og orangutanger. Sjimpansene er våre nærmeste nålevende slektninger, men vi stammer ikke fra dem; vi har felles forfedre. Vår egen art, Homo sapiens, har levd i omtrent 300 000 år."
+        "Naturlig utvalg bygger på tre forutsetninger: Det fødes flere individer enn miljøet kan bære, individene varierer, og variasjonen er delvis arvelig. De best tilpassede overlever oftere og får flere avkom. Er det etter en tørke mest store frø igjen, klarer fugler med store nebb seg best, og andelen med store nebb øker. Mutasjoner er den opprinnelige kilden til variasjon, og de oppstår tilfeldig, uavhengig av hva organismen trenger.",
+        "Ifølge evolusjonsteorien har alt liv et felles opphav. Fossiler, likheter i anatomi og likheter i DNA peker samme vei. Mennesket hører til de store menneskeapene, sammen med sjimpanser, gorillaer og orangutanger. Sjimpansene, vanlig sjimpanse og bonobo, er våre nærmeste nålevende slektninger, men vi stammer ikke fra dem; vi har felles forfedre. Vår egen art, Homo sapiens, har levd i omtrent 300 000 år."
       ],
       "keyPoints": [
         "Darwin la fram teorien om evolusjon ved naturlig utvalg i Artenes opprinnelse (1859).",
@@ -492,20 +513,20 @@
             "Alfred Wallace",
             "A. R. Wallace"
           ],
-          "explain": "Wallace sendte Darwin et manuskript i 1858. Det fikk Darwin til å publisere et kort utdrag av sitt eget arbeid sammen med Wallaces tekst, og året etter kom Artenes opprinnelse."
+          "explain": "Wallace sendte Darwin et manuskript i 1858. Darwins venner sørget for at Wallaces tekst og et kort utdrag av Darwins arbeid ble lagt fram sammen samme år, og året etter kom Artenes opprinnelse."
         },
         {
           "id": "bio-evolusjon-sjimpansen",
           "step": 2,
           "type": "choice",
-          "prompt": "Hvilken nålevende art er menneskets nærmeste slektning?",
-          "answer": "Sjimpansen",
+          "prompt": "Hvilke nålevende aper er menneskets nærmeste slektninger?",
+          "answer": "Sjimpansene",
           "distractors": [
-            "Gorillaen",
-            "Orangutangen",
-            "Gibbonen"
+            "Gorillaene",
+            "Orangutangene",
+            "Gibbonene"
           ],
-          "explain": "Både genetiske og anatomiske studier viser dette. Slektslinjene skilte trolig lag for sju til ti millioner år siden, men anslagene spriker mye."
+          "explain": "Vanlig sjimpanse og bonobo står oss like nært. Både genetiske og anatomiske studier viser dette. Slektslinjene skilte trolig lag for sju til ti millioner år siden, men anslagene spriker mye."
         },
         {
           "id": "bio-evolusjon-hvorfor-nebb",
@@ -518,7 +539,7 @@
             "Fuglene utvikler store nebb fordi de trenger dem",
             "Ingenting, for tørke påvirker ikke arvelige egenskaper"
           ],
-          "explain": "Ingen enkeltfugl forandrer seg; det er sammensetningen av populasjonen som endres. Darwin visste ikke hvordan arv fungerte; det ble først forklart da genetikken kom på 1900-tallet."
+          "explain": "Ingen enkeltfugl forandrer seg; det er sammensetningen av populasjonen som endres. Darwin visste ikke hvordan arv fungerte; forklaringen kom med Mendels arvelover, som ble kjent først i 1900."
         },
         {
           "id": "bio-evolusjon-hvorfor-mutasjoner-tilfeldige",
@@ -550,7 +571,7 @@
           "id": "bio-evolusjon-forklar-bevis",
           "step": 3,
           "type": "explain",
-          "prompt": "Nevn og forklar to typer bevis for at livet har utviklet seg gjennom evolusjon.",
+          "prompt": "Nevn og forklar tre typer bevis for at livet har utviklet seg gjennom evolusjon.",
           "answer": "Fossiler viser at livet har endret seg over tid, med overgangsformer for eksempel mellom fisk og firfotede dyr. Menneskearmen, hvalens luffe og fuglevingen har samme grunnstruktur, som tyder på felles stamform. Arter som ligner hverandre, har også svært likt DNA.",
           "checklist": [
             "Fossiler og overgangsformer",
@@ -590,14 +611,15 @@
       "summary": "Hvordan biologer ordner millioner av arter i et system, og hvorfor mangfoldet av liv er verdt å forstå og ta vare på.",
       "lesson": [
         "Den svenske naturforskeren Carl von Linné ordnet på 1700-tallet artene i et hierarkisk system: arter samles i slekter, slekter i familier og videre i ordener, klasser, rekker og riker. Han innførte også vitenskapelige navn med to ledd, slektsnavn og artsnavn. Systemet kalles binær nomenklatur. Hegg heter for eksempel Prunus padus.",
-        "Linné delte livet i to riker, dyr og planter. I dag regner de fleste med tre domener: bakterier, arker og eukaryoter. Eukaryotene omfatter blant annet dyr, planter og sopp. Sopp er et eget rike: de driver ikke fotosyntese, men lever av organisk stoff, og de regnes å stå nærmere dyrene enn plantene.",
-        "Virveldyrene har ryggrad og hodeskalle og omfatter fisker, amfibier, reptiler, fugler og pattedyr. En art er vanligvis alle individer som kan få forplantningsdyktige avkom sammen. Biologisk mangfold er variasjonen av liv: arter, genetisk variasjon og leveområder. Nærmere én million arter er i dag truet av utryddelse, og menneskelig aktivitet regnes som hovedårsaken."
+        "Linné delte livet i to riker, dyr og planter. I dag regner de fleste med tre domener: bakterier, arker og eukaryoter. Eukaryotene omfatter blant annet dyr, planter og sopp. Sopp er et eget rike: de driver ikke fotosyntese, men lever av organisk stoff, og de regnes å stå nærmere dyrene enn plantene. En art er vanligvis alle individer som kan få forplantningsdyktige avkom sammen.",
+        "Virveldyrene har ryggrad og hodeskalle: fisker, amfibier, reptiler, fugler og pattedyr. Amfibier, som frosker, må som regel tilbake til vann for å formere seg. Biologisk mangfold er variasjonen av liv: arter, genetisk variasjon og leveområder. Nærmere én million arter er truet av utryddelse. Hovedårsaken er menneskelig aktivitet: Natur bygges ned, og fremmede arter, forurensning, overhøsting og klimaendringer svekker bestander."
       ],
       "keyPoints": [
         "Linné innførte det hierarkiske systemet og navn med slektsnavn og artsnavn.",
         "I dag deles livet i tre domener: bakterier, arker og eukaryoter.",
         "Virveldyrene er fisker, amfibier, reptiler, fugler og pattedyr.",
-        "En art er individer som kan få forplantningsdyktige avkom sammen."
+        "En art er individer som kan få forplantningsdyktige avkom sammen.",
+        "Mennesker er hovedårsaken til at arter trues i dag, først og fremst ved at natur bygges ned."
       ],
       "sources": [
         {
@@ -646,7 +668,7 @@
             "Individer som lever sammen i ett og samme område",
             "Individer som spiser samme føde og har samme levevis"
           ],
-          "explain": "Mennesket og sjimpansen er derfor ulike arter. Definisjonen fungerer dårlig for fossiler og for organismer med ukjønnet formering; der brukes likhet i utseende og gener."
+          "explain": "Hest og esel kan få avkom sammen, men muldyrene er nesten alltid sterile, og derfor er hest og esel ulike arter. Definisjonen fungerer dårlig for fossiler og for organismer med ukjønnet formering; der brukes likhet i utseende og gener."
         },
         {
           "id": "bio-livets-mangfold-virveldyr",
@@ -670,7 +692,7 @@
           "accept": [
             "binomial nomenklatur",
             "binominal nomenklatur",
-            "binær nomenklatur"
+            "binomen"
           ],
           "explain": "Arter i samme slekt deler det første navnet. Hegg heter Prunus padus og slåpetorn Prunus spinosa, fordi de er nære slektninger."
         },
@@ -685,13 +707,13 @@
             "Bakterier, virus og eukaryoter",
             "Planter, dyr og protister"
           ],
-          "explain": "Skillet bygger på cellenes oppbygning. Da elektronmikroskopet kom i bruk, ble det rundt 1960 klart at celler med og uten kjerne er grunnleggende forskjellige."
+          "explain": "Inndelingen kom fra Carl Woese, som på 1970-tallet sammenlignet arvestoffet i mikroorganismer. Han fant at arkene, som ligner bakterier i mikroskopet, er en helt egen gren av livet."
         },
         {
           "id": "bio-livets-mangfold-amfibier",
           "step": 2,
           "type": "text",
-          "prompt": "Hvilken gruppe virveldyr er avhengig av vann for å fullføre livssyklusen sin?",
+          "prompt": "Hvilken gruppe virveldyr må som regel tilbake til vann for å formere seg, selv om de voksne ofte lever på land?",
           "answer": "Amfibier",
           "accept": [
             "amfibiene",
@@ -725,7 +747,7 @@
             "De formerer seg bare ved at cellene deler seg",
             "De mangler arvestoff i form av DNA i cellene"
           ],
-          "explain": "Soppriket ble foreslått av nordmannen Olav Johan Sopp i 1887. Soppene lagrer glykogen, slik dyr gjør, og regnes å ha felles rot med dyreriket."
+          "explain": "Soppriket ble foreslått av nordmannen Olav Johan Sopp i 1887. Til forskjell fra dyr fordøyer soppen maten utenfor kroppen: Den skiller ut enzymer og tar opp de oppløste stoffene. Soppene lagrer glykogen, slik dyr gjør, og regnes å ha felles rot med dyreriket."
         },
         {
           "id": "bio-livets-mangfold-koble-kjennetegn",
@@ -763,7 +785,7 @@
             "Natur bygges ned eller stykkes opp",
             "Minst én til: fremmede arter, forurensning, overhøsting eller klima"
           ],
-          "explain": "Tidligere masseutryddelser skyldtes blant annet klimaendringer, vulkanisme og meteornedslag. I Norge regnes om lag 12 prosent av de kjente artene som truet."
+          "explain": "Tidligere masseutryddelser skyldtes blant annet klimaendringer, vulkanisme og meteornedslag. I Norge regnes om lag 12 prosent av artene som er vurdert, som truet."
         },
         {
           "id": "bio-livets-mangfold-truede-arter",
@@ -858,7 +880,7 @@
             "I tykktarmen",
             "I spiserøret"
           ],
-          "explain": "Tynntarmen er 5,5–6,5 meter lang, og millioner av tarmtotter gir den en svært stor overflate. Magesekken elter maten med saltsyre og enzymer, men tar opp svært lite næring."
+          "explain": "Tynntarmen er fire til fem meter lang hos en voksen, og millioner av tarmtotter gir den en svært stor overflate. Magesekken elter maten med saltsyre og enzymer, men tar opp svært lite næring."
         },
         {
           "id": "bio-menneskekroppen-hormon",
@@ -960,9 +982,9 @@
           "distractors": [
             "At blodet dannes i leveren og brukes opp i kroppen",
             "At blodet strømmer gjennom porer i hjerteveggen",
-            "At arteriene er fylt av luft og livsånd"
+            "At blodet ebber og flor fram og tilbake i årene"
           ],
-          "explain": "Distraktorene er alle hentet fra oldtidslegen Galenos, hvis lære hadde dominert i om lag 1500 år. Harvey viste at hjertet er en hulmuskel som driver ett sammenhengende kretsløp."
+          "explain": "Distraktorene bygger på oldtidslegen Galenos, hvis lære hadde dominert i om lag 1500 år. Harvey regnet ut at hjertet pumper langt mer blod enn kroppen kan lage, og konkluderte med at det samme blodet må gå i et sammenhengende kretsløp."
         },
         {
           "id": "bio-menneskekroppen-forklar-oksygen",
@@ -1005,7 +1027,7 @@
       "summary": "Hva som skiller bakterier fra virus, hvordan kroppen forsvarer seg, og hvorfor vaksiner og antibiotika virker – og hvor grensene går.",
       "lesson": [
         "Mange sykdommer skyldes smittestoffer, særlig bakterier og virus. Bakterier er encellede organismer som formerer seg på egen hånd. Virus er langt mindre og består av arvestoff i en kapsel av protein. De kan bare formere seg inne i en vertscelle, og det er uklart om de kan regnes som levende.",
-        "Immunforsvaret bruker blant annet antistoffer: proteiner som binder seg til et bestemt smittestoff og hjelper resten av forsvaret å uskadeliggjøre det. Møter kroppen samme smittestoff igjen, svarer den raskt, og man er immun. Vaksiner utnytter dette og gir immunitet uten at man gjennomgår sykdommen. Edward Jenner la i 1798 fram bevis for at kukopper beskyttet mot kopper.",
+        "Immunforsvaret bruker blant annet antistoffer: proteiner som binder seg til et bestemt smittestoff og hjelper resten av forsvaret å uskadeliggjøre det. Etter en infeksjon beholder kroppen hukommelsesceller. Møter den samme smittestoff igjen, svarer den raskt, og man er immun. Vaksiner utnytter dette og gir immunitet uten at man gjennomgår sykdommen. Edward Jenner la i 1798 fram bevis for at kukopper beskyttet mot kopper.",
         "Antibiotika er legemidler mot bakterier. Alexander Fleming beskrev i 1928 at muggsoppen Penicillium dreper bakterier, og kalte stoffet penicillin. Antibiotika virker ikke mot virus. Overforbruk gir antibiotikaresistens: resistente bakterier overlever, formerer seg og blir en stadig større andel. En pandemi er en epidemi over store deler av verden, som spanskesyken 1918–1920 og koronapandemien fra 2020."
       ],
       "keyPoints": [
@@ -1038,6 +1060,14 @@
         {
           "title": "Pandemi – Store medisinske leksikon",
           "url": "https://sml.snl.no/pandemi"
+        },
+        {
+          "title": "Hukommelsesceller – Store medisinske leksikon",
+          "url": "https://sml.snl.no/hukommelsesceller"
+        },
+        {
+          "title": "Spanskesyken – Store medisinske leksikon",
+          "url": "https://sml.snl.no/spanskesyken"
         }
       ],
       "cards": [
@@ -1052,7 +1082,7 @@
             "Virus har ikke noe eget arvestoff",
             "Virus formerer seg ved vanlig celledeling"
           ],
-          "explain": "Et virus kan bare trenge inn i celler med overflateproteiner som passer til virusets egne. Poliovirus infiserer for eksempel bare mennesker, og bare noen av kroppens celler."
+          "explain": "Et virus kan bare trenge inn i celler med overflateproteiner som passer til virusets egne. Poliovirus infiserer for eksempel naturlig bare mennesker, og bare noen av kroppens celler."
         },
         {
           "id": "bio-sykdom-immunforsvar-vaksine",
@@ -1065,7 +1095,7 @@
             "Den styrker kroppen generelt mot alle infeksjoner",
             "Den virker som et antibiotikum mot virus"
           ],
-          "explain": "Vaksinen inneholder antigener fra et smittestoff som er endret slik at det ikke gir sykdom. Antistoffene som dannes, er spesifikke og gjenkjenner bare dette smittestoffet."
+          "explain": "Vaksinen inneholder drepte eller svekkede smittestoffer, deler av dem, eller – i RNA-vaksiner – en oppskrift som får kroppens egne celler til å lage en ufarlig del av smittestoffet. Immunforsvaret lærer seg å kjenne igjen akkurat dette smittestoffet."
         },
         {
           "id": "bio-sykdom-immunforsvar-antibiotika",
@@ -1161,10 +1191,10 @@
           "step": 3,
           "type": "explain",
           "prompt": "Forklar hvorfor en vaksinert person ofte ikke blir syk når smittestoffet kommer.",
-          "answer": "Vaksinen har fått immunforsvaret til å lage antistoffer mot smittestoffet uten at personen ble syk. Når det samme smittestoffet kommer, øker antistoffproduksjonen raskt, og smittestoffet bekjempes før det rekker å gi sykdom.",
+          "answer": "Vaksinen har fått immunforsvaret til å lage antistoffer og hukommelsesceller mot smittestoffet uten at personen ble syk. Når det samme smittestoffet kommer, svarer hukommelsescellene raskt, og smittestoffet bekjempes før det rekker å gi sykdom.",
           "checklist": [
             "Vaksinen ligner smittestoffet, men gir ikke sykdom",
-            "Kroppen danner antistoffer mot smittestoffet",
+            "Kroppen danner antistoffer og hukommelsesceller",
             "Ved ny smitte kommer et raskt immunsvar"
           ],
           "explain": "Kopper er utryddet fra hele verden ved hjelp av omfattende vaksinasjonsprogrammer. Polio er nesten utryddet på samme måte."
@@ -1197,7 +1227,7 @@
             "1889–1890",
             "1957–1958"
           ],
-          "explain": "Spanskesyken regnes som den klassiske pandemien. Den hører til den alvorligste kategorien, med en dødelighet på over 2 prosent av de smittede."
+          "explain": "Mellom 50 og 100 millioner mennesker døde, flere enn i begge verdenskrigene til sammen. I Norge tok sykdommen omkring 15 000 liv, de fleste høsten 1918."
         }
       ]
     },
@@ -1211,7 +1241,7 @@
       "summary": "Hvordan energi strømmer og stoffer går i kretsløp mellom levende organismer og miljøet de lever i.",
       "lesson": [
         "Et økosystem er alle organismene på et sted og miljøet de lever i, fra en pytt til en hel skog. Grunnlaget er fotosyntesen: planter, alger og noen bakterier bruker lysenergi til å lage sukker av karbondioksid og vann, og slipper ut oksygen. I celleåndingen bryter både planter og dyr sukkeret ned igjen med oksygen og frigjør energi.",
-        "Organismer som lager organisk stoff selv, kalles produsenter. Planteetere og rovdyr er konsumenter. Nedbrytere, som mikroorganismer og smådyr, bryter ned døde planter og dyr til enkle stoffer som produsentene kan bruke igjen. En næringskjede viser hvem som spiser hvem, for eksempel gran, granborkbille, hakkespett og hønsehauk. I virkeligheten henger kjedene sammen i næringsnett.",
+        "Organismer som lager organisk stoff selv, kalles produsenter. Planteetere og rovdyr er konsumenter. Nedbrytere, som bakterier, sopp og smådyr, bryter ned døde planter og dyr til enkle stoffer som produsentene kan bruke igjen. En næringskjede viser hvem som spiser hvem, for eksempel gran, granborkbille, hakkespett og hønsehauk. I virkeligheten henger kjedene sammen i næringsnett.",
         "Energien strømmer gjennom økosystemet og går til slutt tapt som varme; for hvert ledd i næringskjeden forsvinner omtrent 90 prosent. Stoffene går derimot i kretsløp. I karbonkretsløpet tar fotosyntesen opp CO2, mens celleånding og nedbryting slipper den ut igjen. Nitrogen utgjør 78 prosent av lufta, men bare noen få bakteriegrupper kan ta det opp direkte."
       ],
       "keyPoints": [
@@ -1267,7 +1297,7 @@
             "Sukker og karbondioksid",
             "Oksygen og nitrogen"
           ],
-          "explain": "Råstoffene er karbondioksid og vann, og energien kommer fra lys. Nesten alt liv er avhengig av det som lages i fotosyntesen."
+          "explain": "Råstoffene er karbondioksid og vann, og energien kommer fra lys. Fotosyntesen gjør strålingsenergi om til kjemisk energi i sukker. Den samme lagrede solenergien frigjøres når vi spiser, eller når vi brenner ved, kull og olje."
         },
         {
           "id": "bio-okologi-nedbrytere",
@@ -1332,7 +1362,7 @@
             "Karbondioksid",
             "Argon"
           ],
-          "explain": "Bindingen mellom de to atomene i nitrogengass er så sterk at de fleste organismer ikke kan bruke den. Nitrogenfikserende bakterier gjør den om til ammonium, som planter kan ta opp."
+          "explain": "Bindingen mellom de to atomene i nitrogengass er så sterk at de fleste organismer ikke kan bruke den. Nitrogenfikserende bakterier gjør den om til ammonium, som planter kan ta opp. Industrien gjør det samme for å lage kunstgjødsel, slik Norsk Hydro gjorde fra 1905."
         },
         {
           "id": "bio-okologi-hvorfor-korte-kjeder",
@@ -1371,7 +1401,7 @@
             "Energien må derfor tilføres hele tiden",
             "Stoffer går i kretsløp via nedbryterne"
           ],
-          "explain": "Derfor snakker vi om karbonkretsløp og nitrogenkretsløp, men aldri om et energikretsløp. Forbrenning av fossilt karbon har forstyrret likevekten i karbonkretsløpet."
+          "explain": "Energien forsvinner ikke, men blir til varme som organismene ikke kan bruke igjen. Derfor snakker vi om karbonkretsløp og nitrogenkretsløp, men aldri om et energikretsløp. Forbrenning av fossilt karbon har forstyrret likevekten i karbonkretsløpet."
         },
         {
           "id": "bio-okologi-energitap",
@@ -1408,7 +1438,7 @@
       "summary": "Hvorfor økte utslipp av klimagasser varmer opp jorda, hva forskningen slår fast, og hvordan verden har forsøkt å svare.",
       "lesson": [
         "Drivhuseffekten er naturlig. Vanndamp, CO2 og andre drivhusgasser slipper sollyset gjennom, men fanger en del av varmestrålingen fra bakken. Uten dem ville middeltemperaturen på jorda vært omtrent minus 18 grader i stedet for omkring 15. Når vi brenner kull, olje og gass, som kalles fossile brensler, øker mengden CO2 i atmosfæren, og drivhuseffekten forsterkes.",
-        "FNs klimapanel ble opprettet i 1988 og sammenfatter forskningen om klima. Panelet slår fast at menneskelig aktivitet har varmet opp atmosfæren, havet og landjorda. Oppvarmingen gir mer kraftig nedbør, smeltende is og stigende havnivå. Havet tar også opp mer CO2 og blir surere. Det rammer organismer som bygger skall av kalk, og dermed næringskjedene i havet.",
+        "FNs klimapanel ble opprettet i 1988 og sammenfatter forskningen om klima. Panelet slår fast at menneskelig aktivitet har varmet opp atmosfæren, havet og landjorda. Oppvarmingen gir mer kraftig nedbør, og havet stiger fordi is på land smelter og varmere vann utvider seg. Havet tar også opp mer CO2 og blir surere. Det rammer organismer som bygger skall av kalk, og dermed næringskjedene i havet.",
         "I Parisavtalen fra 2015 ble praktisk talt alle land enige om å begrense oppvarmingen til godt under 2 grader, og helst til 1,5 grader, sammenlignet med førindustriell tid. Landene setter selv sine utslippsmål og skal skjerpe dem hvert femte år. Klimaendringene får også følger for det biologiske mangfoldet."
       ],
       "keyPoints": [
@@ -1468,7 +1498,7 @@
             "Naturlige svingninger i havstrømmene",
             "Store utslipp fra vulkanutbrudd"
           ],
-          "explain": "Mesteparten av oppvarmingen har skjedd etter 1950, høyst sannsynlig på grunn av drivhusgasser fra menneskelig aktivitet. Tidligere i jordas historie har oppvarming hatt naturlige årsaker."
+          "explain": "Klimapanelets sjette hovedrapport slår fast at menneskelig aktivitet har varmet opp atmosfæren, havet og landjorda. Mesteparten av oppvarmingen har skjedd etter 1950. Tidligere i jordas historie har klimaendringer hatt naturlige årsaker."
         },
         {
           "id": "bio-klima-miljo-parisavtalen",
@@ -1581,7 +1611,7 @@
             "Omtrent 0 grader",
             "Omtrent pluss 5 grader"
           ],
-          "explain": "I dag er middeltemperaturen omkring 15 °C. Venus, med en atmosfære av rundt 96 prosent CO2, har en overflatetemperatur på omkring 450 °C."
+          "explain": "I dag er middeltemperaturen omkring 15 °C. Venus, med en atmosfære av rundt 96 prosent CO2, har en overflatetemperatur på omkring 470 °C."
         },
         {
           "id": "bio-klima-miljo-aar-klimapanelet",
