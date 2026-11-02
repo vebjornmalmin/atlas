@@ -16,6 +16,10 @@ Atlas er bygd om rundt et kuratert pensum for én voksen elev på iPhone 17 Pro.
 
 Modell og beslutninger: [docs/learning-core.md](docs/learning-core.md). Skrive nye emner: [docs/curriculum-authoring.md](docs/curriculum-authoring.md).
 
+Publisert 2. november 2026: app 1.0.0, utgivelse `cbdd4fd4fe3e`, kunnskapspakke 2.0.0 (84 emner, 1093 kort). Helse- og versjonsendepunktene og pakkens hash er kontrollert mot bygget, og den publiserte appen er installert og startet i iPhone 17 Pro-simulatoren. Den første publiseringen viste at Safari kan melde `navigator.onLine = false` selv om nettet virker; appen prøver nå nettverket og regner bare et mislykket kall som frakoblet.
+
+Publiseringen gikk denne gangen via Wrangler, fordi Cloudflare-tilkoblingen ikke var tilgjengelig i økten. Oppsettet tilsvarer det tidligere: `name = "atlas-first-app"`, `main = "worker.mjs"`, `compatibility_date = "2026-10-10"`, `workers_dev = true`, `no_bundle = true` og observability slått på.
+
 ## Source and deployment
 
 The app lives in `src/`; public knowledge, maps, icons, and the manifest are in `public/`. Run `npm install`, `npm test`, and `npm run build`. The build validates and hashes knowledge, compiles the SvelteKit app, generates a versioned service worker, and creates `worker.mjs` with compressed public assets. Run `npm run dev` for local development.
