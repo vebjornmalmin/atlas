@@ -258,7 +258,7 @@
     artworkMedia=[...baseMedia,...sourceRecords.map(record=>record.media).filter(Boolean).filter(media=>!baseMedia.some(old=>old.entityId===media.entityId))];
   }
   async function loadMoreSources(entityId='') {
-    if(offlineTest || !navigator.onLine)throw new Error('Koble til nettet for å hente nye bilder og spørsmål.');
+    if(offlineTest)throw new Error('Koble til nettet for å hente nye bilder og spørsmål.');
     const candidates=data.entities.filter(item=>(entityId?item.id===entityId:!collectionFilter || item.collectionIds.includes(collectionFilter)) && sourceQueries(item,data.sources).length && (entityId || !sourceRecords.some(record=>record.entityId===item.id))).slice(0,sourceBatchSize);
     if(!candidates.length){sourceStatus='Alle tilgjengelige kildeposter i dette utvalget er hentet.';return;}
     let added=0,pictures=0,failed=0;
@@ -401,7 +401,8 @@
     offlineReady=cachedFiles>0 && Boolean(data);
   }
   async function checkUpdates(manual = false) {
-    if (offlineTest || !navigator.onLine) { if(manual) notify('Du er frakoblet. Installert kunnskap er fortsatt tilgjengelig.'); return; }
+    // Safari can report navigator.onLine=false while the network works, so only a failed request counts as offline.
+    if (offlineTest) { if(manual) notify('Du er frakoblet. Installert kunnskap er fortsatt tilgjengelig.'); return; }
     const prior=await get(db,'settings','updates');
     if(!manual && prior && Date.now()-new Date(prior.checkedAt)<3600000) {lastUpdate=prior;return;}
     const started=Date.now();
@@ -429,8 +430,10 @@
       await put(db,'settings',lastUpdate);
       if(changed) {await restoreSourceContent();await refresh();}
       await logEvent(db,'updates',changed?'Kunnskapspakkene er oppdatert.':'Kunnskapen er oppdatert.','info',{changed,bytes});
+      reportStatus('');
       if(manual)notify(changed?'Innholdet er oppdatert.':'Kunnskapen din er oppdatert.');
-    }catch(failure) {
+    }catch(caught) {
+      const failure=caught instanceof TypeError?new Error('Fikk ikke kontakt med nettet. Installert kunnskap er fortsatt tilgjengelig.'):caught;
       lastUpdate={id:'updates',checkedAt:new Date().toISOString(),status:'failed',message:failure.message,durationMs:Date.now()-started};
       await put(db,'settings',lastUpdate);await logEvent(db,'updates',failure.message,'error');
       if(manual)throw failure;
@@ -523,7 +526,7 @@
           void navigator.serviceWorker.ready.then(()=>checkStorage()).catch(()=>{});
         }
         appChecker=createAppUpdateChecker({
-          fetchVersion:async()=>{if(offlineTest || !navigator.onLine)throw new Error('Koble til nettet for å sjekke oppdateringer.');const response=await fetch('/version.json',{cache:'no-store',signal:AbortSignal.timeout(10000)});if(!response.ok)throw new Error('Kunne ikke sjekke appversjonen. Prøv igjen.');return response.json();},
+          fetchVersion:async()=>{if(offlineTest)throw new Error('Koble til nettet for å sjekke oppdateringer.');const response=await fetch('/version.json',{cache:'no-store',signal:AbortSignal.timeout(10000)});if(!response.ok)throw new Error('Kunne ikke sjekke appversjonen. Prøv igjen.');return response.json();},
           getRegistration:()=>registration,
           onStatus:status=>{if(disposed)return;appCheck=status;if(status.state==='ready')updateReady=true;}
         });
