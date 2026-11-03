@@ -14,6 +14,8 @@ I dag-skjermen har nå bare ett kort for dagens økt. Før viste den både et «
 
 «Din læringsvei» var tom når bare registre (for eksempel Nobelpriser) var valgt i utvalget. Læringsveien ser nå bare på fagområdene i pensumet, som dagens økt allerede gjorde, og kortet skjules hvis det ikke er noe å vise.
 
+Publisert 3. november 2026: app 1.1.1, utgivelse `0ff7aa155068`, kunnskapspakke 2.1.0 (uendret), via Wrangler. Kontrollert i mobilvisning mot produksjonsbygget med en uferdig økt fra dagen før og bare Nobelpriser valgt i utvalget.
+
 ## 1.1.0: Verden gjennom tjue historiesyn
 
 Ny fane **Verden** ved siden av Emner: den samme kunnskapsgrafen sett gjennom tjue historiesyn, fra kildekritikk og Ibn Khalduns sykluser til Annales, Hayden Whites metahistorie, verdenssystem, Big History og Mackinders geopolitikk. Hvert syn har et grunnspørsmål, tenkere, verk, begreper, kritikk og en synlig blindsone. Kartet, rangeringen, forbindelsene og «Finn sammenhengen» vektes etter linsen og etter brukerens vekting av påvirkning, aktualitet og nærhet til Oslo. Den samme vektingen ordner spørsmål fra registrene og fri quiz. Dagens økt i læringskjernen følger fortsatt pensumets rekkefølge.
