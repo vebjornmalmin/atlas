@@ -6,3 +6,4 @@ playwright-report/
 build/
 .svelte-kit/
 .claude/
+.wrangler/

@@ -12,6 +12,8 @@ Kunnskapspakke 2.1.0 bygger perspektivlaget oppå læringskjernen: 302 landegren
 
 Modell, mål, avgrensninger og validering: [docs/world-perspectives.md](docs/world-perspectives.md).
 
+Tjenestearbeideren henter nå hver utgaves filer forbi nettleserens HTTP-buffer. En test mot en server uten `Cache-Control` viste at en ny utgave ellers kunne lagre forrige utgaves side sammen med sine egne filer, og appen ble blank etter oppdatering. Den publiserte Workeren sender `no-cache` og var ikke rammet, men utgavene er nå uavhengige av mellomlagring. Oppdatering fra 1.0.0 til 1.1.0 er kontrollert i iPhone 17 Pro-simulatoren mot Workeren kjørt lokalt: påbegynt emne og svar ble bevart, og Verden fungerer på den oppdaterte pakken.
+
 ## 1.0.0: Læringskjernen
 
 Atlas er bygd om rundt et kuratert pensum for én voksen elev på iPhone 17 Pro.

@@ -1,6 +1,7 @@
 const CACHE = '__CACHE__';
 const ASSETS = __ASSETS__;
-self.addEventListener('install', event => event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(ASSETS))));
+// Bypass the HTTP cache so a release never stores a previous release's page next to its own assets.
+self.addEventListener('install', event => event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(ASSETS.map(url => new Request(url, {cache: 'reload'}))))));
 self.addEventListener('activate', event => event.waitUntil((async () => {
   const names = (await caches.keys()).filter(name => name.startsWith('atlas-release-'));
   for (const name of names.slice(0, -2)) if (name !== CACHE) await caches.delete(name);
