@@ -4,7 +4,13 @@ Offline kunnskapstrening på norsk, laget for iPhone 17 Pro.
 
 Live app: https://atlas-first-app.atlas-memory.workers.dev
 
-## Gjeldende utgave — 1.1.1: Én dagens økt
+## Gjeldende utgave — 1.1.2: Innstillinger på én side
+
+Innstillinger er én flat liste uten undersider: utseende, daglig påminnelse, oppdateringer, sikkerhetskopi, gjenoppretting og installasjon. Én knapp ser etter både app- og innholdsoppdateringer. Den egne utviklersiden er borte; diagnostikken ligger i en lukket «Diagnostikk»-seksjon nederst på samme side.
+
+Kontrollert i iPhone 17 Pro-simulatoren mot produksjonsbygget kjørt lokalt: Innstillinger viser én liste med app 1.1.2 og innhold 2.1.0, Diagnostikk er lukket nederst, og I dag viser dagens økt og læringsveien. 178 automatiske tester består.
+
+## 1.1.1: Én dagens økt
 
 I dag-skjermen har nå bare ett kort for dagens økt. Før viste den både et «Fortsett der du var»-kort og et «Start dagens økt»-kort, begge med tittelen «Dagens økt», når en økt fra en tidligere dag ikke var fullført. Regelen er nå:
 
