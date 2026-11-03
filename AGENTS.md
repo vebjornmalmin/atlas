@@ -15,3 +15,9 @@ Apply a reusable correction where the same cause occurs. Keep the change proport
 Keep every screen mobile-first and Norwegian Bokmål. Match answer controls to expected answers: compact fields for names and years, multiline fields for explanations. Separate contextual support before recall from explanation and connections after recall; avoid revealing the tested fact before the learner answers. Artwork questions should show the correct licensed version of the work, with credits and provenance available after answering. Only ask about a patron, purpose, or historical connection when reliable sources establish it; make uncertainty explicit.
 
 Feedback must remain available everywhere, save locally, and return to the exact activity with typed answers and progress intact. Personal data stays on the device. Deploy through the authenticated Cloudflare plugin.
+
+## Testing and deployment
+
+Test in the iOS Simulator on iPhone 17 Pro, together with the unit tests and the production build. Check every user-facing change there, in Safari or the home-screen app. Use a desktop browser only in rare cases where the simulator cannot show what needs checking.
+
+Always merge the work into `main` before deploying, and deploy from `main`.
