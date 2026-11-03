@@ -10,6 +10,8 @@ Innstillinger er én flat liste uten undersider: utseende, daglig påminnelse, o
 
 Kontrollert i iPhone 17 Pro-simulatoren mot produksjonsbygget kjørt lokalt: Innstillinger viser én liste med app 1.1.2 og innhold 2.1.0, Diagnostikk er lukket nederst, og I dag viser dagens økt og læringsveien. 178 automatiske tester består.
 
+Publisert 3. november 2026: app 1.1.2, utgivelse `1e5dc7cf9969`, kunnskapspakke 2.1.0 (uendret), via Wrangler fra `main`. Helse- og versjonsendepunktene og tjenestearbeideren samsvarer med bygget. En installert 1.1.0 i iPhone 17 Pro-simulatoren fant den nye utgaven på den publiserte adressen, lastet den inn og viste den nye innstillingssiden.
+
 ## 1.1.1: Én dagens økt
 
 I dag-skjermen har nå bare ett kort for dagens økt. Før viste den både et «Fortsett der du var»-kort og et «Start dagens økt»-kort, begge med tittelen «Dagens økt», når en økt fra en tidligere dag ikke var fullført. Regelen er nå:
