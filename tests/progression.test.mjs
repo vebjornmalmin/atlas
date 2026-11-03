@@ -78,6 +78,7 @@ test('a unit is grounded when its foundation is answered and has survived a late
   const order = recommendedUnits(data.curriculum, progress).map(u => u.id);
   assert.equal(order[0], 'a-en', 'unfinished units continue before new ones');
   assert.ok(order.includes('a-to'));
+  assert.deepEqual(recommendedUnits(data.curriculum, progress, {domainIds: ['nobel']}).map(u => u.id), order, 'a register-only choice does not empty the path');
 });
 
 test('due reviews come first and lessons are not repeated for started units', () => {

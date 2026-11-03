@@ -4,7 +4,17 @@ Offline kunnskapstrening på norsk, laget for iPhone 17 Pro.
 
 Live app: https://atlas-first-app.atlas-memory.workers.dev
 
-## Gjeldende utgave — 1.1.0: Verden gjennom tjue historiesyn
+## Gjeldende utgave — 1.1.1: Én dagens økt
+
+I dag-skjermen har nå bare ett kort for dagens økt. Før viste den både et «Fortsett der du var»-kort og et «Start dagens økt»-kort, begge med tittelen «Dagens økt», når en økt fra en tidligere dag ikke var fullført. Regelen er nå:
+
+- **Dagens økt er påbegynt:** kortet viser fremdriften og «Fortsett der du var».
+- **En økt fra en tidligere dag står uferdig:** kortet viser dagens plan og en linje om den uferdige økten med «Fortsett den». Starter du dagens økt, legges den gamle under «Quizer på pause», så ingenting går tapt.
+- **Fri quiz og emnequiz** har fortsatt sitt eget fortsettkort, fordi de ikke er dagens økt.
+
+«Din læringsvei» var tom når bare registre (for eksempel Nobelpriser) var valgt i utvalget. Læringsveien ser nå bare på fagområdene i pensumet, som dagens økt allerede gjorde, og kortet skjules hvis det ikke er noe å vise.
+
+## 1.1.0: Verden gjennom tjue historiesyn
 
 Ny fane **Verden** ved siden av Emner: den samme kunnskapsgrafen sett gjennom tjue historiesyn, fra kildekritikk og Ibn Khalduns sykluser til Annales, Hayden Whites metahistorie, verdenssystem, Big History og Mackinders geopolitikk. Hvert syn har et grunnspørsmål, tenkere, verk, begreper, kritikk og en synlig blindsone. Kartet, rangeringen, forbindelsene og «Finn sammenhengen» vektes etter linsen og etter brukerens vekting av påvirkning, aktualitet og nærhet til Oslo. Den samme vektingen ordner spørsmål fra registrene og fri quiz. Dagens økt i læringskjernen følger fortsatt pensumets rekkefølge.
 

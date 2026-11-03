@@ -82,7 +82,9 @@ export function curriculumProgress(curriculum, targets, states, reviews) {
  * alternating domains so a new learner meets several subjects early.
  */
 export function recommendedUnits(curriculum, progress, {domainIds = []} = {}) {
-  const wanted = domainIds.length ? new Set(domainIds) : null;
+  // Register collections can sit in the same preference list; only curriculum domains narrow the path.
+  const chosen = domainIds.filter(id => (curriculum?.domains || []).some(d => d.id === id));
+  const wanted = chosen.length ? new Set(chosen) : null;
   const domainOrder = new Map((curriculum?.domains || []).map(d => [d.id, d.order]));
   const units = (curriculum?.units || []).filter(unit => !wanted || wanted.has(unit.domainId));
   const started = units.filter(unit => ['started', 'practiced', 'grounded'].includes(progress.units.get(unit.id)?.status) && progress.units.get(unit.id).unseen.length)

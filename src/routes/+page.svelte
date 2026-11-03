@@ -204,6 +204,8 @@
     return targets.filter(t => t.mode === 'map' && (norway ? t.datasetId === 'norway' : t.datasetId === 'world' && pattern.test(regionsOf(t.entityId)))).map(t => t.id);
   }
   let dailyInProgress = $derived(session?.status==='active' && session.title==='Dagens økt' && Boolean(current || currentLesson) && dayKey(new Date(session.startedAt))===dayKey(new Date(clock)));
+  // An unfinished daily session from an earlier day; today's plan replaces it and starting archives it.
+  let staleDaily = $derived(session?.status==='active' && session.title==='Dagens økt' && Boolean(current || currentLesson) && !dailyInProgress);
   let streak = $derived(practiceStreak(reviews,new Date(clock)));
   let gradeNote = $state('');
   let currentEntry = $derived(session?.queue[session.index] || null);
@@ -636,26 +638,30 @@
       {/if}</section>
     {:else}
       {#if !quizSetup}<section class="hero today-hero"><p class="eyebrow">{new Date().toLocaleDateString('nb-NO',{weekday:'long',day:'numeric',month:'long'})}{#if streak>1} · {streak} dager på rad{/if}</p><h1>{reviewedToday?'Godt i gang':'Dagens økt'}</h1><p class="lead">{reviewedToday?`${reviewedToday} svar i dag`:'Noen minutter om dagen bygger kunnskap som varer.'}</p></section>
-      {#if session?.status==='active' && (current || currentLesson)}<div class="card resume-card"><h2>{session.title || 'Påbegynt økt'}</h2><p class="muted">{session.index} av {session.queue.length} gjort</p><button class="primary" onclick={()=>run(()=>resumeSession())}>Fortsett der du var</button></div>{/if}
+      {#if session?.status==='active' && (current || currentLesson) && !(data.curriculum && session.title==='Dagens økt')}<div class="card resume-card"><h2>{session.title || 'Påbegynt økt'}</h2><p class="muted">{session.index} av {session.queue.length} gjort</p><button class="primary" onclick={()=>run(()=>resumeSession())}>Fortsett der du var</button></div>{/if}
       {#if data.curriculum && !reviews.length && !prefs.introSeen}<div class="card intro-card"><h2>Slik fungerer Atlas</h2><ul class="key-points"><li>Hvert emne begynner med en kort innføring. Spørsmålene kommer litt etter, så du henter fram i stedet for å kopiere.</li><li>Du går fra oversikt til detaljer i fire steg, og emnene bygger videre på hverandre.</li><li>Det du holder på å glemme, kommer tilbake til riktig tid. Noen minutter om dagen er nok.</li></ul><button class="quiet" onclick={()=>run(async()=>{prefs.introSeen=true;await savePreferences(true);})}>Skjønner</button></div>{/if}
       {#if data.curriculum}
         {@const plan=selection.queue}
         {@const fresh=plan.filter(q=>q.target && q.reason!=='Due review')}
         <div class="card session-card">
-          {#if plan.length}
+          {#if dailyInProgress}
+            <h2>Dagens økt</h2><p class="muted">{session.index} av {session.queue.length} gjort</p>
+            <button class="primary" onclick={()=>run(()=>resumeSession())}>Fortsett der du var</button>
+          {:else if plan.length}
             <div class="plan-counts"><span><strong>{plan.filter(q=>q.reason==='Due review').length}</strong>repetisjoner</span><span><strong>{fresh.length}</strong>nye kort</span><span><strong>{plan.filter(isLessonEntry).length}</strong>{plan.filter(isLessonEntry).length===1?'nytt emne':'nye emner'}</span></div>
             {#if selection.units?.length}<p class="muted">Nytt i dag: {selection.units.map(unitTitle).join(' og ')}</p>{/if}
-            <button class="primary" disabled={busy || dailyInProgress} onclick={()=>run(()=>beginSession())}>{dailyInProgress?'Økten er påbegynt':'Start dagens økt'}</button>
+            <button class="primary" disabled={busy} onclick={()=>run(()=>beginSession())}>Start dagens økt</button>
           {:else}
             <h2>Ferdig for i dag</h2><p class="muted">Alt som skulle repeteres er gjort, og nye kort i de aktive emnene kommer når du har repetert de forrige. Velg et emne for å lære mer nå.</p>
           {/if}
+          {#if staleDaily}<p class="muted stale-session">Økten fra {new Date(session.startedAt).toLocaleDateString('nb-NO',{weekday:'long'})} ble ikke fullført ({session.index} av {session.queue.length}). <button class="link-button" onclick={()=>run(()=>resumeSession())}>Fortsett den</button></p>{/if}
         </div>
         {#if coreProgress}
           {@const path=recommendedUnits(data.curriculum,coreProgress,{domainIds:prefs.collectionIds}).slice(0,4)}
-          <h2 class="section-title">Din læringsvei</h2>
+          {#if path.length}<h2 class="section-title">Din læringsvei</h2>
           <div class="card path-card">{#each path as unit}{@const row=coreProgress.units.get(unit.id)}
             <button class="unit-row" data-status={row.status} onclick={()=>{selectedUnit=unit.id;navigate('learn');}}><span class="unit-dot" aria-hidden="true"></span><span class="unit-text"><strong>{unit.title}</strong><small class="muted">{domainTitle(unit.domainId)} · {row.status==='new'?'Neste emne':`${UNIT_STATUS[row.status].label} · ${row.correct}/${row.total}`}</small></span><span aria-hidden="true">›</span></button>
-          {/each}</div>
+          {/each}</div>{/if}
         {/if}
       {:else}
       <div class="card"><h2>Dagens quiz</h2><p class="muted">{selection.queue.length} spørsmål · {prefs.depth==='foundation'?'Grunnlag':prefs.depth==='intermediate'?'Detaljer':'Sammenhenger'}</p><button class="primary" disabled={busy || !selection.queue.length} onclick={()=>run(()=>beginSession())}>Start dagens quiz</button>{#if !selection.queue.length}<p class="muted">Du er ferdig med dagens utvalg. Ta en emnequiz under.</p>{/if}<button class="quiet" onclick={()=>navigate('focus')}>Endre dagens utvalg</button></div>
