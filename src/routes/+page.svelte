@@ -5,7 +5,13 @@
   import {selectLearningPath,selectConnectedSession,objectiveStatus,safeLearningQueue} from '../lib/connected-learning.js';
   import {sourceQueries,loadSourceContent,mergeSourceContent,downloadSourceImage} from '../lib/source-loading.js';
   import StructuredQuiz from '../lib/StructuredQuiz.svelte';
+  import LearningPath from '../lib/LearningPath.svelte';
+  import {buildDailySession,buildUnitReview,curriculumProgress,recommendedUnits,gradeAnswer,knownNameSet,isLessonEntry,practiceStreak,UNIT_STATUS} from '../lib/progression.js';
+  import {STEP_LABELS,formatYear} from '../lib/core-curriculum.js';
   import {FORMAT_CHOICES,WORLD_FORMAT_CHOICES,STRUCTURED_MODES,buildFormatTargets,gradeStructured,structuredReady} from '../lib/quiz-formats.js';
+  import WorldExplorer from '../lib/WorldExplorer.svelte';
+  import {buildWorldGraph,relevanceScores,flagEmoji,DEFAULT_RELEVANCE} from '../lib/world-graph.js';
+  import {buildWorldTargets} from '../lib/world-exercises.js';
   import {advanceSession,nextActionNote,retryTargets} from '../lib/repetition.js';
   import {progressDetails,sessionOutcome} from '../lib/progress.js';
   import {assessTargets} from '../lib/difficulty.js';
@@ -14,9 +20,6 @@
   import {factKey,learningStage,quizProgress,overviewBounds,effectiveRating} from '../lib/journey.js';
   import {saveJournal,readJournal,questionDraft,restoreDraft} from '../lib/session-journal.js';
   import Feedback from '../lib/Feedback.svelte';
-  import WorldExplorer from '../lib/WorldExplorer.svelte';
-  import {buildWorldGraph,relevanceScores,flagEmoji,DEFAULT_RELEVANCE} from '../lib/world-graph.js';
-  import {buildWorldTargets} from '../lib/world-exercises.js';
   import {answerPresentation,contextualExplanation,questionSupport} from '../lib/presentation.js';
   import { openDatabase, all, get, put, installPackage, recordReview, logEvent, exportDatabase, restoreDatabase, clearLogs, transaction } from '../lib/storage.js';
   import { validatePackage, contentHash, readiness } from '../lib/content.js';
@@ -48,14 +51,14 @@
   let learnedFirst = $state(false);
   let preparedTargetId = $state('');
   let savedSessions = $state.raw([]);
-  let quizCollection = $state('us-presidents');
+  let quizCollection = $state('');
   let quizDepth = $state('foundation');
   let quizMode = $state('mixed');
   let quizSetup = $state(false);
   let progressTab = $state('overview');
   let journalWarning = false;
   const stageLabel = stage => ({foundation:'Grunnlag',details:'Detaljer',connections:'Avansert'}[stage] || stage);
-  function draftNow() { return questionDraft(current?.id,{answer,formatDraft,correct,revealed,usedHint,timelineOrder,selectedRegion,mapZoom,mapPanX,mapPanY,introduction,learnedFirst}); }
+  function draftNow() { return questionDraft(current?.id,{answer,formatDraft,correct,revealed,usedHint,timelineOrder,selectedRegion,mapZoom,mapPanX,mapPanY,introduction,learnedFirst,gradeNote}); }
   $effect(()=>{
     if(loading || !session || (current && preparedTargetId!==current.id))return;
     const draft=draftNow();
@@ -98,13 +101,17 @@
   const reasonLabel = reason => reason==='Connected introduction'?'Nytt holdepunkt':reason==='Connected recall'?'Neste sammenheng': reason === 'Due review' ? 'Repetisjon' : reason === 'New knowledge' ? 'Ny kunnskap' : reason === 'Session retry' ? 'Nytt forsøk i denne quizen' : reason === 'Extra practice' ? 'Ekstraøving' : reason;
   const modeLabel = mode => ({recall:'SKRIV SVARET',recognition:'FLERVALG',outline:'GJENKJENN OMRISS',map:'KART',timeline:'TIDSLINJE',matching:'KOBLE SAMMEN','before-after':'HVA KOM FØRST?',arrows:'HISTORISKE PILER',pick:'VELG FLAGG','border-walk':'NABOREISE'}[mode] || mode);
   const subjectLabel = subject => ({history:'Historie',geography:'Geografi',politics:'Politikk',literature:'Litteratur',art:'Kunst',science:'Vitenskap',philosophy:'Filosofi',economics:'Økonomi',nobel:'Nobelpriser',historiography:'Historiesyn','current-affairs':'Aktuelt'}[subject] || subject);
-  const typeLabel = type => ({'document':'Dokument','space-mission':'Romoppdrag','military-operation':'Militær operasjon','fictional-character':'Litterær figur',person:'Person','country-area':'Land eller område','municipality':'Kommune','award-event':'Pristildeling',country:'Land',city:'By',region:'Region',event:'Hendelse',work:'Verk',concept:'Begrep',organization:'Organisasjon',award:'Pris',discovery:'Oppdagelse',movement:'Bevegelse',office:'Embete',period:'Periode',artwork:'Kunstverk',scientific_discovery:'Vitenskapelig oppdagelse',historical_event:'Historisk hendelse',literary_work:'Litterært verk','literary-work':'Litterært verk','political-office':'Politisk embete','former-county':'Tidligere fylke',county:'Fylke',lens:'Historiesyn','scholarly-work':'Faglig verk',threshold:'Terskel i Big History','news-event':'Nyhet'}[type] || type);
+  const typeLabel = type => ({'topic':'Emne','document':'Dokument','space-mission':'Romoppdrag','military-operation':'Militær operasjon','fictional-character':'Litterær figur',person:'Person','country-area':'Land eller område','municipality':'Kommune','award-event':'Pristildeling',country:'Land',city:'By',region:'Region',event:'Hendelse',work:'Verk',concept:'Begrep',organization:'Organisasjon',award:'Pris',discovery:'Oppdagelse',movement:'Bevegelse',office:'Embete',period:'Periode',artwork:'Kunstverk',scientific_discovery:'Vitenskapelig oppdagelse',historical_event:'Historisk hendelse',literary_work:'Litterært verk','literary-work':'Litterært verk','political-office':'Politisk embete','former-county':'Tidligere fylke',county:'Fylke',lens:'Historiesyn','scholarly-work':'Faglig verk',threshold:'Terskel i Big History','news-event':'Nyhet'}[type] || type);
   const relationLabel = type => ({'born-in':'Født i','died-in':'Døde i','located-in':'Ligger i','part-of':'Del av','located-in-country':'Ligger i landet','birthplace-in-current-country':'Fødested ligger i dagens land','award-time-affiliation':'Tilknytning da prisen ble tildelt','awarded-prize':'Pristildeling','award-category':'Priskategori','recognized-contribution':'Anerkjente bidraget',awarded:'Ble tildelt','held-office':'Hadde embetet','succeeded':'Etterfulgte','capital-of':'Hovedstad i','in-region':'Ligger i','formerly-part-of':'Tidligere del av',received:'Mottok','recognized-for':'Anerkjent for','written-by':'Skrevet av','created-by':'Skapt av','prepared-for-visit':'Laget før besøk av','depicts-place':'Viser stedet','concerns-document':'Gjelder dokumentet','involves-person':'Omfatter personen','took-place-in':'Fant sted i',adopted:'Vedtok',drafted:'Skrev utkast til',commanded:'Ledet',established:'Opprettet','founded-under':'Grunnlagt under','crew-member':'Medlem av besetningen','author-of':'Forfatter av','features-character':'Har figuren','uses-device':'Bruker virkemiddelet','work-type':'Verkstype',borders:'Grenser til','knowledge-flow':'Kunnskapsflyt','shaped-lens':'Stemme i historiesynet','key-work-for':'Nøkkelverk for','uses-concept':'Bruker begrepet',proposed:'Knyttet til begrepet',influenced:'Påvirket','emplotted-as':'Lest som',precedes:'Kom før','views-through':'Ser på',mentions:'Omtaler'}[type] || type);
-  const worldIds = ['nor','fra','ita','bra','jpn','egy','usa','ind','aus','deu','esp','zaf'];
+  const worldIds = ['nor','fra','ita','bra','jpn','egy','usa','ind','aus','deu','esp','zaf','gbr','swe','fin','dnk','pol'];
+  function regionSpan(region) {
+    const numbers = region.path.match(/-?\d+(?:\.\d+)?/g)?.map(Number) || [];
+    const xs = numbers.filter((_,i)=>i%2===0), ys = numbers.filter((_,i)=>i%2===1);
+    return xs.length ? (Math.max(...xs)-Math.min(...xs))*(Math.max(...ys)-Math.min(...ys)) : 0;
+  }
 
-  function notify(text) { toast = text; }
-  // Status messages close by themselves so they never cover the map or quiz controls for long.
-  $effect(()=>{ if(!toast) return; const shown=toast; const timer=setTimeout(()=>{ if(toast===shown) toast=''; },5000); return ()=>clearTimeout(timer); });
+  let toastTimer;
+  function notify(text) { toast = text; clearTimeout(toastTimer); toastTimer = setTimeout(() => { if (toast === text) toast = ''; }, Math.max(3500, text.length * 70)); }
   function reportStatus(text) { window.dispatchEvent(new CustomEvent('atlas-status', {detail:text})); }
   async function recordError(component, failure) {
     const message = failure?.message || String(failure);
@@ -126,6 +133,10 @@
     if (minutes < 2880) return 'I morgen';
     return `${Math.round(minutes / 1440)} dager`;
   }
+  function whenLabel(date) {
+    const days = Math.round((new Date(date) - new Date()) / 86400000);
+    return days < 1 ? 'senere i dag' : days === 1 ? 'i morgen' : days < 60 ? `om ${days} dager` : `om ${Math.round(days/30)} måneder`;
+  }
   function download(value, name, type = 'application/json') {
     const blob = new Blob([typeof value === 'string' ? value : JSON.stringify(value, null, 2)], {type});
     const url = URL.createObjectURL(blob); const link = document.createElement('a');
@@ -137,13 +148,19 @@
 
   let worldGraph = $derived(data?.perspectives ? buildWorldGraph(data) : null);
   let recognitionIndex = $derived(buildRecognitionIndex(data?.targets || []));
+  let knownNames = $derived(knownNameSet(data));
   let targets = $derived.by(() => {
     if (!data) return [];
-    const base = data.targets.map(t => ({...t, mode:'recall'}));
-    const recognition = data.targets.filter(t => t.answerFormat!=='explanation' && hasRecognitionOptions(t, recognitionIndex))
+    const core = data.targets.filter(t => t.unitId);
+    const legacy = data.targets.filter(t => !t.unitId);
+    const base = legacy.map(t => ({...t, mode:'recall'}));
+    const recognition = legacy.filter(t => t.answerFormat!=='explanation' && hasRecognitionOptions(t, recognitionIndex))
       .map(t => ({...t, id:`${t.id}:recognition`, baseId:t.id, mode:'recognition', significance:Math.max(1,t.significance-1)}));
-    const mapTargets = maps.flatMap(dataset => dataset.regions.filter(r => dataset.id === 'norway' || worldIds.includes(r.id)).flatMap(region => {
-      const countryEntity = data.entities.find(e => e.label.toLowerCase() === region.label.toLowerCase());
+    const byIso = new Map(data.entities.filter(e => e.iso3).map(e => [e.iso3.toLowerCase(), e]));
+    const mapTargets = maps.flatMap(dataset => dataset.regions.filter(r => dataset.id === 'norway' || worldIds.includes(r.id) || (byIso.has(r.id) && regionSpan(r) >= 450 && !['fji','atf'].includes(r.id))).flatMap(rawRegion => {
+      // Country names come from the Norwegian register; the map file only has English names for most countries.
+      const region = dataset.id === 'world' && byIso.has(rawRegion.id) ? {...rawRegion, label: byIso.get(rawRegion.id).label} : rawRegion;
+      const countryEntity = (dataset.id === 'world' && byIso.get(region.id)) || data.entities.find(e => e.label.toLowerCase() === region.label.toLowerCase());
       const collectionIds = dataset.id === 'norway' ? ['norway'] : ['world-geography'];
       const common = { entityId:countryEntity?.id, collectionIds, datasetId:dataset.id, regionId:region.id, answer:region.label,
         acceptedAnswers:[], explanation:`${region.label} er markert på det publiserte kartet over ${dataset.id === 'norway' ? 'norske fylker' : 'verdens land'}.`,
@@ -162,24 +179,46 @@
     });
     const introductions=foundationTargets(data);
     const anchored=new Set(introductions.filter(t=>!t.id.startsWith('foundation:period:')).map(t=>t.entityId));
-    return attachKnowledge(assessTargets([...introductions.filter(t=>!t.id.startsWith('foundation:period:') || !anchored.has(t.entityId)), ...base, ...recognition, ...mapTargets, ...timelines, ...buildFormatTargets(data,maps), ...(worldGraph?buildWorldTargets(data,worldGraph):[])]),data);
+    return attachKnowledge(assessTargets([...introductions.filter(t=>!t.id.startsWith('foundation:period:') || !anchored.has(t.entityId)), ...core, ...base, ...recognition, ...mapTargets, ...timelines, ...buildFormatTargets(data,maps), ...(worldGraph?buildWorldTargets(data,worldGraph):[])]),data);
   });
   function formatAvailable(mode) {
     const depth=['chronology','before-after','arrows'].includes(mode)?'advanced':['geography','outline','matching'].includes(mode) && quizDepth==='foundation'?'intermediate':quizDepth;
     return targets.some(t=>targetMatches(t,{...prefs,collectionIds:quizCollection?[quizCollection]:[],subject:'all',fromYear:'',toYear:'',depth,objective:mode},data.collections) && (mode!=='chronology' || t.mode==='timeline'));
   }
-  // Fresh questions are ordered partly by the learner's own weighting of impact, actuality and nearness.
+  // Register questions are ordered partly by the learner's own weighting of impact, actuality and nearness.
   let relevance = $derived(worldGraph ? relevanceScores(worldGraph,{...DEFAULT_RELEVANCE,...prefs.relevance}).scores : new Map());
   let rankedTargets = $derived(relevance.size ? targets.map(t=>({...t,relevance:relevance.get(t.entityId) || 0})) : targets);
-  let selection = $derived(data ? selectConnectedSession(data,rankedTargets, states, prefs, new Date(), data.collections, reviews) : {queue:[],dueCount:0,newCount:0,eligibleCount:0});
+  let coreProgress = $derived(data?.curriculum ? curriculumProgress(data.curriculum,targets,states,reviews) : null);
+  let selection = $derived(!data ? {queue:[],dueCount:0,newCount:0,eligibleCount:0} : data.curriculum ? buildDailySession({data,targets,states,reviews,preferences:prefs,now:new Date(clock)}) : selectConnectedSession(data,rankedTargets, states, prefs, new Date(), data.collections, reviews));
+  let selectedUnit = $state('');
+  let clock = $state(Date.now());
+  // Geography units practise place knowledge on the offline maps.
+  const UNIT_MAPS = {'geo-norges-fylker-byer':/^/,'geo-norges-landskap':/^/,'geo-kontinenter-hav':/./,'geo-europa':/Europa/,'geo-asia':/Asia/,'geo-afrika':/Afrika/,'geo-amerika':/Amerika|Karibia/,'geo-oseania-polar':/Australia|Melanesia|Mikronesia|Polynesia/};
+  function unitMapTargets(unitId) {
+    const pattern = UNIT_MAPS[unitId];
+    if (!pattern) return [];
+    const norway = unitId.startsWith('geo-norges');
+    const labels = new Map(data.entities.map(e => [e.id, e.label]));
+    const parents = id => data.relationships.filter(r => ['in-region','located-in','part-of'].includes(r.type) && r.from === id && data.entities.find(e => e.id === r.to)?.type === 'region').map(r => r.to);
+    const regionsOf = id => { const seen = new Set(); let frontier = parents(id); while (frontier.length) { frontier.forEach(r => seen.add(r)); frontier = frontier.flatMap(parents).filter(r => !seen.has(r)); } return [...seen].map(r => labels.get(r)).join(' '); };
+    return targets.filter(t => t.mode === 'map' && (norway ? t.datasetId === 'norway' : t.datasetId === 'world' && pattern.test(regionsOf(t.entityId)))).map(t => t.id);
+  }
+  let dailyInProgress = $derived(session?.status==='active' && session.title==='Dagens økt' && Boolean(current || currentLesson) && dayKey(new Date(session.startedAt))===dayKey(new Date(clock)));
+  let streak = $derived(practiceStreak(reviews,new Date(clock)));
+  let gradeNote = $state('');
+  let currentEntry = $derived(session?.queue[session.index] || null);
+  let currentLesson = $derived(isLessonEntry(currentEntry) ? data?.curriculum?.units.find(u=>u.id===currentEntry.unitId) : null);
+  let currentUnit = $derived(current?.unitId ? data?.curriculum?.units.find(u=>u.id===current.unitId) : null);
+  const unitTitle = id => data?.curriculum?.units.find(u=>u.id===id)?.title || '';
+  const domainTitle = id => data?.curriculum?.domains.find(d=>d.id===id)?.title || '';
   let summary = $derived(quizProgress(targets, reviews));
   let progress = $derived(progressDetails(targets,reviews));
   let contentCoverage = $derived(data?learningCoverage(data,targets):[]);
   let abilities = $derived(evidenceOverview(targets,reviews));
   let outcome = $derived(sessionOutcome(session?.results || []));
   let retryIds = $derived(retryTargets(session?.results || []));
-  let current = $derived(session ? targets.find(t => t.id === session.queue[session.index]?.id) : null);
-  let currentArtwork = $derived(artworkMedia.find(m=>m.entityId===current?.entityId));
+  let current = $derived(session && !isLessonEntry(session.queue[session.index]) ? targets.find(t => t.id === session.queue[session.index]?.id) : null);
+  let currentArtwork = $derived(artworkMedia.find(m=>m.entityId===(current?.media || current?.entityId)));
   let answerStyle = $derived(answerPresentation(current));
   let explanationContext = $derived(contextualExplanation(data || {},current,targets,reviews,session?.queue.slice((session?.index||0)+1).map(q=>q.id)||[]));
   let connections = $derived(explanationContext.connections);
@@ -192,11 +231,11 @@
   let entityRelationships = $derived(data?.relationships.filter(r=>r.from===detailId || r.to===detailId) || []);
   $effect(()=>{ detailId; relationshipLimit = 40; });
   let exploreLimit = $state(60);
-  let allMatchingEntities = $derived(data?.entities.filter(e => (!collectionFilter || e.collectionIds.includes(collectionFilter)) &&
-    `${e.label} ${e.summary}`.toLowerCase().includes(query.toLowerCase())) || []);
+  let allMatchingEntities = $derived((data?.entities.filter(e => (!collectionFilter || e.collectionIds.includes(collectionFilter)) &&
+    `${e.label} ${e.summary}`.toLowerCase().includes(query.toLowerCase())) || []).sort((a,b)=>Number(b.type==='topic')-Number(a.type==='topic') || Number(b.label.toLowerCase().startsWith(query.toLowerCase()))-Number(a.label.toLowerCase().startsWith(query.toLowerCase()))));
   let matchingEntities = $derived(allMatchingEntities.slice(0,exploreLimit));
   $effect(() => { query; collectionFilter; exploreLimit = 60; });
-  let reviewedToday = $derived(reviews.filter(r => dayKey(new Date(r.timestamp)) === dayKey(new Date())).length);
+  let reviewedToday = $derived(reviews.filter(r => dayKey(new Date(r.timestamp)) === dayKey(new Date(clock))).length);
   let currentDataset = $derived(current ? maps.find(m=>m.id===current.datasetId) : null);
   let currentMap = $derived(current?.mode === 'map' && currentDataset ? createMapExercise(currentDataset,current.regionId) : null);
 
@@ -226,7 +265,7 @@
     artworkMedia=[...baseMedia,...sourceRecords.map(record=>record.media).filter(Boolean).filter(media=>!baseMedia.some(old=>old.entityId===media.entityId))];
   }
   async function loadMoreSources(entityId='') {
-    if(offlineTest || !navigator.onLine)throw new Error('Koble til nettet for å hente nye bilder og spørsmål.');
+    if(offlineTest)throw new Error('Koble til nettet for å hente nye bilder og spørsmål.');
     const candidates=data.entities.filter(item=>(entityId?item.id===entityId:!collectionFilter || item.collectionIds.includes(collectionFilter)) && sourceQueries(item,data.sources).length && (entityId || !sourceRecords.some(record=>record.entityId===item.id))).slice(0,sourceBatchSize);
     if(!candidates.length){sourceStatus='Alle tilgjengelige kildeposter i dette utvalget er hentet.';return;}
     let added=0,pictures=0,failed=0;
@@ -255,12 +294,12 @@
   async function refresh() {
     [states,reviews,logs,savedSessions] = await Promise.all(['states','reviews','logs','sessions'].map(s=>all(db,s)));
   }
-  async function savePreferences() {
+  async function savePreferences(silent = false) {
     if (prefs.fromYear !== '' && prefs.toYear !== '' && Number(prefs.fromYear)>Number(prefs.toYear)) throw new Error('Startåret må være før sluttåret.');
     const record = JSON.parse(JSON.stringify(prefs));
     await put(db,'settings',record);
     document.documentElement.dataset.theme = prefs.theme;
-    notify('Utvalget er lagret.');
+    if(!silent) notify('Utvalget er lagret.');
   }
   function toggleCollection(id) {
     prefs.collectionIds = prefs.collectionIds.includes(id) ? prefs.collectionIds.filter(x=>x!==id) : [...prefs.collectionIds,id];
@@ -272,34 +311,59 @@
     usedHint = saved?.usedHint || false; selectedRegion = saved?.selectedRegion || ''; mapZoom = saved?.mapZoom || 1;mapPanX=saved?.mapPanX || 0;mapPanY=saved?.mapPanY || 0;
     timelineOrder = saved?.timelineOrder || (current?.mode === 'timeline' ? buildTimelineExercise(current.timeline).items : []);
     introduction = saved?.introduction ?? Boolean(session?.queue[session.index]?.reason==='Connected introduction' && current?.snapshot);
-    learnedFirst = saved?.learnedFirst || false; preparedTargetId=current?.id || '';
+    learnedFirst = saved?.learnedFirst || false; gradeNote = saved?.gradeNote || ''; preparedTargetId=current?.id || currentLesson?.id || '';
     await tick(); document.querySelector('#main-view')?.focus({preventScroll:true}); window.scrollTo({top:0,behavior:'instant'});
   }
   async function archiveActive() {
     if(session?.status==='active') await put(db,'sessions',{...session,id:session.sessionId,draft:draftNow()});
   }
   async function beginSession(practiceObjective = null, scope = null) {
-    const pool = scope?.targetIds ? targets.filter(t=>scope.targetIds.includes(t.id)) : scope?.entityIds ? targets.filter(t=>scope.entityIds.includes(t.entityId)) : scope?.entityId ? targets.filter(t=>t.entityId===scope.entityId) : targets;
+    const pool = scope?.targetIds ? rankedTargets.filter(t=>scope.targetIds.includes(t.id)) : scope?.entityIds ? rankedTargets.filter(t=>scope.entityIds.includes(t.entityId)) : scope?.entityId ? rankedTargets.filter(t=>t.entityId===scope.entityId) : rankedTargets;
     const focus = scope ? {...prefs,collectionIds:scope.collectionId?[scope.collectionId]:[],subject:'all',fromYear:'',toYear:'',depth:scope.depth || quizDepth} : prefs;
-    const selected = scope?.learningPathId ? selectLearningPath(data,scope.learningPathId,targets,states,focus,reviews) : practiceObjective ? selectPracticeSession(pool,states,focus,practiceObjective,new Date(),data.collections,reviews) : selection;
+    let selected, planned=false, practice=Boolean(practiceObjective && !scope?.learningPathId);
+    if (scope?.unitId) {
+      const learn = scope.unitMode!=='review' ? buildDailySession({data,targets,states,reviews,preferences:prefs,unitIds:[scope.unitId]}) : {queue:[]};
+      selected = learn.queue.length ? learn : buildUnitReview({data,targets,states,reviews,unitId:scope.unitId,preferences:prefs});
+      planned = true; practice = !learn.queue.length;
+    }
+    else if (scope?.learningPathId) selected = selectLearningPath(data,scope.learningPathId,targets,states,focus,reviews);
+    else if (practiceObjective) selected = selectPracticeSession(pool,states,focus,practiceObjective,new Date(),data.collections,reviews);
+    else { selected = selection; planned = Boolean(data.curriculum); }
     if (!selected.queue.length) { notify(scope?.learningPathId?'Du har øvd på disse holdepunktene. Neste steg blir tilgjengelig senere; du kan også velge en fri quiz.':'Ingen spørsmål på dette nivået. Velg et annet nivå eller emne.'); return; }
     await archiveActive();
-    session = {id:'active',difficultyPolicy:'2026-10-11',sessionId:crypto.randomUUID(),startedAt:new Date().toISOString(),title:scope?.title || (practiceObjective?'Fri quiz':'Dagens quiz'),scope,objective:practiceObjective,queue:safeLearningQueue(selected.queue).map(q=>({id:q.target.id,reason:q.reason,objectiveId:q.objectiveId,support:q.support})),practice:Boolean(practiceObjective && !scope?.learningPathId),index:0,results:[],status:'active'};
+    const rows = planned ? selected.queue : safeLearningQueue(selected.queue);
+    const queue = rows.map(q=>q.target?{id:q.target.id,reason:q.reason,unitId:q.unitId,objectiveId:q.objectiveId,support:q.support}:{id:q.id,reason:q.reason,unitId:q.unitId});
+    session = {id:'active',difficultyPolicy:'2026-10-11',sessionId:crypto.randomUUID(),startedAt:new Date().toISOString(),title:scope?.title || (practiceObjective?'Fri quiz':'Dagens økt'),scope,objective:practiceObjective,queue,practice,index:0,results:[],status:'active'};
     await put(db,'sessions',session);
     sessionScreen = true; view = 'today'; window.location.hash='today';
     await prepareQuestion(); await refresh(); window.scrollTo(0,0);
   }
+  async function finishLesson() {
+    const entry=session.queue[session.index];
+    const index=session.index+1;
+    session={...session,index,draft:null,results:[...session.results,{id:entry.id,lesson:true}],status:index>=session.queue.length?'completed':'active'};
+    await put(db,'sessions',session);
+    await prepareQuestion();
+  }
   async function resumeSession(saved = null) {
     if(saved) {await archiveActive();session={...saved,id:'active'};await put(db,'sessions',session);await prepareQuestion(saved.draft);await refresh();}
-    if (!current) { notify('Spørsmålet er ikke tilgjengelig. Du kan starte en ny quiz.'); return; }
+    if (!current && !currentLesson) { notify('Spørsmålet er ikke tilgjengelig. Du kan starte en ny quiz.'); return; }
     sessionScreen = true; view='today';window.location.hash='today'; window.scrollTo(0,0);
   }
   function reveal() {
     if (STRUCTURED_MODES.includes(current?.mode)) correct=gradeStructured(current,formatDraft,worldGraph?.neighbours).correct;
     else if (current?.mode === 'timeline') correct = gradeTimeline(timelineOrder,current.timeline).correct;
     else if(current?.answerFormat==='explanation')correct=null;
+    else if (current?.unitId && !['map','recognition'].includes(current.mode)) {const grade=gradeAnswer(current,answer,knownNames);correct=grade.correct;gradeNote=grade.note || '';}
     else if (!['map','recognition'].includes(current?.mode)) correct = answer.trim() ? checkAnswer(current,answer) : null;
     revealed = true;
+  }
+  function fallbackRating() {
+    if (current?.answerFormat==='explanation' && current.rubric?.length) {
+      const checked=current.rubric.filter(c=>formatDraft[c.id]).length;
+      return correct===true?3:checked?2:1;
+    }
+    return correct===true?3:1;
   }
   function answerChoice(option) { if (revealed) return; answer=option.label; correct=option.correct; revealed=true; }
   function chooseRegion(id) { if (revealed) return; selectedRegion=id; correct=gradeMapSelection(id,current.regionId); revealed=true; }
@@ -315,14 +379,19 @@
     const result=scheduleReview(schedulingKey(target),currentState,rating,now);
     const event={id:`${session.sessionId}:${session.index}`,targetId:target.id,entityId:target.entityId || null,timestamp:now.toISOString(),rating,mode:target.mode,correct,usedHint,learnedFirst,
       factId:factKey(target),claimIds:target.claimIds,evidenceKind:evidenceKind(target),answerFormat:target.answerFormat,assessment:target.answerFormat==='explanation'?'self':'answer',reason:entry.reason,schedulerId:schedulingKey(target),sessionRetry:Boolean(entry.sessionRetry),nextDue:result.card.due,log:result.log};
-    if(session.practice || entry.sessionRetry) await recordReview(db,null,{...event,practice:true,nextDue:null,log:null});
-    else await recordReview(db,result.card,event,{...result.card,id:legacyFactKey(target)});
+    // A first answer always starts the long-term schedule, even in free practice; otherwise the card would never return.
+    const practice=(session.practice || entry.sessionRetry) && Boolean(currentState);
+    const saved=practice?{...event,practice:true,nextDue:null,log:null}:event, mirror={...result.card,id:legacyFactKey(target)};
+    const applied=practice?await recordReview(db,null,saved):await recordReview(db,result.card,event,mirror);
+    // Update memory directly; reading every store back after each answer made phones lag.
+    if(applied){reviews=[...reviews,saved];if(!practice){const ids=new Set([result.card.id,mirror.id]);states=[...states.filter(s=>!ids.has(s.id)),result.card,...(mirror.id!==result.card.id?[mirror]:[])];}}
     session=advanceSession(session,{id:target.id,rating,correct,learnedFirst,usedHint,mode:target.mode});
     await transaction(db,['sessions'],tx=>{
       tx.objectStore('sessions').put(session);
       if(session.status==='completed') tx.objectStore('sessions').put({...session,id:session.sessionId,completedAt:now.toISOString()});
     });
-    await refresh(); await prepareQuestion();
+    if(!applied || session.status==='completed') await refresh();
+    await prepareQuestion();
   }
   async function checkStorage() {
     const estimate = await navigator.storage?.estimate?.() || {};
@@ -339,9 +408,10 @@
     offlineReady=cachedFiles>0 && Boolean(data);
   }
   async function checkUpdates(manual = false) {
-    if (offlineTest || !navigator.onLine) { if(manual) notify('Du er frakoblet. Installert kunnskap er fortsatt tilgjengelig.'); return; }
+    // Safari can report navigator.onLine=false while the network works, so only a failed request counts as offline.
+    if (offlineTest) { if(manual) notify('Du er frakoblet. Installert kunnskap er fortsatt tilgjengelig.'); return; }
     const prior=await get(db,'settings','updates');
-    if(!manual && prior && Date.now()-new Date(prior.checkedAt)<86400000) {lastUpdate=prior;return;}
+    if(!manual && prior && Date.now()-new Date(prior.checkedAt)<3600000) {lastUpdate=prior;return;}
     const started=Date.now();
     try {
       const response=await fetch('/knowledge/manifest.json',{cache:'no-store'});
@@ -367,8 +437,10 @@
       await put(db,'settings',lastUpdate);
       if(changed) {await restoreSourceContent();await refresh();}
       await logEvent(db,'updates',changed?'Kunnskapspakkene er oppdatert.':'Kunnskapen er oppdatert.','info',{changed,bytes});
+      reportStatus('');
       if(manual)notify(changed?'Innholdet er oppdatert.':'Kunnskapen din er oppdatert.');
-    }catch(failure) {
+    }catch(caught) {
+      const failure=caught instanceof TypeError?new Error('Fikk ikke kontakt med nettet. Installert kunnskap er fortsatt tilgjengelig.'):caught;
       lastUpdate={id:'updates',checkedAt:new Date().toISOString(),status:'failed',message:failure.message,durationMs:Date.now()-started};
       await put(db,'settings',lastUpdate);await logEvent(db,'updates',failure.message,'error');
       if(manual)throw failure;
@@ -399,8 +471,13 @@
     if(!registration?.waiting) {updateReady=false;return;}
     if(registration?.waiting) {
       if(session)await put(db,'sessions',{...session,draft:draftNow()});
-      navigator.serviceWorker.addEventListener('controllerchange',()=>window.location.reload(),{once:true});
-      registration.waiting.postMessage({type:'ACTIVATE'});
+      const waiting=registration.waiting;let reloaded=false;
+      const reload=()=>{if(!reloaded){reloaded=true;window.location.reload();}};
+      // Safari does not always report the controller change; the worker's own state and a timeout are fallbacks.
+      navigator.serviceWorker.addEventListener('controllerchange',reload,{once:true});
+      waiting.addEventListener('statechange',()=>{if(waiting.state==='activated')reload();});
+      setTimeout(reload,4000);
+      waiting.postMessage({type:'ACTIVATE'});
     }
   }
   async function offlineMode(enabled) {
@@ -413,7 +490,7 @@
     let disposed=false;
     const route=()=>{
       const hash=window.location.hash.slice(1);
-      view=['today','world','focus','explore','progress','settings'].includes(hash)?hash:'today';
+      view=['today','learn','world','focus','explore','progress','settings'].includes(hash)?hash:'today';
       if(view!=='today')sessionScreen=false;
       developer=false;detailId='';error='';
     };
@@ -424,7 +501,9 @@
     window.addEventListener('beforeinstallprompt',prompt);
     const reconnect=()=>{if(db){void checkUpdates().catch(failure=>recordError('updates',failure));void checkAppUpdate();}};
     const timer=setInterval(()=>{if(document.visibilityState==='visible')void checkAppUpdate();},APP_CHECK_INTERVAL);
-    const visible=()=>{if(document.visibilityState==='visible')reconnect();};
+    // The daily plan depends on the time of day; a home-screen app can stay open overnight.
+    const tickClock=()=>{clock=Date.now();};const clockTimer=setInterval(tickClock,60000);
+    const visible=()=>{if(document.visibilityState==='visible'){tickClock();reconnect();}};
     window.addEventListener('online',reconnect);document.addEventListener('visibilitychange',visible);
     const unhandled=event=>{if(db)void logEvent(db,'unhandled',String(event.reason?.message || event.reason),'error').catch(()=>{});};
     window.addEventListener('unhandledrejection',unhandled);
@@ -435,7 +514,7 @@
         document.documentElement.dataset.theme=prefs.theme;
         data=(await all(db,'packages'))[0] || null;
         if(!data || data.language !== 'nb') {await checkUpdates(true);data=(await all(db,'packages'))[0] || null;}
-        else if(['1.1.2','1.0.1','1.0.2','1.1.0','1.1.1','1.2.0'].includes(data.version)) {try{await checkUpdates(true);data=(await all(db,'packages'))[0] || data;}catch{/* Keep the installed package usable offline. */}}
+        else if(['1.1.2','1.0.1','1.0.2','1.1.0','1.1.1','1.2.0'].includes(data.version) || !data.curriculum || !data.perspectives) {try{await checkUpdates(true);data=(await all(db,'packages'))[0] || data;}catch{/* Keep the installed package usable offline. */}}
         if(!data)throw new Error('Koble til nettet én gang for å installere kunnskapsbiblioteket.');
         const mediaResponse=await fetch('/knowledge/media.json');if(mediaResponse.ok)baseMedia=await mediaResponse.json();
         await restoreSourceContent();
@@ -444,7 +523,7 @@
         const journal=readJournal(localStorage,session);
         await prepareQuestion(journal?.draft || session?.draft);
         if(journal?.view===view){sessionScreen=Boolean(journal.screen && session);detailId=journal.detailId || '';}
-        if('serviceWorker' in navigator) {
+        if('serviceWorker' in navigator && !import.meta.env.DEV) {
           registration=await navigator.serviceWorker.register('/sw.js',{updateViaCache:'none'});
           updateReady=Boolean(registration.waiting);
           registration.addEventListener('updatefound',()=>{
@@ -454,7 +533,7 @@
           void navigator.serviceWorker.ready.then(()=>checkStorage()).catch(()=>{});
         }
         appChecker=createAppUpdateChecker({
-          fetchVersion:async()=>{if(offlineTest || !navigator.onLine)throw new Error('Koble til nettet for å sjekke oppdateringer.');const response=await fetch('/version.json',{cache:'no-store',signal:AbortSignal.timeout(10000)});if(!response.ok)throw new Error('Kunne ikke sjekke appversjonen. Prøv igjen.');return response.json();},
+          fetchVersion:async()=>{if(offlineTest)throw new Error('Koble til nettet for å sjekke oppdateringer.');const response=await fetch('/version.json',{cache:'no-store',signal:AbortSignal.timeout(10000)});if(!response.ok)throw new Error('Kunne ikke sjekke appversjonen. Prøv igjen.');return response.json();},
           getRegistration:()=>registration,
           onStatus:status=>{if(disposed)return;appCheck=status;if(status.state==='ready')updateReady=true;}
         });
@@ -466,11 +545,19 @@
       finally{if(!disposed)loading=false;}
     };
     void boot();
-    return ()=>{disposed=true;clearInterval(timer);window.removeEventListener('hashchange',route);window.removeEventListener('beforeinstallprompt',prompt);window.removeEventListener('online',reconnect);document.removeEventListener('visibilitychange',visible);window.removeEventListener('unhandledrejection',unhandled);db?.close();};
+    return ()=>{disposed=true;clearInterval(timer);clearInterval(clockTimer);window.removeEventListener('hashchange',route);window.removeEventListener('beforeinstallprompt',prompt);window.removeEventListener('online',reconnect);document.removeEventListener('visibilitychange',visible);window.removeEventListener('unhandledrejection',unhandled);db?.close();};
   });
 </script>
 
 <svelte:head><title>Atlas · Quiz</title></svelte:head>
+
+{#snippet sessionProgress()}
+<div class="session-progress" role="group" aria-label="Fremgang i quizen">{#if session.queue.some(q=>q.sessionRetry)}<p class="muted retry-count">{session.queue.filter(q=>q.sessionRetry).length} ekstra forsøk lagt til etter spørsmålene</p>{/if}
+        <div class="row"><strong>{session.index} av {session.queue.length} fullført</strong><span class="muted">{session.queue.length-session.index} igjen</span></div>
+        <div class="session-steps" role="progressbar" aria-label="Fullførte spørsmål" aria-valuemin="0" aria-valuemax={session.queue.length} aria-valuenow={session.index}>{#each session.queue as item,i}<span class:done={i<session.index} class:independent={session.results[i]?.correct===true && !session.results[i]?.usedHint && !session.results[i]?.learnedFirst} class:active={i===session.index} aria-hidden="true"></span>{/each}</div>
+        <small class="muted">{outcome.independent} riktige uten hjelp · {outcome.supported} med støtte · {outcome.retry} å øve videre på</small>
+      </div>
+{/snippet}
 
 <main id="main-view" tabindex="-1">
   {#if error}<div class="card error" role="alert"><p>{error}</p><button class="quiet" onclick={()=>error=''}>Lukk</button></div>{/if}
@@ -482,20 +569,33 @@
     <section class="hero"><h1>Koble til nettet</h1><p class="lead">Last ned spørsmålene for å komme i gang.</p><button class="primary" onclick={()=>window.location.reload()}>Prøv igjen</button></section>
   {:else if view === 'today'}
     {#if sessionScreen && session?.status === 'completed'}
-      <section class="hero"><h1>Quiz fullført</h1><p class="lead">{session.title || 'Quiz'} · {new Set(session.results.map(r=>r.id)).size} spørsmål · {session.results.length} svarforsøk</p></section>
-      <div class="card"><p><strong>{session.results.filter(r=>r.correct===true && !r.learnedFirst && !r.usedHint).length}</strong> riktige uten hjelp · <strong>{session.results.filter(r=>r.learnedFirst || r.usedHint).length}</strong> med læringsstøtte</p><div class="result-grid"><span><strong>{outcome.independent}</strong>uten hjelp</span><span><strong>{outcome.supported}</strong>med støtte</span><span><strong>{outcome.retry}</strong>øv videre</span></div>{#if retryIds.length}<button class="primary" onclick={()=>run(()=>beginSession('mixed',{targetIds:retryIds,depth:'advanced',title:'Øv videre'}))}>Øv på disse {retryIds.length} igjen</button>{/if}<button class="secondary" onclick={()=>run(()=>beginSession(session.objective || 'mixed',session.scope))}>Ta en quiz til</button><button class="quiet" onclick={()=>sessionScreen=false}>Til quizmenyen</button></div>
+      {@const answered=session.results.filter(r=>!r.lesson)}
+      {@const touched=[...new Set(session.queue.map(q=>q.unitId).filter(Boolean))]}
+      <section class="hero"><p class="eyebrow">{session.title || 'Økt'}</p><h1>Økten er ferdig</h1><p class="lead">{new Set(answered.map(r=>r.id)).size} spørsmål · {answered.length} svar</p></section>
+      <div class="card"><div class="result-grid"><span><strong>{outcome.independent}</strong>uten hjelp</span><span><strong>{outcome.supported}</strong>med støtte</span><span><strong>{outcome.retry}</strong>øv videre</span></div></div>
+      {#if touched.length && coreProgress}<div class="card"><h2>Emnene dine</h2>{#each touched as id}{@const row=coreProgress.units.get(id)}{#if row}<button class="unit-row" data-status={row.status} onclick={()=>{selectedUnit=id;navigate('learn');}}><span class="unit-dot" aria-hidden="true"></span><span class="unit-text"><strong>{unitTitle(id)}</strong><small class="muted">{UNIT_STATUS[row.status].label} · {row.correct} av {row.total} riktig sist</small><span class="bar small"><span style={`width:${Math.round(100*row.correct/row.total)}%`}></span></span></span><span aria-hidden="true">›</span></button>{/if}{/each}</div>{/if}
+      <div class="stack">{#if retryIds.length}<button class="primary" onclick={()=>run(()=>beginSession('mixed',{targetIds:retryIds,depth:'advanced',title:'Øv videre'}))}>Øv på {retryIds.length} {retryIds.length===1?'kort':'kort'} igjen</button>{/if}
+      {#if data.curriculum && !session.objective && selection.queue.length}<button class={retryIds.length?'secondary':'primary'} onclick={()=>run(()=>beginSession(null,session.scope?.unitId?{...session.scope,unitMode:'learn'}:null))}>Lær mer</button>{:else if session.objective}<button class="secondary" onclick={()=>run(()=>beginSession(session.objective || 'mixed',session.scope))}>Ta en quiz til</button>{/if}
+      <button class="quiet" onclick={()=>sessionScreen=false}>Ferdig for nå</button></div>
+    {:else if sessionScreen && currentLesson}
+      <div class="row"><button class="quiet back-button" onclick={()=>sessionScreen=false}>← Pause</button></div>
+      {@render sessionProgress()}
+      <section class="exercise lesson-step">
+        <p class="eyebrow">Nytt emne · {domainTitle(currentLesson.domainId)}</p>
+        <h1 class="lesson-title">{currentLesson.title}</h1>
+        {#each currentLesson.lesson as paragraph}<p class="lesson-text">{paragraph}</p>{/each}
+        <div class="card key-card"><h2>Dette skal sitte</h2><ul class="key-points">{#each currentLesson.keyPoints as point}<li>{point}</li>{/each}</ul></div>
+        <p class="muted detail">Spørsmålene om emnet kommer etter hvert i økten, og igjen de neste dagene.</p>
+        <div class="quiz-actions"><button class="primary" disabled={busy} onclick={()=>run(finishLesson)}>Videre</button></div>
+      </section>
     {:else if sessionScreen && current}
       <div class="row"><button class="quiet back-button" onclick={()=>sessionScreen=false}>← Pause</button><span class="muted" aria-hidden="true"></span></div>
       {#if !session.difficultyPolicy && current.difficulty===5}<div class="card"><p>Denne eldre quizen inneholder avanserte spørsmål.</p><button class="secondary" onclick={()=>run(()=>beginSession('mixed',{collectionId:current.collectionIds[0],depth:'foundation',title:titleFor(current.collectionIds[0])}))}>Start på grunnlag</button></div>{/if}
-      <div class="session-progress" role="group" aria-label="Fremgang i quizen">{#if session.queue.some(q=>q.sessionRetry)}<p class="muted retry-count">{session.queue.filter(q=>q.sessionRetry).length} ekstra forsøk lagt til etter spørsmålene</p>{/if}
-        <div class="row"><strong>{session.index} av {session.queue.length} fullført</strong><span class="muted">{session.queue.length-session.index} igjen</span></div>
-        <div class="session-steps" role="progressbar" aria-label="Fullførte spørsmål" aria-valuemin="0" aria-valuemax={session.queue.length} aria-valuenow={session.index}>{#each session.queue as item,i}<span class:done={i<session.index} class:independent={session.results[i]?.correct===true && !session.results[i]?.usedHint && !session.results[i]?.learnedFirst} class:active={i===session.index} aria-hidden="true"></span>{/each}</div>
-        <small class="muted">{outcome.independent} riktige uten hjelp · {outcome.supported} med støtte · {outcome.retry} å øve videre på</small>
-      </div>
-      <section class="exercise" class:question-step={!revealed}>{#if session.queue[session.index]?.sessionRetry}<p class="retry-banner">Nytt forsøk · hent fram svaret uten hjelp</p>{/if}<p class="eyebrow">{stageLabel(learningStage(current))} · {modeLabel(current.mode)}</p>{#if introduction}<div class="card lesson"><h1>Kort fortalt</h1><p>{current.snapshot}</p>{#if currentObjective}<p class="muted">{currentObjective.introduction}</p>{/if}<button class="primary" onclick={()=>{introduction=false;learnedFirst=true;}}>Prøv spørsmålet</button></div>{:else}<h1 class="question" class:answered-question={revealed}>{current.prompt}</h1>{#if current.visual?.flag}<div class="flag-visual" role="img" aria-label="Flagget du skal kjenne igjen">{flagEmoji(current.visual.flag)}</div>{/if}
+      {@render sessionProgress()}
+      <section class="exercise" class:question-step={!revealed}>{#if session.queue[session.index]?.sessionRetry}<p class="retry-banner">Nytt forsøk · hent fram svaret uten hjelp</p>{/if}<p class="eyebrow">{#if current.unitId}{unitTitle(current.unitId)} · {STEP_LABELS[current.step]}{:else}{stageLabel(learningStage(current))} · {modeLabel(current.mode)}{/if}</p>{#if introduction}<div class="card lesson"><h1>Kort fortalt</h1><p>{current.snapshot}</p>{#if currentObjective}<p class="muted">{currentObjective.introduction}</p>{/if}<button class="primary" onclick={()=>{introduction=false;learnedFirst=true;}}>Prøv spørsmålet</button></div>{:else}<h1 class="question" class:answered-question={revealed}>{current.prompt}</h1>{#if current.visual?.flag}<div class="flag-visual" role="img" aria-label="Flagget du skal kjenne igjen">{flagEmoji(current.visual.flag)}</div>{/if}
         {#if !revealed}
         {#if session.queue[session.index]?.support?.length}<details class="card"><summary>Holdepunkter før du prøver</summary>{#each session.queue[session.index].support as item}<p><strong>{item.title}</strong></p><p>{item.text}</p>{/each}<p class="muted">Du kan utforske videre selv om dette er nytt.</p></details>{/if}
-        <details class="difficulty-note"><summary>Om nivået</summary><p class="muted">{current.difficultyReason}</p><p class="muted">{current.precision==='exact'?'Presisjon: eksakt detalj.':current.precision==='complete'?'Presisjon: alle delene må med.':'Presisjon: hovedideen.'} {current.reasoning==='explain'?'Du forklarer med egne ord.':current.reasoning==='compare'?'Du sammenligner.':current.reasoning==='order'?'Du ordner i tid.':'Du identifiserer et holdepunkt.'}</p></details>
+        {#if !current.unitId}<details class="difficulty-note"><summary>Om nivået</summary><p class="muted">{current.difficultyReason}</p><p class="muted">{current.precision==='exact'?'Presisjon: eksakt detalj.':current.precision==='complete'?'Presisjon: alle delene må med.':'Presisjon: hovedideen.'} {current.reasoning==='explain'?'Du forklarer med egne ord.':current.reasoning==='compare'?'Du sammenligner.':current.reasoning==='order'?'Du ordner i tid.':'Du identifiserer et holdepunkt.'}</p></details>{/if}
         {#if questionSupport(current) && !revealed && !currentArtwork}<p class="muted question-context">{questionSupport(current)}</p>{/if}
         {#if currentArtwork}<figure class="artwork-figure"><img src={currentArtwork.url} alt={revealed?currentArtwork.title:'Bildet du skal undersøke'} width={currentArtwork.width} height={currentArtwork.height}><figcaption class="muted detail">{revealed?currentArtwork.title:'Se nøye på motivet før du svarer.'}</figcaption></figure>{/if}
         {#if STRUCTURED_MODES.includes(current.mode)}
@@ -509,57 +609,88 @@
           <div class="map-board"><svg viewBox={mapViewBox} role="img" aria-label="Geografisk omriss uten navn"><path d={currentDataset.regions.find(r=>r.id===current.regionId).path} fill-rule="evenodd"/></svg></div>
           <p class="muted detail">{currentDataset.source.attribution || currentDataset.source.title}</p>
         {:else if current.mode === 'timeline'}
-          <ol class="timeline-list">{#each timelineOrder as item,index}<li class="timeline-item"><span>{item.label}{#if revealed}<small class="muted"> · {item.display ?? item.year}</small>{/if}</span>{#if !revealed}<div class="row"><button class="quiet" aria-label={`Flytt ${item.label} tidligere`} disabled={index===0} onclick={()=>moveTimeline(index,-1)}>↑</button><button class="quiet" aria-label={`Flytt ${item.label} senere`} disabled={index===timelineOrder.length-1} onclick={()=>moveTimeline(index,1)}>↓</button></div>{/if}</li>{/each}</ol>
+          <ol class="timeline-list">{#each timelineOrder as item,index}<li class="timeline-item"><span>{item.label}{#if revealed}<small class="muted"> · {item.display ?? formatYear(item.year)}</small>{/if}</span>{#if !revealed}<div class="row"><button class="quiet" aria-label={`Flytt ${item.label} tidligere`} disabled={index===0} onclick={()=>moveTimeline(index,-1)}>↑</button><button class="quiet" aria-label={`Flytt ${item.label} senere`} disabled={index===timelineOrder.length-1} onclick={()=>moveTimeline(index,1)}>↓</button></div>{/if}</li>{/each}</ol>
         {/if}
         {#if !revealed}
           {#if current.mode === 'recognition'}
             <div class="stack">{#each makeRecognitionOptions(current.options ? current : data.targets.find(t=>t.id===current.baseId),data.targets,4,recognitionIndex) as option}<button class="secondary" onclick={()=>answerChoice(option)}>{option.label}</button>{/each}</div>
           {:else if !STRUCTURED_MODES.includes(current.mode) && current.mode !== 'map' && current.mode !== 'timeline'}
-            <form onsubmit={event=>{event.preventDefault();reveal();}}><label class="field" for="recall">{answerStyle.label}</label>{#if answerStyle.extended}<textarea id="recall" class="textarea recall-long" bind:value={answer} rows="3" placeholder={answerStyle.placeholder} autocomplete="off"></textarea>{:else}<input id="recall" class="input recall-short" class:recall-year={answerStyle.inputMode==='numeric'} bind:value={answer} inputmode={answerStyle.inputMode} placeholder={answerStyle.placeholder} autocomplete="off" spellcheck="false" enterkeyhint="done">{/if}<button class="primary" type="submit">Kontroller svaret</button></form>
+            <form onsubmit={event=>{event.preventDefault();reveal();}}><label class="field" for="recall">{answerStyle.label}</label>{#if answerStyle.extended}<textarea id="recall" class="textarea recall-long" bind:value={answer} rows="3" placeholder={answerStyle.placeholder} autocomplete="off"></textarea>{:else}<input id="recall" class="input recall-short" class:recall-year={['numeric','decimal'].includes(answerStyle.inputMode)} bind:value={answer} inputmode={answerStyle.inputMode} placeholder={answerStyle.placeholder} autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="done">{/if}<button class="primary" type="submit">{answer.trim()?'Kontroller svaret':'Vis svaret'}</button></form>
           {/if}
           {#if STRUCTURED_MODES.includes(current.mode)}<button class="primary" disabled={!structuredReady(current,formatDraft)} onclick={reveal}>Kontroller svaret</button>{/if}
           {#if current.mode === 'timeline'}<button class="primary" onclick={reveal}>Kontroller rekkefølgen</button>{/if}
           {#if current.mode === 'map'}<button class="quiet" onclick={()=>{correct=null;revealed=true;}}>Vis meg stedet</button>{/if}
           <button class="quiet" onclick={()=>{learnedFirst=true;correct=null;revealed=true;}}>Jeg vil lære dette først</button>
-          {#if !['map','timeline',...STRUCTURED_MODES].includes(current.mode)}<button class="quiet" onclick={()=>usedHint=true}>Hint</button>{/if}
+          {#if !['map','timeline',...STRUCTURED_MODES].includes(current.mode) && (current.hint || current.mode!=='recognition') && current.answerFormat!=='explanation'}<button class="quiet" onclick={()=>usedHint=true}>Hint</button>{/if}
           {#if usedHint}<p class="card muted">{current.hint || `Svaret begynner med “${current.answer[0]}”.`}</p>{/if}
         {/if}
         {/if}
         {#if revealed}
-          <div class="answer-box"><p class="eyebrow">{correct===true?'RIKTIG':correct===false?'IKKE HELT':'SVARET'}</p><h2 id="answer-heading" tabindex="-1">{current.mode==='matching'?'De riktige parene':current.answer}</h2>{#if current.mode==='matching'}<ul class="pair-answers">{#each current.pairs as pair}<li>{pair.label} <strong>{pair.answer}</strong></li>{/each}</ul>{/if}{#if current.mode==='border-walk'}{@const result=gradeStructured(current,formatDraft,worldGraph.neighbours)}<p class="muted">{result.arrived && result.valid?`Du krysset ${result.crossings} grenser. Korteste rute krysser ${result.shortest}.`:'Ruten nådde ikke målet.'}</p>{/if}{#if current.mode==='arrows'}{@const result=gradeStructured(current,formatDraft)}<p class="muted">Retning: {result.directionCorrect?'riktig':'må øves'} · År: {result.yearCorrect?'riktig':'må øves'}</p>{/if}<p class="feedback">{explanationContext.explanation}</p>{#each explanationContext.uncertainty as note}<p class="muted">{note}</p>{/each}{#if current.answerFormat==='explanation'}<fieldset class="stack"><legend>Sammenlign med svaret ditt</legend><p><strong>Svaret ditt:</strong> {answer || 'Du skrev ikke noe svar.'}</p><p class="muted">Vurder innholdet, ikke om du brukte samme ord. Dette lagres som egenvurdering.</p>{#each current.rubric || [] as criterion}<label class="row"><input type="checkbox" disabled={!answer.trim()} checked={Boolean(formatDraft[criterion.id])} onchange={event=>{formatDraft={...formatDraft,[criterion.id]:event.currentTarget.checked};correct=Boolean(answer.trim()) && current.rubric.every(c=>formatDraft[c.id]);}}>{criterion.text}</label>{/each}</fieldset>{/if}<details><summary>Kilder</summary>{#each (current.sources || []) as source}<a class="source-link" href={source.url} target="_blank" rel="noreferrer">{source.title} ↗</a>{/each}{#each current.sourceIds as sourceId}{@const source=sourceFor(sourceId)}{#if source}<a class="source-link" href={source.url} target="_blank" rel="noreferrer">{source.title} ↗</a>{/if}{/each}</details></div>
+          <div class="answer-box"><p class="eyebrow">{correct===true?'RIKTIG':correct===false?'IKKE HELT':'SVARET'}</p><h2 id="answer-heading" tabindex="-1"><span class="sr-only">{correct===true?'Riktig. ':correct===false?'Ikke helt. Riktig svar: ':'Svaret: '}</span>{current.mode==='matching'?'De riktige parene':current.answer}</h2>{#if gradeNote}<p class="muted grade-note">{gradeNote}</p>{/if}{#if correct===false && answer.trim() && current.mode!=='timeline' && !STRUCTURED_MODES.includes(current.mode) && current.answerFormat!=='explanation'}<p class="your-answer">Du {current.mode==='recognition'?'valgte':'skrev'}: <strong>{answer}</strong></p>{#if current.mode==='recall'}<button class="quiet override" onclick={()=>{correct=true;gradeNote='Du godkjente svaret ditt selv.';}}>Svaret mitt var riktig</button>{/if}{/if}{#if current.mode==='matching'}<ul class="pair-answers">{#each current.pairs as pair}<li>{pair.label} <strong>{pair.answer}</strong></li>{/each}</ul>{/if}{#if current.mode==='border-walk'}{@const result=gradeStructured(current,formatDraft,worldGraph.neighbours)}<p class="muted">{result.arrived && result.valid?`Du krysset ${result.crossings} grenser. Korteste rute krysser ${result.shortest}.`:'Ruten nådde ikke målet.'}</p>{/if}{#if current.mode==='arrows'}{@const result=gradeStructured(current,formatDraft)}<p class="muted">Retning: {result.directionCorrect?'riktig':'må øves'} · År: {result.yearCorrect?'riktig':'må øves'}</p>{/if}<p class="feedback">{explanationContext.explanation}</p>{#each explanationContext.uncertainty as note}<p class="muted">{note}</p>{/each}{#if current.answerFormat==='explanation'}<fieldset class="stack"><legend>Sammenlign med svaret ditt</legend><p><strong>Svaret ditt:</strong> {answer || 'Du skrev ikke noe svar.'}</p><p class="muted">Vurder innholdet, ikke om du brukte samme ord. Dette lagres som egenvurdering.</p>{#each current.rubric || [] as criterion}<label class="row"><input type="checkbox" disabled={!answer.trim()} checked={Boolean(formatDraft[criterion.id])} onchange={event=>{formatDraft={...formatDraft,[criterion.id]:event.currentTarget.checked};correct=Boolean(answer.trim()) && current.rubric.every(c=>formatDraft[c.id]);}}>{criterion.text}</label>{/each}</fieldset>{/if}<details><summary>Kilder</summary>{#each (current.sources || []) as source}<a class="source-link" href={source.url} target="_blank" rel="noreferrer">{source.title} ↗</a>{/each}{#each current.sourceIds as sourceId}{@const source=sourceFor(sourceId)}{#if source}<a class="source-link" href={source.url} target="_blank" rel="noreferrer">{source.title} ↗</a>{/if}{/each}</details></div>
           {#if current.mode==='map' && currentDataset}<details class="card"><summary>Se riktig sted</summary><div class="map-board"><svg viewBox={currentDataset.viewBox} role="img" aria-label={`Kart med ${current.answer} markert`}>{#each currentDataset.regions as region}<path d={region.path} class:correct={region.id===current.regionId} fill-rule="evenodd" />{/each}</svg></div></details>{/if}
           {#if currentArtwork}<figure class="artwork-figure"><img src={currentArtwork.url} alt={`${currentArtwork.title} av ${currentArtwork.artist}`} width={currentArtwork.width} height={currentArtwork.height} /></figure>{/if}
-          {#if current.snapshot || current.followUp || currentArtwork || connections.length}<details class="card learning-context"><summary>Fordypning og forbindelser</summary>{#if current.snapshot}<p>{current.snapshot}</p>{/if}{#if current.followUp}<p>{current.followUp}</p>{/if}{#if currentArtwork}<details><summary>Om bildet og bildekilden</summary><p>{currentArtwork.context}</p><p class="muted detail">{currentArtwork.credit} · <a href={currentArtwork.sourceUrl} target="_blank" rel="noreferrer">Bildekilde</a> · <a href={currentArtwork.licenseUrl} target="_blank" rel="noreferrer">Lisens og bruk</a></p></details>{/if}{#if connections.length}<details><summary>Les videre ({connections.length})</summary>{#each connections as relation}<p>{relation.context}</p><small class="muted">{relation.practiced?'Du har øvd på':'Et nytt holdepunkt:'} {relation.label}</small>{#if relation.evidenceStatus!=='documented'}<p class="muted">{relation.evidenceStatus==='disputed'?'Forbindelsen er omstridt.':'Forbindelsen er usikker.'}</p>{/if}{#each relation.sourceIds as sourceId}{@const source=sourceFor(sourceId)}{#if source}<a class="source-link" href={source.url} target="_blank" rel="noreferrer">{source.title} ↗</a>{/if}{/each}{/each}</details>{/if}</details>{/if}
-          <div class="quiz-actions">{#if usedHint || learnedFirst || correct!==true || session.practice || session.queue[session.index]?.sessionRetry}<p class="muted">{retryNote(correct===true?3:1) || (session.queue[session.index]?.sessionRetry?'Lagret som øving i denne quizen':'Svar uten hjelp lagres som riktig')}</p><button class="primary" disabled={busy} onclick={()=>run(()=>rate(correct===true?3:1))}>Neste spørsmål</button>{:else}<p class="field">Hvor godt husket du?{#if !currentState} Første repetisjon blir i morgen.{/if}</p><div class="rating-grid">{#each ratingLabels as label,index}<button class="rating-button" disabled={busy} onclick={()=>run(()=>rate(index+1))}><strong>{label}</strong><small>{ratingNotes[index]}</small><small>{retryNote(index+1) || intervalLabel(intervals[index+1])}</small></button>{/each}</div>{/if}</div>
+          {#if currentUnit}<details class="card learning-context"><summary>Om emnet: {currentUnit.title}</summary>{#each currentUnit.lesson as paragraph}<p>{paragraph}</p>{/each}<ul class="key-points">{#each currentUnit.keyPoints as point}<li>{point}</li>{/each}</ul></details>{#if currentArtwork}<details class="card learning-context"><summary>Om bildet og bildekilden</summary><p>{currentArtwork.context}</p><p class="muted detail">{currentArtwork.credit} · <a href={currentArtwork.sourceUrl} target="_blank" rel="noreferrer">Bildekilde</a> · <a href={currentArtwork.licenseUrl} target="_blank" rel="noreferrer">Lisens og bruk</a></p></details>{/if}{/if}
+          {#if !current.unitId && (current.snapshot || current.followUp || currentArtwork || connections.length)}<details class="card learning-context"><summary>Fordypning og forbindelser</summary>{#if current.snapshot}<p>{current.snapshot}</p>{/if}{#if current.followUp}<p>{current.followUp}</p>{/if}{#if currentArtwork}<details><summary>Om bildet og bildekilden</summary><p>{currentArtwork.context}</p><p class="muted detail">{currentArtwork.credit} · <a href={currentArtwork.sourceUrl} target="_blank" rel="noreferrer">Bildekilde</a> · <a href={currentArtwork.licenseUrl} target="_blank" rel="noreferrer">Lisens og bruk</a></p></details>{/if}{#if connections.length}<details><summary>Les videre ({connections.length})</summary>{#each connections as relation}<p>{relation.context}</p><small class="muted">{relation.practiced?'Du har øvd på':'Et nytt holdepunkt:'} {relation.label}</small>{#if relation.evidenceStatus!=='documented'}<p class="muted">{relation.evidenceStatus==='disputed'?'Forbindelsen er omstridt.':'Forbindelsen er usikker.'}</p>{/if}{#each relation.sourceIds as sourceId}{@const source=sourceFor(sourceId)}{#if source}<a class="source-link" href={source.url} target="_blank" rel="noreferrer">{source.title} ↗</a>{/if}{/each}{/each}</details>{/if}</details>{/if}
+          <div class="quiz-actions">{#if usedHint || learnedFirst || correct!==true || session.practice || session.queue[session.index]?.sessionRetry}<p class="muted">{retryNote(fallbackRating()) || (session.queue[session.index]?.sessionRetry?'Lagret som øving i denne quizen':'Svar uten hjelp lagres som riktig')}</p><button class="primary" disabled={busy} onclick={()=>run(()=>rate(fallbackRating()))}>Neste</button>{:else}<p class="muted detail next-review">Neste repetisjon {whenLabel(intervals[3])}</p><button class="primary" disabled={busy} onclick={()=>run(()=>rate(3))}>Neste</button><div class="rating-alt"><button class="quiet" disabled={busy} onclick={()=>run(()=>rate(2))}>Var usikker</button><button class="quiet" disabled={busy} onclick={()=>run(()=>rate(4))}>Satt lett{#if whenLabel(intervals[4])!==whenLabel(intervals[3])} · {whenLabel(intervals[4])}{/if}</button></div>{/if}</div>
         {/if}
       {/if}</section>
     {:else}
-      {#if !quizSetup}<section class="hero"><h1>Hva vil du øve på?</h1><p class="lead">{reviewedToday} svar i dag · {selection.dueCount} repetisjoner klare</p></section>
-      {#if data.learningPaths?.length}<details class="card learning-paths"><summary>Lær i sammenheng</summary><p class="muted">Begynn med betydningen, hent fram det du husker, og bygg forbindelser over flere økter. Repetisjoner kommer i dagens quiz.</p>{#each data.learningPaths as path}{@const completed=path.objectiveIds.filter(id=>objectiveStatus(data.learningObjectives.find(o=>o.id===id),targets,reviews)==='recalled').length}<button class="entity-row" disabled={busy} onclick={()=>run(()=>beginSession('mixed',{learningPathId:path.id,depth:'advanced',title:path.title}))}><span><strong>{path.title}</strong><small>{completed} av {path.objectiveIds.length} holdepunkter hentet fram · neste steg</small></span><span>→</span></button>{/each}</details>{/if}
-      {#if session?.status==='active' && current}<div class="card"><h2>{session.title || 'Påbegynt quiz'}</h2><p class="muted">Spørsmål {session.index+1} av {session.queue.length}</p><button class="primary" onclick={()=>run(()=>resumeSession())}>Fortsett quizen</button></div>{/if}
+      {#if !quizSetup}<section class="hero today-hero"><p class="eyebrow">{new Date().toLocaleDateString('nb-NO',{weekday:'long',day:'numeric',month:'long'})}{#if streak>1} · {streak} dager på rad{/if}</p><h1>{reviewedToday?'Godt i gang':'Dagens økt'}</h1><p class="lead">{reviewedToday?`${reviewedToday} svar i dag`:'Noen minutter om dagen bygger kunnskap som varer.'}</p></section>
+      {#if session?.status==='active' && (current || currentLesson)}<div class="card resume-card"><h2>{session.title || 'Påbegynt økt'}</h2><p class="muted">{session.index} av {session.queue.length} gjort</p><button class="primary" onclick={()=>run(()=>resumeSession())}>Fortsett der du var</button></div>{/if}
+      {#if data.curriculum && !reviews.length && !prefs.introSeen}<div class="card intro-card"><h2>Slik fungerer Atlas</h2><ul class="key-points"><li>Hvert emne begynner med en kort innføring. Spørsmålene kommer litt etter, så du henter fram i stedet for å kopiere.</li><li>Du går fra oversikt til detaljer i fire steg, og emnene bygger videre på hverandre.</li><li>Det du holder på å glemme, kommer tilbake til riktig tid. Noen minutter om dagen er nok.</li></ul><button class="quiet" onclick={()=>run(async()=>{prefs.introSeen=true;await savePreferences(true);})}>Skjønner</button></div>{/if}
+      {#if data.curriculum}
+        {@const plan=selection.queue}
+        {@const fresh=plan.filter(q=>q.target && q.reason!=='Due review')}
+        <div class="card session-card">
+          {#if plan.length}
+            <div class="plan-counts"><span><strong>{plan.filter(q=>q.reason==='Due review').length}</strong>repetisjoner</span><span><strong>{fresh.length}</strong>nye kort</span><span><strong>{plan.filter(isLessonEntry).length}</strong>{plan.filter(isLessonEntry).length===1?'nytt emne':'nye emner'}</span></div>
+            {#if selection.units?.length}<p class="muted">Nytt i dag: {selection.units.map(unitTitle).join(' og ')}</p>{/if}
+            <button class="primary" disabled={busy || dailyInProgress} onclick={()=>run(()=>beginSession())}>{dailyInProgress?'Økten er påbegynt':'Start dagens økt'}</button>
+          {:else}
+            <h2>Ferdig for i dag</h2><p class="muted">Alt som skulle repeteres er gjort, og nye kort i de aktive emnene kommer når du har repetert de forrige. Velg et emne for å lære mer nå.</p>
+          {/if}
+        </div>
+        {#if coreProgress}
+          {@const path=recommendedUnits(data.curriculum,coreProgress,{domainIds:prefs.collectionIds}).slice(0,4)}
+          <h2 class="section-title">Din læringsvei</h2>
+          <div class="card path-card">{#each path as unit}{@const row=coreProgress.units.get(unit.id)}
+            <button class="unit-row" data-status={row.status} onclick={()=>{selectedUnit=unit.id;navigate('learn');}}><span class="unit-dot" aria-hidden="true"></span><span class="unit-text"><strong>{unit.title}</strong><small class="muted">{domainTitle(unit.domainId)} · {row.status==='new'?'Neste emne':`${UNIT_STATUS[row.status].label} · ${row.correct}/${row.total}`}</small></span><span aria-hidden="true">›</span></button>
+          {/each}</div>
+        {/if}
+      {:else}
       <div class="card"><h2>Dagens quiz</h2><p class="muted">{selection.queue.length} spørsmål · {prefs.depth==='foundation'?'Grunnlag':prefs.depth==='intermediate'?'Detaljer':'Sammenhenger'}</p><button class="primary" disabled={busy || !selection.queue.length} onclick={()=>run(()=>beginSession())}>Start dagens quiz</button>{#if !selection.queue.length}<p class="muted">Du er ferdig med dagens utvalg. Ta en emnequiz under.</p>{/if}<button class="quiet" onclick={()=>navigate('focus')}>Endre dagens utvalg</button></div>
-      <button class="primary" onclick={()=>{quizSetup=true;window.scrollTo(0,0);}}>Velg emne og quizform →</button>
       {/if}
-      {#if quizSetup}<div class="row"><button class="quiet" onclick={()=>quizSetup=false}>← Tilbake</button><span class="muted">Lag en quiz</span></div><div class="card stack"><h2>Quiz om et emne</h2><label>Emne<select class="select" bind:value={quizCollection}><option value="">Alle emner</option>{#each data.collections as c}<option value={c.id}>{c.title}</option>{/each}</select></label><label>Nivå<select class="select" bind:value={quizDepth}><option value="foundation">Grunnlag – bli kjent</option><option value="intermediate">Detaljer – husk mer</option><option value="advanced">Avansert – rekkefølge og detaljkunnskap</option></select></label><fieldset class="format-picker"><legend>Quizform</legend><div class="format-grid">{#each FORMAT_CHOICES as format}<button class="format-choice" disabled={!formatAvailable(format.id)} aria-pressed={quizMode===format.id} onclick={()=>{quizMode=format.id;if(['chronology','before-after','arrows'].includes(quizMode))quizDepth='advanced';else if(['geography','outline','matching'].includes(quizMode) && quizDepth==='foundation')quizDepth='intermediate';}}><strong>{format.label}</strong><small>{formatAvailable(format.id)?format.note:'Ingen i dette emnet'}</small></button>{/each}</div></fieldset><fieldset class="format-picker"><legend>Verden og historiesyn</legend><div class="format-grid">{#each WORLD_FORMAT_CHOICES as format}<button class="format-choice" disabled={!targets.some(t=>t.format===format.id)} aria-pressed={quizMode===format.id} onclick={()=>{quizMode=format.id;quizDepth='advanced';if(!formatAvailable(format.id))quizCollection='';}}><strong>{format.label}</strong><small>{format.note}</small></button>{/each}</div></fieldset><button class="primary" disabled={busy || !formatAvailable(quizMode)} onclick={()=>run(()=>beginSession(quizMode,{collectionId:quizCollection,depth:quizDepth,title:quizCollection?titleFor(quizCollection):'Alle emner'}))}>Start emnequiz</button><p class="muted">{formatAvailable(quizMode)?'Så mange quizer du vil.':'Velg en tilgjengelig quizform eller et annet emne.'}</p></div>{/if}
+      <div class="today-links">{#if data.curriculum}<button class="secondary" onclick={()=>{selectedUnit='';navigate('learn');}}>Alle emner →</button>{/if}<button class="quiet" onclick={()=>{quizSetup=true;window.scrollTo(0,0);}}>Fri quiz, kart og registre →</button></div>
+      {/if}
+      {#if quizSetup}<div class="row"><button class="quiet" onclick={()=>quizSetup=false}>← Tilbake</button><span class="muted">Lag en quiz</span></div><div class="card stack"><h2>Quiz om et emne</h2><label>Emne<select class="select" bind:value={quizCollection}><option value="">Alt innhold</option>{#if data.collections.some(c=>c.core)}<optgroup label="Fagområder">{#each data.collections.filter(c=>c.core).sort((a,b)=>a.order-b.order) as c}<option value={c.id}>{c.title}</option>{/each}</optgroup>{/if}<optgroup label="Registre">{#each data.collections.filter(c=>!c.core) as c}<option value={c.id}>{c.title}</option>{/each}</optgroup></select></label><label>Nivå<select class="select" bind:value={quizDepth}><option value="foundation">Grunnlag – bli kjent</option><option value="intermediate">Detaljer – husk mer</option><option value="advanced">Avansert – rekkefølge og detaljkunnskap</option></select></label><fieldset class="format-picker"><legend>Quizform</legend><div class="format-grid">{#each FORMAT_CHOICES as format}<button class="format-choice" disabled={!formatAvailable(format.id)} aria-pressed={quizMode===format.id} onclick={()=>{quizMode=format.id;if(['chronology','before-after','arrows'].includes(quizMode))quizDepth='advanced';else if(['geography','outline','matching'].includes(quizMode) && quizDepth==='foundation')quizDepth='intermediate';}}><strong>{format.label}</strong><small>{formatAvailable(format.id)?format.note:'Ingen i dette emnet'}</small></button>{/each}</div></fieldset><fieldset class="format-picker"><legend>Verden og historiesyn</legend><div class="format-grid">{#each WORLD_FORMAT_CHOICES as format}<button class="format-choice" disabled={!targets.some(t=>t.format===format.id)} aria-pressed={quizMode===format.id} onclick={()=>{quizMode=format.id;quizDepth='advanced';if(!formatAvailable(format.id))quizCollection='';}}><strong>{format.label}</strong><small>{format.note}</small></button>{/each}</div></fieldset><button class="primary" disabled={busy || !formatAvailable(quizMode)} onclick={()=>run(()=>beginSession(quizMode,{collectionId:quizCollection,depth:quizDepth,title:quizCollection?titleFor(quizCollection):'Alle emner'}))}>Start emnequiz</button><p class="muted">{formatAvailable(quizMode)?'Så mange quizer du vil.':'Velg en tilgjengelig quizform eller et annet emne.'}</p></div>{/if}
       {@const paused=savedSessions.filter(s=>s.id!=='active' && s.sessionId!==session?.sessionId && s.status==='active')}
       {#if paused.length}<details class="card"><summary>Quizer på pause ({paused.length})</summary>{#each paused as saved}<button class="entity-row" onclick={()=>run(()=>resumeSession(saved))}>{saved.title || 'Quiz'} · {saved.index+1}/{saved.queue.length} →</button>{/each}</details>{/if}
       <button class="secondary" onclick={()=>navigate('explore')}>Finn en person eller et sted →</button>
     {/if}
   {:else if view === 'world'}
     {#if worldGraph && maps.some(m=>m.id==='world')}<WorldExplorer graph={worldGraph} dataset={maps.find(m=>m.id==='world')} bind:relevance={prefs.relevance} {typeLabel} {relationLabel} formatAvailable={id=>targets.some(t=>t.format===id)} onSave={()=>run(()=>put(db,'settings',JSON.parse(JSON.stringify(prefs))))} onOpen={id=>{detailId=id;view='explore';window.location.hash='explore';window.scrollTo(0,0);}} onQuiz={(objective,scope)=>run(()=>beginSession(objective,scope))} />
-    {:else}<div class="card"><p>Verdensutforskeren trenger kunnskapspakke 1.3.0. Koble til nettet for å oppdatere.</p><button class="secondary" disabled={busy} onclick={()=>run(()=>checkUpdates(true))}>Se etter oppdatering</button></div>{/if}
+    {:else}<div class="card"><p>Verdensutforskeren trenger kunnskapspakke 2.1.0. Koble til nettet for å oppdatere.</p><button class="secondary" disabled={busy} onclick={()=>run(()=>checkUpdates(true))}>Se etter oppdatering</button></div>{/if}
+  {:else if view === 'learn'}
+    {#if data.curriculum && coreProgress}
+      <LearningPath curriculum={data.curriculum} progress={coreProgress} sources={data.sources} bind:selectedUnit {busy}
+        onstart={id=>run(()=>beginSession(null,{unitId:id,unitMode:'learn',title:unitTitle(id)}))}
+        onreview={id=>run(()=>beginSession(null,{unitId:id,unitMode:'review',title:unitTitle(id)}))}
+        mapFor={id=>unitMapTargets(id).length>2} onmap={id=>run(()=>beginSession('geography',{targetIds:unitMapTargets(id),depth:'advanced',title:`Kart: ${unitTitle(id)}`}))} />
+      {#if !selectedUnit}<button class="quiet" onclick={()=>navigate('focus')}>Tilpass dagens økt →</button>{/if}
+    {:else}<section class="hero"><h1>Emner</h1><p class="lead">Oppdater innholdet for å få emnene.</p></section>{/if}
   {:else if view === 'focus'}
-    <section class="hero"><h1>Dagens utvalg</h1></section>
-    <form onsubmit={event=>{event.preventDefault();run(savePreferences);}}>
-      <div class="card"><h2>Samlinger</h2><p class="muted">Velg fritt. La alle være uvalgt for et bredt grunnlag.</p><div class="chips">{#each data.collections as collection}<button type="button" class="chip" class:active={prefs.collectionIds.includes(collection.id)} aria-pressed={prefs.collectionIds.includes(collection.id)} onclick={()=>toggleCollection(collection.id)}>{collection.title}</button>{/each}</div></div>
-      <div class="card stack"><label class="field">Anbefalt øktlengde<select class="select" bind:value={prefs.dailyMinutes}><option value={3}>3 minutter</option><option value={5}>5 minutter</option><option value={10}>10 minutter</option></select></label><label class="field">Nye og tidligere spørsmål<select class="select" bind:value={prefs.newRatio}><option value={0}>Bare klare repetisjoner</option><option value={0.25}>Mest repetisjon</option><option value={0.4}>En blanding</option><option value={0.75}>Mest ny kunnskap</option></select></label><label class="field">Spørsmålstype<select class="select" bind:value={prefs.objective}><option value="mixed">En blanding av øvelser</option><option value="recall">Skriv svaret</option><option value="recognition">Flervalg</option><option value="outline">Gjenkjenn omriss</option><option value="chronology">Kronologi</option><option value="geography">Plassering på kart</option><option value="connections">Sammenhenger</option></select></label></div>
-      <div class="card"><h2>Hva er relevant for deg?</h2><p class="muted">Nye spørsmål vektes etter hvor sentralt temaet står i nettverket, hvor aktuelt det er i nyhetene, og hvor nær Oslo det ligger.</p>{#each [['impact','Påvirkning'],['actuality','Aktualitet'],['locality','Nærhet']] as [key,name]}<label class="slider">{name} <strong>{prefs.relevance?.[key] ?? DEFAULT_RELEVANCE[key]}</strong><input type="range" min="0" max="100" step="5" value={prefs.relevance?.[key] ?? DEFAULT_RELEVANCE[key]} oninput={e=>prefs.relevance={...DEFAULT_RELEVANCE,...prefs.relevance,[key]:Number(e.currentTarget.value)}}></label>{/each}</div>
-      <details class="card"><summary>Finjuster fokuset</summary><div class="stack"><label class="field">Fagområde<select class="select" bind:value={prefs.subject}><option value="all">Alle fagområder</option>{#each [...new Set(data.collections.map(c=>c.subject))] as subject}<option value={subject}>{subjectLabel(subject)}</option>{/each}</select></label><label class="field">Nivå<select class="select" bind:value={prefs.depth}><option value="foundation">Grunnlag</option><option value="intermediate">Detaljer</option><option value="advanced">Avansert</option><option value="specialized">All installert kunnskap</option></select></label><label class="field">Geografisk relevans<select class="select" bind:value={prefs.geography}><option value="global">Global betydning</option><option value="norway">Mer norsk relevans</option></select></label><p class="muted detail">Norske spørsmål prioriteres.</p><label class="field">Bredde<select class="select" bind:value={prefs.breadth}><option value="broad">Veksle mellom fagområder</option><option value="deep">Fordypning</option></select></label><div class="row"><label class="field">Fra år<input class="input" type="number" min="-10000" max="2100" placeholder="Valgfritt" bind:value={prefs.fromYear}></label><label class="field">Til år<input class="input" type="number" min="-10000" max="2100" placeholder="Valgfritt" bind:value={prefs.toYear}></label></div><p class="muted detail">Årsfilteret gjelder spørsmål med dato.</p></div></details>
-      <button class="primary" type="submit" disabled={busy}>Lagre fokus</button><p class="muted detail">{selection.eligibleCount} spørsmål i utvalget.</p>
+    <button class="quiet back-button" onclick={()=>navigate('learn')}>← Emner</button>
+    <section class="hero"><h1>Tilpass økten</h1><p class="lead">Gjelder dagens økt. Emnene velger du fritt under Emner.</p></section>
+    <form onsubmit={event=>{event.preventDefault();run(async()=>{await savePreferences();navigate('today');});}}>
+      {#if data.curriculum}<div class="card"><h2>Fagområder</h2><p class="muted">Ingen valgt betyr alle. Nye emner veksler mellom fagområdene du velger.</p><div class="chips">{#each data.curriculum.domains as domain}<button type="button" class="chip" class:active={prefs.collectionIds.includes(domain.id)} aria-pressed={prefs.collectionIds.includes(domain.id)} onclick={()=>toggleCollection(domain.id)}>{domain.title}</button>{/each}</div></div>{/if}
+      <div class="card stack"><label class="field">Øktlengde<select class="select" bind:value={prefs.dailyMinutes}><option value={3}>Kort · omtrent 6 spørsmål</option><option value={5}>Vanlig · omtrent 10 spørsmål</option><option value={10}>Lang · omtrent 20 spørsmål</option></select></label><label class="field">Nytt stoff<select class="select" bind:value={prefs.newRatio}><option value={0}>Bare repetisjon når noe er klart</option><option value={0.25}>Lite nytt</option><option value={0.4}>Balansert</option><option value={0.6}>Mye nytt</option></select></label><p class="muted detail">Repetisjoner kommer alltid først. Nye kort fyller resten av økten.</p></div>
+      <details class="card"><summary>Registre og fri quiz</summary><p class="muted">Disse valgene gjelder bare quizer fra registrene (Nobelpriser, kommuner, land), ikke emnene.</p><h3>Samlinger</h3><div class="chips">{#each data.collections.filter(c=>!c.core) as collection}<button type="button" class="chip" class:active={prefs.collectionIds.includes(collection.id)} aria-pressed={prefs.collectionIds.includes(collection.id)} onclick={()=>toggleCollection(collection.id)}>{collection.title}</button>{/each}</div>
+      <h3>Hva er relevant for deg?</h3><p class="muted">Spørsmål fra registrene vektes etter hvor sentralt temaet står i nettverket, hvor aktuelt det er i nyhetene, og hvor nær Oslo det ligger.</p>{#each [['impact','Påvirkning'],['actuality','Aktualitet'],['locality','Nærhet']] as [key,name]}<label class="slider">{name} <strong>{prefs.relevance?.[key] ?? DEFAULT_RELEVANCE[key]}</strong><input type="range" min="0" max="100" step="5" value={prefs.relevance?.[key] ?? DEFAULT_RELEVANCE[key]} oninput={e=>prefs.relevance={...DEFAULT_RELEVANCE,...prefs.relevance,[key]:Number(e.currentTarget.value)}}></label>{/each}<div class="stack"><label class="field">Fagområde<select class="select" bind:value={prefs.subject}><option value="all">Alle fagområder</option>{#each [...new Set(data.collections.map(c=>c.subject))] as subject}<option value={subject}>{subjectLabel(subject)}</option>{/each}</select></label><label class="field">Nivå<select class="select" bind:value={prefs.depth}><option value="foundation">Grunnlag</option><option value="intermediate">Detaljer</option><option value="advanced">Avansert</option><option value="specialized">All installert kunnskap</option></select></label><label class="field">Geografisk relevans<select class="select" bind:value={prefs.geography}><option value="global">Global betydning</option><option value="norway">Mer norsk relevans</option></select></label><p class="muted detail">Norske spørsmål prioriteres.</p><label class="field">Bredde<select class="select" bind:value={prefs.breadth}><option value="broad">Veksle mellom fagområder</option><option value="deep">Fordypning</option></select></label><div class="row"><label class="field">Fra år<input class="input" type="number" min="-10000" max="2100" placeholder="Valgfritt" bind:value={prefs.fromYear}></label><label class="field">Til år<input class="input" type="number" min="-10000" max="2100" placeholder="Valgfritt" bind:value={prefs.toYear}></label></div><p class="muted detail">Årsfilteret gjelder spørsmål med dato.</p></div></details>
+      <button class="primary" type="submit" disabled={busy}>Lagre</button>
     </form>
   {:else if view === 'explore'}
     {#if entity}
-      <button class="quiet back-button" onclick={()=>detailId=''}>← Bibliotek</button><section class="hero"><p class="eyebrow">{typeLabel(entity.type)}</p><h1>{#if entity.geo && entity.iso2}<span aria-hidden="true">{flagEmoji(entity.iso2)} </span>{/if}{entity.label}</h1><p class="lead">{entity.summary}</p></section>{#if artworkMedia.find(m=>m.entityId===entity.id)}{@const art=artworkMedia.find(m=>m.entityId===entity.id)}<figure class="artwork-figure"><img src={art.url} alt={`${art.title} av ${art.artist}`} width={art.width} height={art.height}><figcaption class="muted detail">{art.credit} · <a href={art.sourceUrl} target="_blank" rel="noreferrer">Bildekilde</a></figcaption></figure>{/if}
+      <button class="quiet back-button" onclick={()=>detailId=''}>← Bibliotek</button><section class="hero"><p class="eyebrow">{typeLabel(entity.type)}</p><h1>{#if entity.geo && entity.iso2}<span aria-hidden="true">{flagEmoji(entity.iso2)} </span>{/if}{entity.label}</h1><p class="lead">{entity.summary}</p></section>{#if entity.type==='topic'}<button class="primary" onclick={()=>{selectedUnit=entity.id.replace(/^unit:/,'');navigate('learn');}}>Åpne emnet</button>{/if}{#if artworkMedia.find(m=>m.entityId===entity.id)}{@const art=artworkMedia.find(m=>m.entityId===entity.id)}<figure class="artwork-figure"><img src={art.url} alt={`${art.title} av ${art.artist}`} width={art.width} height={art.height}><figcaption class="muted detail">{art.credit} · <a href={art.sourceUrl} target="_blank" rel="noreferrer">Bildekilde</a></figcaption></figure>{/if}
       {#if sourceQueries(entity,data.sources).length}<div class="card stack"><button class="secondary" disabled={busy} onclick={()=>run(()=>loadMoreSources(entity.id))}>Hent bilder og flere spørsmål</button><p class="muted detail">Henter kildebelagte forbindelser og bilder med fri bruk. Innholdet lagres på denne enheten.</p>{#if sourceProgress || sourceStatus}<p class="muted" role="status">{sourceProgress || sourceStatus}</p>{/if}</div>{/if}
       <div class="card stack"><label>Quiznivå<select bind:value={quizDepth}><option value="foundation">Grunnlag</option><option value="intermediate">Detaljer</option><option value="advanced">Avansert</option></select></label><button class="primary" disabled={busy || !targets.some(t=>t.entityId===entity.id)} onclick={()=>run(()=>beginSession('mixed',{entityId:entity.id,title:entity.label,depth:quizDepth}))}>Quiz om {entity.label}</button>{#if !targets.some(t=>t.entityId===entity.id)}<p class="muted">Denne siden har ikke quizspørsmål ennå.</p>{/if}</div>
       {#if worldGraph}<button class="secondary" onclick={()=>{try{const saved=JSON.parse(localStorage.getItem('atlas-world')||'{}');localStorage.setItem('atlas-world',JSON.stringify({...saved,focusId:entity.id}));}catch{}navigate('world');}}>Se {entity.label} gjennom historiesynene →</button>{/if}<div class="chips">{#each entity.collectionIds as id}<button class="chip" onclick={()=>run(()=>beginSession('mixed',{collectionId:id,depth:quizDepth,title:titleFor(id)}))}>Quiz: {titleFor(id)} →</button>{/each}</div>
@@ -575,11 +706,13 @@
     {/if}
   {:else if view === 'progress'}
     <section class="hero"><h1>Fremgang</h1></section><div class="chips progress-tabs" role="group" aria-label="Velg fremgangsvisning">{#each [{id:'overview',label:'Oversikt'},{id:'levels',label:'Nivåer'},{id:'topics',label:'Emner'},{id:'library',label:'Innholdsdekning'},{id:'history',label:'Siste svar'}] as tab}<button class="chip" aria-pressed={progressTab===tab.id} onclick={()=>{progressTab=tab.id;window.scrollTo(0,0);}}>{tab.label}</button>{/each}</div>
+    {#if progressTab==='overview' && data.curriculum && coreProgress}<div class="card"><h2>Kunnskapskart</h2><p class="muted">Andel kort du sist svarte riktig på uten hjelp, per fagområde.</p>{#each data.curriculum.domains as domain}{@const row=coreProgress.domains.get(domain.id)}<button class="unit-row" onclick={()=>{selectedUnit='';navigate('learn');}}><span class="unit-text"><strong>{domain.title}</strong><small class="muted">{row.complete} av {row.units} emner gjennomført · {row.correct} av {row.total} kort</small><span class="bar small"><span style={`width:${row.total?Math.round(100*row.correct/row.total):0}%`}></span></span></span></button>{/each}</div>{/if}
     {#if progressTab==='overview'}
-    <div class="card"><div class="stat-row"><div class="stat"><strong>{summary.answered}</strong><span>Ulike spørsmål besvart</span></div><div class="stat"><strong>{summary.correct}</strong><span>Riktige uten hjelp sist</span></div></div><p class="muted">Dagens quiz og emnequizer teller med.</p></div>
+    <div class="card"><div class="stat-row"><div class="stat"><strong>{summary.answered}</strong><span>Ulike spørsmål besvart</span></div><div class="stat"><strong>{summary.correct}</strong><span>Riktige uten hjelp sist</span></div></div><p class="muted">Dagens økt, emner og fri quiz teller med.</p></div>
     <div class="card"><h2>Øv videre</h2><p class="muted">{progress.retryIds.length} spørsmål hadde sist feil svar eller læringsstøtte.</p><button class="primary" disabled={!progress.retryIds.length || busy} onclick={()=>run(()=>beginSession('mixed',{targetIds:progress.retryIds,depth:'advanced',title:'Øv videre'}))}>Øv på det du trenger</button></div>
     <div class="card"><h2>Siste sju dager</h2><div class="week-activity">{#each progress.days as day}<div><strong>{day.count}</strong><span class="activity-bar" style={`height:${8+Math.min(60,day.count*3)}px`}></span><small>{day.label}</small></div>{/each}</div><p class="muted">Antall besvarte oppgaver, inkludert ekstraøving.</p></div>
     {/if}
+    
     {#if progressTab==='overview'}<div class="card"><h2>Hva slags øving?</h2><p class="muted">Siste svar uten hjelp, fordelt på ferdighet. Egenvurderte forklaringer er ikke en måling av full mestring.</p><div class="result-grid"><span><strong>{abilities.recognized}</strong>gjenkjent</span><span><strong>{abilities.recalled}</strong>hentet fram</span><span><strong>{abilities.explained}</strong>forklart med egenvurdering</span></div></div>{/if}
     {#if progressTab==='library'}<div class="card"><h2>Hva inneholder biblioteket?</h2><p class="muted">Dette viser innhold og mangler. Det måler ikke kunnskapen din eller full dekning av et fag.</p></div>{#each contentCoverage as coverage}<details class="card"><summary>{coverage.title}</summary><p class="muted">{coverage.scope}</p><p>{coverage.facts} testede fakta · {coverage.introductions} introduksjoner · {coverage.connections} sammenhengsøvelser · {coverage.paths} læringsstier</p><p class="muted">{coverage.untestedEntities} registeroppføringer uten øvelser. {coverage.sourced} testede fakta har kilder.</p>{#if coverage.gaps.length}<h3>Videre utvikling</h3><ul>{#each coverage.gaps as gap}<li>{gap}</li>{/each}</ul>{/if}</details>{/each}{/if}
     {#if progressTab==='levels'}<h2 class="section-title">Nivåene dine</h2>{#each ['foundation','details','connections'] as stage}{@const result=quizProgress(targets.filter(t=>learningStage(t)===stage),reviews)}<div class="card"><h3>{stageLabel(stage)}</h3><p class="muted">{stage==='foundation'?'Bli kjent med personer, steder og hendelser.':stage==='details'?'Øv på årstall og flere fakta.':'Øv på rekkefølge og forbindelser.'}</p><div class="coverage-track" role="img" aria-label={`${result.correct} riktige uten hjelp, ${result.answered-result.correct} trenger øving, ${result.remaining} usett`}><span class="coverage-correct" style={`width:${result.total?100*result.correct/result.total:0}%`}></span><span class="coverage-practice" style={`width:${result.total?100*(result.answered-result.correct)/result.total:0}%`}></span></div><p class="muted">{result.correct} riktige uten hjelp · {result.answered-result.correct} trenger øving · {result.remaining} usett</p></div>{/each}

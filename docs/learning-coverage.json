@@ -357,6 +357,195 @@
       ]
     },
     {
+      "id": "norgeshistorie",
+      "title": "Norgeshistorie",
+      "scope": "Register og øvelser; faglig fullstendighet er ikke vurdert.",
+      "entities": 12,
+      "exercises": 147,
+      "facts": 147,
+      "introductions": 0,
+      "connections": 37,
+      "objectives": 0,
+      "paths": 0,
+      "sourced": 147,
+      "untestedEntities": 0,
+      "untestedClaims": 0,
+      "unexplained": 0,
+      "gaps": [
+        "Læringsmål og nødvendige holdepunkter er ikke redaksjonelt kartlagt.",
+        "Mangler egne introduksjoner som forklarer betydningen.",
+        "Mangler en kuratert læringssti."
+      ]
+    },
+    {
+      "id": "verdenshistorie",
+      "title": "Verdenshistorie",
+      "scope": "Register og øvelser; faglig fullstendighet er ikke vurdert.",
+      "entities": 10,
+      "exercises": 137,
+      "facts": 137,
+      "introductions": 0,
+      "connections": 32,
+      "objectives": 0,
+      "paths": 0,
+      "sourced": 137,
+      "untestedEntities": 0,
+      "untestedClaims": 0,
+      "unexplained": 0,
+      "gaps": [
+        "Læringsmål og nødvendige holdepunkter er ikke redaksjonelt kartlagt.",
+        "Mangler egne introduksjoner som forklarer betydningen.",
+        "Mangler en kuratert læringssti."
+      ]
+    },
+    {
+      "id": "moderne-historie",
+      "title": "Det moderne århundret",
+      "scope": "Register og øvelser; faglig fullstendighet er ikke vurdert.",
+      "entities": 10,
+      "exercises": 137,
+      "facts": 137,
+      "introductions": 0,
+      "connections": 33,
+      "objectives": 0,
+      "paths": 0,
+      "sourced": 137,
+      "untestedEntities": 0,
+      "untestedClaims": 0,
+      "unexplained": 0,
+      "gaps": [
+        "Læringsmål og nødvendige holdepunkter er ikke redaksjonelt kartlagt.",
+        "Mangler egne introduksjoner som forklarer betydningen.",
+        "Mangler en kuratert læringssti."
+      ]
+    },
+    {
+      "id": "geografi",
+      "title": "Geografi",
+      "scope": "Register og øvelser; faglig fullstendighet er ikke vurdert.",
+      "entities": 10,
+      "exercises": 132,
+      "facts": 132,
+      "introductions": 0,
+      "connections": 29,
+      "objectives": 0,
+      "paths": 0,
+      "sourced": 132,
+      "untestedEntities": 0,
+      "untestedClaims": 0,
+      "unexplained": 0,
+      "gaps": [
+        "Læringsmål og nødvendige holdepunkter er ikke redaksjonelt kartlagt.",
+        "Mangler egne introduksjoner som forklarer betydningen.",
+        "Mangler en kuratert læringssti."
+      ]
+    },
+    {
+      "id": "naturvitenskap",
+      "title": "Naturvitenskap",
+      "scope": "Register og øvelser; faglig fullstendighet er ikke vurdert.",
+      "entities": 10,
+      "exercises": 126,
+      "facts": 126,
+      "introductions": 0,
+      "connections": 33,
+      "objectives": 0,
+      "paths": 0,
+      "sourced": 126,
+      "untestedEntities": 0,
+      "untestedClaims": 0,
+      "unexplained": 0,
+      "gaps": [
+        "Læringsmål og nødvendige holdepunkter er ikke redaksjonelt kartlagt.",
+        "Mangler egne introduksjoner som forklarer betydningen.",
+        "Mangler en kuratert læringssti."
+      ]
+    },
+    {
+      "id": "biologi",
+      "title": "Liv, kropp og miljø",
+      "scope": "Register og øvelser; faglig fullstendighet er ikke vurdert.",
+      "entities": 8,
+      "exercises": 100,
+      "facts": 100,
+      "introductions": 0,
+      "connections": 27,
+      "objectives": 0,
+      "paths": 0,
+      "sourced": 100,
+      "untestedEntities": 0,
+      "untestedClaims": 0,
+      "unexplained": 0,
+      "gaps": [
+        "Læringsmål og nødvendige holdepunkter er ikke redaksjonelt kartlagt.",
+        "Mangler egne introduksjoner som forklarer betydningen.",
+        "Mangler en kuratert læringssti."
+      ]
+    },
+    {
+      "id": "samfunn",
+      "title": "Samfunn, politikk og ideer",
+      "scope": "Register og øvelser; faglig fullstendighet er ikke vurdert.",
+      "entities": 9,
+      "exercises": 117,
+      "facts": 117,
+      "introductions": 0,
+      "connections": 26,
+      "objectives": 0,
+      "paths": 0,
+      "sourced": 117,
+      "untestedEntities": 0,
+      "untestedClaims": 0,
+      "unexplained": 0,
+      "gaps": [
+        "Læringsmål og nødvendige holdepunkter er ikke redaksjonelt kartlagt.",
+        "Mangler egne introduksjoner som forklarer betydningen.",
+        "Mangler en kuratert læringssti."
+      ]
+    },
+    {
+      "id": "kunst-musikk",
+      "title": "Kunst, arkitektur og musikk",
+      "scope": "Register og øvelser; faglig fullstendighet er ikke vurdert.",
+      "entities": 7,
+      "exercises": 93,
+      "facts": 93,
+      "introductions": 0,
+      "connections": 23,
+      "objectives": 0,
+      "paths": 0,
+      "sourced": 93,
+      "untestedEntities": 0,
+      "untestedClaims": 0,
+      "unexplained": 0,
+      "gaps": [
+        "Læringsmål og nødvendige holdepunkter er ikke redaksjonelt kartlagt.",
+        "Mangler egne introduksjoner som forklarer betydningen.",
+        "Mangler en kuratert læringssti."
+      ]
+    },
+    {
+      "id": "litteratur",
+      "title": "Litteratur og språk",
+      "scope": "Register og øvelser; faglig fullstendighet er ikke vurdert.",
+      "entities": 8,
+      "exercises": 104,
+      "facts": 104,
+      "introductions": 0,
+      "connections": 24,
+      "objectives": 0,
+      "paths": 0,
+      "sourced": 104,
+      "untestedEntities": 0,
+      "untestedClaims": 0,
+      "unexplained": 0,
+      "gaps": [
+        "Læringsmål og nødvendige holdepunkter er ikke redaksjonelt kartlagt.",
+        "Mangler egne introduksjoner som forklarer betydningen.",
+        "Mangler en kuratert læringssti."
+      ]
+    },
+    {
       "id": "world-lenses",
       "title": "Verdensblikk",
       "scope": "Register og øvelser; faglig fullstendighet er ikke vurdert.",

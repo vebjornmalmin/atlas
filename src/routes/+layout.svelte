@@ -6,9 +6,9 @@
   let active = $state('today');
   let status = $state('Starter');
   const navigation = [
-    { id: 'today', label: 'Quiz' },
+    { id: 'today', label: 'I dag' },
+    { id: 'learn', label: 'Emner' },
     { id: 'world', label: 'Verden' },
-    { id: 'focus', label: 'Utvalg' },
     { id: 'explore', label: 'Søk' },
     { id: 'progress', label: 'Fremgang' },
     { id: 'settings', label: 'Innstillinger' }
@@ -69,10 +69,10 @@
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
         {#if item.id === 'today'}
           <circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/>
+        {:else if item.id === 'learn'}
+          <path d="M5 4h10a4 4 0 0 1 4 4v12H9a4 4 0 0 1-4-4V4Z"/><path d="M9 8h6M9 12h6"/>
         {:else if item.id === 'world'}
           <circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3Z"/>
-        {:else if item.id === 'focus'}
-          <circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 2v3m0 14v3M2 12h3m14 0h3"/>
         {:else if item.id === 'explore'}
           <path d="M3 5.5c3-1.5 6-1.5 9 .5 3-2 6-2 9-.5v14c-3-1.5-6-1.5-9 .5-3-2-6-2-9-.5v-14Z"/><path d="M12 6v14"/>
         {:else if item.id === 'progress'}

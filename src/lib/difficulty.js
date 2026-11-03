@@ -12,7 +12,9 @@ const WORLD_FAMILIES={
  'perspective-switch':[3,'connections','Krever at du kjenner igjen et historiesyn i en konkret beskrivelse.']
 };
 const assessment=(difficulty,learningStage,family,difficultyReason)=>({difficulty,learningStage,difficultyFamily:family,difficultyReason,difficultyPolicy:'2026-10-11'});
+const CORE_REASONS={1:'Oversikt: hva, når og hvorfor det betyr noe. Svaret er undervist i emnets innledning.',2:'Kjerne: hent fram et sentralt navn, begrep eller sted.',3:'Sammenheng: forklar årsaker, følger eller forskjeller.',4:'Detalj: et presist årstall, tall eller navn.'};
 function familyAssessment(target) {
+ if(target.unitId)return assessment(target.difficulty,target.learningStage,'core-curriculum',CORE_REASONS[target.step] || CORE_REASONS[2]);
  if(target.learningProfile?.reviewed)return assessment(target.answerFormat==='explanation'?3:2,target.learningProfile.stage,'curated-learning',target.answerFormat==='explanation'?'Krever at du forklarer eller sammenligner dokumenterte sammenhenger med egne ord.':'Krever et sentralt holdepunkt før du går videre til detaljer.');
  const world=WORLD_FAMILIES[target.format];
  if(world){const rare=target.format==='flags' && !target.familiar;return assessment(rare?3:world[0],rare?'details':world[1],`world-${target.format}`,world[2]);}

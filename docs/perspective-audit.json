@@ -1,5 +1,5 @@
 {
-  "generatedFor": "1.3.0",
+  "generatedFor": "2.1.0",
   "snapshotDate": "2026-11-02",
   "meanTopOverlap": 0.086,
   "mostSimilarPairs": [
@@ -73,7 +73,7 @@
     {
       "id": "cyclical",
       "name": "Sykluser",
-      "seesShare": 0.018,
+      "seesShare": 0.017,
       "topNodes": [
         "USAs president",
         "Donald Trump",
@@ -93,7 +93,7 @@
     {
       "id": "progress",
       "name": "Fremskritt",
-      "seesShare": 0.557,
+      "seesShare": 0.544,
       "topNodes": [
         "Nobelprisen i fysikk",
         "Nobelprisen i fysiologi eller medisin",
@@ -113,7 +113,7 @@
     {
       "id": "great-individuals",
       "name": "Store personer",
-      "seesShare": 0.33,
+      "seesShare": 0.322,
       "topNodes": [
         "USAs president",
         "Thomas Carlyle",
@@ -133,7 +133,7 @@
     {
       "id": "materialist",
       "name": "Materielle krefter og klasse",
-      "seesShare": 0.173,
+      "seesShare": 0.169,
       "topNodes": [
         "Storbritannia",
         "USA",
@@ -153,7 +153,7 @@
     {
       "id": "civilizations",
       "name": "Sivilisasjoner",
-      "seesShare": 0.084,
+      "seesShare": 0.082,
       "topNodes": [
         "Nord-Europa",
         "Karibia",
@@ -173,7 +173,7 @@
     {
       "id": "annales",
       "name": "Lang varighet og mentaliteter",
-      "seesShare": 0.197,
+      "seesShare": 0.192,
       "topNodes": [
         "Frankrike",
         "Nord-Europa",
@@ -193,7 +193,7 @@
     {
       "id": "from-below",
       "name": "Historie nedenfra",
-      "seesShare": 0.029,
+      "seesShare": 0.028,
       "topNodes": [
         "Ny prognose: svakere boligprisvekst i Oslo fram mot 2029",
         "Over 5000 døde i ebolautbruddet i DR Kongo",
@@ -213,7 +213,7 @@
     {
       "id": "microhistory",
       "name": "Mikrohistorie",
-      "seesShare": 0.113,
+      "seesShare": 0.11,
       "topNodes": [
         "Innlandet",
         "Vestland",
@@ -251,7 +251,7 @@
     {
       "id": "power-discourse",
       "name": "Makt og diskurs",
-      "seesShare": 0.119,
+      "seesShare": 0.116,
       "topNodes": [
         "Nobelprisen i litteratur",
         "Nobels fredspris",
@@ -271,7 +271,7 @@
     {
       "id": "postcolonial",
       "name": "Postkolonialt blikk",
-      "seesShare": 0.078,
+      "seesShare": 0.076,
       "topNodes": [
         "USA",
         "Storbritannia",
@@ -291,7 +291,7 @@
     {
       "id": "gender",
       "name": "Kjønn",
-      "seesShare": 0.294,
+      "seesShare": 0.287,
       "topNodes": [
         "Claudia Goldin",
         "Marie Curie",
@@ -311,7 +311,7 @@
     {
       "id": "world-system",
       "name": "Verdenssystem",
-      "seesShare": 0.191,
+      "seesShare": 0.186,
       "topNodes": [
         "USA",
         "Tyskland",
@@ -331,7 +331,7 @@
     {
       "id": "networks",
       "name": "Nettverk og møter",
-      "seesShare": 0.471,
+      "seesShare": 0.46,
       "topNodes": [
         "USA",
         "Storbritannia",
@@ -351,7 +351,7 @@
     {
       "id": "ecological",
       "name": "Natur og økologi",
-      "seesShare": 0.024,
+      "seesShare": 0.023,
       "topNodes": [
         "Russland",
         "Argentina",
@@ -371,7 +371,7 @@
     {
       "id": "big-history",
       "name": "Kosmisk skala",
-      "seesShare": 0.464,
+      "seesShare": 0.453,
       "topNodes": [
         "Jordbruk",
         "Jorden og solsystemet",
@@ -391,7 +391,7 @@
     {
       "id": "memory",
       "name": "Erindring",
-      "seesShare": 0.021,
+      "seesShare": 0.02,
       "topNodes": [
         "Magna Carta",
         "Vannliljedammen",
@@ -409,7 +409,7 @@
     {
       "id": "geopolitics",
       "name": "Geopolitikk",
-      "seesShare": 0.155,
+      "seesShare": 0.151,
       "topNodes": [
         "Russland",
         "Tyskland",

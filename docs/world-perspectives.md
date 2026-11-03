@@ -27,7 +27,7 @@ Dette er stedfortredende mål. De er merket slik i appen og skal ikke leses som 
 - **Aktualitet:** et datert nyhetsutvalg (`knowledge-build/news-snapshot.json`). En sak teller mest på publiseringsdagen og halveres hver 14. dag. Hovedsteder og naboland får en liten andel. Nyhetene oppdateres gjennom nye kunnskapspakker, aldri i bakgrunnen.
 - **Nærhet:** luftlinje fra Oslo til landets geografiske midtpunkt på kartet. Norge og norske steder regnes som nære.
 
-Brukeren vekter de tre selv i Verden og i Utvalg. Den samme vektingen påvirker hvilke nye spørsmål dagens quiz foreslår. Hver linse har en standardvekting som kan tas i bruk med ett trykk.
+Brukeren vekter de tre selv i Verden og under «Tilpass økten» → «Registre og fri quiz». Vektingen ordner spørsmål fra registrene og fri quiz. Dagens økt i læringskjernen følger pensumets rekkefølge og påvirkes ikke. Hver linse har en standardvekting som kan tas i bruk med ett trykk.
 
 ## Nye forbindelser i grafen
 
@@ -49,7 +49,7 @@ Registeret består mest av navngitte personer, prisvinnere og administrative ste
 
 ## Gjenbygging
 
-`npm run build` kjører først `scripts/build-world-graph.mjs`. Skriptet fjerner forrige perspektivlag (`layer: "perspective"`) og bygger det på nytt fra kartet, Nobelregisteret, forskningsfilen og nyhetsutvalget. Deretter kjøres berikelse, revisjoner, validering og pakking som før. `validatePerspectives` kontrollerer linser, terskler, påvirkningsverdier, datoer og posisjoner både ved bygging og før en pakke installeres på telefonen.
+`npm run build` kjører `scripts/build-world-graph.mjs` etter at læringskjernen er satt sammen (`build-core.mjs`). Skriptet fjerner forrige perspektivlag (`layer: "perspective"`) og bygger det på nytt fra kartet, Nobelregisteret, forskningsfilen og nyhetsutvalget. Deretter kjøres berikelse, revisjoner, validering og pakking som før. `validatePerspectives` kontrollerer linser, terskler, påvirkningsverdier, datoer og posisjoner både ved bygging og før en pakke installeres på telefonen.
 
 ## Validering av ideen – 2. november 2026
 
@@ -64,3 +64,8 @@ Registeret består mest av navngitte personer, prisvinnere og administrative ste
 Kontroller i iOS Simulator (iPhone 17 Pro) mot produksjonsbygget: oppdatering fra en eldre installert kunnskapspakke, ny installasjon, Verden med linsevalg, kart, nodekort med flagg, påvirkning, aktualitet og avstand, perspektivbytte, naboland og forbindelser. En naboreise fra Finland til Ungarn ble vurdert som riktig med korteste rute. Påbegynt quiz ble gjenopprettet etter omlasting. Ny apputgave ble aktivert uten tap av fremgang, og Verden lastet fra hurtigbufferen med serveren stoppet. Fysisk telefon, flymodus og mørk modus er ikke kontrollert.
 
 Nyhetsutvalget er kontrollert ved stikkprøver mot kildene (Al Jazeera om ebola og om Burnham, Equinors kvartalsrapport). Utvalget bygger på kilder fra perioden og beskriver forhold etter forfatterens egen kunnskap, blant annet kong Haakon som konge, Andy Burnham som britisk statsminister og krigen mot Iran.
+
+## Sammenslåing med læringskjernen – 3. november 2026
+
+Perspektivlaget ble først bygd på kunnskapspakke 1.2.0 og deretter flyttet oppå læringskjernen i 1.0.0. Fra app 1.1.0 og kunnskapspakke 2.1.0 bygges laget etter at pensumet er satt sammen. Pensumets egne rader (`unit:`, `core:` og tilhørende fakta og kilder) holdes utenfor påvirkningsberegningen. De har ingen forbindelser i grafen og skiftes ut hver gang pensumet kompileres, så laget skal ikke være avhengig av dem. Revisjonstallene er de samme etter sammenslåingen: 8,6 % felles toppnoder og 21 % felles land på kartet.
+

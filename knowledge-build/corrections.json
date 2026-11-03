@@ -1,0 +1,19 @@
+{
+  "note": "Norske navneformer etter Store norske leksikon. Den tidligere formen godtas fortsatt som svar.",
+  "labels": {
+    "Belgrade": "Beograd",
+    "Bucharest": "București",
+    "Tehran": "Teheran",
+    "Tashkent": "Tasjkent",
+    "Nay Pyi Taw": "Naypyidaw",
+    "Ulaanbaatar": "Ulan Bator",
+    "Yerevan": "Jerevan",
+    "Nicosia": "Nikosia",
+    "Baghdad": "Bagdad",
+    "Kathmandu": "Katmandu",
+    "Kuwait City": "Kuwait by"
+  },
+  "accept": {
+    "București": ["Bucuresti", "Bukarest"]
+  }
+}

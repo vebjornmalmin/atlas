@@ -22,6 +22,6 @@ for(const t of data.targets)if(t.testedTargetIds)data.exerciseFacts[t.id].claimI
 // Explanatory comparisons retain their own scheduling identity; component claims are references, not inferred mastery.
 Object.assign(data,{learningObjectives:learningObjectives.map(o=>({...o,claimIds:[...new Set(o.targetIds.flatMap(id=>data.exerciseFacts[id]?.claimIds||[]))],prerequisiteRationale:o.prerequisites.length?'Disse holdepunktene gjør den neste sammenhengen lettere å forstå.':''})),learningPaths});
 data.targets=assessTargets(attachKnowledge(data.targets,data));
-Object.assign(data,{version:'1.3.0',generatedAt:'2026-11-02T18:00:00Z',targetCount:data.targets.length});
+Object.assign(data,{version:'1.2.0',generatedAt:'2026-10-11T18:00:00Z',targetCount:data.targets.length});
 await writeFile('public/knowledge/foundation.json',JSON.stringify(data,null,2)+'\n');
 console.log(JSON.stringify({claims:data.claims.length,objectives:data.learningObjectives.length,paths:data.learningPaths.length}));

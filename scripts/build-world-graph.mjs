@@ -5,6 +5,7 @@ import {readFile,writeFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {LENS_PROJECTIONS} from '../knowledge-build/lens-projections.mjs';
 import {distanceKm} from '../src/lib/world-graph.js';
+import {isCore} from '../src/lib/core-curriculum.js';
 
 const LAYER='perspective';
 const read=async path=>JSON.parse(await readFile(path,'utf8'));
@@ -218,7 +219,8 @@ for(const item of news.items){
 // 5. Impact: weighted, undirected PageRank over the finished graph, reported as a percentile.
 // Administrative containment and prize bookkeeping would otherwise make counties and prize categories the most "important" nodes.
 const EDGE_WEIGHT={'part-of':.05,'located-in':.2,'in-region':.2,'formerly-part-of':.2,'award-category':.05,'awarded-prize':.3,'award-time-affiliation':.4,'located-in-country':.3,'birthplace-in-current-country':.5,'capital-of':.6,borders:.6,'knowledge-flow':.6,mentions:.8};
-const nodes=data.entities.map(e=>e.id),index=new Map(nodes.map((id,i)=>[id,i]));
+// Curriculum rows are recompiled on their own, so the layer must not depend on them.
+const nodes=data.entities.map(e=>e.id).filter(id=>!isCore(id)),index=new Map(nodes.map((id,i)=>[id,i]));
 const neighbours=nodes.map(()=>[]);
 for(const r of data.relationships){const a=index.get(r.from),b=index.get(r.to);if(a===undefined || b===undefined)continue;const w=EDGE_WEIGHT[r.type] ?? 1;neighbours[a].push([b,w]);neighbours[b].push([a,w]);}
 const strength=neighbours.map(list=>list.reduce((sum,[,w])=>sum+w,0));

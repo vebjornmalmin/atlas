@@ -1,20 +1,32 @@
 # Atlas
 
-Mobile PWA starter, deployed on 10 October 2026.
+Offline kunnskapstrening på norsk, laget for iPhone 17 Pro.
 
 Live app: https://atlas-first-app.atlas-memory.workers.dev
 
-## Current learning release — 0.11.0
+## Gjeldende utgave — 1.1.0: Verden gjennom tjue historiesyn
 
-- Mobile-only SvelteKit PWA with Today, Focus, Explore, Progress, and Settings.
-- A shared sourced graph covering global geography, every Norwegian municipality, Nobel award records through 2025, and curated culture/history. Coverage and exact installed counts are reported in the app.
-- Free recall, recognition, chronology, real country outlines and map selection, and all 15 current Norwegian counties.
-- Per-target FSRS scheduling, saved sessions, review history, collection focus, independent learning preferences, and local progress.
-- IndexedDB personal data, full backup export/validated atomic restore, persistent-storage request, themes, calendar reminders, and bounded local diagnostics.
-- Hash-verified knowledge updates with atomic installation and preservation of review history. App updates require explicit activation and preserve paused sessions.
-- Complete installed app and knowledge cache. Developer settings offer a cache-only network-disabled test.
+Ny fane **Verden** ved siden av Emner: den samme kunnskapsgrafen sett gjennom tjue historiesyn, fra kildekritikk og Ibn Khalduns sykluser til Annales, Hayden Whites metahistorie, verdenssystem, Big History og Mackinders geopolitikk. Hvert syn har et grunnspørsmål, tenkere, verk, begreper, kritikk og en synlig blindsone. Kartet, rangeringen, forbindelsene og «Finn sammenhengen» vektes etter linsen og etter brukerens vekting av påvirkning, aktualitet og nærhet til Oslo. Den samme vektingen ordner spørsmål fra registrene og fri quiz. Dagens økt i læringskjernen følger fortsatt pensumets rekkefølge.
 
-On iPhone, open in Safari and choose Share → Add to Home Screen. On Android, choose Install app or Add to home screen in the browser menu. Installation and airplane-mode behavior on a physical phone remain to be confirmed.
+Kunnskapspakke 2.1.0 bygger perspektivlaget oppå læringskjernen: 302 landegrenser fra kartgrunnlaget, 116 strømmer av Nobelprisvinnere mellom land, 48 historikere og tenkere, 52 verk, 45 begreper, Whites troper og plotformer, David Christians åtte terskler og 27 daterte nyheter fra 21. oktober til 2. november 2026. Ti nye øvelsesformer under fri quiz: flagg begge veier, naboland, naboreise, nyhetskartet, linsens spørsmål, tenkere og ideer, plottlesing, skalastigen, kunnskapsflyt og perspektivbytte. Pensumets emner holdes utenfor påvirkningsberegningen, slik at kjernen kan bygges om uten å gjøre perspektivlaget ugyldig.
+
+Modell, mål, avgrensninger og validering: [docs/world-perspectives.md](docs/world-perspectives.md).
+
+## 1.0.0: Læringskjernen
+
+Atlas er bygd om rundt et kuratert pensum for én voksen elev på iPhone 17 Pro.
+
+- **Læringskjernen**: 9 fagområder, 84 emner og 1093 kort, skrevet fra Store norske leksikon, faglig gjennomgått av fire fagspesialister og språkvasket. Hvert emne har en kort innføring, punkter som skal sitte, kilder og kort i fire steg: oversikt, kjerne, sammenheng og detalj.
+- **Progresjon**: emner bygger på hverandre på tvers av fag. Dagens økt starter med repetisjoner, åpner nye emner med innføringen som eget steg, og sprer spørsmålene slik at eleven henter fram i stedet for å kopiere. Et emnes grunnlag regnes som på plass først når det er husket også en annen dag.
+- **Skjermer**: I dag (dagens økt og læringsvei), Emner (fagområder, tidslinje, emnesider), Verden (fra 1.1.0), Søk, Fremgang (kunnskapskart) og Innstillinger.
+- **Svar**: jevn stokking av alternativer, toleranse for skrivefeil, årstall og tall, egen godkjenning av tekstsvar, sjekkliste for forklaringer og ett trykk på «Neste».
+- **Registrene** (land, kommuner, Nobelpriser, presidenter) er beholdt som oppslagsverk og fri quiz. Tidligere repetisjoner fortsetter i dagens økt.
+
+Modell og beslutninger: [docs/learning-core.md](docs/learning-core.md). Skrive nye emner: [docs/curriculum-authoring.md](docs/curriculum-authoring.md).
+
+Publisert 2. november 2026: app 1.0.0, utgivelse `cbdd4fd4fe3e`, kunnskapspakke 2.0.0 (84 emner, 1093 kort). Helse- og versjonsendepunktene og pakkens hash er kontrollert mot bygget, og den publiserte appen er installert og startet i iPhone 17 Pro-simulatoren. Den første publiseringen viste at Safari kan melde `navigator.onLine = false` selv om nettet virker; appen prøver nå nettverket og regner bare et mislykket kall som frakoblet.
+
+Publiseringen gikk denne gangen via Wrangler, fordi Cloudflare-tilkoblingen ikke var tilgjengelig i økten. Oppsettet tilsvarer det tidligere: `name = "atlas-first-app"`, `main = "worker.mjs"`, `compatibility_date = "2026-10-10"`, `workers_dev = true`, `no_bundle = true` og observability slått på.
 
 ## Source and deployment
 
@@ -172,12 +184,3 @@ Fem kuraterte stier innfører betydning før detaljspørsmål og bygger videre t
 Utgivelsen er kontrollert med 152 automatiske tester og produksjonsbygg. Mobilkontrollen ved 390 × 844 bekrefter introduksjon før øving, støttet repetisjon, overgang til forklaring, egenvurdering, separate ferdighetsvisninger, innholdsdekning, gjenoppretting av skrevet svar etter tilbakemelding og omlasting, samt læringssti ved nettverksblokkering. Pakkeutskifting, avviste oppdateringer, sikkerhetskopi og tilbakeføring bevarer historikk i automatiske tester. Fysisk telefon og flymodus er ikke kontrollert i denne utgivelsen.
 
 Publisert utgivelse: `c25cc4269d3b`, app 0.11.0, kunnskapspakke 1.2.0. Cloudflare bekreftet utrullingen; offentlige helse- og versjonsendepunkter samsvarer med bygget. Mobilnettleseren bekreftet de fem læringsstiene etter oppdatering, med tidligere svarantall og påbegynt quiz bevart.
-
-
-## 0.12.0 – Verden gjennom tjue historiesyn
-
-Ny fane **Verden**: den samme kunnskapsgrafen sett gjennom tjue historiesyn, fra kildekritikk og Ibn Khalduns sykluser til Annales, Hayden Whites metahistorie, verdenssystem, Big History og Mackinders geopolitikk. Hvert syn har et grunnspørsmål, tenkere, verk, begreper, kritikk og en synlig blindsone. Kartet, rangeringen, forbindelsene og «Finn sammenhengen» vektes etter linsen og etter brukerens vekting av påvirkning, aktualitet og nærhet til Oslo. Samme vekting brukes når dagens quiz velger nye spørsmål.
-
-Kunnskapspakke 1.3.0 legger til 302 landegrenser fra kartgrunnlaget, 116 strømmer av Nobelprisvinnere mellom land, 48 historikere og tenkere, 52 verk, 45 begreper, Whites troper og plotformer, David Christians åtte terskler og 27 daterte nyheter fra 21. oktober til 2. november 2026. Ti nye øvelsesformer: flagg begge veier, naboland, naboreise, nyhetskartet, linsens spørsmål, tenkere og ideer, plottlesing, skalastigen, kunnskapsflyt og perspektivbytte.
-
-161 automatiske tester består. Modell, mål, avgrensninger og validering er beskrevet i [verdensblikk](docs/world-perspectives.md). Utgivelsen er ikke publisert.
