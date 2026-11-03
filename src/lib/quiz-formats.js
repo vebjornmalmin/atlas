@@ -1,4 +1,6 @@
 import {buildTimelineExercise,normalizeAnswer} from './exercises.js';
+import {gradeBorderWalk} from './world-exercises.js';
+import {WORLD_FORMATS} from '../../knowledge-build/lens-projections.mjs';
 
 export const FORMAT_CHOICES = [
   {id:'mixed',label:'Blandet quiz',note:'Varierte oppgaver'},
@@ -11,7 +13,8 @@ export const FORMAT_CHOICES = [
   {id:'outline',label:'Omriss',note:'Gjenkjenn formen'},
   {id:'chronology',label:'Tidslinje',note:'Sett hendelser i rekkefølge'}
 ];
-export const STRUCTURED_MODES = ['matching','before-after','arrows'];
+export const STRUCTURED_MODES = ['matching','before-after','arrows','pick','border-walk'];
+export const WORLD_FORMAT_CHOICES = WORLD_FORMATS;
 const regions = [
   {id:'gbr',label:'Storbritannia',x:358,y:59},
   {id:'fra',label:'Frankrike',x:365,y:79},
@@ -62,7 +65,9 @@ export function buildFormatTargets(data, maps=[]) {
   }
   return result;
 }
-export function gradeStructured(target,draft={}) {
+export function gradeStructured(target,draft={},neighbours=new Map()) {
+  if(target.mode==='pick')return {correct:draft.choice===target.correctId};
+  if(target.mode==='border-walk')return gradeBorderWalk(target,draft.path||[],neighbours);
   if(target.mode==='matching') {
     const correctCount=target.pairs.filter(p=>draft[p.id]===p.id).length;
     return {correct:correctCount===target.pairs.length,correctCount,total:target.pairs.length};
@@ -76,6 +81,8 @@ export function gradeStructured(target,draft={}) {
   return {correct:false};
 }
 export function structuredReady(target,draft={}) {
+  if(target.mode==='pick')return Boolean(draft.choice);
+  if(target.mode==='border-walk')return draft.path?.at(-1)===target.goal;
   if(target.mode==='matching')return target.pairs.every(p=>Boolean(draft[p.id]));
   if(target.mode==='before-after')return Boolean(draft.first);
   return Boolean(draft.from && draft.to && String(draft.year ?? '').trim());

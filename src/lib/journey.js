@@ -32,7 +32,7 @@ export function overviewBounds(dataset, zoom=1, panX=0, panY=0) {
 }
 // Geography questions can expose each other's answer even when their target IDs differ.
 export function exposureKey(target) {
-  if (target.answer && (['map','outline'].includes(target.mode) || target.collectionIds?.some(id=>['norway','world-geography','european-capitals','geography-connections'].includes(id)))) {
+  if (target.answer && (['map','outline'].includes(target.mode) || target.collectionIds?.some(id=>['norway','world-geography','european-capitals','geography-connections','flags-borders'].includes(id)))) {
     return `geography:${String(target.answer).normalize('NFKC').toLocaleLowerCase('nb').trim()}`;
   }
   return factKey(target);

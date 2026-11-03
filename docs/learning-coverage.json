@@ -15,7 +15,7 @@
       "paths": 3,
       "sourced": 149,
       "untestedEntities": 1,
-      "untestedClaims": 110,
+      "untestedClaims": 116,
       "unexplained": 0,
       "gaps": [
         "1 læringsmål mangler kildebelagte øvelser."
@@ -34,7 +34,7 @@
       "paths": 0,
       "sourced": 205,
       "untestedEntities": 2142,
-      "untestedClaims": 5322,
+      "untestedClaims": 5787,
       "unexplained": 0,
       "gaps": [
         "Læringsmål og nødvendige holdepunkter er ikke redaksjonelt kartlagt.",
@@ -55,7 +55,7 @@
       "paths": 0,
       "sourced": 221,
       "untestedEntities": 277,
-      "untestedClaims": 1973,
+      "untestedClaims": 2556,
       "unexplained": 0,
       "gaps": [
         "Læringsmål og nødvendige holdepunkter er ikke redaksjonelt kartlagt.",
@@ -77,7 +77,7 @@
       "paths": 0,
       "sourced": 30,
       "untestedEntities": 350,
-      "untestedClaims": 419,
+      "untestedClaims": 439,
       "unexplained": 0,
       "gaps": [
         "Læringsmål og nødvendige holdepunkter er ikke redaksjonelt kartlagt.",
@@ -99,7 +99,7 @@
       "paths": 2,
       "sourced": 43,
       "untestedEntities": 332,
-      "untestedClaims": 1926,
+      "untestedClaims": 2303,
       "unexplained": 0,
       "gaps": []
     },
@@ -116,7 +116,7 @@
       "paths": 0,
       "sourced": 145,
       "untestedEntities": 361,
-      "untestedClaims": 1847,
+      "untestedClaims": 2219,
       "unexplained": 0,
       "gaps": [
         "Læringsmål og nødvendige holdepunkter er ikke redaksjonelt kartlagt.",
@@ -138,7 +138,7 @@
       "paths": 2,
       "sourced": 22,
       "untestedEntities": 8,
-      "untestedClaims": 0,
+      "untestedClaims": 1,
       "unexplained": 0,
       "gaps": []
     },
@@ -155,7 +155,7 @@
       "paths": 0,
       "sourced": 153,
       "untestedEntities": 1425,
-      "untestedClaims": 4114,
+      "untestedClaims": 4495,
       "unexplained": 0,
       "gaps": [
         "Læringsmål og nødvendige holdepunkter er ikke redaksjonelt kartlagt.",
@@ -176,7 +176,7 @@
       "paths": 0,
       "sourced": 8,
       "untestedEntities": 11,
-      "untestedClaims": 436,
+      "untestedClaims": 564,
       "unexplained": 0,
       "gaps": [
         "Læringsmål og nødvendige holdepunkter er ikke redaksjonelt kartlagt.",
@@ -198,7 +198,7 @@
       "paths": 0,
       "sourced": 13,
       "untestedEntities": 6,
-      "untestedClaims": 11,
+      "untestedClaims": 12,
       "unexplained": 0,
       "gaps": [
         "Læringsmål og nødvendige holdepunkter er ikke redaksjonelt kartlagt.",
@@ -220,7 +220,7 @@
       "paths": 0,
       "sourced": 211,
       "untestedEntities": 277,
-      "untestedClaims": 1973,
+      "untestedClaims": 2556,
       "unexplained": 0,
       "gaps": [
         "Læringsmål og nødvendige holdepunkter er ikke redaksjonelt kartlagt.",
@@ -242,7 +242,7 @@
       "paths": 0,
       "sourced": 66,
       "untestedEntities": 519,
-      "untestedClaims": 2455,
+      "untestedClaims": 2749,
       "unexplained": 0,
       "gaps": [
         "Læringsmål og nødvendige holdepunkter er ikke redaksjonelt kartlagt.",
@@ -263,7 +263,7 @@
       "paths": 0,
       "sourced": 36,
       "untestedEntities": 491,
-      "untestedClaims": 2469,
+      "untestedClaims": 2808,
       "unexplained": 0,
       "gaps": [
         "Læringsmål og nødvendige holdepunkter er ikke redaksjonelt kartlagt.",
@@ -284,7 +284,7 @@
       "paths": 0,
       "sourced": 36,
       "untestedEntities": 555,
-      "untestedClaims": 2539,
+      "untestedClaims": 2864,
       "unexplained": 0,
       "gaps": [
         "Læringsmål og nødvendige holdepunkter er ikke redaksjonelt kartlagt.",
@@ -305,7 +305,7 @@
       "paths": 0,
       "sourced": 21,
       "untestedEntities": 319,
-      "untestedClaims": 1905,
+      "untestedClaims": 2279,
       "unexplained": 0,
       "gaps": [
         "Læringsmål og nødvendige holdepunkter er ikke redaksjonelt kartlagt.",
@@ -326,7 +326,7 @@
       "paths": 0,
       "sourced": 18,
       "untestedEntities": 295,
-      "untestedClaims": 1763,
+      "untestedClaims": 2127,
       "unexplained": 0,
       "gaps": [
         "Læringsmål og nødvendige holdepunkter er ikke redaksjonelt kartlagt.",
@@ -348,11 +348,77 @@
       "paths": 0,
       "sourced": 12,
       "untestedEntities": 221,
-      "untestedClaims": 1705,
+      "untestedClaims": 1976,
       "unexplained": 0,
       "gaps": [
         "Læringsmål og nødvendige holdepunkter er ikke redaksjonelt kartlagt.",
         "Mangler egne introduksjoner som forklarer betydningen.",
+        "Mangler en kuratert læringssti."
+      ]
+    },
+    {
+      "id": "world-lenses",
+      "title": "Verdensblikk",
+      "scope": "Register og øvelser; faglig fullstendighet er ikke vurdert.",
+      "entities": 240,
+      "exercises": 0,
+      "facts": 0,
+      "introductions": 0,
+      "connections": 0,
+      "objectives": 0,
+      "paths": 0,
+      "sourced": 0,
+      "untestedEntities": 240,
+      "untestedClaims": 1315,
+      "unexplained": 0,
+      "gaps": [
+        "Læringsmål og nødvendige holdepunkter er ikke redaksjonelt kartlagt.",
+        "Mangler egne introduksjoner som forklarer betydningen.",
+        "Mangler øvelser i forklaring, sammenligning eller rekkefølge.",
+        "Mangler en kuratert læringssti."
+      ]
+    },
+    {
+      "id": "flags-borders",
+      "title": "Flagg og naboland",
+      "scope": "Register og øvelser; faglig fullstendighet er ikke vurdert.",
+      "entities": 172,
+      "exercises": 0,
+      "facts": 0,
+      "introductions": 0,
+      "connections": 0,
+      "objectives": 0,
+      "paths": 0,
+      "sourced": 0,
+      "untestedEntities": 172,
+      "untestedClaims": 2303,
+      "unexplained": 0,
+      "gaps": [
+        "Læringsmål og nødvendige holdepunkter er ikke redaksjonelt kartlagt.",
+        "Mangler egne introduksjoner som forklarer betydningen.",
+        "Mangler øvelser i forklaring, sammenligning eller rekkefølge.",
+        "Mangler en kuratert læringssti."
+      ]
+    },
+    {
+      "id": "current-affairs",
+      "title": "Aktuelt nå",
+      "scope": "Register og øvelser; faglig fullstendighet er ikke vurdert.",
+      "entities": 85,
+      "exercises": 0,
+      "facts": 0,
+      "introductions": 0,
+      "connections": 0,
+      "objectives": 0,
+      "paths": 0,
+      "sourced": 0,
+      "untestedEntities": 85,
+      "untestedClaims": 1478,
+      "unexplained": 0,
+      "gaps": [
+        "Læringsmål og nødvendige holdepunkter er ikke redaksjonelt kartlagt.",
+        "Mangler egne introduksjoner som forklarer betydningen.",
+        "Mangler øvelser i forklaring, sammenligning eller rekkefølge.",
         "Mangler en kuratert læringssti."
       ]
     }

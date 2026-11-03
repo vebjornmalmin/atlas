@@ -172,3 +172,12 @@ Fem kuraterte stier innfører betydning før detaljspørsmål og bygger videre t
 Utgivelsen er kontrollert med 152 automatiske tester og produksjonsbygg. Mobilkontrollen ved 390 × 844 bekrefter introduksjon før øving, støttet repetisjon, overgang til forklaring, egenvurdering, separate ferdighetsvisninger, innholdsdekning, gjenoppretting av skrevet svar etter tilbakemelding og omlasting, samt læringssti ved nettverksblokkering. Pakkeutskifting, avviste oppdateringer, sikkerhetskopi og tilbakeføring bevarer historikk i automatiske tester. Fysisk telefon og flymodus er ikke kontrollert i denne utgivelsen.
 
 Publisert utgivelse: `c25cc4269d3b`, app 0.11.0, kunnskapspakke 1.2.0. Cloudflare bekreftet utrullingen; offentlige helse- og versjonsendepunkter samsvarer med bygget. Mobilnettleseren bekreftet de fem læringsstiene etter oppdatering, med tidligere svarantall og påbegynt quiz bevart.
+
+
+## 0.12.0 – Verden gjennom tjue historiesyn
+
+Ny fane **Verden**: den samme kunnskapsgrafen sett gjennom tjue historiesyn, fra kildekritikk og Ibn Khalduns sykluser til Annales, Hayden Whites metahistorie, verdenssystem, Big History og Mackinders geopolitikk. Hvert syn har et grunnspørsmål, tenkere, verk, begreper, kritikk og en synlig blindsone. Kartet, rangeringen, forbindelsene og «Finn sammenhengen» vektes etter linsen og etter brukerens vekting av påvirkning, aktualitet og nærhet til Oslo. Samme vekting brukes når dagens quiz velger nye spørsmål.
+
+Kunnskapspakke 1.3.0 legger til 302 landegrenser fra kartgrunnlaget, 116 strømmer av Nobelprisvinnere mellom land, 48 historikere og tenkere, 52 verk, 45 begreper, Whites troper og plotformer, David Christians åtte terskler og 27 daterte nyheter fra 21. oktober til 2. november 2026. Ti nye øvelsesformer: flagg begge veier, naboland, naboreise, nyhetskartet, linsens spørsmål, tenkere og ideer, plottlesing, skalastigen, kunnskapsflyt og perspektivbytte.
+
+161 automatiske tester består. Modell, mål, avgrensninger og validering er beskrevet i [verdensblikk](docs/world-perspectives.md). Utgivelsen er ikke publisert.

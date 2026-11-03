@@ -1,12 +1,16 @@
 import {schedulingKey,legacyFactKey,evidenceKind} from './knowledge-model.js';
 import {factKey,learningStage,uniqueFacts,exposureKey,uniqueQuizFacts} from './journey.js';
 import { fsrs, createEmptyCard, Rating } from 'ts-fsrs';
+import {DEFAULT_RELEVANCE} from './world-graph.js';
+import {WORLD_FORMATS} from '../../knowledge-build/lens-projections.mjs';
+const WORLD_OBJECTIVES = new Set(WORLD_FORMATS.map(f => f.id));
 export { Rating };
 const scheduler = fsrs({ request_retention: 0.9, enable_fuzz: false, enable_short_term: false });
 export const DEFAULT_PREFERENCES = {
   id: 'preferences', collectionIds: [], dailyMinutes: 5, newRatio: 0.4,
   depth: 'foundation', geography: 'global', objective: 'mixed', breadth: 'broad',
-  subject: 'all', fromYear: '', toYear: '', theme: 'system', reminderTime: '09:00'
+  subject: 'all', fromYear: '', toYear: '', theme: 'system', reminderTime: '09:00',
+  relevance: { ...DEFAULT_RELEVANCE }
 };
 
 
@@ -72,7 +76,8 @@ export function targetMatches(target, preferences, collections = []) {
   if (pref.objective === 'recognition' && target.mode !== 'recognition') return false;
   if (pref.objective === 'outline' && target.mode !== 'outline') return false;
   if (['matching','before-after','arrows'].includes(pref.objective) && target.mode!==pref.objective) return false;
-  if (pref.objective === 'recall' && ['map', 'timeline', 'recognition','matching','before-after','arrows'].includes(target.mode)) return false;
+  if (WORLD_OBJECTIVES.has(pref.objective) && target.format !== pref.objective) return false;
+  if (pref.objective === 'recall' && ['map', 'timeline', 'recognition','matching','before-after','arrows','pick','border-walk'].includes(target.mode)) return false;
   return true;
 }
 
@@ -82,7 +87,8 @@ export function selectSession(targets, states, preferences, now = new Date(), co
   const byId = schedulingIndex(targets,states,reviews);
   const due = eligible.filter(t => byId.has(schedulingKey(t)) && new Date(byId.get(schedulingKey(t)).due) <= now)
     .sort((a,b) => new Date(byId.get(schedulingKey(a)).due) - new Date(byId.get(schedulingKey(b)).due));
-  const score = target => target.significance * 2 - target.difficulty + (pref.geography === 'norway' && target.collectionIds.some(id => id.includes('norway') || id.includes('norwegian')) ? 3 : 0);
+  // Relevance (impact, actuality and nearness, weighted by the learner) is precomputed per target when available.
+  const score = target => target.significance * 2 - target.difficulty + 4 * (target.relevance || 0) + (pref.geography === 'norway' && target.collectionIds.some(id => id.includes('norway') || id.includes('norwegian')) ? 3 : 0);
   const knownFacts = new Set(targets.filter(t=>byId.has(schedulingKey(t))).map(factKey));
   const recentFacts = new Set(reviews.filter(r=>now-new Date(r.timestamp)<86400000).map(r=>targets.find(t=>t.id===r.targetId)).filter(Boolean).map(factKey));
   const fresh = eligible.filter(t => !knownFacts.has(factKey(t)) && !recentFacts.has(factKey(t)))

@@ -1,7 +1,21 @@
 // Difficulty describes the knowledge required, not the number of answer choices.
+const WORLD_FAMILIES={
+ flags:[2,'foundation','Ett flagg knyttes til ett land. Mindre kjente land regnes som detaljer.'],
+ neighbours:[3,'details','Krever at du ser for deg kartet rundt et land.'],
+ 'border-walk':[4,'connections','Krever at du kjenner flere landegrenser etter hverandre og planlegger en rute.'],
+ 'news-map':[2,'foundation','En aktuell sak knyttes til et sted på kartet.'],
+ 'lens-question':[2,'foundation','Ett grunnspørsmål knyttes til ett historiesyn.'],
+ thinkers:[3,'details','Krever at du har møtt tenkerne og deres verk eller begreper.'],
+ emplotment:[4,'details','Krever kjennskap til Hayden Whites begreper og hans lesning av en bestemt historiker.'],
+ scale:[4,'connections','Krever at du sammenligner flere størrelser i tid eller rom.'],
+ 'knowledge-flow':[4,'connections','Krever at du tolker mønstre i prisregisteret, ikke bare husker ett navn.'],
+ 'perspective-switch':[3,'connections','Krever at du kjenner igjen et historiesyn i en konkret beskrivelse.']
+};
 const assessment=(difficulty,learningStage,family,difficultyReason)=>({difficulty,learningStage,difficultyFamily:family,difficultyReason,difficultyPolicy:'2026-10-11'});
 function familyAssessment(target) {
  if(target.learningProfile?.reviewed)return assessment(target.answerFormat==='explanation'?3:2,target.learningProfile.stage,'curated-learning',target.answerFormat==='explanation'?'Krever at du forklarer eller sammenligner dokumenterte sammenhenger med egne ord.':'Krever et sentralt holdepunkt før du går videre til detaljer.');
+ const world=WORLD_FAMILIES[target.format];
+ if(world){const rare=target.format==='flags' && !target.familiar;return assessment(rare?3:world[0],rare?'details':world[1],`world-${target.format}`,world[2]);}
  const id=target.baseId || target.id.replace(/:recognition$/,'');
  const collections=target.collectionIds || [];
  if(target.mode==='matching')return assessment(3,'details','matching','Krever tre riktige koblinger mellom kjente navn eller steder.');
@@ -34,7 +48,7 @@ function familyAssessment(target) {
 export function assessDifficulty(target) {
  const family=familyAssessment(target);
  const numeric=/^-?\d{3,4}$/.test(String(target.answer));
- const reasoning=target.learningProfile?.reasoning || (target.answerFormat==='explanation'?'explain':['timeline','before-after','arrows'].includes(target.mode) || target.kind==='before-after'?'order':target.mode==='matching'?'compare':'identify');
+ const reasoning=target.learningProfile?.reasoning || (['scale'].includes(target.format)?'order':['knowledge-flow','perspective-switch','border-walk'].includes(target.format)?'compare':target.answerFormat==='explanation'?'explain':['timeline','before-after','arrows'].includes(target.mode) || target.kind==='before-after'?'order':target.mode==='matching'?'compare':'identify');
  const precision=target.learningProfile?.precision || (numeric?'exact':/person-list|city-list/.test(target.answerType||'')?'complete':'broad');
  const learningStage=target.learningProfile?.stage || family.learningStage;
  return {...family,learningStage,precision,reasoning,learningDepth:['compare','explain'].includes(reasoning)?'connections':reasoning==='order'?'sequence':learningStage==='foundation'?'foundation':'details'};

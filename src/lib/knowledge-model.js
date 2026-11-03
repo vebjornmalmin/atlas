@@ -16,13 +16,20 @@ export const RELATIONSHIP_RULES = {
   'birthplace-in-current-country':[['person'],countries], 'awarded-prize':[['person','organization'],['award-event']],
   'award-time-affiliation':[['person'],['organization']], 'located-in-country':[['organization'],countries],
   awarded:[['person','organization'],['award']], 'award-category':[['award-event'],['award']],
-  'recognized-contribution':[['award-event'],['concept','literary-work']], 'author-of':[['person'],['literary-work']],
+  'recognized-contribution':[['award-event'],['concept','literary-work']], 'author-of':[['person'],['literary-work','scholarly-work']],
   'features-character':[['literary-work'],['fictional-character']], 'uses-device':[['literary-work'],['concept']],
   'concerns-document':[['event'],['document']], 'involves-person':[['event'],['person']],
   'took-place-in':[['event'],['place','country','country-area']], adopted:[['organization'],['document']],
   drafted:[['person'],['document']], commanded:[['person'],['military-operation']],
   established:[['event'],['organization']], 'founded-under':[['organization'],['document']],
-  'crew-member':[['person'],['space-mission']]
+  'crew-member':[['person'],['space-mission']],
+  // Perspective layer.
+  borders:[countries,countries], 'knowledge-flow':[countries,countries],
+  'shaped-lens':[['person'],['lens']], 'key-work-for':[['scholarly-work','literary-work'],['lens']],
+  'uses-concept':[['lens'],['concept']], proposed:[['person'],['concept']], influenced:[['person'],['person']],
+  'emplotted-as':[['person'],['concept']], precedes:[['threshold'],['threshold']],
+  'views-through':[['lens'],['person','country','country-area','city','region','event','artwork','literary-work','scholarly-work','document','concept','threshold','organization','municipality','county','military-operation','space-mission']],
+  mentions:[['news-event'],['country','country-area','person','city','organization','region','municipality','county','event']]
 };
 export function legacyFactKey(target) {
   if (['map','outline'].includes(target.mode)) return `place:${target.datasetId}:${target.regionId}`;

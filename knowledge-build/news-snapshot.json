@@ -1,0 +1,899 @@
+{
+  "snapshotDate": "2026-11-02",
+  "method": "Nettsøk (vanlig og utvidet) og henting av enkeltsider 2. november 2026, med vindu 19. oktober–2. november 2026. Kilder: NRK, E24, regjeringen.no, Stortinget/NTB, Al Jazeera, Euronews, NPR, RNZ, Canadas statsministerkontor, UNRIC/UNEP, Equinor, Spaceflight Now, Forbes og daglige sammendrag (Just Security, Morning Star) som viser til Reuters. Bare saker med synlig publiseringsdato i vinduet er tatt med. Sammendragene er skrevet med egne ord. Der tall var oppgitt ulikt, brukes den forsiktigste verdien fra den oppgitte kilden.",
+  "items": [
+    {
+      "id": "news-2026-10-21-zelenskyj-oslo-fredssamtaler",
+      "date": "2026-10-21",
+      "publisher": "Stortinget (NTB Kommunikasjon) / regjeringen.no",
+      "url": "https://kommunikasjon.ntb.no/pressemelding/19113032/stortingspresidenten-vi-svikter-ikke-vare-ukrainske-venner?lang=no",
+      "headline": "Zelenskyj i Oslo for samtaler om krigen i Ukraina",
+      "summary": "Ukrainas president Volodymyr Zelenskyj besøkte Oslo 20.–21. oktober. Der var Jonas Gahr Støre og Finlands president Alexander Stubb vertskap for samtaler om krigen, og de amerikanske utsendingene Steve Witkoff og Jared Kushner deltok. Zelenskyj møtte også stortingspresident Masud Gharahkhani og de parlamentariske lederne på Stortinget og hadde audiens hos kong Haakon.",
+      "countryIso3": [
+        "NOR",
+        "UKR",
+        "FIN",
+        "USA"
+      ],
+      "places": [
+        "Oslo"
+      ],
+      "people": [
+        "Volodymyr Zelenskyj",
+        "Jonas Gahr Støre",
+        "Alexander Stubb",
+        "Masud Gharahkhani",
+        "Steve Witkoff",
+        "Jared Kushner",
+        "kong Haakon"
+      ],
+      "domain": "conflict",
+      "impact": 4,
+      "impactReason": "Oslo var vertskap for diplomati om en krig som berører Europas sikkerhet og millioner av mennesker.",
+      "lensHints": [
+        "geopolitics",
+        "networks",
+        "great-individuals",
+        "power-discourse"
+      ],
+      "background": "Russland startet den fullskala invasjonen av Ukraina i februar 2022.",
+      "entityIds": [
+        "oslo",
+        "norway",
+        "geo-ukr",
+        "finland",
+        "geo-usa"
+      ]
+    },
+    {
+      "id": "news-2026-11-02-oslo-barnebolig-skjulte-opptak",
+      "date": "2026-11-02",
+      "publisher": "NRK",
+      "url": "https://www.nrk.no/stor-oslo/nyhetssenter-stor-oslo-1.17142050",
+      "headline": "Skjulte opptak fra barnebolig i Oslo fører til politianmeldelser",
+      "summary": "Opptak gjort for en TV-dokumentar skal vise vold, tvang og nedverdigende behandling i en bolig for barn og unge med utviklingshemming i Oslo. Bydelen, Velferdsetaten og leverandøren har anmeldt forholdet, Statsforvalteren har åpnet tilsyn, og byråd Oluf Ulseth har stanset nye brukere fra kommunen hos leverandøren inntil videre.",
+      "countryIso3": [
+        "NOR"
+      ],
+      "places": [
+        "Oslo"
+      ],
+      "people": [
+        "Oluf Ulseth"
+      ],
+      "domain": "society",
+      "impact": 2,
+      "impactReason": "Lokal sak, men den reiser spørsmål om tilsyn med private omsorgstilbud til sårbare barn.",
+      "lensHints": [
+        "from-below",
+        "power-discourse",
+        "source-criticism"
+      ],
+      "entityIds": [
+        "oslo",
+        "norway"
+      ]
+    },
+    {
+      "id": "news-2026-11-02-oslo-boligprisprognose-kuttet",
+      "date": "2026-11-02",
+      "publisher": "NRK",
+      "url": "https://www.nrk.no/stor-oslo/nyhetssenter-stor-oslo-1.17142050",
+      "headline": "Ny prognose: svakere boligprisvekst i Oslo fram mot 2029",
+      "summary": "En rapport fra Samfunnsøkonomisk analyse har kuttet anslaget for prisveksten på boliger i Oslo fram til 2029 med 12 prosentpoeng, til 16 prosent. Tromsø, Bergen og Stavanger ventes å få høyere vekst, og prisene i Oslo ventes å ta seg opp igjen fra 2028 fordi det bygges lite nytt.",
+      "countryIso3": [
+        "NOR"
+      ],
+      "places": [
+        "Oslo",
+        "Tromsø",
+        "Bergen",
+        "Stavanger"
+      ],
+      "people": [],
+      "domain": "economy",
+      "impact": 2,
+      "impactReason": "Påvirker husholdninger og boligkjøpere i hovedstaden og de store byene.",
+      "lensHints": [
+        "materialist",
+        "cyclical"
+      ],
+      "entityIds": [
+        "oslo",
+        "municipality-no-5501",
+        "municipality-no-4601",
+        "municipality-no-1103",
+        "norway"
+      ]
+    },
+    {
+      "id": "news-2026-10-28-equinor-tredje-kvartal",
+      "date": "2026-10-28",
+      "publisher": "Equinor",
+      "url": "https://www.equinor.com/no/nyheter/equinors-resultater-for-tredje-kvartal-2026",
+      "headline": "Equinor leverer sterkt tredjekvartal på høyere olje- og gasspriser",
+      "summary": "Equinor fikk et justert driftsresultat på 12,35 milliarder dollar i tredje kvartal, hovedsakelig takket være høyere priser på olje og europeisk gass. Selskapet økte anslaget for produksjonsveksten i 2026 til rundt 4 prosent.",
+      "countryIso3": [
+        "NOR"
+      ],
+      "places": [
+        "Stavanger"
+      ],
+      "people": [],
+      "domain": "economy",
+      "impact": 3,
+      "impactReason": "Norges største selskap. Resultatet påvirker statens inntekter og henger sammen med energimarkedene i Europa.",
+      "lensHints": [
+        "materialist",
+        "world-system",
+        "ecological"
+      ],
+      "background": "Selskapet ble opprettet som Statoil i 1972 og skiftet navn til Equinor i 2018.",
+      "entityIds": [
+        "norway",
+        "municipality-no-1103"
+      ]
+    },
+    {
+      "id": "news-2026-10-28-etikkradet-oljefondet-strid",
+      "date": "2026-10-28",
+      "publisher": "E24",
+      "url": "https://e24.no/boers-og-finans/i/xloGEG/oljefondets-etikkraad-leder-truer-med-aa-trekke-seg",
+      "headline": "Lederen for oljefondets etikkråd truer med å gå av",
+      "summary": "Svein Richard Brandtzæg sier han går av hvis Gjedrem-utvalgets forslag blir vedtatt. Forslaget gir Etikkrådet kun ansvar for å vurdere risiko og tar fra det retten til å anbefale utelukkelse av selskaper. Finansdepartementet under Jens Stoltenberg vil konkludere etter høringen.",
+      "countryIso3": [
+        "NOR"
+      ],
+      "places": [
+        "Oslo"
+      ],
+      "people": [
+        "Svein Richard Brandtzæg",
+        "Jens Stoltenberg"
+      ],
+      "domain": "politics",
+      "impact": 3,
+      "impactReason": "Saken gjelder de etiske rammene for et av verdens største statlige fond, som eier aksjer i tusenvis av selskaper globalt.",
+      "lensHints": [
+        "power-discourse",
+        "world-system",
+        "materialist"
+      ],
+      "background": "Etikkrådet for Statens pensjonsfond utland ble opprettet i 2004.",
+      "entityIds": [
+        "norway",
+        "oslo"
+      ]
+    },
+    {
+      "id": "news-2026-10-29-dronning-sonja-munch-picasso-malaga",
+      "date": "2026-10-29",
+      "publisher": "TodoAlicante",
+      "url": "https://www.todoalicante.es/english/picasso-munch-titans-modern-20261029041049-nt.html",
+      "headline": "Dronning Sonja åpnet utstillingen Munch–Picasso i Málaga",
+      "summary": "Utstillingen på Museo Picasso Málaga viser over hundre verk av Edvard Munch og Pablo Picasso og står til 28. februar. Munchmuseet i Oslo er samarbeidspartner, og Nasjonalmuseet er blant långiverne. Ifølge flere medier var dette dronning Sonjas første utenlandsreise etter kong Haralds død.",
+      "countryIso3": [
+        "NOR",
+        "ESP"
+      ],
+      "places": [
+        "Málaga",
+        "Oslo"
+      ],
+      "people": [
+        "dronning Sonja",
+        "Edvard Munch",
+        "Pablo Picasso"
+      ],
+      "domain": "culture",
+      "impact": 2,
+      "impactReason": "Kulturdiplomati som setter norsk kunsthistorie i en europeisk sammenheng.",
+      "lensHints": [
+        "networks",
+        "great-individuals",
+        "memory"
+      ],
+      "background": "Picasso ble født i Málaga i 1881, og Munch levde fra 1863 til 1944.",
+      "entityIds": [
+        "edvard-munch",
+        "norway",
+        "spain",
+        "oslo"
+      ]
+    },
+    {
+      "id": "news-2026-10-27-nordisk-rad-norske-kulturpriser",
+      "date": "2026-10-27",
+      "publisher": "Nordisk film- og TV-fond",
+      "url": "https://nordiskfilmogtvfond.com/news/stories/a-week-of-nordic-meeetings-and-culture-awards-in-helsinki",
+      "headline": "Norge vant alle Nordisk råds kulturpriser i Helsingfors",
+      "summary": "Under Nordisk råds sesjon i Helsingfors 26.–29. oktober gikk alle årets fem kulturpriser til Norge. Filmprisen gikk til «Affeksjonsverdi» av Joachim Trier og Eskil Vogt. Prisene ble delt ut 27. oktober.",
+      "countryIso3": [
+        "NOR",
+        "FIN"
+      ],
+      "places": [
+        "Helsingfors"
+      ],
+      "people": [
+        "Joachim Trier",
+        "Eskil Vogt"
+      ],
+      "domain": "culture",
+      "impact": 2,
+      "impactReason": "Viktig nordisk kulturpris som gir norsk film og litteratur oppmerksomhet i regionen.",
+      "lensHints": [
+        "networks",
+        "civilizations",
+        "memory"
+      ],
+      "background": "Nordisk råd ble opprettet i 1952 som et samarbeidsorgan for de nordiske parlamentene.",
+      "entityIds": [
+        "helsinki",
+        "finland",
+        "norway"
+      ]
+    },
+    {
+      "id": "news-2026-10-28-spania-togkollisjon-urda",
+      "date": "2026-10-28",
+      "publisher": "Euronews",
+      "url": "https://www.euronews.com/2026/10/31/spain-observes-third-day-of-mourning-as-unions-demand-urgent-action-following-deadly-train",
+      "headline": "Minst 69 døde i togkollisjon sør for Madrid",
+      "summary": "To tog kolliderte 28. oktober ved Urda i Toledo-provinsen, på hovedlinjen mellom Madrid og Sevilla. Euronews oppga 31. oktober minst 69 døde, og senere meldinger fra andre medier var høyere. Spania holdt tre dagers landesorg, og fagforeninger krever tiltak for jernbanesikkerheten.",
+      "countryIso3": [
+        "ESP"
+      ],
+      "places": [
+        "Urda",
+        "Toledo",
+        "Castilla-La Mancha",
+        "Madrid",
+        "Sevilla"
+      ],
+      "people": [
+        "Pedro Sánchez"
+      ],
+      "domain": "society",
+      "impact": 3,
+      "impactReason": "En av Europas dødeligste jernbaneulykker i dette århundret, og den kom kort tid før et nasjonalt valg.",
+      "lensHints": [
+        "progress",
+        "from-below",
+        "materialist"
+      ],
+      "background": "Høyhastighetsbanen mellom Madrid og Sevilla åpnet i 1992 og var Spanias første.",
+      "entityIds": [
+        "spain",
+        "madrid"
+      ]
+    },
+    {
+      "id": "news-2026-10-31-frankrike-ungdomsprotester",
+      "date": "2026-10-31",
+      "publisher": "NPR",
+      "url": "https://www.npr.org/2026/10/31/g-s1-151121/france-seethes-again-as-youth-led-protests-sweep-europe",
+      "headline": "Ungdomsprotester i Frankrike for tredje helg på rad",
+      "summary": "Ifølge myndighetene demonstrerte rundt 320 000 mennesker i Frankrike lørdag 31. oktober, flest unge som protesterte mot levekostnader og utdanningspolitikk, og om lag 70 000 politifolk var i beredskap. Innenriksminister Laurent Nuñez hadde advart om høy risiko for uro rundt halloween, og det er også meldt om lignende protester i Tyskland og Italia.",
+      "countryIso3": [
+        "FRA",
+        "DEU",
+        "ITA"
+      ],
+      "places": [
+        "Paris"
+      ],
+      "people": [
+        "Laurent Nuñez",
+        "Emmanuel Macron"
+      ],
+      "domain": "politics",
+      "impact": 3,
+      "impactReason": "Store protester over flere uker som har spredd seg til flere europeiske land.",
+      "lensHints": [
+        "from-below",
+        "cyclical",
+        "power-discourse"
+      ],
+      "entityIds": [
+        "france",
+        "paris"
+      ]
+    },
+    {
+      "id": "news-2026-10-30-eu-canada-allianse-montreal",
+      "date": "2026-10-30",
+      "publisher": "Canadas statsministerkontor",
+      "url": "https://www.pm.gc.ca/en/news/news-releases/2026/10/30/canada-and-european-union-announce-new-alliance-future-create-greater",
+      "headline": "EU og Canada inngår ny allianse på toppmøte i Montreal",
+      "summary": "Mark Carney, Ursula von der Leyen og António Costa lanserte en «allianse for fremtiden» og fullførte forhandlingene om en avtale om digital handel. Partene vil bli mindre avhengige av USA. Carney sier Canada vil bli EUs første assosierte medlem, men den felles erklæringen nevner ikke det.",
+      "countryIso3": [
+        "CAN"
+      ],
+      "places": [
+        "Montreal"
+      ],
+      "people": [
+        "Mark Carney",
+        "Ursula von der Leyen",
+        "António Costa"
+      ],
+      "domain": "politics",
+      "impact": 3,
+      "impactReason": "Gjelder handel og allianser mellom EU og en G7-stat i en tid med spenninger med USA.",
+      "lensHints": [
+        "geopolitics",
+        "world-system",
+        "networks"
+      ],
+      "background": "Handelsavtalen CETA mellom EU og Canada ble undertegnet i 2016.",
+      "entityIds": [
+        "canada",
+        "nobel-laureate-881"
+      ]
+    },
+    {
+      "id": "news-2026-10-30-novaja-gazeta-legges-ned",
+      "date": "2026-10-30",
+      "publisher": "Just Security (Reuters)",
+      "url": "https://www.justsecurity.org/162627/early-edition-october-30-2026/",
+      "headline": "Uavhengige Novaja Gazeta legges ned etter press fra myndighetene",
+      "summary": "Den russiske avisen Novaja Gazeta sier den stenger 9. november etter rettsforfølgelse fra staten og etter å ha mistet finansiering og kontorer. Seks av avisens journalister er drept gjennom årene.",
+      "countryIso3": [
+        "RUS"
+      ],
+      "places": [
+        "Moskva"
+      ],
+      "people": [
+        "Dmitrij Muratov"
+      ],
+      "domain": "politics",
+      "impact": 3,
+      "impactReason": "En av de siste uavhengige redaksjonene i Russland forsvinner, noe som svekker pressefriheten.",
+      "lensHints": [
+        "power-discourse",
+        "source-criticism",
+        "memory"
+      ],
+      "background": "Avisen ble grunnlagt i 1993, og redaktør Dmitrij Muratov fikk Nobels fredspris i 2021.",
+      "entityIds": [
+        "geo-rus",
+        "city-ru-moscow",
+        "nobel-laureate-1006"
+      ]
+    },
+    {
+      "id": "news-2026-10-31-burnham-slaveri-unnskyldning",
+      "date": "2026-10-31",
+      "publisher": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/2026/10/31/burnham-opens-door-to-formal-apology-for-britains-slave-trade",
+      "headline": "Burnham åpner for britisk unnskyldning for slavehandelen",
+      "summary": "Statsminister Andy Burnham sier han er åpen for at den britiske staten formelt ber om unnskyldning for sin rolle i den transatlantiske slavehandelen. Han avviser erstatning, men foreslår gjeldslette for fattigere land. Utspillet kom før Samveldets toppmøte i Antigua og Barbuda.",
+      "countryIso3": [
+        "GBR",
+        "ATG",
+        "BRB"
+      ],
+      "places": [
+        "London",
+        "Antigua og Barbuda",
+        "Karibia"
+      ],
+      "people": [
+        "Andy Burnham",
+        "Mia Mottley",
+        "Gordon Brown",
+        "kong Charles III"
+      ],
+      "domain": "politics",
+      "impact": 3,
+      "impactReason": "Gjelder et historisk oppgjør som berører 56 land i Samveldet og hele Karibia.",
+      "lensHints": [
+        "postcolonial",
+        "memory",
+        "world-system",
+        "power-discourse"
+      ],
+      "background": "Storbritannia forbød slavehandelen i 1807 og slaveriet i koloniene i 1833.",
+      "entityIds": [
+        "geo-gbr",
+        "city-gb-london",
+        "geo-atg",
+        "geo-brb"
+      ]
+    },
+    {
+      "id": "news-2026-10-29-dnipro-angrep-togplattform",
+      "date": "2026-10-29",
+      "publisher": "Just Security (Reuters)",
+      "url": "https://www.justsecurity.org/162627/early-edition-october-30-2026/",
+      "headline": "Russisk angrep på togplattform i Dnipro dreper minst 14",
+      "summary": "Et angrep på en full togplattform i Dnipro om morgenen 29. oktober drepte minst 14 mennesker, og fem til døde i senere angrep samme dag. Zelenskyj sier Ukraina har etterretning om nye planlagte russiske angrep med ballistiske missiler.",
+      "countryIso3": [
+        "UKR",
+        "RUS"
+      ],
+      "places": [
+        "Dnipro"
+      ],
+      "people": [
+        "Volodymyr Zelenskyj"
+      ],
+      "domain": "conflict",
+      "impact": 4,
+      "impactReason": "Dødelig angrep på sivil infrastruktur i en krig som påvirker sikkerheten i hele Europa.",
+      "lensHints": [
+        "geopolitics",
+        "from-below"
+      ],
+      "background": "Russland startet den fullskala invasjonen av Ukraina i februar 2022.",
+      "entityIds": [
+        "geo-ukr",
+        "geo-rus"
+      ]
+    },
+    {
+      "id": "news-2026-10-31-ebola-kongo-over-5000-dode",
+      "date": "2026-10-31",
+      "publisher": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/2026/10/31/ebola-death-toll-in-dr-congo-passes-5000",
+      "headline": "Over 5000 døde i ebolautbruddet i DR Kongo",
+      "summary": "Ifølge myndighetene i DR Kongo har over 5000 mennesker dødd og over 10 000 blitt smittet siden mai. Utbruddet skyldes Bundibugyo-varianten, som det ikke finnes godkjent behandling eller vaksine mot. Kenya, Uganda og Nigeria har også meldt om tilfeller.",
+      "countryIso3": [
+        "COD",
+        "KEN",
+        "UGA",
+        "NGA"
+      ],
+      "places": [
+        "Nairobi"
+      ],
+      "people": [],
+      "domain": "health",
+      "impact": 5,
+      "impactReason": "Det nest største ebolautbruddet som er registrert. Det har spredd seg over landegrenser og truer millioner.",
+      "lensHints": [
+        "ecological",
+        "from-below",
+        "postcolonial",
+        "networks"
+      ],
+      "background": "Ebola ble første gang påvist i 1976 nær Ebola-elva i det som da het Zaire.",
+      "entityIds": [
+        "geo-cod",
+        "geo-ken",
+        "geo-uga",
+        "geo-nga",
+        "city-ke-nairobi"
+      ]
+    },
+    {
+      "id": "news-2026-10-29-etiopia-russiske-kampfly",
+      "date": "2026-10-29",
+      "publisher": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/2026/10/29/why-is-russia-sending-fighter-jets-and-air-defences-to-ethiopia",
+      "headline": "Etiopia får russiske kampfly og luftvern",
+      "summary": "Statsminister Abiy Ahmed opplyste under toppmøtet mellom Russland og Afrika i Moskva at Etiopia har fått 12 Su-35-kampfly og skal få fire S-400-luftvernbatterier. Analytikere mener avtalen styrker Russlands posisjon på Afrikas Horn. Samtidig er det igjen kamper i Tigray.",
+      "countryIso3": [
+        "ETH",
+        "RUS",
+        "ERI"
+      ],
+      "places": [
+        "Moskva",
+        "Tigray",
+        "Amhara",
+        "Afrikas Horn"
+      ],
+      "people": [
+        "Abiy Ahmed"
+      ],
+      "domain": "conflict",
+      "impact": 3,
+      "impactReason": "Avtalen kan endre maktbalansen i en ustabil region med kamper i Tigray og Amhara og frykt for konflikt med Eritrea.",
+      "lensHints": [
+        "geopolitics",
+        "world-system",
+        "postcolonial"
+      ],
+      "background": "Sovjetunionen støttet Etiopias militærregime under den kalde krigen.",
+      "entityIds": [
+        "geo-eth",
+        "geo-rus",
+        "geo-eri",
+        "city-ru-moscow",
+        "nobel-laureate-981"
+      ]
+    },
+    {
+      "id": "news-2026-10-31-dakar-ungdoms-ol-apner",
+      "date": "2026-10-31",
+      "publisher": "Al Jazeera",
+      "url": "https://www.aljazeera.com/sports/2026/10/31/dakar-youth-olympics-who-gets-to-hold-the-flame",
+      "headline": "Dakar åpner det første olympiske arrangementet i Afrika",
+      "summary": "De olympiske ungdomslekene i Dakar åpnet 31. oktober med rundt 2700 utøvere. Det er første gang Afrika er vertskap for et olympisk arrangement. IOC-president Kirsty Coventry sier lekene viser hva kontinentet kan få til.",
+      "countryIso3": [
+        "SEN"
+      ],
+      "places": [
+        "Dakar"
+      ],
+      "people": [
+        "Kirsty Coventry"
+      ],
+      "domain": "culture",
+      "impact": 2,
+      "impactReason": "En symbolsk milepæl for Afrika i den olympiske bevegelsen.",
+      "lensHints": [
+        "postcolonial",
+        "networks",
+        "progress"
+      ],
+      "background": "Lekene skulle opprinnelig vært holdt i 2022, men ble utsatt på grunn av koronapandemien.",
+      "entityIds": [
+        "geo-sen",
+        "city-sn-dakar"
+      ]
+    },
+    {
+      "id": "news-2026-11-02-india-to-sykloner-pa-en-uke",
+      "date": "2026-11-02",
+      "publisher": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/2026/11/2/thousands-evacuated-as-india-braces-for-second-cyclone-in-a-week",
+      "headline": "India evakuerer tusenvis før ny syklon",
+      "summary": "Syklonen Murasu var ventet ved Ongole i Andhra Pradesh 2. november, mindre enn en uke etter at syklonen Arnab drepte seks mennesker på samme kyst. Myndighetene planlegger å evakuere rundt 30 000, og skolene er stengt i flere delstater.",
+      "countryIso3": [
+        "IND"
+      ],
+      "places": [
+        "Andhra Pradesh",
+        "Ongole",
+        "Tamil Nadu",
+        "Odisha"
+      ],
+      "people": [],
+      "domain": "climate",
+      "impact": 3,
+      "impactReason": "Millioner på østkysten av India er utsatt for vind, flom og strømbrudd.",
+      "lensHints": [
+        "ecological",
+        "from-below"
+      ],
+      "entityIds": [
+        "geo-ind"
+      ]
+    },
+    {
+      "id": "news-2026-10-22-sorostasia-royk-indonesia",
+      "date": "2026-10-22",
+      "publisher": "Al Jazeera",
+      "url": "https://www.aljazeera.com/economy/2026/10/22/southeast-asias-toxic-haze-spurs-calls-for-legal-action-against-polluters",
+      "headline": "Giftig røyk fra Indonesia gir krav om å straffe forurensere",
+      "summary": "Skogbrannene i Indonesia har ifølge anslag brent over to millioner hektar og sendt røyk over Malaysia og Singapore. Det er de verste brannene på over ti år. Kravene øker om å straffeforfølge selskapene bak, men ingen har ennå blitt dømt etter Singapores lov fra 2014.",
+      "countryIso3": [
+        "IDN",
+        "MYS",
+        "SGP"
+      ],
+      "places": [
+        "Singapore",
+        "Kuala Lumpur"
+      ],
+      "people": [
+        "Prabowo Subianto"
+      ],
+      "domain": "climate",
+      "impact": 4,
+      "impactReason": "Grenseoverskridende luftforurensning som rammer helsen til titalls millioner mennesker i flere land.",
+      "lensHints": [
+        "ecological",
+        "world-system",
+        "materialist"
+      ],
+      "background": "ASEAN-landene inngikk en avtale om grenseoverskridende røyk i 2002 etter krisen i 1997–98.",
+      "entityIds": [
+        "geo-idn",
+        "geo-mys",
+        "geo-sgp",
+        "city-sg-singapore"
+      ]
+    },
+    {
+      "id": "news-2026-11-02-bangladesh-tekstilarbeidere-streik",
+      "date": "2026-11-02",
+      "publisher": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/2026/11/2/bangladesh-garment-factories-disrupted-as-protests-continue-for-third-day",
+      "headline": "Tekstilarbeidere i Bangladesh protesterer mot lave lønninger",
+      "summary": "Rundt 500 fabrikker ble midlertidig stengt da tekstilarbeidere protesterte for tredje dag rundt Dhaka. De krever mer enn dobbel minstelønn. Regjeringen til statsminister Tarique Rahman har satt ned et nytt lønnsråd.",
+      "countryIso3": [
+        "BGD"
+      ],
+      "places": [
+        "Dhaka",
+        "Savar",
+        "Ashulia",
+        "Gazipur"
+      ],
+      "people": [
+        "Tarique Rahman"
+      ],
+      "domain": "economy",
+      "impact": 3,
+      "impactReason": "Klesindustrien er Bangladeshs viktigste eksportnæring og en del av globale forsyningskjeder.",
+      "lensHints": [
+        "from-below",
+        "materialist",
+        "world-system",
+        "gender"
+      ],
+      "background": "Rana Plaza-kollapsen i Savar i 2013 drepte over 1100 tekstilarbeidere.",
+      "entityIds": [
+        "geo-bgd",
+        "city-bd-dhaka"
+      ]
+    },
+    {
+      "id": "news-2026-11-01-binance-rekordtyveri-nord-korea",
+      "date": "2026-11-01",
+      "publisher": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/2026/11/1/binance-restarts-withdrawals-after-6-3bn-heist",
+      "headline": "Rekordtyveri av kryptovaluta knyttes til Nord-Korea",
+      "summary": "Hackere stjal rundt 6,3 milliarder dollar fra kryptobørsen Binance, og ifølge FBI står Nord-Korea bak. Binance stanset handelen og sier at selskapet, ikke brukerne, tar tapet. Uttak starter nå gradvis opp igjen.",
+      "countryIso3": [
+        "PRK",
+        "USA"
+      ],
+      "places": [
+        "Pyongyang"
+      ],
+      "people": [],
+      "domain": "science",
+      "impact": 3,
+      "impactReason": "Det største kryptotyveriet som er registrert. Det berører globale finansmarkeder og sanksjonene mot Nord-Korea.",
+      "lensHints": [
+        "networks",
+        "geopolitics",
+        "materialist"
+      ],
+      "entityIds": [
+        "geo-prk",
+        "city-kp-pyongyang",
+        "geo-usa"
+      ]
+    },
+    {
+      "id": "news-2026-11-02-israel-valg-dodlop",
+      "date": "2026-11-02",
+      "publisher": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/2026/11/2/israeli-officials-say-results-stand-as-netanyahu-claims-election-stolen",
+      "headline": "Israels valg ga dødløp, Netanyahu påstår valgfusk uten bevis",
+      "summary": "I valget 27. oktober fikk Netanyahus blokk 53 av 120 mandater, og opposisjonen under Gadi Eisenkot fikk 48. De arabiskledede partiene fikk rekordhøye 19 mandater. Lederen for valgkommisjonen sier at resultatet står seg, og president Isaac Herzog skal deretter peke ut hvem som skal prøve å danne regjering.",
+      "countryIso3": [
+        "ISR",
+        "QAT"
+      ],
+      "places": [
+        "Jerusalem"
+      ],
+      "people": [
+        "Benjamin Netanyahu",
+        "Gadi Eisenkot",
+        "Isaac Herzog"
+      ],
+      "domain": "politics",
+      "impact": 4,
+      "impactReason": "Regjeringsspørsmålet i Israel har betydning for krigene og diplomatiet i hele Midtøsten.",
+      "lensHints": [
+        "power-discourse",
+        "geopolitics",
+        "source-criticism"
+      ],
+      "entityIds": [
+        "geo-isr",
+        "geo-qat"
+      ]
+    },
+    {
+      "id": "news-2026-11-02-iran-krigen-samtaler",
+      "date": "2026-11-02",
+      "publisher": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/liveblog/2026/11/2/iran-war-live-tankers-hit-in-hormuz-trump-again-says-conflict-to-end-soon",
+      "headline": "Iran og USA i samtaler gjennom Qatar og Pakistan",
+      "summary": "Irans utenriksminister Abbas Araghchi sier det pågår samtaler med USA gjennom meklere fra Qatar og Pakistan i krigen USA og Israel fører mot Iran. Donald Trump sier krigen snart vil ta slutt, enten gjennom en avtale eller militært.",
+      "countryIso3": [
+        "IRN",
+        "USA",
+        "ISR",
+        "QAT",
+        "PAK"
+      ],
+      "places": [
+        "Teheran",
+        "Hormuzstredet"
+      ],
+      "people": [
+        "Abbas Araghchi",
+        "Donald Trump"
+      ],
+      "domain": "conflict",
+      "impact": 5,
+      "impactReason": "Krigen berører energiforsyningen gjennom Hormuzstredet og sikkerheten i hele regionen.",
+      "lensHints": [
+        "geopolitics",
+        "world-system",
+        "great-individuals"
+      ],
+      "entityIds": [
+        "geo-irn",
+        "city-ir-tehran",
+        "geo-usa",
+        "geo-isr",
+        "geo-qat",
+        "geo-pak",
+        "donald-trump"
+      ]
+    },
+    {
+      "id": "news-2026-10-26-lula-vinner-brasil-valget",
+      "date": "2026-10-26",
+      "publisher": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/2026/10/26/lula-holds-off-far-right-with-victory-in-brazil-presidential-election",
+      "headline": "Lula slår Flávio Bolsonaro og vinner Brasils presidentvalg",
+      "summary": "Luiz Inácio Lula da Silva fikk drøyt 51 prosent i andre valgomgang 25. oktober, etter å ha ligget bak i første runde. Flávio Bolsonaro har ikke anerkjent resultatet og har reist til USA. Lula innsettes 5. januar 2027.",
+      "countryIso3": [
+        "BRA",
+        "USA"
+      ],
+      "places": [
+        "Brasília",
+        "Florida"
+      ],
+      "people": [
+        "Luiz Inácio Lula da Silva",
+        "Flávio Bolsonaro",
+        "Donald Trump"
+      ],
+      "domain": "politics",
+      "impact": 4,
+      "impactReason": "Valget i Latin-Amerikas største land påvirker politikk for regnskog, klima og forholdet til USA.",
+      "lensHints": [
+        "power-discourse",
+        "great-individuals",
+        "cyclical"
+      ],
+      "background": "Lula var president fra 2003 til 2010 og igjen fra 2023, og han får nå en fjerde periode.",
+      "entityIds": [
+        "geo-bra",
+        "city-br-brasilia",
+        "geo-usa",
+        "donald-trump"
+      ]
+    },
+    {
+      "id": "news-2026-11-01-usa-mellomvalg-innspurt",
+      "date": "2026-11-01",
+      "publisher": "Forbes",
+      "url": "https://www.forbes.com/sites/saradorn/2026/11/01/latest-polls-in-2026-midterms-democrats-lead-nearly-all-key-senate-races/",
+      "headline": "Demokratene leder før mellomvalget i USA 3. november",
+      "summary": "De siste målingene fra New York Times og Siena viser demokratene foran i alle de sju jevneste senatsvalgene, og prognosene gir dem klar fordel i Representantenes hus. Mange valg er likevel innenfor feilmarginen.",
+      "countryIso3": [
+        "USA"
+      ],
+      "places": [
+        "Washington, D.C.",
+        "Michigan",
+        "Kansas",
+        "Ohio"
+      ],
+      "people": [
+        "Donald Trump"
+      ],
+      "domain": "politics",
+      "impact": 4,
+      "impactReason": "Valget avgjør hvem som kontrollerer Kongressen i verdens største økonomi.",
+      "lensHints": [
+        "power-discourse",
+        "cyclical",
+        "source-criticism"
+      ],
+      "entityIds": [
+        "geo-usa",
+        "city-us-washington-d-c",
+        "donald-trump"
+      ]
+    },
+    {
+      "id": "news-2026-11-02-fiji-grunnlov-utsatt",
+      "date": "2026-11-02",
+      "publisher": "RNZ",
+      "url": "https://www.rnz.co.nz/news/pacific/2301684/fiji-pm-rabuka-delays-vote-on-constitution-bill-after-mounting-pressure",
+      "headline": "Fijis statsminister utsetter avstemning om ny grunnlov",
+      "summary": "Etter press utsatte statsminister Sitiveni Rabuka å legge fram lovforslaget som skal erstatte grunnloven fra 2013. Koalisjonspartneren NFP sier den vil stemme imot, så det er tvilsomt om han får to tredjedels flertall. Valget må holdes innen februar 2027.",
+      "countryIso3": [
+        "FJI"
+      ],
+      "places": [
+        "Suva"
+      ],
+      "people": [
+        "Sitiveni Rabuka",
+        "Biman Prasad"
+      ],
+      "domain": "politics",
+      "impact": 2,
+      "impactReason": "Det er en nasjonal sak med betydning for demokratiet og forholdet mellom folkegruppene i Fiji.",
+      "lensHints": [
+        "postcolonial",
+        "power-discourse",
+        "memory"
+      ],
+      "background": "Rabuka ledet militærkuppene i Fiji i 1987, og landet hadde også kupp i 2000 og 2006.",
+      "entityIds": [
+        "geo-fji",
+        "city-fj-suva"
+      ]
+    },
+    {
+      "id": "news-2026-10-21-unep-utslippsgap-rapport",
+      "date": "2026-10-21",
+      "publisher": "UNRIC (FN)",
+      "url": "https://unric.org/en/unep-emissions-gap-report-2026-1-5-degree-overshoot/",
+      "headline": "FN: 1,5-gradersmålet nås ikke uten en periode med overskridelse",
+      "summary": "FNs miljøprogram skriver i årets utslippsgaprapport at verden må kutte utslippene med 18 prosent innen 2030 og 45 prosent innen 2035, regnet fra 2025-nivå. Landenes løfter gir bare kutt på 5–8 prosent innen 2030. Rapporten kommer før klimatoppmøtet COP31 i Antalya 9.–20. november.",
+      "countryIso3": [
+        "TUR",
+        "AUS"
+      ],
+      "places": [
+        "Antalya",
+        "Nairobi"
+      ],
+      "people": [],
+      "domain": "climate",
+      "impact": 5,
+      "impactReason": "Rapporten gjelder hele verden og danner grunnlaget for forhandlingene på klimatoppmøtet.",
+      "lensHints": [
+        "ecological",
+        "big-history",
+        "progress",
+        "world-system"
+      ],
+      "background": "I Parisavtalen fra 2015 ble landene enige om å forsøke å begrense oppvarmingen til 1,5 grader.",
+      "entityIds": [
+        "geo-tur",
+        "city-ke-nairobi"
+      ],
+      "globalStory": true
+    },
+    {
+      "id": "news-2026-10-30-tyrkia-maneferd-2027",
+      "date": "2026-10-30",
+      "publisher": "Spaceflight Now",
+      "url": "https://spaceflightnow.com/2026/10/30/turkey-aims-for-first-moon-orbiting-mission-in-2027/",
+      "headline": "Tyrkia planlegger sin første romsonde til månen i 2027",
+      "summary": "Tyrkias månesonde TLM-1 skal etter planen skytes opp med en Falcon 9 våren 2027 og gå i bane rundt månen. Om lag 80 prosent av komponentene er laget i Tyrkia. Lykkes ferden, blir landet den niende som har drevet utstyr i månens nærhet.",
+      "countryIso3": [
+        "TUR",
+        "USA"
+      ],
+      "places": [
+        "Ankara"
+      ],
+      "people": [],
+      "domain": "science",
+      "impact": 2,
+      "impactReason": "Et eksempel på at flere land utvikler egen romfart. Planen har mest betydning for vitenskap og nasjonal prestisje.",
+      "lensHints": [
+        "progress",
+        "networks",
+        "geopolitics"
+      ],
+      "entityIds": [
+        "geo-tur",
+        "city-tr-ankara",
+        "geo-usa"
+      ]
+    }
+  ]
+}

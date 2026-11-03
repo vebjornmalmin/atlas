@@ -1,0 +1,443 @@
+{
+  "generatedFor": "1.3.0",
+  "snapshotDate": "2026-11-02",
+  "meanTopOverlap": 0.086,
+  "mostSimilarPairs": [
+    {
+      "a": "materialist",
+      "b": "world-system",
+      "overlap": 0.84
+    },
+    {
+      "a": "postcolonial",
+      "b": "networks",
+      "overlap": 0.76
+    },
+    {
+      "a": "source-criticism",
+      "b": "from-below",
+      "overlap": 0.68
+    },
+    {
+      "a": "materialist",
+      "b": "networks",
+      "overlap": 0.68
+    },
+    {
+      "a": "world-system",
+      "b": "networks",
+      "overlap": 0.68
+    }
+  ],
+  "meanTopCountryOverlap": 0.211,
+  "lenses": [
+    {
+      "id": "source-criticism",
+      "name": "Kildekritikk",
+      "seesShare": 0.015,
+      "topNodes": [
+        "Ny prognose: svakere boligprisvekst i Oslo fram mot 2029",
+        "Zelenskyj i Oslo for samtaler om krigen i Ukraina",
+        "Magna Carta",
+        "Iran og USA i samtaler gjennom Qatar og Pakistan",
+        "Dronning Sonja åpnet utstillingen Munch–Picasso i Málaga"
+      ],
+      "topCountries": [
+        "USA",
+        "Storbritannia",
+        "Tyskland",
+        "Frankrike",
+        "Sveits"
+      ],
+      "blindspot": "Atlas teller kilder og omstridte påstander, men leser ikke selve kildene. Antall kilder sier ikke alene noe om kvalitet."
+    },
+    {
+      "id": "providential",
+      "name": "Lineær frelseshistorie",
+      "seesShare": 0.007,
+      "topNodes": [
+        "Abraham Lincoln",
+        "James K. Polk",
+        "Roma",
+        "Augustin",
+        "Jordbruk"
+      ],
+      "topCountries": [
+        "Algerie",
+        "Italia",
+        "USA",
+        "Norge"
+      ],
+      "blindspot": "Atlas har nesten ikke religionshistorie. Linsen vises mest gjennom tenkerne og ideen om en rettet tid."
+    },
+    {
+      "id": "cyclical",
+      "name": "Sykluser",
+      "seesShare": 0.018,
+      "topNodes": [
+        "USAs president",
+        "Donald Trump",
+        "Grover Cleveland",
+        "Roma",
+        "Algerie"
+      ],
+      "topCountries": [
+        "USA",
+        "Italia",
+        "Tunisia",
+        "Hellas",
+        "Kina"
+      ],
+      "blindspot": "Atlas har presidentskifter og fylkesreformer, men ikke stigning og fall for riker og dynastier."
+    },
+    {
+      "id": "progress",
+      "name": "Fremskritt",
+      "seesShare": 0.557,
+      "topNodes": [
+        "Nobelprisen i fysikk",
+        "Nobelprisen i fysiologi eller medisin",
+        "Nobelprisen i kjemi",
+        "Frankrike",
+        "nukleinsyrenes molekylstruktur"
+      ],
+      "topCountries": [
+        "USA",
+        "Tyskland",
+        "Storbritannia",
+        "Japan",
+        "Australia"
+      ],
+      "blindspot": "Vitenskapelige priser fremhever gjennombrudd som ble belønnet. Tilbakeslag og kostnader er knapt registrert."
+    },
+    {
+      "id": "great-individuals",
+      "name": "Store personer",
+      "seesShare": 0.33,
+      "topNodes": [
+        "USAs president",
+        "Thomas Carlyle",
+        "Abraham Lincoln",
+        "Lev Tolstoj",
+        "Herbert Spencer"
+      ],
+      "topCountries": [
+        "USA",
+        "Storbritannia",
+        "Tyskland",
+        "Polen",
+        "Frankrike"
+      ],
+      "blindspot": "Atlas består mest av navngitte personer. Det forsterker denne linsen og gjør massebevegelser usynlige."
+    },
+    {
+      "id": "materialist",
+      "name": "Materielle krefter og klasse",
+      "seesShare": 0.173,
+      "topNodes": [
+        "Storbritannia",
+        "USA",
+        "Tyskland",
+        "Frankrike",
+        "University of California"
+      ],
+      "topCountries": [
+        "USA",
+        "Tyskland",
+        "Storbritannia",
+        "Nederland",
+        "Israel"
+      ],
+      "blindspot": "Atlas mangler data om produksjon, eiendom, lønn og klasse. Institusjoner og økonomipriser er bare et svakt spor."
+    },
+    {
+      "id": "civilizations",
+      "name": "Sivilisasjoner",
+      "seesShare": 0.084,
+      "topNodes": [
+        "Nord-Europa",
+        "Karibia",
+        "Øst-Afrika",
+        "Sør-Europa",
+        "Vest-Asia"
+      ],
+      "topCountries": [
+        "Irak",
+        "Hellas",
+        "Tunisia",
+        "Egypt",
+        "Belarus"
+      ],
+      "blindspot": "Atlas bruker FNs statistiske regioner. De er ikke Spenglers eller Toynbees sivilisasjoner og skal ikke leses slik."
+    },
+    {
+      "id": "annales",
+      "name": "Lang varighet og mentaliteter",
+      "seesShare": 0.197,
+      "topNodes": [
+        "Frankrike",
+        "Nord-Europa",
+        "Innlandet",
+        "Vestland",
+        "Nordland"
+      ],
+      "topCountries": [
+        "Norge",
+        "Sudan",
+        "Serbia",
+        "Belarus",
+        "Saudi-Arabia"
+      ],
+      "blindspot": "Klima, jordbruk og priser over lange tidsrom finnes ikke i Atlas. Grenser og regioner er bare de faste rammene."
+    },
+    {
+      "id": "from-below",
+      "name": "Historie nedenfra",
+      "seesShare": 0.029,
+      "topNodes": [
+        "Ny prognose: svakere boligprisvekst i Oslo fram mot 2029",
+        "Over 5000 døde i ebolautbruddet i DR Kongo",
+        "Skjulte opptak fra barnebolig i Oslo fører til politianmeldelser",
+        "Norge",
+        "Storbritannia"
+      ],
+      "topCountries": [
+        "Norge",
+        "Den demokratiske republikken Kongo",
+        "Iran",
+        "Etiopia",
+        "Bangladesh"
+      ],
+      "blindspot": "Vanlige menneskers liv er nesten fraværende i registeret. Linsen viser dermed mest hvor Atlas er blind."
+    },
+    {
+      "id": "microhistory",
+      "name": "Mikrohistorie",
+      "seesShare": 0.113,
+      "topNodes": [
+        "Innlandet",
+        "Vestland",
+        "Nordland",
+        "Trøndelag",
+        "Møre og Romsdal"
+      ],
+      "topCountries": [
+        "Norge",
+        "Italia",
+        "Frankrike"
+      ],
+      "blindspot": "Atlas har kommuner, men ingen rettsprotokoller, brev eller lokale enkeltskjebner."
+    },
+    {
+      "id": "metahistory",
+      "name": "Fortelling og plott",
+      "seesShare": 0.034,
+      "topNodes": [
+        "To byer",
+        "Histoire de la Révolution française",
+        "L'Ancien Régime et la Révolution",
+        "Die Cultur der Renaissance in Italien",
+        "Metahistory: The Historical Imagination in Nineteenth-Century Europe"
+      ],
+      "topCountries": [
+        "Frankrike",
+        "Italia",
+        "Hellas",
+        "Storbritannia",
+        "Tyskland"
+      ],
+      "blindspot": "Plotformene gjelder historikernes tekster. Atlas analyserer ikke selv fortellingene i nyheter eller verk."
+    },
+    {
+      "id": "power-discourse",
+      "name": "Makt og diskurs",
+      "seesShare": 0.119,
+      "topNodes": [
+        "Nobelprisen i litteratur",
+        "Nobels fredspris",
+        "Nobelprisen i fysikk",
+        "Nobelprisen i fysiologi eller medisin",
+        "Nobelprisen i kjemi"
+      ],
+      "topCountries": [
+        "USA",
+        "Tyskland",
+        "Frankrike",
+        "Storbritannia",
+        "Sveits"
+      ],
+      "blindspot": "Linsen ser hvem som utnevner, belønner og definerer. Den kan ikke vise skjulte normer uten kilder om dem."
+    },
+    {
+      "id": "postcolonial",
+      "name": "Postkolonialt blikk",
+      "seesShare": 0.078,
+      "topNodes": [
+        "USA",
+        "Storbritannia",
+        "Tyskland",
+        "Frankrike",
+        "India"
+      ],
+      "topCountries": [
+        "New Zealand",
+        "Canada",
+        "Polen",
+        "Pakistan",
+        "Ungarn"
+      ],
+      "blindspot": "Atlas har ikke koloniforhold. Kartet viser bare hvor stor andel av landets prisvinnere som ble anerkjent mens de arbeidet i et annet land."
+    },
+    {
+      "id": "gender",
+      "name": "Kjønn",
+      "seesShare": 0.294,
+      "topNodes": [
+        "Claudia Goldin",
+        "Marie Curie",
+        "May-Britt Moser",
+        "Sigrid Undset",
+        "Maria Goeppert Mayer"
+      ],
+      "topCountries": [
+        "Iran",
+        "Sør-Korea",
+        "Pakistan",
+        "Tsjekkia",
+        "Romania"
+      ],
+      "blindspot": "Kjønn er bare registrert for Nobelprisvinnere. Prisregisteret har langt flere menn enn kvinner, og forskjellen er selve funnet."
+    },
+    {
+      "id": "world-system",
+      "name": "Verdenssystem",
+      "seesShare": 0.191,
+      "topNodes": [
+        "USA",
+        "Tyskland",
+        "Storbritannia",
+        "Nederland",
+        "Frankrike"
+      ],
+      "topCountries": [
+        "Danmark",
+        "USA",
+        "Tunisia",
+        "Sveits",
+        "Belgia"
+      ],
+      "blindspot": "Strømmen av prisvinnere mellom land er et svakt stedfortredende mål for kjerne og periferi. Atlas har ikke handel eller kapitalstrømmer."
+    },
+    {
+      "id": "networks",
+      "name": "Nettverk og møter",
+      "seesShare": 0.471,
+      "topNodes": [
+        "USA",
+        "Storbritannia",
+        "Tyskland",
+        "Frankrike",
+        "Kina"
+      ],
+      "topCountries": [
+        "USA",
+        "Tyskland",
+        "Storbritannia",
+        "Frankrike",
+        "Japan"
+      ],
+      "blindspot": "Nettverket viser prisvinneres flyt, påvirkning mellom tenkere og landegrenser. Handelsruter og migrasjon generelt mangler."
+    },
+    {
+      "id": "ecological",
+      "name": "Natur og økologi",
+      "seesShare": 0.024,
+      "topNodes": [
+        "Russland",
+        "Argentina",
+        "Tyskland",
+        "Frankrike",
+        "Brasil"
+      ],
+      "topCountries": [
+        "USA",
+        "Argentina",
+        "Australia",
+        "Indonesia",
+        "Brasil"
+      ],
+      "blindspot": "Atlas har ikke klima-, sykdoms- eller artsdata. Nyheter og eksempler bærer linsen inntil slike kilder finnes."
+    },
+    {
+      "id": "big-history",
+      "name": "Kosmisk skala",
+      "seesShare": 0.464,
+      "topNodes": [
+        "Jordbruk",
+        "Jorden og solsystemet",
+        "Kollektiv læring",
+        "Liv",
+        "Nye grunnstoffer"
+      ],
+      "topCountries": [
+        "USA",
+        "Tyskland",
+        "Storbritannia",
+        "Japan",
+        "Sveits"
+      ],
+      "blindspot": "Terskelene spenner over milliarder av år. Tallene er avrundede anslag, og mennesket er bare den siste delen."
+    },
+    {
+      "id": "memory",
+      "name": "Erindring",
+      "seesShare": 0.021,
+      "topNodes": [
+        "Magna Carta",
+        "Vannliljedammen",
+        "Annie Ernaux",
+        "Patrick Modiano",
+        "Magna Carta besegles"
+      ],
+      "topCountries": [
+        "Frankrike",
+        "Egypt",
+        "Norge"
+      ],
+      "blindspot": "Atlas har få minnesteder og monumenter. Kunstverk, bøker og hendelser står i stedet for dem."
+    },
+    {
+      "id": "geopolitics",
+      "name": "Geopolitikk",
+      "seesShare": 0.155,
+      "topNodes": [
+        "Russland",
+        "Tyskland",
+        "Storbritannia",
+        "Den demokratiske republikken Kongo",
+        "Iran og USA i samtaler gjennom Qatar og Pakistan"
+      ],
+      "topCountries": [
+        "Iran",
+        "Brasil",
+        "Den demokratiske republikken Kongo",
+        "Etiopia",
+        "Nord-Korea"
+      ],
+      "blindspot": "Grensene gjelder i dag og er forenklet. Linsen vurderer ikke hvilke maktforhold som er rimelige eller rettferdige."
+    }
+  ],
+  "formats": {
+    "flags": 235,
+    "neighbours": 134,
+    "border-walk": 19,
+    "news-map": 5,
+    "lens-question": 20,
+    "thinkers": 58,
+    "emplotment": 12,
+    "scale": 9,
+    "knowledge-flow": 14,
+    "perspective-switch": 53
+  },
+  "note": "Overlapp er andelen felles noder blant de 25 høyest rangerte for hvert par linser, og andelen felles land blant de ti mørkeste på kartet. Lav verdi betyr at linsene faktisk ser forskjellige ting."
+}

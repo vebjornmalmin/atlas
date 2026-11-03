@@ -1,0 +1,3531 @@
+{
+  "lenses": [
+    {
+      "id": "source-criticism",
+      "name": "Kildekritikk",
+      "question": "Hvilke kilder finnes, og hvor pålitelige er de?",
+      "summary": "Linsen spør hva vi faktisk kan vite om fortiden og hvordan. Tukydid og Polybios prøvde opplysningene mot øyenvitner og dokumenter, og Ranke gjorde kildegranskning til fagets metode.",
+      "timeScale": "event",
+      "unitOfAnalysis": "kilde og hendelse",
+      "emphasizes": [
+        "sources",
+        "evidence",
+        "documents",
+        "eyewitnesses",
+        "archives"
+      ],
+      "critique": "Kritikere fra Carr til White mener at kildene aldri taler for seg selv; historikeren velger og tolker. Rankes eget ideal er også omstridt i betydning.",
+      "evidenceStatus": "documented",
+      "thinkerIds": [
+        "thucydides",
+        "polybius",
+        "ranke",
+        "carr",
+        "collingwood"
+      ],
+      "workIds": [
+        "peloponnesian-war",
+        "ranke-1824",
+        "what-is-history",
+        "idea-of-history"
+      ],
+      "conceptIds": [
+        "source-criticism",
+        "wie-es-eigentlich-gewesen",
+        "historical-facts",
+        "re-enactment"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Leopold_von_Ranke",
+        "https://en.wikipedia.org/wiki/Thucydides",
+        "https://en.wikipedia.org/wiki/What_Is_History%3F"
+      ]
+    },
+    {
+      "id": "providential",
+      "name": "Lineær frelseshistorie",
+      "question": "Hvilken plass har dette i en guddommelig plan med historien?",
+      "summary": "Linsen ser historien som en rettet bevegelse med begynnelse, midte og mål i Guds plan. Augustin skrev etter plyndringen av Roma at jordiske riker faller, mens Guds stat består.",
+      "timeScale": "cosmic",
+      "unitOfAnalysis": "menneskeheten og de troende",
+      "emphasizes": [
+        "religion",
+        "providence",
+        "meaning",
+        "telos"
+      ],
+      "critique": "Som forklaring er linsen ikke etterprøvbar, og den er blitt brukt til å gi politiske prosjekter guddommelig legitimitet. Den er mest nyttig for å forstå hvordan aktører selv tolket sin tid.",
+      "evidenceStatus": "disputed",
+      "thinkerIds": [
+        "augustine"
+      ],
+      "workIds": [
+        "city-of-god"
+      ],
+      "conceptIds": [
+        "two-cities"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/The_City_of_God",
+        "https://en.wikipedia.org/wiki/Augustine_of_Hippo"
+      ]
+    },
+    {
+      "id": "cyclical",
+      "name": "Sykluser",
+      "question": "Hvor i et kretsløp av vekst og forfall befinner dette seg?",
+      "summary": "Linsen ser etter mønstre som gjentar seg: styreformer som forfaller, dynastier som stiger og faller, samfunn som går gjennom aldre. Polybios, Ibn Khaldun og Vico ga hver sin versjon.",
+      "timeScale": "century",
+      "unitOfAnalysis": "stat, dynasti og samfunn",
+      "emphasizes": [
+        "rise-and-fall",
+        "dynasties",
+        "cohesion",
+        "constitutions"
+      ],
+      "critique": "Kretsløpsmodeller kan bli så generelle at de passer på alt, og de undervurderer det som er nytt og unikt. Gode eksempler velges lett i ettertid.",
+      "evidenceStatus": "disputed",
+      "thinkerIds": [
+        "polybius",
+        "ibn-khaldun",
+        "vico",
+        "sima-qian"
+      ],
+      "workIds": [
+        "histories-polybius",
+        "muqaddimah",
+        "scienza-nuova",
+        "shiji"
+      ],
+      "conceptIds": [
+        "anacyclosis",
+        "asabiyya",
+        "verum-factum"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Anacyclosis",
+        "https://en.wikipedia.org/wiki/Muqaddimah",
+        "https://en.wikipedia.org/wiki/Giambattista_Vico"
+      ]
+    },
+    {
+      "id": "progress",
+      "name": "Fremskritt",
+      "question": "Hvordan inngår dette i en utvikling mot noe bedre, og hvem sier det?",
+      "summary": "Linsen leser historien som fremgang i kunnskap, frihet eller velstand. Condorcet, Hegel og Fukuyama ga ulike versjoner av tanken om at historien har en retning.",
+      "timeScale": "century",
+      "unitOfAnalysis": "menneskeheten og staten",
+      "emphasizes": [
+        "progress",
+        "freedom",
+        "reason",
+        "institutions",
+        "liberty"
+      ],
+      "critique": "Butterfield kalte det whig-historie når fortiden leses som en vei frem til nåtiden; det skjuler blindveier og taperne. Fukuyamas tese ble straks utfordret, blant andre av Huntington og Derrida.",
+      "evidenceStatus": "disputed",
+      "thinkerIds": [
+        "voltaire",
+        "condorcet",
+        "hegel",
+        "fukuyama",
+        "butterfield"
+      ],
+      "workIds": [
+        "esquisse-condorcet",
+        "hegel-philosophy-of-history",
+        "end-of-history",
+        "whig-interpretation"
+      ],
+      "conceptIds": [
+        "idea-of-progress",
+        "end-of-history",
+        "whig-history"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Marquis_de_Condorcet",
+        "https://en.wikipedia.org/wiki/Lectures_on_the_Philosophy_of_History",
+        "https://en.wikipedia.org/wiki/The_End_of_History_and_the_Last_Man",
+        "https://en.wikipedia.org/wiki/Whig_history"
+      ]
+    },
+    {
+      "id": "great-individuals",
+      "name": "Store personer",
+      "question": "Hvilke enkeltpersoners valg gjorde en avgjørende forskjell her?",
+      "summary": "Linsen ser historien gjennom ledere, helter og skapere og spør hva som skyldtes dem. Carlyle gjorde synet berømt i sine forelesninger om helter.",
+      "timeScale": "generation",
+      "unitOfAnalysis": "individ",
+      "emphasizes": [
+        "leaders",
+        "agency",
+        "biography",
+        "decisions"
+      ],
+      "critique": "Spencer mente at samfunnet først former den store mannen, og Tolstoj så hærførerne som historiens slaver. Moderne forskning legger mer vekt på strukturer og på hvordan folk oppfattet lederen.",
+      "evidenceStatus": "disputed",
+      "thinkerIds": [
+        "carlyle",
+        "spencer",
+        "tolstoy"
+      ],
+      "workIds": [
+        "on-heroes",
+        "study-of-sociology",
+        "war-and-peace-novel"
+      ],
+      "conceptIds": [
+        "great-man-theory",
+        "zeitgeist"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Great_man_theory",
+        "https://en.wikipedia.org/wiki/Thomas_Carlyle",
+        "https://en.wikipedia.org/wiki/War_and_Peace"
+      ]
+    },
+    {
+      "id": "materialist",
+      "name": "Materielle krefter og klasse",
+      "question": "Hvem eier produksjonen, og hvilke klasser kjemper om makten?",
+      "summary": "Linsen forklarer samfunn ut fra hvordan mennesker produserer og hvem som kontrollerer produksjonen. Hos Marx og Engels driver klassekamp historien fremover.",
+      "timeScale": "century",
+      "unitOfAnalysis": "klasse og produksjonsmåte",
+      "emphasizes": [
+        "class",
+        "labour",
+        "production",
+        "economy",
+        "conflict"
+      ],
+      "critique": "Hovedinnvendingen er økonomisk determinisme: at kultur, religion og politikk reduseres til økonomi. Senere marxister som Thompson la mer vekt på erfaring og handling.",
+      "evidenceStatus": "documented",
+      "thinkerIds": [
+        "marx",
+        "engels",
+        "hobsbawm",
+        "thompson"
+      ],
+      "workIds": [
+        "communist-manifesto",
+        "das-kapital",
+        "condition-working-class"
+      ],
+      "conceptIds": [
+        "historical-materialism",
+        "base-superstructure",
+        "class-struggle"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Historical_materialism",
+        "https://en.wikipedia.org/wiki/Karl_Marx",
+        "https://en.wikipedia.org/wiki/Friedrich_Engels"
+      ]
+    },
+    {
+      "id": "civilizations",
+      "name": "Sivilisasjoner",
+      "question": "Hvilken sivilisasjon hører dette til, og hvor i livsløpet står den?",
+      "summary": "Linsen gjør store sivilisasjoner til historiens enheter og sammenligner hvordan de oppstår, blomstrer og forfaller. Spengler så kulturer som organismer, mens Toynbee forklarte vekst som svar på utfordringer.",
+      "timeScale": "longue-duree",
+      "unitOfAnalysis": "sivilisasjon",
+      "emphasizes": [
+        "civilizations",
+        "rise-and-fall",
+        "religion",
+        "comparison"
+      ],
+      "critique": "Spengler ble kritisert for en uvitenskapelig metode og Toynbee for å foretrekke myter og moral fremfor data. Begge behandler sivilisasjoner som lukkede enheter, noe McNeill skrev mot.",
+      "evidenceStatus": "disputed",
+      "thinkerIds": [
+        "spengler",
+        "toynbee",
+        "ibn-khaldun"
+      ],
+      "workIds": [
+        "decline-of-the-west",
+        "study-of-history"
+      ],
+      "conceptIds": [
+        "culture-civilization",
+        "challenge-and-response"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Oswald_Spengler",
+        "https://en.wikipedia.org/wiki/Arnold_J._Toynbee",
+        "https://en.wikipedia.org/wiki/The_Rise_of_the_West"
+      ]
+    },
+    {
+      "id": "annales",
+      "name": "Lang varighet og mentaliteter",
+      "question": "Hvilke langsomme strukturer, som landskap, klima og tankemønstre, ligger under hendelsene?",
+      "summary": "Annales-historikerne flyttet blikket fra politiske hendelser til økonomi, samfunn og mentaliteter. Braudel skilte mellom geografisk tid, sosiale konjunkturer og hendelsenes korte tid.",
+      "timeScale": "longue-duree",
+      "unitOfAnalysis": "region og samfunn",
+      "emphasizes": [
+        "climate",
+        "geography",
+        "mentalities",
+        "economy",
+        "long-term-structures"
+      ],
+      "critique": "Kritikere mener at politikk og enkeltmennesker forsvinner, og at Braudels nivåer skiller samfunn og politikk for skarpt. Mentalitetshistorien har også manglet et klart teoretisk grunnlag.",
+      "evidenceStatus": "documented",
+      "thinkerIds": [
+        "bloch",
+        "febvre",
+        "braudel"
+      ],
+      "workIds": [
+        "annales-journal",
+        "rois-thaumaturges",
+        "incroyance-rabelais",
+        "la-mediterranee"
+      ],
+      "conceptIds": [
+        "longue-duree",
+        "conjoncture",
+        "histoire-evenementielle",
+        "mentalites",
+        "histoire-totale"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Annales_school",
+        "https://en.wikipedia.org/wiki/Longue_dur%C3%A9e",
+        "https://en.wikipedia.org/wiki/Fernand_Braudel"
+      ]
+    },
+    {
+      "id": "from-below",
+      "name": "Historie nedenfra",
+      "question": "Hvordan opplevde vanlige mennesker dette, med egne ord?",
+      "summary": "Linsen løfter frem arbeidere, bønder og andre som sjelden skrev historien selv. Thompson ville redde vanlige arbeidere fra ettertidens nedlatenhet.",
+      "timeScale": "generation",
+      "unitOfAnalysis": "klasse og fellesskap",
+      "emphasizes": [
+        "ordinary-people",
+        "experience",
+        "labour",
+        "protest",
+        "testimony"
+      ],
+      "critique": "Kildene etter vanlige folk er ofte skrevet av myndigheter eller formidlet av andre, og vitnesbyrd kan være omstridt. Scott påpekte at Thompsons arbeiderklasse var nesten bare mannlig.",
+      "evidenceStatus": "documented",
+      "thinkerIds": [
+        "thompson",
+        "hobsbawm",
+        "chakrabarty"
+      ],
+      "workIds": [
+        "making-english-working-class"
+      ],
+      "conceptIds": [
+        "history-from-below",
+        "class-struggle",
+        "subaltern"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/E._P._Thompson",
+        "https://en.wikipedia.org/wiki/Subaltern_Studies"
+      ]
+    },
+    {
+      "id": "microhistory",
+      "name": "Mikrohistorie",
+      "question": "Hva kan ett lite, godt dokumentert tilfelle fortelle om helheten?",
+      "summary": "Linsen stiller store spørsmål til en liten enhet: en landsby, en rettssak eller én person. Ginzburg brukte forhørene av mølleren Menocchio til å vise møtet mellom folkekultur og lærd kultur.",
+      "timeScale": "event",
+      "unitOfAnalysis": "person, landsby eller rettssak",
+      "emphasizes": [
+        "case-study",
+        "archives",
+        "popular-culture",
+        "trials"
+      ],
+      "critique": "Det er uklart hvor representativt ett tilfelle er, og kildene er ofte skapt av makten som forhørte. Mikrohistorikerne holder fast ved faktisk virkelighet, i motsetning til radikal postmodernisme.",
+      "evidenceStatus": "documented",
+      "thinkerIds": [
+        "ginzburg"
+      ],
+      "workIds": [
+        "cheese-and-worms"
+      ],
+      "conceptIds": [
+        "microhistory-concept",
+        "mentalites"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Microhistory",
+        "https://en.wikipedia.org/wiki/The_Cheese_and_the_Worms"
+      ]
+    },
+    {
+      "id": "metahistory",
+      "name": "Fortelling og plott",
+      "question": "Hvilket plott velger historikeren, og hva gjør det med fortellingen?",
+      "summary": "Linsen ser på historieskrivingen selv. Hayden White viste at historikere gir stoffet form gjennom troper, plott, argumentformer og ideologiske valg, og at samme hendelser kan fortelles som romanse, tragedie, komedie eller satire.",
+      "timeScale": "century",
+      "unitOfAnalysis": "tekst",
+      "emphasizes": [
+        "narrative",
+        "rhetoric",
+        "tropes",
+        "historiography"
+      ],
+      "critique": "Kritikere mener tilnærmingen kan gjøre fakta og fiksjon likeverdige og åpne for relativisme. Whites skjema er også blitt kritisert for å være for stivt.",
+      "evidenceStatus": "documented",
+      "thinkerIds": [
+        "hayden-white",
+        "vico",
+        "michelet",
+        "ranke",
+        "tocqueville",
+        "burckhardt",
+        "croce"
+      ],
+      "workIds": [
+        "metahistory-book",
+        "michelet-revolution",
+        "tocqueville-ancien-regime",
+        "burckhardt-renaissance"
+      ],
+      "conceptIds": [
+        "emplotment"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Metahistory:_The_Historical_Imagination_in_Nineteenth-century_Europe",
+        "https://en.wikipedia.org/wiki/Hayden_White"
+      ]
+    },
+    {
+      "id": "power-discourse",
+      "name": "Makt og diskurs",
+      "question": "Hvem bestemmer hva som regnes som sant, normalt og tillatt?",
+      "summary": "Linsen undersøker hvordan kunnskap, språk og institusjoner former mennesker og skiller normalt fra avvikende. Foucault fulgte overgangen fra offentlig kroppsstraff til fengselets disiplin.",
+      "timeScale": "century",
+      "unitOfAnalysis": "diskurs og institusjon",
+      "emphasizes": [
+        "power",
+        "knowledge",
+        "institutions",
+        "discipline",
+        "norms"
+      ],
+      "critique": "Historikere har påpekt at Foucault generaliserer kraftig, overvurderer makthavernes planer og ofte studerer reformatorenes idealer mer enn faktisk praksis.",
+      "evidenceStatus": "documented",
+      "thinkerIds": [
+        "foucault",
+        "nietzsche"
+      ],
+      "workIds": [
+        "discipline-and-punish"
+      ],
+      "conceptIds": [
+        "power-knowledge",
+        "genealogy"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Discipline_and_Punish",
+        "https://en.wikipedia.org/wiki/Michel_Foucault"
+      ]
+    },
+    {
+      "id": "postcolonial",
+      "name": "Postkolonialt blikk",
+      "question": "Hvem forteller om hvem, og hvordan preger kolonimakt fortellingen?",
+      "summary": "Linsen spør hvordan kolonimakt har formet kunnskapen om de koloniserte, og hvem som får fortelle. Said analyserte orientalismen, og Chakrabarty kritiserer at Europa brukes som målestokk for alle andres historie.",
+      "timeScale": "century",
+      "unitOfAnalysis": "tekst, region og koloniforhold",
+      "emphasizes": [
+        "colonialism",
+        "representation",
+        "empire",
+        "voice",
+        "eurocentrism"
+      ],
+      "critique": "Kritikere som Bernard Lewis og Ernest Gellner mener Said overdriver og forenkler, og Vivek Chibber mener postkolonial teori skjuler klasse og utbytting.",
+      "evidenceStatus": "documented",
+      "thinkerIds": [
+        "said",
+        "chakrabarty",
+        "foucault"
+      ],
+      "workIds": [
+        "orientalism-book",
+        "provincializing-europe"
+      ],
+      "conceptIds": [
+        "orientalism-concept",
+        "eurocentrism",
+        "subaltern"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Orientalism_(book)",
+        "https://ci.nii.ac.jp/ncid/BA50709396",
+        "https://en.wikipedia.org/wiki/Subaltern_Studies"
+      ]
+    },
+    {
+      "id": "gender",
+      "name": "Kjønn",
+      "question": "Hvordan former forestillinger om kjønn makt, arbeid og rettigheter her?",
+      "summary": "Linsen bruker kjønn til å se hvordan forskjeller mellom kvinner og menn er blitt forstått og gitt mening til makt. Joan W. Scott gjorde kjønn til en analytisk kategori, ikke bare et annet ord for kvinnehistorie.",
+      "timeScale": "generation",
+      "unitOfAnalysis": "relasjoner, institusjoner og språk",
+      "emphasizes": [
+        "gender",
+        "power",
+        "work",
+        "family",
+        "rights"
+      ],
+      "critique": "Kritikere mener den poststrukturalistiske vendingen kan legge for mye vekt på språk og for lite på materielle forhold og levde erfaringer.",
+      "evidenceStatus": "documented",
+      "thinkerIds": [
+        "joan-scott",
+        "foucault"
+      ],
+      "workIds": [
+        "gender-useful-category"
+      ],
+      "conceptIds": [
+        "gender-category"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Gender:_A_Useful_Category_of_Historical_Analysis",
+        "https://en.wikipedia.org/wiki/Joan_Wallach_Scott"
+      ]
+    },
+    {
+      "id": "world-system",
+      "name": "Verdenssystem",
+      "question": "Er dette kjerne, semiperiferi eller periferi i verdensøkonomien?",
+      "summary": "Linsen ser stater som deler av én kapitalistisk verdensøkonomi siden 1500-tallet. Kjernen tar størst del av merverdien, periferien leverer råvarer og billig arbeid, og semiperiferien står imellom.",
+      "timeScale": "longue-duree",
+      "unitOfAnalysis": "verdensøkonomi",
+      "emphasizes": [
+        "trade",
+        "inequality",
+        "labour",
+        "capitalism",
+        "hegemony"
+      ],
+      "critique": "Ortodokse marxister mener teorien gir for lite plass til klasse, andre at den reduserer stater og kultur til økonomi og mangler etterprøvbare påstander.",
+      "evidenceStatus": "documented",
+      "thinkerIds": [
+        "wallerstein",
+        "braudel",
+        "marx"
+      ],
+      "workIds": [
+        "modern-world-system"
+      ],
+      "conceptIds": [
+        "core-periphery"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/World-systems_theory",
+        "https://en.wikipedia.org/wiki/Immanuel_Wallerstein"
+      ]
+    },
+    {
+      "id": "networks",
+      "name": "Nettverk og møter",
+      "question": "Hvilke kontakter og nettverk brakte ideer, varer og sykdommer hit?",
+      "summary": "Linsen forklarer endring gjennom kontakt, handel, smitte og lån mellom samfunn. McNeill skrev mot synet på sivilisasjoner som lukkede enheter, og sammen med sønnen beskrev han historien som et stadig tettere nett.",
+      "timeScale": "century",
+      "unitOfAnalysis": "nettverk og kontaktsone",
+      "emphasizes": [
+        "trade",
+        "migration",
+        "diffusion",
+        "disease",
+        "contact"
+      ],
+      "critique": "McNeill erkjente selv at The Rise of the West bar preg av amerikansk etterkrigsoptimisme. Nettverksbildet kan også bli så vidt at det forklarer lite.",
+      "evidenceStatus": "documented",
+      "thinkerIds": [
+        "william-mcneill",
+        "john-mcneill"
+      ],
+      "workIds": [
+        "rise-of-the-west",
+        "plagues-and-peoples",
+        "human-web"
+      ],
+      "conceptIds": [
+        "ecumene",
+        "human-web"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/The_Rise_of_the_West",
+        "https://publishersweekly.com/9780393051797",
+        "https://en.wikipedia.org/wiki/Plagues_and_Peoples"
+      ]
+    },
+    {
+      "id": "ecological",
+      "name": "Natur og økologi",
+      "question": "Hvordan har natur, klima, planter, dyr og smitte formet dette?",
+      "summary": "Linsen tar planter, dyr, mikrober og landskap med som aktører i historien. Crosby viste hvordan utvekslingen etter 1492 endret begge sider av Atlanterhavet, og Diamond forklarte maktforskjeller med miljøforhold.",
+      "timeScale": "longue-duree",
+      "unitOfAnalysis": "økosystem og region",
+      "emphasizes": [
+        "climate",
+        "disease",
+        "crops",
+        "animals",
+        "environment"
+      ],
+      "critique": "Diamond er kritisert for geografisk determinisme og for å gi menneskelig handling og politiske valg for liten plass. Crosbys arbeider regnes som mer avgrensede.",
+      "evidenceStatus": "disputed",
+      "thinkerIds": [
+        "crosby",
+        "diamond",
+        "william-mcneill"
+      ],
+      "workIds": [
+        "columbian-exchange-book",
+        "ecological-imperialism",
+        "guns-germs-steel"
+      ],
+      "conceptIds": [
+        "columbian-exchange",
+        "neo-europes",
+        "environmental-determinism"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Columbian_exchange",
+        "https://en.wikipedia.org/wiki/Alfred_W._Crosby",
+        "https://en.wikipedia.org/wiki/Guns,_Germs,_and_Steel"
+      ]
+    },
+    {
+      "id": "big-history",
+      "name": "Kosmisk skala",
+      "question": "Hvor passer dette inn i historien fra Big Bang til nå?",
+      "summary": "Big history setter menneskets historie inn i universets historie, fra Big Bang via stjerner, grunnstoffer, liv og mennesker til den moderne verden. David Christian ordner fortellingen etter terskler der kompleksiteten øker.",
+      "timeScale": "cosmic",
+      "unitOfAnalysis": "universet, jorden og menneskeheten",
+      "emphasizes": [
+        "complexity",
+        "energy",
+        "thresholds",
+        "science",
+        "collective-learning"
+      ],
+      "critique": "Kritikere mener den store skalaen gjør menneskelige forskjeller og konflikter usynlige, og at tersklene er en fortellerramme mer enn en teori. Datoene varierer mellom framstillingene.",
+      "evidenceStatus": "documented",
+      "thinkerIds": [
+        "david-christian",
+        "william-mcneill"
+      ],
+      "workIds": [
+        "maps-of-time"
+      ],
+      "conceptIds": [
+        "thresholds-of-complexity"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Big_History",
+        "https://www.oerproject.com/OER-Materials/OER-Media/HTML-Articles/BHP/Unit1/What-Makes-Big-History-Big",
+        "https://en.wikipedia.org/wiki/David_Christian_(historian)"
+      ]
+    },
+    {
+      "id": "memory",
+      "name": "Erindring",
+      "question": "Hvordan huskes dette, av hvem, og hva blir glemt?",
+      "summary": "Linsen undersøker hvordan grupper husker, minnes og glemmer, og hvordan minnet skiller seg fra kritisk historie. Halbwachs viste at minner formes sosialt, og Nora kartla Frankrikes erindringssteder.",
+      "timeScale": "generation",
+      "unitOfAnalysis": "fellesskap og erindringssted",
+      "emphasizes": [
+        "memory",
+        "memory-sites",
+        "commemoration",
+        "identity",
+        "forgetting"
+      ],
+      "critique": "Kritikere advarer mot å anta at et kollektiv husker likt, og mener Nora legger for mye vekt på nasjonen. Andre etterlyser studier av glemsel.",
+      "evidenceStatus": "documented",
+      "thinkerIds": [
+        "halbwachs",
+        "nora",
+        "hobsbawm"
+      ],
+      "workIds": [
+        "cadres-sociaux",
+        "lieux-de-memoire",
+        "invention-of-tradition"
+      ],
+      "conceptIds": [
+        "collective-memory",
+        "lieux-de-memoire",
+        "invented-tradition"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Collective_memory",
+        "https://en.wikipedia.org/wiki/Lieu_de_m%C3%A9moire",
+        "https://humanrightscolumbia.org/biblio/between-memory-and-history-les-lieux-de-m%C3%A9moire"
+      ]
+    },
+    {
+      "id": "geopolitics",
+      "name": "Geopolitikk",
+      "question": "Hvordan gir beliggenhet og landmasser makt og sårbarhet her?",
+      "summary": "Linsen forklarer stormaktspolitikk ut fra geografi: landmasser, hav og avstander. Mackinder mente at den som kontrollerer Eurasias indre, hjertelandet, har et avgjørende fortrinn.",
+      "timeScale": "century",
+      "unitOfAnalysis": "stat og region",
+      "emphasizes": [
+        "borders",
+        "geography",
+        "land-power",
+        "sea-power",
+        "strategy"
+      ],
+      "critique": "Teorien er kritisert for geografisk determinisme og for å tjene britiske imperieinteresser, og koblingen til Haushofer skadet Mackinders ettermæle etter andre verdenskrig.",
+      "evidenceStatus": "disputed",
+      "thinkerIds": [
+        "mackinder"
+      ],
+      "workIds": [
+        "geographical-pivot",
+        "democratic-ideals"
+      ],
+      "conceptIds": [
+        "heartland",
+        "world-island"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/The_Geographical_Pivot_of_History",
+        "https://en.wikipedia.org/wiki/Halford_Mackinder"
+      ]
+    }
+  ],
+  "thinkers": [
+    {
+      "id": "herodotus",
+      "label": "Herodot",
+      "birthYear": -484,
+      "deathYear": -425,
+      "birthCountryIso3": "TUR",
+      "summary": "Gresk historiker fra Halikarnassos (dagens Bodrum) som samlet beretninger om perserkrigene og om folk han møtte på reisene. Cicero kalte ham historiens far, mens kritikere har kalt ham løgnens far. Årstallene er omtrentlige.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Herodotus"
+      ]
+    },
+    {
+      "id": "thucydides",
+      "label": "Tukydid",
+      "birthYear": -460,
+      "deathYear": -400,
+      "birthCountryIso3": "GRC",
+      "summary": "Atensk general og historiker som skrev om Peloponneskrigen. Han bygde på øyenvitner og dokumenter, holdt gudene utenfor forklaringene og regnes som et tidlig forbilde for kritisk historieskriving. Årstallene er omtrentlige.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Thucydides",
+        "https://en.wikipedia.org/wiki/History_of_the_Peloponnesian_War"
+      ]
+    },
+    {
+      "id": "polybius",
+      "label": "Polybios",
+      "birthYear": -200,
+      "deathYear": -118,
+      "birthCountryIso3": "GRC",
+      "summary": "Gresk historiker fra Megalopolis som forklarte Romas fremvekst. I sjette bok beskrev han hvordan forfatninger går i kretsløp, og mente Romas blandede forfatning kunne bremse forfallet. Årstallene er omtrentlige.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Polybius",
+        "https://en.wikipedia.org/wiki/Anacyclosis"
+      ]
+    },
+    {
+      "id": "sima-qian",
+      "label": "Sima Qian",
+      "birthYear": -145,
+      "deathYear": -86,
+      "birthCountryIso3": "CHN",
+      "summary": "Kinesisk hoffhistoriker som fullførte Shiji, en samlet historie fra sagntiden til hans egen tid. Han ordnet stoffet i annaler, tabeller, avhandlinger og biografier, et mønster senere kinesisk historieskriving fulgte. Årstallene er omtrentlige.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Sima_Qian"
+      ]
+    },
+    {
+      "id": "augustine",
+      "label": "Augustin",
+      "birthYear": 354,
+      "deathYear": 430,
+      "birthCountryIso3": "DZA",
+      "summary": "Kirkefar og biskop i Hippo i Nord-Afrika. Etter at Roma ble plyndret i 410 skrev han Om Guds stat, der historien får en retning og et mål i Guds plan.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Augustine_of_Hippo",
+        "https://en.wikipedia.org/wiki/The_City_of_God"
+      ]
+    },
+    {
+      "id": "ibn-khaldun",
+      "label": "Ibn Khaldun",
+      "birthYear": 1332,
+      "deathYear": 1406,
+      "birthCountryIso3": "TUN",
+      "summary": "Nordafrikansk lærd fra Tunis som i Muqaddimah analyserte hvordan samhold i en gruppe bærer et dynasti til makten og hvordan velstand svekker det. Han regnes ofte som en forløper for sosiologi og økonomisk historie.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Ibn_Khaldun",
+        "https://en.wikipedia.org/wiki/Muqaddimah"
+      ]
+    },
+    {
+      "id": "vico",
+      "label": "Giambattista Vico",
+      "birthYear": 1668,
+      "deathYear": 1744,
+      "birthCountryIso3": "ITA",
+      "summary": "Napolitansk filosof som i Scienza Nuova beskrev hvordan samfunn stiger og faller i historiske kretsløp. Han mente vi kan forstå historien fordi den er laget av mennesker.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Giambattista_Vico"
+      ]
+    },
+    {
+      "id": "voltaire",
+      "label": "Voltaire",
+      "birthYear": 1694,
+      "deathYear": 1778,
+      "birthCountryIso3": "FRA",
+      "summary": "Fransk opplysningsforfatter som skrev verdenshistorie om skikker, kunst og vitenskap i stedet for bare kriger og fyrster. Han løftet historien ut av den kristne rammen.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Voltaire"
+      ]
+    },
+    {
+      "id": "herder",
+      "label": "Johann Gottfried Herder",
+      "birthYear": 1744,
+      "deathYear": 1803,
+      "birthCountryIso3": "POL",
+      "summary": "Tysk filosof født i Mohrungen (nå Morąg i Polen). Han så hvert folk som bærer av en egen ånd og et eget språk og påvirket både romantikken og Hegel.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Johann_Gottfried_Herder",
+        "https://en.wikipedia.org/wiki/Zeitgeist"
+      ]
+    },
+    {
+      "id": "condorcet",
+      "label": "Condorcet",
+      "birthYear": 1743,
+      "deathYear": 1794,
+      "birthCountryIso3": "FRA",
+      "summary": "Fransk matematiker og opplysningsfilosof. Mens han var i skjul under revolusjonen skrev han et utkast til menneskeåndens fremskritt, der han spådde at fremgangen ville fortsette uten ende.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Marquis_de_Condorcet"
+      ]
+    },
+    {
+      "id": "hegel",
+      "label": "G. W. F. Hegel",
+      "birthYear": 1770,
+      "deathYear": 1831,
+      "birthCountryIso3": "DEU",
+      "summary": "Tysk filosof som forstod verdenshistorien som fremskritt i bevisstheten om frihet. Forelesningene hans om historiens filosofi ble utgitt etter hans død.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Georg_Wilhelm_Friedrich_Hegel",
+        "https://en.wikipedia.org/wiki/Lectures_on_the_Philosophy_of_History"
+      ]
+    },
+    {
+      "id": "ranke",
+      "label": "Leopold von Ranke",
+      "birthYear": 1795,
+      "deathYear": 1886,
+      "birthCountryIso3": "DEU",
+      "summary": "Tysk historiker som gjorde kildegranskning til kjernen i faget. Ved universitetet i Berlin lærte han studentene å prøve kildenes pålitelighet i seminarer.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Leopold_von_Ranke"
+      ]
+    },
+    {
+      "id": "michelet",
+      "label": "Jules Michelet",
+      "birthYear": 1798,
+      "deathYear": 1874,
+      "birthCountryIso3": "FRA",
+      "summary": "Fransk historiker som skrev Frankrikes og revolusjonens historie med folket som helt. Han oversatte og utbredte Vico i Frankrike.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Jules_Michelet",
+        "https://m.gutenberg.org/ebooks/43307"
+      ]
+    },
+    {
+      "id": "tocqueville",
+      "label": "Alexis de Tocqueville",
+      "birthYear": 1805,
+      "deathYear": 1859,
+      "birthCountryIso3": "FRA",
+      "summary": "Fransk politisk tenker som skrev om demokratiet i Amerika og om forbindelsen mellom det gamle regimet og revolusjonen.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Alexis_de_Tocqueville"
+      ]
+    },
+    {
+      "id": "carlyle",
+      "label": "Thomas Carlyle",
+      "birthYear": 1795,
+      "deathYear": 1881,
+      "birthCountryIso3": "GBR",
+      "summary": "Skotsk essayist og historiker som mente at historien i bunn og grunn handler om store menn. Hans bok om den franske revolusjon ble en viktig kilde for Dickens.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Thomas_Carlyle",
+        "https://en.wikipedia.org/wiki/Great_man_theory"
+      ]
+    },
+    {
+      "id": "marx",
+      "label": "Karl Marx",
+      "birthYear": 1818,
+      "deathYear": 1883,
+      "birthCountryIso3": "DEU",
+      "summary": "Tysk filosof og økonom som forklarte historien ut fra produksjonsforhold og klassekamp. Han bygde på Hegels dialektikk, men snudde den mot materielle forhold.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Karl_Marx",
+        "https://en.wikipedia.org/wiki/Historical_materialism"
+      ]
+    },
+    {
+      "id": "engels",
+      "label": "Friedrich Engels",
+      "birthYear": 1820,
+      "deathYear": 1895,
+      "birthCountryIso3": "DEU",
+      "summary": "Tysk samfunnsforsker og Marx' nærmeste samarbeidspartner. Han studerte arbeiderklassens kår i Manchester og redigerte de siste bindene av Kapitalen.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Friedrich_Engels"
+      ]
+    },
+    {
+      "id": "burckhardt",
+      "label": "Jacob Burckhardt",
+      "birthYear": 1818,
+      "deathYear": 1897,
+      "birthCountryIso3": "CHE",
+      "summary": "Sveitsisk kulturhistoriker fra Basel som skrev om renessansen i Italia. Han hørte Ranke i Berlin og var kollega av Nietzsche i Basel.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Jacob_Burckhardt"
+      ]
+    },
+    {
+      "id": "spencer",
+      "label": "Herbert Spencer",
+      "birthYear": 1820,
+      "deathYear": 1903,
+      "birthCountryIso3": "GBR",
+      "summary": "Engelsk filosof og sosiolog som avviste at store menn forklarer historien. Han mente den store mannen selv er et produkt av samfunnet sitt.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Herbert_Spencer",
+        "https://en.wikipedia.org/wiki/Great_man_theory"
+      ]
+    },
+    {
+      "id": "tolstoy",
+      "label": "Lev Tolstoj",
+      "birthYear": 1828,
+      "deathYear": 1910,
+      "birthCountryIso3": "RUS",
+      "summary": "Russisk forfatter som i Krig og fred angrep troen på at helter og hærførere styrer historien. Han så hendelser som summen av utallige små handlinger.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Leo_Tolstoy",
+        "https://en.wikipedia.org/wiki/War_and_Peace"
+      ]
+    },
+    {
+      "id": "nietzsche",
+      "label": "Friedrich Nietzsche",
+      "birthYear": 1844,
+      "deathYear": 1900,
+      "birthCountryIso3": "DEU",
+      "summary": "Tysk filosof og filolog i Basel som spurte hva historie er godt for i livet. Hans genealogiske kritikk ble viktig for Foucault.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Friedrich_Nietzsche"
+      ]
+    },
+    {
+      "id": "croce",
+      "label": "Benedetto Croce",
+      "birthYear": 1866,
+      "deathYear": 1952,
+      "birthCountryIso3": "ITA",
+      "summary": "Italiensk filosof og historiker som skrev om Vico og Hegel. Han så historien som frihetens historie og påvirket Collingwood.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Benedetto_Croce"
+      ]
+    },
+    {
+      "id": "mackinder",
+      "label": "Halford Mackinder",
+      "birthYear": 1861,
+      "deathYear": 1947,
+      "birthCountryIso3": "GBR",
+      "summary": "Britisk geograf som i 1904 lanserte teorien om hjertelandet i Eurasia. Ideene hans fikk stor betydning for geopolitisk tenkning gjennom 1900-tallet.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Halford_Mackinder",
+        "https://en.wikipedia.org/wiki/The_Geographical_Pivot_of_History"
+      ]
+    },
+    {
+      "id": "spengler",
+      "label": "Oswald Spengler",
+      "birthYear": 1880,
+      "deathYear": 1936,
+      "birthCountryIso3": "DEU",
+      "summary": "Tysk forfatter av Vestens undergang, der kulturer behandles som organismer som fødes, blomstrer og stivner. Faghistorikere kritiserte metoden som uvitenskapelig.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Oswald_Spengler"
+      ]
+    },
+    {
+      "id": "toynbee",
+      "label": "Arnold J. Toynbee",
+      "birthYear": 1889,
+      "deathYear": 1975,
+      "birthCountryIso3": "GBR",
+      "summary": "Britisk historiker som sammenlignet sivilisasjoner i tolv bind. Han forklarte vekst som skapende svar på utfordringer.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Arnold_J._Toynbee"
+      ]
+    },
+    {
+      "id": "halbwachs",
+      "label": "Maurice Halbwachs",
+      "birthYear": 1877,
+      "deathYear": 1945,
+      "birthCountryIso3": "FRA",
+      "summary": "Fransk sosiolog som viste at minner formes og bæres av sosiale grupper. Han døde i konsentrasjonsleiren Buchenwald.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Maurice_Halbwachs",
+        "https://en.wikipedia.org/wiki/Collective_memory"
+      ]
+    },
+    {
+      "id": "febvre",
+      "label": "Lucien Febvre",
+      "birthYear": 1878,
+      "deathYear": 1956,
+      "birthCountryIso3": "FRA",
+      "summary": "Fransk historiker som grunnla Annales sammen med Bloch. Han studerte tankehorisonten i 1500-tallets Frankrike og var lærer for Braudel.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Lucien_Febvre",
+        "https://en.wikipedia.org/wiki/Annales_school"
+      ]
+    },
+    {
+      "id": "bloch",
+      "label": "Marc Bloch",
+      "birthYear": 1886,
+      "deathYear": 1944,
+      "birthCountryIso3": "FRA",
+      "summary": "Fransk middelalderhistoriker og medgrunnlegger av Annales. Han studerte troen på kongers helbredende berøring og ble skutt av Gestapo i 1944.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Marc_Bloch",
+        "https://en.wikipedia.org/wiki/Les_Rois_thaumaturges"
+      ]
+    },
+    {
+      "id": "butterfield",
+      "label": "Herbert Butterfield",
+      "birthYear": 1900,
+      "deathYear": 1979,
+      "birthCountryIso3": "GBR",
+      "summary": "Britisk historiker som kritiserte whig-historien, altså å lese fortiden som en vei frem mot nåtiden.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Herbert_Butterfield",
+        "https://en.wikipedia.org/wiki/Whig_history"
+      ]
+    },
+    {
+      "id": "collingwood",
+      "label": "R. G. Collingwood",
+      "birthYear": 1889,
+      "deathYear": 1943,
+      "birthCountryIso3": "GBR",
+      "summary": "Britisk filosof og historiker som mente historikeren må tenke aktørenes tanker på nytt ut fra kildene.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/R._G._Collingwood"
+      ]
+    },
+    {
+      "id": "braudel",
+      "label": "Fernand Braudel",
+      "birthYear": 1902,
+      "deathYear": 1985,
+      "birthCountryIso3": "FRA",
+      "summary": "Fransk historiker og ledende skikkelse i Annales etter 1945. Han skrev det meste av sitt verk om Middelhavet som krigsfange og delte historien inn i tre tidsrytmer.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Fernand_Braudel"
+      ]
+    },
+    {
+      "id": "carr",
+      "label": "E. H. Carr",
+      "birthYear": 1892,
+      "deathYear": 1982,
+      "birthCountryIso3": "GBR",
+      "summary": "Britisk historiker som i Hva er historie? hevdet at historikeren velger hvilke fakta som blir historiske.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/E._H._Carr",
+        "https://en.wikipedia.org/wiki/What_Is_History%3F"
+      ]
+    },
+    {
+      "id": "thompson",
+      "label": "E. P. Thompson",
+      "birthYear": 1924,
+      "deathYear": 1993,
+      "birthCountryIso3": "GBR",
+      "summary": "Britisk marxistisk historiker som skrev om hvordan den engelske arbeiderklassen ble til. Han lanserte uttrykket historie nedenfra.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/E._P._Thompson"
+      ]
+    },
+    {
+      "id": "hobsbawm",
+      "label": "Eric Hobsbawm",
+      "birthYear": 1917,
+      "deathYear": 2012,
+      "birthCountryIso3": "EGY",
+      "summary": "Britisk marxistisk historiker født i Alexandria. Han skrev om revolusjonens tidsalder og var med på å vise hvordan tradisjoner kan være oppfunnet.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Eric_Hobsbawm"
+      ]
+    },
+    {
+      "id": "william-mcneill",
+      "label": "William H. McNeill",
+      "birthYear": 1917,
+      "deathYear": 2016,
+      "birthCountryIso3": "CAN",
+      "summary": "Kanadisk-amerikansk verdenshistoriker som forklarte endring gjennom kontakt mellom sivilisasjoner og skrev om epidemienes historie.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/William_H._McNeill"
+      ]
+    },
+    {
+      "id": "john-mcneill",
+      "label": "J. R. McNeill",
+      "birthYear": 1954,
+      "deathYear": null,
+      "birthCountryIso3": "USA",
+      "summary": "Amerikansk miljøhistoriker ved Georgetown og sønn av William H. McNeill, som han skrev The Human Web sammen med.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/J._R._McNeill"
+      ]
+    },
+    {
+      "id": "hayden-white",
+      "label": "Hayden White",
+      "birthYear": 1928,
+      "deathYear": 2018,
+      "birthCountryIso3": "USA",
+      "summary": "Amerikansk historieteoretiker som viste at historisk fremstilling bygger på litterære valg av troper, plott og ideologi.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Hayden_White",
+        "https://en.wikipedia.org/wiki/Metahistory:_The_Historical_Imagination_in_Nineteenth-century_Europe"
+      ]
+    },
+    {
+      "id": "foucault",
+      "label": "Michel Foucault",
+      "birthYear": 1926,
+      "deathYear": 1984,
+      "birthCountryIso3": "FRA",
+      "summary": "Fransk filosof og idéhistoriker som undersøkte hvordan makt og kunnskap henger sammen i institusjoner som fengsel, klinikk og asyl.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Michel_Foucault"
+      ]
+    },
+    {
+      "id": "said",
+      "label": "Edward Said",
+      "birthYear": 1935,
+      "deathYear": 2003,
+      "birthCountryIso3": null,
+      "summary": "Palestinsk-amerikansk litteraturforsker født i Jerusalem under britisk mandat. Orientalisme viste hvordan vestlig kunnskap om Østen var vevd sammen med imperiemakt.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Edward_Said",
+        "https://en.wikipedia.org/wiki/Orientalism_(book)"
+      ]
+    },
+    {
+      "id": "wallerstein",
+      "label": "Immanuel Wallerstein",
+      "birthYear": 1930,
+      "deathYear": 2019,
+      "birthCountryIso3": "USA",
+      "summary": "Amerikansk sosiolog og historiker som grunnla verdenssystemanalysen med kjerne, semiperiferi og periferi.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Immanuel_Wallerstein",
+        "https://en.wikipedia.org/wiki/World-systems_theory"
+      ]
+    },
+    {
+      "id": "crosby",
+      "label": "Alfred W. Crosby",
+      "birthYear": 1931,
+      "deathYear": 2018,
+      "birthCountryIso3": "USA",
+      "summary": "Amerikansk historiker som innførte begrepet den colombianske utvekslingen og skrev om økologisk imperialisme.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Alfred_W._Crosby"
+      ]
+    },
+    {
+      "id": "ginzburg",
+      "label": "Carlo Ginzburg",
+      "birthYear": 1939,
+      "deathYear": 2026,
+      "birthCountryIso3": "ITA",
+      "summary": "Italiensk historiker og pioner for mikrohistorien. Han rekonstruerte en mølles verdensbilde ut fra inkvisisjonens forhør.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Carlo_Ginzburg",
+        "https://history.ucla.edu/2026/06/19/professor-emeritus-carlo-ginzburg-passes-away/"
+      ]
+    },
+    {
+      "id": "joan-scott",
+      "label": "Joan W. Scott",
+      "birthYear": 1941,
+      "deathYear": null,
+      "birthCountryIso3": "USA",
+      "summary": "Amerikansk historiker som gjorde kjønn til en analytisk kategori for hvordan makt får mening.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Joan_Wallach_Scott",
+        "https://en.wikipedia.org/wiki/Gender:_A_Useful_Category_of_Historical_Analysis"
+      ]
+    },
+    {
+      "id": "nora",
+      "label": "Pierre Nora",
+      "birthYear": 1931,
+      "deathYear": 2025,
+      "birthCountryIso3": "FRA",
+      "summary": "Fransk historiker og forlagsmann som ledet verket om Frankrikes erindringssteder.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Pierre_Nora"
+      ]
+    },
+    {
+      "id": "diamond",
+      "label": "Jared Diamond",
+      "birthYear": 1937,
+      "deathYear": null,
+      "birthCountryIso3": "USA",
+      "summary": "Amerikansk geograf og fysiolog som forklarte globale maktforskjeller med miljø, planter, dyr og smitte. Kritikere kaller tilnærmingen geografisk determinisme.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Jared_Diamond",
+        "https://en.wikipedia.org/wiki/Guns,_Germs,_and_Steel"
+      ]
+    },
+    {
+      "id": "david-christian",
+      "label": "David Christian",
+      "birthYear": 1946,
+      "deathYear": null,
+      "birthCountryIso3": "USA",
+      "summary": "Historiker født i Brooklyn og virksom i Australia som utviklet big history, en historie fra Big Bang til i dag.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/David_Christian_(historian)"
+      ]
+    },
+    {
+      "id": "chakrabarty",
+      "label": "Dipesh Chakrabarty",
+      "birthYear": 1948,
+      "deathYear": null,
+      "birthCountryIso3": "IND",
+      "summary": "Indisk historiker fra Kolkata knyttet til Subaltern Studies. Han kritiserer at Europa brukes som målestokk for all historie og skriver også om antropocen.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Dipesh_Chakrabarty",
+        "https://en.wikipedia.org/wiki/Subaltern_Studies"
+      ]
+    },
+    {
+      "id": "fukuyama",
+      "label": "Francis Fukuyama",
+      "birthYear": 1952,
+      "deathYear": null,
+      "birthCountryIso3": "USA",
+      "summary": "Amerikansk statsviter som etter den kalde krigen hevdet at det liberale demokratiet kunne være sluttpunktet for menneskets ideologiske utvikling.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Francis_Fukuyama",
+        "https://en.wikipedia.org/wiki/The_End_of_History_and_the_Last_Man"
+      ]
+    }
+  ],
+  "works": [
+    {
+      "id": "histories-herodotus",
+      "label": "Historíai (Herodot)",
+      "norwegianTitle": "Historie",
+      "year": -430,
+      "authorIds": [
+        "herodotus"
+      ],
+      "summary": "Herodots undersøkelse av perserkrigene og folkene rundt dem; året er omtrentlig.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Herodotus"
+      ]
+    },
+    {
+      "id": "peloponnesian-war",
+      "label": "Historia tou Peloponnesiakou polemou",
+      "norwegianTitle": "Peloponneskrigens historie",
+      "year": -400,
+      "authorIds": [
+        "thucydides"
+      ],
+      "summary": "Tukydids beretning om krigen mellom Athen og Sparta, avbrutt midt i fortellingen; året er omtrentlig.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/History_of_the_Peloponnesian_War"
+      ]
+    },
+    {
+      "id": "histories-polybius",
+      "label": "Historíai (Polybios)",
+      "norwegianTitle": "Historie",
+      "year": -140,
+      "authorIds": [
+        "polybius"
+      ],
+      "summary": "Polybios' fremstilling av Romas vei til makten 264–146 f.Kr., med teorien om forfatningskretsløpet i bok 6; året er omtrentlig.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Polybius"
+      ]
+    },
+    {
+      "id": "shiji",
+      "label": "Shiji",
+      "norwegianTitle": "Historikerens opptegnelser",
+      "year": -94,
+      "authorIds": [
+        "sima-qian"
+      ],
+      "summary": "Sima Qians kinesiske historie i 130 kapitler, trolig fullført rundt 94 f.Kr.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Sima_Qian"
+      ]
+    },
+    {
+      "id": "city-of-god",
+      "label": "De civitate Dei",
+      "norwegianTitle": "Om Guds stat",
+      "year": 426,
+      "authorIds": [
+        "augustine"
+      ],
+      "summary": "Augustins svar på plyndringen av Roma, der historien skildres som en kamp mellom den jordiske staten og Guds stat.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/The_City_of_God"
+      ]
+    },
+    {
+      "id": "muqaddimah",
+      "label": "al-Muqaddima",
+      "norwegianTitle": "Muqaddimah",
+      "year": 1377,
+      "authorIds": [
+        "ibn-khaldun"
+      ],
+      "summary": "Innledningen til Ibn Khalduns verdenshistorie, med teorien om samhold og dynastienes kretsløp.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Muqaddimah"
+      ]
+    },
+    {
+      "id": "scienza-nuova",
+      "label": "Scienza Nuova",
+      "norwegianTitle": "Den nye vitenskap",
+      "year": 1725,
+      "authorIds": [
+        "vico"
+      ],
+      "summary": "Vicos verk om de historiske kretsløpene samfunn stiger og faller gjennom.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Giambattista_Vico"
+      ]
+    },
+    {
+      "id": "essai-sur-les-moeurs",
+      "label": "Essai sur les mœurs et l'esprit des nations",
+      "year": 1756,
+      "authorIds": [
+        "voltaire"
+      ],
+      "summary": "Voltaires verdenshistorie om skikker og kultur utenfor den kristne rammen.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Voltaire"
+      ]
+    },
+    {
+      "id": "ideen-herder",
+      "label": "Ideen zur Philosophie der Geschichte der Menschheit",
+      "year": 1784,
+      "authorIds": [
+        "herder"
+      ],
+      "summary": "Herders filosofi om menneskehetens historie, utgitt i fire bind 1784–1791.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Johann_Gottfried_Herder"
+      ]
+    },
+    {
+      "id": "esquisse-condorcet",
+      "label": "Esquisse d'un tableau historique des progrès de l'esprit humain",
+      "year": 1795,
+      "authorIds": [
+        "condorcet"
+      ],
+      "summary": "Condorcets utkast om menneskeåndens fremskritt, utgitt etter hans død.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Marquis_de_Condorcet"
+      ]
+    },
+    {
+      "id": "hegel-philosophy-of-history",
+      "label": "Vorlesungen über die Philosophie der Geschichte",
+      "norwegianTitle": "Forelesninger over historiens filosofi",
+      "year": 1837,
+      "authorIds": [
+        "hegel"
+      ],
+      "summary": "Hegels forelesninger, utgitt av Eduard Gans etter hans død, om verdenshistorien som frihetsbevissthetens fremskritt.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Lectures_on_the_Philosophy_of_History"
+      ]
+    },
+    {
+      "id": "ranke-1824",
+      "label": "Geschichten der romanischen und germanischen Völker von 1494 bis 1514",
+      "year": 1824,
+      "authorIds": [
+        "ranke"
+      ],
+      "summary": "Rankes første bok, bygd på et uvanlig bredt kildetilfang og kjent for idealet om å vise hvordan det egentlig var.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Leopold_von_Ranke"
+      ]
+    },
+    {
+      "id": "carlyle-french-revolution",
+      "label": "The French Revolution: A History",
+      "year": 1837,
+      "authorIds": [
+        "carlyle"
+      ],
+      "summary": "Carlyles dramatiske revolusjonshistorie, som Dickens brukte i To byer.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Thomas_Carlyle",
+        "https://en.wikipedia.org/wiki/A_Tale_of_Two_Cities"
+      ]
+    },
+    {
+      "id": "on-heroes",
+      "label": "On Heroes, Hero-Worship, and the Heroic in History",
+      "year": 1841,
+      "authorIds": [
+        "carlyle"
+      ],
+      "summary": "Carlyles forelesninger fra 1840 om helter som historiens drivkraft.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Thomas_Carlyle",
+        "https://en.wikipedia.org/wiki/Great_man_theory"
+      ]
+    },
+    {
+      "id": "michelet-revolution",
+      "label": "Histoire de la Révolution française",
+      "year": 1847,
+      "authorIds": [
+        "michelet"
+      ],
+      "summary": "Michelets revolusjonshistorie i sju bind, utgitt 1847–1853.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Jules_Michelet"
+      ]
+    },
+    {
+      "id": "tocqueville-ancien-regime",
+      "label": "L'Ancien Régime et la Révolution",
+      "year": 1856,
+      "authorIds": [
+        "tocqueville"
+      ],
+      "summary": "Tocquevilles analyse av kontinuiteten mellom det gamle regimet og revolusjonen.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Alexis_de_Tocqueville"
+      ]
+    },
+    {
+      "id": "condition-working-class",
+      "label": "Die Lage der arbeitenden Klasse in England",
+      "norwegianTitle": "Arbeiderklassens kår i England",
+      "year": 1845,
+      "authorIds": [
+        "engels"
+      ],
+      "summary": "Engels' studie av arbeiderne i Manchester.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Friedrich_Engels"
+      ]
+    },
+    {
+      "id": "communist-manifesto",
+      "label": "Manifest der Kommunistischen Partei",
+      "norwegianTitle": "Det kommunistiske manifest",
+      "year": 1848,
+      "authorIds": [
+        "marx",
+        "engels"
+      ],
+      "summary": "Marx og Engels' program, som fremstiller historien som en historie om klassekamp.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Karl_Marx",
+        "https://en.wikipedia.org/wiki/Friedrich_Engels"
+      ]
+    },
+    {
+      "id": "das-kapital",
+      "label": "Das Kapital",
+      "norwegianTitle": "Kapitalen",
+      "year": 1867,
+      "authorIds": [
+        "marx",
+        "engels"
+      ],
+      "summary": "Marx' analyse av kapitalismen; Engels redigerte bind 2 og 3 etter Marx' død.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Karl_Marx",
+        "https://en.wikipedia.org/wiki/Friedrich_Engels"
+      ]
+    },
+    {
+      "id": "burckhardt-renaissance",
+      "label": "Die Cultur der Renaissance in Italien",
+      "norwegianTitle": "Renessansens kultur i Italia",
+      "year": 1860,
+      "authorIds": [
+        "burckhardt"
+      ],
+      "summary": "Burckhardts kulturhistorie om renessansen som en ny tid i Italia.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Jacob_Burckhardt"
+      ]
+    },
+    {
+      "id": "war-and-peace-novel",
+      "label": "Vojna i mir",
+      "norwegianTitle": "Krig og fred",
+      "year": 1869,
+      "authorIds": [
+        "tolstoy"
+      ],
+      "summary": "Tolstojs roman, der essayistiske kapitler angriper troen på at store menn styrer historien.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/War_and_Peace"
+      ]
+    },
+    {
+      "id": "study-of-sociology",
+      "label": "The Study of Sociology",
+      "year": 1873,
+      "authorIds": [
+        "spencer"
+      ],
+      "summary": "Spencers innføring i sosiologi, med kritikk av forklaringer som bygger på store menn.",
+      "sourceUrls": [
+        "https://en.wikisource.org/wiki/The_Study_of_Sociology_(1872-1873)",
+        "https://en.wikipedia.org/wiki/Great_man_theory"
+      ]
+    },
+    {
+      "id": "geographical-pivot",
+      "label": "The Geographical Pivot of History",
+      "year": 1904,
+      "authorIds": [
+        "mackinder"
+      ],
+      "summary": "Mackinders foredrag i Royal Geographical Society om Eurasias indre som historiens dreiepunkt.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/The_Geographical_Pivot_of_History"
+      ]
+    },
+    {
+      "id": "democratic-ideals",
+      "label": "Democratic Ideals and Reality",
+      "year": 1919,
+      "authorIds": [
+        "mackinder"
+      ],
+      "summary": "Mackinders bok fra fredskonferansens tid, der han knyttet kontroll over Øst-Europa til kontroll over hjertelandet.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Halford_Mackinder",
+        "https://www.britannica.com/biography/Halford-Mackinder"
+      ]
+    },
+    {
+      "id": "decline-of-the-west",
+      "label": "Der Untergang des Abendlandes",
+      "norwegianTitle": "Vestens undergang",
+      "year": 1918,
+      "authorIds": [
+        "spengler"
+      ],
+      "summary": "Spenglers to bind (1918 og 1922) om kulturer som organismer med faste livsløp.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Oswald_Spengler"
+      ]
+    },
+    {
+      "id": "study-of-history",
+      "label": "A Study of History",
+      "year": 1934,
+      "authorIds": [
+        "toynbee"
+      ],
+      "summary": "Toynbees sammenligning av sivilisasjoner i tolv bind, utgitt 1934–1961.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Arnold_J._Toynbee"
+      ]
+    },
+    {
+      "id": "rois-thaumaturges",
+      "label": "Les Rois thaumaturges",
+      "norwegianTitle": "De undergjørende kongene",
+      "year": 1924,
+      "authorIds": [
+        "bloch"
+      ],
+      "summary": "Blochs studie av troen på at franske og engelske konger kunne helbrede ved berøring.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Les_Rois_thaumaturges"
+      ]
+    },
+    {
+      "id": "cadres-sociaux",
+      "label": "Les Cadres sociaux de la mémoire",
+      "year": 1925,
+      "authorIds": [
+        "halbwachs"
+      ],
+      "summary": "Halbwachs' teori om at hukommelsen alltid formes innenfor sosiale rammer.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Maurice_Halbwachs",
+        "https://en.wikipedia.org/wiki/Collective_memory"
+      ]
+    },
+    {
+      "id": "annales-journal",
+      "label": "Annales d'histoire économique et sociale",
+      "year": 1929,
+      "authorIds": [
+        "bloch",
+        "febvre"
+      ],
+      "summary": "Tidsskriftet Bloch og Febvre grunnla i Strasbourg, som ga navn til Annales-skolen.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Annales_school"
+      ]
+    },
+    {
+      "id": "whig-interpretation",
+      "label": "The Whig Interpretation of History",
+      "year": 1931,
+      "authorIds": [
+        "butterfield"
+      ],
+      "summary": "Butterfields kritikk av å studere fortiden med blikket festet på nåtiden.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Whig_history"
+      ]
+    },
+    {
+      "id": "incroyance-rabelais",
+      "label": "Le Problème de l'incroyance au XVIe siècle : la religion de Rabelais",
+      "year": 1942,
+      "authorIds": [
+        "febvre"
+      ],
+      "summary": "Febvres studie av hva det var mulig å tro og tvile på i 1500-tallets Frankrike.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Lucien_Febvre"
+      ]
+    },
+    {
+      "id": "idea-of-history",
+      "label": "The Idea of History",
+      "year": 1946,
+      "authorIds": [
+        "collingwood"
+      ],
+      "summary": "Collingwoods historiefilosofi, satt sammen av eleven T. M. Knox etter hans død.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/R._G._Collingwood"
+      ]
+    },
+    {
+      "id": "la-mediterranee",
+      "label": "La Méditerranée et le Monde méditerranéen à l'époque de Philippe II",
+      "norwegianTitle": "Middelhavet og middelhavsverdenen på Filip 2.s tid",
+      "year": 1949,
+      "authorIds": [
+        "braudel"
+      ],
+      "summary": "Braudels hovedverk om Middelhavet, bygd opp etter geografisk tid, sosial tid og hendelsenes tid.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Fernand_Braudel"
+      ]
+    },
+    {
+      "id": "what-is-history",
+      "label": "What Is History?",
+      "norwegianTitle": "Hva er historie?",
+      "year": 1961,
+      "authorIds": [
+        "carr"
+      ],
+      "summary": "Carrs forelesninger om hvordan historikeren velger og tolker fakta.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/What_Is_History%3F"
+      ]
+    },
+    {
+      "id": "making-english-working-class",
+      "label": "The Making of the English Working Class",
+      "year": 1963,
+      "authorIds": [
+        "thompson"
+      ],
+      "summary": "Thompsons studie av hvordan arbeidere i England selv ble en klasse gjennom erfaring.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/E._P._Thompson"
+      ]
+    },
+    {
+      "id": "rise-of-the-west",
+      "label": "The Rise of the West: A History of the Human Community",
+      "year": 1963,
+      "authorIds": [
+        "william-mcneill"
+      ],
+      "summary": "McNeills verdenshistorie om kontakt og spredning mellom sivilisasjonene i Eurasia.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/The_Rise_of_the_West"
+      ]
+    },
+    {
+      "id": "metahistory-book",
+      "label": "Metahistory: The Historical Imagination in Nineteenth-Century Europe",
+      "year": 1973,
+      "authorIds": [
+        "hayden-white"
+      ],
+      "summary": "Whites analyse av hvordan fire historikere og fire filosofer formet fortiden gjennom troper, plott, argumenter og ideologi.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Metahistory:_The_Historical_Imagination_in_Nineteenth-century_Europe"
+      ]
+    },
+    {
+      "id": "modern-world-system",
+      "label": "The Modern World-System",
+      "year": 1974,
+      "authorIds": [
+        "wallerstein"
+      ],
+      "summary": "Wallersteins verk i fire bind (1974–2011) om den kapitalistiske verdensøkonomien siden 1500-tallet.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Immanuel_Wallerstein",
+        "https://en.wikipedia.org/wiki/World-systems_theory"
+      ]
+    },
+    {
+      "id": "discipline-and-punish",
+      "label": "Surveiller et punir",
+      "norwegianTitle": "Overvåkning og straff",
+      "year": 1975,
+      "authorIds": [
+        "foucault"
+      ],
+      "summary": "Foucaults studie av overgangen fra offentlig kroppsstraff til fengsel og disiplin.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Discipline_and_Punish"
+      ]
+    },
+    {
+      "id": "cheese-and-worms",
+      "label": "Il formaggio e i vermi",
+      "norwegianTitle": "Osten og markene",
+      "year": 1976,
+      "authorIds": [
+        "ginzburg"
+      ],
+      "summary": "Ginzburgs mikrohistorie om mølleren Menocchio fra Friuli og hans verdensbilde.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/The_Cheese_and_the_Worms"
+      ]
+    },
+    {
+      "id": "plagues-and-peoples",
+      "label": "Plagues and Peoples",
+      "year": 1976,
+      "authorIds": [
+        "william-mcneill"
+      ],
+      "summary": "McNeills tidlige verk om epidemienes rolle i verdenshistorien.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Plagues_and_Peoples"
+      ]
+    },
+    {
+      "id": "orientalism-book",
+      "label": "Orientalism",
+      "norwegianTitle": "Orientalisme",
+      "year": 1978,
+      "authorIds": [
+        "said"
+      ],
+      "summary": "Saids kritikk av hvordan vestlig vitenskap og litteratur skapte et bilde av Østen i imperiemaktens tjeneste.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Orientalism_(book)"
+      ]
+    },
+    {
+      "id": "columbian-exchange-book",
+      "label": "The Columbian Exchange: Biological and Cultural Consequences of 1492",
+      "year": 1972,
+      "authorIds": [
+        "crosby"
+      ],
+      "summary": "Crosbys bok om overføringen av planter, dyr, sykdommer og mennesker mellom Amerika og den gamle verden.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/The_Columbian_Exchange",
+        "https://en.wikipedia.org/wiki/Alfred_W._Crosby"
+      ]
+    },
+    {
+      "id": "invention-of-tradition",
+      "label": "The Invention of Tradition",
+      "year": 1983,
+      "authorIds": [
+        "hobsbawm"
+      ],
+      "summary": "Antologi redigert av Hobsbawm og Terence Ranger om tradisjoner som er nyere enn de gir seg ut for.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Eric_Hobsbawm"
+      ]
+    },
+    {
+      "id": "lieux-de-memoire",
+      "label": "Les Lieux de mémoire",
+      "norwegianTitle": "Erindringssteder",
+      "year": 1984,
+      "authorIds": [
+        "nora"
+      ],
+      "summary": "Noras flerbindsverk (1984–1992) om steder, symboler og ritualer som bærer Frankrikes nasjonale minne.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Pierre_Nora",
+        "https://en.wikipedia.org/wiki/Lieu_de_m%C3%A9moire"
+      ]
+    },
+    {
+      "id": "ecological-imperialism",
+      "label": "Ecological Imperialism: The Biological Expansion of Europe, 900–1900",
+      "year": 1986,
+      "authorIds": [
+        "crosby"
+      ],
+      "summary": "Crosbys bok om hvorfor europeere lyktes lettest i områder han kalte neo-Europa.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Alfred_W._Crosby"
+      ]
+    },
+    {
+      "id": "gender-useful-category",
+      "label": "Gender: A Useful Category of Historical Analysis",
+      "year": 1986,
+      "authorIds": [
+        "joan-scott"
+      ],
+      "summary": "Scotts artikkel i American Historical Review om kjønn som kategori for historisk analyse.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Gender:_A_Useful_Category_of_Historical_Analysis",
+        "https://www.jstor.org/stable/1864376"
+      ]
+    },
+    {
+      "id": "end-of-history",
+      "label": "The End of History?",
+      "year": 1989,
+      "authorIds": [
+        "fukuyama"
+      ],
+      "summary": "Fukuyamas essay i The National Interest, utvidet til boken The End of History and the Last Man i 1992.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/The_End_of_History_and_the_Last_Man"
+      ]
+    },
+    {
+      "id": "guns-germs-steel",
+      "label": "Guns, Germs, and Steel",
+      "year": 1997,
+      "authorIds": [
+        "diamond"
+      ],
+      "summary": "Diamonds forklaring av globale maktforskjeller ut fra miljø, tamme arter og smitte; Pulitzerprisen 1998.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Guns,_Germs,_and_Steel"
+      ]
+    },
+    {
+      "id": "provincializing-europe",
+      "label": "Provincializing Europe: Postcolonial Thought and Historical Difference",
+      "year": 2000,
+      "authorIds": [
+        "chakrabarty"
+      ],
+      "summary": "Chakrabartys kritikk av at Europa er innebygd som målestokk i historie og samfunnsvitenskap.",
+      "sourceUrls": [
+        "https://ci.nii.ac.jp/ncid/BA50709396",
+        "https://en.wikipedia.org/wiki/Dipesh_Chakrabarty"
+      ]
+    },
+    {
+      "id": "human-web",
+      "label": "The Human Web: A Bird's-Eye View of World History",
+      "year": 2003,
+      "authorIds": [
+        "john-mcneill",
+        "william-mcneill"
+      ],
+      "summary": "Far og sønn McNeills verdenshistorie fortalt som stadig tettere nett av kontakt.",
+      "sourceUrls": [
+        "https://publishersweekly.com/9780393051797",
+        "https://en.wikipedia.org/wiki/William_H._McNeill"
+      ]
+    },
+    {
+      "id": "maps-of-time",
+      "label": "Maps of Time: An Introduction to Big History",
+      "year": 2004,
+      "authorIds": [
+        "david-christian"
+      ],
+      "summary": "Christians innføring i big history, med forord av William H. McNeill.",
+      "sourceUrls": [
+        "https://ci.nii.ac.jp/ncid/BB08585678",
+        "https://en.wikipedia.org/wiki/David_Christian_(historian)"
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "source-criticism",
+      "label": "kildekritikk",
+      "summary": "Metoden for å vurdere hvem som laget en kilde, når, hvorfor og hvor pålitelig den er. Den ble gjort til fagets kjerne i Rankes seminarer.",
+      "thinkerIds": [
+        "thucydides",
+        "polybius",
+        "ranke"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Leopold_von_Ranke",
+        "https://en.wikipedia.org/wiki/Thucydides",
+        "https://en.wikipedia.org/wiki/Polybius"
+      ]
+    },
+    {
+      "id": "wie-es-eigentlich-gewesen",
+      "label": "«wie es eigentlich gewesen»",
+      "summary": "Rankes ideal om å vise hvordan det egentlig var. Forskere strides om han mente nøktern faktagjengivelse eller å finne det vesentlige bak fakta.",
+      "thinkerIds": [
+        "ranke"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Leopold_von_Ranke"
+      ]
+    },
+    {
+      "id": "two-cities",
+      "label": "de to statene",
+      "summary": "Augustins skille mellom den jordiske staten og Guds stat. Historien blir en kamp mellom dem med et fastsatt endepunkt.",
+      "thinkerIds": [
+        "augustine"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/The_City_of_God"
+      ]
+    },
+    {
+      "id": "anacyclosis",
+      "label": "anakyklosis (forfatningskretsløpet)",
+      "summary": "Polybios' lære om at styreformer går i ring fra kongedømme via aristokrati og demokrati til pøbelvelde og tilbake. En blandet forfatning skulle kunne bremse kretsløpet.",
+      "thinkerIds": [
+        "polybius"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Anacyclosis",
+        "https://en.wikipedia.org/wiki/Polybius"
+      ]
+    },
+    {
+      "id": "asabiyya",
+      "label": "asabiyya (gruppesamhold)",
+      "summary": "Ibn Khalduns begrep for samholdet som bærer en gruppe til makten. Når samholdet svekkes av luksus, tar en ny gruppe over.",
+      "thinkerIds": [
+        "ibn-khaldun"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Muqaddimah",
+        "https://en.wikipedia.org/wiki/Ibn_Khaldun"
+      ]
+    },
+    {
+      "id": "verum-factum",
+      "label": "verum factum",
+      "summary": "Vicos prinsipp om at det sanne og det skapte er det samme. Mennesker kan derfor forstå historien fordi de selv har laget den.",
+      "thinkerIds": [
+        "vico"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Giambattista_Vico"
+      ]
+    },
+    {
+      "id": "volksgeist",
+      "label": "folkeånd (Volksgeist)",
+      "summary": "Tanken om at hvert folk har en egen ånd som kommer til uttrykk i språk, sang og diktning.",
+      "thinkerIds": [
+        "herder",
+        "hegel"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Johann_Gottfried_Herder",
+        "https://en.wikipedia.org/wiki/Zeitgeist"
+      ]
+    },
+    {
+      "id": "zeitgeist",
+      "label": "tidsånd (Zeitgeist)",
+      "summary": "Forestillingen om at en tid har en egen ånd som former tanker og handlinger. Herder gjorde ordet kjent; Hegel brukte nærliggende uttrykk.",
+      "thinkerIds": [
+        "herder",
+        "hegel",
+        "tolstoy"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Zeitgeist"
+      ]
+    },
+    {
+      "id": "idea-of-progress",
+      "label": "fremskrittstro",
+      "summary": "Troen på at historien beveger seg mot mer kunnskap, frihet og velferd. Condorcet mente fremgangen ville fortsette uten ende.",
+      "thinkerIds": [
+        "condorcet",
+        "hegel",
+        "fukuyama"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Marquis_de_Condorcet",
+        "https://en.wikipedia.org/wiki/Lectures_on_the_Philosophy_of_History"
+      ]
+    },
+    {
+      "id": "whig-history",
+      "label": "whig-historie",
+      "summary": "Å lese fortiden som en vei frem mot nåtidens verdier og institusjoner. Butterfield kritiserte det som en forvrengning.",
+      "thinkerIds": [
+        "butterfield"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Whig_history"
+      ]
+    },
+    {
+      "id": "end-of-history",
+      "label": "historiens slutt",
+      "summary": "Fukuyamas tese om at det liberale demokratiet kan være sluttpunktet for den ideologiske utviklingen. Han bygde på Hegel slik Kojève leste ham.",
+      "thinkerIds": [
+        "fukuyama",
+        "hegel"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/The_End_of_History_and_the_Last_Man"
+      ]
+    },
+    {
+      "id": "great-man-theory",
+      "label": "stormannsteorien",
+      "summary": "Synet at historien drives av store enkeltpersoner. Spencer og Tolstoj er blant de klassiske kritikerne.",
+      "thinkerIds": [
+        "carlyle",
+        "spencer",
+        "tolstoy"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Great_man_theory"
+      ]
+    },
+    {
+      "id": "historical-materialism",
+      "label": "historisk materialisme",
+      "summary": "Marx og Engels' syn på at produksjonsforholdene former samfunn, politikk og tenkning. Hovedkritikken er at det blir økonomisk determinisme.",
+      "thinkerIds": [
+        "marx",
+        "engels"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Historical_materialism"
+      ]
+    },
+    {
+      "id": "base-superstructure",
+      "label": "basis og overbygning",
+      "summary": "Skillet mellom økonomisk basis og overbygning av lover, stat og ideer. Engels understreket at overbygningen også virker tilbake.",
+      "thinkerIds": [
+        "marx",
+        "engels"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Historical_materialism"
+      ]
+    },
+    {
+      "id": "class-struggle",
+      "label": "klassekamp",
+      "summary": "Konflikten mellom klasser som i marxistisk tenkning driver historisk endring. Thompson forstod klasse som en erfart relasjon, ikke en fast struktur.",
+      "thinkerIds": [
+        "marx",
+        "engels",
+        "thompson"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Historical_materialism",
+        "https://en.wikipedia.org/wiki/E._P._Thompson"
+      ]
+    },
+    {
+      "id": "culture-civilization",
+      "label": "kultur og sivilisasjon",
+      "summary": "Spenglers skille mellom en levende kultur og den stivnede sivilisasjonen den ender som, preget av teknikk, imperialisme og massesamfunn.",
+      "thinkerIds": [
+        "spengler"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Oswald_Spengler"
+      ]
+    },
+    {
+      "id": "challenge-and-response",
+      "label": "utfordring og svar",
+      "summary": "Toynbees forklaring på at sivilisasjoner vokser når skapende mindretall svarer på harde utfordringer, og forfaller når de slutter å gjøre det.",
+      "thinkerIds": [
+        "toynbee"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Arnold_J._Toynbee"
+      ]
+    },
+    {
+      "id": "longue-duree",
+      "label": "longue durée (den lange varigheten)",
+      "summary": "Braudels nivå for de langsomme strukturene, som landskap, klima og varige tankemønstre.",
+      "thinkerIds": [
+        "braudel"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Longue_dur%C3%A9e",
+        "https://en.wikipedia.org/wiki/Fernand_Braudel"
+      ]
+    },
+    {
+      "id": "conjoncture",
+      "label": "konjunktur (conjoncture)",
+      "summary": "Braudels mellomnivå: sosiale og økonomiske svingninger over tiår og hundreår.",
+      "thinkerIds": [
+        "braudel"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Longue_dur%C3%A9e"
+      ]
+    },
+    {
+      "id": "histoire-evenementielle",
+      "label": "hendelseshistorie (histoire événementielle)",
+      "summary": "Den korte tiden for hendelser og navngitte personer, som Braudel så som overflaten på dypere strømmer.",
+      "thinkerIds": [
+        "braudel"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Longue_dur%C3%A9e"
+      ]
+    },
+    {
+      "id": "mentalites",
+      "label": "mentalitetshistorie",
+      "summary": "Studiet av hvordan folk i fortiden tenkte, trodde og ordnet verden. Bloch regnes som opphavsmannen.",
+      "thinkerIds": [
+        "bloch",
+        "febvre",
+        "ginzburg"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/History_of_mentalities",
+        "https://en.wikipedia.org/wiki/Les_Rois_thaumaturges"
+      ]
+    },
+    {
+      "id": "histoire-totale",
+      "label": "totalhistorie (histoire totale)",
+      "summary": "Annales-idealet om å studere et historisk problem i hele dets økonomiske, sosiale og mentale sammenheng.",
+      "thinkerIds": [
+        "febvre",
+        "bloch"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Annales_school"
+      ]
+    },
+    {
+      "id": "history-from-below",
+      "label": "historie nedenfra",
+      "summary": "Å skrive historien ut fra vanlige menneskers erfaringer. Thompson lanserte uttrykket i 1966.",
+      "thinkerIds": [
+        "thompson",
+        "hobsbawm"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/E._P._Thompson"
+      ]
+    },
+    {
+      "id": "subaltern",
+      "label": "subaltern",
+      "summary": "Ord hentet fra Gramsci om grupper uten makt. Subaltern Studies brukte det for å skrive Sør-Asias historie med ikke-eliter som aktører.",
+      "thinkerIds": [
+        "chakrabarty"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Subaltern_Studies"
+      ]
+    },
+    {
+      "id": "microhistory-concept",
+      "label": "mikrohistorie",
+      "summary": "Å stille store spørsmål til en liten enhet, som en landsby, en rettssak eller en enkelt person.",
+      "thinkerIds": [
+        "ginzburg"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Microhistory"
+      ]
+    },
+    {
+      "id": "historical-facts",
+      "label": "historiske fakta",
+      "summary": "Carrs skille mellom fakta om fortiden og de faktaene historikeren velger ut og gjør historiske.",
+      "thinkerIds": [
+        "carr"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/What_Is_History%3F",
+        "https://en.wikipedia.org/wiki/E._H._Carr"
+      ]
+    },
+    {
+      "id": "re-enactment",
+      "label": "gjenopplevelse av tanker (re-enactment)",
+      "summary": "Collingwoods idé om at historikeren gjennom kildene tenker aktørenes tanker på nytt.",
+      "thinkerIds": [
+        "collingwood"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/R._G._Collingwood"
+      ]
+    },
+    {
+      "id": "emplotment",
+      "label": "plotting (emplotment)",
+      "summary": "Whites begrep for hvordan historikeren gir hendelser form som romanse, komedie, tragedie eller satire.",
+      "thinkerIds": [
+        "hayden-white"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Metahistory:_The_Historical_Imagination_in_Nineteenth-century_Europe",
+        "https://en.wikipedia.org/wiki/Hayden_White"
+      ]
+    },
+    {
+      "id": "power-knowledge",
+      "label": "makt/kunnskap",
+      "summary": "Foucaults tese om at makt og kunnskap forutsetter hverandre, slik at også humane fagdiskurser kan virke som kontroll.",
+      "thinkerIds": [
+        "foucault"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Discipline_and_Punish",
+        "https://en.wikipedia.org/wiki/Michel_Foucault"
+      ]
+    },
+    {
+      "id": "genealogy",
+      "label": "genealogi",
+      "summary": "Historisk metode som sporer hvordan begreper og praksiser har oppstått gjennom maktkamp, ikke gjennom ett opphav. Foucault utviklet den med utgangspunkt i Nietzsche.",
+      "thinkerIds": [
+        "nietzsche",
+        "foucault"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Michel_Foucault",
+        "https://revistas.ufg.br/philosophos/article/view/27029"
+      ]
+    },
+    {
+      "id": "orientalism-concept",
+      "label": "orientalisme",
+      "summary": "Saids betegnelse på Vestens vane med å framstille Østen som eksotisk og underlegent, og på kunnskapen som tjente imperiene.",
+      "thinkerIds": [
+        "said"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Orientalism_(book)"
+      ]
+    },
+    {
+      "id": "eurocentrism",
+      "label": "eurosentrisme",
+      "summary": "Et verdensbilde som gjør Europa eller Vesten til sentrum og målestokk. Begrepet ble lansert av Samir Amin.",
+      "thinkerIds": [
+        "chakrabarty",
+        "said",
+        "hegel"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Eurocentrism",
+        "https://ci.nii.ac.jp/ncid/BA50709396"
+      ]
+    },
+    {
+      "id": "gender-category",
+      "label": "kjønn som analytisk kategori",
+      "summary": "Scotts forslag om å bruke kjønn til å undersøke hvordan forskjeller mellom kjønn gir mening til makt, ikke bare som et annet ord for kvinner.",
+      "thinkerIds": [
+        "joan-scott"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Gender:_A_Useful_Category_of_Historical_Analysis"
+      ]
+    },
+    {
+      "id": "core-periphery",
+      "label": "kjerne, semiperiferi og periferi",
+      "summary": "Wallersteins inndeling av verdensøkonomien etter hvor mye av merverdien et område får. Sonene er relasjoner, ikke faste steder.",
+      "thinkerIds": [
+        "wallerstein"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/World-systems_theory"
+      ]
+    },
+    {
+      "id": "ecumene",
+      "label": "økumenen",
+      "summary": "McNeills betegnelse på det sammenhengende Eurasia der sivilisasjoner lærte av hverandre gjennom kontakt.",
+      "thinkerIds": [
+        "william-mcneill"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/The_Rise_of_the_West"
+      ]
+    },
+    {
+      "id": "human-web",
+      "label": "menneskenettet",
+      "summary": "Idéen om at stadig tettere nett av kontakt sprer mennesker, varer, sykdommer og ideer og driver historien.",
+      "thinkerIds": [
+        "william-mcneill",
+        "john-mcneill"
+      ],
+      "sourceUrls": [
+        "https://publishersweekly.com/9780393051797"
+      ]
+    },
+    {
+      "id": "columbian-exchange",
+      "label": "den colombianske utvekslingen",
+      "summary": "Overføringen av planter, dyr, sykdommer og mennesker mellom Amerika og den gamle verden etter 1492. Crosby lanserte begrepet i 1972.",
+      "thinkerIds": [
+        "crosby"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Columbian_exchange"
+      ]
+    },
+    {
+      "id": "neo-europes",
+      "label": "neo-Europa",
+      "summary": "Crosbys betegnelse på områder som Australasia, Nord-Amerika og det sørlige Sør-Amerika, der europeiske planter, dyr og mennesker slo lettest rot.",
+      "thinkerIds": [
+        "crosby"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Alfred_W._Crosby"
+      ]
+    },
+    {
+      "id": "environmental-determinism",
+      "label": "geografisk determinisme",
+      "summary": "Synet at natur og geografi i hovedsak avgjør samfunnsutviklingen. Begrepet brukes ofte som kritikk av Diamond.",
+      "thinkerIds": [
+        "diamond"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Guns,_Germs,_and_Steel",
+        "https://en.wikipedia.org/wiki/Jared_Diamond"
+      ]
+    },
+    {
+      "id": "thresholds-of-complexity",
+      "label": "terskler for økende kompleksitet",
+      "summary": "Big history-begrepet for øyeblikk da universet eller jorden ble markant mer komplekst, fra Big Bang til den moderne revolusjonen.",
+      "thinkerIds": [
+        "david-christian"
+      ],
+      "sourceUrls": [
+        "https://www.oerproject.com/OER-Materials/OER-Media/HTML-Articles/BHP/Unit1/What-Makes-Big-History-Big",
+        "https://en.wikipedia.org/wiki/Big_History"
+      ]
+    },
+    {
+      "id": "collective-memory",
+      "label": "kollektiv hukommelse",
+      "summary": "Halbwachs' tanke om at minner formes og bæres av grupper. Kritikere advarer mot å anta at et kollektiv husker likt.",
+      "thinkerIds": [
+        "halbwachs"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Collective_memory"
+      ]
+    },
+    {
+      "id": "lieux-de-memoire",
+      "label": "erindringssteder (lieux de mémoire)",
+      "summary": "Steder, gjenstander, symboler og ritualer som rommer et samfunns minne. Nora skilte levende minne fra kritisk historie.",
+      "thinkerIds": [
+        "nora"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Lieu_de_m%C3%A9moire",
+        "https://humanrightscolumbia.org/biblio/between-memory-and-history-les-lieux-de-m%C3%A9moire"
+      ]
+    },
+    {
+      "id": "invented-tradition",
+      "label": "oppfunnet tradisjon",
+      "summary": "Tradisjoner som gir seg ut for å være eldgamle, men som er skapt nylig, ofte i nasjonsbyggingens tjeneste.",
+      "thinkerIds": [
+        "hobsbawm"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Eric_Hobsbawm",
+        "https://en.wikipedia.org/wiki/Lieu_de_m%C3%A9moire"
+      ]
+    },
+    {
+      "id": "heartland",
+      "label": "hjertelandet",
+      "summary": "Mackinders betegnelse på Eurasias indre, øst for Volga og nord for Himalaya, som han mente ga landmakten et strategisk fortrinn.",
+      "thinkerIds": [
+        "mackinder"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/The_Geographical_Pivot_of_History"
+      ]
+    },
+    {
+      "id": "world-island",
+      "label": "verdensøya",
+      "summary": "Mackinders navn på Afro-Eurasia som én sammenhengende landmasse.",
+      "thinkerIds": [
+        "mackinder"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/The_Geographical_Pivot_of_History"
+      ]
+    }
+  ],
+  "influences": [
+    {
+      "from": "herodotus",
+      "to": "thucydides",
+      "context": "Tukydid tok avstand fra Herodots mange fortellinger og avgrenset seg til politikk og krig, trolig med hentydninger til forgjengeren.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Thucydides"
+      ]
+    },
+    {
+      "from": "thucydides",
+      "to": "ranke",
+      "context": "Tukydid var blant Rankes yndlingsforfattere som student.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Leopold_von_Ranke"
+      ]
+    },
+    {
+      "from": "ranke",
+      "to": "burckhardt",
+      "context": "Burckhardt hørte Rankes forelesninger i Berlin.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Jacob_Burckhardt"
+      ]
+    },
+    {
+      "from": "burckhardt",
+      "to": "nietzsche",
+      "context": "Nietzsche fulgte Burckhardts forelesninger i Basel og ble preget av ham.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Friedrich_Nietzsche",
+        "https://en.wikipedia.org/wiki/Jacob_Burckhardt"
+      ]
+    },
+    {
+      "from": "nietzsche",
+      "to": "foucault",
+      "context": "Foucault bygde sin genealogiske metode på Nietzsche, særlig i essayet om Nietzsche, genealogi og historie fra 1971.",
+      "sourceUrls": [
+        "https://revistas.ufg.br/philosophos/article/view/27029",
+        "https://typeset.io/pdf/nietzsche-genealogy-history-240tvdsj6u.pdf"
+      ]
+    },
+    {
+      "from": "foucault",
+      "to": "said",
+      "context": "Orientalisme bruker Foucaults diskursanalyse på vestlig kunnskap om Østen.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Orientalism_(book)",
+        "https://en.wikipedia.org/wiki/Edward_Said"
+      ]
+    },
+    {
+      "from": "foucault",
+      "to": "joan-scott",
+      "context": "Scott bygde på poststrukturalistisk teori og overtok Foucaults forståelse av kunnskap.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Joan_Wallach_Scott"
+      ]
+    },
+    {
+      "from": "herder",
+      "to": "hegel",
+      "context": "Herder fikk Hegel til å forankre fornuften i historie, kultur og språk.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Georg_Wilhelm_Friedrich_Hegel"
+      ]
+    },
+    {
+      "from": "hegel",
+      "to": "marx",
+      "context": "Marx tok opp Hegels dialektikk som ung hegelianer, men vendte den mot materielle forhold.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Karl_Marx"
+      ]
+    },
+    {
+      "from": "hegel",
+      "to": "croce",
+      "context": "Croce skrev en studie av hva som var levende og dødt i Hegels filosofi (1907).",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Benedetto_Croce"
+      ]
+    },
+    {
+      "from": "hegel",
+      "to": "fukuyama",
+      "context": "Fukuyamas tese om historiens slutt bygde på Hegel slik Alexandre Kojève tolket ham.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/The_End_of_History_and_the_Last_Man"
+      ]
+    },
+    {
+      "from": "engels",
+      "to": "marx",
+      "context": "Engels og Marx samarbeidet fast fra 1844 og skrev Det kommunistiske manifest sammen.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Friedrich_Engels"
+      ]
+    },
+    {
+      "from": "marx",
+      "to": "thompson",
+      "context": "Thompson så seg som historiker i den marxistiske tradisjonen også etter at han forlot kommunistpartiet i 1956.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/E._P._Thompson"
+      ]
+    },
+    {
+      "from": "marx",
+      "to": "hobsbawm",
+      "context": "Hobsbawm var medlem av kommunistpartiets historikergruppe og skrev marxistisk historie.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Eric_Hobsbawm"
+      ]
+    },
+    {
+      "from": "marx",
+      "to": "wallerstein",
+      "context": "Wallerstein overtok Marx' vekt på økonomi og forholdet mellom kapital og arbeid, men avviste faste utviklingstrinn.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Immanuel_Wallerstein"
+      ]
+    },
+    {
+      "from": "braudel",
+      "to": "wallerstein",
+      "context": "Braudels arbeider om europeiske økonomiske nettverk formet Wallerstein, som ledet Fernand Braudel-senteret ved Binghamton.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Immanuel_Wallerstein",
+        "https://en.wikipedia.org/wiki/World-systems_theory"
+      ]
+    },
+    {
+      "from": "febvre",
+      "to": "braudel",
+      "context": "Febvre var Braudels lærer og veileder i Annales-miljøet.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Lucien_Febvre"
+      ]
+    },
+    {
+      "from": "bloch",
+      "to": "ginzburg",
+      "context": "Ginzburg regner Marc Bloch blant sine viktigste påvirkninger.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Carlo_Ginzburg"
+      ]
+    },
+    {
+      "from": "halbwachs",
+      "to": "nora",
+      "context": "Noras skille mellom minne og historie bygger på Halbwachs' tanke om at minnet er knyttet til grupper.",
+      "sourceUrls": [
+        "https://is.muni.cz/el/fss/podzim2017/SOC571/Nora_105.pdf?kod=MP413Z",
+        "https://humanrightscolumbia.org/biblio/between-memory-and-history-les-lieux-de-m%C3%A9moire"
+      ]
+    },
+    {
+      "from": "spengler",
+      "to": "toynbee",
+      "context": "Toynbee ble påvirket av Spengler, men avviste at sivilisasjoner følger et uunngåelig naturlig kretsløp.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Oswald_Spengler",
+        "https://en.wikipedia.org/wiki/Arnold_J._Toynbee"
+      ]
+    },
+    {
+      "from": "ibn-khaldun",
+      "to": "toynbee",
+      "context": "Toynbee roste Muqaddimah som et av de største verkene i sin sjanger.",
+      "sourceUrls": [
+        "https://www.britannica.com/biography/Ibn-Khaldun/The-Muqaddimah-Ibn-Khalduns-philosophy-of-history",
+        "https://en.wikipedia.org/wiki/Arnold_J._Toynbee"
+      ]
+    },
+    {
+      "from": "toynbee",
+      "to": "william-mcneill",
+      "context": "McNeill kalte Toynbee sin mentor, skrev The Rise of the West som et alternativ og senere Toynbees biografi.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/William_H._McNeill",
+        "https://en.wikipedia.org/wiki/The_Rise_of_the_West"
+      ]
+    },
+    {
+      "from": "william-mcneill",
+      "to": "david-christian",
+      "context": "McNeill påvirket Christian og skrev forordet til Maps of Time.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/William_H._McNeill",
+        "https://ci.nii.ac.jp/ncid/BB08585678"
+      ]
+    },
+    {
+      "from": "vico",
+      "to": "michelet",
+      "context": "Michelet oversatte og forkortet Scienza Nuova til fransk i 1827 og gjorde Vico kjent i Frankrike.",
+      "sourceUrls": [
+        "https://m.gutenberg.org/ebooks/43307"
+      ]
+    },
+    {
+      "from": "vico",
+      "to": "croce",
+      "context": "Croce skrev om Vicos filosofi (1911) og ble påvirket av hans syn på kunst og historie.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Benedetto_Croce",
+        "https://en.wikipedia.org/wiki/Giambattista_Vico"
+      ]
+    },
+    {
+      "from": "vico",
+      "to": "hayden-white",
+      "context": "Whites lære om fire grunntroper har røtter i Vicos Scienza Nuova, og White bidro til å fornye interessen for Vico.",
+      "sourceUrls": [
+        "https://www.forumhistoriae.sk/en/node/1100",
+        "https://journals.pan.pl//Content/124883/PDF/FiN-10-2022_Cirillo.pdf",
+        "https://en.wikipedia.org/wiki/Giambattista_Vico"
+      ]
+    },
+    {
+      "from": "croce",
+      "to": "collingwood",
+      "context": "Collingwood oversatte Croces bok om Vico og fulgte Croces estetikk.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Giambattista_Vico",
+        "https://en.wikipedia.org/wiki/R._G._Collingwood"
+      ]
+    },
+    {
+      "from": "collingwood",
+      "to": "carr",
+      "context": "Carr plasserte sitt syn på historiske fakta som en mellomvei mellom empirismen og Collingwoods idealisme.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/E._H._Carr"
+      ]
+    },
+    {
+      "from": "voltaire",
+      "to": "condorcet",
+      "context": "Condorcet ble kjent med Voltaire i 1770 og skrev hans biografi i 1789.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Marquis_de_Condorcet"
+      ]
+    }
+  ],
+  "metahistory": {
+    "tropes": [
+      {
+        "id": "metaphor",
+        "label": "metafor",
+        "summary": "Troppen for likhet: noe forstås ved hjelp av noe annet. White knytter den til en representerende forståelse av fortiden."
+      },
+      {
+        "id": "metonymy",
+        "label": "metonymi",
+        "summary": "Troppen for nærhet og sammenheng: en del står for noe den er forbundet med. White knytter den til en reduserende forståelse som deler helheten opp i årsaker."
+      },
+      {
+        "id": "synecdoche",
+        "label": "synekdoke",
+        "summary": "Troppen for det vesentlige: delen uttrykker helhetens egenskap. White knytter den til en integrerende forståelse."
+      },
+      {
+        "id": "irony",
+        "label": "ironi",
+        "summary": "Troppen som sier noe annet enn den mener, og som stiller seg skeptisk til språket selv. White knytter den til en negerende forståelse."
+      }
+    ],
+    "emplotments": [
+      {
+        "id": "romance",
+        "label": "romanse",
+        "summary": "Fortelling om heltens seier over verden og det godes triumf."
+      },
+      {
+        "id": "comedy",
+        "label": "komedie",
+        "summary": "Fortelling der konflikter løses i forsoning og harmoni."
+      },
+      {
+        "id": "tragedy",
+        "label": "tragedie",
+        "summary": "Fortelling der helten faller, men der fallet gir innsikt i lovene som styrer verden."
+      },
+      {
+        "id": "satire",
+        "label": "satire",
+        "summary": "Fortelling der mennesket fremstår som fanget av verden snarere enn som dens herre."
+      }
+    ],
+    "arguments": [
+      {
+        "id": "formist",
+        "label": "formistisk",
+        "summary": "Forklarer ved å beskrive det særegne og unike ved hvert fenomen."
+      },
+      {
+        "id": "mechanistic",
+        "label": "mekanistisk",
+        "summary": "Forklarer ved å finne lover og årsaker bak hendelsene."
+      },
+      {
+        "id": "organicist",
+        "label": "organisistisk",
+        "summary": "Forklarer ved å vise hvordan delene inngår i en helhet som utvikler seg."
+      },
+      {
+        "id": "contextualist",
+        "label": "kontekstualistisk",
+        "summary": "Forklarer ved å plassere hendelser i sammenhengen og tiden de hører til."
+      }
+    ],
+    "ideologies": [
+      {
+        "id": "anarchist",
+        "label": "anarkistisk",
+        "summary": "Ser samfunnet som noe som bør oppløses til fordel for et fritt fellesskap."
+      },
+      {
+        "id": "radical",
+        "label": "radikal",
+        "summary": "Vil omforme samfunnet grunnleggende, ofte raskt."
+      },
+      {
+        "id": "conservative",
+        "label": "konservativ",
+        "summary": "Ser endring som langsom og naturlig vekst innenfor eksisterende ordning."
+      },
+      {
+        "id": "liberal",
+        "label": "liberal",
+        "summary": "Vil justere samfunnet gradvis gjennom reformer."
+      }
+    ],
+    "assignments": [
+      {
+        "thinkerId": "michelet",
+        "emplotment": "romance",
+        "trope": "metaphor",
+        "argument": "formist",
+        "ideology": null,
+        "confidence": "high",
+        "note": "Romanse, metafor og formistisk argument er sikre. Ideologien er utelatt fordi kildene er uenige.",
+        "sourceUrls": [
+          "https://en.wikipedia.org/wiki/Metahistory:_The_Historical_Imagination_in_Nineteenth-century_Europe"
+        ]
+      },
+      {
+        "thinkerId": "ranke",
+        "emplotment": "comedy",
+        "trope": "synecdoche",
+        "argument": "organicist",
+        "ideology": "conservative",
+        "confidence": "high",
+        "note": "Alle fire kategorier stemmer mellom oversiktstabellen og sekundærlitteraturen.",
+        "sourceUrls": [
+          "https://en.wikipedia.org/wiki/Metahistory:_The_Historical_Imagination_in_Nineteenth-century_Europe"
+        ]
+      },
+      {
+        "thinkerId": "tocqueville",
+        "emplotment": "tragedy",
+        "trope": "metonymy",
+        "argument": null,
+        "ideology": null,
+        "confidence": "high",
+        "note": "Tragedie og metonymi er sikre. Tabellen stiller Tocqueville på raden med mekanistisk argument og radikal ideologi, men raden viser slektskap mellom kategoriene, ikke nødvendigvis Whites plassering av ham; derfor står argument og ideologi åpne.",
+        "sourceUrls": [
+          "https://en.wikipedia.org/wiki/Metahistory:_The_Historical_Imagination_in_Nineteenth-century_Europe"
+        ]
+      },
+      {
+        "thinkerId": "burckhardt",
+        "emplotment": "satire",
+        "trope": "irony",
+        "argument": "contextualist",
+        "ideology": null,
+        "confidence": "high",
+        "note": "Satire, ironi og kontekstualisme er sikre. Ideologien er omstridt: tabellen viser liberal, mens sekundærlitteratur beskriver ham som konservativ.",
+        "sourceUrls": [
+          "https://en.wikipedia.org/wiki/Metahistory:_The_Historical_Imagination_in_Nineteenth-century_Europe"
+        ]
+      },
+      {
+        "thinkerId": "hegel",
+        "emplotment": null,
+        "trope": "synecdoche",
+        "argument": null,
+        "ideology": null,
+        "confidence": "medium",
+        "note": "Bygger på oversiktstabellen, som knytter Hegel til synekdoke blant filosofene.",
+        "sourceUrls": [
+          "https://en.wikipedia.org/wiki/Metahistory:_The_Historical_Imagination_in_Nineteenth-century_Europe"
+        ]
+      },
+      {
+        "thinkerId": "marx",
+        "emplotment": null,
+        "trope": "metonymy",
+        "argument": null,
+        "ideology": null,
+        "confidence": "medium",
+        "note": "Bygger på oversiktstabellen, som knytter Marx til metonymi.",
+        "sourceUrls": [
+          "https://en.wikipedia.org/wiki/Metahistory:_The_Historical_Imagination_in_Nineteenth-century_Europe"
+        ]
+      },
+      {
+        "thinkerId": "nietzsche",
+        "emplotment": null,
+        "trope": "metaphor",
+        "argument": null,
+        "ideology": null,
+        "confidence": "medium",
+        "note": "Bygger på oversiktstabellen, som knytter Nietzsche til metafor.",
+        "sourceUrls": [
+          "https://en.wikipedia.org/wiki/Metahistory:_The_Historical_Imagination_in_Nineteenth-century_Europe"
+        ]
+      },
+      {
+        "thinkerId": "croce",
+        "emplotment": null,
+        "trope": "irony",
+        "argument": null,
+        "ideology": null,
+        "confidence": "medium",
+        "note": "Bygger på oversiktstabellen, som knytter Croce til ironi.",
+        "sourceUrls": [
+          "https://en.wikipedia.org/wiki/Metahistory:_The_Historical_Imagination_in_Nineteenth-century_Europe"
+        ]
+      }
+    ]
+  },
+  "bigHistoryThresholds": [
+    {
+      "id": "big-bang",
+      "order": 1,
+      "label": "Big Bang",
+      "approxYearsAgo": 13800000000,
+      "summary": "Universet oppstår med rom, tid, energi og materie.",
+      "sourceUrls": [
+        "https://www.oerproject.com/OER-Materials/OER-Media/HTML-Articles/BHP/Unit1/What-Makes-Big-History-Big",
+        "https://en.wikipedia.org/wiki/Big_History"
+      ]
+    },
+    {
+      "id": "stars-light-up",
+      "order": 2,
+      "label": "Stjernene tennes",
+      "approxYearsAgo": 13700000000,
+      "summary": "Tyngdekraften samler gass til stjerner, de første komplekse objektene.",
+      "sourceUrls": [
+        "https://www.oerproject.com/OER-Materials/OER-Media/HTML-Articles/BHP/Unit1/What-Makes-Big-History-Big",
+        "https://en.wikipedia.org/wiki/Big_History"
+      ]
+    },
+    {
+      "id": "new-elements",
+      "order": 3,
+      "label": "Nye grunnstoffer",
+      "approxYearsAgo": 13000000000,
+      "summary": "Døende stjerner smir tyngre grunnstoffer og sprer dem i rommet.",
+      "sourceUrls": [
+        "https://www.oerproject.com/OER-Materials/OER-Media/HTML-Articles/BHP/Unit1/What-Makes-Big-History-Big",
+        "https://en.wikipedia.org/wiki/Big_History"
+      ]
+    },
+    {
+      "id": "earth-solar-system",
+      "order": 4,
+      "label": "Jorden og solsystemet",
+      "approxYearsAgo": 4500000000,
+      "summary": "Solen og planetene, blant dem jorden, dannes av rester fra eldre stjerner.",
+      "sourceUrls": [
+        "https://www.oerproject.com/OER-Materials/OER-Media/HTML-Articles/BHP/Unit1/What-Makes-Big-History-Big",
+        "https://en.wikipedia.org/wiki/Big_History"
+      ]
+    },
+    {
+      "id": "life",
+      "order": 5,
+      "label": "Liv",
+      "approxYearsAgo": 3800000000,
+      "summary": "Liv oppstår på jorden og utvikler seg gjennom naturlig utvalg.",
+      "sourceUrls": [
+        "https://www.oerproject.com/OER-Materials/OER-Media/HTML-Articles/BHP/Unit1/What-Makes-Big-History-Big",
+        "https://en.wikipedia.org/wiki/Big_History"
+      ]
+    },
+    {
+      "id": "collective-learning",
+      "order": 6,
+      "label": "Kollektiv læring",
+      "approxYearsAgo": 250000,
+      "summary": "Mennesker kan dele og samle kunnskap over generasjoner, noe ingen andre arter gjør i samme grad.",
+      "sourceUrls": [
+        "https://www.oerproject.com/OER-Materials/OER-Media/HTML-Articles/BHP/Unit1/What-Makes-Big-History-Big",
+        "https://en.wikipedia.org/wiki/Big_History"
+      ]
+    },
+    {
+      "id": "agriculture",
+      "order": 7,
+      "label": "Jordbruk",
+      "approxYearsAgo": 12000,
+      "summary": "Mennesker begynner å dyrke planter og temme dyr, og befolkningen vokser.",
+      "sourceUrls": [
+        "https://www.oerproject.com/OER-Materials/OER-Media/HTML-Articles/BHP/Unit1/What-Makes-Big-History-Big",
+        "https://en.wikipedia.org/wiki/Big_History"
+      ]
+    },
+    {
+      "id": "modern-revolution",
+      "order": 8,
+      "label": "Den moderne revolusjonen",
+      "approxYearsAgo": 300,
+      "summary": "Fossil energi, industri og global kontakt gir en voldsom økning i menneskets makt over naturen.",
+      "sourceUrls": [
+        "https://www.oerproject.com/OER-Materials/OER-Media/HTML-Articles/BHP/Unit1/What-Makes-Big-History-Big",
+        "https://en.wikipedia.org/wiki/Big_History"
+      ]
+    }
+  ],
+  "exemplars": [
+    {
+      "lensId": "source-criticism",
+      "entityId": "nobel-laureate-571",
+      "reason": "Mommsen ledet innsamlingen av latinske innskrifter og krevde at hver avskrift ble kontrollert mot originalsteinen, et skoleeksempel på kildekritisk arbeid.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Theodor_Mommsen"
+      ]
+    },
+    {
+      "lensId": "source-criticism",
+      "entityId": "berlin",
+      "reason": "Ved universitetet i Berlin innførte Ranke det historiske seminaret, der studentene lærte å prøve kildenes pålitelighet.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Leopold_von_Ranke"
+      ]
+    },
+    {
+      "lensId": "source-criticism",
+      "entityId": "the-iliad",
+      "reason": "Tukydid brukte Homer som kilde til Trojakrigen, men med forbehold, og kalte tallet på over tusen skip en dikterisk overdrivelse.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/History_of_the_Peloponnesian_War"
+      ]
+    },
+    {
+      "lensId": "source-criticism",
+      "entityId": "magna-carta-document",
+      "reason": "Fire eksemplarer av 1215-utgaven finnes, og viktoriansk kildeforskning viste at charteret gjaldt kongen og baronene, ikke vanlige undersåtter.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Magna_Carta"
+      ]
+    },
+    {
+      "lensId": "providential",
+      "entityId": "rome",
+      "reason": "Augustin skrev Om Guds stat som svar på plyndringen av Roma i 410, for å vise at jordiske riker faller mens Guds stat består.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/The_City_of_God"
+      ]
+    },
+    {
+      "lensId": "providential",
+      "entityId": "abraham-lincoln",
+      "reason": "I sin andre innsettelsestale tolket Lincoln borgerkrigen som en del av Guds hensikter med slaveriet, men understreket at mennesker ikke kjenner Guds vilje.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Abraham_Lincoln%27s_second_inaugural_address"
+      ]
+    },
+    {
+      "lensId": "providential",
+      "entityId": "james-k-polk",
+      "reason": "Polk brukte ideen om Manifest Destiny, at Forsynet hadde gitt kontinentet til USA, for å rettferdiggjøre krigen mot Mexico.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Manifest_destiny"
+      ]
+    },
+    {
+      "lensId": "cyclical",
+      "entityId": "northern-africa",
+      "reason": "Ibn Khaldun bygde teorien om samhold og dynastienes kretsløp på maktskiftene mellom stammer og dynastier i Nord-Afrika.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Muqaddimah",
+        "https://en.wikipedia.org/wiki/Ibn_Khaldun"
+      ]
+    },
+    {
+      "lensId": "cyclical",
+      "entityId": "geo-dza",
+      "reason": "Ibn Khaldun skrev Muqaddimah i Qal'at Ibn Salama i dagens Algerie, under beskyttelse av en berbisk stamme.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Ibn_Khaldun"
+      ]
+    },
+    {
+      "lensId": "cyclical",
+      "entityId": "rome",
+      "reason": "Polybios mente at Romas blandede forfatning, med kongelige, aristokratiske og folkelige elementer, kunne holde forfatningskretsløpet tilbake en tid.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Polybius"
+      ]
+    },
+    {
+      "lensId": "progress",
+      "entityId": "magna-carta-sealed",
+      "reason": "Fra Coke til 1800-tallet ble Magna Carta fortalt som et vern om eldgamle engelske friheter; senere forskning kaller dette en myte, et typisk tilfelle for kritikken av whig-historie.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Magna_Carta",
+        "https://en.wikipedia.org/wiki/Whig_history"
+      ]
+    },
+    {
+      "lensId": "progress",
+      "entityId": "berlin",
+      "reason": "Fukuyamas tese om historiens slutt ble knyttet til murens fall i Berlin og slutten på den kalde krigen.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Francis_Fukuyama"
+      ]
+    },
+    {
+      "lensId": "progress",
+      "entityId": "france",
+      "reason": "Condorcet skrev sitt verk om menneskeåndens fremskritt i skjul under den franske revolusjon, kort før han døde i fengsel.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Marquis_de_Condorcet"
+      ]
+    },
+    {
+      "lensId": "great-individuals",
+      "entityId": "abraham-lincoln",
+      "reason": "Lincoln fremstilles ofte som en enkeltperson som endret USAs historie. Linsen spør hva som skyldtes ham og hva som skyldtes krigen, partiene og slavenes egen kamp; synet er omstridt.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Great_man_theory",
+        "https://en.wikipedia.org/wiki/Abraham_Lincoln%27s_second_inaugural_address"
+      ]
+    },
+    {
+      "lensId": "great-individuals",
+      "entityId": "war-and-peace",
+      "reason": "Romanens essaykapitler angriper stormannsteorien og fremstiller Napoleons seire som resultat av flaks og hærens samlede handlinger.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/War_and_Peace",
+        "https://en.wikipedia.org/wiki/Great_man_theory"
+      ]
+    },
+    {
+      "lensId": "materialist",
+      "entityId": "geo-gbr",
+      "reason": "Engels bygde boken om arbeiderklassens kår i England på egne undersøkelser i Manchester, der familiefirmaet hans drev virksomhet.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Friedrich_Engels",
+        "https://en.wikipedia.org/wiki/Karl_Marx"
+      ]
+    },
+    {
+      "lensId": "materialist",
+      "entityId": "city-gb-london",
+      "reason": "Marx skrev Kapitalen i London, der han levde resten av livet og døde i 1883.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Karl_Marx"
+      ]
+    },
+    {
+      "lensId": "civilizations",
+      "entityId": "europe",
+      "reason": "Spengler mente at Vestens kultur var på vei inn i sin sene, stivnede sivilisasjonsfase.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Oswald_Spengler"
+      ]
+    },
+    {
+      "lensId": "civilizations",
+      "entityId": "geo-egy",
+      "reason": "Den egyptiske er blant høykulturene Spengler sammenlignet som organismer med eget livsløp.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Oswald_Spengler"
+      ]
+    },
+    {
+      "lensId": "civilizations",
+      "entityId": "geo-irq",
+      "reason": "Toynbee brukte vanningsjordbruket i Sumer som eksempel på at en sivilisasjon vokser ved å svare på en fysisk utfordring.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Arnold_J._Toynbee"
+      ]
+    },
+    {
+      "lensId": "civilizations",
+      "entityId": "geo-grc",
+      "reason": "Den gresk-romerske kulturen er blant Spenglers høykulturer og et hovedeksempel når både Spengler og Toynbee beskriver vekst og forfall.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Oswald_Spengler"
+      ]
+    },
+    {
+      "lensId": "annales",
+      "entityId": "france",
+      "reason": "Annales ble grunnlagt i Strasbourg i 1929, og Blochs studie av den kongelige berøringen gjaldt franske og engelske konger.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Annales_school",
+        "https://en.wikipedia.org/wiki/Les_Rois_thaumaturges"
+      ]
+    },
+    {
+      "lensId": "annales",
+      "entityId": "spain",
+      "reason": "Braudels hovedverk vokste ut av en avhandling om Filip 2.s utenrikspolitikk, men gjorde Middelhavets geografi og økonomi til hovedperson.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Fernand_Braudel"
+      ]
+    },
+    {
+      "lensId": "annales",
+      "entityId": "southern-europe",
+      "reason": "Middelhavsverdenen er eksempelet på Braudels tre tidsnivåer: landskap og klima, økonomiske konjunkturer og politiske hendelser.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Fernand_Braudel",
+        "https://en.wikipedia.org/wiki/Longue_dur%C3%A9e"
+      ]
+    },
+    {
+      "lensId": "from-below",
+      "entityId": "geo-gbr",
+      "reason": "Thompson skrev om hvordan engelske håndverkere og arbeidere selv skapte en arbeiderklasse, og ville redde dem fra ettertidens nedlatenhet.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/E._P._Thompson"
+      ]
+    },
+    {
+      "lensId": "from-below",
+      "entityId": "nobel-laureate-924",
+      "reason": "Aleksijevitsj fikk Nobelprisen for flerstemte bøker bygd på intervjuer med vanlige mennesker om krig og katastrofe.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/List_of_Nobel_laureates_in_Literature"
+      ]
+    },
+    {
+      "lensId": "from-below",
+      "entityId": "nobel-laureate-554",
+      "reason": "Menchús vitnesbyrd gjorde urfolkets erfaringer under borgerkrigen i Guatemala kjent; David Stolls kritikk av detaljene viser hvor omstridte vitnesbyrd nedenfra kan være.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Rigoberta_Mench%C3%BA"
+      ]
+    },
+    {
+      "lensId": "from-below",
+      "entityId": "geo-ind",
+      "reason": "Subaltern Studies skrev Indias historie med bønder og andre ikke-eliter som aktører, ofte kalt historie nedenfra.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Subaltern_Studies"
+      ]
+    },
+    {
+      "lensId": "microhistory",
+      "entityId": "italy",
+      "reason": "Ginzburg rekonstruerte verdensbildet til mølleren Menocchio fra Friuli ut fra to inkvisisjonsprosesser.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/The_Cheese_and_the_Worms"
+      ]
+    },
+    {
+      "lensId": "microhistory",
+      "entityId": "france",
+      "reason": "Montaillou og Martin Guerres tilbakekomst er klassiske mikrohistorier om en fransk landsby og en rettssak på 1500-tallet.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Microhistory"
+      ]
+    },
+    {
+      "lensId": "metahistory",
+      "entityId": "france",
+      "reason": "White viste at Michelet fortalte revolusjonen som romanse, mens Tocqueville ga den form som tragedie.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Metahistory:_The_Historical_Imagination_in_Nineteenth-century_Europe"
+      ]
+    },
+    {
+      "lensId": "metahistory",
+      "entityId": "italy",
+      "reason": "Burckhardts renessanse-Italia er Whites eksempel på historie fortalt som satire i ironiens modus.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Metahistory:_The_Historical_Imagination_in_Nineteenth-century_Europe",
+        "https://en.wikipedia.org/wiki/Jacob_Burckhardt"
+      ]
+    },
+    {
+      "lensId": "metahistory",
+      "entityId": "a-tale-of-two-cities",
+      "reason": "Dickens bygde romanens retorikk og symbolikk på Carlyles dramatiske revolusjonshistorie, et eksempel på hvordan historie og fortelling låner form av hverandre.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/A_Tale_of_Two_Cities"
+      ]
+    },
+    {
+      "lensId": "power-discourse",
+      "entityId": "paris",
+      "reason": "Foucault åpner Overvåkning og straff med henrettelsen av Damiens på Place de Grève i Paris i 1757 for å vise overgangen fra kroppsstraff til disiplin.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Robert-Fran%C3%A7ois_Damiens",
+        "https://en.wikipedia.org/wiki/Discipline_and_Punish"
+      ]
+    },
+    {
+      "lensId": "postcolonial",
+      "entityId": "geo-ind",
+      "reason": "Subaltern Studies og Chakrabarty kritiserer at Indias historie måles mot Europa som norm for modernitet.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Subaltern_Studies",
+        "https://ci.nii.ac.jp/ncid/BA50709396"
+      ]
+    },
+    {
+      "lensId": "postcolonial",
+      "entityId": "geo-egy",
+      "reason": "Napoleons invasjon i 1798 ble av den egyptiske krønikeskriveren al-Jabarti sett som en erobring også av kunnskap, et tema Orientalisme bygger videre på.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Orientalism_(book)"
+      ]
+    },
+    {
+      "lensId": "postcolonial",
+      "entityId": "nobel-laureate-1004",
+      "reason": "Gurnah fikk Nobelprisen for å skildre kolonialismens virkninger og flyktningens skjebne mellom kulturer og kontinenter.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/List_of_Nobel_laureates_in_Literature"
+      ]
+    },
+    {
+      "lensId": "postcolonial",
+      "entityId": "nobel-laureate-577",
+      "reason": "Said undersøker Kipling i Kultur og imperialisme som eksempel på hvordan litteraturen var vevd sammen med det britiske imperiet.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Culture_and_Imperialism"
+      ]
+    },
+    {
+      "lensId": "gender",
+      "entityId": "nobel-laureate-1034",
+      "reason": "Goldin fikk økonomiprisen for å ha vist hvordan kvinners stilling i arbeidslivet har endret seg over to hundre år, formet av normer, lover og arbeidsmarked.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Claudia_Goldin"
+      ]
+    },
+    {
+      "lensId": "gender",
+      "entityId": "marie-curie",
+      "reason": "Marie Curie tapte valget til Vitenskapsakademiet i Paris i 1911; ingen kvinne var valgt før, og en motstander erklærte at kvinner ikke kunne være medlemmer.",
+      "sourceUrls": [
+        "https://www.pbs.org/newshour/science/the-day-marie-curie-got-snubbed-by-the-french-science-world"
+      ]
+    },
+    {
+      "lensId": "world-system",
+      "entityId": "geo-nld",
+      "reason": "Wallerstein regner Nederland som verdenssystemets første klare hegemon på 1600-tallet.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/World-systems_theory"
+      ]
+    },
+    {
+      "lensId": "world-system",
+      "entityId": "eastern-europe",
+      "reason": "Øst-Europa var periferi i den tidlige verdensøkonomien og leverte råvarer til kjerneområdene i nordvest.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/World-systems_theory"
+      ]
+    },
+    {
+      "lensId": "world-system",
+      "entityId": "spain",
+      "reason": "Spania ledet ekspansjonen etter 1450, men sank etter hvert til semiperiferi da imperiet ble for stort.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/World-systems_theory"
+      ]
+    },
+    {
+      "lensId": "world-system",
+      "entityId": "geo-prt",
+      "reason": "Portugal fulgte samme vei som Spania, fra tidlig leder til semiperiferi i verdensøkonomien.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/World-systems_theory"
+      ]
+    },
+    {
+      "lensId": "networks",
+      "entityId": "americas",
+      "reason": "Columbus' reiser knyttet Amerika til det eurasiske nettet, med erobring og utveksling av poteter, mais, hester og kopper som følge.",
+      "sourceUrls": [
+        "https://publishersweekly.com/9780393051797"
+      ]
+    },
+    {
+      "lensId": "networks",
+      "entityId": "geo-mex",
+      "reason": "McNeill skrev Plagues and Peoples blant annet for å forklare koppenes rolle i aztekerrikets fall.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Plagues_and_Peoples"
+      ]
+    },
+    {
+      "lensId": "networks",
+      "entityId": "geo-chn",
+      "reason": "Byllepesten i Kina er blant epidemiene McNeill bruker for å vise hvordan smitte følger kontaktnettene.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Plagues_and_Peoples"
+      ]
+    },
+    {
+      "lensId": "ecological",
+      "entityId": "geo-mex",
+      "reason": "Kopper fra den gamle verden rammet aztekerne under erobringen; Crosby og McNeill gjorde slike epidemier til en sentral forklaring på europeisk ekspansjon.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Columbian_exchange",
+        "https://en.wikipedia.org/wiki/Plagues_and_Peoples"
+      ]
+    },
+    {
+      "lensId": "ecological",
+      "entityId": "geo-png",
+      "reason": "Guns, Germs, and Steel åpner med spørsmålet til Yali fra Ny-Guinea om hvorfor europeerne hadde så mye mer gods enn papuanerne.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Guns,_Germs,_and_Steel"
+      ]
+    },
+    {
+      "lensId": "ecological",
+      "entityId": "geo-aus",
+      "reason": "Australia er et av Crosbys neo-Europa, der europeiske planter, dyr og mennesker slo lettest rot.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Alfred_W._Crosby"
+      ]
+    },
+    {
+      "lensId": "ecological",
+      "entityId": "geo-nzl",
+      "reason": "New Zealand hører til Crosbys neo-Europa i Australasia.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Alfred_W._Crosby"
+      ]
+    },
+    {
+      "lensId": "ecological",
+      "entityId": "geo-arg",
+      "reason": "Det sørlige Sør-Amerika, med Argentina, er blant områdene Crosby kalte neo-Europa.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Alfred_W._Crosby"
+      ]
+    },
+    {
+      "lensId": "big-history",
+      "entityId": "world",
+      "reason": "Big history ser hele jorden som én scene i en historie som begynner med Big Bang.",
+      "sourceUrls": [
+        "https://www.oerproject.com/OER-Materials/OER-Media/HTML-Articles/BHP/Unit1/What-Makes-Big-History-Big"
+      ]
+    },
+    {
+      "lensId": "big-history",
+      "entityId": "nobel-laureate-112",
+      "reason": "Wilson og Penzias oppdaget den kosmiske bakgrunnsstrålingen, et sentralt belegg for Big Bang, den første terskelen.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Robert_Woodrow_Wilson",
+        "https://en.wikipedia.org/wiki/List_of_Nobel_laureates_in_Physics"
+      ]
+    },
+    {
+      "lensId": "big-history",
+      "entityId": "nobel-concept-stjerners-struktur-og-utvikling",
+      "reason": "Fysikkprisen 1983 gjaldt stjernenes utvikling og hvordan grunnstoffene dannes, tilsvarende terskel to og tre.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/List_of_Nobel_laureates_in_Physics"
+      ]
+    },
+    {
+      "lensId": "big-history",
+      "entityId": "nobel-concept-nukleinsyrenes-molekylstruktur",
+      "reason": "Oppdagelsen av nukleinsyrenes struktur forklarer hvordan liv overfører informasjon, kjernen i terskel fem.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/List_of_Nobel_laureates_in_Physiology_or_Medicine"
+      ]
+    },
+    {
+      "lensId": "memory",
+      "entityId": "nobel-laureate-1019",
+      "reason": "Memorial ble grunnlagt i 1989 for å dokumentere og minnes ofrene for sovjetisk undertrykkelse, og ble oppløst av russiske domstoler i 2021–2022.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Memorial_(society)"
+      ]
+    },
+    {
+      "lensId": "memory",
+      "entityId": "nobel-laureate-1043",
+      "reason": "Nihon Hidankyo samler overlevende fra Hiroshima og Nagasaki, og vitnesbyrdene deres ble trukket frem da de fikk fredsprisen i 2024.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Nihon_Hidankyo"
+      ]
+    },
+    {
+      "lensId": "memory",
+      "entityId": "nobel-laureate-912",
+      "reason": "Modiano fikk Nobelprisen for erindringens kunst og skildringen av livet under okkupasjonen av Frankrike.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/List_of_Nobel_laureates_in_Literature"
+      ]
+    },
+    {
+      "lensId": "memory",
+      "entityId": "nobel-laureate-1017",
+      "reason": "Ernaux fikk Nobelprisen for å avdekke røttene og de kollektive grensene for personlig hukommelse.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/List_of_Nobel_laureates_in_Literature"
+      ]
+    },
+    {
+      "lensId": "memory",
+      "entityId": "magna-carta-document",
+      "reason": "Magna Carta er nesten helt opphevet som lov, men lever videre som frihetssymbol, står i UNESCOs Memory of the World-register og ble feiret ved 800-årsjubileet.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Magna_Carta"
+      ]
+    },
+    {
+      "lensId": "geopolitics",
+      "entityId": "geo-rus",
+      "reason": "Det meste av Mackinders hjerteland, øst for Volga og nord for Himalaya, ligger i det russiske riket han skrev om i 1904.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/The_Geographical_Pivot_of_History"
+      ]
+    },
+    {
+      "lensId": "geopolitics",
+      "entityId": "central-asia",
+      "reason": "Sentral-Asia ligger innenfor området Mackinder avgrenset som hjertelandet og kalte historiens dreiepunkt.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/The_Geographical_Pivot_of_History"
+      ]
+    },
+    {
+      "lensId": "geopolitics",
+      "entityId": "eastern-europe",
+      "reason": "I 1919 knyttet Mackinder kontroll over Øst-Europa til kontroll over hjertelandet og dermed verdensøya.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Halford_Mackinder"
+      ]
+    },
+    {
+      "lensId": "geopolitics",
+      "entityId": "geo-gbr",
+      "reason": "Mackinder så det som Storbritannias og USAs oppgave å holde balansen mellom maktene som kjempet om hjertelandet.",
+      "sourceUrls": [
+        "https://www.britannica.com/biography/Halford-Mackinder"
+      ]
+    },
+    {
+      "lensId": "geopolitics",
+      "entityId": "germany",
+      "reason": "Mackinders ideer påvirket Karl Haushofers tyske geopolitikk, en kobling som skadet Mackinders rykte etter krigen.",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Halford_Mackinder"
+      ]
+    }
+  ],
+  "notes": "Fødsels- og dødsår for antikke tenkere (Herodot, Tukydid, Polybios, Sima Qian) og årstall for antikke verk er omtrentlige og lagret som negative heltall for f.Kr. Edward Said ble født i Jerusalem under britisk mandat; birthCountryIso3 er satt til null fordi dagens statstilhørighet for byen er politisk omstridt. Carlo Ginzburg døde 16./17. juni 2026 i Bologna (Wikipedia og UCLA). Pierre Nora døde 2. juni 2025. Joan W. Scott, Jared Diamond, David Christian, Dipesh Chakrabarty, Francis Fukuyama og J. R. McNeill er i live; bare offentlig faglig informasjon er tatt med. J. R. McNeills fødested Chicago er hentet fra et kunnskapspanel i søkeresultatet, ikke fra en åpnet side; fødselsåret 1954 er bekreftet av flere kilder. David Christians Wikipedia-side gir to ulike fødselsdatoer i 1946; året er sikkert. Maps of Time oppgis som 2004 (UC Press, katalogpost) og 2005 et sted på samme side. Big history-tersklenes datoer følger Big History Project (OER Project): 13,8 mrd., 13,7 mrd., 13 mrd., 4,5 mrd., 3,8 mrd., 250 000, 12 000 og 300 år siden. Wikipedia oppgir andre tall for noen (stjerner ca. 12 mrd., Homo sapiens ca. 300 000, jordbruk ca. 11 000). Tallene er bevisst avrundet. Metahistory: Wikipedias oversiktstabell knytter hver rad (trope, emplotment, argument, ideologi) til én historiker og én filosof. Rader viser slektskap mellom kategoriene; White selv understreket at enkelthistorikere kan kombinere dem på tvers. Emplotment og trope for de fire historikerne er sikre; argument og ideologi er bare satt der tabell og sekundærlitteratur stemmer overens. For filosofene er kun trope satt, med middels sikkerhet. Formuleringen «Who rules East Europe commands the Heartland» er fra Democratic Ideals and Reality (1919), bekreftet på Mackinders Wikipedia-side; den er bare omskrevet, ikke sitert. Kildene for Collingwoods oversettelse av Croces Vico-bok gir ulike år (1913 på Vico-siden, 1923 på Croce-siden); året er derfor utelatt. Påvirkningen Herodot → Tukydid er en avstandtagen mer enn en arv; Tukydid → Ranke bygger bare på at Tukydid var en yndlingsforfatter. Begge er svakere enn de andre kantene. Toynbees ros av Muqaddimah er godt belagt, men ordlyden varierer mellom gjengivelsene; den er bare omskrevet. evidenceStatus brukes slik: documented = tilnærmingen og tilskrivningene er godt dokumentert og fortsatt i faglig bruk; disputed = kjernepåstanden om hvordan historien virker er sterkt omstridt eller i stor grad forlatt (frelseshistorie, sykluser, fremskritt, store personer, sivilisasjoner, økologisk determinisme, klassisk geopolitikk). Linser med få eksempler (store personer, materialisme, mikrohistorie, makt og diskurs, kjønn) har bevisst færre koblinger fordi Atlas mangler enheter med en sterk og dokumentert forbindelse (f.eks. Napoleon, Manchester, Friuli, fengsler). Wikipedia-sider for Ibn Khaldun, Bloch, Halbwachs og Nora bekreftet ikke selv alle påvirkningskoblinger; Halbwachs → Nora bygger på Noras essay fra 1989 og sekundære omtaler, og Bloch → Ginzburg på Ginzburgs Wikipedia-side. Feltene critique for frelseshistorie, sykluser, kjønn, nettverk (andre setning) og big history er mine egne sammenfatninger av alminnelig kjent kritikk, ikke knyttet til én bestemt åpnet kilde; de øvrige critique-feltene bygger på kritikk som er referert på de oppgitte sidene. Arbeidet Polybios' Historie er datert til ca. 140 f.Kr. som en omtrentlig ramme; verket ble skrevet etter 146 f.Kr. og over lang tid. Michelets ideologi er utelatt i Atlas fordi oversiktstabellen og teksten peker i ulike retninger. Bare lesninger med høy sikkerhet brukes i quiz."
+}
