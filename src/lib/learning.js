@@ -75,9 +75,9 @@ export function targetMatches(target, preferences, collections = []) {
   if (pref.objective === 'connections' && target.kind !== 'connections') return false;
   if (pref.objective === 'recognition' && target.mode !== 'recognition') return false;
   if (pref.objective === 'outline' && target.mode !== 'outline') return false;
-  if (['matching','before-after','arrows','estimate'].includes(pref.objective) && target.mode!==pref.objective) return false;
+  if (['matching','before-after','arrows','estimate','theme','listen','distance'].includes(pref.objective) && target.mode!==pref.objective) return false;
   if (WORLD_OBJECTIVES.has(pref.objective) && target.format !== pref.objective) return false;
-  if (pref.objective === 'recall' && ['map', 'timeline', 'recognition','matching','before-after','arrows','pick','border-walk','estimate'].includes(target.mode)) return false;
+  if (pref.objective === 'recall' && ['map', 'timeline', 'recognition','matching','before-after','arrows','pick','border-walk','estimate','theme','listen','distance'].includes(target.mode)) return false;
   return true;
 }
 

@@ -16,6 +16,8 @@ const CORE_REASONS={1:'Oversikt: hva, når og hvorfor det betyr noe. Svaret er u
 function familyAssessment(target) {
  if(target.unitId)return assessment(target.difficulty,target.learningStage,'core-curriculum',CORE_REASONS[target.step] || CORE_REASONS[2]);
  if(target.learningProfile?.reviewed)return assessment(target.answerFormat==='explanation'?3:2,target.learningProfile.stage,'curated-learning',target.answerFormat==='explanation'?'Krever at du forklarer eller sammenligner dokumenterte sammenhenger med egne ord.':'Krever et sentralt holdepunkt før du går videre til detaljer.');
+ if(target.mode==='theme' || target.mode==='listen')return assessment(2,'foundation',`music-${target.mode}`,'Et kjent verk skal kjennes igjen på lyden; mindre kjente verk er vanskeligere.');
+ if(target.mode==='distance')return assessment(3,'connections','time-distance','Krever en riktig følelse for avstander i tid mellom tre hendelser, ikke eksakte årstall.');
  const world=WORLD_FAMILIES[target.format];
  if(world){const rare=target.format==='flags' && !target.familiar;return assessment(rare?3:world[0],rare?'details':world[1],`world-${target.format}`,world[2]);}
  const id=target.baseId || target.id.replace(/:recognition$/,'');

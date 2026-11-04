@@ -96,18 +96,24 @@ export function simultaneityTargets(data) {
 }
 
 const LENS_FORMATS = {
-  norgeshistorie: ['lens-question', 'perspective-switch', 'thinkers', 'emplotment'],
-  verdenshistorie: ['lens-question', 'perspective-switch', 'thinkers', 'emplotment', 'scale'],
+  norgeshistorie: ['distance', 'lens-question', 'perspective-switch', 'thinkers', 'emplotment'],
+  verdenshistorie: ['distance', 'lens-question', 'perspective-switch', 'thinkers', 'emplotment', 'scale'],
   'moderne-historie': ['perspective-switch', 'lens-question', 'knowledge-flow', 'news-map'],
   geografi: ['neighbours', 'border-walk', 'flags', 'news-map'],
   naturvitenskap: ['scale', 'knowledge-flow'],
   biologi: ['scale', 'knowledge-flow'],
   samfunn: ['news-map', 'lens-question', 'knowledge-flow'],
-  'kunst-musikk': ['emplotment', 'thinkers'],
+  'kunst-musikk': ['theme', 'emplotment', 'thinkers'],
+  musikkhistorie: ['theme', 'distance'],
+  ideer: ['thinkers', 'lens-question', 'distance'],
+  teknologi: ['distance', 'scale'],
+  medisin: ['distance', 'scale'],
+  romfart: ['scale', 'distance'],
+  'verden-utenfor-europa': ['distance', 'news-map', 'perspective-switch'],
   litteratur: ['emplotment', 'thinkers']
 };
 export const PERSPECTIVE_REASON = 'Perspective';
-export const perspectiveLabel = target => target?.format === 'simultaneity' ? 'Samtidig i verden' : target?.mode === 'arrows' ? 'Historisk pil' : target?.mode === 'map' ? 'På kartet' : 'Et annet blikk';
+export const perspectiveLabel = target => target?.format === 'simultaneity' ? 'Samtidig i verden' : target?.mode === 'distance' ? 'Nærmest i tid' : target?.mode === 'theme' ? 'Lytt' : target?.mode === 'arrows' ? 'Historisk pil' : target?.mode === 'map' ? 'På kartet' : 'Et annet blikk';
 
 /**
  * Weave up to `count` perspective questions into today's session: the same era from another subject,
@@ -130,7 +136,9 @@ export function weavePerspectives({queue, units = [], curriculum, targets, revie
     const same = targets.filter(t => t.format === 'simultaneity' && t.unitIds.includes(unit.id) && t.unitIds.every(started) && fits(t)).sort(order);
     const arrows = span ? targets.filter(t => t.mode === 'arrows' && t.year >= span.from - 5 && t.year <= span.to + 5 && fits(t)).sort((a, b) => Number(b.askYear === false) - Number(a.askYear === false) || order(a, b)) : [];
     const formats = LENS_FORMATS[unit.domainId] || [];
-    const lens = targets.filter(t => formats.includes(t.format) && fits(t)).sort((a, b) => formats.indexOf(a.format) - formats.indexOf(b.format) || order(a, b));
+    // Recordings need the network, so only offline-safe exercises are woven into the daily chapter.
+    const formatOf = t => t.format || t.mode;
+    const lens = targets.filter(t => formats.includes(formatOf(t)) && !t.requiresNetwork && fits(t)).sort((a, b) => formats.indexOf(formatOf(a)) - formats.indexOf(formatOf(b)) || order(a, b));
     for (const t of [same[0], arrows[0], lens[0]].filter(Boolean)) {
       if (picks.length >= count || picks.some(p => p.target.id === t.id)) continue;
       picks.push({target: t, reason: PERSPECTIVE_REASON, unitId: unit.id});

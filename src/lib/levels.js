@@ -58,7 +58,7 @@ function familiarity(target) {
 }
 
 function retrieval(target) {
-  if (['recognition', 'pick', 'before-after', 'matching'].includes(target.mode) || target.cardType === 'choice') return 1;
+  if (['recognition', 'pick', 'before-after', 'matching', 'theme', 'listen', 'distance'].includes(target.mode) || target.cardType === 'choice') return 1;
   if (['map', 'arrows', 'timeline', 'estimate', 'border-walk'].includes(target.mode)) return 2;
   return 3;
 }
@@ -81,7 +81,7 @@ function precision(target) {
 function structure(target) {
   if (target.mode === 'timeline') return (target.timeline?.items?.length || 0) >= 4 ? 3 : 2;
   if (target.mode === 'border-walk') return (target.shortest || 0) >= 3 ? 3 : 2;
-  if (['before-after', 'arrows', 'matching'].includes(target.mode) || target.kind === 'before-after') return 2;
+  if (['before-after', 'arrows', 'matching', 'distance'].includes(target.mode) || target.kind === 'before-after') return 2;
   if (target.answerFormat === 'explanation' || /person-list|city-list/.test(target.answerType || '')) return 3;
   if (target.learningProfile?.reasoning === 'compare' || target.kind === 'connections') return 2;
   return 1;

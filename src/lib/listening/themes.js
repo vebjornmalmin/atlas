@@ -64,24 +64,6 @@ export const THEMES = [
     ]
   },
   {
-    id: 'pachelbel-kanon',
-    title: 'Kanon i D-dur',
-    composer: 'Johann Pachelbel',
-    year: 1680,
-    approximate: true,
-    era: 'Barokk',
-    tempo: 66,
-    key: 'D-dur',
-    notes: [
-      ['F#5', 1], ['E5', 1], ['D5', 1], ['C#5', 1], ['B4', 1], ['A4', 1], ['B4', 1], ['C#5', 1]
-    ],
-    familiarity: 3,
-    sources: [
-      {title: 'Canon in D – Violin AI Virtuoso', url: 'https://violin-ai-virtuoso.lovable.app/songs/canon-in-d'},
-      {title: 'Canon in D – Learn to Play Recorder', url: 'https://learntoplayrecorder.pages.dev/songs/book1/chapter6/canon-in-d'}
-    ]
-  },
-  {
     id: 'grieg-morgenstemning',
     title: 'Morgenstemning',
     composer: 'Edvard Grieg',

@@ -1,6 +1,9 @@
 import {buildTimelineExercise,normalizeAnswer} from './exercises.js';
 import {gradeBorderWalk} from './world-exercises.js';
 import {gradeEstimate} from './levels.js';
+import {gradeTheme,themeReady} from './listening/theme-exercises.js';
+import {gradeListening,listeningReady} from './listening/exercises.js';
+import {gradeDistance,distanceReady} from './time-distance.js';
 import {WORLD_FORMATS} from '../../knowledge-build/lens-projections.mjs';
 import {HISTORICAL_ARROWS,ARROW_REGION_NAMES,ARROW_KIND_QUESTIONS} from '../../knowledge-build/historical-arrows.mjs';
 
@@ -14,9 +17,12 @@ export const FORMAT_CHOICES = [
   {id:'geography',label:'Kart',note:'Finn riktig sted'},
   {id:'outline',label:'Omriss',note:'Gjenkjenn formen'},
   {id:'chronology',label:'Tidslinje',note:'Dra hendelsene i rekkefølge'},
-  {id:'estimate',label:'Når skjedde det?',note:'Plasser på tidslinjen'}
+  {id:'estimate',label:'Når skjedde det?',note:'Plasser på tidslinjen'},
+  {id:'distance',label:'Nærmest i tid',note:'Tidsavstander som overrasker'},
+  {id:'theme',label:'Kjenn igjen temaet',note:'Lytt til melodien, uten nett'},
+  {id:'listen',label:'Lytt',note:'Ekte innspillinger, krever nett'}
 ];
-export const STRUCTURED_MODES = ['matching','before-after','arrows','pick','border-walk','estimate'];
+export const STRUCTURED_MODES = ['matching','before-after','arrows','pick','border-walk','estimate','theme','listen','distance'];
 export const WORLD_FORMAT_CHOICES = WORLD_FORMATS;
 export function buildFormatTargets(data, maps=[]) {
   const result=[];
@@ -70,6 +76,9 @@ export function parseYearInput(value) {
 export function gradeStructured(target,draft={},neighbours=new Map()) {
   if(target.mode==='pick')return {correct:draft.choice===target.correctId};
   if(target.mode==='estimate')return gradeEstimate(draft.year,target);
+  if(target.mode==='theme')return gradeTheme(target,draft);
+  if(target.mode==='listen')return gradeListening(target,draft);
+  if(target.mode==='distance')return gradeDistance(target,draft);
   if(target.mode==='border-walk')return gradeBorderWalk(target,draft.path||[],neighbours);
   if(target.mode==='matching') {
     const correctCount=target.pairs.filter(p=>draft[p.id]===p.id).length;
@@ -89,5 +98,8 @@ export function structuredReady(target,draft={}) {
   if(target.mode==='matching')return target.pairs.every(p=>Boolean(draft[p.id]));
   if(target.mode==='before-after')return Boolean(draft.first);
   if(target.mode==='estimate')return Number.isFinite(draft.year);
+  if(target.mode==='theme')return themeReady(target,draft);
+  if(target.mode==='listen')return listeningReady(target,draft);
+  if(target.mode==='distance')return distanceReady(target,draft);
   return Boolean(draft.from && draft.to && (target.askYear===false || String(draft.year ?? '').trim()));
 }

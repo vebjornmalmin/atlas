@@ -41,7 +41,7 @@ export const LISTENING_WORKS = [
   {id:'ouverture-1812', title:'1812-ouverturen', composer:'Pjotr Tsjajkovskij', year:1880, era:'romantikk', commonsSearch:'Tchaikovsky 1812 Overture',
     sources:[{title:'Wikipedia – 1812 Overture', url:WIKI+'1812_Overture'}]},
   {id:'svanesjoen', title:'Svanesjøen', composer:'Pjotr Tsjajkovskij', year:1877, era:'romantikk', commonsSearch:'Tchaikovsky Swan Lake ballet',
-    sources:[{title:'Wikipedia – Swan Lake', url:'https://en.wikipedia.com/wiki/Swan_Lake'}]},
+    sources:[{title:'Pjotr Tsjajkovskij – Store norske leksikon', url:'https://snl.no/Pjotr_Tsjajkovskij'}]},
   {id:'nye-verden', title:'Symfoni nr. 9 «Fra den nye verden»', composer:'Antonín Dvořák', year:1893, era:'romantikk', commonsSearch:'Dvorak Symphony No. 9 From the New World',
     sources:[{title:'Wikipedia – Symphony No. 9 (Dvořák)', url:'https://en.wikipedia.org/wiki/Symphony_No._9_(Dvo%C5%99%C3%A1k)'}]},
   {id:'clair-de-lune', title:'Clair de lune', composer:'Claude Debussy', year:1890, approximate:true, era:'1900-tallet', commonsSearch:'Debussy Clair de lune Suite bergamasque',

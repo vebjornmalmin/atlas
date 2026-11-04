@@ -4,6 +4,10 @@
   import PanZoomMap from './PanZoomMap.svelte';
   import MatchLines from './MatchLines.svelte';
   import EstimateTimeline from './EstimateTimeline.svelte';
+  import ThemeQuiz from './ThemeQuiz.svelte';
+  import ListeningQuiz from './ListeningQuiz.svelte';
+  import TimeDistanceQuiz from './TimeDistanceQuiz.svelte';
+  import {TIME_ANCHORS} from '../../knowledge-build/time-anchors.mjs';
   import {regionAnchor,pathBounds,unionBox,arrowGeometry} from './map-view.js';
   let {target,draft=$bindable({}),dataset,revealed=false,graph=null}= $props();
 
@@ -62,6 +66,12 @@
 
 {#if target.mode==='matching'}
   <MatchLines pairs={target.pairs} {choices} bind:draft {revealed} />
+{:else if target.mode==='theme'}
+  <ThemeQuiz {target} bind:draft {revealed} />
+{:else if target.mode==='listen'}
+  <ListeningQuiz {target} bind:draft {revealed} />
+{:else if target.mode==='distance'}
+  <TimeDistanceQuiz {target} bind:draft {revealed} anchors={TIME_ANCHORS} />
 {:else if target.mode==='estimate'}
   <EstimateTimeline {target} bind:draft {revealed} />
 {:else if target.mode==='pick'}
