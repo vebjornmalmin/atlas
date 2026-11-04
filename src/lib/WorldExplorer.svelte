@@ -14,10 +14,19 @@
   let focusId=$state(saved.focusId || 'norway');
   let pathFrom=$state(saved.pathFrom || ''),pathTo=$state(saved.pathTo || '');
   let fromQuery=$state(''),toQuery=$state('');
-  let mapView=$state.raw(Array.isArray(saved.mapView)?saved.mapView:null);
+  // Without a saved position the map opens on the focus country, so the tall frame is filled with something to read.
+  const regionBox=id=>{
+    const region=graph.byId.get(graph.countryOf.get(id))?.geo?.mapRegionId,path=dataset.regions.find(r=>r.id===region)?.path;
+    const b=path && pathBounds(path,true);
+    return b?[b[0]-b[2]*1.5-8,b[1]-b[3]*1.5-8,b[2]*4+16,b[3]*4+16]:null;
+  };
+  let mapView=$state.raw(Array.isArray(saved.mapView)?saved.mapView:regionBox(saved.focusId || 'norway'));
   let worldMap=$state();
   let rankedLimit=$state(10);
   $effect(()=>{const state={lensId,focusId,pathFrom,pathTo,mapView};try {localStorage.setItem(STORE,JSON.stringify(state));} catch {/* The explorer still works without saved position. */}});
+
+  // Keep the chosen lens in view in the strip that sits on the map.
+  $effect(()=>{lensId;const frame=requestAnimationFrame(()=>{const dock=document.querySelector('.lens-strip.dock'),chip=dock?.querySelector('[aria-pressed="true"]');if(dock && chip)dock.scrollLeft=chip.offsetLeft-(dock.clientWidth-chip.offsetWidth)/2;});return ()=>cancelAnimationFrame(frame);});
 
   const now=new Date();
   let view=$derived(lensView(graph,lensId,relevance,now));
@@ -55,14 +64,18 @@
 
 
 
-{#snippet focusPill()}{#if focus}<button class="map-pill" onclick={()=>document.querySelector('#world-focus')?.scrollIntoView({behavior:'smooth',block:'start'})}>{#if flagFor(focus)}<Flag iso2={flagFor(focus)} />{/if}{focus.label} <span aria-hidden="true">↓</span></button>{/if}{/snippet}
-<PanZoomMap bind:this={worldMap} base={dataset.viewBox} bind:view={mapView} className="world-map" label={`Verdenskart vektet ${lens?`gjennom ${lens.name}`:'etter relevans'}. Dra og knip for å utforske, trykk på et land.`} onTap={({region})=>{const id=graph.regionToCountry.get(region);if(id)choose(id,false);}} overlay={focusPill}>
-    {#each dataset.regions as region}{@const id=graph.regionToCountry.get(region.id)}<path d={region.path} data-region={region.id} fill-rule="evenodd" style:fill={fill(region.id)} class:focused={focusRegion===region.id} class:neighbour={neighbours.some(n=>n.geo?.mapRegionId===region.id)} />{/each}
-</PanZoomMap>
-<div class="lens-strip" role="group" aria-label="Velg historiesyn">
+{#snippet lensDock()}
+<div class="lens-strip dock" role="group" aria-label="Velg historiesyn">
   <button class="chip" aria-pressed={!lens} onclick={()=>{lensId='';}}>Uten linse</button>
   {#each graph.lenses as l}<button class="chip" aria-pressed={lensId===l.id} onclick={()=>chooseLens(l.id)}>{l.name}</button>{/each}
 </div>
+{/snippet}
+{#snippet focusPill()}{#if focus}<button class="map-pill" onclick={()=>document.querySelector('#world-focus')?.scrollIntoView({behavior:'smooth',block:'start'})}>{#if flagFor(focus)}<Flag iso2={flagFor(focus)} />{/if}{focus.label} <span aria-hidden="true">↓</span></button>{/if}{/snippet}
+<div class="world-explorer atlas-kart">
+{#snippet mapHud()}{@render focusPill()}{@render lensDock()}{/snippet}
+<PanZoomMap bind:this={worldMap} base={dataset.viewBox} bind:view={mapView} className="world-map" label={`Verdenskart vektet ${lens?`gjennom ${lens.name}`:'etter relevans'}. Dra og knip for å utforske, trykk på et land.`} onTap={({region})=>{const id=graph.regionToCountry.get(region);if(id)choose(id,false);}} overlay={mapHud}>
+    {#each dataset.regions as region}{@const id=graph.regionToCountry.get(region.id)}<path d={region.path} data-region={region.id} fill-rule="evenodd" style:fill={fill(region.id)} class:focused={focusRegion===region.id} class:neighbour={neighbours.some(n=>n.geo?.mapRegionId===region.id)} />{/each}
+</PanZoomMap>
 
 {#if lens}
   <div class="card lens-card">
@@ -88,7 +101,7 @@
 
 {#if focus}
   <div class="card focus-card" id="world-focus">
-    <div class="focus-head">{#if flagFor(focus)}<span class="focus-flag"><Flag iso2={flagFor(focus)} size="medium" /></span>{/if}<div><p class="eyebrow">{typeLabel(focus.type)}</p><h2>{focus.label}</h2></div></div>
+    <div class="focus-head">{#if flagFor(focus)}<span class="focus-flag"><Flag iso2={#if flagFor(focus)}<Flag iso2={flagFor(focus)} />{/if}size="medium" /></span>{/if}<div><p class="eyebrow">{typeLabel(focus.type)}</p><h2>{focus.label}</h2></div></div>
     <p>{focus.summary}</p>
     <div class="metric-row">
       <span><strong>{graph.perspectives.impact?.[focus.id] ?? 0}</strong>påvirkning</span>
@@ -132,3 +145,4 @@
 <div class="format-grid world-formats">{#each WORLD_FORMAT_CHOICES as format}<button class="format-choice" disabled={!formatAvailable(format.id)} onclick={()=>onQuiz(format.id,{title:format.label,depth:'advanced'})}>{format.label}<small>{format.note}</small></button>{/each}</div>
 
 <details class="card"><summary>Slik vektes verden</summary>{#each Object.entries(graph.perspectives.method || {}) as [key,text]}<p><strong>{({impact:'Påvirkning',locality:'Nærhet',actuality:'Aktualitet',borders:'Grenser'})[key] || key}.</strong> {text}</p>{/each}<p class="muted">Linsene er redaksjonelle tolkninger av historikernes perspektiver. De viser hva et blikk løfter fram, ikke hva som er sant.</p></details>
+</div>
