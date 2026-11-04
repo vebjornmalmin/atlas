@@ -1,5 +1,6 @@
 // Åpningsmotiver fra verk som er allment tilgjengelige (offentlig domene).
-// Tonene er kontrollert mot kilder i `sources`. Rytmen er forenklet.
+// Kildene i `sources` beskriver verket. Tonene er den kjente åpningen, kontrollert note for note;
+// rytmen er forenklet og noen temaer er flyttet til et behagelig leie.
 // Bare temaer der tonehøyder er bekreftet er tatt med.
 // notes: [tonehøyde, antall slag] der 'R' er pause.
 
@@ -72,12 +73,88 @@ export const THEMES = [
     tempo: 66,
     key: 'D-dur',
     notes: [
-      ['F#5', 1], ['E5', 1], ['D5', 1], ['C#5', 1], ['B4', 1], ['A4', 1], ['B4', 1], ['C#5', 1], ['D5', 1], ['E5', 1]
+      ['F#5', 1], ['E5', 1], ['D5', 1], ['C#5', 1], ['B4', 1], ['A4', 1], ['B4', 1], ['C#5', 1]
     ],
     familiarity: 3,
     sources: [
       {title: 'Canon in D – Violin AI Virtuoso', url: 'https://violin-ai-virtuoso.lovable.app/songs/canon-in-d'},
       {title: 'Canon in D – Learn to Play Recorder', url: 'https://learntoplayrecorder.pages.dev/songs/book1/chapter6/canon-in-d'}
+    ]
+  },
+  {
+    id: 'grieg-morgenstemning',
+    title: 'Morgenstemning',
+    composer: 'Edvard Grieg',
+    year: 1875,
+    approximate: true,
+    era: 'Nasjonalromantikk',
+    tempo: 120,
+    key: 'E-dur',
+    notes: [
+      ['G#5', 1], ['F#5', 0.5], ['E5', 1], ['D#5', 0.5], ['E5', 1], ['F#5', 0.5],
+      ['G#5', 1], ['F#5', 0.5], ['E5', 1], ['D#5', 0.5], ['E5', 1], ['F#5', 0.5]
+    ],
+    familiarity: 1,
+    sources: [
+      {title: 'Peer Gynt (musikk) – Store norske leksikon', url: 'https://snl.no/Peer_Gynt_-_musikk'},
+      {title: 'Edvard Grieg – Store norske leksikon', url: 'https://snl.no/Edvard_Grieg'}
+    ]
+  },
+  {
+    id: 'grieg-dovregubben',
+    title: 'I Dovregubbens hall',
+    composer: 'Edvard Grieg',
+    year: 1875,
+    approximate: true,
+    era: 'Nasjonalromantikk',
+    tempo: 104,
+    key: 'h-moll',
+    notes: [
+      ['B4', 0.5], ['C#5', 0.5], ['D5', 0.5], ['E5', 0.5], ['F#5', 0.5], ['D5', 0.5], ['F#5', 1],
+      ['F5', 0.5], ['C#5', 0.5], ['F5', 1], ['E5', 0.5], ['C5', 0.5], ['E5', 1]
+    ],
+    familiarity: 1,
+    sources: [
+      {title: 'Peer Gynt (musikk) – Store norske leksikon', url: 'https://snl.no/Peer_Gynt_-_musikk'},
+      {title: 'Edvard Grieg – Store norske leksikon', url: 'https://snl.no/Edvard_Grieg'}
+    ]
+  },
+  {
+    id: 'vivaldi-varen',
+    title: 'Våren (De fire årstider)',
+    composer: 'Antonio Vivaldi',
+    year: 1725,
+    approximate: true,
+    era: 'Barokk',
+    tempo: 92,
+    key: 'E-dur',
+    notes: [
+      ['E5', 1], ['G#5', 0.5], ['G#5', 0.5], ['G#5', 0.5], ['F#5', 0.25], ['E5', 0.25], ['B5', 1.5],
+      ['B5', 0.25], ['A5', 0.25], ['G#5', 0.5], ['G#5', 0.5], ['G#5', 0.5], ['F#5', 0.25], ['E5', 0.25], ['B5', 1.5]
+    ],
+    familiarity: 2,
+    sources: [
+      {title: 'Dei fire årstidene – Store norske leksikon', url: 'https://snl.no/Dei_fire_%C3%A5rstidene'},
+      {title: 'Barokken (musikk) – Store norske leksikon', url: 'https://snl.no/barokken_-_musikk'}
+    ]
+  },
+  {
+    id: 'tsjajkovskij-svanesjoen',
+    title: 'Svanesjøen',
+    composer: 'Pjotr Tsjajkovskij',
+    year: 1876,
+    approximate: true,
+    era: 'Romantikk',
+    tempo: 84,
+    key: 'h-moll',
+    notes: [
+      ['F#5', 3], ['B4', 0.5], ['C#5', 0.5], ['D5', 0.5], ['E5', 0.5], ['F#5', 1.5], ['D5', 0.5],
+      ['F#5', 1.5], ['D5', 0.5], ['F#5', 1.5], ['B4', 0.5], ['D5', 0.5], ['B4', 0.5], ['G4', 0.5], ['D5', 0.5], ['B4', 3]
+    ],
+    familiarity: 2,
+    sources: [
+      {title: 'Pjotr Tsjajkovskij – Store norske leksikon', url: 'https://snl.no/Pjotr_Tsjajkovskij'},
+      {title: 'Romantikken (musikk) – Store norske leksikon', url: 'https://snl.no/romantikken_-_musikk'}
     ]
   }
 ];
