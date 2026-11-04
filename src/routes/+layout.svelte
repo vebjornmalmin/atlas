@@ -51,9 +51,9 @@
   <header class="app-header">
     <a href="#today" aria-label="Atlas hjem" class="brand">
       <span class="mark" aria-hidden="true">
-        <svg viewBox="0 0 32 32" fill="none"><path d="m16 5 9 22-9-5-9 5L16 5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M16 5v17M10 19h12" stroke="currentColor" stroke-width="1.25"/></svg>
+        <svg viewBox="0 0 32 32" fill="none"><path d="m16 4 10 24-10-5.5L6 28 16 4Z" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/><path d="M16 4v18.5" stroke="currentColor" stroke-width="1.5"/></svg>
       </span>
-      <span>atlas</span>
+      <span class="wordmark">atlas</span>
     </a>
     {#if status}<span id="connection" class="status" aria-live="polite">{status}</span>{/if}
   </header>

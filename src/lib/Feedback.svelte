@@ -59,7 +59,7 @@
   }
   function close(){dialog?.close();opened=false;returnFocus?.focus({preventScroll:true});if(returnScroll)window.scrollTo(returnScroll.x,returnScroll.y);}
 </script>
-<button class="feedback-trigger" data-feedback-ui data-html2canvas-ignore disabled={capturing} onclick={open}>{capturing?'Tar skjermbilde …':'Gi tilbakemelding'}</button>
+<button class="feedback-trigger" class:busy={capturing} data-feedback-ui data-html2canvas-ignore disabled={capturing} aria-label={capturing?'Tar skjermbilde …':'Gi tilbakemelding'} title="Gi tilbakemelding" onclick={open}><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.5 5.5h15v10.5h-7.2L8 19.5V16H4.5V5.5Z"/><path d="M8.5 9.5h7M8.5 12.5h4.5"/></svg></button>
 {#if opened}
 <dialog bind:this={dialog} class="feedback-dialog" data-feedback-ui data-html2canvas-ignore oncancel={event=>{event.preventDefault();close();}} aria-labelledby="feedback-title">
   <div class="row"><h2 id="feedback-title">Tilbakemelding</h2><button class="quiet" aria-label="Lukk tilbakemelding" onclick={close}>×</button></div>
@@ -92,9 +92,13 @@
 </dialog>
 {/if}
 <style>
-:global(html.quiz-active) .feedback-trigger{position:fixed;top:calc(8px + env(safe-area-inset-top));bottom:auto;box-shadow:none;padding:8px 10px;font-size:11px;}
-.feedback-trigger{position:absolute;right:max(16px,calc((100vw - 480px)/2 + 16px));top:calc(26px + env(safe-area-inset-top));bottom:auto;z-index:25;padding:8px 12px;min-height:40px;border:1px solid var(--line);border-radius:24px;background:var(--surface,#f4f3ed);color:var(--muted,#71766a);box-shadow:none;font-size:12px;}
-.feedback-dialog{box-sizing:border-box;width:calc(100vw - 24px);max-width:456px;max-height:calc(100dvh - 32px);border:1px solid var(--line);border-radius:20px;padding:20px;background:var(--surface,#f4f3ed);color:var(--ink,#263c2d);overflow:auto;}
-.feedback-dialog::backdrop{background:#0008;}
-.feedback-dialog h2{margin:0;}.feedback-dialog .row{justify-content:space-between;}.feedback-preview{display:block;width:auto;max-width:100%;max-height:260px;margin:12px auto;border:1px solid var(--line);border-radius:8px;}.feedback-dialog button{margin-top:8px;}.feedback-context{white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px;}.feedback-dialog .entity-row{width:100%;text-align:left;}.feedback-dialog small{display:block;}
+:global(html.quiz-active) .feedback-trigger{position:fixed;top:calc(4px + env(safe-area-inset-top));right:max(4px,calc((100vw - 480px)/2 + 4px));}
+.feedback-trigger{position:absolute;right:max(calc(var(--gutter) - 11px),calc((100vw - 480px)/2 + var(--gutter) - 11px));top:calc(6px + env(safe-area-inset-top));z-index:25;display:grid;place-items:center;width:44px;height:44px;min-height:44px;padding:0;border:0;border-radius:50%;background:transparent;color:var(--muted);box-shadow:none;}
+.feedback-trigger svg{width:22px;height:22px;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
+.feedback-trigger:active:not(:disabled){color:var(--accent);}
+.feedback-trigger.busy{opacity:1;color:var(--accent);}
+.feedback-dialog{box-sizing:border-box;width:100%;max-width:480px;max-height:calc(100dvh - 24px);margin:auto auto 0;border:0;border-top:1px solid var(--line-strong);border-radius:var(--r-l) var(--r-l) 0 0;padding:20px var(--gutter) calc(16px + env(safe-area-inset-bottom));background:var(--surface,#f3f0e6);color:var(--ink,#1c2a20);overflow:auto;}
+.feedback-dialog::backdrop{background:#0d140e99;}
+.feedback-dialog::before{content:"";display:block;width:36px;height:4px;margin:-8px auto 12px;border-radius:2px;background:var(--line-strong);}
+.feedback-dialog h2{margin:0;}.feedback-dialog h3{margin:18px 0 4px;}.feedback-dialog .row{justify-content:space-between;margin-top:0;}.feedback-dialog .row .quiet{font-size:26px;font-weight:400;min-width:44px;padding:0;}.feedback-preview{display:block;width:auto;max-width:100%;max-height:260px;margin:12px auto;border:1px solid var(--line);border-radius:var(--r-s);}.feedback-dialog button{margin-top:8px;}.feedback-dialog .row .quiet{margin-top:0;}.feedback-context{white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px;}.feedback-dialog .entity-row{width:100%;text-align:left;margin-top:0;}.feedback-dialog small{display:block;}
 </style>

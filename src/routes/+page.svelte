@@ -587,9 +587,9 @@
 {/snippet}
 
 <main id="main-view" tabindex="-1">
-  {#if error}<div class="card error" role="alert"><p>{error}</p><button class="quiet" onclick={()=>error=''}>Lukk</button></div>{/if}
-  {#if offlineTest}<div class="card"><p class="eyebrow">NETTVERKET ER AVSLÅTT FOR APPEN</p><p class="muted">Frakoblet test: innhold hentes bare fra det som er lagret på enheten.</p><button class="secondary" onclick={()=>run(()=>offlineMode(false))}>Avslutt frakoblet test</button></div>{/if}
-  {#if updateReady && !sessionScreen}<div class="card"><p>En ny utgave er klar.</p><button class="secondary" disabled={busy} onclick={()=>run(applyUpdate)}>Oppdater appen</button><p class="muted">Fremgangen beholdes.</p></div>{/if}
+  {#if error}<div class="banner error" role="alert"><p>{error}</p><button class="quiet" onclick={()=>error=''}>Lukk</button></div>{/if}
+  {#if offlineTest}<div class="banner warm stacked" role="status"><div><p class="eyebrow">NETTVERKET ER AVSLÅTT FOR APPEN</p><p class="muted">Frakoblet test: innhold hentes bare fra det som er lagret på enheten.</p></div><button class="secondary sm" onclick={()=>run(()=>offlineMode(false))}>Avslutt frakoblet test</button></div>{/if}
+  {#if updateReady && !sessionScreen}<div class="banner" role="status"><div><p><strong>En ny utgave er klar.</strong></p><p class="muted">Fremgangen beholdes.</p></div><button class="primary sm" disabled={busy} onclick={()=>run(applyUpdate)}>Oppdater appen</button></div>{/if}
   {#if loading}
     <section class="hero"><h1>Laster quiz…</h1></section><div class="card skeleton" aria-busy="true"><span></span><span></span></div>
   {:else if !data}
@@ -815,8 +815,8 @@
     </details>
     {/if}
   {/if}
-  {#if confirmRestore}<div class="card error" role="alert"><h2>Erstatte lokale data?</h2><p>Dette gjenoppretter sikkerhetskopien fra {displayDate(confirmRestore.exportedAt)} og erstatter kunnskapen og læringshistorikken på denne enheten. Eksporter en kopi først hvis du vil beholde den.</p><button class="primary" disabled={busy} onclick={()=>run(restore)}>Erstatt med denne sikkerhetskopien</button><button class="secondary" onclick={()=>confirmRestore=null}>Avbryt</button></div>{/if}
-  {#if pendingDestruction==='logs'}<div class="card error" role="alert"><h2>Tømme diagnostikkloggen?</h2><p>Læringshistorikken beholdes. Den lokale diagnostikkloggen slettes.</p><button class="primary" onclick={()=>run(async()=>{await clearLogs(db);pendingDestruction='';await refresh();})}>Tøm diagnostikkloggen</button><button class="secondary" onclick={()=>pendingDestruction=''}>Avbryt</button></div>{/if}
+  {#if confirmRestore}<div class="card confirm" role="alert"><h2>Erstatte lokale data?</h2><p>Dette gjenoppretter sikkerhetskopien fra {displayDate(confirmRestore.exportedAt)} og erstatter kunnskapen og læringshistorikken på denne enheten. Eksporter en kopi først hvis du vil beholde den.</p><button class="primary" disabled={busy} onclick={()=>run(restore)}>Erstatt med denne sikkerhetskopien</button><button class="secondary" onclick={()=>confirmRestore=null}>Avbryt</button></div>{/if}
+  {#if pendingDestruction==='logs'}<div class="card confirm" role="alert"><h2>Tømme diagnostikkloggen?</h2><p>Læringshistorikken beholdes. Den lokale diagnostikkloggen slettes.</p><button class="primary" onclick={()=>run(async()=>{await clearLogs(db);pendingDestruction='';await refresh();})}>Tøm diagnostikkloggen</button><button class="secondary" onclick={()=>pendingDestruction=''}>Avbryt</button></div>{/if}
 </main>
 <Feedback context={()=>({appVersion:APP_VERSION,view,packageId:data?.id,packageVersion:data?.version,target:current?{id:current.id,prompt:current.prompt,mode:current.mode,entityId:current.entityId}:null,session:sessionScreen?{index:session?.index,total:session?.queue.length,revealed,correct,usedHint}:null,focus:JSON.parse(JSON.stringify(prefs)),offlineTest,error})}/>
 {#if toast}<div id="toast" class="toast" role="status" aria-live="polite"><span>{toast}</span><button class="quiet" aria-label="Lukk melding" onclick={()=>toast=''}>×</button></div>{/if}
