@@ -174,7 +174,7 @@
 
   function choose(choice) {
     if (revealed) return;
-    draft.choice = choice;
+    draft = {...draft, choice};
   }
 
   function classFor(choice) {

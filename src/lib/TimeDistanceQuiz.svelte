@@ -25,7 +25,7 @@
   const isCorrect = $derived(revealed && facts && draft.choice === target.correctId);
 
   function choose(id) {
-    if (!revealed) draft.choice = id;
+    if (!revealed) draft = {...draft, choice: id};
   }
 
   function role(item) {
@@ -42,7 +42,7 @@
 
 {#if anchor}
   <section class="distance" aria-labelledby="distance-question">
-    <p id="distance-question" class="question">Hva ligger nærmest i tid?</p>
+    <p id="distance-question" class="question">Nærmest i tid til</p>
     <p class="anchor">{anchor.label}</p>
 
     {#if !revealed}

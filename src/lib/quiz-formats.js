@@ -19,8 +19,8 @@ export const FORMAT_CHOICES = [
   {id:'chronology',label:'Tidslinje',note:'Dra hendelsene i rekkefølge'},
   {id:'estimate',label:'Når skjedde det?',note:'Plasser på tidslinjen'},
   {id:'distance',label:'Nærmest i tid',note:'Tidsavstander som overrasker'},
-  {id:'theme',label:'Kjenn igjen temaet',note:'Lytt til melodien, uten nett'},
-  {id:'listen',label:'Lytt',note:'Ekte innspillinger, krever nett'}
+  {id:'theme',label:'Kjenn igjen temaet',note:'Melodien spilles av appen, uten nett'},
+  {id:'listen',label:'Ekte innspillinger',note:'Klassisk musikk fra Wikimedia Commons, krever nett'}
 ];
 export const STRUCTURED_MODES = ['matching','before-after','arrows','pick','border-walk','estimate','theme','listen','distance'];
 export const WORLD_FORMAT_CHOICES = WORLD_FORMATS;

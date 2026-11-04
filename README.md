@@ -16,9 +16,19 @@ Appen er samlet til tre steder: **I dag**, **Atlas** og **Deg**. Før var dagens
 - **Naturlig interaksjon**: kartene dras, knipes og dobbelttrykkes som et kartprogram på telefonen; piler tegnes ved å dra fra land til land; rekkefølger sorteres ved å holde og dra; koblinger tegnes som linjer. Oppgavene blir stående etter svaret og viser hva som var riktig.
 - **Rettet**: presidentenes nummer røpet rekkefølgen i tidslinjer og «hva kom først»-oppgaver.
 
+**Ny kunnskap og nye øvelser i samme utgave**
+
+- **Seks nye fagområder**, alle daterte og derfor nye kapitler i historien: Musikkhistorie, Filosofi og idéhistorie, Teknologi og oppfinnelser, Medisinens historie, Astronomi og romfart, og Verden utenfor Europa (Kina, den islamske gullalderen, Vest-Afrikas riker, Amerika før europeerne, osmanerne og mogulene, Japan). Pensumet har nå 15 fagområder, 120 emner og 1490 kort, med kilder fra Store norske leksikon. Alle valideres uten feil eller advarsler.
+- **Nærmest i tid**: «Hva ligger nærmest Kleopatras død i tid: månelandingen eller Kheopspyramiden?» 120 spørsmål fra 34 daterte holdepunkter over 17 000 år. Etter svaret vises avstandene på en lineær tidslinje, fordi poenget er de ekte proporsjonene.
+- **Kjenn igjen temaet**: sju kjente åpningsmotiver (Beethoven, Grieg, Vivaldi, Tsjajkovskij) spilt av en innebygd synthesizer med flere deltoner, anslag og romklang. Fungerer uten nett.
+- **Ekte innspillinger**: 30 klassiske verk der et 20 sekunders utdrag hentes direkte fra Wikimedia Commons. Bare filer med fri lisens brukes, og utøver og lisens vises etter svaret. Krever nett og flettes derfor ikke inn i dagens kapittel.
+- **Historiske piler**: 22 hendelser fra Hannibal til Pearl Harbor, i stedet for 4.
+
+Innholdet ble skrevet parallelt og deretter gjennomgått. Faktafeil som ble rettet under gjennomgangen: Lascaux-maleriene er omkring 17 000 år gamle, ikke fra 11 500 f.Kr. År 426 er da Copáns kongedynasti ble grunnlagt, ikke da Tikal erobret byen. Qin-keiseren knyttet sammen eldre murer, men begynte ikke på muren. ENIAC veide omkring 27 tonn. Sartres foredrag om eksistensialismen ble holdt i 1945. Dessuten er tvilsomme kilder og melodier fjernet. Faktasjekken kunne bare gjøres mot søkeresultater, ikke mot hele artikler, så noe innhold er utelatt fordi det ikke kunne bekreftes. Hentingen fra Wikimedia Commons er ikke prøvd mot den virkelige tjenesten fra dette miljøet.
+
 Kunnskapspakke 2.2.0 har nivåprofil på alle spørsmål. Appen lager i tillegg 118 «samtidig»-oppgaver, 200 tidslinjeplasseringer og 12 spredte tidslinjer fra det kildebelagte innholdet. Beslutninger og avgrensninger: [docs/levels-and-story.md](docs/levels-and-story.md).
 
-Kontrollert mot produksjonsbygget kjørt lokalt i en iPhone-visning med berøring: piltegning med én finger, knip, dra og trykk på kartet, trykk-og-hold-sortering, linjekobling, tidslinjeplassering, dagens kapittel, Atlas og Deg. 196 automatiske tester består. iOS-simulatoren var ikke tilgjengelig i dette miljøet, så kontrollen i Safari på iPhone 17 Pro gjenstår.
+Kontrollert mot produksjonsbygget kjørt lokalt i en iPhone-visning med berøring: piltegning med én finger, knip, dra og trykk på kartet, trykk-og-hold-sortering, linjekobling, tidslinjeplassering, melodier, «Nærmest i tid», dagens kapittel, Atlas og Deg. 224 automatiske tester består. iOS-simulatoren var ikke tilgjengelig i dette miljøet, så kontrollen i Safari på iPhone 17 Pro gjenstår.
 
 ## 1.1.3: «Uten nett» bare når nettet faktisk mangler
 

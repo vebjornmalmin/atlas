@@ -93,7 +93,7 @@
     {
       "id": "progress",
       "name": "Fremskritt",
-      "seesShare": 0.544,
+      "seesShare": 0.538,
       "topNodes": [
         "Nobelprisen i fysikk",
         "Nobelprisen i fysiologi eller medisin",
@@ -113,7 +113,7 @@
     {
       "id": "great-individuals",
       "name": "Store personer",
-      "seesShare": 0.322,
+      "seesShare": 0.319,
       "topNodes": [
         "USAs president",
         "Thomas Carlyle",
@@ -133,7 +133,7 @@
     {
       "id": "materialist",
       "name": "Materielle krefter og klasse",
-      "seesShare": 0.169,
+      "seesShare": 0.167,
       "topNodes": [
         "Storbritannia",
         "USA",
@@ -153,7 +153,7 @@
     {
       "id": "civilizations",
       "name": "Sivilisasjoner",
-      "seesShare": 0.082,
+      "seesShare": 0.081,
       "topNodes": [
         "Nord-Europa",
         "Karibia",
@@ -173,7 +173,7 @@
     {
       "id": "annales",
       "name": "Lang varighet og mentaliteter",
-      "seesShare": 0.192,
+      "seesShare": 0.19,
       "topNodes": [
         "Frankrike",
         "Nord-Europa",
@@ -213,7 +213,7 @@
     {
       "id": "microhistory",
       "name": "Mikrohistorie",
-      "seesShare": 0.11,
+      "seesShare": 0.109,
       "topNodes": [
         "Innlandet",
         "Vestland",
@@ -231,7 +231,7 @@
     {
       "id": "metahistory",
       "name": "Fortelling og plott",
-      "seesShare": 0.034,
+      "seesShare": 0.033,
       "topNodes": [
         "To byer",
         "Histoire de la Révolution française",
@@ -251,7 +251,7 @@
     {
       "id": "power-discourse",
       "name": "Makt og diskurs",
-      "seesShare": 0.116,
+      "seesShare": 0.115,
       "topNodes": [
         "Nobelprisen i litteratur",
         "Nobels fredspris",
@@ -271,7 +271,7 @@
     {
       "id": "postcolonial",
       "name": "Postkolonialt blikk",
-      "seesShare": 0.076,
+      "seesShare": 0.075,
       "topNodes": [
         "USA",
         "Storbritannia",
@@ -291,7 +291,7 @@
     {
       "id": "gender",
       "name": "Kjønn",
-      "seesShare": 0.287,
+      "seesShare": 0.284,
       "topNodes": [
         "Claudia Goldin",
         "Marie Curie",
@@ -311,7 +311,7 @@
     {
       "id": "world-system",
       "name": "Verdenssystem",
-      "seesShare": 0.186,
+      "seesShare": 0.184,
       "topNodes": [
         "USA",
         "Tyskland",
@@ -331,7 +331,7 @@
     {
       "id": "networks",
       "name": "Nettverk og møter",
-      "seesShare": 0.46,
+      "seesShare": 0.455,
       "topNodes": [
         "USA",
         "Storbritannia",
@@ -371,7 +371,7 @@
     {
       "id": "big-history",
       "name": "Kosmisk skala",
-      "seesShare": 0.453,
+      "seesShare": 0.448,
       "topNodes": [
         "Jordbruk",
         "Jorden og solsystemet",
@@ -409,7 +409,7 @@
     {
       "id": "geopolitics",
       "name": "Geopolitikk",
-      "seesShare": 0.151,
+      "seesShare": 0.15,
       "topNodes": [
         "Russland",
         "Tyskland",

@@ -57,7 +57,6 @@
 </script>
 
 <section class="theme-quiz">
-  <h2 class="prompt">{target.prompt}</h2>
 
   <div class="player">
     <button type="button" class="play" onclick={togglePlay} aria-pressed={isPlaying}>
@@ -139,7 +138,7 @@
     border-radius: 14px;
   }
   .roll rect {
-    fill: var(--line);
+    fill: color-mix(in srgb, var(--accent) 35%, var(--surface));
     transition: fill 0.1s;
   }
   .roll rect.active {

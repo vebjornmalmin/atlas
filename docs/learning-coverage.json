@@ -546,6 +546,132 @@
       ]
     },
     {
+      "id": "musikkhistorie",
+      "title": "Musikkhistorie",
+      "scope": "Register og øvelser; faglig fullstendighet er ikke vurdert.",
+      "entities": 6,
+      "exercises": 66,
+      "facts": 66,
+      "introductions": 0,
+      "connections": 18,
+      "objectives": 0,
+      "paths": 0,
+      "sourced": 66,
+      "untestedEntities": 0,
+      "untestedClaims": 0,
+      "unexplained": 0,
+      "gaps": [
+        "Læringsmål og nødvendige holdepunkter er ikke redaksjonelt kartlagt.",
+        "Mangler egne introduksjoner som forklarer betydningen.",
+        "Mangler en kuratert læringssti."
+      ]
+    },
+    {
+      "id": "ideer",
+      "title": "Filosofi og idéhistorie",
+      "scope": "Register og øvelser; faglig fullstendighet er ikke vurdert.",
+      "entities": 6,
+      "exercises": 72,
+      "facts": 72,
+      "introductions": 0,
+      "connections": 18,
+      "objectives": 0,
+      "paths": 0,
+      "sourced": 72,
+      "untestedEntities": 0,
+      "untestedClaims": 0,
+      "unexplained": 0,
+      "gaps": [
+        "Læringsmål og nødvendige holdepunkter er ikke redaksjonelt kartlagt.",
+        "Mangler egne introduksjoner som forklarer betydningen.",
+        "Mangler en kuratert læringssti."
+      ]
+    },
+    {
+      "id": "teknologi",
+      "title": "Teknologi og oppfinnelser",
+      "scope": "Register og øvelser; faglig fullstendighet er ikke vurdert.",
+      "entities": 6,
+      "exercises": 66,
+      "facts": 66,
+      "introductions": 0,
+      "connections": 18,
+      "objectives": 0,
+      "paths": 0,
+      "sourced": 66,
+      "untestedEntities": 0,
+      "untestedClaims": 0,
+      "unexplained": 0,
+      "gaps": [
+        "Læringsmål og nødvendige holdepunkter er ikke redaksjonelt kartlagt.",
+        "Mangler egne introduksjoner som forklarer betydningen.",
+        "Mangler en kuratert læringssti."
+      ]
+    },
+    {
+      "id": "medisin",
+      "title": "Medisinens historie",
+      "scope": "Register og øvelser; faglig fullstendighet er ikke vurdert.",
+      "entities": 6,
+      "exercises": 60,
+      "facts": 60,
+      "introductions": 0,
+      "connections": 18,
+      "objectives": 0,
+      "paths": 0,
+      "sourced": 60,
+      "untestedEntities": 0,
+      "untestedClaims": 0,
+      "unexplained": 0,
+      "gaps": [
+        "Læringsmål og nødvendige holdepunkter er ikke redaksjonelt kartlagt.",
+        "Mangler egne introduksjoner som forklarer betydningen.",
+        "Mangler en kuratert læringssti."
+      ]
+    },
+    {
+      "id": "romfart",
+      "title": "Astronomi og romfart",
+      "scope": "Register og øvelser; faglig fullstendighet er ikke vurdert.",
+      "entities": 6,
+      "exercises": 61,
+      "facts": 61,
+      "introductions": 0,
+      "connections": 17,
+      "objectives": 0,
+      "paths": 0,
+      "sourced": 61,
+      "untestedEntities": 0,
+      "untestedClaims": 0,
+      "unexplained": 0,
+      "gaps": [
+        "Læringsmål og nødvendige holdepunkter er ikke redaksjonelt kartlagt.",
+        "Mangler egne introduksjoner som forklarer betydningen.",
+        "Mangler en kuratert læringssti."
+      ]
+    },
+    {
+      "id": "verden-utenfor-europa",
+      "title": "Verden utenfor Europa",
+      "scope": "Register og øvelser; faglig fullstendighet er ikke vurdert.",
+      "entities": 6,
+      "exercises": 72,
+      "facts": 72,
+      "introductions": 0,
+      "connections": 18,
+      "objectives": 0,
+      "paths": 0,
+      "sourced": 72,
+      "untestedEntities": 0,
+      "untestedClaims": 0,
+      "unexplained": 0,
+      "gaps": [
+        "Læringsmål og nødvendige holdepunkter er ikke redaksjonelt kartlagt.",
+        "Mangler egne introduksjoner som forklarer betydningen.",
+        "Mangler en kuratert læringssti."
+      ]
+    },
+    {
       "id": "world-lenses",
       "title": "Verdensblikk",
       "scope": "Register og øvelser; faglig fullstendighet er ikke vurdert.",
