@@ -1,0 +1,1241 @@
+{
+  "domain": {
+    "id": "verden-utenfor-europa",
+    "title": "Verden utenfor Europa",
+    "subject": "history",
+    "order": 15,
+    "description": "Kina, den islamske verden, Vest-Afrika, Amerika, Osmanerriket, Mogulriket og Japan: store riker som sto side om side med Europa og ofte var rikere og større."
+  },
+  "units": [
+    {
+      "id": "vue-kina-qin-tang",
+      "title": "Kina fra Qin til Tang",
+      "tier": 1,
+      "prerequisites": [
+        "vh-forste-sivilisasjoner"
+      ],
+      "years": {
+        "from": -221,
+        "to": 907
+      },
+      "summary": "Kina ble samlet til ett keiserrike under Qin, og Tang-dynastiet gjorde Chang'an til en av verdens største byer langs handelsrutene som kalles Silkeveien.",
+      "lesson": [
+        "Kina ble samlet til ett rike i 221 f.Kr., da staten Qin erobret de andre kongedømmene. Qin Shi Huangdi kalte seg første keiser. Riket ble delt i 40 provinser styrt av embetsmenn som keiseren utnevnte, og det føydale systemet ble avskaffet. Qin begynte også arbeidet med den kinesiske mur, men dynastiet varte bare til 206 f.Kr.",
+        "Silkeveien er et nettverk av karavaneveier fra Kina til Middelhavet, ikke én bestemt vei. Rutene var særlig viktige omkring 400 til 700 e.Kr. og igjen på 1200- og 1300-tallet. Silke var den kjente varen, men også ideer og teknikker fulgte med. Papir, bokstrykk og kompasset spredte seg fra Kina mot Midtøsten.",
+        "Tang-dynastiet regjerte fra 618 til omkring 907, etter at Li Yuan tok makten fra Sui-keiseren. Hovedstaden Chang'an, dagens Xi'an, var en av verdens største byer, med anslagsvis én million innbyggere rundt år 800. Der fantes buddhistiske, taoistiske, zoroastriske og nestorianske templer side om side."
+      ],
+      "keyPoints": [
+        "Qin samlet Kina til ett rike i 221 f.Kr., og keiserne styrte fra et sentralt embetsverk.",
+        "Silkeveien var et nettverk av ruter som knyttet Kina til Middelhavet.",
+        "Papir, bokstrykk og kompasset spredte seg fra Kina vestover.",
+        "Tang-dynastiet regjerte fra 618 til omkring 907, med Chang'an som hovedstad."
+      ],
+      "sources": [
+        {
+          "title": "Qin Shi Huangdi – Store norske leksikon",
+          "url": "https://snl.no/Qin_Shi_Huangdi"
+        },
+        {
+          "title": "Qin-dynastiet – Store norske leksikon",
+          "url": "https://snl.no/Qin-dynastiet"
+        },
+        {
+          "title": "Silkeveien – Store norske leksikon",
+          "url": "https://snl.no/Silkeveien"
+        },
+        {
+          "title": "Tang-dynastiet – Store norske leksikon",
+          "url": "https://snl.no/Tang-dynastiet"
+        },
+        {
+          "title": "Chang'an – Store norske leksikon",
+          "url": "https://snl.no/Chang'an"
+        }
+      ],
+      "cards": [
+        {
+          "id": "vue-kina-qin-tang-samler",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvem samlet de stridende kongedømmene i Kina til ett rike i 221 f.Kr.?",
+          "answer": "Qin Shi Huangdi",
+          "distractors": [
+            "Konfucius",
+            "Kublai Khan",
+            "Sun Yat-sen"
+          ],
+          "explain": "Han kalte seg første keiser og avskaffet det føydale systemet. Dynastiet var kort, bare 221 til 206 f.Kr., men modellen med ett sentralt styre ble stående."
+        },
+        {
+          "id": "vue-kina-qin-tang-tang",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilket kinesisk dynasti regjerte fra 618 til omkring 907?",
+          "answer": "Tang",
+          "distractors": [
+            "Ming",
+            "Han",
+            "Song"
+          ],
+          "explain": "Tang var en storhetstid for buddhismen og lyrikken. Keiserne styrte fra Chang'an, og byen tok imot handelsfolk og pilegrimer fra hele Asia."
+        },
+        {
+          "id": "vue-kina-qin-tang-mur",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilket verdensberømt forsvarsverk begynte Qin-keiseren å bygge?",
+          "answer": "Den kinesiske mur",
+          "distractors": [
+            "Taj Mahal i India",
+            "Angkor Wat i Kambodsja",
+            "Kolosseum i Roma"
+          ],
+          "explain": "Qin koblet sammen eldre murer mot nomadefolkene i nord. Det meste av muren som står i dag er bygd senere enn Qin, og den har ingen enkel byggedato."
+        },
+        {
+          "id": "vue-kina-qin-tang-chang",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva het hovedstaden under Tang-dynastiet, dagens Xi'an?",
+          "answer": "Chang'an",
+          "accept": [
+            "Changan"
+          ],
+          "explain": "Chang'an var en av verdens største byer rundt år 800, med anslagsvis én million innbyggere. Her fantes buddhistiske, taoistiske, zoroastriske og kristne templer side om side."
+        },
+        {
+          "id": "vue-kina-qin-tang-silke",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva kalles handelsrutene som knyttet Kina til Middelhavet?",
+          "answer": "Silkeveien",
+          "accept": [
+            "Silkeveg",
+            "Silkevegen"
+          ],
+          "explain": "Silkeveien var et nettverk av karavaneveier, ikke én bestemt vei. Det som gikk langs rutene var mer enn varer: også ideer, religioner og teknikker fulgte med handelsfolkene."
+        },
+        {
+          "id": "vue-kina-qin-tang-papir",
+          "step": 2,
+          "type": "choice",
+          "prompt": "Hvilken av disse tingene spredte seg fra Kina vestover langs handelsrutene?",
+          "answer": "Papir",
+          "distractors": [
+            "Kakao",
+            "Potet",
+            "Kaffe"
+          ],
+          "explain": "Papir, bokstrykk og kompass spredte seg fra Kina mot Midtøsten og Middelhavet. Kakao, potet og kaffe kom til andre deler av verden, ikke fra Kina."
+        },
+        {
+          "id": "vue-kina-qin-tang-rekkefolge",
+          "step": 3,
+          "type": "order",
+          "prompt": "Sett Qin, Han og Tang i kronologisk rekkefølge.",
+          "items": [
+            {
+              "label": "Qin samler Kina til ett rike",
+              "year": -221
+            },
+            {
+              "label": "Qin-dynastiet faller",
+              "year": -206
+            },
+            {
+              "label": "Tang-dynastiet begynner",
+              "year": 618
+            }
+          ],
+          "explain": "Qin varte bare i 15 år, men modellen med ett sentralt keisertige ble stående. Tang kom mer enn 800 år etter at Qin falt."
+        },
+        {
+          "id": "vue-kina-qin-tang-forklar-silke",
+          "step": 3,
+          "type": "explain",
+          "prompt": "Hvorfor var Silkeveien mer enn en handelsvei for silke?",
+          "answer": "Varene var bare én del av det som gikk langs rutene. Papir, bokstrykk og kompasset spredte seg vestover, og ideer og religioner fulgte med de reisende. Rutene knyttet dermed kulturer sammen over lange avstander.",
+          "explain": "Silkeveien er et samlebegrep for mange ruter, ikke én vei. De viktigste var særlig betydningsfulle omkring 400 til 700 e.Kr. og igjen på 1200- og 1300-tallet.",
+          "checklist": [
+            "Nevn minst to ting som spredte seg langs rutene, i tillegg til silke",
+            "Forklar hvorfor det var et nettverk og ikke én vei",
+            "Forklar hvem som reiste langs rutene"
+          ]
+        },
+        {
+          "id": "vue-kina-qin-tang-embetsmenn",
+          "step": 3,
+          "type": "choice",
+          "prompt": "Hvorfor ble embetsmennene i provinsene utnevnt av keiseren og ikke arvet sine stillinger?",
+          "answer": "Så makten ble samlet hos keiseren",
+          "distractors": [
+            "Så adelen kunne velge sine egne lensherrer",
+            "Så provinsene kunne styre seg selv",
+            "Så byene kunne sende egne sendemenn"
+          ],
+          "explain": "Embetsmennene ble stadig flyttet og holdt under skarp kontroll. Dermed kunne ingen lokal stormann bygge opp egen makt i provinsen."
+        },
+        {
+          "id": "vue-kina-qin-tang-aar",
+          "step": 4,
+          "type": "year",
+          "prompt": "Hvilket år begynte Tang-dynastiet?",
+          "answer": "618",
+          "explain": "Tang ble grunnlagt av Li Yuan, som tok makten fra Sui-keiseren Yangdi. Etter at dynastiet falt, fulgte en periode med flere små riker fram til omkring 960."
+        },
+        {
+          "id": "vue-kina-qin-tang-provinser",
+          "step": 4,
+          "type": "number",
+          "prompt": "Hvor mange provinser ble riket delt i under Qin?",
+          "answer": "40",
+          "unit": "provinser",
+          "explain": "Provinsene ble styrt av embetsmenn som keiseren utnevnte og flyttet på jevnlig. Det hindret lokal makt i å vokse, og var en av grunnene til at riket holdt sammen så lenge."
+        },
+        {
+          "id": "vue-kina-qin-tang-varighet",
+          "step": 4,
+          "type": "choice",
+          "prompt": "Hvor lenge varte Qin-dynastiet?",
+          "answer": "Omkring 15 år",
+          "distractors": [
+            "Omkring 50 år",
+            "Omkring 150 år",
+            "Omkring 300 år"
+          ],
+          "explain": "Qin startet i 221 f.Kr. og falt i 206 f.Kr., altså omkring 15 år. Det var kort, men det la grunnlaget for keisertiden som fulgte."
+        }
+      ]
+    },
+    {
+      "id": "vue-islamsk-gullalder",
+      "title": "Den islamske gullalderen",
+      "tier": 2,
+      "prerequisites": [
+        "vh-middelalderen"
+      ],
+      "years": {
+        "from": 762,
+        "to": 1100
+      },
+      "summary": "Bagdad ble hovedstad for kalifene og et sentrum for oversettelse og lærdom, der greske og indiske tekster ble tatt vare på og videreutviklet.",
+      "lesson": [
+        "Bagdad ble grunnlagt i 762 som hovedstad for abbasidkalifatet. Abbasidene tok makten fra umayyadene og flyttet residensen fra Damaskus. Byen lå ved Tigris og fikk en rund plan med tre konsentriske murer. Kufa hadde vært hovedstad fra 750, før byen ble flyttet til Bagdad.",
+        "Under kalif al-Ma'mun (813 til 833) ble greske og indiske verker oversatt til arabisk i Bagdad. Visdommens hus var et bibliotek og et akademi der lærde arbeidet med oversettelse og studier. Matematikeren al-Khwarizmi arbeidet der, og boken hans Hisab al-jabr ga ordet algebra. Navnet hans ble også grunnlaget for ordet algoritme.",
+        "Islamsk lærdom omfattet matematikk, astronomi, medisin og filosofi. Bagdad fikk et sykehus og et observatorium. Hvem som grunnla Visdommens hus, er usikkert i kildene, og flere av dem nevner Harun al-Rashid i stedet for al-Ma'mun."
+      ],
+      "keyPoints": [
+        "Bagdad ble grunnlagt i 762 som hovedstad for abbasidkalifatet.",
+        "Under al-Ma'mun (813 til 833) ble greske og indiske verker oversatt til arabisk.",
+        "Al-Khwarizmi ga navn til algoritme, og boken hans ga ordet algebra.",
+        "Hvem som grunnla Visdommens hus, er usikkert i kildene."
+      ],
+      "sources": [
+        {
+          "title": "Bagdad – Store norske leksikon",
+          "url": "https://snl.no/Bagdad"
+        },
+        {
+          "title": "Mohamed Ibn Musa al-Khwarizmî – Store norske leksikon",
+          "url": "https://snl.no/Mohamed_Ibn_Musa_al-Khwarizm%C3%AE"
+        },
+        {
+          "title": "al-Mansur – Store norske leksikon",
+          "url": "https://snl.no/al-Mansur"
+        },
+        {
+          "title": "abbasidane – Store norske leksikon",
+          "url": "https://snl.no/abbasidane"
+        },
+        {
+          "title": "Harun al-Rashid – Store norske leksikon",
+          "url": "https://snl.no/Harun_al-Rashid"
+        },
+        {
+          "title": "algebra – Store norske leksikon",
+          "url": "https://snl.no/algebra"
+        }
+      ],
+      "cards": [
+        {
+          "id": "vue-islamsk-gullalder-bagdad",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilken by ble hovedstad for abbasidkalifatet i 762?",
+          "answer": "Bagdad",
+          "distractors": [
+            "Damaskus",
+            "Kairo",
+            "Cordoba"
+          ],
+          "explain": "Abbasidene tok makten fra umayyadene og flyttet residensen fra Damaskus. Al-Mansur bygde byen med en rund plan og tre konsentriske murer."
+        },
+        {
+          "id": "vue-islamsk-gullalder-tigris",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilken elv ligger Bagdad ved?",
+          "answer": "Tigris",
+          "distractors": [
+            "Nilen",
+            "Ganges",
+            "Jangtse"
+          ],
+          "explain": "Tigris er en av de to store elvene i Mesopotamia, der de første byene og kileskriften oppsto. Bagdad ble bygget i samme landskap, lenge etter de gamle bystatene."
+        },
+        {
+          "id": "vue-islamsk-gullalder-islam",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilken religion sto kalifene for i denne perioden?",
+          "answer": "Islam",
+          "distractors": [
+            "Kristendommen",
+            "Hinduismen",
+            "Buddhismen"
+          ],
+          "explain": "Kalifen var både religiøs og politisk leder for de muslimske områdene. Lærdommen som vokste fram i Bagdad bygde på greske og indiske tekster."
+        },
+        {
+          "id": "vue-islamsk-gullalder-visdommen",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva het biblioteket og akademiet i Bagdad der greske og indiske verker ble oversatt?",
+          "answer": "Visdommens hus",
+          "accept": [
+            "Visdommens hus i Bagdad"
+          ],
+          "explain": "Mange kilder knytter Visdommens hus til al-Ma'mun, men flere nevner Harun al-Rashid som grunnlegger. Det er derfor usikkert hvem som startet det."
+        },
+        {
+          "id": "vue-islamsk-gullalder-khwarizmi",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvilken matematiker ga navn til ordet algoritme og skrev en bok som ga ordet algebra?",
+          "answer": "al-Khwarizmi",
+          "accept": [
+            "Khwarizmi",
+            "al-Khwarizmî"
+          ],
+          "explain": "Han arbeidet i Visdommens hus under al-Ma'mun. Familien hans kom trolig fra det som i dag er Usbekistan, og han var sannsynligvis ikke arabisk av opphav."
+        },
+        {
+          "id": "vue-islamsk-gullalder-fagomrade",
+          "step": 2,
+          "type": "choice",
+          "prompt": "Hvilket fagområde har navnet sitt fra en bok skrevet av en lærd i Bagdad?",
+          "answer": "Algebra",
+          "distractors": [
+            "Astrologi",
+            "Geologi",
+            "Zoologi"
+          ],
+          "explain": "Al-Khwarizmi skrev om å forenkle likninger, og tittelen på boken hans gav navn til faget. Det er en av de tydeligste sporene etter Bagdads lærde i dagens matematikk."
+        },
+        {
+          "id": "vue-islamsk-gullalder-rekkefolge",
+          "step": 3,
+          "type": "order",
+          "prompt": "Sett Kufa, Bagdad og al-Ma'muns styre i kronologisk rekkefølge.",
+          "items": [
+            {
+              "label": "Kufa blir hovedstad",
+              "year": 750
+            },
+            {
+              "label": "Bagdad blir hovedstad",
+              "year": 762
+            },
+            {
+              "label": "Al-Ma'mun blir kalif",
+              "year": 813
+            }
+          ],
+          "explain": "Kufa var hovedstad i tolv år før Bagdad tok over. Oversettelsene i Bagdad kom først etter at al-Ma'mun ble kalif, mer enn 50 år etter byens grunnlegging."
+        },
+        {
+          "id": "vue-islamsk-gullalder-forklar",
+          "step": 3,
+          "type": "explain",
+          "prompt": "Hvorfor ble Bagdad et sentrum for lærdom, og ikke bare en stor hovedstad?",
+          "answer": "Kalifene samlet lærde og fikk gamle greske og indiske tekster oversatt. Fra tekstene utviklet de tall, medisin og astronomi videre, og de la til egne oppdagelser.",
+          "explain": "Oversettelsene gjorde gamle kunnskaper tilgjengelige på ett språk. Det var kombinasjonen av oversettelse og egen forskning som gjorde Bagdad særegen.",
+          "checklist": [
+            "Nevn hva som ble oversatt",
+            "Forklar hvem som samlet de lærde",
+            "Nevn ett fagområde som ble utviklet videre"
+          ]
+        },
+        {
+          "id": "vue-islamsk-gullalder-dynasti",
+          "step": 3,
+          "type": "choice",
+          "prompt": "Hvilket dynasti tok makten fra umayyadene og flyttet hovedstaden til Bagdad?",
+          "answer": "Abbasidene",
+          "distractors": [
+            "Fatimidene",
+            "Seljukerne",
+            "Mamelukkene"
+          ],
+          "explain": "Abbasidene vokste fram fra et opprør mot umayyadene. Fatimidene, seljukerne og mamelukkene var senere dynastier i samme område, men de regjerte ikke fra Bagdad fra starten."
+        },
+        {
+          "id": "vue-islamsk-gullalder-762",
+          "step": 4,
+          "type": "year",
+          "prompt": "I hvilket år ble Bagdad grunnlagt?",
+          "answer": "762",
+          "tolerance": 2,
+          "explain": "Byen ble bygget som ny hovedstad, og residensen ble flyttet dit. Kildene nevner også 760 for selve bygge- og flytteprosessen, så årstallet er litt usikkert."
+        },
+        {
+          "id": "vue-islamsk-gullalder-murer",
+          "step": 4,
+          "type": "number",
+          "prompt": "Hvor mange konsentriske murer hadde den runde byen Bagdad i begynnelsen?",
+          "answer": "3",
+          "unit": "murer",
+          "explain": "Den runde planen og murene gjorde byen tydelig avgrenset og lett å forsvare. Byen var et av de største sentrene i verden i flere hundre år."
+        },
+        {
+          "id": "vue-islamsk-gullalder-hisab",
+          "step": 4,
+          "type": "text",
+          "prompt": "Hva het boken til al-Khwarizmi der ordet algebra stammer fra?",
+          "answer": "Hisab al-jabr",
+          "accept": [
+            "al-jabr"
+          ],
+          "explain": "Ordet algoritme har sitt opphav i navnet hans, og de to ordene viser hvor mye arabiske lærde bidro til dagens matematikk."
+        }
+      ]
+    },
+    {
+      "id": "vue-vest-afrika",
+      "title": "Vest-Afrikas riker",
+      "tier": 2,
+      "prerequisites": [
+        "vh-middelalderen"
+      ],
+      "years": {
+        "from": 500,
+        "to": 1591
+      },
+      "summary": "Ghana, Mali og Songhai ble rike på gull og handel over Sahara, og Timbuktu ble et lærdomssenter før Marokko erobret byen i 1591.",
+      "lesson": [
+        "Vest-Afrika hadde store handelsriker i savannen sør for Sahara. Ghanariket lå i innlandet, i grenseområdet til dagens Mali, Mauritania og Senegal. Det tjente på gull og slaver som ble ført nordover gjennom Sahara. Herskeren kalte seg «gullets herre», og riket fikk inntekter fra toll på handelen.",
+        "Mali tok over Ghanas ledende stilling i Vest-Afrika og ble grunnlagt av Sundjata Keita. I gullalderen fra 1312 til 1337 ble Mansa Musa kjent i hele den islamske verden. På pilegrimsreisen til Mekka i 1324 tok han med seg en karavane som kildene oppgir til over 60 000 mennesker, og mye gull. Etter sigende falt gullprisen i Kairo.",
+        "Songhai ble det største riket i regionen under Sunni Ali, som regjerte fra 1464 til 1492. Han tok Gao og erobret Timbuktu, som ble et lærdomssenter med universiteter for rett, teologi og historie. Marokkanske styrker tok byen i 1591, og Songhai-riket gikk i oppløsning."
+      ],
+      "keyPoints": [
+        "Ghanariket tjente på gull og slaver som ble ført nordover gjennom Sahara.",
+        "Mansa Musa reiste til Mekka i 1324 med en stor karavane av gull.",
+        "Songhai ble det største riket under Sunni Ali, med Timbuktu som lærdomssenter.",
+        "Marokkanske styrker tok Timbuktu i 1591, og Songhai gikk i oppløsning."
+      ],
+      "sources": [
+        {
+          "title": "Ghanariket – Store norske leksikon",
+          "url": "https://snl.no/Ghanariket"
+        },
+        {
+          "title": "Maliriket – Store norske leksikon",
+          "url": "https://snl.no/Maliriket"
+        },
+        {
+          "title": "Musa – Store norske leksikon",
+          "url": "https://snl.no/Musa_-_hersker"
+        },
+        {
+          "title": "Timbuktu – Store norske leksikon",
+          "url": "https://snl.no/Timbuktu"
+        },
+        {
+          "title": "songhai – Store norske leksikon",
+          "url": "https://snl.no/songhai"
+        },
+        {
+          "title": "Sunni Ali – Store norske leksikon",
+          "url": "https://snl.no/Sunni_Ali"
+        }
+      ],
+      "cards": [
+        {
+          "id": "vue-vest-afrika-gull",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilken vare var den viktigste handelsartikkelen i Ghanariket?",
+          "answer": "Gull",
+          "distractors": [
+            "Kaffe",
+            "Tobakk",
+            "Krydder"
+          ],
+          "explain": "Ghanariket fikk inntekter fra toll på handelen som gikk gjennom riket. Herskeren hadde tittelen kaya maghan, «gullets herre», fordi han kontrollerte eksporten."
+        },
+        {
+          "id": "vue-vest-afrika-mali",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilket rike tok over Ghanas ledende stilling i Vest-Afrika?",
+          "answer": "Mali",
+          "distractors": [
+            "Songhai",
+            "Kongo",
+            "Zimbabwe"
+          ],
+          "explain": "Mali vokste fram i det samme området og fikk en allianse med marokkanerne i 1200- og 1300-tallet. Songhai kom senere og overtok etter Mali som det største riket."
+        },
+        {
+          "id": "vue-vest-afrika-mekka",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilket hellig sted reiste Mansa Musa til på pilegrimsferd i 1324?",
+          "answer": "Mekka",
+          "distractors": [
+            "Medina",
+            "Jerusalem",
+            "Kairo"
+          ],
+          "explain": "Pilegrimsreisen til Mekka, hajj, er en av islams fem søyler. Musa reiste i 1324, og kildene oppgir at reisen varte inn i det følgende året."
+        },
+        {
+          "id": "vue-vest-afrika-timbuktu",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvilken by var lærdomssenter i Songhai, med universiteter for rett, teologi og historie?",
+          "answer": "Timbuktu",
+          "explain": "Timbuktu ble en del av Mali og senere Songhai. Byen ble okkupert av marokkanske styrker i 1591 og gikk inn i en lang nedgang. UNESCO har oppført den som verdensarv siden 1988."
+        },
+        {
+          "id": "vue-vest-afrika-sunni",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvilken Songhai-hersker erobret Timbuktu og utvidet riket til sin største utstrekning?",
+          "answer": "Sunni Ali",
+          "accept": [
+            "Sonni Ali"
+          ],
+          "explain": "Sunni Ali tok Gao rundt 1464, og han startet ekspansjonen vestover. Etter ham kom Muhammad Askia, som grunnla Askia-dynastiet og allierte seg med de lærde i Timbuktu."
+        },
+        {
+          "id": "vue-vest-afrika-sahara",
+          "step": 2,
+          "type": "choice",
+          "prompt": "Hvilken ørken skilte rikene i Vest-Afrikas savanne fra Nord-Afrika?",
+          "answer": "Sahara",
+          "distractors": [
+            "Gobi",
+            "Kalahari",
+            "Atacama"
+          ],
+          "explain": "Gull og slaver ble ført nordover gjennom Sahara, og karavanene var avhengige av ørkenruter. Gobi ligger i Asia, Kalahari i Sør-Afrika og Atacama i Sør-Amerika."
+        },
+        {
+          "id": "vue-vest-afrika-rekkefolge",
+          "step": 3,
+          "type": "order",
+          "prompt": "Sett Mansa Musas pilegrimsreise, Sunni Alis erobring og Marokkos erobring av Timbuktu i kronologisk rekkefølge.",
+          "items": [
+            {
+              "label": "Mansa Musa reiser til Mekka",
+              "year": 1324
+            },
+            {
+              "label": "Sunni Ali tar Gao",
+              "year": 1464
+            },
+            {
+              "label": "Timbuktu erobres av Marokko",
+              "year": 1591
+            }
+          ],
+          "explain": "Mellom Mansa Musas pilegrimsreise og marokkanernes erobring gikk 267 år. I den tiden ble Songhai det største riket i regionen."
+        },
+        {
+          "id": "vue-vest-afrika-forklar",
+          "step": 3,
+          "type": "explain",
+          "prompt": "Hvorfor var gull så verdifullt for rikene i Vest-Afrika, også langt utenfor Afrika?",
+          "answer": "Gull kunne fraktes langt og beholdt verdien sin. Gullet fra Vest-Afrika kom til Nord-Afrika og Midtøsten gjennom Sahara, og prisen kunne falle i Kairo når store mengder kom inn.",
+          "explain": "Kongene fikk inntekter fra tollen og kunne dermed bygge byer og lærdomssentre. Gullprisen i Kairo viser at Vest-Afrika var knyttet til samme økonomi som Middelhavet.",
+          "checklist": [
+            "Nevn hvorfor gull var en god handelsvare",
+            "Forklar hvordan rikene tjente penger på handelen",
+            "Nevn ett eksempel på at gullet påvirket markedet utenfor Afrika"
+          ]
+        },
+        {
+          "id": "vue-vest-afrika-match",
+          "step": 3,
+          "type": "match",
+          "prompt": "Koble riket med det det er mest kjent for.",
+          "pairs": [
+            {
+              "left": "Ghanariket",
+              "right": "Handel med gull over Sahara"
+            },
+            {
+              "left": "Mali",
+              "right": "Mansa Musa og gullkaravanen"
+            },
+            {
+              "left": "Songhai",
+              "right": "Sunni Ali og Muhammad Askia"
+            },
+            {
+              "left": "Marokko",
+              "right": "Erobringen av Timbuktu"
+            }
+          ],
+          "explain": "Ghana tjente på handelen, og Mali på pilegrimsreisen og den rike gullstrømmen. Songhai ble størst under Sunni Ali, og Marokko tok Timbuktu i 1591 og satte en stopper for Songhai-riket."
+        },
+        {
+          "id": "vue-vest-afrika-1324",
+          "step": 4,
+          "type": "year",
+          "prompt": "I hvilket år reiste Mansa Musa til Mekka?",
+          "answer": "1324",
+          "tolerance": 1,
+          "explain": "Reisen varte inn i 1325 ifølge kildene. Omkring 20 år senere, i 1347, kom Svartedauden til Europa, og Vest-Afrika var da i sin rikeste periode."
+        },
+        {
+          "id": "vue-vest-afrika-askia",
+          "step": 4,
+          "type": "text",
+          "prompt": "Hvilket dynasti grunnla Muhammad, som etterfulgte Sunni Ali?",
+          "answer": "Askia",
+          "accept": [
+            "Askia-dynastiet"
+          ],
+          "explain": "Muhammad Askia regnes som en av de fremste Songhai-herskerne, sammen med Sunni Ali. Han var keiser og allierte seg med de lærde i Timbuktu."
+        },
+        {
+          "id": "vue-vest-afrika-sundjata",
+          "step": 4,
+          "type": "text",
+          "prompt": "Hvem grunnla Maliriket?",
+          "answer": "Sundjata Keita",
+          "accept": [
+            "Sundiata Keita",
+            "Sundjata"
+          ],
+          "explain": "I malisk muntlig tradisjon blir Mansa Musa satt under sin far, som grunnla riket. Det er et eksempel på at historiske fortellinger kan variere mellom kildene."
+        }
+      ]
+    },
+    {
+      "id": "vue-amerika-for-europeerne",
+      "title": "Amerika før europeerne",
+      "tier": 1,
+      "prerequisites": [],
+      "years": {
+        "from": 250,
+        "to": 1532
+      },
+      "summary": "Maya, aztekere og inkaer bygde store byer og riker i Amerika lenge før europeerne kom, og de var ikke isolert fra hverandre.",
+      "lesson": [
+        "Før europeerne kom til Amerika, hadde flere sivilisasjoner bygd store byer og et eget skriftsystem. Maya i Mellom-Amerika, aztekerne i Mexico og inkaene i Andesfjellene var de største. Mayaens klassiske tid varte fra omkring 250 til 900, og da var Tikal den største byen i regionen.",
+        "Mayaskriften er den eneste i Mesoamerika som er nesten helt dekodet for den klassiske tiden. Rundt år 800 kollapset mange av bystatene i Petén, og Tikal ble til slutt forlatt omkring 1100. Forklaringene peker på klimaendringer, tørke og krig. Tikal erobret Copán i 426.",
+        "Aztekene grunnla Tenochtitlán i 1325 på øyer i Texcoco-sjøen, der Mexico by ligger i dag. Hovedtemplet ble utvidet i sju faser. Inkariket strakte seg fra elven Maule i Chile til grensen mellom Ecuador og Colombia, med Cuzco som maktsentrum. Cuzco ligger 3400 meter over havet. Riket varte fra tidlig på 1400-tallet til spanjolene erobret det i 1532."
+      ],
+      "keyPoints": [
+        "Maya hadde sin klassiske tid fra omkring 250 til 900, med Tikal som den største byen.",
+        "Tenochtitlán ble grunnlagt i 1325 på øyer i Texcoco-sjøen, der Mexico by ligger i dag.",
+        "Inkariket styrte store deler av Andesfjellene til spanjolene erobret det i 1532.",
+        "Mayaskriften er nesten helt dekodet for den klassiske tiden."
+      ],
+      "sources": [
+        {
+          "title": "maya – Store norske leksikon",
+          "url": "https://snl.no/maya"
+        },
+        {
+          "title": "Tikal – Store norske leksikon",
+          "url": "https://snl.no/Tikal"
+        },
+        {
+          "title": "Guatemalas historie – Store norske leksikon",
+          "url": "https://snl.no/Guatemalas_historie"
+        },
+        {
+          "title": "Tenochtitlán – Store norske leksikon",
+          "url": "https://snl.no/Tenochtitl%C3%A1n"
+        },
+        {
+          "title": "Inkariket – Store norske leksikon",
+          "url": "https://snl.no/Inkariket"
+        }
+      ],
+      "cards": [
+        {
+          "id": "vue-amerika-for-europeerne-tenochtitlan",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilken by bygde aztekene på øyer i Texcoco-sjøen?",
+          "answer": "Tenochtitlán",
+          "distractors": [
+            "Cuzco",
+            "Chichén Itzá",
+            "Machu Picchu"
+          ],
+          "explain": "Byen lå der Mexico by ligger i dag. Den regnes som en av de eldste byene på det amerikanske kontinentet."
+        },
+        {
+          "id": "vue-amerika-for-europeerne-inka",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilket rike hadde Cuzco som maktsentrum?",
+          "answer": "Inkariket",
+          "distractors": [
+            "Aztekriket",
+            "Mochica-riket",
+            "Osmanriket"
+          ],
+          "explain": "Inkaene styrte fra Cuzco, som ligger høyt i Andesfjellene i dagens Peru. Riket var et av verdens største imperier da spanjolene kom."
+        },
+        {
+          "id": "vue-amerika-for-europeerne-tikal",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilken maya-by var den største i regionen i sin storhetstid?",
+          "answer": "Tikal",
+          "distractors": [
+            "Copán",
+            "Palenque",
+            "Uxmal"
+          ],
+          "explain": "Tikal lå i Petén i det nordlige Guatemala. Byen erobret Copán i 426, og senere ble Copán en allianse av Tikal."
+        },
+        {
+          "id": "vue-amerika-for-europeerne-klassisk",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvilket tidsavsnitt varte i mayakulturen omkring 250 til 900?",
+          "answer": "Klassisk tid",
+          "accept": [
+            "klassisk periode"
+          ],
+          "explain": "Arkeologer deler mayakulturen i tre faser: førklassisk, klassisk og postklassisk. Den klassiske fasen er tiden da mange av de store bystatene og monumentene ble bygd."
+        },
+        {
+          "id": "vue-amerika-for-europeerne-skrift",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvilket skriftsystem brukte mayaene i Mellom-Amerika?",
+          "answer": "Mayaskrift",
+          "accept": [
+            "Maya-skrift",
+            "mayaskriften"
+          ],
+          "explain": "Mayaskriften er en av få skrifter i Mesoamerika der tegnene kan leses nesten fullt ut for den klassiske perioden. Den kombinerte tegn for ord og for lyder."
+        },
+        {
+          "id": "vue-amerika-for-europeerne-sammenbrudd",
+          "step": 2,
+          "type": "choice",
+          "prompt": "Rundt hvilket år kollapset mange maya-bystater i Petén?",
+          "answer": "Rundt år 800",
+          "distractors": [
+            "Rundt år 300",
+            "Rundt år 1325",
+            "Rundt år 1532"
+          ],
+          "explain": "Forklaringene peker på klimaendringer, lang tørke og krig mellom bystatene. Tikal ble til slutt forlatt omkring 1100."
+        },
+        {
+          "id": "vue-amerika-for-europeerne-rekkefolge",
+          "step": 3,
+          "type": "order",
+          "prompt": "Sett Tikals erobring, kollapsen i Petén og grunnleggelsen av Tenochtitlán i kronologisk rekkefølge.",
+          "items": [
+            {
+              "label": "Tikal erobrer Copán",
+              "year": 426
+            },
+            {
+              "label": "Maya-bystatene i Petén kollapser",
+              "year": 800
+            },
+            {
+              "label": "Tenochtitlán grunnlegges",
+              "year": 1325
+            }
+          ],
+          "explain": "Mellom Tikals erobring av Copán og grunnleggelsen av Tenochtitlán gikk nesten 900 år. Det viser hvor lenge det fantes store sivilisasjoner i Mellom-Amerika før aztekene."
+        },
+        {
+          "id": "vue-amerika-for-europeerne-forklar-pachacuti",
+          "step": 3,
+          "type": "explain",
+          "prompt": "Hvorfor var Pachacuti viktig for Inkariket?",
+          "answer": "Han begynte de store erobringene som gjorde Cuzco fra et lite kongedømme til et verdensrike.",
+          "explain": "Machu Picchu regnes av Store norske leksikon som en garnisonsby bygd av Pachacuti omkring 1430 til 1438, men kildene er ikke enige om datoen.",
+          "checklist": [
+            "Nevn hva Pachacuti gjorde",
+            "Forklar hva som gjorde Cuzco til et verdensrike",
+            "Nevn ett sted han er knyttet til"
+          ]
+        },
+        {
+          "id": "vue-amerika-for-europeerne-par",
+          "step": 3,
+          "type": "match",
+          "prompt": "Koble byen med det den er knyttet til.",
+          "pairs": [
+            {
+              "left": "Tenochtitlán",
+              "right": "Aztekene"
+            },
+            {
+              "left": "Tikal",
+              "right": "Maya i klassisk tid"
+            },
+            {
+              "left": "Cuzco",
+              "right": "Inkariket"
+            },
+            {
+              "left": "Copán",
+              "right": "Erobret av Tikal i 426"
+            }
+          ],
+          "explain": "Byene tilhører ulike kulturer og tidsaldre. Tikal blomstret lenge før Tenochtitlán ble grunnlagt, og Cuzco ble maktsentrum først da inkaene vokste fram på 1400-tallet."
+        },
+        {
+          "id": "vue-amerika-for-europeerne-1325",
+          "step": 4,
+          "type": "year",
+          "prompt": "I hvilket år ble Tenochtitlán grunnlagt?",
+          "answer": "1325",
+          "tolerance": 1,
+          "explain": "Store norske leksikon dater byen til 1325, men én artikkel gir 1324. Arkeologer har funnet at hovedtemplet først ble reist omkring samme år, og at det senere ble utvidet i sju faser."
+        },
+        {
+          "id": "vue-amerika-for-europeerne-1532",
+          "step": 4,
+          "type": "year",
+          "prompt": "I hvilket år erobret spanjolene Inkariket?",
+          "answer": "1532",
+          "explain": "Riket hadde eksistert siden tidlig på 1400-tallet, altså i over hundre år. Erobringen markerte slutten på et av verdens største riker i Amerika."
+        },
+        {
+          "id": "vue-amerika-for-europeerne-hoyde",
+          "step": 4,
+          "type": "number",
+          "prompt": "Hvor høyt over havet ligger Cuzco, målt i meter?",
+          "answer": "3400",
+          "unit": "meter",
+          "tolerance": 100,
+          "explain": "Byen lå høyt i Andesfjellene, langt fra kysten der europeerne kom i land. Det gjorde den vanskelig å nå fra havet."
+        }
+      ]
+    },
+    {
+      "id": "vue-osmanere-mogul",
+      "title": "Det osmanske riket og Mogulriket",
+      "tier": 2,
+      "prerequisites": [
+        "vh-middelalderen"
+      ],
+      "years": {
+        "from": 1453,
+        "to": 1857
+      },
+      "summary": "Osmanerne erobret Konstantinopel, og moguene styrte store deler av India. Begge rikene bygde monumenter og byer som fortsatt står.",
+      "lesson": [
+        "Konstantinopel falt for sultan Mehmet II 29. mai 1453, etter en beleiring på omkring 55 dager. Hagia Sofia, den viktigste kirken i det østromerske riket, ble gjort om til moské. Hovedstaden i det osmanske riket ble flyttet til byen i 1457, og byen fikk navnet Istanbul i osmansk bruk.",
+        "Babur grunnla Mogulriket i 1526. Riket nådde sitt høydepunkt under Akbar (1542 til 1605), som regnes som den største av stormogulene. Mogulriket varte til 1857, og var et muslimsk herskerdynasti i India.",
+        "Taj Mahal i Agra ble bygd mellom 1631 og 1648 av Shah Jahan, som gravmonument over hustruen Mumtaz. Det er et av de mest kjente eksemplene på islamsk byggekunst. Osmanerne og moguene styrte fra to ulike deler av verden, men begge var muslimske herskerdynastier."
+      ],
+      "keyPoints": [
+        "Konstantinopel falt for osmanerne i 1453, og Hagia Sofia ble gjort om til moské.",
+        "Mogulriket ble grunnlagt i 1526 av Babur og varte til 1857.",
+        "Akbar regnes som Mogulrikets høydepunkt, og Taj Mahal ble bygd mellom 1631 og 1648.",
+        "Begge var muslimske herskerdynastier. Osmanerne styrte fra Europa og Asia, moguene fra India."
+      ],
+      "sources": [
+        {
+          "title": "Konstantinopels fall – Store norske leksikon",
+          "url": "https://snl.no/Konstantinopels_fall"
+        },
+        {
+          "title": "Mehmet 2. – Store norske leksikon",
+          "url": "https://snl.no/Mehmet_2."
+        },
+        {
+          "title": "Det osmanske rikets historie – Store norske leksikon",
+          "url": "https://snl.no/Det_osmanske_rikets_historie"
+        },
+        {
+          "title": "Mogulriket – Store norske leksikon",
+          "url": "https://snl.no/Mogulriket"
+        },
+        {
+          "title": "Taj Mahal – Store norske leksikon",
+          "url": "https://snl.no/Taj_Mahal"
+        },
+        {
+          "title": "Shah Jahan – Store norske leksikon",
+          "url": "https://snl.no/Shah_Jahan"
+        }
+      ],
+      "cards": [
+        {
+          "id": "vue-osmanere-mogul-mehmet",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilken osmansk sultan erobret Konstantinopel i 1453?",
+          "answer": "Mehmet II",
+          "distractors": [
+            "Suleiman",
+            "Saladin",
+            "Babur"
+          ],
+          "explain": "Mange historikere regner erobringen som den egentlige begynnelsen på det osmanske riket. Byen fikk navnet Istanbul i osmansk bruk, og hovedstaden ble flyttet dit i 1457."
+        },
+        {
+          "id": "vue-osmanere-mogul-babur",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvem grunnla Mogulriket i 1526?",
+          "answer": "Babur",
+          "distractors": [
+            "Akbar",
+            "Mehmet II",
+            "Shah Jahan"
+          ],
+          "explain": "Mogulriket varte til 1857. Det nådde sitt høydepunkt under Akbar, som regnes som den største av stormogulene."
+        },
+        {
+          "id": "vue-osmanere-mogul-hagia",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilken kirke i Konstantinopel ble gjort om til moské etter erobringen i 1453?",
+          "answer": "Hagia Sofia",
+          "distractors": [
+            "Peterskirken",
+            "Notre-Dame",
+            "Markuskirken"
+          ],
+          "explain": "Hagia Sofia var den viktigste kirken i det østromerske riket. Etter erobringen fikk den en ny funksjon som moské, og den har vært et symbol for byen siden."
+        },
+        {
+          "id": "vue-osmanere-mogul-konstantinopel",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvilken by erobret osmanerne i 1453, og som senere fikk navnet Istanbul?",
+          "answer": "Konstantinopel",
+          "explain": "Byen hadde vært hovedstad i det østromerske riket. Den falt etter omkring 55 dager med beleiring, og den siste keiseren, Konstantin XI, døde i kampen på murene."
+        },
+        {
+          "id": "vue-osmanere-mogul-akbar",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvilken mogulkeiser regnes som riket største, og styrte fra 1542 til 1605?",
+          "answer": "Akbar",
+          "explain": "Riket varte over 250 år etter hans død, til 1857. Mogulene var da fortsatt et av verdens store riker, men med en svakere sentralmakt."
+        },
+        {
+          "id": "vue-osmanere-mogul-taj",
+          "step": 2,
+          "type": "choice",
+          "prompt": "Hvem bygde Taj Mahal som gravmonument over sin hustru Mumtaz?",
+          "answer": "Shah Jahan",
+          "distractors": [
+            "Babur",
+            "Akbar",
+            "Suleiman"
+          ],
+          "explain": "Taj Mahal ble bygd mellom 1631 og 1648 i Agra. Det regnes som et av de vakreste byggverkene i verden og et eksempel på islamsk byggekunst."
+        },
+        {
+          "id": "vue-osmanere-mogul-rekkefolge",
+          "step": 3,
+          "type": "order",
+          "prompt": "Sett Konstantinopels fall, Mogulrikets grunnleggelse og ferdigstillelsen av Taj Mahal i kronologisk rekkefølge.",
+          "items": [
+            {
+              "label": "Konstantinopel faller",
+              "year": 1453
+            },
+            {
+              "label": "Mogulriket grunnlegges",
+              "year": 1526
+            },
+            {
+              "label": "Taj Mahal står ferdig",
+              "year": 1648
+            }
+          ],
+          "explain": "Svartedauden kom til Europa i 1347, altså omkring hundre år før Konstantinopel falt. Den tiden var preget av store endringer i både øst og vest."
+        },
+        {
+          "id": "vue-osmanere-mogul-forklar",
+          "step": 3,
+          "type": "explain",
+          "prompt": "Hvorfor regner historikere erobringen av Konstantinopel som begynnelsen på det osmanske riket i sin egentlige form?",
+          "answer": "Byen hadde vært hovedstaden i det gamle østromerske riket. Osmanerne brukte kraftig artilleri, og de gamle murene holdt ikke mot det. Med byen fikk riket en stor, velkjent hovedstad og en ny tyngde i Europa.",
+          "explain": "Mehmet bygde først festningen Rumeli Hisarı på den asiatiske siden av Bosporos. Artilleriet ble laget av ungareren Orban, og det gjorde beleiringen mulig.",
+          "checklist": [
+            "Nevn hvilken by som falt",
+            "Forklar hvorfor de gamle murene ikke holdt",
+            "Forklar hva erobringen ga riket"
+          ]
+        },
+        {
+          "id": "vue-osmanere-mogul-par",
+          "step": 3,
+          "type": "match",
+          "prompt": "Koble herskeren med det han er kjent for.",
+          "pairs": [
+            {
+              "left": "Mehmet II",
+              "right": "Erobret Konstantinopel i 1453"
+            },
+            {
+              "left": "Babur",
+              "right": "Grunnla Mogulriket"
+            },
+            {
+              "left": "Akbar",
+              "right": "Mogulrikets høydepunkt"
+            },
+            {
+              "left": "Shah Jahan",
+              "right": "Lot bygge Taj Mahal"
+            }
+          ],
+          "explain": "Mehmet og Babur var ikke samtidige, men begge regnes som grunnleggere: den ene av et rike i Europa og Asia, den andre av et rike i India."
+        },
+        {
+          "id": "vue-osmanere-mogul-1453",
+          "step": 4,
+          "type": "year",
+          "prompt": "I hvilket år falt Konstantinopel for osmanerne?",
+          "answer": "1453",
+          "explain": "Erobringen skjedde 29. mai 1453. Den siste keiseren, Konstantin XI, døde i kampen på murene."
+        },
+        {
+          "id": "vue-osmanere-mogul-1526",
+          "step": 4,
+          "type": "year",
+          "prompt": "I hvilket år ble Mogulriket grunnlagt?",
+          "answer": "1526",
+          "explain": "Babur grunnla riket, som varte i over 330 år, til 1857. Det var et muslimsk herskerdynasti i India."
+        },
+        {
+          "id": "vue-osmanere-mogul-belegring",
+          "step": 4,
+          "type": "number",
+          "prompt": "Hvor mange dager varte beleiringen av Konstantinopel, ifølge kildene?",
+          "answer": "55",
+          "unit": "dager",
+          "tolerance": 3,
+          "explain": "Mehmet bygde først festningen Rumeli Hisarı ved Bosporos. Den gjorde det mulig å kontrollere sjøveien inn til byen før angrepet."
+        }
+      ]
+    },
+    {
+      "id": "vue-japan-tokugawa-meiji",
+      "title": "Japan fra Tokugawa til Meiji",
+      "tier": 2,
+      "prerequisites": [],
+      "years": {
+        "from": 1600,
+        "to": 1868
+      },
+      "summary": "Tokugawa-shogunatet holdt Japan fredelig og nesten stengt i over 200 år, før Meiji-restaureringen i 1868 gav keiseren makten tilbake.",
+      "lesson": [
+        "Tokugawa Ieyasu vant slaget ved Sekigahara i 1600. Tre år senere, i 1603, ble han shogun og etablerte shogunatet i Edo, i dag Tokyo. Embetet ble gjort arvelig i hans ætt, og shogunatet styrte Japan med et stramt militærstyre og fred.",
+        "Under Tokugawa var landet nesten stengt for utlendinger. Daimyoene, de regionale lensherrene, måtte oppholde seg i Edo en del av året. Det gjorde det vanskeligere for dem å samle makt mot shogunen, og freden varte i over to hundre år.",
+        "I 1868 ble shogunatet opphevet. Keiseren tok makten tilbake, og Meiji-restaureringen fulgte. Keiser Mutsuhito flyttet residensen fra Kyoto til Tokyo. Landet begynte deretter en rask modernisering og ble en stormakt i Øst-Asia."
+      ],
+      "keyPoints": [
+        "Tokugawa Ieyasu ble shogun i 1603 og styrte fra Edo, dagens Tokyo.",
+        "Shogunatet holdt Japan nesten stengt for utlandet i over to hundre år.",
+        "I 1868 ble shogunatet opphevet, og Meiji-restaureringen gav keiseren makten.",
+        "Keiser Mutsuhito flyttet residensen fra Kyoto til Tokyo."
+      ],
+      "sources": [
+        {
+          "title": "Japans historie – Store norske leksikon",
+          "url": "https://snl.no/Japans_historie"
+        },
+        {
+          "title": "Oversikt over Japans historie – Store norske leksikon",
+          "url": "https://snl.no/Oversikt_over_Japans_historie"
+        },
+        {
+          "title": "Tokyo – Store norske leksikon",
+          "url": "https://snl.no/Tokyo"
+        },
+        {
+          "title": "shogun – Store norske leksikon",
+          "url": "https://snl.no/shogun"
+        },
+        {
+          "title": "samurai – Store norske leksikon",
+          "url": "https://snl.no/samurai"
+        }
+      ],
+      "cards": [
+        {
+          "id": "vue-japan-tokugawa-meiji-shogun",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilken tittel fikk Tokugawa Ieyasu i 1603?",
+          "answer": "Shogun",
+          "distractors": [
+            "Keiser",
+            "Daimyo",
+            "Samurai"
+          ],
+          "explain": "Tittelen betyr egentlig militær general. Shogunene styrte landet, mens keiseren i Kyoto hadde en mer seremoniell rolle."
+        },
+        {
+          "id": "vue-japan-tokugawa-meiji-edo",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilken by ble shogunatets sete i 1603?",
+          "answer": "Edo",
+          "distractors": [
+            "Kyoto",
+            "Osaka",
+            "Nagasaki"
+          ],
+          "explain": "Edo er dagens Tokyo. Kyoto var keiserens by, og det er en av grunnene til at Meiji-keiseren senere flyttet residensen til Tokyo."
+        },
+        {
+          "id": "vue-japan-tokugawa-meiji-sekigahara",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilket slag vant Tokugawa Ieyasu i 1600?",
+          "answer": "Sekigahara",
+          "distractors": [
+            "Dan-no-ura",
+            "Nagashino",
+            "Okehazama"
+          ],
+          "explain": "Seieren ved Sekigahara la grunnlaget for shogunatet, som kom tre år senere. Embetet ble arvelig i Ieyasus ætt."
+        },
+        {
+          "id": "vue-japan-tokugawa-meiji-keiserby",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvilken by var keiserens hovedsete før Meiji-restaureringen?",
+          "answer": "Kyoto",
+          "explain": "Keiserne hadde holdt til i Kyoto lenge, men makten lå hos shogunen i Edo. Etter 1868 flyttet keiser Mutsuhito residensen til Tokyo."
+        },
+        {
+          "id": "vue-japan-tokugawa-meiji-mutsuhito",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva het keiseren som flyttet residensen fra Kyoto til Tokyo i 1868?",
+          "answer": "Mutsuhito",
+          "accept": [
+            "Keiser Mutsuhito"
+          ],
+          "explain": "Mutsuhito ga sin regjeringstid navnet Meiji, som betyr «opplyst styre». Restaureringen var en stor endring for hele statsapparatet."
+        },
+        {
+          "id": "vue-japan-tokugawa-meiji-daimyo",
+          "step": 2,
+          "type": "choice",
+          "prompt": "Hva kalles de regionale herrene som måtte oppholde seg i Edo en del av året?",
+          "answer": "Daimyoer",
+          "distractors": [
+            "Shogunene",
+            "Keiserne",
+            "Ninjaene"
+          ],
+          "explain": "Ordningen hindret lensherrene i å samle makt mot shogunen. Den var en del av fredsordenen som varte i over 200 år."
+        },
+        {
+          "id": "vue-japan-tokugawa-meiji-rekkefolge",
+          "step": 3,
+          "type": "order",
+          "prompt": "Sett Sekigahara, Ieyasus utnevnelse til shogun og shogunatets oppheving i kronologisk rekkefølge.",
+          "items": [
+            {
+              "label": "Slaget ved Sekigahara",
+              "year": 1600
+            },
+            {
+              "label": "Ieyasu blir shogun i Edo",
+              "year": 1603
+            },
+            {
+              "label": "Shogunatet blir opphevet",
+              "year": 1868
+            }
+          ],
+          "explain": "Mellom Sekigahara og slutten av shogunatet gikk 268 år. Det var en lang periode med fred og begrenset kontakt med utlandet."
+        },
+        {
+          "id": "vue-japan-tokugawa-meiji-forklar",
+          "step": 3,
+          "type": "explain",
+          "prompt": "Hvorfor var Japans isolasjon viktig for landet i over to hundre år?",
+          "answer": "Shogunatet holdt landet fredelig og stabilt, og utlendinger hadde liten tilgang. Det gjorde at kultur og styre utviklet seg på egne premisser.",
+          "explain": "Den lange freden gjorde at styret kunne holde seg, og kontakten med utlandet ble gradvis begrenset.",
+          "checklist": [
+            "Nevn hvem som styrte landet under isolasjonen",
+            "Forklar hvorfor freden var viktig for styret",
+            "Nevn én følge av at landet var stengt"
+          ]
+        },
+        {
+          "id": "vue-japan-tokugawa-meiji-par",
+          "step": 3,
+          "type": "match",
+          "prompt": "Koble personen eller stedet med det det er knyttet til.",
+          "pairs": [
+            {
+              "left": "Tokugawa Ieyasu",
+              "right": "Ble shogun i 1603"
+            },
+            {
+              "left": "Edo",
+              "right": "Shogunatets sete, dagens Tokyo"
+            },
+            {
+              "left": "Kyoto",
+              "right": "Keiserens by før 1868"
+            },
+            {
+              "left": "Mutsuhito",
+              "right": "Keiseren som ga navn til Meiji"
+            }
+          ],
+          "explain": "Ieyasu ga navn til shogunatet, og Edo ble sete for det. Kyoto var keiserens by, og Mutsuhito gjorde Tokyo til keiserens nye residens."
+        },
+        {
+          "id": "vue-japan-tokugawa-meiji-1603",
+          "step": 4,
+          "type": "year",
+          "prompt": "I hvilket år ble Tokugawa Ieyasu shogun?",
+          "answer": "1603",
+          "explain": "Han hadde vunnet slaget ved Sekigahara tre år tidligere. Embetet ble arvelig og holdt seg i familien helt til 1868."
+        },
+        {
+          "id": "vue-japan-tokugawa-meiji-1868",
+          "step": 4,
+          "type": "year",
+          "prompt": "I hvilket år ble shogunatet opphevet?",
+          "answer": "1868",
+          "explain": "Keiseren tok makten tilbake, og Meiji-restaureringen fulgte. Det var slutten på over 250 år med militærstyre under shogunene."
+        },
+        {
+          "id": "vue-japan-tokugawa-meiji-tre-ar",
+          "step": 4,
+          "type": "number",
+          "prompt": "Hvor mange år etter slaget ved Sekigahara ble Ieyasu shogun?",
+          "answer": "3",
+          "unit": "år",
+          "explain": "Sekigahara var i 1600 og shogunatet begynte i 1603. Tiden mellom dem var kort, men seieren la grunnlaget for alt som kom etterpå."
+        }
+      ]
+    }
+  ]
+}
