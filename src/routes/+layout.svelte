@@ -1,6 +1,8 @@
 <script>
   import { onMount } from 'svelte';
   import '../lib/design.css';
+  import '../lib/styles/today.css';
+  import '../lib/styles/atlas-me.css';
 
   let { children } = $props();
   let active = $state('today');
