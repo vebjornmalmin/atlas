@@ -1,0 +1,1103 @@
+{
+  "domain": {
+    "id": "romfart",
+    "title": "Astronomi og romfart",
+    "subject": "science",
+    "order": 14,
+    "description": "Fra babylonske observasjoner til romteleskoper: hvordan vi fant ut hva himmelen er, og hvordan vi kom oss ut i rommet."
+  },
+  "units": [
+    {
+      "id": "rom-himmelen-oldtiden",
+      "title": "Himmelen i oldtiden",
+      "tier": 1,
+      "prerequisites": [
+        "nat-solsystemet"
+      ],
+      "years": {
+        "from": -700,
+        "to": 150
+      },
+      "summary": "Babylonske observasjoner og Ptolemaios' verdensbilde med Jorda i midten forklarte himmelen i over tusen år.",
+      "lesson": [
+        "Lenge før teleskopet fantes, fulgte folk himmelen med det blotte øyet og skrev opp det de så. Babylonerne gjorde nøye observasjoner over mange århundrer, og rundt 700 f.Kr. var et stort antall stjernebilder identifisert. Mange av dagens inndelinger av tid og vinkler, som grader, minutter og sekunder, kan spores tilbake til deres beregninger.",
+        "Grekerne tok over mye av kunnskapen og bygde den videre. Ptolemaios skrev rundt 150 e.Kr. verket Almagest, der Jorda står i midten av universet. Sola, Månen og planetene går i baner rundt Jorda, og banene forklares med episykler, sammensatte sirkelbevegelser. Modellen ble stående urokkelig gjennom hele middelalderen.",
+        "Ptolemaios bygget videre på greske astronomer som Hipparkhos og Evdoksos. Modellen var så god til å beregne himmelens bevegelser at den ikke ble erstattet før Kopernikus tok over med et heliosentrisk system. Verdensbildet med Jorda i midten kalles det geosentriske."
+      ],
+      "keyPoints": [
+        "Babylonerne gjorde nøye observasjoner over mange århundrer, og mange av dagens inndelinger av tid og vinkler har røtter der.",
+        "Ptolemaios' Almagest, skrevet rundt 150 e.Kr., beskrev et verdensbilde der Jorda står i midten av universet.",
+        "Planetenes baner ble forklart med episykler, sammensatte sirkelbevegelser.",
+        "Det geosentriske verdensbildet ble stående til Kopernikus tok over med et heliosentrisk system.",
+        "Ptolemaios bygget videre på Hipparkhos og Evdoksos."
+      ],
+      "sources": [
+        {
+          "title": "Almagest – Store norske leksikon",
+          "url": "https://snl.no/Almagest"
+        },
+        {
+          "title": "Det ptolemeiske verdensbilde – Store norske leksikon",
+          "url": "https://snl.no/det_ptolemeiske_verdensbilde"
+        },
+        {
+          "title": "Mesopotamias litteratur – Store norske leksikon",
+          "url": "https://snl.no/Mesopotamias_litteratur"
+        },
+        {
+          "title": "Babylonsk matematikk – Store norske leksikon",
+          "url": "https://snl.no/babylonsk_matematikk"
+        }
+      ],
+      "cards": [
+        {
+          "id": "rom-himmelen-oldtiden-verdensbilde",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hva var kjernen i det ptolemeiske verdensbildet?",
+          "answer": "Jorda står i midten av universet",
+          "distractors": [
+            "Sola står i midten av universet",
+            "Melkeveien står i midten av universet",
+            "Universet har ingen midte"
+          ],
+          "explain": "Modellen var så god til å forutsi himmelens bevegelser at den ble brukt i over tusen år. Den var et matematisk system, ikke bare en tro."
+        },
+        {
+          "id": "rom-himmelen-oldtiden-babylonerne",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilket folk i Mesopotamia gjorde mange nøye observasjoner av himmelen over flere århundrer?",
+          "answer": "Babylonerne",
+          "distractors": [
+            "Vikingene",
+            "Inkaene",
+            "Frankerne"
+          ],
+          "explain": "Det greske verdensbildet bygget på deres observasjoner, og flere av dagens enheter for vinkler går tilbake til deres beregninger."
+        },
+        {
+          "id": "rom-himmelen-oldtiden-almagest",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilket verk fra rundt 150 e.Kr. er vår viktigste kilde til antikkens astronomi?",
+          "answer": "Almagest",
+          "distractors": [
+            "De revolutionibus",
+            "Principia",
+            "Sidereus Nuncius"
+          ],
+          "explain": "Verket inneholder også en stjernekatalog med over tusen stjerner. Det er derfor en av de viktigste kildene til hvordan stjernene så ut før teleskopet."
+        },
+        {
+          "id": "rom-himmelen-oldtiden-ptolemaios",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva heter astronomen som skrev Almagest?",
+          "answer": "Ptolemaios",
+          "accept": [
+            "Klaudios Ptolemaios"
+          ],
+          "explain": "Han bygget videre på Hipparkhos og Apollonios. Almagest er vår viktigste kilde til hvordan den greske astronomien så ut."
+        },
+        {
+          "id": "rom-himmelen-oldtiden-episykler",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva kalles sirkelbevegelsene som Ptolemaios brukte for å forklare planetenes baner?",
+          "answer": "Episykler",
+          "accept": [
+            "episykel",
+            "episykler"
+          ],
+          "explain": "Med episykler kunne modellen forklare at planetene av og til virker å gå baklengs på himmelen, en bevegelse som kalles retrograd."
+        },
+        {
+          "id": "rom-himmelen-oldtiden-geosentrisk",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva kalles verdensbildet der Jorda står i midten?",
+          "answer": "Geosentrisk",
+          "accept": [
+            "geosentrisk verdensbilde",
+            "det geosentriske verdensbildet"
+          ],
+          "explain": "Det motsatte, med Sola i midten, kalles heliosentrisk. Overgangen mellom de to bildene er et av de største skillene i astronomiens historie."
+        },
+        {
+          "id": "rom-himmelen-oldtiden-forklar",
+          "step": 3,
+          "type": "explain",
+          "prompt": "Forklar hvorfor den ptolemeiske modellen holdt seg så lenge.",
+          "answer": "Modellen kunne beregne planetenes posisjoner godt nok til å brukes i praksis. Den stemte også med det øyet så: Jorda virker stille, mens himmelen går rundt den.",
+          "checklist": [
+            "Modellen forutsa planetenes posisjoner godt nok",
+            "Jorda virker stille, og himmelen virker å gå rundt den",
+            "Det fantes ingen tydelig måling av at Jorda beveger seg"
+          ],
+          "explain": "Stjerneparallakse, altså små skift i stjernenes posisjon over et år, var for liten til å måles med datidens instrumenter."
+        },
+        {
+          "id": "rom-himmelen-oldtiden-rekkefolge",
+          "step": 3,
+          "type": "order",
+          "prompt": "Sett disse hendelsene fra oldtiden i kronologisk rekkefølge.",
+          "items": [
+            {
+              "label": "Et stort antall stjernebilder er identifisert i Mesopotamia",
+              "year": -700
+            },
+            {
+              "label": "Ptolemaios skriver Almagest",
+              "year": 150
+            },
+            {
+              "label": "Kopernikus gir ut boken om et heliosentrisk verdensbilde",
+              "year": 1543
+            },
+            {
+              "label": "Galilei ser fire måner rundt Jupiter",
+              "year": 1610
+            }
+          ],
+          "explain": "Det gikk over 1300 år fra Almagest til Kopernikus. Hvert steg viser at vitenskap bygger på eldre arbeid, selv når det eldre arbeidet senere blir erstattet."
+        },
+        {
+          "id": "rom-himmelen-oldtiden-aarstall",
+          "step": 4,
+          "type": "year",
+          "prompt": "Omtrent hvilket år ble Almagest skrevet?",
+          "answer": "150",
+          "tolerance": 30,
+          "explain": "Kildene er ikke helt enige om når Ptolemaios virket, så årstallet er et anslag."
+        },
+        {
+          "id": "rom-himmelen-oldtiden-stjerner",
+          "step": 4,
+          "type": "choice",
+          "prompt": "Omtrent hvor mange stjerner har Ptolemaios' stjernekatalog?",
+          "answer": "Over tusen",
+          "distractors": [
+            "Omtrent 300",
+            "Omtrent 10 000",
+            "Over 100 000"
+          ],
+          "explain": "Stjernekatalogen var en av de viktigste kildene til stjerneposisjoner før teleskopet. Den viser hvor langt en god observatør kunne komme med det blotte øyet."
+        }
+      ]
+    },
+    {
+      "id": "rom-kopernikanske-revolusjon",
+      "title": "Den kopernikanske revolusjon",
+      "tier": 2,
+      "prerequisites": [
+        "rom-himmelen-oldtiden"
+      ],
+      "years": {
+        "from": 1543,
+        "to": 1610
+      },
+      "summary": "Kopernikus, Brahe, Kepler og Galilei endret synet på hvor Jorda står, og hvordan planetene går i bane.",
+      "lesson": [
+        "Nicolaus Kopernikus la fram et heliosentrisk verdensbilde, der Sola står i midten og Jorda er en av planetene. Boken De revolutionibus orbium coelestium kom ut i 1543, samme år som han døde. Pavemakten forbød den senere, men den hadde da fått stor utbredelse.",
+        "Tycho Brahe gjorde nøyaktige observasjoner av planetene uten teleskop, med egne instrumenter. Etter at Brahe døde i 1601, fikk Johannes Kepler tilgang til materialet hans. Kepler fant at planetbanene er ellipser med Sola i det ene brennpunktet, og at planeten går raskere når den er nær Sola.",
+        "Galilei hørte i 1609 om de nederlandske kikkertene og bygde raskt bedre egne, som forstørret opptil 30 ganger. I 1610 så han fire himmellegemer rundt Jupiter, som må være måner. De kalles i dag galileiske måner, og de viste at ikke alt går i bane rundt Jorda."
+      ],
+      "keyPoints": [
+        "Kopernikus' bok De revolutionibus (1543) satte Sola i midten av verdensbildet.",
+        "Tycho Brahe samlet nøyaktige observasjoner, og Kepler brukte dem til å finne planetlovene.",
+        "Planetbanene er ellipser med Sola i det ene brennpunktet.",
+        "Galilei så i 1610 fire måner rundt Jupiter gjennom en kikkert.",
+        "Heliosentrisk betyr at Sola er i sentrum; geosentrisk betyr at Jorda er det."
+      ],
+      "sources": [
+        {
+          "title": "De Revolutionibus Orbium Coelestium – Store norske leksikon",
+          "url": "https://snl.no/De_Revolutionibus_Orbium_Coelestium"
+        },
+        {
+          "title": "Keplers lover – Store norske leksikon",
+          "url": "https://snl.no/Keplers_lover"
+        },
+        {
+          "title": "Tycho Brahe – Store norske leksikon",
+          "url": "https://snl.no/Tycho_Brahe"
+        },
+        {
+          "title": "Galileo Galilei – Store norske leksikon",
+          "url": "https://snl.no/Galileo_Galilei"
+        }
+      ],
+      "cards": [
+        {
+          "id": "rom-kopernikanske-revolusjon-verdensbilde",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilket verdensbilde sto Kopernikus for?",
+          "answer": "Heliosentrisk",
+          "distractors": [
+            "Geosentrisk",
+            "Statisk",
+            "Flatt"
+          ],
+          "explain": "Jorda ble da én planet blant flere, og Månen gikk i bane rundt Jorda, ikke rundt Sola."
+        },
+        {
+          "id": "rom-kopernikanske-revolusjon-brahe",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilken astronom gjorde nøyaktige observasjoner av planetene uten teleskop?",
+          "answer": "Tycho Brahe",
+          "distractors": [
+            "Ptolemaios",
+            "Hipparkhos",
+            "Simon Marius"
+          ],
+          "explain": "Brahe bygget egne instrumenter, og flere av dem ble brakt fra øya Ven. Observasjonene hans var så presise at Kepler kunne teste lovene sine mot dem."
+        },
+        {
+          "id": "rom-kopernikanske-revolusjon-ellipser",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvilken form har planetenes baner ifølge Kepler?",
+          "answer": "Ellipser",
+          "accept": [
+            "ellipse",
+            "elliptiske baner"
+          ],
+          "explain": "Sola står i ett av brennpunktene, ikke i midten av ellipsen. Kepler fant også at planeten beveger seg raskere når den er nær Sola."
+        },
+        {
+          "id": "rom-kopernikanske-revolusjon-kepler",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvem fikk Brahes observasjoner etter at han døde?",
+          "answer": "Johannes Kepler",
+          "accept": [
+            "Kepler"
+          ],
+          "explain": "Kepler brukte blant annet observasjoner av Mars, slik Brahe hadde foreslått. Mars-banen ble en nøkkel til lovene hans."
+        },
+        {
+          "id": "rom-kopernikanske-revolusjon-galilei",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvilken italiensk forsker bygde en kikkert og fant måner rundt Jupiter?",
+          "answer": "Galilei",
+          "accept": [
+            "Galileo Galilei"
+          ],
+          "explain": "Han hørte om de nederlandske kikkertene i 1609, men bygget raskt bedre egne. Månene ble navngitt av Simon Marius, som hevdet å ha oppdaget dem omtrent samtidig."
+        },
+        {
+          "id": "rom-kopernikanske-revolusjon-forklar",
+          "step": 3,
+          "type": "explain",
+          "prompt": "Forklar hvorfor Keplers ellipsebaner var et bedre svar enn sirkelbanene i Ptolemaios' modell.",
+          "answer": "Med ellipser trengte man ikke episykler og andre tillegg for å stemme med observasjonene. Keplers modell beskrev planetenes baner enklere og mer nøyaktig.",
+          "checklist": [
+            "Ellipsene stemmer bedre med observasjonene",
+            "Episykler og tilleggsbevegelser blir overflødige",
+            "Sola står i ett av brennpunktene"
+          ],
+          "explain": "Keplers lover ble senere forklart av Newtons gravitasjonslov, og det er et av de klareste eksemplene på at en matematisk beskrivelse ble en fysisk forklaring."
+        },
+        {
+          "id": "rom-kopernikanske-revolusjon-koblinger",
+          "step": 3,
+          "type": "match",
+          "prompt": "Koble astronomen med det han er mest kjent for.",
+          "pairs": [
+            {
+              "left": "Kopernikus",
+              "right": "Heliosentrisk verdensbilde"
+            },
+            {
+              "left": "Tycho Brahe",
+              "right": "Nøyaktige observasjoner"
+            },
+            {
+              "left": "Johannes Kepler",
+              "right": "Planetbaner som ellipser"
+            },
+            {
+              "left": "Galilei",
+              "right": "Kikkert og måner rundt Jupiter"
+            }
+          ],
+          "explain": "Keplers lover ble mulige fordi Brahes målinger var nøyaktige nok til å teste dem."
+        },
+        {
+          "id": "rom-kopernikanske-revolusjon-rekkefolge",
+          "step": 3,
+          "type": "order",
+          "prompt": "Sett disse hendelsene fra renessansen i kronologisk rekkefølge.",
+          "items": [
+            {
+              "label": "Kopernikus' bok om et heliosentrisk verdensbilde kommer ut",
+              "year": 1543
+            },
+            {
+              "label": "Tycho Brahe dør, og Kepler får observasjonene hans",
+              "year": 1601
+            },
+            {
+              "label": "Galilei ser fire måner rundt Jupiter",
+              "year": 1610
+            }
+          ],
+          "explain": "Det gikk knappe 70 år fra Kopernikus' bok til Galileis første observasjoner med kikkert. I løpet av den tiden ble astronomien en vitenskap der målinger kunne avgjøre mellom modeller."
+        },
+        {
+          "id": "rom-kopernikanske-revolusjon-galilei-aar",
+          "step": 4,
+          "type": "year",
+          "prompt": "Hvilket år fikk Galilei øye på fire måner rundt Jupiter?",
+          "answer": "1610",
+          "explain": "Månene viste at ikke alt går i bane rundt Jorda. Det svekket et argument mot det heliosentriske systemet, men beviste ikke at Kopernikus hadde rett."
+        },
+        {
+          "id": "rom-kopernikanske-revolusjon-brahe-aar",
+          "step": 4,
+          "type": "year",
+          "prompt": "Hvilket år døde Tycho Brahe?",
+          "answer": "1601",
+          "explain": "Brahe døde brått, og Rudolf II utnevnte Kepler til keiserlig matematiker kort etter. Kepler fikk dermed tilgang til materialet."
+        }
+      ]
+    },
+    {
+      "id": "rom-newton",
+      "title": "Newton og det mekaniske universet",
+      "tier": 2,
+      "prerequisites": [
+        "rom-kopernikanske-revolusjon",
+        "nat-krefter-bevegelse"
+      ],
+      "years": {
+        "from": 1687,
+        "to": 1915
+      },
+      "summary": "Newton samlet himmelmekanikk og jordisk fysikk under én gravitasjonslov, og lovene holdt i over to hundre år.",
+      "lesson": [
+        "Isaac Newton samlet bevegelseslovene og gravitasjonsloven i boken Principia, som kom ut i 1687. Med de samme lovene kunne man forklare både bevegelser på Jorda og planetenes baner. Keplers lover, som beskrev planetbanene, kan utledes fra gravitasjonsloven.",
+        "Tyngdekraften mellom to legemer er proporsjonal med produktet av massene og minker med kvadratet av avstanden. Dobler man avstanden, blir kraften en fjerdedel. Loven gjelder både et eple som faller og Månen i bane rundt Jorda.",
+        "Newtons teori ga et univers der de samme lovene gjelder overalt. Den var grunnlaget for himmelmekanikken i over to hundre år, til Einsteins spesielle relativitetsteori fra 1905. Newtons lover gjelder ikke fullt ut ved hastigheter nær lysets fart, og for svært små objekter må man bruke kvantefysikk."
+      ],
+      "keyPoints": [
+        "Newtons Principia (1687) inneholder bevegelseslovene og gravitasjonsloven.",
+        "Gravitasjonskraften øker med massene og minker med kvadratet av avstanden.",
+        "Samme lov forklarer et fallende legeme og Månens bane.",
+        "Keplers lover kan utledes fra gravitasjonsloven.",
+        "Newtons lover gjelder ikke fullt ut ved hastigheter nær lysets fart eller for svært små objekter."
+      ],
+      "sources": [
+        {
+          "title": "Newtons lover – Store norske leksikon",
+          "url": "https://snl.no/Newtons_lover"
+        },
+        {
+          "title": "Gravitasjon – Store norske leksikon",
+          "url": "https://snl.no/gravitasjon"
+        },
+        {
+          "title": "Isaac Newton – Store norske leksikon",
+          "url": "https://snl.no/Isaac_Newton"
+        },
+        {
+          "title": "Fysikkens historie – Store norske leksikon",
+          "url": "https://snl.no/fysikkens_historie"
+        }
+      ],
+      "cards": [
+        {
+          "id": "rom-newton-person",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilken person står bak bevegelseslovene og gravitasjonsloven?",
+          "answer": "Isaac Newton",
+          "distractors": [
+            "Johannes Kepler",
+            "Nicolaus Kopernikus",
+            "Galileo Galilei"
+          ],
+          "explain": "Keplers lover beskriver planetbanene, mens Newtons lover forklarer dem. Newton viste at Keplers lover følger av gravitasjonsloven."
+        },
+        {
+          "id": "rom-newton-avstand",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvordan endrer tyngdekraften mellom to legemer seg når avstanden mellom dem øker?",
+          "answer": "Den minker med kvadratet av avstanden",
+          "distractors": [
+            "Den er den samme uansett avstand",
+            "Den øker med avstanden",
+            "Den virker bare på planeter"
+          ],
+          "explain": "Dobler man avstanden, blir kraften en fjerdedel. Samme lov gjelder for et eple, Månen og planetene."
+        },
+        {
+          "id": "rom-newton-tyngdekraften",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvilken kraft holder planetene i bane rundt Sola?",
+          "answer": "Tyngdekraften",
+          "accept": [
+            "gravitasjon",
+            "gravitasjonskraften",
+            "tyngdekraft"
+          ],
+          "explain": "Tyngdekraften og gravitasjon er samme fenomen. Månen faller hele tiden mot Jorda, men beveger seg så fort sideveis at den stadig bommer."
+        },
+        {
+          "id": "rom-newton-principia",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva heter Newtons bok som inneholder bevegelseslovene og gravitasjonsloven?",
+          "answer": "Principia",
+          "accept": [
+            "Philosophiae Naturalis Principia Mathematica"
+          ],
+          "explain": "Boken heter fullt ut Philosophiae Naturalis Principia Mathematica. Newton hadde arbeidet med lovene i rundt tjue år før den kom ut."
+        },
+        {
+          "id": "rom-newton-forklar",
+          "step": 3,
+          "type": "explain",
+          "prompt": "Forklar hvorfor gravitasjonsloven kan forklare både fallende gjenstander og planetbaner.",
+          "answer": "Den samme kraften virker mellom alle legemer med masse, og den avhenger bare av massene og avstanden. Et fallende legeme og Månen er begge under tyngdekraften; forskjellen er hvor fort de beveger seg sideveis.",
+          "checklist": [
+            "Kraften virker mellom alle legemer med masse",
+            "Kraften avhenger av massene og avstanden",
+            "Månen faller mot Jorda, men beveger seg også sideveis"
+          ],
+          "explain": "Dermed ble himmel og jord underlagt de samme lovene. Det var dette som gjorde Newtons verk så betydelig for hele naturvitenskapen."
+        },
+        {
+          "id": "rom-newton-koblinger",
+          "step": 3,
+          "type": "match",
+          "prompt": "Koble personen eller boken med det den er kjent for.",
+          "pairs": [
+            {
+              "left": "Isaac Newton",
+              "right": "Gravitasjonsloven"
+            },
+            {
+              "left": "Johannes Kepler",
+              "right": "Planetbaner som ellipser"
+            },
+            {
+              "left": "Principia",
+              "right": "Bevegelses- og gravitasjonslover"
+            }
+          ],
+          "explain": "Keplers lover beskriver hvordan planetene beveger seg. Gravitasjonsloven forklarer hvorfor de gjør det."
+        },
+        {
+          "id": "rom-newton-rekkefolge",
+          "step": 3,
+          "type": "order",
+          "prompt": "Sett disse milepælene fra Newton til Einstein i kronologisk rekkefølge.",
+          "items": [
+            {
+              "label": "Tycho Brahe dør, og Kepler får observasjonene hans",
+              "year": 1601
+            },
+            {
+              "label": "Newtons Principia kommer ut",
+              "year": 1687
+            },
+            {
+              "label": "Einsteins spesielle relativitetsteori",
+              "year": 1905
+            },
+            {
+              "label": "Einsteins generelle relativitetsteori",
+              "year": 1915
+            }
+          ],
+          "explain": "Fra Newtons Principia til Einsteins spesielle relativitetsteori gikk det over to hundre år. Newtons lover var grunnlaget for himmelmekanikken i hele denne perioden."
+        },
+        {
+          "id": "rom-newton-principia-aar",
+          "step": 4,
+          "type": "year",
+          "prompt": "Hvilket år ble Newtons Principia utgitt?",
+          "answer": "1687",
+          "explain": "Boken var resultatet av mange års arbeid, og den la grunnlaget for det som senere ble kalt klassisk mekanikk."
+        },
+        {
+          "id": "rom-newton-grenser",
+          "step": 4,
+          "type": "choice",
+          "prompt": "Under hvilke forhold gjelder ikke Newtons lover fullt ut?",
+          "answer": "Ved hastigheter nær lysets fart",
+          "distractors": [
+            "Ved vanlige fallhøyder på Jorda",
+            "Når planetene er nær Sola",
+            "I solsystemet"
+          ],
+          "explain": "Der gir relativitetsteorien en bedre beskrivelse. For svært små objekter må man bruke kvantefysikk."
+        },
+        {
+          "id": "rom-newton-einstein-aar",
+          "step": 4,
+          "type": "year",
+          "prompt": "Hvilket år kom Einsteins spesielle relativitetsteori?",
+          "answer": "1905",
+          "explain": "Den spesielle teorien gjelder uten tyngdekraft. Den generelle, fra 1915, beskriver tyngdekraften som en krumning av rom og tid."
+        }
+      ]
+    },
+    {
+      "id": "rom-galaksene",
+      "title": "Galaksene og det ekspanderende universet",
+      "tier": 2,
+      "prerequisites": [
+        "nat-universet"
+      ],
+      "years": {
+        "from": 1912,
+        "to": 1929
+      },
+      "summary": "Leavitts målestokk og Hubbles observasjoner viste at galaksene fjerner seg fra hverandre.",
+      "lesson": [
+        "Lenge var det uklart hvor langt borte de fjerne tåkene lå. Å måle avstander i universet er vanskelig, fordi lyset fra fjerne objekter er svakt. Uten gode avstander kan man ikke si noe sikkert om størrelsen på universet.",
+        "Henrietta Leavitt studerte variable stjerner i Den lille magellanske sky ved Harvard. I 1912 viste hun at Cepheider har en fast sammenheng mellom periode og lysstyrke: jo lengre periode, desto sterkere lys. Hun brukte 25 Cepheider i analysen sin, og resultatet ble kjent som Leavitts lov.",
+        "Edwin Hubble brukte Leavitts lov til å måle avstander til flere tåker, og fant at galakser fjerner seg fra hverandre. Jo lenger borte en galakse er, desto raskere fjerner den seg. I 1929 presenterte han sammenhengen mellom avstand og fart. Dette viste at universet utvider seg."
+      ],
+      "keyPoints": [
+        "Henrietta Leavitt fant i 1912 en sammenheng mellom periode og lysstyrke for Cepheider.",
+        "Cepheider med lang periode er lysere, så måling av perioden gir avstanden.",
+        "Edwin Hubble brukte Leavitts lov til å måle avstander til flere tåker.",
+        "I 1929 viste Hubble at galaksene fjerner seg fra hverandre, og raskere jo lenger borte de er.",
+        "Universet utvider seg, fordi galaksene fjerner seg fra hverandre."
+      ],
+      "sources": [
+        {
+          "title": "Universe is Expanding – NASA Cosmic Times 1929 (plakat)",
+          "url": "https://imagine.gsfc.nasa.gov/educators/programs/cosmictimes/downloads/posters/1929_poster.pdf"
+        },
+        {
+          "title": "Age of the Universe: 2 Billion Years – Edwin Hubble (NASA Cosmic Times 1929)",
+          "url": "https://imagine.gsfc.nasa.gov/educators/programs/cosmictimes/downloads/newsletters/1929NL_HomeEd.pdf"
+        },
+        {
+          "title": "The Legacy of Henrietta Leavitt: A Re-analysis of the First Cepheid Period-Luminosity Relation",
+          "url": "https://arxiv.org/pdf/2502.17438"
+        }
+      ],
+      "cards": [
+        {
+          "id": "rom-galaksene-leavitt",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilken astronom fant en sammenheng mellom periode og lysstyrke for variable stjerner?",
+          "answer": "Henrietta Leavitt",
+          "distractors": [
+            "Johannes Kepler",
+            "Tycho Brahe",
+            "Simon Marius"
+          ],
+          "explain": "Hun sammenlignet stjerner i samme sky, og så at de lyssterkeste hadde lengst periode. Når man måler perioden, kan man regne ut hvor sterkt stjernen egentlig lyser."
+        },
+        {
+          "id": "rom-galaksene-hubble",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilken astronom brukte Leavitts lov til å måle avstander til flere tåker?",
+          "answer": "Edwin Hubble",
+          "distractors": [
+            "Tycho Brahe",
+            "Galileo Galilei",
+            "Johannes Kepler"
+          ],
+          "explain": "Med Cepheider i tåkene kunne han anslå avstandene. Det gjorde det mulig å sette avstand og fart sammen, og det avslørte at galaksene beveger seg bort fra hverandre."
+        },
+        {
+          "id": "rom-galaksene-cepheider",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva kalles den variable stjernetypen Leavitt studerte?",
+          "answer": "Cepheider",
+          "accept": [
+            "Cepheid",
+            "Cepheidene"
+          ],
+          "explain": "Cepheidene er pulserende stjerner som sveller og krymper i takt, og lysstyrken går opp og ned i et regelmessig tempo."
+        },
+        {
+          "id": "rom-galaksene-hubbles-lov",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva kalles sammenhengen der galakser fjerner seg raskere jo lenger borte de er?",
+          "answer": "Hubbles lov",
+          "accept": [
+            "Hubble-loven",
+            "Hubble-lov"
+          ],
+          "explain": "Sammenhengen er omtrent en rett linje når man setter fart mot avstand i et diagram. Stigningstallet kalles Hubble-konstanten."
+        },
+        {
+          "id": "rom-galaksene-forklar",
+          "step": 3,
+          "type": "explain",
+          "prompt": "Forklar hvorfor en stjerne med lang periode må være lyssterkere enn en med kort periode.",
+          "answer": "Perioden kan måles fra variasjonen i lyset, og den henger sammen med stjernens egentlige lysstyrke. Når man vet hvor sterkt den egentlig lyser, kan man sammenligne med hvor svakt den ser ut og regne ut avstanden.",
+          "checklist": [
+            "Perioden måles fra variasjonen i lyset",
+            "Lang periode betyr høy egentlig lysstyrke",
+            "Egentlig og synlig lysstyrke gir avstanden"
+          ],
+          "explain": "Det er denne koblingen som gjør Cepheider nyttige langt utenfor Melkeveien. Metoden er et viktig ledd i avstandsstigen i astronomien."
+        },
+        {
+          "id": "rom-galaksene-rekkefolge",
+          "step": 3,
+          "type": "order",
+          "prompt": "Sett disse milepælene om galaksene i kronologisk rekkefølge.",
+          "items": [
+            {
+              "label": "Leavitt finner sammenhengen mellom periode og lysstyrke",
+              "year": 1912
+            },
+            {
+              "label": "Einstein presenterer den generelle relativitetsteorien",
+              "year": 1915
+            },
+            {
+              "label": "Hubble viser at galaksene fjerner seg fra hverandre",
+              "year": 1929
+            }
+          ],
+          "explain": "Hubble brukte Leavitts målestokk til å finne avstandene. Det gikk nesten 20 år fra funnet til Hubbles resultat."
+        },
+        {
+          "id": "rom-galaksene-koblinger",
+          "step": 3,
+          "type": "match",
+          "prompt": "Koble astronomen eller begrepet med riktig beskrivelse.",
+          "pairs": [
+            {
+              "left": "Henrietta Leavitt",
+              "right": "Sammenheng mellom periode og lysstyrke"
+            },
+            {
+              "left": "Edwin Hubble",
+              "right": "Avstander til tåker målt med Cepheider"
+            },
+            {
+              "left": "Cepheider",
+              "right": "Pulserende stjerner som brukes til avstander"
+            }
+          ],
+          "explain": "Leavitt skapte målestokken, og Hubble brukte den til å måle avstander til galakser. Uten en god avstandsmåler kan man ikke si hvor raskt universet utvider seg."
+        },
+        {
+          "id": "rom-galaksene-hubble-aar",
+          "step": 4,
+          "type": "year",
+          "prompt": "Hvilket år presenterte Hubble sammenhengen mellom avstand og fart?",
+          "answer": "1929",
+          "explain": "Stigningstallet i diagrammet, Hubble-konstanten, er fortsatt et tema der målingene ikke er helt enige."
+        },
+        {
+          "id": "rom-galaksene-leavitt-aar",
+          "step": 4,
+          "type": "year",
+          "prompt": "Hvilket år publiserte Leavitt resultatet om Cepheider?",
+          "answer": "1912",
+          "explain": "Resultatet ble stående som grunnlag for avstandsstigen i astronomien. En reanalyse fra 2025 fant at resultatene hennes stemmer godt med moderne målinger."
+        },
+        {
+          "id": "rom-galaksene-antall",
+          "step": 4,
+          "type": "number",
+          "prompt": "Hvor mange Cepheider brukte Leavitt i analysen av Den lille magellanske sky?",
+          "answer": "25",
+          "tolerance": 0,
+          "explain": "Den første versjonen hadde ikke noe absolutt nullpunkt, fordi avstanden til skyen var ukjent på den tiden. Sammenhengen ga derfor i første omgang bare relative avstander."
+        }
+      ]
+    },
+    {
+      "id": "rom-sputnik-maanen",
+      "title": "Sputnik til Månen",
+      "tier": 2,
+      "prerequisites": [
+        "rom-newton"
+      ],
+      "years": {
+        "from": 1957,
+        "to": 1969
+      },
+      "summary": "Sputnik, Gagarin og Apollo 11 viser romkappløpet mellom USA og Sovjetunionen og hvordan romfart ble en politisk prioritet.",
+      "lesson": [
+        "4. oktober 1957 sendte Sovjetunionen opp Sputnik 1, den første kunstige satellitten i bane rundt Jorda. Den var en liten metallkule med radiosendere, men den innledet romalderen. Oppskytingen førte direkte til at USA opprettet NASA i 1958.",
+        "12. april 1961 ble Jurij Gagarin det første mennesket i bane rundt Jorda. Åtte år senere, 20. juli 1969, landet Apollo 11 på Månen. Neil Armstrong gikk først ut, og Buzz Aldrin fulgte om lag 19 minutter senere.",
+        "Romkappløpet var en konkurranse mellom USA og Sovjetunionen om teknologi og prestisje under den kalde krigen. Apollo-programmet var USAs svar, og det viste hva rakettteknologien kunne gjøre. Mye av teknologien fra romfarten ble også brukt til satellitter og værvarsling."
+      ],
+      "keyPoints": [
+        "Sputnik 1 ble sendt opp 4. oktober 1957 og var den første kunstige satellitten i bane.",
+        "NASA ble opprettet i 1958, etter Sputnik.",
+        "Jurij Gagarin var det første mennesket i bane rundt Jorda, 12. april 1961.",
+        "Apollo 11 landet på Månen 20. juli 1969, og Neil Armstrong gikk først ut.",
+        "Romkappløpet handlet om teknologi og prestisje under den kalde krigen."
+      ],
+      "sources": [
+        {
+          "title": "65 Years Ago: Sputnik Ushers in the Space Age – NASA",
+          "url": "https://www.nasa.gov/history/65-years-ago-sputnik-ushers-in-the-space-age/"
+        },
+        {
+          "title": "Dawn of the Space Age – NASA",
+          "url": "https://www.nasa.gov/history/dawn-of-the-space-age/"
+        },
+        {
+          "title": "July 20, 1969: One Giant Leap For Mankind – NASA",
+          "url": "https://www.nasa.gov/history/july-20-1969-one-giant-leap-for-mankind/"
+        },
+        {
+          "title": "50 Years Ago: Apollo Astronauts Land, Take First Steps on Moon – NASA",
+          "url": "https://www.nasa.gov/centers-and-facilities/kennedy/50-years-ago-apollo-astronauts-land-take-first-steps-on-moon/"
+        }
+      ],
+      "cards": [
+        {
+          "id": "rom-sputnik-maanen-sputnik",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hva var det første kunstige objektet i bane rundt Jorda?",
+          "answer": "Sputnik 1",
+          "distractors": [
+            "Vostok 1",
+            "Apollo 11",
+            "Hubble-teleskopet"
+          ],
+          "explain": "Sputnik var en liten kule med radiosendere, og signalene kunne fanges opp av radioamatører over hele verden. Det gjorde oppskytingen synlig for alle."
+        },
+        {
+          "id": "rom-sputnik-maanen-gagarin",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvem var det første mennesket i bane rundt Jorda?",
+          "answer": "Jurij Gagarin",
+          "distractors": [
+            "Neil Armstrong",
+            "Valentina Tereshkova",
+            "Sergej Korolev"
+          ],
+          "explain": "Gagarin fløy én runde rundt Jorda, og oppdraget var en tidlig seier for Sovjetunionen i romkappløpet."
+        },
+        {
+          "id": "rom-sputnik-maanen-armstrong",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvem var den første som gikk ut på Månen?",
+          "answer": "Neil Armstrong",
+          "accept": [
+            "Armstrong"
+          ],
+          "explain": "Armstrong fløy de siste meterne manuelt for å unngå et krater fullt av stein. Landingsfartøyet het Eagle."
+        },
+        {
+          "id": "rom-sputnik-maanen-apollo",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva heter NASAs program som sendte mennesker til Månen?",
+          "answer": "Apollo",
+          "accept": [
+            "Apollo-programmet"
+          ],
+          "explain": "Programmet hadde flere bemannede ferder, og Apollo 11 var den første som landet."
+        },
+        {
+          "id": "rom-sputnik-maanen-romkappløp",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva kalles konkurransen mellom USA og Sovjetunionen om romfart?",
+          "answer": "Romkappløpet",
+          "accept": [
+            "romkappløp"
+          ],
+          "explain": "Konkurransen handlet om teknologi og prestisje, og mye av raketteknologien ble brukt videre til satellitter. Den kalde krigen var bakgrunnen for det hele."
+        },
+        {
+          "id": "rom-sputnik-maanen-forklar",
+          "step": 3,
+          "type": "explain",
+          "prompt": "Forklar hvorfor Sputnik fikk så stor betydning for USA.",
+          "answer": "Sputnik viste at Sovjetunionen kunne få en satellitt i bane før USA. Det gjorde romfart til en politisk prioritet, og USA opprettet NASA i 1958.",
+          "checklist": [
+            "Sovjetunionen kom først i bane",
+            "Romfart ble en nasjonal prioritet",
+            "NASA ble opprettet som svar"
+          ],
+          "explain": "Romfartsloven ble underskrevet 29. juli 1958. NASA fikk ansvar for både bemannet og ubemannet romfart."
+        },
+        {
+          "id": "rom-sputnik-maanen-rekkefolge",
+          "step": 3,
+          "type": "order",
+          "prompt": "Sett disse milepælene i romalderen i kronologisk rekkefølge.",
+          "items": [
+            {
+              "label": "Sputnik 1 sendes opp",
+              "year": 1957
+            },
+            {
+              "label": "NASA opprettes",
+              "year": 1958
+            },
+            {
+              "label": "Gagarin blir det første mennesket i bane",
+              "year": 1961
+            },
+            {
+              "label": "Apollo 11 lander på Månen",
+              "year": 1969
+            }
+          ],
+          "explain": "Det gikk tolv år fra Sputnik til Apollo 11. Hver milepæl bygget på den forrige, og mye av teknologien ble utviklet samtidig."
+        },
+        {
+          "id": "rom-sputnik-maanen-koblinger",
+          "step": 3,
+          "type": "match",
+          "prompt": "Koble romfartsnavnet med riktig beskrivelse.",
+          "pairs": [
+            {
+              "left": "Sputnik 1",
+              "right": "Sovjetunionen"
+            },
+            {
+              "left": "NASA",
+              "right": "USAs romfartsorganisasjon"
+            },
+            {
+              "left": "Apollo 11",
+              "right": "Første bemannede landing på Månen"
+            }
+          ],
+          "explain": "Romkappløpet hadde to mål: å komme først i bane og å komme først til Månen. Sovjetunionen vant den første kampen, og USA vant den siste."
+        },
+        {
+          "id": "rom-sputnik-maanen-sputnik-aar",
+          "step": 4,
+          "type": "year",
+          "prompt": "Hvilket år ble Sputnik 1 sendt opp?",
+          "answer": "1957",
+          "explain": "Sputnik var en enkel satellitt, men oppskytingen endret romfartspolitikken i både USA og Sovjetunionen."
+        },
+        {
+          "id": "rom-sputnik-maanen-apollo-aar",
+          "step": 4,
+          "type": "year",
+          "prompt": "Hvilket år landet Apollo 11 på Månen?",
+          "answer": "1969",
+          "explain": "Landingen skjedde om kvelden 20. juli amerikansk tid, som var 21. juli i UTC. Derfor oppgir kildene ulike datoer."
+        },
+        {
+          "id": "rom-sputnik-maanen-antall-aar",
+          "step": 4,
+          "type": "number",
+          "prompt": "Hvor mange år gikk det fra Sputnik 1 til Gagarin fløy i bane?",
+          "answer": "4",
+          "unit": "år",
+          "tolerance": 0,
+          "explain": "Sovjetunionen hadde to store seire i rekke på kort tid, og USA satset tungt for å ta igjen. Det var en av drivkreftene bak Apollo-programmet."
+        }
+      ]
+    },
+    {
+      "id": "rom-teleskop-sonder",
+      "title": "Romteleskoper og romsonder",
+      "tier": 3,
+      "prerequisites": [
+        "rom-galaksene",
+        "rom-sputnik-maanen"
+      ],
+      "years": {
+        "from": 1977,
+        "to": 2021
+      },
+      "summary": "Voyager, Hubble, James Webb og romhavnen på Andøya viser hva romfart gir av kunnskap i dag.",
+      "lesson": [
+        "Voyager 1 ble sendt opp 5. september 1977 og er den fjerneste menneskeskapte gjenstanden. Den krysset grensen til det interstellare rommet i 2012 og sender fortsatt data fra fire instrumenter. Signalene bruker omtrent ett døgn for å nå Jorda.",
+        "Hubble-romteleskopet ble satt ut fra romfergen Discovery 25. april 1990 og går i bane rundt Jorda. Hovedspeilet hadde en produksjonsfeil, og bildene var uskarpe i starten. Feilen ble rettet under et servicetokt i 1993.",
+        "James Webb-teleskopet ble skutt opp 25. desember 2021 med en Ariane 5-rakett fra Fransk Guyana. Det er et infrarødt teleskop som står ved punktet L2, 1,5 millioner kilometer fra Jorda. ESA leverte oppskytingen, og teleskopet er et samarbeid mellom NASA, ESA og den kanadiske romorganisasjonen."
+      ],
+      "keyPoints": [
+        "Voyager 1 (1977) har vært i det interstellare rommet siden 2012.",
+        "Hubble (1990) fikk en speilfeil som ble rettet i 1993.",
+        "James Webb (2021) står ved L2 og ser i infrarødt lys.",
+        "Andøya er Norges romhavn, på Nordmela i Andøy kommune.",
+        "Sonder og teleskoper gjør målinger som ikke kan gjøres fra Jorda."
+      ],
+      "sources": [
+        {
+          "title": "Voyager 1: The Farthest Spacecraft – NASA Science",
+          "url": "https://science.nasa.gov/mission/voyager/voyager-1/"
+        },
+        {
+          "title": "Voyager Reaches Interstellar Space – NASA Science",
+          "url": "https://science.nasa.gov/resource/voyager-reaches-interstellar-space/"
+        },
+        {
+          "title": "Hubble deployment – NASA Science",
+          "url": "https://science.nasa.gov/mission/hubble/observatory/missions-to-hubble/deployment/"
+        },
+        {
+          "title": "Webb's Launch – NASA Science",
+          "url": "https://science.nasa.gov/mission/webb/launch/"
+        },
+        {
+          "title": "Andøya Space – Store norske leksikon",
+          "url": "https://snl.no/And%C3%B8ya_Space"
+        }
+      ],
+      "cards": [
+        {
+          "id": "rom-teleskop-sonder-hubble",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilket romteleskop ble satt ut fra romfergen Discovery i 1990?",
+          "answer": "Hubble",
+          "accept": [
+            "Hubble-teleskopet",
+            "Hubble-romteleskopet"
+          ],
+          "distractors": [
+            "Kepler",
+            "Spitzer",
+            "Voyager 2"
+          ],
+          "explain": "Oppskytingen var planlagt til 1986, men ble utsatt etter Challenger-ulykken. Teleskopet ble derfor stående i lager i flere år."
+        },
+        {
+          "id": "rom-teleskop-sonder-rakett",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilken rakett ble brukt til oppskytingen av teleskopet som ble sendt opp 25. desember 2021?",
+          "answer": "Ariane 5",
+          "distractors": [
+            "Saturn V",
+            "Soyuz",
+            "Spectrum"
+          ],
+          "explain": "Oppskytingen gikk fra Fransk Guyana, der ESA har sin romhavn. ESA leverte oppskytingen som en del av samarbeidet med NASA og den kanadiske romorganisasjonen."
+        },
+        {
+          "id": "rom-teleskop-sonder-andoya",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva heter Norges eneste romhavn, som ligger på Nordmela?",
+          "answer": "Andøya",
+          "accept": [
+            "Andøya Space",
+            "Andøya romhavn"
+          ],
+          "explain": "Romhavnen kan sende satellitter i bane, og den drives av Andøya Space. Forskningsraketter skytes også opp fra Andøya."
+        },
+        {
+          "id": "rom-teleskop-sonder-webb",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva heter teleskopet som ser i infrarødt lys og står ved punktet L2?",
+          "answer": "James Webb",
+          "accept": [
+            "Webb",
+            "James Webb-teleskopet"
+          ],
+          "explain": "Teleskopet må holdes kaldt for å se infrarød stråling uten å bli blendet av varmen fra Sola og Jorda. Derfor står det så langt unna Jorda."
+        },
+        {
+          "id": "rom-teleskop-sonder-forklar",
+          "step": 3,
+          "type": "explain",
+          "prompt": "Forklar hvorfor Hubble måtte repareres etter oppskytingen.",
+          "answer": "Hovedspeilet hadde en produksjonsfeil, og bildene ble uskarpe. Feilen ble rettet under et servicetokt i 1993.",
+          "checklist": [
+            "Hovedspeilet hadde en produksjonsfeil",
+            "Bildene ble uskarpe",
+            "Feilen ble rettet under et servicetokt"
+          ],
+          "explain": "Feilen var liten, men ved så høy oppløsning gjorde den stor forskjell. Hubble har siden fått flere servicetokt."
+        },
+        {
+          "id": "rom-teleskop-sonder-rekkefolge",
+          "step": 3,
+          "type": "order",
+          "prompt": "Sett disse milepælene for romteleskoper og sonder i kronologisk rekkefølge.",
+          "items": [
+            {
+              "label": "Voyager 1 sendes opp",
+              "year": 1977
+            },
+            {
+              "label": "Hubble settes ut fra romfergen",
+              "year": 1990
+            },
+            {
+              "label": "Hubble får rettet speilfeilen",
+              "year": 1993
+            },
+            {
+              "label": "James Webb skytes opp",
+              "year": 2021
+            }
+          ],
+          "explain": "Det gikk over 40 år fra Voyager 1 ble sendt opp til James Webb ble skutt opp. Teknologien i sonder og teleskoper har endret seg mye i den tiden."
+        },
+        {
+          "id": "rom-teleskop-sonder-koblinger",
+          "step": 3,
+          "type": "match",
+          "prompt": "Koble navnet med beskrivelsen.",
+          "pairs": [
+            {
+              "left": "Voyager 1",
+              "right": "Sonde i det interstellare rommet"
+            },
+            {
+              "left": "Hubble",
+              "right": "Teleskop i bane rundt Jorda"
+            },
+            {
+              "left": "Andøya",
+              "right": "Norges romhavn"
+            }
+          ],
+          "explain": "Sonder går ut av solsystemet, mens teleskopene ser ut mot universet. Begge gjør målinger som ikke kan gjøres fra Jorda."
+        },
+        {
+          "id": "rom-teleskop-sonder-voyager-aar",
+          "step": 4,
+          "type": "year",
+          "prompt": "Hvilket år ble Voyager 1 sendt opp?",
+          "answer": "1977",
+          "explain": "Voyager 1 krysset grensen til det interstellare rommet i 2012, etter over 35 år i drift."
+        },
+        {
+          "id": "rom-teleskop-sonder-hubble-aar",
+          "step": 4,
+          "type": "year",
+          "prompt": "Hvilket år ble Hubble reparert for speilfeilen?",
+          "answer": "1993",
+          "explain": "Hubble har siden fått flere servicetokt, der nye instrumenter er satt inn."
+        },
+        {
+          "id": "rom-teleskop-sonder-avstand",
+          "step": 4,
+          "type": "number",
+          "prompt": "Omtrent hvor langt unna Jorda står James Webb, i millioner kilometer?",
+          "answer": "1,5",
+          "unit": "millioner kilometer",
+          "tolerance": 0,
+          "explain": "Punktet L2 ligger på linjen mellom Sola og Jorda, bak Jorda sett fra Sola. Teleskopet følger med Jorda rundt Sola."
+        }
+      ]
+    }
+  ]
+}
