@@ -4,7 +4,21 @@ Offline kunnskapstrening på norsk, laget for iPhone 17 Pro.
 
 Live app: https://atlas-first-app.atlas-memory.workers.dev
 
-## Gjeldende utgave — 1.2.0: Én historie gjennom tid
+## Gjeldende utgave — 1.3.0: Et atlas, ikke en mal
+
+Hele grensesnittet er tegnet om, slik at appen ser ut som et redigert oppslagsverk og bruker skjermen bedre. Funksjoner, spørsmål, retting og data er uendret.
+
+- **Mer innhold høyere opp**: toppfeltet er omkring 48 pt i stedet for 120, og «Gi tilbakemelding» er en ikonknapp som fortsatt finnes på alle skjermer, også under en økt. Fanelinjen fordeler de tre fanene over hele bredden.
+- **Typografi og linjer i stedet for kort**: serif til titler, spørsmål, årstall og tall; tynne linjer, innrykk og luft deler opp innholdet. Et fylt kort brukes bare til det ene som skal ha oppmerksomheten på en skjerm (dagens kapittel, spørsmålet). Lister er linjerte rader.
+- **I dag**: dagens kapittel og startknappen ligger over bretten. «Slik fungerer Atlas» er én sammenleggbar linje.
+- **Økten**: tynn fremdriftslinje med teller, spørsmålet øverst, handlingen i en fast bunnlinje. Tilbakemeldingen viser svaret stort, så forklaringen, og samler sammenheng og kilder i sammenleggbare rader. Flervalg, tidslinjer, koblinger, kart, melodier og avstander følger samme formspråk.
+- **Atlas**: Tid er en tidslinje med epoker langs en rygg, Kart fyller bredden med historiesynene lagt på kartet, og Emner er en linjert innholdsfortegnelse.
+- **Deg**: én rad med faner og én rad med underfaner som aldri deler ord. Fremgangen vises som tall og tynne søyler, innstillingene i grupper.
+- **Ingen emoji**: landenes flagg var emoji. Nå er de ekte flaggbilder (flag-icons, MIT-lisens, `public/vendor/FLAG-ICONS-LICENSE.txt`) samlet i `public/flags.json` og lastet ved første bruk. En test stopper emoji i spørsmålstekster.
+
+Designbeslutninger som skal holde: farger, skrift, avstander og hjørner er tokens i `src/lib/design.css`, og skjermene bruker bare tokens. Felles komponenter ligger i `design.css`; I dag og øktene i `src/lib/styles/today.css`; Atlas og Deg i `src/lib/styles/atlas-me.css`. Bare ett fremhevet kort (`.card.feature`) per skjerm.
+
+## 1.2.0: Én historie gjennom tid
 
 Appen er samlet til tre steder: **I dag**, **Atlas** og **Deg**. Før var dagens økt, fri quiz og Verden tre separate læringssystemer med egne innganger og innstillinger, fordelt på seks faner. Nå er hukommelsen hovedsaken, og perspektivene er vevd inn i den.
 
@@ -93,6 +107,8 @@ Publiseringen gikk denne gangen via Wrangler, fordi Cloudflare-tilkoblingen ikke
 The app lives in `src/`; public knowledge, maps, icons, and the manifest are in `public/`. Run `npm install`, `npm test`, and `npm run build`. The build validates and hashes knowledge, compiles the SvelteKit app, generates a versioned service worker, and creates `worker.mjs` with compressed public assets. Run `npm run dev` for local development.
 
 Deployment uses the authenticated Cloudflare plugin's API tools. Upload `worker.mjs` as a module using multipart metadata with `main_module: worker.mjs`, compatibility date `2026-10-10`, and observability enabled. The Worker is named `atlas-first-app`; its workers.dev route is enabled. No Wrangler CLI is required. Precompressed responses use explicit manual body encoding.
+
+When the Cloudflare tools can't upload a Worker, deploy with Wrangler from a folder that holds only `worker.mjs` and a `wrangler.toml` with the settings above (`no_bundle = true`). Running Wrangler from the repository root also uploads stray text files (licences, `src/app.html`) as extra modules. Keep the compressed upload under 3 MiB: 1.3.0 is about 2.8 MiB, and the flag bundle accounts for about 0.35 MiB of it.
 
 Cloudflare serves public assets only. Personal learning data remains on the current browser/device and may be cleared by browser settings. Offline learning needs one successful online visit and completed cache installation.
 
