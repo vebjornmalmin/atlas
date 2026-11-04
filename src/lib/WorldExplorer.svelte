@@ -101,7 +101,7 @@
 
 {#if focus}
   <div class="card focus-card" id="world-focus">
-    <div class="focus-head">{#if flagFor(focus)}<span class="focus-flag"><Flag iso2={#if flagFor(focus)}<Flag iso2={flagFor(focus)} />{/if}size="medium" /></span>{/if}<div><p class="eyebrow">{typeLabel(focus.type)}</p><h2>{focus.label}</h2></div></div>
+    <div class="focus-head">{#if flagFor(focus)}<span class="focus-flag"><Flag iso2={flagFor(focus)} size="medium" /></span>{/if}<div><p class="eyebrow">{typeLabel(focus.type)}</p><h2>{focus.label}</h2></div></div>
     <p>{focus.summary}</p>
     <div class="metric-row">
       <span><strong>{graph.perspectives.impact?.[focus.id] ?? 0}</strong>påvirkning</span>
