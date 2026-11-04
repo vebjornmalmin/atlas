@@ -1,0 +1,1293 @@
+{
+  "domain": {
+    "id": "ideer",
+    "title": "Filosofi og idéhistorie",
+    "subject": "philosophy",
+    "order": 11,
+    "description": "Hovedretningene i vestlig filosofi fra antikken til 1900-tallet, og hvordan idéene hang sammen med historien rundt dem."
+  },
+  "units": [
+    {
+      "id": "ide-antikken",
+      "title": "Antikkens store tenkere",
+      "tier": 1,
+      "prerequisites": [
+        "sam-filosofi",
+        "vh-antikkens-hellas"
+      ],
+      "years": {
+        "from": -600,
+        "to": -322
+      },
+      "summary": "Fra de første greske filosofene til Aristoteles spurte tenkerne hva som er virkelig, hva vi kan vite og hvordan vi bør leve.",
+      "lesson": [
+        "De første greske filosofene søkte et grunnprinsipp bak alt som finnes. Sokrates skrev ingenting selv. Han førte samtaler i Athen ved å stille spørsmål til andre, og han døde i 399 f.Kr.",
+        "Platon var elev av Sokrates. Han skilte mellom sansenes verden og ideenes verden, og mente at ideene er mer virkelige enn det vi sanser. Om lag 387 f.Kr. grunnla han Akademiet nær Athen. Akademiet virket til 529 e.Kr., da det ble stengt.",
+        "Aristoteles var elev av Platon og lærer for Aleksander den store. Han grunnla skolen Lykeion og skrev om biologi, logikk, etikk og politikk. Han grunnla formell logikk med syllogismen. Han døde i 322 f.Kr."
+      ],
+      "keyPoints": [
+        "Sokrates skrev ingenting selv og er kjent gjennom Platon.",
+        "Platon mente at ideenes verden er mer virkelig enn sansenes.",
+        "Akademiet ble grunnlagt om lag 387 f.Kr. og stengt i 529 e.Kr.",
+        "Aristoteles grunnla formell logikk med syllogismen."
+      ],
+      "sources": [
+        {
+          "title": "antikkens filosofi – Store norske leksikon",
+          "url": "https://snl.no/antikkens_filosofi"
+        },
+        {
+          "title": "Sokrates – Store norske leksikon",
+          "url": "https://snl.no/Sokrates"
+        },
+        {
+          "title": "Vestens filosofer – Store norske leksikon",
+          "url": "https://snl.no/Vestens_filosofer"
+        },
+        {
+          "title": "akademi – Store norske leksikon",
+          "url": "https://snl.no/akademi"
+        }
+      ],
+      "cards": [
+        {
+          "id": "ide-antikken-ideverden",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilken filosof mente at ideene er mer virkelige enn tingene vi sanser?",
+          "answer": "Platon",
+          "distractors": [
+            "Aristoteles",
+            "Sokrates",
+            "Descartes"
+          ],
+          "explain": "Platon mente at ideene er evige og uforanderlige, mens tingene vi sanser endrer seg. Sokrates skrev ingenting selv, og Platons dialoger er den viktigste kilden til hans tanker."
+        },
+        {
+          "id": "ide-antikken-sokrates-metode",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilken metode brukte Sokrates i samtalene sine?",
+          "answer": "Ved å stille spørsmål til andre",
+          "distractors": [
+            "Ved å skrive systematiske lærebøker",
+            "Ved å gjøre eksperimenter i naturen",
+            "Ved å tolke hellige tekster"
+          ],
+          "explain": "Han døde i 399 f.Kr. og etterlot seg ingen skrifter. Det vi vet om ham, kommer først og fremst fra Platons dialoger."
+        },
+        {
+          "id": "ide-antikken-aleksander-laerer",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilken filosof var lærer for Aleksander den store?",
+          "answer": "Aristoteles",
+          "distractors": [
+            "Platon",
+            "Sokrates",
+            "Epikur"
+          ],
+          "explain": "Aristoteles skrev om biologi, logikk, etikk og politikk, og hans tanker ble sentrale i middelalderen."
+        },
+        {
+          "id": "ide-antikken-akademiet",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvilket navn ga Platon til skolen sin i Athen?",
+          "answer": "Akademiet",
+          "accept": [
+            "Akademia",
+            "Akademeia",
+            "Akademi"
+          ],
+          "explain": "Navnet kommer fra tempelområdet Akademeia ved Athen. I dag brukes ordet akademi om høyere læresteder."
+        },
+        {
+          "id": "ide-antikken-lykeion",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva kalte Aristoteles skolen sin i Athen?",
+          "answer": "Lykeion",
+          "accept": [
+            "Lykeon"
+          ],
+          "explain": "Skolen kalles også den peripatetiske skole. Aristoteles var lærer for Aleksander den store."
+        },
+        {
+          "id": "ide-antikken-syllogisme",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvilken slutningsform grunnla Aristoteles i logikken?",
+          "answer": "Syllogismen",
+          "accept": [
+            "Syllogisme"
+          ],
+          "explain": "En syllogisme har to premisser og en konklusjon. Alle mennesker er dødelige, Sokrates er et menneske, altså er Sokrates dødelig."
+        },
+        {
+          "id": "ide-antikken-tidslinje",
+          "step": 3,
+          "type": "order",
+          "prompt": "Sett disse hendelsene i riktig rekkefølge.",
+          "items": [
+            {
+              "label": "Sokrates dør",
+              "year": -399
+            },
+            {
+              "label": "Akademiet grunnlegges",
+              "year": -387
+            },
+            {
+              "label": "Aristoteles dør",
+              "year": -322
+            }
+          ],
+          "explain": "Platon grunnla Akademiet om lag tolv år etter Sokrates' død. Aristoteles døde 77 år etter Sokrates, altså i neste generasjon av tenkere."
+        },
+        {
+          "id": "ide-antikken-sanser",
+          "step": 3,
+          "type": "explain",
+          "prompt": "Hvorfor mente Platon at sansene ikke kan gi sikker kunnskap?",
+          "answer": "Sansene gir oss ting som endrer seg og kan lure oss. Sann kunnskap må gjelde det som er varig, og det finner vi gjennom fornuften, i ideene.",
+          "checklist": [
+            "Nevner at tingene vi sanser endrer seg",
+            "Sier at sann kunnskap må være varig",
+            "Knytter dette til ideene eller fornuften"
+          ],
+          "explain": "Dette er kjernen i idélæren: det vi sanser er en ufullkommen avbildning av ideene, og det er ideene som er det virkelige."
+        },
+        {
+          "id": "ide-antikken-filosofene",
+          "step": 3,
+          "type": "match",
+          "prompt": "Koble filosofen med hovedbidraget.",
+          "pairs": [
+            {
+              "left": "Sokrates",
+              "right": "spørsmål i samtaler"
+            },
+            {
+              "left": "Platon",
+              "right": "idélæren"
+            },
+            {
+              "left": "Aristoteles",
+              "right": "formell logikk"
+            }
+          ],
+          "explain": "Sokrates skrev ingenting selv, mens Platon og Aristoteles etterlot store skrifter. Aristoteles grunnla formell logikk med syllogismen, og det er et av hans viktigste bidrag."
+        },
+        {
+          "id": "ide-antikken-akademiet-stengt",
+          "step": 4,
+          "type": "year",
+          "prompt": "Hvilket år ble Akademiet i Athen stengt?",
+          "answer": "529",
+          "explain": "Keiser Justinian lot de gjenværende hedenske helligdommene og filosofiskolene stenge i 529. Akademiet hadde da virket i over 900 år."
+        },
+        {
+          "id": "ide-antikken-aristoteles-dod",
+          "step": 4,
+          "type": "choice",
+          "prompt": "Hvilket år døde Aristoteles?",
+          "answer": "322 f.Kr.",
+          "distractors": [
+            "399 f.Kr.",
+            "387 f.Kr.",
+            "529 e.Kr."
+          ],
+          "explain": "Aristoteles døde 77 år etter Sokrates. Akademiet, som Platon grunnla, varte i over 900 år."
+        },
+        {
+          "id": "ide-antikken-athen",
+          "step": 4,
+          "type": "text",
+          "prompt": "I hvilken by lå Akademiet?",
+          "answer": "Athen",
+          "accept": [
+            "Aten"
+          ],
+          "explain": "Platon grunnla skolen nær tempelområdet Akademeia ved Athen. I dag brukes ordet om høyere læresteder."
+        }
+      ]
+    },
+    {
+      "id": "ide-hellenismen",
+      "title": "Hellenismen og romersk filosofi",
+      "tier": 2,
+      "prerequisites": [
+        "ide-antikken",
+        "vh-romerriket"
+      ],
+      "years": {
+        "from": -323,
+        "to": 180
+      },
+      "summary": "Etter Aleksander den store delte filosofien seg i skoler som stoikere og epikureere, og de formet livssyn i Hellas og i Roma.",
+      "lesson": [
+        "Hellenismen er perioden fra Aleksander den stores død i 323 f.Kr. og fram til Egypt ble romersk i 30 f.Kr. Filosofien var ikke ett system, men flere skoler som konkurrerte med hverandre, blant dem platonikere, epikureere og stoikere.",
+        "Stoisismen ble grunnlagt i Athen rundt år 300 f.Kr. av Zenon av Kition, som underviste i stoaen, en søylegang i byen. Stoikerne ville forstå verden slik at frykt og sinne ikke tok overhånd. Fornuften skulle styre følelsene.",
+        "Epikur grunnla en skole i Athen og mente at lykke er fravær av smerte, ikke overflod av nytelse. Målet var ataraksia, en indre ro. Epikureerne vektla følelsene, mens stoikerne vektla fornuften.",
+        "Stoisismen ble også romersk. Keiser Marcus Aurelius var stoiker og skrev dagboken Til meg selv. Han døde i 180 e.Kr."
+      ],
+      "keyPoints": [
+        "Hellenismen varte fra 323 f.Kr. til Egypt ble romersk i 30 f.Kr.",
+        "Stoisismen ble grunnlagt i Athen rundt 300 f.Kr.",
+        "Stoikerne ville la fornuften styre følelsene.",
+        "Epikur mente at lykke er ro og fravær av smerte.",
+        "Marcus Aurelius var keiser og stoiker, og han døde i 180 e.Kr."
+      ],
+      "sources": [
+        {
+          "title": "hellenismen – Store norske leksikon",
+          "url": "https://snl.no/hellenismen"
+        },
+        {
+          "title": "stoisisme – Store norske leksikon",
+          "url": "https://snl.no/stoisisme"
+        },
+        {
+          "title": "Epikur – Store norske leksikon",
+          "url": "https://snl.no/Epikur"
+        },
+        {
+          "title": "ataraksia – Store norske leksikon",
+          "url": "https://snl.no/ataraksia"
+        },
+        {
+          "title": "Marcus Aurelius – Store norske leksikon",
+          "url": "https://snl.no/Marcus_Aurelius"
+        }
+      ],
+      "cards": [
+        {
+          "id": "ide-hellenismen-stoisme",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilken skole grunnla Zenon av Kition i Athen rundt år 300 f.Kr.?",
+          "answer": "Stoisismen",
+          "distractors": [
+            "Epikureismen",
+            "Platonismen",
+            "Aristotelismen"
+          ],
+          "explain": "Navnet kommer fra stoaen i Athen, der Zenon underviste. Skolen fikk stor betydning både i den greske og i den romerske tiden."
+        },
+        {
+          "id": "ide-hellenismen-lykke",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hva mente Epikur at lykke først og fremst er?",
+          "answer": "Fravær av smerte",
+          "distractors": [
+            "Overflod av nytelse",
+            "Stor rikdom og makt",
+            "Å følge samfunnets regler"
+          ],
+          "explain": "Epikur anbefalte et nesten asketisk liv, og målet var ro i sjelen. Ordene epikureer og epikurisme fikk senere en negativ betydning."
+        },
+        {
+          "id": "ide-hellenismen-marcus",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilken keiser var stoiker og skrev dagboken Til meg selv?",
+          "answer": "Marcus Aurelius",
+          "distractors": [
+            "Nero",
+            "Augustus",
+            "Justinian"
+          ],
+          "explain": "Han styrte Romerriket fra 161 til 180 og kalles ofte filosofkeiseren."
+        },
+        {
+          "id": "ide-hellenismen-stoa",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva kalles søylegangen i Athen der Zenon underviste, og som ga navn til skolen?",
+          "answer": "Stoaen",
+          "accept": [
+            "Stoa"
+          ],
+          "explain": "Skolen fikk navn etter stoaen. Dagens uttrykk «stoisk ro» betegner en som holder roen selv når livet er vanskelig."
+        },
+        {
+          "id": "ide-hellenismen-ataraksia",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva kalles den indre roen som epikureerne søkte?",
+          "answer": "Ataraksia",
+          "accept": [
+            "Ataraksi"
+          ],
+          "explain": "Ordet betyr ro, likevekt og styrke i sjelen, og det er et sentralt begrep i epikureismen."
+        },
+        {
+          "id": "ide-hellenismen-epikur",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvem grunnla skolen i Athen som lærte at lykke er ro og fravær av smerte?",
+          "answer": "Epikur",
+          "accept": [
+            "Epikuros"
+          ],
+          "explain": "Ordet epikureer kommer fra navnet hans. Etterfølgerne misforsto ham ofte og la vekt på sanselig nytelse."
+        },
+        {
+          "id": "ide-hellenismen-tidslinje",
+          "step": 3,
+          "type": "order",
+          "prompt": "Sett disse hendelsene fra hellenismen i riktig rekkefølge.",
+          "items": [
+            {
+              "label": "Hellenismen begynner med Aleksanders død",
+              "year": -323
+            },
+            {
+              "label": "Stoisismen grunnlegges i Athen",
+              "year": -300
+            },
+            {
+              "label": "Egypt blir romersk",
+              "year": -30
+            }
+          ],
+          "explain": "Stoisismen kom rundt 300 f.Kr., omtrent 20 år etter hellenismens start. Egypt ble romersk 270 år senere."
+        },
+        {
+          "id": "ide-hellenismen-folelser",
+          "step": 3,
+          "type": "explain",
+          "prompt": "Hvordan skilte stoisismen og epikureismen seg i synet på følelser?",
+          "answer": "Stoikerne ville la fornuften styre og dempe frykt og sinne. Epikureerne vektla følelsene og deres betydning for livet, og de søkte ro ved å begrense begjær.",
+          "checklist": [
+            "Nevner fornuften hos stoikerne",
+            "Nevner følelsene hos epikureerne",
+            "Sier hva målet var for begge"
+          ],
+          "explain": "Det stoiske uttrykket stoisk ro lever fortsatt i norsk språk, mens ordet epikureer har fått en negativ klang."
+        },
+        {
+          "id": "ide-hellenismen-koblinger",
+          "step": 3,
+          "type": "match",
+          "prompt": "Koble skolen med hovedtanken.",
+          "pairs": [
+            {
+              "left": "Stoikerne",
+              "right": "fornuften skal styre følelsene"
+            },
+            {
+              "left": "Epikureerne",
+              "right": "ro og fravær av smerte"
+            },
+            {
+              "left": "Zenon av Kition",
+              "right": "grunnla stoisismen i Athen"
+            }
+          ],
+          "explain": "Begge skolene svarte på spørsmålet om hvordan man kan leve et godt liv. Stoikerne ville styre følelsene, mens epikureerne ville finne ro."
+        },
+        {
+          "id": "ide-hellenismen-aurelius-dod",
+          "step": 4,
+          "type": "year",
+          "prompt": "Hvilket år døde keiser Marcus Aurelius?",
+          "answer": "180",
+          "explain": "Han styrte fra 161. Sønnen Commodus ble medregent fra 177 og etterfulgte faren da han døde i 180."
+        },
+        {
+          "id": "ide-hellenismen-start",
+          "step": 4,
+          "type": "choice",
+          "prompt": "Hvilket år begynte hellenismen?",
+          "answer": "323 f.Kr.",
+          "distractors": [
+            "300 f.Kr.",
+            "30 f.Kr.",
+            "180 e.Kr."
+          ],
+          "explain": "Hellenismen begynte med Aleksander den stores død. Perioden varte i nesten tre århundrer, til Egypt ble romersk."
+        },
+        {
+          "id": "ide-hellenismen-dagbok",
+          "step": 4,
+          "type": "text",
+          "prompt": "Hva heter dagboken som keiser Marcus Aurelius skrev?",
+          "answer": "Til meg selv",
+          "accept": [
+            "Til meg selv."
+          ],
+          "explain": "Boken er skrevet som refleksjoner til en selv, og den er et av de mest kjente stoiske verkene."
+        }
+      ]
+    },
+    {
+      "id": "ide-middelalder",
+      "title": "Middelalderens filosofi",
+      "tier": 2,
+      "prerequisites": [
+        "ide-antikken",
+        "vh-middelalderen"
+      ],
+      "years": {
+        "from": 400,
+        "to": 1274
+      },
+      "summary": "I middelalderen ble den greske filosofien tatt opp av kristne og arabiske tenkere, som søkte å forene fornuft og tro.",
+      "lesson": [
+        "Augustin av Hippo (354–430) forente platonisme og nyplatonisme med den kristne troen. Hans filosofi var rådende gjennom store deler av middelalderen og la grunnlaget for teologien.",
+        "Ibn Rushd, kjent i Europa som Averroës, levde 1126–1198. Han var en arabisk filosof som regnes som middelalderens største naturfilosof, og han tolket Aristoteles.",
+        "Thomas av Aquino (1225–1274) var født i Italia. Han ville forene Aristoteles med kristen teologi, og det er hovedtemaet i Summa Theologiae. Denne tradisjonen kalles skolastikk.",
+        "Middelalderens tenkere sto overfor et problem: Aristoteles var skrevet før kristendommen. Fornuft og tro måtte få en felles plass, og dette var kjernen i skolastikken."
+      ],
+      "keyPoints": [
+        "Augustin forente platonisme med kristen tro.",
+        "Ibn Rushd (Averroës) levde 1126–1198 og var en viktig aristotelisk filosof.",
+        "Thomas av Aquino ville forene Aristoteles med kristen teologi.",
+        "Thomas skrev Summa Theologiae, et systematisk verk om kristen lære.",
+        "Tradisjonen der fornuft og tro skulle forenes kalles skolastikk."
+      ],
+      "sources": [
+        {
+          "title": "filosofi i middelalderen – Store norske leksikon",
+          "url": "https://snl.no/filosofi_i_middelalderen"
+        },
+        {
+          "title": "Thomas Aquinas – Store norske leksikon",
+          "url": "https://snl.no/Thomas_Aquinas"
+        },
+        {
+          "title": "aristotelisme – Store norske leksikon",
+          "url": "https://snl.no/aristotelisme"
+        },
+        {
+          "title": "Vestens filosofer – Store norske leksikon",
+          "url": "https://snl.no/Vestens_filosofer"
+        }
+      ],
+      "cards": [
+        {
+          "id": "ide-middelalder-augustin",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilken kirkefar forente platonisme og nyplatonisme med kristen tro?",
+          "answer": "Augustin",
+          "distractors": [
+            "Thomas av Aquino",
+            "Anselm av Canterbury",
+            "Ibn Rushd"
+          ],
+          "explain": "Augustin levde fra 354 til 430 og kalles Augustin av Hippo. Hans filosofi var rådende gjennom store deler av middelalderen."
+        },
+        {
+          "id": "ide-middelalder-summa",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvem forsøkte å forene aristotelisk filosofi med kristen teologi?",
+          "answer": "Thomas av Aquino",
+          "distractors": [
+            "Augustin av Hippo",
+            "Anselm av Canterbury",
+            "Ibn Rushd"
+          ],
+          "explain": "Thomas levde 1225–1274. Summa Theologiae er et systematisk verk, og han skrev også Summa Contra Gentiles."
+        },
+        {
+          "id": "ide-middelalder-naturfilosof",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilken arabisk filosof regnes som middelalderens største naturfilosof?",
+          "answer": "Ibn Rushd",
+          "distractors": [
+            "Avicenna",
+            "Al-Farabi",
+            "Al-Ghazali"
+          ],
+          "explain": "Han levde 1126–1198 og regnes som middelalderens største naturfilosof."
+        },
+        {
+          "id": "ide-middelalder-summa-navn",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva heter Thomas av Aquinos viktigste systematiske verk?",
+          "answer": "Summa Theologiae",
+          "accept": [
+            "Summa theologiae",
+            "Summa Theologica"
+          ],
+          "explain": "Hans andre store verk er Summa Contra Gentiles. Begge er systematiske framstillinger av kristen lære og filosofi."
+        },
+        {
+          "id": "ide-middelalder-averroes",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvilket latinsk navn fikk den arabiske filosofen Ibn Rushd i Europa?",
+          "answer": "Averroës",
+          "accept": [
+            "Averroes"
+          ],
+          "explain": "Det latinske navnet er et av to navn på samme filosof, og du vil møte begge i litteraturen."
+        },
+        {
+          "id": "ide-middelalder-skolastikk",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva kalles fagtradisjonen som prøvde å forene fornuft og tro i middelalderen?",
+          "answer": "Skolastikk",
+          "accept": [
+            "Skolastikken"
+          ],
+          "explain": "Skolastikken brukte logiske argumenter til å forklare kristen lære. Thomas av Aquino er den mest kjente representanten."
+        },
+        {
+          "id": "ide-middelalder-tidslinje",
+          "step": 3,
+          "type": "order",
+          "prompt": "Sett disse middelalderske tenkerne i riktig rekkefølge etter dødsår.",
+          "items": [
+            {
+              "label": "Augustin dør",
+              "year": 430
+            },
+            {
+              "label": "Ibn Rushd dør",
+              "year": 1198
+            },
+            {
+              "label": "Thomas av Aquino dør",
+              "year": 1274
+            }
+          ],
+          "explain": "Mellom Augustins død og Ibn Rushds død gikk nesten 800 år. Middelalderen var lang, og tenkningen endret seg mye i den perioden."
+        },
+        {
+          "id": "ide-middelalder-vanskelig",
+          "step": 3,
+          "type": "explain",
+          "prompt": "Hvorfor var det ikke enkelt å forene den greske filosofen med kristen lære?",
+          "answer": "Han levde før kristendommen, og hans filosofi bygde på fornuft og naturlig erfaring. Tenkerne måtte avgjøre hva som kunne beholdes og hva som måtte forkastes.",
+          "checklist": [
+            "Nevner at filosofen var før kristendommen",
+            "Nevner fornuft og naturlig erfaring",
+            "Sier at tenkerne måtte velge"
+          ],
+          "explain": "Thomas mente at fornuft og tro ikke kan motsi hverandre, og han brukte Aristoteles' begreper i sitt eget system."
+        },
+        {
+          "id": "ide-middelalder-koblinger",
+          "step": 3,
+          "type": "match",
+          "prompt": "Koble tenkeren med hovedretningen.",
+          "pairs": [
+            {
+              "left": "Augustin",
+              "right": "platonisme med kristen tro"
+            },
+            {
+              "left": "Thomas av Aquino",
+              "right": "aristotelisme med kristen teologi"
+            },
+            {
+              "left": "Ibn Rushd",
+              "right": "aristotelisk naturfilosofi"
+            }
+          ],
+          "explain": "Augustin hentet mest fra Platon, og Thomas fra Aristoteles. Begge søkte å forene filosofi og tro, men fra ulike utgangspunkt."
+        },
+        {
+          "id": "ide-middelalder-ibn-rushd-fodt",
+          "step": 4,
+          "type": "year",
+          "prompt": "Hvilket år ble Ibn Rushd født?",
+          "answer": "1126",
+          "explain": "Han døde i 1198, altså 72 år senere."
+        },
+        {
+          "id": "ide-middelalder-augustin-dod",
+          "step": 4,
+          "type": "choice",
+          "prompt": "Hvilket år døde Augustin av Hippo?",
+          "answer": "430",
+          "distractors": [
+            "354",
+            "1198",
+            "1274"
+          ],
+          "explain": "Augustin levde fra 354 til 430. Ibn Rushd døde i 1198, og Thomas av Aquino døde i 1274."
+        },
+        {
+          "id": "ide-middelalder-thomas-fodeland",
+          "step": 4,
+          "type": "choice",
+          "prompt": "Hvilket land ble Thomas av Aquino født i?",
+          "answer": "Italia",
+          "distractors": [
+            "Frankrike",
+            "Spania",
+            "Tyskland"
+          ],
+          "explain": "Han ble født i Roccasecca i Italia og døde i Fossanova, også i Italia. Dødsdagen var 7. mars 1274."
+        }
+      ]
+    },
+    {
+      "id": "ide-fornuft",
+      "title": "Fornuft, erfaring og den moderne filosofien",
+      "tier": 2,
+      "prerequisites": [
+        "ide-middelalder",
+        "vh-opplysningstiden-revolusjonene"
+      ],
+      "years": {
+        "from": 1641,
+        "to": 1788
+      },
+      "summary": "Fra Descartes til Kant ble spørsmålet om kunnskap sentralt: kommer den fra fornuften eller fra erfaringen?",
+      "lesson": [
+        "René Descartes ville finne et sikkert utgangspunkt for kunnskap. Han tvilte på alt han kunne tvile på, og fant at han ikke kunne tvile på at han selv tvilte. I Meditasjoner over filosofiens grunnlag fra 1641 ble dette til «jeg tenker, altså er jeg», på latin cogito, ergo sum.",
+        "Rasjonalismen, som Descartes stod for, mente at fornuften er hovedkilden til kunnskap. Empiristene mente at erfaringen er det. John Locke beskrev sinnet som en tom tavle ved fødselen. David Hume var den mest radikale empiristen, og han kritiserte årsaksbegrepet.",
+        "Immanuel Kant forsøkte å forene de to retningene. I Kritikk av den rene fornuft fra 1781 hevdet han at forstanden former erfaringen. Han skilte mellom tingene slik vi erfarer dem og tingene i seg selv, som vi ikke kan vite noe sikkert om.",
+        "Kant utviklet moralteorien sin i Kritikk av den praktiske fornuft fra 1788."
+      ],
+      "keyPoints": [
+        "Descartes fant et sikkert utgangspunkt i tanken «jeg tenker, altså er jeg».",
+        "Rasjonalister mente fornuften er hovedkilden til kunnskap, empiristene erfaringen.",
+        "Locke beskrev sinnet som en tom tavle, og Hume kritiserte årsaksbegrepet.",
+        "Kant forsøkte å forene de to retningene i Kritikk av den rene fornuft (1781).",
+        "Kant utviklet moralteorien sin i Kritikk av den praktiske fornuft (1788)."
+      ],
+      "sources": [
+        {
+          "title": "rasjonalisme – Store norske leksikon",
+          "url": "https://snl.no/rasjonalisme"
+        },
+        {
+          "title": "empirisme – Store norske leksikon",
+          "url": "https://snl.no/empirisme"
+        },
+        {
+          "title": "David Hume – Store norske leksikon",
+          "url": "https://snl.no/David_Hume"
+        },
+        {
+          "title": "Meditasjoner over filosofiens grunnlag – Store norske leksikon",
+          "url": "https://snl.no/Meditasjoner_over_filosofiens_grunnlag"
+        },
+        {
+          "title": "Kritikk av den rene fornuft – Store norske leksikon",
+          "url": "https://snl.no/Kritikk_av_den_rene_fornuft"
+        },
+        {
+          "title": "Immanuel Kant – Store norske leksikon",
+          "url": "https://snl.no/Immanuel_Kant"
+        }
+      ],
+      "cards": [
+        {
+          "id": "ide-fornuft-descartes",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilken filosof brukte metodisk tvil og fant ut at han ikke kunne tvile på at han tvilte?",
+          "answer": "Descartes",
+          "distractors": [
+            "Locke",
+            "Hume",
+            "Kant"
+          ],
+          "explain": "Dette står i Meditasjoner over filosofiens grunnlag fra 1641, og det er et av de mest siterte utsagnene i nyere filosofi."
+        },
+        {
+          "id": "ide-fornuft-locke",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilken empirist beskrev sinnet som en tom tavle ved fødselen?",
+          "answer": "John Locke",
+          "distractors": [
+            "Descartes",
+            "Kant",
+            "Spinoza"
+          ],
+          "explain": "Locke regnes som en av de klassiske empiristene. Han mente at all kunnskap stammer fra erfaring."
+        },
+        {
+          "id": "ide-fornuft-kant-i-seg-selv",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilken filosof skilte mellom tingene slik vi erfarer dem og tingene slik de er i seg selv?",
+          "answer": "Kant",
+          "distractors": [
+            "Hume",
+            "Locke",
+            "Descartes"
+          ],
+          "explain": "Kant kalte de ukjente tingene for noumena. Han mente vi bare kan kjenne ting slik de framtrer for oss."
+        },
+        {
+          "id": "ide-fornuft-cogito",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva heter Descartes' latinske formulering av «jeg tenker, altså er jeg»?",
+          "answer": "cogito, ergo sum",
+          "accept": [
+            "Cogito, ergo sum",
+            "Cogito ergo sum",
+            "cogito ergo sum"
+          ],
+          "explain": "Descartes' utgangspunkt var at tvilen selv beviser at det finnes en som tviler."
+        },
+        {
+          "id": "ide-fornuft-hume",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvilken britisk filosof kritiserte årsaksbegrepet?",
+          "answer": "David Hume",
+          "accept": [
+            "Hume"
+          ],
+          "explain": "Problemet han reiste kalles det humske problemet: erfaring alene kan ikke bevise at fremtiden blir som fortiden. Det har vært diskutert siden."
+        },
+        {
+          "id": "ide-fornuft-rasjonalisme",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva kalles retningen som mener at fornuften er hovedkilden til kunnskap?",
+          "answer": "Rasjonalisme",
+          "accept": [
+            "Rasjonalismen"
+          ],
+          "explain": "Den står i motsetning til empirismen, der erfaring er hovedkilden. Descartes, Spinoza og Leibniz regnes som sentrale rasjonalister."
+        },
+        {
+          "id": "ide-fornuft-tidslinje",
+          "step": 3,
+          "type": "order",
+          "prompt": "Sett disse verkene i riktig rekkefølge.",
+          "items": [
+            {
+              "label": "Descartes' Meditasjoner",
+              "year": 1641
+            },
+            {
+              "label": "Kants Kritikk av den rene fornuft",
+              "year": 1781
+            },
+            {
+              "label": "Kants Kritikk av den praktiske fornuft",
+              "year": 1788
+            }
+          ],
+          "explain": "Mellom Descartes' Meditasjoner og Kants første kritikk gikk det 140 år. Kant utgav sin andre kritikk sju år senere."
+        },
+        {
+          "id": "ide-fornuft-kant-kunnskap",
+          "step": 3,
+          "type": "explain",
+          "prompt": "Hvordan kan vi ha kunnskap som både er nødvendig og bringer noe nytt, slik Kant spurte?",
+          "answer": "Kunnskap som er nødvendig gjelder uten unntak, og den kan likevel gi noe nytt. Kant mente at forstanden former erfaringen, og at slik kunnskap er mulig av den grunn.",
+          "checklist": [
+            "Nevner at kunnskapen må være nødvendig",
+            "Nevner at den gir noe nytt",
+            "Nevner at forstanden former erfaringen"
+          ],
+          "explain": "Dette er Kants forsøk på å forene rasjonalismen og empirismen: fornuften bidrar med form, og erfaringen gir innholdet."
+        },
+        {
+          "id": "ide-fornuft-koblinger",
+          "step": 3,
+          "type": "match",
+          "prompt": "Koble tenkeren med hovedpoenget.",
+          "pairs": [
+            {
+              "left": "Descartes",
+              "right": "metodisk tvil og cogito"
+            },
+            {
+              "left": "Locke",
+              "right": "sinnet som en tom tavle"
+            },
+            {
+              "left": "Hume",
+              "right": "kritikk av årsaksbegrepet"
+            },
+            {
+              "left": "Kant",
+              "right": "ting i seg selv"
+            }
+          ],
+          "explain": "Descartes og Locke står for hver sin side av debatten. Hume viste grenser ved erfaringen, og Kant forsøkte å bevare kunnskapen ved å forklare hva forstanden bidrar med."
+        },
+        {
+          "id": "ide-fornuft-kant-1781",
+          "step": 4,
+          "type": "year",
+          "prompt": "Hvilket år kom Kants Kritikk av den rene fornuft?",
+          "answer": "1781",
+          "explain": "Den andre store kritikken, Kritikk av den praktiske fornuft, kom sju år senere, i 1788."
+        },
+        {
+          "id": "ide-fornuft-meditasjoner-ar",
+          "step": 4,
+          "type": "choice",
+          "prompt": "Hvilket år kom Meditasjoner over filosofiens grunnlag?",
+          "answer": "1641",
+          "distractors": [
+            "1637",
+            "1689",
+            "1739"
+          ],
+          "explain": "Verket kom ut i 1641. Kants første kritikk fulgte 140 år senere, i 1781."
+        },
+        {
+          "id": "ide-fornuft-noumena",
+          "step": 4,
+          "type": "text",
+          "prompt": "Hva kalles tingene slik de er i seg selv, ifølge Kant?",
+          "answer": "Noumena",
+          "accept": [
+            "Noumenon"
+          ],
+          "explain": "Kant mente vi bare kan kjenne ting slik de framtrer for oss, ikke slik de er i seg selv."
+        }
+      ]
+    },
+    {
+      "id": "ide-1800",
+      "title": "1800-tallets store idéer",
+      "tier": 2,
+      "prerequisites": [
+        "ide-fornuft",
+        "vh-industrielle-revolusjon"
+      ],
+      "years": {
+        "from": 1843,
+        "to": 1900
+      },
+      "summary": "Hegel, Marx, Mill, Kierkegaard og Nietzsche stilte spørsmål om historie, samfunn, frihet, tro og verdier som fortsatt er aktuelle.",
+      "lesson": [
+        "Georg Wilhelm Friedrich Hegel så historien som rasjonell. Fornuften utfolder seg gjennom dialektiske motsetninger, og begrepet fremmedgjøring fikk en sentral plass i hans fenomenologi.",
+        "Karl Marx var inspirert av Hegel, men ville erstatte idealismen med en materialistisk tilnærming. Sammen med Friedrich Engels skrev han Det kommunistiske manifest, som først kom ut anonymt i London i 1848. Manifestet slutter med slagordet «Proletarer i alle land, foren dere».",
+        "John Stuart Mill forsvarte individuell frihet i Om friheten fra 1859. Søren Kierkegaard la vekt på subjektiv erfaring og valg, og i Enten-Eller fra 1843 beskrev han tre levemåter: det estetiske, det etiske og det religiøse.",
+        "Friedrich Nietzsche kritiserte tradisjonell moral og metafysikk. I Den muntre vitenskapen fra 1882 skrev han at Gud er død, og han mente at mange hadde sluttet å tro på Gud. Han knyttes til begrepet nihilisme. Slik talte Zarathustra fulgte i 1883–1885."
+      ],
+      "keyPoints": [
+        "Hegel så historien som en rasjonell utvikling gjennom motsetninger.",
+        "Marx ville erstatte Hegels idealisme med en materialistisk tilnærming.",
+        "Mill forsvarte individuell frihet i Om friheten (1859).",
+        "Kierkegaard la vekt på subjektiv erfaring og beskrev tre levemåter.",
+        "Nietzsche skrev at Gud er død, og knyttes til begrepet nihilisme."
+      ],
+      "sources": [
+        {
+          "title": "Georg Wilhelm Friedrich Hegel – Store norske leksikon",
+          "url": "https://snl.no/Georg_Wilhelm_Friedrich_Hegel"
+        },
+        {
+          "title": "marxisme – Store norske leksikon",
+          "url": "https://snl.no/marxisme"
+        },
+        {
+          "title": "Det kommunistiske manifest – Store norske leksikon",
+          "url": "https://snl.no/Det_kommunistiske_manifest"
+        },
+        {
+          "title": "John Stuart Mill – Store norske leksikon",
+          "url": "https://snl.no/John_Stuart_Mill"
+        },
+        {
+          "title": "Søren Kierkegaard – Store norske leksikon",
+          "url": "https://snl.no/S%C3%B8ren_Kierkegaard"
+        },
+        {
+          "title": "Friedrich Nietzsche – Store norske leksikon",
+          "url": "https://snl.no/Friedrich_Nietzsche"
+        }
+      ],
+      "cards": [
+        {
+          "id": "ide-1800-hegel",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilken filosof så historien som en rasjonell utvikling gjennom dialektiske motsetninger?",
+          "answer": "Hegel",
+          "distractors": [
+            "Locke",
+            "Hume",
+            "Epikur"
+          ],
+          "explain": "Han kalte fornuften som utfolder seg i historien for verdensånden. Marx tok senere begrepet om fremmedgjøring og gjorde det økonomisk."
+        },
+        {
+          "id": "ide-1800-manifest",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilket skrift skrev Marx og Engels sammen i 1848?",
+          "answer": "Det kommunistiske manifest",
+          "distractors": [
+            "Om friheten",
+            "Enten-Eller",
+            "Den muntre vitenskapen"
+          ],
+          "explain": "Det kom først ut anonymt i London i februar 1848. Det fikk liten virkning det året, men ble mye utgitt fra 1872."
+        },
+        {
+          "id": "ide-1800-mill",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilken filosof skrev Om friheten i 1859?",
+          "answer": "John Stuart Mill",
+          "distractors": [
+            "Søren Kierkegaard",
+            "Friedrich Nietzsche",
+            "Karl Marx"
+          ],
+          "explain": "Boken er kanskje Mills mest innflytelsesrike verk. Den gir uttrykk for at individet skal få utfolde seg fritt og bestemme over sitt eget liv."
+        },
+        {
+          "id": "ide-1800-enten-eller",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvilken filosof skrev Enten-Eller og la vekt på subjektiv erfaring?",
+          "answer": "Søren Kierkegaard",
+          "accept": [
+            "Kierkegaard",
+            "Soren Kierkegaard"
+          ],
+          "explain": "Han utviklet filosofien sin i motstand mot Hegel, og regnes som en forløper for eksistensialismen."
+        },
+        {
+          "id": "ide-1800-nihilisme",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva kalles tilstanden der de høyeste verdiene har mistet sin kraft, og som Nietzsche beskrev?",
+          "answer": "Nihilisme",
+          "accept": [
+            "Nihilismen"
+          ],
+          "explain": "Store norske leksikon leser «Gud er død» som en diagnose av en verdikrise i det moderne samfunnet. Nietzsche mente ikke bokstavelig at Gud var død, men at mange hadde sluttet å tro på ham."
+        },
+        {
+          "id": "ide-1800-materialistisk",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvilket adjektiv beskriver tilnærmingen Marx ville bruke i stedet for idealismen?",
+          "answer": "materialistisk",
+          "accept": [
+            "Materialistisk"
+          ],
+          "explain": "Marx mente at økonomiske og materielle forhold former historien mer enn ideer. Det ble grunnlaget for marxismen."
+        },
+        {
+          "id": "ide-1800-tidslinje",
+          "step": 3,
+          "type": "order",
+          "prompt": "Sett disse 1800-tallsverkene i riktig rekkefølge.",
+          "items": [
+            {
+              "label": "Enten-Eller",
+              "year": 1843
+            },
+            {
+              "label": "Det kommunistiske manifest",
+              "year": 1848
+            },
+            {
+              "label": "Om friheten",
+              "year": 1859
+            }
+          ],
+          "explain": "Enten-Eller kom fem år før manifestet, og Om friheten kom elleve år etter det."
+        },
+        {
+          "id": "ide-1800-hegel-marx",
+          "step": 3,
+          "type": "explain",
+          "prompt": "Hvorfor kan Hegel og Marx sies å ha samme utgangspunkt, men ulike konklusjoner?",
+          "answer": "Begge ser historien som en utvikling gjennom motsetninger. Hegel mente at ideer driver historien, mens Marx mente at materielle og økonomiske forhold gjør det.",
+          "checklist": [
+            "Nevner utvikling gjennom motsetninger",
+            "Nevner Hegels vekt på ideer",
+            "Nevner Marx' vekt på materielle forhold"
+          ],
+          "explain": "Marx brukte den samme analysen til å kritisere kapitalismen, og han omtolket fremmedgjøring i økonomisk retning."
+        },
+        {
+          "id": "ide-1800-koblinger",
+          "step": 3,
+          "type": "match",
+          "prompt": "Koble tenkeren med hovedidéen.",
+          "pairs": [
+            {
+              "left": "Kierkegaard",
+              "right": "subjektiv erfaring"
+            },
+            {
+              "left": "Nietzsche",
+              "right": "kritikk av moral og nihilisme"
+            },
+            {
+              "left": "Mill",
+              "right": "individuell frihet"
+            },
+            {
+              "left": "Marx",
+              "right": "materialistisk historie"
+            }
+          ],
+          "explain": "Kierkegaard utviklet sin filosofi i motstand mot Hegel. Mill og Marx tok begge opp hvordan samfunnet bør styres, men kom til ulike svar."
+        },
+        {
+          "id": "ide-1800-muntre-1882",
+          "step": 4,
+          "type": "year",
+          "prompt": "Hvilket år kom Den muntre vitenskapen ut, der Nietzsche skrev at Gud er død?",
+          "answer": "1882",
+          "explain": "Slik talte Zarathustra fulgte i 1883–1885."
+        },
+        {
+          "id": "ide-1800-enten-eller-ar",
+          "step": 4,
+          "type": "choice",
+          "prompt": "Hvilket år kom Enten-Eller ut?",
+          "answer": "1843",
+          "distractors": [
+            "1848",
+            "1859",
+            "1882"
+          ],
+          "explain": "Enten-Eller kom fem år før manifestet. Om friheten kom i 1859."
+        },
+        {
+          "id": "ide-1800-zarathustra",
+          "step": 4,
+          "type": "text",
+          "prompt": "Hva heter Nietzsches verk som ble utgitt mellom 1883 og 1885?",
+          "answer": "Slik talte Zarathustra",
+          "accept": [
+            "Så talte Zarathustra"
+          ],
+          "explain": "Verket er skrevet som en fortelling om Zarathustra, og det er et av Nietzsches mest kjente verk."
+        }
+      ]
+    },
+    {
+      "id": "ide-1900",
+      "title": "1900-tallets filosofi",
+      "tier": 3,
+      "prerequisites": [
+        "ide-1800",
+        "mh-andre-verdenskrig"
+      ],
+      "years": {
+        "from": 1946,
+        "to": 1975
+      },
+      "summary": "Etter andre verdenskrig ble spørsmål om menneskets frihet, språk, totalitære styreformer og naturen sentrale i filosofien.",
+      "lesson": [
+        "Eksistensialismen handler om menneskets vilkår, som frihet, angst og døden. Jean-Paul Sartre var den mest fremtredende representanten i andre halvdel av 1900-tallet. Hans foredrag Eksistensialisme er humanisme fra 1946 gir en tilgjengelig fremstilling. Han mente at eksistensen går forut for essensen.",
+        "Hannah Arendt ble internasjonalt kjent med The Origins of Totalitarianism fra 1951. Hun sammenlignet nazisme og stalinisme som to varianter av totalitære styreformer. Totalitarisme betyr at staten har full kontroll over samfunnet, og det kom særlig til uttrykk gjennom konsentrasjonsleirene.",
+        "Ludwig Wittgenstein var østerriksk filosof og mente at mange filosofiske problemer skyldes misforståelser av språket. I Filosofiske undersøkelser fra 1953 tok han avstand fra ideene i Tractatus.",
+        "Arne Næss grunnla dypøkologien. Han lanserte begrepet i 1973 i artikkelen «The Shallow and the Deep, Long-Range Ecology Movement». Retningen er ikke-antroposentrisk, og Store norske leksikon regner ham som trolig Norges mest kjente filosof."
+      ],
+      "keyPoints": [
+        "Sartre mente at eksistensen går forut for essensen.",
+        "Arendt sammenlignet nazisme og stalinisme som totalitære styreformer.",
+        "Wittgenstein mente at mange filosofiske problemer skyldes språket.",
+        "Filosofiske undersøkelser (1953) tok avstand fra Tractatus.",
+        "Arne Næss lanserte begrepet dypøkologi i 1973."
+      ],
+      "sources": [
+        {
+          "title": "eksistensialisme – Store norske leksikon",
+          "url": "https://snl.no/eksistensialisme"
+        },
+        {
+          "title": "Jean-Paul Sartre – Store norske leksikon",
+          "url": "https://snl.no/Jean-Paul_Sartre"
+        },
+        {
+          "title": "Hannah Arendt – Store norske leksikon",
+          "url": "https://snl.no/Hannah_Arendt"
+        },
+        {
+          "title": "Ludwig Wittgenstein – Store norske leksikon",
+          "url": "https://snl.no/Ludwig_Wittgenstein"
+        },
+        {
+          "title": "Arne Næss – Store norske leksikon",
+          "url": "https://snl.no/Arne_N%C3%A6ss"
+        },
+        {
+          "title": "dypøkologi – Store norske leksikon",
+          "url": "https://snl.no/dyp%C3%B8kologi"
+        }
+      ],
+      "cards": [
+        {
+          "id": "ide-1900-sartre",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvem holdt foredraget Eksistensialisme er humanisme i 1946?",
+          "answer": "Jean-Paul Sartre",
+          "distractors": [
+            "Hannah Arendt",
+            "Ludwig Wittgenstein",
+            "Arne Næss"
+          ],
+          "explain": "Foredraget gir en tilgjengelig oversikt over eksistensialismen. Sartre mente at mennesket først finnes og deretter skaper sin egen natur."
+        },
+        {
+          "id": "ide-1900-tractatus",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilken østerriksk filosof skrev Tractatus?",
+          "answer": "Ludwig Wittgenstein",
+          "distractors": [
+            "Hannah Arendt",
+            "Jean-Paul Sartre",
+            "Arne Næss"
+          ],
+          "explain": "I Tractatus mente han at språket speiler verden. I Filosofiske undersøkelser fra 1953 tok han avstand fra mye av dette."
+        },
+        {
+          "id": "ide-1900-arendt",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilken filosof skrev The Origins of Totalitarianism fra 1951?",
+          "answer": "Hannah Arendt",
+          "distractors": [
+            "Jean-Paul Sartre",
+            "Ludwig Wittgenstein",
+            "Arne Næss"
+          ],
+          "explain": "Arendt sammenlignet nazisme og stalinisme som to varianter av totalitære styreformer. Begrepet totalitarisme betegner en stat med full kontroll over samfunnet."
+        },
+        {
+          "id": "ide-1900-naess-norsk",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvilken norsk filosof grunnla dypøkologien?",
+          "answer": "Arne Næss",
+          "accept": [
+            "Næss"
+          ],
+          "explain": "Store norske leksikon omtaler ham som trolig Norges mest kjente filosof. Han var først inspirert av den logiske positivismen, og senere utviklet han økosofien."
+        },
+        {
+          "id": "ide-1900-filosofiske-undersokelser",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva heter Wittgensteins senere verk fra 1953?",
+          "answer": "Filosofiske undersøkelser",
+          "accept": [
+            "Philosophical Investigations"
+          ],
+          "explain": "Verket handler om hvordan ord brukes i praksis. Wittgenstein mente at mange filosofiske problemer oppstår når ord brukes utenfor sin sammenheng."
+        },
+        {
+          "id": "ide-1900-essens",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva kalles Sartres påstand om at mennesket først finnes og deretter skaper sin egen natur?",
+          "answer": "Eksistensen går forut for essensen",
+          "accept": [
+            "Eksistens før essens"
+          ],
+          "explain": "Tesen er et kjennetegn på eksistensialismen. Mennesket har ingen fastlagt natur på forhånd, og det er friheten som gjør oss til det vi blir."
+        },
+        {
+          "id": "ide-1900-tidslinje",
+          "step": 3,
+          "type": "order",
+          "prompt": "Sett disse etterkrigsverkene i riktig rekkefølge.",
+          "items": [
+            {
+              "label": "Eksistensialisme er humanisme",
+              "year": 1946
+            },
+            {
+              "label": "The Origins of Totalitarianism",
+              "year": 1951
+            },
+            {
+              "label": "Filosofiske undersøkelser",
+              "year": 1953
+            }
+          ],
+          "explain": "Foredraget kom ut i 1946, og Arendts bok fulgte i 1951. Wittgensteins Filosofiske undersøkelser kom to år senere."
+        },
+        {
+          "id": "ide-1900-totalitar",
+          "step": 3,
+          "type": "explain",
+          "prompt": "Hva kjennetegner et totalitært styre, slik Arendt beskrev det?",
+          "answer": "Staten har full kontroll over samfunnet, og politikken blir tilintetgjort. Det kommer særlig til uttrykk gjennom konsentrasjonsleirene.",
+          "checklist": [
+            "Nevner full kontroll over samfunnet",
+            "Nevner at politikken blir tilintetgjort",
+            "Nevner konsentrasjonsleirene"
+          ],
+          "explain": "Arendt sammenlignet nazisme og stalinisme, og hun mente at begge hadde disse trekkene. Boken er et viktig bidrag i etterkrigstidens politiske filosofi."
+        },
+        {
+          "id": "ide-1900-koblinger",
+          "step": 3,
+          "type": "match",
+          "prompt": "Koble tenkeren med hovedbidraget.",
+          "pairs": [
+            {
+              "left": "Sartre",
+              "right": "eksistens før essens"
+            },
+            {
+              "left": "Arendt",
+              "right": "totalitære styreformer"
+            },
+            {
+              "left": "Wittgenstein",
+              "right": "språket og filosofiske misforståelser"
+            },
+            {
+              "left": "Næss",
+              "right": "dypøkologi"
+            }
+          ],
+          "explain": "Sartre og Arendt viser to sider av etterkrigstiden: det enkeltes ansvar for eget liv og statens makt over samfunnet. Wittgenstein og Næss viser at filosofien også kan handle om språk og natur."
+        },
+        {
+          "id": "ide-1900-dypokologi-1973",
+          "step": 4,
+          "type": "year",
+          "prompt": "Hvilket år lanserte Arne Næss begrepet dypøkologi?",
+          "answer": "1973",
+          "explain": "Han gjorde det i artikkelen «The Shallow and the Deep, Long-Range Ecology Movement». Begrepet skiller en grunn økologisk bevegelse fra en dyp."
+        },
+        {
+          "id": "ide-1900-arendt-ar",
+          "step": 4,
+          "type": "choice",
+          "prompt": "Hvilket år kom Hannah Arendts bok The Origins of Totalitarianism?",
+          "answer": "1951",
+          "distractors": [
+            "1946",
+            "1953",
+            "1973"
+          ],
+          "explain": "Boken kom i 1951. Wittgensteins Filosofiske undersøkelser fulgte i 1953."
+        },
+        {
+          "id": "ide-1900-eksistensialisme",
+          "step": 4,
+          "type": "text",
+          "prompt": "Hva kalles retningen Sartre var den mest fremtredende representanten for?",
+          "answer": "Eksistensialisme",
+          "accept": [
+            "Eksistensialismen"
+          ],
+          "explain": "Retningen har røtter hos Kierkegaard, som la vekt på subjektiv erfaring. Sartre og Simone de Beauvoir var blant de mest kjente ateistiske representantene."
+        }
+      ]
+    }
+  ]
+}
