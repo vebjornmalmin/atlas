@@ -1,6 +1,6 @@
 <script>
   import {buildTimelineExercise} from './exercises.js';
-  import {flagEmoji} from './world-graph.js';
+  import Flag from './Flag.svelte';
   import PanZoomMap from './PanZoomMap.svelte';
   import MatchLines from './MatchLines.svelte';
   import EstimateTimeline from './EstimateTimeline.svelte';
@@ -75,14 +75,14 @@
 {:else if target.mode==='estimate'}
   <EstimateTimeline {target} bind:draft {revealed} />
 {:else if target.mode==='pick'}
-  <div class="flag-choices">{#each target.choices as choice}<button class="flag-choice" aria-pressed={draft.choice===choice.id} aria-label={revealed?choice.label:'Flaggalternativ'} disabled={revealed} onclick={()=>draft={choice:choice.id}}><span class="flag-glyph" aria-hidden="true">{choice.flag}</span>{#if revealed}<small class:success={choice.id===target.correctId}>{choice.label}</small>{/if}</button>{/each}</div>
+  <div class="flag-choices">{#each target.choices as choice}<button class="flag-choice" aria-pressed={draft.choice===choice.id} aria-label={revealed?choice.label:'Flaggalternativ'} disabled={revealed} onclick={()=>draft={choice:choice.id}}><Flag iso2={choice.iso2} size="choice" />{#if revealed}<small class:success={choice.id===target.correctId}>{choice.label}</small>{/if}</button>{/each}</div>
 {:else if target.mode==='border-walk' && graph && dataset}
   <PanZoomMap base={dataset.viewBox} initial={walkView} bind:unit label="Reiseruten. Trykk på et naboland for å gå dit." className="walk-board" onTap={stepTo}>
     {#each dataset.regions as region}{@const step=nextSteps.some(n=>regionOf(n.id)===region.id)}<path d={region.path} data-region={region.id} fill-rule="evenodd" class:walked={walk.some(id=>regionOf(id)===region.id)} class:goal={regionOf(target.goal)===region.id} class:here={regionOf(here)===region.id} class:step={!revealed && step && here!==target.goal} />{/each}
   </PanZoomMap>
-  <p class="walk-route">{#each walk as id,i}<span>{flagEmoji(graph.byId.get(id).iso2)} {graph.byId.get(id).label}</span>{#if i<walk.length-1}<span aria-hidden="true"> → </span>{/if}{/each}</p>
-  {#if !revealed && here!==target.goal}<p class="muted map-note">Du er i {graph.byId.get(here).label}. Mål: {flagEmoji(graph.byId.get(target.goal).iso2)} {graph.byId.get(target.goal).label}. {walk.length-1} av {target.shortest} grenser krysset. Trykk på et uthevet naboland.</p>
-    <details class="neighbour-list"><summary>Velg fra liste</summary><div class="neighbour-grid">{#each nextSteps as next}<button class="secondary" onclick={()=>draft={...draft,path:[...(draft.path||[]),next.id]}}>{flagEmoji(next.iso2)} {next.label}</button>{:else}<p class="muted">Ingen landegrenser herfra på kartet.</p>{/each}</div></details>{/if}
+  <p class="walk-route">{#each walk as id,i}<span><Flag iso2={graph.byId.get(id).iso2} />{graph.byId.get(id).label}</span>{#if i<walk.length-1}<span aria-hidden="true"> → </span>{/if}{/each}</p>
+  {#if !revealed && here!==target.goal}<p class="muted map-note">Du er i {graph.byId.get(here).label}. Mål: <Flag iso2={graph.byId.get(target.goal).iso2} />{graph.byId.get(target.goal).label}. {walk.length-1} av {target.shortest} grenser krysset. Trykk på et uthevet naboland.</p>
+    <details class="neighbour-list"><summary>Velg fra liste</summary><div class="neighbour-grid">{#each nextSteps as next}<button class="secondary" onclick={()=>draft={...draft,path:[...(draft.path||[]),next.id]}}><Flag iso2={next.iso2} />{next.label}</button>{:else}<p class="muted">Ingen landegrenser herfra på kartet.</p>{/each}</div></details>{/if}
   {#if !revealed && walk.length>1}<button class="quiet" onclick={()=>draft={...draft,path:(draft.path||[]).slice(0,-1)}}>Angre siste steg</button>{/if}
 {:else if target.mode==='before-after'}
   <div class="stack">{#each target.items as item}<button class="secondary" aria-pressed={draft.first===item.id} disabled={revealed} onclick={()=>draft={first:item.id}}>{item.label}</button>{/each}</div>

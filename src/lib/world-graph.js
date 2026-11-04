@@ -4,11 +4,6 @@ export const DEFAULT_RELEVANCE = {impact: 50, actuality: 25, locality: 25};
 const COUNTRY_TYPES = ['country', 'country-area'];
 const NORWAY_TYPES = ['municipality', 'county', 'former-county'];
 
-export function flagEmoji(iso2) {
-  if (!/^[A-Z]{2}$/.test(iso2 || '')) return '';
-  return String.fromCodePoint(...[...iso2].map(c => 0x1f1e6 + c.charCodeAt(0) - 65));
-}
-
 export function distanceKm(a, b) {
   const rad = Math.PI / 180, dLat = (b.lat - a.lat) * rad, dLon = (b.lon - a.lon) * rad;
   const h = Math.sin(dLat / 2) ** 2 + Math.cos(a.lat * rad) * Math.cos(b.lat * rad) * Math.sin(dLon / 2) ** 2;

@@ -1,5 +1,6 @@
 <script>
-  import {flagEmoji,lensView,relatedThrough,lensesFor,findPath,newsWeight,METRIC_NOTES,DEFAULT_RELEVANCE} from './world-graph.js';
+  import Flag from './Flag.svelte';
+  import {lensView,relatedThrough,lensesFor,findPath,newsWeight,METRIC_NOTES,DEFAULT_RELEVANCE} from './world-graph.js';
   import PanZoomMap from './PanZoomMap.svelte';
   import {pathBounds} from './map-view.js';
   import {WORLD_FORMAT_CHOICES} from './quiz-formats.js';
@@ -30,7 +31,7 @@
   let focusRegion=$derived(graph.byId.get(graph.countryOf.get(focusId))?.geo?.mapRegionId);
   const percent=value=>Math.round(100*(value||0));
   const label=id=>graph.byId.get(id)?.label || id;
-  const flagFor=entity=>entity?.iso2 && entity.geo?flagEmoji(entity.iso2):'';
+  const flagFor=entity=>entity?.iso2 && entity.geo?entity.iso2:'';
   function choose(id,scroll=true){
     focusId=id;
     const region=graph.byId.get(graph.countryOf.get(id))?.geo?.mapRegionId,path=dataset.regions.find(r=>r.id===region)?.path;
@@ -54,7 +55,7 @@
 
 
 
-{#snippet focusPill()}{#if focus}<button class="map-pill" onclick={()=>document.querySelector('#world-focus')?.scrollIntoView({behavior:'smooth',block:'start'})}>{flagFor(focus)} {focus.label} <span aria-hidden="true">↓</span></button>{/if}{/snippet}
+{#snippet focusPill()}{#if focus}<button class="map-pill" onclick={()=>document.querySelector('#world-focus')?.scrollIntoView({behavior:'smooth',block:'start'})}>{#if flagFor(focus)}<Flag iso2={flagFor(focus)} />{/if}{focus.label} <span aria-hidden="true">↓</span></button>{/if}{/snippet}
 <PanZoomMap bind:this={worldMap} base={dataset.viewBox} bind:view={mapView} className="world-map" label={`Verdenskart vektet ${lens?`gjennom ${lens.name}`:'etter relevans'}. Dra og knip for å utforske, trykk på et land.`} onTap={({region})=>{const id=graph.regionToCountry.get(region);if(id)choose(id,false);}} overlay={focusPill}>
     {#each dataset.regions as region}{@const id=graph.regionToCountry.get(region.id)}<path d={region.path} data-region={region.id} fill-rule="evenodd" style:fill={fill(region.id)} class:focused={focusRegion===region.id} class:neighbour={neighbours.some(n=>n.geo?.mapRegionId===region.id)} />{/each}
 </PanZoomMap>
@@ -87,7 +88,7 @@
 
 {#if focus}
   <div class="card focus-card" id="world-focus">
-    <div class="focus-head">{#if flagFor(focus)}<span class="focus-flag" aria-hidden="true">{flagFor(focus)}</span>{/if}<div><p class="eyebrow">{typeLabel(focus.type)}</p><h2>{focus.label}</h2></div></div>
+    <div class="focus-head">{#if flagFor(focus)}<span class="focus-flag"><Flag iso2={flagFor(focus)} size="medium" /></span>{/if}<div><p class="eyebrow">{typeLabel(focus.type)}</p><h2>{focus.label}</h2></div></div>
     <p>{focus.summary}</p>
     <div class="metric-row">
       <span><strong>{graph.perspectives.impact?.[focus.id] ?? 0}</strong>påvirkning</span>
@@ -95,9 +96,9 @@
       <span><strong>{focus.geo?`${focus.geo.distanceKm.toLocaleString('nb-NO')} km`:graph.countryOf.get(focus.id)==='norway'?'Norge':graph.byId.get(graph.countryOf.get(focus.id))?.geo?`${graph.byId.get(graph.countryOf.get(focus.id)).geo.distanceKm.toLocaleString('nb-NO')} km`:'–'}</strong>fra Oslo</span>
     </div>
     {#if otherLenses.length}<h3>Andre linser ser her</h3><div class="stack compact">{#each otherLenses as other}<button class="lens-switch" aria-pressed={other.lens.id===lensId} onclick={()=>chooseLens(other.lens.id)}><strong>{other.lens.name}</strong><small>{other.reason || other.lens.question}</small></button>{/each}</div>{/if}
-    {#if neighbours.length}<h3>Naboland</h3><div class="chips">{#each neighbours as n}<button class="chip" onclick={()=>choose(n.id)}>{flagFor(n)} {n.label}</button>{/each}</div>{/if}
+    {#if neighbours.length}<h3>Naboland</h3><div class="chips">{#each neighbours as n}<button class="chip" onclick={()=>choose(n.id)}>{#if flagFor(n)}<Flag iso2={flagFor(n)} />{/if}{n.label}</button>{/each}</div>{/if}
     {#if related.length}<h3>{lens?`Gjennom ${lens.name.toLocaleLowerCase('nb')}`:'Sterkeste forbindelser'}</h3>
-      {#each related as r}<button class="entity-row" onclick={()=>choose(r.entity.id)}><span><small class="eyebrow">{relationLabel(r.relation.type)}{r.outgoing || SYMMETRIC.has(r.relation.type)?'':' · inngående'}</small><strong>{flagFor(r.entity)} {r.entity.label}</strong><small class="muted">{r.relation.context}</small></span></button>{/each}{/if}
+      {#each related as r}<button class="entity-row" onclick={()=>choose(r.entity.id)}><span><small class="eyebrow">{relationLabel(r.relation.type)}{r.outgoing || SYMMETRIC.has(r.relation.type)?'':' · inngående'}</small><strong>{#if flagFor(r.entity)}<Flag iso2={flagFor(r.entity)} />{/if}{r.entity.label}</strong><small class="muted">{r.relation.context}</small></span></button>{/each}{/if}
     {#if focusNews.length}<h3>I nyhetene</h3>{#each focusNews as n}<p class="news-line"><small class="muted">{n.metadata.date} · {n.metadata.publisher}</small><br><button class="link-button" onclick={()=>choose(n.id)}>{n.label}</button></p>{/each}{/if}
     {#if focus.type==='news-event'}<p class="muted">{focus.metadata.background || ''}</p><a class="source-link" href={focus.metadata.url} target="_blank" rel="noreferrer">Les saken hos {focus.metadata.publisher} ↗</a>{/if}
     <div class="row wrap"><button class="secondary" onclick={()=>onOpen(focus.id)}>Åpne i biblioteket</button><button class="secondary" onclick={()=>{pathFrom=focus.id;document.querySelector('#world-path')?.scrollIntoView({behavior:'smooth'});}}>Finn sammenheng herfra</button></div>
@@ -105,13 +106,13 @@
 {/if}
 
 <h2 class="section-title">{lens?'Det linsen ser først':'Mest relevant nå'}</h2>
-<div class="card">{#each view.ranked.slice(0,rankedLimit) as e}<button class="entity-row ranked" onclick={()=>choose(e.id)}><span><small class="eyebrow">{typeLabel(e.type)}</small><strong>{flagFor(e)} {e.label}</strong><span class="score-bar" style:width={`${Math.max(4,percent(view.scores.get(e.id)/(view.scores.get(view.ranked[0]?.id)||1)))}%`}></span></span></button>{/each}
+<div class="card">{#each view.ranked.slice(0,rankedLimit) as e}<button class="entity-row ranked" onclick={()=>choose(e.id)}><span><small class="eyebrow">{typeLabel(e.type)}</small><strong>{#if flagFor(e)}<Flag iso2={flagFor(e)} />{/if}{e.label}</strong><span class="score-bar" style:width={`${Math.max(4,percent(view.scores.get(e.id)/(view.scores.get(view.ranked[0]?.id)||1)))}%`}></span></span></button>{/each}
   {#if view.ranked.length>rankedLimit}<button class="quiet" onclick={()=>rankedLimit+=10}>Vis flere</button>{/if}</div>
 {#if lens}<button class="primary" onclick={()=>{const top=lensPracticeIds();onQuiz('mixed',{targetIds:null,entityIds:[...top],title:`Gjennom linsen: ${lens.name}`,depth:'advanced'});}}>Quiz gjennom denne linsen</button>{/if}
 
 {#snippet endpoint(name,which)}
   {@const value=which==='from'?pathFrom:pathTo}{@const q=which==='from'?fromQuery:toQuery}
-  <label>{name}{#if value}<span class="picked"><strong>{flagFor(graph.byId.get(value))} {label(value)}</strong><button class="quiet" onclick={()=>setEndpoint(which,'')}>Endre</button></span>{:else}<input type="search" placeholder="Person, sted, idé eller nyhet" value={q} oninput={e=>{if(which==='from')fromQuery=e.currentTarget.value;else toQuery=e.currentTarget.value;}}>{#each matches(q) as m}<button class="entity-row" onclick={()=>setEndpoint(which,m.id)}><span><small class="eyebrow">{typeLabel(m.type)}</small><strong>{m.label}</strong></span></button>{/each}{/if}</label>
+  <label>{name}{#if value}<span class="picked"><strong>{#if flagFor(graph.byId.get(value))}<Flag iso2={flagFor(graph.byId.get(value))} />{/if}{label(value)}</strong><button class="quiet" onclick={()=>setEndpoint(which,'')}>Endre</button></span>{:else}<input type="search" placeholder="Person, sted, idé eller nyhet" value={q} oninput={e=>{if(which==='from')fromQuery=e.currentTarget.value;else toQuery=e.currentTarget.value;}}>{#each matches(q) as m}<button class="entity-row" onclick={()=>setEndpoint(which,m.id)}><span><small class="eyebrow">{typeLabel(m.type)}</small><strong>{m.label}</strong></span></button>{/each}{/if}</label>
 {/snippet}
 
 <h2 class="section-title" id="world-path">Finn sammenhengen</h2>
@@ -124,7 +125,7 @@
 <h2 class="section-title">Aktuelt</h2>
 <div class="card">
   <p class="muted detail">Nyheter per {new Date(`${graph.perspectives.news?.snapshotDate}T12:00:00Z`).toLocaleDateString('nb-NO',{day:'numeric',month:'long',year:'numeric'})}. Sakene teller mindre etter hvert som de blir eldre.</p>
-  {#each graph.news.slice(0,8) as n}<button class="entity-row" onclick={()=>choose(n.id)}><span><small class="eyebrow">{n.metadata.date} · {n.metadata.publisher} · vekt {percent(newsWeight(n,now))}</small><strong>{flagFor(graph.byId.get(n.metadata.primaryEntityId))} {n.label}</strong></span></button>{/each}
+  {#each graph.news.slice(0,8) as n}<button class="entity-row" onclick={()=>choose(n.id)}><span><small class="eyebrow">{n.metadata.date} · {n.metadata.publisher} · vekt {percent(newsWeight(n,now))}</small><strong>{#if flagFor(graph.byId.get(n.metadata.primaryEntityId))}<Flag iso2={flagFor(graph.byId.get(n.metadata.primaryEntityId))} />{/if}{n.label}</strong></span></button>{/each}
 </div>
 
 <h2 class="section-title">Lær verden på ti måter</h2>

@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { buildWorldGraph, lensView, lensOverlap, findPath, shortestBorderPath, relevanceScores, flagEmoji, lensesFor, validatePerspectives, newsWeight } from '../src/lib/world-graph.js';
+import { buildWorldGraph, lensView, lensOverlap, findPath, shortestBorderPath, relevanceScores, lensesFor, validatePerspectives, newsWeight } from '../src/lib/world-graph.js';
 import { buildWorldTargets, gradeBorderWalk } from '../src/lib/world-exercises.js';
 import { gradeStructured, structuredReady } from '../src/lib/quiz-formats.js';
 import { targetMatches } from '../src/lib/learning.js';
@@ -75,12 +75,12 @@ test('all ten learning formats are generated, filterable and graded', () => {
   assert.equal(new Set(targets.map(t => t.id)).size, targets.length);
   const pick = targets.find(t => t.mode === 'pick');
   assert.equal(gradeStructured(pick, {choice: pick.correctId}).correct, true);
-  assert.ok(pick.choices.every(c => /\p{Regional_Indicator}{2}/u.test(c.flag)));
+  assert.ok(pick.choices.every(c => /^[A-Z]{2}$/.test(c.iso2)));
   for (const t of targets.filter(t => t.options)) assert.ok(!t.options.includes(t.answer), `${t.id} distractors exclude the answer`);
 });
 
 test('flag questions never name the answer and news questions never reveal the country', () => {
-  assert.equal(flagEmoji('NO'), '🇳🇴');
+  for (const t of targets) assert.ok(!/\p{Extended_Pictographic}|\p{Regional_Indicator}/u.test(JSON.stringify(t)), `${t.id} has no emoji`);
   for (const t of targets.filter(t => t.format === 'flags' && t.mode === 'recognition')) assert.ok(!t.prompt.includes(t.answer));
   for (const t of targets.filter(t => t.format === 'news-map')) assert.ok(!t.prompt.toLocaleLowerCase('nb').includes(t.answer.toLocaleLowerCase('nb')), t.id);
   for (const t of targets.filter(t => t.format === 'neighbours')) assert.ok(graph.neighbours.get(t.entityId).includes(data.entities.find(e => e.label === t.answer && e.geo).id));

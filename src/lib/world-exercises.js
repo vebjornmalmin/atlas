@@ -1,4 +1,5 @@
-import {flagEmoji,shortestBorderPath} from './world-graph.js';
+import {shortestBorderPath} from './world-graph.js';
+import {hasFlag} from './flags.js';
 
 function hash(text) {
   let value = 2166136261;
@@ -25,7 +26,7 @@ export function buildWorldTargets(data, graph) {
   const regionOf = id => adjacency.get(id).find(l => ['located-in', 'in-region'].includes(l.relation.type) && byId.get(l.other)?.type === 'region')?.other;
   const capitalOf = id => adjacency.get(id).find(l => l.relation.type === 'capital-of' && !l.outgoing)?.other;
   const impact = id => data.perspectives.impact?.[id] ?? 0;
-  const countries = graph.countries.filter(c => c.iso2 && flagEmoji(c.iso2));
+  const countries = graph.countries.filter(c => hasFlag(c.iso2));
   const peers = new Map();
   for (const c of countries) { const r = regionOf(c.id) || 'none'; if (!peers.has(r)) peers.set(r, []); peers.get(r).push(c); }
   const natural = graph.data.sources.find(s => s.title.startsWith('Natural Earth'))?.id;
@@ -44,11 +45,11 @@ export function buildWorldTargets(data, graph) {
     const familiar = known.has(c.id) || c.id === 'norway' || regionOf(c.id) === 'northern-europe';
     result.push({id:`flag:${c.iso3}`, format:'flags', mode:'recognition', kind:'recognition', entityId:c.id, collectionIds:['flags-borders'],
       prompt:'Hvilket land har dette flagget?', visual:{flag:c.iso2}, answer:c.label, acceptedAnswers:[c.officialName].filter(Boolean),
-      options:others.map(o => o.label), explanation:`${flagEmoji(c.iso2)} er flagget til ${c.label}. ${describe(c)}`,
+      options:others.map(o => o.label), explanation:`Dette er flagget til ${c.label}. ${describe(c)}`,
       sourceIds:sourcesOf(c.id), difficulty:familiar ? 2 : 3, significance:familiar ? 4 : 2, familiar});
     if (familiar) result.push({id:`flag-choice:${c.iso3}`, format:'flags', mode:'pick', kind:'recognition', entityId:c.id, collectionIds:['flags-borders'],
-      prompt:`Hvilket flagg tilhører ${c.label}?`, choices:pick([c, ...others], `choice:${c.id}`, 4).map(o => ({id:o.id, flag:flagEmoji(o.iso2), label:o.label})), correctId:c.id,
-      answer:`${flagEmoji(c.iso2)} ${c.label}`, acceptedAnswers:[], explanation:`${c.label} har dette flagget. ${describe(c)}`,
+      prompt:`Hvilket flagg tilhører ${c.label}?`, choices:pick([c, ...others], `choice:${c.id}`, 4).map(o => ({id:o.id, iso2:o.iso2, label:o.label})), correctId:c.id,
+      answer:`Flagget til ${c.label}`, acceptedAnswers:[], explanation:`${c.label} har dette flagget. ${describe(c)}`,
       sourceIds:sourcesOf(c.id), difficulty:2, significance:3, familiar});
   }
 
@@ -154,7 +155,7 @@ export function buildWorldTargets(data, graph) {
       if (chosen.length === 4) break;
     }
     if (chosen.length < 4) continue;
-    const items = chosen.map(c => ({id:c.id, entityId:c.id, label:`${flagEmoji(c.iso2)} ${c.label}`, year:c.geo.distanceKm, display:`ca. ${c.geo.distanceKm.toLocaleString('nb-NO')} km`}));
+    const items = chosen.map(c => ({id:c.id, entityId:c.id, label:c.label, year:c.geo.distanceKm, display:`ca. ${c.geo.distanceKm.toLocaleString('nb-NO')} km`}));
     result.push({id:`scale:distance:${start}`, format:'scale', mode:'timeline', kind:'before-after', entityId:chosen[0].id, collectionIds:['flags-borders'],
       prompt:'Ordne landene fra nærmest til fjernest fra Oslo. Øverst er nærmest.', timeline:{id:`distance:${start}`, items}, answer:items.map(t => `${t.label} (${t.display})`).join(' → '), acceptedAnswers:[],
       explanation:'Avstanden er målt i luftlinje fra Oslo til landets geografiske midtpunkt på kartet, avrundet. Store land kan ha deler som ligger mye nærmere eller lenger unna.', sourceIds:[natural].filter(Boolean), difficulty:3, significance:2});
