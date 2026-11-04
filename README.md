@@ -18,6 +18,10 @@ Hele grensesnittet er tegnet om, slik at appen ser ut som et redigert oppslagsve
 
 Designbeslutninger som skal holde: farger, skrift, avstander og hjørner er tokens i `src/lib/design.css`, og skjermene bruker bare tokens. Felles komponenter ligger i `design.css`; I dag og øktene i `src/lib/styles/today.css`; Atlas og Deg i `src/lib/styles/atlas-me.css`. Bare ett fremhevet kort (`.card.feature`) per skjerm.
 
+Kontrollert i iPhone 17 Pro-simulatoren mot produksjonsbygget kjørt lokalt, i lyst og mørkt: I dag, en innføring, et flervalgsspørsmål med tilbakemelding, Atlas (Tid og Kart med flaggbilde) og Deg. 224 automatiske tester består, og Svelte-kontrollen finner ingen feil. Ikke alle oppgavetyper er gått gjennom i simulatoren.
+
+Publisert 4. november 2026: app 1.3.0, utgivelse `5f1d31e5665b`, kunnskapspakke 2.2.0 (uendret), via Wrangler fra `main`, 2,8 MiB komprimert. Helse- og versjonsendepunktene og tjenestearbeideren samsvarer med bygget. En installert 1.2.0 i Safari i iPhone 17 Pro-simulatoren fant den nye utgaven, oppdaterte seg og viste den nye utformingen.
+
 ## 1.2.0: Én historie gjennom tid
 
 Appen er samlet til tre steder: **I dag**, **Atlas** og **Deg**. Før var dagens økt, fri quiz og Verden tre separate læringssystemer med egne innganger og innstillinger, fordelt på seks faner. Nå er hukommelsen hovedsaken, og perspektivene er vevd inn i den.
