@@ -124,19 +124,19 @@
           "id": "tek-skrift-hjul-metaller-rekkefolge",
           "step": 3,
           "type": "order",
-          "prompt": "Sett hjulets, bronsens og jernets milepæler i rekkefølge, eldst først.",
+          "prompt": "Sett hjulfunnene, slutten på bronsealderen og tydingen av kileskriften i rekkefølge, eldst først.",
           "items": [
             {
-              "label": "Bronsealderen begynner i Midtøsten",
-              "year": -3300
+              "label": "De eldste kjente hjulfunnene (omkring 3500 f.Kr.)",
+              "year": -3500
             },
             {
-              "label": "Egypterne tar i bruk hjulet",
-              "year": -2500
-            },
-            {
-              "label": "Bronsealderen i Midtøsten tar slutt",
+              "label": "Bronsealderen i Midtøsten tar slutt (omkring 1200 f.Kr.)",
               "year": -1200
+            },
+            {
+              "label": "Rawlinson tyder gammelpersisk kileskrift",
+              "year": 1846
             }
           ],
           "explain": "Årstallene er omtrentlige, og flere av dem er datert ut fra funn, ikke skriftlige kilder. Rekkefølgen er sikrere enn selve årstallene."
@@ -1015,7 +1015,7 @@
       },
       "summary": "Elektroniske datamaskiner, transistoren, nettverk og mobiltelefonen er blant de viktigste teknologiene i det 20. århundre.",
       "lesson": [
-        "ENIAC var en av de første store, helt elektroniske regnemaskinene. Den ble utviklet i USA fra 1943 for å regne ut skytetabeller under andre verdenskrig. Den veide over 20 tonn og hadde flere enn 17 000 elektronrør. Kildene er ikke enige om når den var klar, 1945 eller 1946. Det britiske Colossus regnes også som en tidlig elektronisk maskin.",
+        "ENIAC var en av de første store, helt elektroniske regnemaskinene. Den ble utviklet i USA fra 1943 for å regne ut skytetabeller under andre verdenskrig. Den veide omkring 27 tonn og hadde flere enn 17 000 elektronrør. Kildene er ikke enige om når den var klar, 1945 eller 1946. Det britiske Colossus regnes også som en tidlig elektronisk maskin.",
         "Transistoren ble utviklet ved Bell Laboratories i 1947 av John Bardeen, William Shockley og Walter Brattain. Den kunne erstatte elektronrør, og kretsene ble mindre og brukte mindre strøm. NUSSE ble Norges første digitale datamaskin, med første byggetrinn ferdig i 1954.",
         "ARPANET startet i 1969 med fire noder ved universiteter og forskningsinstitusjoner i vest i USA. Nettverket brukte pakkesvitsjing, der data deles i pakker som sendes hver for seg. Norge ble koblet til via NORSAR på Kjeller i 1973. Tim Berners-Lee foreslo World Wide Web ved CERN i 1989."
       ],
@@ -1194,10 +1194,10 @@
           "step": 4,
           "type": "number",
           "prompt": "Omtrent hvor mange tonn veide ENIAC?",
-          "answer": "20",
-          "explain": "ENIAC var svært stor sammenlignet med dagens datamaskiner. Den veide over 20 tonn.",
+          "answer": "27",
+          "explain": "ENIAC var svært stor sammenlignet med dagens datamaskiner. Den veide omkring 27 tonn og fylte et stort rom.",
           "unit": "tonn",
-          "tolerance": 5
+          "tolerance": 3
         },
         {
           "id": "tek-datamaskin-internett-nusse",
