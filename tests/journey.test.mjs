@@ -5,11 +5,12 @@ import {selectSession,selectPracticeSession,targetMatches} from '../src/lib/lear
 import {saveJournal,readJournal,questionDraft,restoreDraft} from '../src/lib/session-journal.js';
 const target=(id,extra={})=>({id,entityId:id,mode:'recall',collectionIds:['history'],difficulty:2,significance:4,answer:id,...extra});
 const now=new Date('2026-10-11T09:00:00Z');
-test('foundation excludes succession and exact year facts; details precede relationships',()=>{
- const succession=target('before',{kind:'before-after'}),year=target('year',{answer:'1789'});
- assert.equal(targetMatches(succession,{}),false);assert.equal(targetMatches(year,{}),false);
- assert.equal(targetMatches(year,{depth:'intermediate'}),true);assert.equal(targetMatches(succession,{depth:'intermediate'}),false);
- assert.equal(targetMatches(succession,{depth:'advanced'}),true);
+test('levels are bands: a typed exact year is too hard for orientation, and a high level leaves out easy questions',()=>{
+ const year=target('year',{answer:'1789',answerFormat:'year'}),choice=target('choice',{mode:'recognition'});
+ assert.equal(targetMatches(year,{level:1}),false);assert.equal(targetMatches(year,{level:2}),false);
+ assert.equal(targetMatches(year,{level:3}),true);
+ assert.equal(targetMatches(choice,{level:1}),true);assert.equal(targetMatches(choice,{level:3}),false);
+ assert.equal(targetMatches(choice,{level:0}),true);
 });
 test('recall and recognition of the same fact never appear twice in either quiz',()=>{
  const a=target('a'),b=target('a:recognition',{baseId:'a',mode:'recognition'});
@@ -23,7 +24,7 @@ test('county answer, map and outline cannot reveal one another within one quiz',
  assert.equal(selectPracticeSession(rows,[],{},'mixed',now).queue.length,1);
  const other=target('bergen',{mode:'outline',datasetId:'norway',regionId:'vestland',answer:'Vestland',collectionIds:['norway']});
  const reviews=[{targetId:'map',timestamp:now.toISOString(),practice:true}];
- assert.equal(selectPracticeSession([...rows,other],[],{},'mixed',now,[],reviews).queue[0].target.id,'bergen');
+ assert.equal(selectPracticeSession([...rows,other],[],{level:0},'mixed',now,[],reviews).queue[0].target.id,'bergen');
 });
 test('a recently answered variant cannot return as new knowledge in todays quiz',()=>{
  const rows=[target('a'),target('a:recognition',{mode:'recognition',baseId:'a'})];

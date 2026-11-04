@@ -11,7 +11,7 @@ test('all 46 presidential succession questions stay advanced in both recall and 
  const rows=data.targets.filter(t=>t.kind==='before-after' && !t.unitId);assert.equal(rows.length,46);
  for(const row of rows)for(const mode of ['recall','recognition']){const a=assessDifficulty({...row,mode,id:mode==='recognition'?row.id+':recognition':row.id,baseId:row.id});assert.equal(a.difficulty,5);assert.equal(a.learningStage,'connections');}
  const targets=assessTargets([...data.targets,...foundationTargets(data)]);
- for(const depth of ['foundation','intermediate']){const quiz=selectPracticeSession(targets,[],{collectionIds:['us-presidents'],depth},'mixed');assert.ok(quiz.queue.length);assert.ok(quiz.queue.every(q=>q.target.kind!=='before-after'));}
+ for(const level of [1,2]){const quiz=selectPracticeSession(targets,[],{collectionIds:['us-presidents'],level},'mixed');assert.ok(quiz.queue.length);assert.ok(quiz.queue.every(q=>q.target.kind!=='before-after'));}
 });
 test('a graph connection need not be advanced and a short answer need not be easy',()=>{
  assert.equal(assessDifficulty(data.targets.find(t=>t.id.startsWith('geo-capital-reverse'))).difficulty,3);

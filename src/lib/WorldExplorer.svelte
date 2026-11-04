@@ -1,6 +1,7 @@
 <script>
   import {flagEmoji,lensView,relatedThrough,lensesFor,findPath,newsWeight,METRIC_NOTES,DEFAULT_RELEVANCE} from './world-graph.js';
-  import {overviewBounds} from './journey.js';
+  import PanZoomMap from './PanZoomMap.svelte';
+  import {pathBounds} from './map-view.js';
   import {WORLD_FORMAT_CHOICES} from './quiz-formats.js';
   let {graph,dataset,relevance=$bindable({...DEFAULT_RELEVANCE}),typeLabel,relationLabel,onOpen,onQuiz,onSave,formatAvailable}=$props();
 
@@ -12,9 +13,10 @@
   let focusId=$state(saved.focusId || 'norway');
   let pathFrom=$state(saved.pathFrom || ''),pathTo=$state(saved.pathTo || '');
   let fromQuery=$state(''),toQuery=$state('');
-  let zoom=$state(saved.zoom || 1),panX=$state(saved.panX || 0),panY=$state(saved.panY || 0);
+  let mapView=$state.raw(Array.isArray(saved.mapView)?saved.mapView:null);
+  let worldMap=$state();
   let rankedLimit=$state(10);
-  $effect(()=>{const state={lensId,focusId,pathFrom,pathTo,zoom,panX,panY};try {localStorage.setItem(STORE,JSON.stringify(state));} catch {/* The explorer still works without saved position. */}});
+  $effect(()=>{const state={lensId,focusId,pathFrom,pathTo,mapView};try {localStorage.setItem(STORE,JSON.stringify(state));} catch {/* The explorer still works without saved position. */}});
 
   const now=new Date();
   let view=$derived(lensView(graph,lensId,relevance,now));
@@ -25,12 +27,16 @@
   let neighbours=$derived(focus?(graph.neighbours.get(focus.id)||[]).map(id=>graph.byId.get(id)).sort((a,b)=>a.label.localeCompare(b.label,'nb')):[]);
   let focusNews=$derived(focus?graph.news.filter(n=>n.id===focus.id || graph.adjacency.get(n.id).some(l=>l.other===focus.id)):[]);
   let path=$derived(pathFrom && pathTo?findPath(graph,pathFrom,pathTo,lens):null);
-  let viewBox=$derived(overviewBounds(dataset,zoom,panX,panY));
   let focusRegion=$derived(graph.byId.get(graph.countryOf.get(focusId))?.geo?.mapRegionId);
   const percent=value=>Math.round(100*(value||0));
   const label=id=>graph.byId.get(id)?.label || id;
   const flagFor=entity=>entity?.iso2 && entity.geo?flagEmoji(entity.iso2):'';
-  const choose=id=>{focusId=id;document.querySelector('#world-focus')?.scrollIntoView({behavior:'smooth',block:'start'});};
+  function choose(id,scroll=true){
+    focusId=id;
+    const region=graph.byId.get(graph.countryOf.get(id))?.geo?.mapRegionId,path=dataset.regions.find(r=>r.id===region)?.path;
+    const b=path && pathBounds(path,true);
+    if(scroll){if(b)worldMap?.flyTo([b[0]-b[2]*1.5-8,b[1]-b[3]*1.5-8,b[2]*4+16,b[3]*4+16]);document.querySelector('.world-map')?.scrollIntoView({behavior:'smooth',block:'start'});}
+  }
   function fill(regionId){
     const id=graph.regionToCountry.get(regionId),value=view.countryScores.get(id);
     if(value===undefined)return 'var(--surface)';
@@ -46,8 +52,12 @@
   const lensPracticeIds=()=>{const top=new Set(view.ranked.slice(0,120).map(e=>e.id));return top;};
 </script>
 
-<section class="hero world-hero"><p class="eyebrow">Verden</p><h1>Samme verden, tjue blikk</h1><p class="lead">Velg et historiesyn. Kartet, rekkefølgen og forbindelsene vektes etter hva linsen spør om, og etter påvirkning, aktualitet og nærhet.</p></section>
 
+
+{#snippet focusPill()}{#if focus}<button class="map-pill" onclick={()=>document.querySelector('#world-focus')?.scrollIntoView({behavior:'smooth',block:'start'})}>{flagFor(focus)} {focus.label} <span aria-hidden="true">↓</span></button>{/if}{/snippet}
+<PanZoomMap bind:this={worldMap} base={dataset.viewBox} bind:view={mapView} className="world-map" label={`Verdenskart vektet ${lens?`gjennom ${lens.name}`:'etter relevans'}. Dra og knip for å utforske, trykk på et land.`} onTap={({region})=>{const id=graph.regionToCountry.get(region);if(id)choose(id,false);}} overlay={focusPill}>
+    {#each dataset.regions as region}{@const id=graph.regionToCountry.get(region.id)}<path d={region.path} data-region={region.id} fill-rule="evenodd" style:fill={fill(region.id)} class:focused={focusRegion===region.id} class:neighbour={neighbours.some(n=>n.geo?.mapRegionId===region.id)} />{/each}
+</PanZoomMap>
 <div class="lens-strip" role="group" aria-label="Velg historiesyn">
   <button class="chip" aria-pressed={!lens} onclick={()=>{lensId='';}}>Uten linse</button>
   {#each graph.lenses as l}<button class="chip" aria-pressed={lensId===l.id} onclick={()=>chooseLens(l.id)}>{l.name}</button>{/each}
@@ -73,13 +83,6 @@
   <p class="muted detail">Samme vekting brukes når dagens quiz velger nye spørsmål.</p>
 </details>
 
-<div class="map-board world-map">
-  <svg {viewBox} role="group" aria-label={`Verdenskart vektet ${lens?`gjennom ${lens.name}`:'etter relevans'}`}>
-    {#each dataset.regions as region}{@const id=graph.regionToCountry.get(region.id)}<path d={region.path} fill-rule="evenodd" style:fill={fill(region.id)} class:focused={focusRegion===region.id} class:neighbour={neighbours.some(n=>n.geo?.mapRegionId===region.id)} role="button" tabindex="0" aria-label={id?label(id):region.label} onclick={()=>id && choose(id)} onkeydown={e=>{if(id && ['Enter',' '].includes(e.key)){e.preventDefault();choose(id);}}} />{/each}
-  </svg>
-</div>
-<div class="toolbar map-tools"><button class="secondary" aria-label="Zoom inn" onclick={()=>zoom=Math.min(8,zoom*2)}>+</button><button class="secondary" aria-label="Zoom ut" onclick={()=>{zoom=Math.max(1,zoom/2);if(zoom===1){panX=0;panY=0;}}}>−</button>
-  {#each [['←',-1,0],['↑',0,-1],['↓',0,1],['→',1,0]] as [arrow,dx,dy]}<button class="secondary" disabled={zoom===1} aria-label="Flytt kartet" onclick={()=>{panX=Math.max(-.5,Math.min(.5,panX+dx*.3/zoom));panY=Math.max(-.5,Math.min(.5,panY+dy*.3/zoom));}}>{arrow}</button>{/each}</div>
 <p class="muted map-note">{lens?.metric?METRIC_NOTES[lens.metric]:'Mørkere farge: mer av det linsen ser, knyttet til landet og vektet etter relevans.'} Trykk på et land.</p>
 
 {#if focus}

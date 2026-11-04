@@ -12,7 +12,8 @@ const targets=assessTargets(buildFormatTargets(data,[map]));
 test('new formats use existing sources or explicit verified historical sources',()=>{
  const ids=new Set();const sources=new Set(data.sources.map(s=>s.id));
  for(const t of targets){assert.ok(!ids.has(t.id));ids.add(t.id);assert.ok(t.sourceIds.length || t.sources.length);for(const id of t.sourceIds)assert.ok(sources.has(id));}
- assert.equal(targets.filter(t=>t.mode==='arrows').length,4);
+ assert.equal(targets.filter(t=>t.mode==='arrows').length,8);
+ assert.equal(targets.filter(t=>t.mode==='arrows' && t.askYear===false).length,4);
 });
 test('matching requires every correct pair and rejects missing or duplicate selections',()=>{
  const t=targets.find(t=>t.mode==='matching');const correct=Object.fromEntries(t.pairs.map(p=>[p.id,p.id]));
@@ -20,8 +21,15 @@ test('matching requires every correct pair and rejects missing or duplicate sele
  delete correct[t.pairs[0].id];assert.equal(gradeStructured(t,correct).correct,false);assert.equal(structuredReady(t,correct),false);
  const duplicates=Object.fromEntries(t.pairs.map(p=>[p.id,t.pairs[0].id]));assert.equal(gradeStructured(t,duplicates).correctCount,1);
 });
+test('drawing the direction alone is an easier level than direction and exact year',()=>{
+ const direction=targets.find(t=>t.mode==='arrows' && t.askYear===false),full=targets.find(t=>t.id===direction.baseId);
+ assert.ok(direction.level<full.level,`${direction.level} < ${full.level}`);
+ assert.equal(structuredReady(direction,{from:direction.from,to:direction.to}),true);
+ assert.equal(gradeStructured(direction,{from:direction.from,to:direction.to}).correct,true);
+ assert.equal(gradeStructured(direction,{from:direction.to,to:direction.from}).correct,false);
+});
 test('historical arrows need correct direction and year; partial success is explained',()=>{
- const t=targets.find(t=>t.mode==='arrows');
+ const t=targets.find(t=>t.mode==='arrows' && t.askYear);
  assert.deepEqual(gradeStructured(t,{from:t.from,to:t.to,year:String(t.year)}),{correct:true,directionCorrect:true,yearCorrect:true});
  assert.equal(gradeStructured(t,{from:t.to,to:t.from,year:t.year}).correct,false);
  assert.deepEqual(gradeStructured(t,{from:t.from,to:t.to,year:1945}),{correct:false,directionCorrect:true,yearCorrect:false});
@@ -30,9 +38,9 @@ test('historical arrows need correct direction and year; partial success is expl
 });
 test('format filters exclude unsupported modes and respect assessed learning depth',()=>{
  for(const mode of ['matching','before-after','arrows']){
- const selected=selectPracticeSession(targets,[],{depth:'advanced'},mode);
+ const selected=selectPracticeSession(targets,[],{level:0},mode);
  assert.ok(selected.queue.length);assert.ok(selected.queue.every(q=>q.target.mode===mode));
- for(const q of selected.queue){assert.equal(targetMatches(q.target,{depth:'foundation'}),false);assert.equal(targetMatches(q.target,{depth:'advanced',objective:'recall'}),false);assert.equal(effectiveRating(4,{correct:false,mode}),1);}
+ for(const q of selected.queue){assert.equal(targetMatches(q.target,{level:q.target.level}),true);if(q.target.level<=2)assert.equal(targetMatches(q.target,{level:q.target.level+2}),false);assert.equal(targetMatches(q.target,{level:0,objective:'recall'}),false);assert.equal(effectiveRating(4,{correct:false,mode}),1);}
  }
 });
 test('before-after grading distinguishes event order without leaking dates in options',()=>{
@@ -50,4 +58,7 @@ test('structured drafts become plain data before archiving or switching quizzes'
  const proxy=new Proxy({from:'deu',to:'pol',year:'1939'},{});
  const draft=questionDraft('arrows:poland-1939',{formatDraft:proxy});
  assert.deepEqual(structuredClone(draft).formatDraft,{from:'deu',to:'pol',year:'1939'});
+});
+test('which-came-first pairs do not reveal the answer through ordinals',()=>{
+ for(const t of targets.filter(t=>t.mode==='before-after'))for(const item of t.items)assert.doesNotMatch(item.label,/^\d+\.\s/);
 });

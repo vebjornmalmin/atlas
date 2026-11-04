@@ -1,19 +1,21 @@
 import {buildTimelineExercise,normalizeAnswer} from './exercises.js';
 import {gradeBorderWalk} from './world-exercises.js';
+import {gradeEstimate} from './levels.js';
 import {WORLD_FORMATS} from '../../knowledge-build/lens-projections.mjs';
 
 export const FORMAT_CHOICES = [
   {id:'mixed',label:'Blandet quiz',note:'Varierte oppgaver'},
   {id:'recognition',label:'Flervalg',note:'Velg ett svar'},
   {id:'recall',label:'Skriv svaret',note:'Hent fram fra hukommelsen'},
-  {id:'matching',label:'Koble sammen',note:'Finn tre riktige par'},
+  {id:'matching',label:'Koble sammen',note:'Trekk linjer mellom par'},
   {id:'before-after',label:'Hva kom først?',note:'Sammenlign to hendelser'},
-  {id:'arrows',label:'Historiske piler',note:'Tegn retning på kartet'},
+  {id:'arrows',label:'Historiske piler',note:'Dra en pil mellom land'},
   {id:'geography',label:'Kart',note:'Finn riktig sted'},
   {id:'outline',label:'Omriss',note:'Gjenkjenn formen'},
-  {id:'chronology',label:'Tidslinje',note:'Sett hendelser i rekkefølge'}
+  {id:'chronology',label:'Tidslinje',note:'Dra hendelsene i rekkefølge'},
+  {id:'estimate',label:'Når skjedde det?',note:'Plasser på tidslinjen'}
 ];
-export const STRUCTURED_MODES = ['matching','before-after','arrows','pick','border-walk'];
+export const STRUCTURED_MODES = ['matching','before-after','arrows','pick','border-walk','estimate'];
 export const WORLD_FORMAT_CHOICES = WORLD_FORMATS;
 const regions = [
   {id:'gbr',label:'Storbritannia',x:358,y:59},
@@ -40,7 +42,8 @@ export function buildFormatTargets(data, maps=[]) {
     }
   }
   for(const timeline of data.timelines){
-    const items=[...timeline.items].sort((a,b)=>a.year-b.year);
+    // Ordinals such as «16. Abraham Lincoln» would reveal which came first.
+    const items=[...timeline.items].map(i=>({...i,label:String(i.label).replace(/^\d+\.\s+/,'')})).sort((a,b)=>a.year-b.year);
     for(let i=0;i<items.length-1;i+=2){
       const pair=items.slice(i,i+2);if(pair[0].year===pair[1].year)continue;
       const shuffled=buildTimelineExercise({id:`first:${timeline.id}:${i}`,items:pair}).items;
@@ -57,16 +60,20 @@ export function buildFormatTargets(data, maps=[]) {
     {id:'normandy-1944',label:'De alliertes landgang i Normandie på D-dagen',from:'gbr',to:'fra',year:1944,date:'6. juni 1944',source:{title:'Britiske myndigheter – D-dagen',url:'https://www.gov.uk/government/news/d-day-anniversary-we-remember-69-years-later'}}
   ]){
     const from=regions.find(r=>r.id===event.from),to=regions.find(r=>r.id===event.to);
-    result.push({id:`arrows:${event.id}`,mode:'arrows',kind:'connections',entityId:event.id==='normandy-1944'?'d-day-landings-in-normandy':undefined,collectionIds:['history'],datasetId:'world',regions,
-      prompt:`${event.label}: hvor gikk angrepet fra og til, og i hvilket år?`,
-      from:event.from,to:event.to,year:event.year,answer:`${from.label} → ${to.label} · ${event.year}`,
-      explanation:`${event.label} begynte ${event.date}. Pilen viser en forenklet forbindelse mellom land, ikke en faktisk militær rute. Kartet bruker dagens grenser.`,
-      sourceIds:[],sources:[event.source],difficulty:5,significance:4});
+    const common={mode:'arrows',kind:'connections',entityId:event.id==='normandy-1944'?'d-day-landings-in-normandy':undefined,collectionIds:['history'],datasetId:'world',regions,
+      from:event.from,to:event.to,year:event.year,sourceIds:[],sources:[event.source],difficulty:5,significance:4,
+      explanation:`${event.label} begynte ${event.date}. Pilen viser en forenklet forbindelse mellom land, ikke en faktisk militær rute. Kartet bruker dagens grenser.`};
+    // The direction alone is an easy, spatial question; adding the exact year makes it a precision question.
+    result.push({...common,id:`arrows:${event.id}:direction`,baseId:`arrows:${event.id}`,retrievalRole:'direction',askYear:false,
+      prompt:`${event.label} (${event.year}): tegn pilen fra landet angrepet kom fra, til landet det rammet.`,answer:`${from.label} → ${to.label}`});
+    result.push({...common,id:`arrows:${event.id}`,askYear:true,
+      prompt:`${event.label}: hvor gikk angrepet fra og til, og i hvilket år?`,answer:`${from.label} → ${to.label} · ${event.year}`});
   }
   return result;
 }
 export function gradeStructured(target,draft={},neighbours=new Map()) {
   if(target.mode==='pick')return {correct:draft.choice===target.correctId};
+  if(target.mode==='estimate')return gradeEstimate(draft.year,target);
   if(target.mode==='border-walk')return gradeBorderWalk(target,draft.path||[],neighbours);
   if(target.mode==='matching') {
     const correctCount=target.pairs.filter(p=>draft[p.id]===p.id).length;
@@ -75,8 +82,8 @@ export function gradeStructured(target,draft={},neighbours=new Map()) {
   if(target.mode==='before-after')return {correct:draft.first===target.firstId};
   if(target.mode==='arrows') {
     const directionCorrect=draft.from===target.from && draft.to===target.to;
-    const yearCorrect=String(draft.year ?? '').trim()===String(target.year);
-    return {correct:directionCorrect && yearCorrect,directionCorrect,yearCorrect};
+    const yearCorrect=target.askYear===false?null:String(draft.year ?? '').trim()===String(target.year);
+    return {correct:directionCorrect && yearCorrect!==false,directionCorrect,yearCorrect};
   }
   return {correct:false};
 }
@@ -85,5 +92,6 @@ export function structuredReady(target,draft={}) {
   if(target.mode==='border-walk')return draft.path?.at(-1)===target.goal;
   if(target.mode==='matching')return target.pairs.every(p=>Boolean(draft[p.id]));
   if(target.mode==='before-after')return Boolean(draft.first);
-  return Boolean(draft.from && draft.to && String(draft.year ?? '').trim());
+  if(target.mode==='estimate')return Number.isFinite(draft.year);
+  return Boolean(draft.from && draft.to && (target.askYear===false || String(draft.year ?? '').trim()));
 }

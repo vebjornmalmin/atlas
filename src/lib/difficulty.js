@@ -47,12 +47,13 @@ function familyAssessment(target) {
  // Unknown future families are not silently treated as beginner material.
  return assessment(Math.max(3,target.difficulty || 3),target.kind==='connections'?'connections':/^-?\d{3,4}$/.test(String(target.answer))?'details':target.learningStage || 'details','unreviewed','Nytt innhold må vurderes før det brukes som grunnlag.');
 }
+import {assessLevel} from './levels.js';
 export function assessDifficulty(target) {
  const family=familyAssessment(target);
  const numeric=/^-?\d{3,4}$/.test(String(target.answer));
  const reasoning=target.learningProfile?.reasoning || (['scale'].includes(target.format)?'order':['knowledge-flow','perspective-switch','border-walk'].includes(target.format)?'compare':target.answerFormat==='explanation'?'explain':['timeline','before-after','arrows'].includes(target.mode) || target.kind==='before-after'?'order':target.mode==='matching'?'compare':'identify');
  const precision=target.learningProfile?.precision || (numeric?'exact':/person-list|city-list/.test(target.answerType||'')?'complete':'broad');
  const learningStage=target.learningProfile?.stage || family.learningStage;
- return {...family,learningStage,precision,reasoning,learningDepth:['compare','explain'].includes(reasoning)?'connections':reasoning==='order'?'sequence':learningStage==='foundation'?'foundation':'details'};
+ return {...family,...assessLevel({...target,learningStage}),learningStage,precision,reasoning,learningDepth:['compare','explain'].includes(reasoning)?'connections':reasoning==='order'?'sequence':learningStage==='foundation'?'foundation':'details'};
 }
 export function assessTargets(targets) {return targets.map(target=>({...target,...assessDifficulty(target)}));}

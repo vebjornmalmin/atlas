@@ -2,6 +2,7 @@ import {schedulingKey,legacyFactKey,evidenceKind} from './knowledge-model.js';
 import {factKey,learningStage,uniqueFacts,exposureKey,uniqueQuizFacts} from './journey.js';
 import { fsrs, createEmptyCard, Rating } from 'ts-fsrs';
 import {DEFAULT_RELEVANCE} from './world-graph.js';
+import {preferredLevel,levelAccepts,levelDistance} from './levels.js';
 import {WORLD_FORMATS} from '../../knowledge-build/lens-projections.mjs';
 const WORLD_OBJECTIVES = new Set(WORLD_FORMATS.map(f => f.id));
 export { Rating };
@@ -64,8 +65,7 @@ export function targetMatches(target, preferences, collections = []) {
   const pref = { ...DEFAULT_PREFERENCES, ...preferences };
   if (pref.collectionIds.length && !target.collectionIds.some(id => pref.collectionIds.includes(id))) return false;
   if (pref.subject !== 'all' && !target.collectionIds.some(id => collections.find(c => c.id === id)?.subject === pref.subject)) return false;
-  if (pref.depth === 'foundation' && (target.difficulty > 3 || learningStage(target) !== 'foundation')) return false;
-  if (pref.depth === 'intermediate' && (target.difficulty > 4 || learningStage(target) === 'connections')) return false;
+  if (!levelAccepts(target, preferredLevel(pref))) return false;
   if (Number.isFinite(target.year)) {
     if (pref.fromYear !== '' && target.year < Number(pref.fromYear)) return false;
     if (pref.toYear !== '' && target.year > Number(pref.toYear)) return false;
@@ -75,9 +75,9 @@ export function targetMatches(target, preferences, collections = []) {
   if (pref.objective === 'connections' && target.kind !== 'connections') return false;
   if (pref.objective === 'recognition' && target.mode !== 'recognition') return false;
   if (pref.objective === 'outline' && target.mode !== 'outline') return false;
-  if (['matching','before-after','arrows'].includes(pref.objective) && target.mode!==pref.objective) return false;
+  if (['matching','before-after','arrows','estimate'].includes(pref.objective) && target.mode!==pref.objective) return false;
   if (WORLD_OBJECTIVES.has(pref.objective) && target.format !== pref.objective) return false;
-  if (pref.objective === 'recall' && ['map', 'timeline', 'recognition','matching','before-after','arrows','pick','border-walk'].includes(target.mode)) return false;
+  if (pref.objective === 'recall' && ['map', 'timeline', 'recognition','matching','before-after','arrows','pick','border-walk','estimate'].includes(target.mode)) return false;
   return true;
 }
 
@@ -92,7 +92,7 @@ export function selectSession(targets, states, preferences, now = new Date(), co
   const knownFacts = new Set(targets.filter(t=>byId.has(schedulingKey(t))).map(factKey));
   const recentFacts = new Set(reviews.filter(r=>now-new Date(r.timestamp)<86400000).map(r=>targets.find(t=>t.id===r.targetId)).filter(Boolean).map(factKey));
   const fresh = eligible.filter(t => !knownFacts.has(factKey(t)) && !recentFacts.has(factKey(t)))
-    .sort((a,b) => Number(Boolean(b.snapshot))-Number(Boolean(a.snapshot)) || Number(b.mode==='recognition')-Number(a.mode==='recognition') || score(b) - score(a) || a.id.localeCompare(b.id));
+    .sort((a,b) => levelDistance(a,preferredLevel(pref))-levelDistance(b,preferredLevel(pref)) || Number(Boolean(b.snapshot))-Number(Boolean(a.snapshot)) || Number(b.mode==='recognition')-Number(a.mode==='recognition') || score(b) - score(a) || a.id.localeCompare(b.id));
   const max = Math.min(20, Math.max(3, Number(pref.dailyMinutes) * 2));
   const newCount = pref.newRatio === 0 ? 0 : due.length ? Math.max(1, Math.round(max * pref.newRatio)) : max;
   const selectedDue = uniqueQuizFacts(due).slice(0, max - (due.length ? newCount : 0));
@@ -117,14 +117,13 @@ export function selectSession(targets, states, preferences, now = new Date(), co
 
 export function selectPracticeSession(targets, states, preferences, objective='mixed', now=new Date(), collections=[], reviews=[]) {
   const pref={...DEFAULT_PREFERENCES,...preferences,objective};
-  if (objective==='chronology' || objective==='connections' || ['before-after','arrows'].includes(objective)) pref.depth='advanced';
-  else if(['geography','outline','matching'].includes(objective) && pref.depth==='foundation')pref.depth='intermediate';
   const eligible=targets.filter(target=>targetMatches(target,pref,collections) && (objective!=='chronology' || target.mode==='timeline'));
   const byId=schedulingIndex(targets,states,reviews);
   const lastPracticed=new Map();
   for(const review of reviews) { const target=targets.find(t=>t.id===review.targetId); if(!target)continue; const key=exposureKey(target); if(!lastPracticed.has(key) || lastPracticed.get(key)<review.timestamp) lastPracticed.set(key,review.timestamp); }
   const rank=target=>!byId.has(schedulingKey(target))?0:new Date(byId.get(schedulingKey(target)).due)<=now?1:2;
-  const remaining=uniqueQuizFacts([...eligible].sort((a,b)=>(lastPracticed.get(exposureKey(a))||byId.get(schedulingKey(a))?.last_review||'').localeCompare(lastPracticed.get(exposureKey(b))||byId.get(schedulingKey(b))?.last_review||'') || rank(a)-rank(b) || Number(Boolean(b.snapshot))-Number(Boolean(a.snapshot)) || Number(b.mode==='recognition')-Number(a.mode==='recognition') || b.significance-a.significance || a.id.localeCompare(b.id)));
+  const level=preferredLevel(pref);
+  const remaining=uniqueQuizFacts([...eligible].sort((a,b)=>levelDistance(a,level)-levelDistance(b,level) || (lastPracticed.get(exposureKey(a))||byId.get(schedulingKey(a))?.last_review||'').localeCompare(lastPracticed.get(exposureKey(b))||byId.get(schedulingKey(b))?.last_review||'') || rank(a)-rank(b) || Number(Boolean(b.snapshot))-Number(Boolean(a.snapshot)) || Number(b.mode==='recognition')-Number(a.mode==='recognition') || b.significance-a.significance || a.id.localeCompare(b.id)));
   const selected=[];const modes=new Set();
   const max=Math.min(20,Math.max(3,Number(pref.dailyMinutes)*2));
   while(remaining.length && selected.length<max){

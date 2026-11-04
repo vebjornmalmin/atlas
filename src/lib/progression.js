@@ -1,6 +1,7 @@
 import {schedulingIndex} from './learning.js';
 import {schedulingKey} from './knowledge-model.js';
 import {normalizeAnswer} from './exercises.js';
+import {storyOrder,storyCursor} from './story.js';
 
 // A unit's foundation unlocks the units that build on it; exploring ahead is still allowed.
 export const UNIT_STATUS = {
@@ -81,7 +82,7 @@ export function curriculumProgress(curriculum, targets, states, reviews) {
  * Units to continue first: started units by recent activity, then ready units by tier,
  * alternating domains so a new learner meets several subjects early.
  */
-export function recommendedUnits(curriculum, progress, {domainIds = []} = {}) {
+export function recommendedUnits(curriculum, progress, {domainIds = [], story = false} = {}) {
   // Register collections can sit in the same preference list; only curriculum domains narrow the path.
   const chosen = domainIds.filter(id => (curriculum?.domains || []).some(d => d.id === id));
   const wanted = chosen.length ? new Set(chosen) : null;
@@ -89,6 +90,8 @@ export function recommendedUnits(curriculum, progress, {domainIds = []} = {}) {
   const units = (curriculum?.units || []).filter(unit => !wanted || wanted.has(unit.domainId));
   const started = units.filter(unit => ['started', 'practiced', 'grounded'].includes(progress.units.get(unit.id)?.status) && progress.units.get(unit.id).unseen.length)
     .sort((a, b) => progress.units.get(b.id).lastActivity.localeCompare(progress.units.get(a.id).lastActivity));
+  // The story thread: chronological chapters across subjects, alternating with timeless units.
+  if (story) return [...started, ...storyOrder(units, progress, storyCursor(curriculum, progress))];
   const fresh = units.filter(unit => progress.units.get(unit.id)?.status === 'new' && progress.units.get(unit.id).ready)
     .sort((a, b) => a.tier - b.tier || domainOrder.get(a.domainId) - domainOrder.get(b.domainId) || a.order - b.order);
   const byDomain = new Map();
@@ -174,7 +177,7 @@ export function buildDailySession({data, targets, states, reviews, preferences =
   const newTarget = preferences.newRatio === 0 ? 0 : Math.max(3, Math.round(size * Number(preferences.newRatio ?? 0.4)));
   const dueRows = due.slice(0, Math.max(0, size - newTarget)).map(target => ({target, reason: 'Due review', unitId: target.unitId}));
   const room = preferences.newRatio === 0 && due.length ? 0 : size - dueRows.length;
-  const candidates = unitIds ? unitIds.map(id => curriculum.units.find(u => u.id === id)).filter(Boolean) : recommendedUnits(curriculum, progress, {domainIds});
+  const candidates = unitIds ? unitIds.map(id => curriculum.units.find(u => u.id === id)).filter(Boolean) : recommendedUnits(curriculum, progress, {domainIds, story: preferences.story !== false});
   const lessons = [], fresh = [];
   let disclosed = dueRows.map(row => disclosure(row.target)).join(' ');
   const perUnit = unitIds?.length === 1 ? room : Math.max(3, Math.ceil(room / 2));

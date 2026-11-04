@@ -37,6 +37,7 @@ export function legacyFactKey(target) {
 }
 export function evidenceKind(target) {
   if(target.answerFormat==='explanation')return 'explanation';
+  if(target.mode==='estimate')return 'estimate';
   if(['recognition','outline','map'].includes(target.mode))return 'recognition';
   if(['matching','timeline','before-after','arrows'].includes(target.mode))return 'sequence';
   return 'recall';

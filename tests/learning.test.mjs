@@ -78,12 +78,12 @@ test('focus filters collections, subjects, period, depth, and exercise objective
   assert.equal(targetMatches(historical, { subject: 'history', fromYear: 1900, toYear: 1950 }, collections), true);
   assert.equal(targetMatches(historical, { fromYear: 1950 }, collections), false);
   assert.equal(targetMatches(historical, { toYear: 1900 }, collections), false);
-  assert.equal(targetMatches(target('deep', { difficulty: 5 }), { depth: 'foundation' }), false);
-  assert.equal(targetMatches(target('deep', { difficulty: 5 }), { depth: 'advanced' }), true);
+  assert.equal(targetMatches(target('deep', { answer: '1905', answerFormat: 'year', significance: 2 }), { level: 2 }), false);
+  assert.equal(targetMatches(target('deep', { answer: '1905', answerFormat: 'year', significance: 2 }), { level: 4 }), true);
   assert.equal(targetMatches(target('map', { mode: 'map' }), { objective: 'geography' }), true);
   assert.equal(targetMatches(historical, { objective: 'geography' }), false);
-  assert.equal(targetMatches(target('sequence', { mode: 'timeline' }), { objective: 'chronology', depth:'advanced' }), true);
-  assert.equal(targetMatches(target('link', { kind: 'connections' }), { objective: 'connections', depth:'advanced' }), true);
+  assert.equal(targetMatches(target('sequence', { mode: 'timeline' }), { objective: 'chronology', level:0 }), true);
+  assert.equal(targetMatches(target('link', { kind: 'connections' }), { objective: 'connections', level:0 }), true);
   assert.equal(targetMatches(target('recognition', { mode: 'recognition' }), { objective: 'recall' }), false);
 });
 
@@ -113,7 +113,7 @@ test('calendar export is a daily floating-local-time event with notification and
 
 test('mixed new sessions include interactive forms instead of only high-scoring text recall',()=>{
  const targets=['recall','recognition','map','outline','timeline'].map((mode,index)=>target(mode,{mode,datasetId:'world',regionId:mode,significance:5-index}));
- const selected=selectSession(targets,[],{dailyMinutes:3,depth:'advanced'},now);
+ const selected=selectSession(targets,[],{dailyMinutes:3,level:0},now);
  assert.equal(new Set(selected.queue.map(row=>row.target.mode)).size,5);
 });
 test('extra practice remains available when scheduled cards are not due and rotates past recent practice',async()=>{

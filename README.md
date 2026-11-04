@@ -4,7 +4,23 @@ Offline kunnskapstrening på norsk, laget for iPhone 17 Pro.
 
 Live app: https://atlas-first-app.atlas-memory.workers.dev
 
-## Gjeldende utgave — 1.1.3: «Uten nett» bare når nettet faktisk mangler
+## Gjeldende utgave — 1.2.0: Én historie gjennom tid
+
+Appen er samlet til tre steder: **I dag**, **Atlas** og **Deg**. Før var dagens økt, fri quiz og Verden tre separate læringssystemer med egne innganger og innstillinger, fordelt på seks faner. Nå er hukommelsen hovedsaken, og perspektivene er vevd inn i den.
+
+- **Dagens kapittel**: nye emner åpnes omtrent i tidsrekkefølge på tvers av fag, med et tidløst emne innimellom. Hver økt får epoke og tidsrom, og inntil to perspektiver: «Samtidig i verden» (hva skjedde først, i to fag fra samme tid), en historisk pil fra perioden, eller en oppgave gjennom et historiesyn. Repetisjon med FSRS ligger fortsatt i bunnen.
+- **Atlas**: søk og tre visninger av samme kunnskap: *Tid* (hele pensumet som én tidslinje), *Kart* (verden gjennom historiesynene) og *Emner*.
+- **Deg**: fremgang, økten og innstillinger på ett sted.
+- **Nivåer på fire akser**: henting, presisjon, kjennskap og sammenheng. Nivå 1–4 (Orientering, Holdepunkter, Presisjon, Ekspert) er bånd, så en høyere quiz er virkelig en annen quiz. Å tegne en kjent forbindelse regnes som lettere enn å huske ett årstall. Under Deg → Fremgang → Nivåer og akser vises hvilken akse du faller på.
+- **Samme faktum på flere nivåer**: plasser et årstall omtrent på en logaritmisk tidslinje før du skriver det eksakt, tegn bare retningen på en pil før du også skal kunne året, og ordne tre hendelser langt fra hverandre før fem tett i tid.
+- **Naturlig interaksjon**: kartene dras, knipes og dobbelttrykkes som et kartprogram på telefonen; piler tegnes ved å dra fra land til land; rekkefølger sorteres ved å holde og dra; koblinger tegnes som linjer. Oppgavene blir stående etter svaret og viser hva som var riktig.
+- **Rettet**: presidentenes nummer røpet rekkefølgen i tidslinjer og «hva kom først»-oppgaver.
+
+Kunnskapspakke 2.2.0 har nivåprofil på alle spørsmål. Appen lager i tillegg 118 «samtidig»-oppgaver, 200 tidslinjeplasseringer og 12 spredte tidslinjer fra det kildebelagte innholdet. Beslutninger og avgrensninger: [docs/levels-and-story.md](docs/levels-and-story.md).
+
+Kontrollert mot produksjonsbygget kjørt lokalt i en iPhone-visning med berøring: piltegning med én finger, knip, dra og trykk på kartet, trykk-og-hold-sortering, linjekobling, tidslinjeplassering, dagens kapittel, Atlas og Deg. 196 automatiske tester består. iOS-simulatoren var ikke tilgjengelig i dette miljøet, så kontrollen i Safari på iPhone 17 Pro gjenstår.
+
+## 1.1.3: «Uten nett» bare når nettet faktisk mangler
 
 Toppfeltet viste «Uten nett» selv om nettet virket. Merket fulgte nettleserens `navigator.onLine`, som Safari kan melde som usann på en tilkoblet enhet; oppdateringene hadde allerede sluttet å stole på det i 1.0.0, men merket hadde ikke. Nå følger merket bare appversjonssjekken: en forespørsel som ikke når serveren, eller tjenestearbeiderens svar når nettet mangler (merket med `X-Atlas-Offline`), betyr frakoblet. Alt annet skjuler merket. Sjekken kjører ved oppstart, hvert femte minutt, når appen kommer tilbake i forgrunnen og når nettleseren melder at forbindelsen endrer seg.
 

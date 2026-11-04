@@ -7,17 +7,17 @@
   let status = $state('');
   const navigation = [
     { id: 'today', label: 'I dag' },
-    { id: 'learn', label: 'Emner' },
-    { id: 'world', label: 'Verden' },
-    { id: 'explore', label: 'Søk' },
-    { id: 'progress', label: 'Fremgang' },
-    { id: 'settings', label: 'Innstillinger' }
+    { id: 'atlas', label: 'Atlas' },
+    { id: 'me', label: 'Deg' }
   ];
+  // Older links keep working: they open the part of Atlas or Deg that replaced them.
+  const legacy = { learn: 'atlas', world: 'atlas', explore: 'atlas', focus: 'me', progress: 'me', settings: 'me' };
 
   onMount(() => {
     const syncRoute = () => {
       const hash = location.hash.slice(1).split('/')[0];
-      active = navigation.some(item => item.id === hash) ? hash : 'today';
+      const id = legacy[hash] || hash;
+      active = navigation.some(item => item.id === id) ? id : 'today';
     };
     const updateStatus = event => {
       if (typeof event.detail === 'string') status = event.detail;
@@ -63,16 +63,10 @@
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
         {#if item.id === 'today'}
           <circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/>
-        {:else if item.id === 'learn'}
-          <path d="M5 4h10a4 4 0 0 1 4 4v12H9a4 4 0 0 1-4-4V4Z"/><path d="M9 8h6M9 12h6"/>
-        {:else if item.id === 'world'}
+        {:else if item.id === 'atlas'}
           <circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3Z"/>
-        {:else if item.id === 'explore'}
-          <path d="M3 5.5c3-1.5 6-1.5 9 .5 3-2 6-2 9-.5v14c-3-1.5-6-1.5-9 .5-3-2-6-2-9-.5v-14Z"/><path d="M12 6v14"/>
-        {:else if item.id === 'progress'}
-          <path d="M4 4v16h16M8 15l4-4 4 2 5-7"/><path d="M17 6h4v4"/>
         {:else}
-          <path d="M4 6h16M4 12h16M4 18h16"/><circle cx="9" cy="6" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="8" cy="18" r="2"/>
+          <circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.4-6 8-6s6.5 2 8 6"/>
         {/if}
       </svg>
       <span>{item.label}</span>
