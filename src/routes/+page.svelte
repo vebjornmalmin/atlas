@@ -244,6 +244,7 @@
   let contentCoverage = $derived(data?learningCoverage(data,targets):[]);
   let abilities = $derived(evidenceOverview(targets,reviews));
   let outcome = $derived(sessionOutcome(session?.results || []));
+  let outcomeTotal = $derived(outcome.independent + outcome.supported + outcome.retry);
   let retryIds = $derived(retryTargets(session?.results || []));
   let current = $derived(session && !isLessonEntry(session.queue[session.index]) ? targets.find(t => t.id === session.queue[session.index]?.id) : null);
   let currentArtwork = $derived(artworkMedia.find(m=>m.entityId===(current?.media || current?.entityId)));
@@ -587,7 +588,7 @@
     <div class="s-steps" role="progressbar" aria-label="Fullførte spørsmål" aria-valuemin="0" aria-valuemax={session.queue.length} aria-valuenow={session.index}>{#each session.queue as item,i}<span class:done={i<session.index} class:independent={session.results[i]?.correct===true && !session.results[i]?.usedHint && !session.results[i]?.learnedFirst} class:active={i===session.index} aria-hidden="true"></span>{/each}</div>
     <span class="s-count"><strong>{session.index}</strong>/{session.queue.length}<span class="sr-only"> fullført, {session.queue.length-session.index} igjen</span></span>
   </div>
-  {#if session.index>0 || session.queue.some(q=>q.sessionRetry)}<p class="s-progress-note">{#if session.index>0}{outcome.independent} riktige uten hjelp · {outcome.supported} med støtte · {outcome.retry} å øve videre på{/if}{#if session.queue.some(q=>q.sessionRetry)}{session.index>0?' · ':''}{session.queue.filter(q=>q.sessionRetry).length} ekstra forsøk lagt til etter spørsmålene{/if}</p>{/if}
+  {#if outcomeTotal>0 || session.queue.some(q=>q.sessionRetry)}<p class="s-progress-note">{#if outcomeTotal>0}{outcome.independent} riktige uten hjelp · {outcome.supported} med støtte · {outcome.retry} å øve videre på{/if}{#if session.queue.some(q=>q.sessionRetry)}{outcomeTotal>0?' · ':''}{session.queue.filter(q=>q.sessionRetry).length} ekstra forsøk lagt til etter spørsmålene{/if}</p>{/if}
 </div>
 {/snippet}
 
