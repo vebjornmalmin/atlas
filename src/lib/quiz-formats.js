@@ -2,6 +2,7 @@ import {buildTimelineExercise,normalizeAnswer} from './exercises.js';
 import {gradeBorderWalk} from './world-exercises.js';
 import {gradeEstimate} from './levels.js';
 import {WORLD_FORMATS} from '../../knowledge-build/lens-projections.mjs';
+import {HISTORICAL_ARROWS,ARROW_REGION_NAMES,ARROW_KIND_QUESTIONS} from '../../knowledge-build/historical-arrows.mjs';
 
 export const FORMAT_CHOICES = [
   {id:'mixed',label:'Blandet quiz',note:'Varierte oppgaver'},
@@ -17,14 +18,6 @@ export const FORMAT_CHOICES = [
 ];
 export const STRUCTURED_MODES = ['matching','before-after','arrows','pick','border-walk','estimate'];
 export const WORLD_FORMAT_CHOICES = WORLD_FORMATS;
-const regions = [
-  {id:'gbr',label:'Storbritannia',x:358,y:59},
-  {id:'fra',label:'Frankrike',x:365,y:79},
-  {id:'deu',label:'Tyskland',x:383,y:67},
-  {id:'pol',label:'Polen',x:398,y:65},
-  {id:'nor',label:'Norge',x:379,y:41},
-  {id:'dnk',label:'Danmark',x:379,y:55}
-];
 export function buildFormatTargets(data, maps=[]) {
   const result=[];
   // Only homogeneous, single-answer families are suitable for unambiguous pairs.
@@ -53,23 +46,26 @@ export function buildFormatTargets(data, maps=[]) {
         sourceIds:timeline.sourceIds,difficulty:5,significance:3});
     }
   }
-  if(maps.some(m=>m.id==='world'))for(const event of [
-    {id:'poland-1939',label:'Tysklands invasjon av Polen',from:'deu',to:'pol',year:1939,date:'1. september 1939',source:{title:'United States Holocaust Memorial Museum – invasjonen av Polen',url:'https://encyclopedia.ushmm.org/content/en/article/invasion-of-poland-fall-1939'}},
-    {id:'norway-1940',label:'Tysklands invasjon av Norge',from:'deu',to:'nor',year:1940,date:'9. april 1940',source:{title:'Deutschlandmuseum – invasjonen av Danmark og Norge',url:'https://www.deutschlandmuseum.de/en/history/calendar/1940-04-09-germany-invades-denmark-and-norway/'}},
-    {id:'denmark-1940',label:'Tysklands invasjon av Danmark',from:'deu',to:'dnk',year:1940,date:'9. april 1940',source:{title:'Deutschlandmuseum – invasjonen av Danmark og Norge',url:'https://www.deutschlandmuseum.de/en/history/calendar/1940-04-09-germany-invades-denmark-and-norway/'}},
-    {id:'normandy-1944',label:'De alliertes landgang i Normandie på D-dagen',from:'gbr',to:'fra',year:1944,date:'6. juni 1944',source:{title:'Britiske myndigheter – D-dagen',url:'https://www.gov.uk/government/news/d-day-anniversary-we-remember-69-years-later'}}
-  ]){
-    const from=regions.find(r=>r.id===event.from),to=regions.find(r=>r.id===event.to);
-    const common={mode:'arrows',kind:'connections',entityId:event.id==='normandy-1944'?'d-day-landings-in-normandy':undefined,collectionIds:['history'],datasetId:'world',regions,
-      from:event.from,to:event.to,year:event.year,sourceIds:[],sources:[event.source],difficulty:5,significance:4,
-      explanation:`${event.label} begynte ${event.date}. Pilen viser en forenklet forbindelse mellom land, ikke en faktisk militær rute. Kartet bruker dagens grenser.`};
-    // The direction alone is an easy, spatial question; adding the exact year makes it a precision question.
+  if(maps.some(m=>m.id==='world'))for(const event of HISTORICAL_ARROWS){
+    const from=ARROW_REGION_NAMES[event.from],to=ARROW_REGION_NAMES[event.to];
+    const regions=[event.from,event.to,...event.distractors].map(id=>({id,label:ARROW_REGION_NAMES[id]})).sort((a,b)=>a.label.localeCompare(b.label,'nb'));
+    const question=ARROW_KIND_QUESTIONS[event.kind];
+    const common={mode:'arrows',kind:'connections',entityId:event.entityId,collectionIds:['history'],datasetId:'world',regions,
+      from:event.from,to:event.to,year:event.year,sourceIds:[],sources:event.sources,difficulty:5,significance:4,
+      explanation:`${event.label}: ${event.date}. ${event.note}${event.approximate?' Datoen er omtrentlig.':''} Kartet bruker dagens grenser.`};
+    // The direction alone is the easier, spatial question; the year variant also asks for the exact year.
     result.push({...common,id:`arrows:${event.id}:direction`,baseId:`arrows:${event.id}`,retrievalRole:'direction',askYear:false,
-      prompt:`${event.label} (${event.year}): tegn pilen fra landet angrepet kom fra, til landet det rammet.`,answer:`${from.label} → ${to.label}`});
+      prompt:`${event.label} (${event.date}): ${question}?`,answer:`${from} → ${to}`});
     result.push({...common,id:`arrows:${event.id}`,askYear:true,
-      prompt:`${event.label}: hvor gikk angrepet fra og til, og i hvilket år?`,answer:`${from.label} → ${to.label} · ${event.year}`});
+      prompt:`${event.label}: ${question}, og i hvilket år?${event.year<0?' Skriv f.Kr. for år før Kristus.':''}`,answer:`${from} → ${to} · ${event.date}`});
   }
   return result;
+}
+export function parseYearInput(value) {
+  const match=String(value ?? '').trim().toLowerCase().match(/^(-?\d{1,4})\s*(f\.?\s*kr\.?|fvt\.?)?$/);
+  if(!match)return NaN;
+  const year=Number(match[1]);
+  return match[2] ? -Math.abs(year) : year;
 }
 export function gradeStructured(target,draft={},neighbours=new Map()) {
   if(target.mode==='pick')return {correct:draft.choice===target.correctId};
@@ -82,7 +78,7 @@ export function gradeStructured(target,draft={},neighbours=new Map()) {
   if(target.mode==='before-after')return {correct:draft.first===target.firstId};
   if(target.mode==='arrows') {
     const directionCorrect=draft.from===target.from && draft.to===target.to;
-    const yearCorrect=target.askYear===false?null:String(draft.year ?? '').trim()===String(target.year);
+    const yearCorrect=target.askYear===false?null:parseYearInput(draft.year)===target.year;
     return {correct:directionCorrect && yearCorrect!==false,directionCorrect,yearCorrect};
   }
   return {correct:false};

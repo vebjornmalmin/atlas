@@ -1,7 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {buildFormatTargets,gradeStructured,structuredReady} from '../src/lib/quiz-formats.js';
+import {buildFormatTargets,gradeStructured,structuredReady,parseYearInput} from '../src/lib/quiz-formats.js';
+import {HISTORICAL_ARROWS,ARROW_REGION_NAMES} from '../knowledge-build/historical-arrows.mjs';
 import {assessTargets} from '../src/lib/difficulty.js';
 import {selectPracticeSession,targetMatches} from '../src/lib/learning.js';
 import {effectiveRating} from '../src/lib/journey.js';
@@ -12,8 +13,34 @@ const targets=assessTargets(buildFormatTargets(data,[map]));
 test('new formats use existing sources or explicit verified historical sources',()=>{
  const ids=new Set();const sources=new Set(data.sources.map(s=>s.id));
  for(const t of targets){assert.ok(!ids.has(t.id));ids.add(t.id);assert.ok(t.sourceIds.length || t.sources.length);for(const id of t.sourceIds)assert.ok(sources.has(id));}
- assert.equal(targets.filter(t=>t.mode==='arrows').length,8);
- assert.equal(targets.filter(t=>t.mode==='arrows' && t.askYear===false).length,4);
+ assert.equal(targets.filter(t=>t.mode==='arrows').length,2*HISTORICAL_ARROWS.length);
+ assert.equal(targets.filter(t=>t.mode==='arrows' && t.askYear===false).length,HISTORICAL_ARROWS.length);
+});
+test('historical arrow data is well formed and the legacy event ids remain',()=>{
+ const legacy=['poland-1939','norway-1940','denmark-1940','normandy-1944'];
+ const ids=new Set(HISTORICAL_ARROWS.map(e=>e.id));
+ assert.equal(ids.size,HISTORICAL_ARROWS.length);
+ assert.ok(HISTORICAL_ARROWS.length>=22);
+ for(const id of legacy)assert.ok(ids.has(id),id);
+ const mapIds=new Set(map.regions.map(r=>r.id));
+ for(const e of HISTORICAL_ARROWS){
+  assert.ok(['invasion','voyage','migration','ideas','trade'].includes(e.kind),e.id);
+  for(const r of [e.from,e.to,...e.distractors]){assert.ok(mapIds.has(r),`${e.id}: ${r} not on world map`);assert.ok(ARROW_REGION_NAMES[r],`${e.id}: ${r} has no Norwegian name`);}
+  assert.equal(new Set([e.from,e.to,...e.distractors]).size,e.distractors.length+2,`${e.id}: duplicate region`);
+  assert.ok(e.sources.length>0 && e.sources.every(s=>s.title && /^https:\/\//.test(s.url)),`${e.id}: sources`);
+  assert.ok(Number.isInteger(e.year) && e.date.length>0 && e.note.length>0,e.id);
+  assert.ok(!e.label.includes(String(Math.abs(e.year))),`${e.id}: label reveals year`);
+ }
+});
+test('arrow year variants never show their answer year and direction variants point back to their base',()=>{
+ const arrows=targets.filter(t=>t.mode==='arrows');
+ for(const t of arrows.filter(t=>t.askYear)){assert.ok(!t.prompt.includes(String(Math.abs(t.year))),t.id);assert.equal(t.baseId,undefined);}
+ for(const t of arrows.filter(t=>t.askYear===false)){assert.equal(t.retrievalRole,'direction');assert.ok(arrows.some(b=>b.id===t.baseId && b.askYear));}
+});
+test('negative years and f.Kr. answers are graded as the same year',()=>{
+ assert.equal(parseYearInput('218 f.Kr.'),-218);assert.equal(parseYearInput('-218'),-218);assert.equal(parseYearInput(' 1066 '),1066);assert.ok(Number.isNaN(parseYearInput('')));
+ const t=targets.find(t=>t.mode==='arrows' && t.askYear && t.year<0);
+ assert.ok(t,'a negative-year arrow target exists');
 });
 test('matching requires every correct pair and rejects missing or duplicate selections',()=>{
  const t=targets.find(t=>t.mode==='matching');const correct=Object.fromEntries(t.pairs.map(p=>[p.id,p.id]));
