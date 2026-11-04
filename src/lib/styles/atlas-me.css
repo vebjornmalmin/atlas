@@ -1,1 +1,519 @@
-/* Atlas (search, Tid, Kart, Emner) and Deg (progress, session, settings). Loaded after design.css. */
+/* Atlas (search, Tid, Kart, Emner) and Deg (progress, session, settings). Loaded after design.css.
+   Everything here is scoped under .atlas-page or .me-page so it cannot reach I dag. */
+
+/* ---------- Shared: editorial catalogue, ruled instead of boxed ---------- */
+
+.atlas-page,.me-page{--rs:var(--line-strong,var(--ink));font-variant-numeric:lining-nums tabular-nums}
+
+.atlas-page .card,.me-page .card{background:transparent;border:0;border-radius:0;box-shadow:none;padding:0;margin:0 0 20px}
+
+.atlas-page .eyebrow,.me-page .eyebrow{font-size:10.5px;font-weight:600;letter-spacing:.14em;line-height:1.5;color:var(--muted);margin:0 0 6px}
+
+/* Section labels: a firm rule and a small uppercase label, then hairline rows. */
+.atlas-page .section-title,.atlas-page .card>h2,.me-page h2{display:block;margin:28px 0 6px;padding-top:10px;border-top:1px solid var(--rs);font-family:inherit;font-size:11px;font-weight:600;letter-spacing:.14em;line-height:1.5;text-transform:uppercase;color:var(--muted)}
+
+.atlas-page .muted,.me-page .muted{font-size:13px;line-height:1.55}
+
+.atlas-page .detail,.me-page .detail{margin:8px 0 14px}
+
+/* Text links where other screens use rows of chips. */
+.atlas-page .chips{gap:0 18px}
+
+.atlas-page .chips .chip{min-height:44px;padding:0;border:0;border-radius:0;background:transparent;color:var(--accent);font-size:14px;font-weight:550;text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:5px}
+
+.atlas-page .secondary.more-results,.atlas-page .source-tools .secondary,.atlas-entity .secondary{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:48px;padding:12px 0;border:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);border-radius:0;background:transparent;color:var(--accent);text-align:left;font-size:14px}
+
+.atlas-page .entity-row,.me-page .entity-row{min-height:60px;padding:14px 0;gap:14px}
+
+.atlas-page .entity-row:after,.me-page .entity-row:after{content:"\203A";font-family:var(--serif);font-size:22px;line-height:1;color:var(--muted)}
+
+.atlas-page .entity-row>span[aria-hidden="true"]:last-child{display:none}
+
+.atlas-page .entity-row strong,.me-page .entity-row strong{font-family:var(--serif);font-size:17px;font-weight:400;line-height:1.3;letter-spacing:-.005em}
+
+.atlas-page .entity-row small.eyebrow{margin:0 0 3px}
+
+/* Fine ruled bars everywhere in these screens. */
+.atlas-page .bar,.me-page .bar{height:2px;border-radius:0;background:var(--line)}
+
+.atlas-page .bar>span,.me-page .bar>span{border-radius:0}
+
+/* Tabs: a few words on a hairline, the current one marked by an accent rule. */
+.ruled-tabs{display:flex;margin:4px 0 14px;border-bottom:1px solid var(--line);overflow-x:auto;scrollbar-width:none}
+
+.ruled-tabs::-webkit-scrollbar{display:none}
+
+.ruled-tabs button{position:relative;flex:1 0 auto;min-height:46px;padding:0 6px;border:0;border-radius:0;background:transparent;color:var(--muted);font-family:var(--serif);font-size:19px;font-weight:400;letter-spacing:-.01em;line-height:1;white-space:nowrap;transition:color .15s}
+
+.ruled-tabs button:active:not(:disabled){transform:none}
+
+.ruled-tabs button[aria-selected="true"]{color:var(--ink)}
+
+.ruled-tabs button[aria-selected="true"]:after{content:"";position:absolute;left:6px;right:6px;bottom:-1px;height:2px;background:var(--accent)}
+
+/* ---------- Atlas: search ---------- */
+
+.atlas-searchbar{position:relative;margin:2px 0 0}
+
+.atlas-searchbar svg{position:absolute;left:15px;top:50%;width:18px;height:18px;transform:translateY(-50%);fill:none;stroke:var(--muted);stroke-width:1.5;stroke-linecap:round;pointer-events:none}
+
+.atlas-page .atlas-searchbar input.atlas-search[type="search"][aria-label]{margin:0;padding-left:44px;font-size:16px}
+
+.search-bar-row{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin:6px 0 4px}
+
+.search-bar-row .quiet{padding:10px 0;flex:none}
+
+.search-bar-row .search-filter{flex:1;min-width:0;max-width:210px;margin:0}
+
+.search-bar-row .search-filter select{margin-top:4px;min-height:44px;padding:8px 12px;font-size:15px}
+
+.result-count{margin:10px 0 0;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+
+.entity-list{border-top:1px solid var(--rs);margin-top:6px}
+
+.entity-list .entity-row small.muted{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;font-size:12.5px;line-height:1.5}
+
+.collection-quiz{margin:8px 0 0}
+
+.source-tools{margin-top:20px}
+
+.source-tools .muted{margin:0}
+
+/* ---------- Atlas: Tid ---------- */
+
+.atlas-tid .story-strip{height:62px;margin:10px 22px 0}
+
+.atlas-tid .story-line{top:28px;height:1px;background:var(--muted);opacity:.7}
+
+.atlas-tid .story-tick{top:23px}
+
+.atlas-tid .story-tick::before{height:11px;background:var(--muted);opacity:.7}
+
+.atlas-tid .story-tick small{margin-top:4px;font-family:var(--serif);font-size:11px;color:var(--muted)}
+
+.atlas-tid .story-dot{top:24px;width:9px;height:9px;margin-left:-4.5px;border-width:1.5px;background:var(--bg)}
+
+.atlas-tid .story-dot[data-status="started"],.atlas-tid .story-dot[data-status="practiced"]{background:color-mix(in srgb,var(--warm) 45%,var(--bg))}
+
+.atlas-tid .story-dot[data-status="grounded"],.atlas-tid .story-dot[data-status="complete"],.atlas-tid .story-dot[data-status="secure"]{background:var(--accent)}
+
+.atlas-tid .story-dot.today{top:20px;width:17px;height:17px;margin-left:-8.5px;border-color:var(--ink);box-shadow:0 0 0 3px var(--accent-soft)}
+
+.atlas-tid .story-cursor{top:-6px;font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+
+.atlas-tid .story-strip>.story-tick:nth-child(4) small,.atlas-tid .story-strip>.story-tick:nth-child(7) small{visibility:hidden}
+
+.atlas-tid .story-intro{margin:6px 0 4px;font-size:12.5px;line-height:1.55}
+
+.atlas-tid .story-era{margin:26px 0 2px;padding-top:12px;border-top:1px solid var(--rs);font-family:var(--serif);font-size:24px;font-weight:400;letter-spacing:-.015em;line-height:1.2;text-transform:none;color:var(--ink)}
+
+/* Each era hangs off a thin spine; a dot on it shows how well the unit sits. */
+.atlas-tid .story-list{position:relative;margin:0 0 6px 5px;padding:0 0 0 24px;border-left:1px solid var(--line)}
+
+.atlas-tid .story-list .unit-row{position:relative;gap:10px;min-height:64px;padding:13px 0}
+
+.atlas-tid .story-list .unit-dot{position:absolute;left:-30px;top:19px;width:11px;height:11px;background:var(--bg)}
+
+.atlas-tid .story-list .unit-text{flex-direction:column-reverse;gap:3px}
+
+.atlas-tid .story-list .unit-text strong{font-family:var(--serif);font-size:18px;font-weight:400;line-height:1.25;letter-spacing:-.01em}
+
+.atlas-tid .story-list .unit-text small{font-size:11.5px;line-height:1.45;letter-spacing:.02em;color:var(--muted)}
+
+.atlas-tid .story-list .unit-row>span[aria-hidden="true"]:last-child{font-family:var(--serif);font-size:22px}
+
+.atlas-tid details.story-list{margin-top:0}
+
+.atlas-tid details.story-list>summary{min-height:52px;padding:12px 0;font-family:var(--serif);font-size:19px;font-weight:400;color:var(--ink);border-bottom:1px solid var(--line)}
+
+.atlas-tid details.story-list>summary .muted{font-family:inherit;font-size:12px;letter-spacing:.02em}
+
+.atlas-tid details.story-list>summary:after{font-family:var(--serif);color:var(--muted)}
+
+/* ---------- Atlas: Kart ---------- */
+
+/* The map runs edge to edge and takes the height that is left above the navigation. */
+.atlas-kart .world-map.pz-map{width:min(100vw,480px);height:calc(100svh - 280px);min-height:380px;max-height:680px;margin:0 0 0 calc(50% - min(50vw,240px));border-width:1px 0;border-radius:0}
+
+.atlas-kart .pz-controls{right:10px;bottom:10px;gap:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:color-mix(in srgb,var(--surface) 92%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+
+.atlas-kart .pz-controls button{width:44px;height:44px;border:0;border-radius:0;background:transparent;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none}
+
+.atlas-kart .pz-controls button+button{border-top:1px solid var(--line)}
+
+.atlas-kart .pz-controls button:active:not(:disabled){transform:none;background:var(--surface-2)}
+
+/* Pills that read small but are 44 pt to hit. */
+.atlas-kart .map-pill,.atlas-kart .lens-strip.dock .chip{position:relative;isolation:isolate;min-height:44px;border:0;background:transparent;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none}
+
+.atlas-kart .map-pill{position:absolute;left:6px;top:2px;padding:0 16px;font-size:13px}
+
+.atlas-kart .map-pill:before,.atlas-kart .lens-strip.dock .chip:before{content:"";position:absolute;z-index:-1;inset:5px 0;border:1px solid var(--line);border-radius:17px;background:color-mix(in srgb,var(--surface) 92%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+
+.atlas-kart .lens-strip.dock{position:absolute;left:0;right:64px;bottom:6px;display:flex;gap:0;margin:0;padding:0 0 0 4px;overflow-x:auto;scrollbar-width:none;touch-action:pan-x}
+
+.atlas-kart .lens-strip.dock::-webkit-scrollbar{display:none}
+
+.atlas-kart .lens-strip.dock .chip{flex:none;padding:0 14px;color:var(--ink);font-size:12.5px;font-weight:550;white-space:nowrap;text-decoration:none}
+
+.atlas-kart .lens-strip.dock .chip[aria-pressed="true"]{color:var(--accent-ink)}
+
+.atlas-kart .lens-strip.dock .chip[aria-pressed="true"]:before{border-color:var(--accent);background:var(--accent)}
+
+.atlas-kart .map-note{margin:10px 0 4px;font-size:12px}
+
+.atlas-kart .lens-card,.atlas-kart .focus-card{margin:22px 0 0;padding-top:14px;border-top:1px solid var(--rs)}
+
+.atlas-kart .lens-card h2{margin:0 0 6px;padding:0;border:0;font-family:var(--serif);font-size:28px;font-weight:400;letter-spacing:-.02em;line-height:1.15;text-transform:none;color:var(--ink)}
+
+.atlas-kart .lens-question{margin:4px 0 14px;font-size:19px}
+
+.atlas-kart .lens-card p{font-size:15px}
+
+.atlas-kart .focus-card h2{margin:0;padding:0;border:0;font-family:var(--serif);font-size:30px;font-weight:400;letter-spacing:-.02em;line-height:1.15;text-transform:none;color:var(--ink)}
+
+.atlas-kart .focus-head{margin-bottom:12px}
+
+.atlas-kart .focus-card h3,.atlas-kart .lens-card h3{margin:24px 0 4px;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+.atlas-kart .metric-row{gap:0;margin:16px 0;border-block:1px solid var(--line);text-align:left}
+
+.atlas-kart .metric-row span{padding:10px 12px;border-left:1px solid var(--line);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase}
+
+.atlas-kart .metric-row span:first-child{padding-left:0;border-left:0}
+
+.atlas-kart .metric-row strong{margin-bottom:2px;font-family:var(--serif);font-size:23px;font-weight:400;letter-spacing:-.01em;text-transform:none;line-height:1.2}
+
+.atlas-kart .stack.compact{gap:0}
+
+.atlas-kart .lens-switch{padding:12px 0;border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;box-shadow:none}
+
+.atlas-kart .lens-switch strong{font-family:var(--serif);font-size:17px;font-weight:400}
+
+.atlas-kart .lens-switch[aria-pressed="true"]{background:transparent;box-shadow:inset 3px 0 0 var(--accent);padding-left:12px}
+
+.atlas-kart details.card{margin:14px 0}
+
+.atlas-kart details.weights{border-block:1px solid var(--line);margin:18px 0}
+
+.atlas-kart details.weights>summary,.atlas-kart .lens-card details>summary{font-size:12.5px;line-height:1.5;color:var(--ink)}
+
+.atlas-kart .slider{margin:16px 0}
+
+/* The ranked list reads as a numbered index. */
+.atlas-kart .card:has(>.ranked){counter-reset:rank;border-top:1px solid var(--rs);margin-top:6px}
+
+.atlas-kart .entity-row.ranked:before{counter-increment:rank;content:counter(rank,decimal-leading-zero);flex:none;width:26px;font-family:var(--serif);font-size:14px;color:var(--muted)}
+
+.atlas-kart .score-bar{height:2px;border-radius:0;margin-top:8px;opacity:1}
+
+.atlas-kart .card:has(>.entity-row){border-top:1px solid var(--rs)}
+
+.atlas-kart .path-list{padding-left:0;list-style:none}
+
+.atlas-kart .path-list li{padding:10px 0;border-bottom:1px solid var(--line)}
+
+.atlas-kart .world-formats{display:block;margin:0 0 16px;border-top:1px solid var(--rs)}
+
+.atlas-kart .world-formats .format-choice{display:flex;flex-direction:column;align-items:flex-start;gap:2px;width:100%;min-height:60px;padding:12px 0;border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;font-family:var(--serif);font-size:17px;font-weight:400}
+
+.atlas-kart .world-formats .format-choice small{font-family:var(--sans,system-ui,-apple-system,sans-serif);font-size:12px}
+
+.atlas-kart .entity-row>span{min-width:0}
+
+/* ---------- Atlas: Emner and reference entries ---------- */
+
+.atlas-emner .hero:not(.unit-hero){padding:2px 0 6px}
+
+.atlas-emner .hero:not(.unit-hero) h1{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+
+.atlas-emner .hero:not(.unit-hero) .lead{max-width:none;margin:0;font-size:13px;line-height:1.55}
+
+.atlas-emner .layout-switch{gap:20px;margin:0 0 4px}
+
+.atlas-emner .layout-switch .chip{min-height:44px;padding:0;border:0;border-radius:0;background:transparent;font-size:13px;font-weight:600;color:var(--muted);text-decoration:none;letter-spacing:.02em}
+
+.atlas-emner .layout-switch .chip[aria-pressed="true"]{color:var(--ink);box-shadow:inset 0 -2px 0 var(--accent)}
+
+.atlas-emner .domain-card{padding:0;margin:0;border-top:1px solid var(--line)}
+
+.atlas-emner .domain-card:first-of-type{border-top:1px solid var(--rs)}
+
+.atlas-emner .domain-header{flex-direction:row;align-items:center;gap:14px;min-height:62px;padding:12px 0;border-radius:0}
+
+.atlas-emner .domain-header>span:first-child{flex:1;min-width:0;gap:3px}
+
+.atlas-emner .domain-header strong{font-family:var(--serif);font-size:21px;font-weight:400;letter-spacing:-.01em;line-height:1.2}
+
+.atlas-emner .domain-header small{font-size:12px}
+
+.atlas-emner .domain-header .bar.small{width:56px;flex:none}
+
+.atlas-emner .domain-header:after{content:"+";flex:none;width:18px;text-align:right;font-family:var(--serif);font-size:20px;line-height:1;color:var(--muted)}
+
+.atlas-emner .domain-header[aria-expanded="true"]:after{content:"\2212"}
+
+.atlas-emner .domain-description{margin:0 0 6px;font-size:13px}
+
+.atlas-emner .unit-list{margin:0 0 10px}
+
+.atlas-emner .unit-row{gap:14px;min-height:58px}
+
+.atlas-emner .unit-text strong{font-family:var(--serif);font-size:17px;font-weight:400;line-height:1.3}
+
+.atlas-emner .unit-text small{font-size:12px}
+
+.atlas-emner .unit-years{width:62px;font-family:var(--serif);font-size:14px;font-weight:400;line-height:1.3;text-align:right;color:var(--ink)}
+
+.atlas-emner .unit-years small{font-size:12px;color:var(--muted)}
+
+.atlas-emner .timeline-units{border-top:1px solid var(--rs)}
+
+.atlas-emner .unit-hero,.atlas-entity .hero{padding:2px 0 16px;border-bottom:1px solid var(--rs)}
+
+.atlas-emner .unit-hero h1,.atlas-entity .hero h1{font-family:var(--serif);font-size:clamp(32px,9vw,38px);font-weight:400;letter-spacing:-.02em;line-height:1.1;margin:0}
+
+.atlas-emner .unit-hero .eyebrow,.atlas-entity .hero .eyebrow{margin-bottom:10px;color:var(--accent)}
+
+.atlas-emner .unit-hero .lead,.atlas-entity .hero .lead{max-width:none;margin-top:14px;font-family:var(--serif);font-size:18px;line-height:1.55;color:var(--ink)}
+
+.atlas-emner .back-button,.atlas-entity .back-button{min-height:44px;margin:0;padding:8px 0;font-size:13px;letter-spacing:.02em}
+
+/* The one filled block on a unit page. */
+.atlas-emner .unit-status{margin:16px 0 22px;padding:16px;border:1px solid var(--line);border-radius:var(--r-l,14px);background:var(--surface)}
+
+.atlas-emner .unit-status .row{margin-bottom:14px}
+
+.atlas-emner .unit-status .row strong{font-family:var(--serif);font-size:20px;font-weight:400}
+
+.atlas-emner .step-bars{gap:10px;margin:0 0 16px}
+
+.atlas-emner .step-bar{gap:7px}
+
+.atlas-emner .step-bar small{font-size:10.5px;letter-spacing:.04em;line-height:1.3}
+
+.atlas-emner .lesson-card{margin:0 0 24px}
+
+.atlas-emner .lesson-card h2{margin-top:0}
+
+.atlas-emner .lesson-card p{font-family:var(--serif);font-size:17px;line-height:1.65;margin:0 0 16px}
+
+.atlas-emner .lesson-card h3{margin:26px 0 6px;padding-top:10px;border-top:1px solid var(--rs);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+.atlas-emner .key-points{counter-reset:point;list-style:none;margin:0;padding:0}
+
+.atlas-emner .key-points li{counter-increment:point;display:flex;gap:14px;margin:0;padding:12px 0;border-bottom:1px solid var(--line);font-family:var(--serif);font-size:16.5px;line-height:1.5}
+
+.atlas-emner .key-points li:before{content:counter(point);flex:none;width:18px;padding-top:3px;font-size:13px;color:var(--accent)}
+
+.atlas-emner .card>h3{margin:18px 0 2px;padding-top:10px;border-top:1px solid var(--rs);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+.atlas-emner .card>h3:first-child{margin-top:0}
+
+.atlas-emner details.card{border-top:1px solid var(--rs);margin:18px 0}
+
+.atlas-emner details.card>summary{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+/* Entity detail (a person, place, work or idea). */
+.atlas-entity>.primary{margin:16px 0}
+
+.atlas-entity .card.stack{gap:10px;margin:14px 0 0}
+
+.atlas-entity .card.stack>.secondary:first-child{border-top:0;border-bottom:0;padding-bottom:0}
+
+.atlas-entity .card:has(>details){padding-top:12px;border-top:1px solid var(--line);margin:0}
+
+.atlas-entity .card:has(>details)>p{font-family:var(--serif);font-size:17px;line-height:1.5;margin:6px 0 4px}
+
+.atlas-entity .artwork-figure{margin:16px 0 8px}
+
+.atlas-entity .artwork-figure img{border-radius:0}
+
+.atlas-entity .card>.source-link{font-size:13px}
+
+/* ---------- Deg ---------- */
+
+.me-title{margin:2px 0 0;font-family:var(--serif);font-size:30px;font-weight:400;letter-spacing:-.02em;line-height:1.15}
+
+.me-page .ruled-tabs{margin-top:2px}
+
+/* Second level: plain words on one line, never wrapped; the current one is bold and ink. */
+.sub-nav{display:flex;gap:0;margin:-4px 0 6px;overflow-x:auto;scrollbar-width:none}
+
+.sub-nav::-webkit-scrollbar{display:none}
+
+.sub-nav button{flex:none;min-height:44px;padding:0 5px;border:0;border-left:1px solid var(--line);border-radius:0;background:transparent;color:var(--muted);font-size:11px;font-weight:500;letter-spacing:.01em;line-height:1;white-space:nowrap}
+
+.sub-nav button:first-child{padding-left:0;border-left:0}
+
+.sub-nav button[aria-pressed="true"]{color:var(--ink);font-weight:650;box-shadow:inset 0 -2px 0 var(--ink)}
+
+.sub-nav button:active:not(:disabled){transform:none}
+
+.me-page h2{margin-top:24px}
+
+.me-page .card>p.muted,.me-page .ledger>p.muted{margin:4px 0 8px}
+
+.me-page .card>p.muted:last-child{margin-bottom:0}
+
+/* Ledger: the headline numbers set large in serif. */
+.ledger-stats{margin:8px 0 0}
+
+.ledger-stats .stat-row{margin:0 0 6px;padding:0;border-block:1px solid var(--rs)}
+
+.ledger-stats .stat{padding:14px 14px 12px;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase}
+
+.ledger-stats .stat:first-child{padding-left:0}
+
+.ledger-stats .stat strong{margin-bottom:2px;font-size:46px;font-weight:400;letter-spacing:-.03em;line-height:1.05;text-transform:none}
+
+.ledger-row{align-items:flex-start;padding:14px 0}
+
+.ledger-row .unit-text{gap:3px}
+
+.ledger-row .unit-text strong{font-family:var(--serif);font-size:18px;font-weight:400}
+
+.ledger-row .unit-text .bar{margin-top:8px}
+
+.ledger-num{flex:none;font-family:var(--serif);font-size:26px;line-height:1.1;letter-spacing:-.02em;color:var(--ink);text-align:right}
+
+.ledger-num small{margin-left:1px;font-size:12px;color:var(--muted)}
+
+.me-page .ledger .unit-row{min-height:0}
+
+.me-page .ledger .unit-row:last-child{border-bottom:1px solid var(--line)}
+
+.me-page .card>.primary{margin-top:10px}
+
+/* Week: hairline columns with the count above. */
+.me-page .week-activity{gap:4px;margin:14px 0 4px;padding-bottom:6px;border-bottom:1px solid var(--rs)}
+
+.me-page .week-activity>div{gap:6px;font-size:11px;color:var(--muted)}
+
+.me-page .week-activity strong{font-family:var(--serif);font-size:19px;font-weight:400;color:var(--ink)}
+
+.me-page .activity-bar{max-width:12px;border:0;border-radius:0;background:var(--accent)}
+
+.me-page .result-grid{gap:0;margin:12px 0 0;border-block:1px solid var(--line);text-align:left;font-size:10.5px;letter-spacing:.04em;line-height:1.35}
+
+.me-page .result-grid span{padding:12px 10px;border-left:1px solid var(--line)}
+
+.me-page .result-grid span:first-child{padding-left:0;border-left:0}
+
+.me-page .result-grid strong{margin-bottom:4px;font-family:var(--serif);font-size:32px;font-weight:400;letter-spacing:-.02em;line-height:1.05}
+
+/* Levels and axes. */
+.me-page .insight{padding:12px 0;border:0;border-block:1px solid var(--line);border-radius:0;background:transparent;font-family:var(--serif);font-size:16px;line-height:1.5}
+
+.me-page .axis-insight{margin-top:18px}
+
+.me-page .axis-insight h3{margin:0 0 8px;font-size:17px;font-weight:400;font-family:var(--serif)}
+
+.me-page .axis-steps{gap:0;border-top:1px solid var(--line)}
+
+.me-page .axis-steps span{padding:10px 10px 12px;border-radius:0;border-left:1px solid var(--line);background:transparent}
+
+.me-page .axis-steps span:first-child{padding-left:0;border-left:0}
+
+.me-page .axis-steps strong{font-family:var(--serif);font-size:24px;font-weight:400;letter-spacing:-.02em}
+
+.me-page .axis-steps i{height:2px;left:0}
+
+.me-page .axis-steps small{line-height:1.3}
+
+.me-page .level-entry{padding:14px 0 6px;border-top:1px solid var(--line);margin:0}
+
+.me-page .level-entry h3{display:flex;align-items:baseline;gap:12px;font-family:var(--serif);font-size:20px;font-weight:400;letter-spacing:-.01em}
+
+.me-page .level-id{flex:none;min-width:22px;font-size:30px;letter-spacing:-.02em;color:var(--accent)}
+
+.me-page .level-entry p.muted{margin:4px 0 0;padding-left:34px}
+
+.me-page .coverage-track{height:3px;margin:12px 0 8px 34px;border-radius:0;background:var(--line)}
+
+.me-page .level-entry .coverage-track+p.muted{margin:0 0 10px;padding-left:34px}
+
+.me-page .level-entry .secondary{margin:0 0 12px 34px;min-height:44px;padding:8px 14px;font-size:13px}
+
+/* Library and history entries. */
+.me-page details.card{border-top:1px solid var(--line);margin:0}
+
+.me-page details.card>summary{min-height:56px;padding:14px 0;font-family:var(--serif);font-size:18px;font-weight:400;letter-spacing:-.005em;color:var(--ink)}
+
+.me-page details.card>summary:after{font-family:var(--serif);color:var(--muted)}
+
+.me-page details.card[open]{padding-bottom:10px}
+
+.me-page details.card h3{margin:18px 0 4px;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+.me-page details.card p.detail{margin:0;padding:12px 0;border-bottom:1px solid var(--line);font-size:14.5px;line-height:1.5}
+
+.me-page details.card p.detail strong{font-family:var(--serif);font-weight:400;font-size:16px}
+
+/* Okten: tags, rows and sliders on a ruled form. */
+.me-page form{margin-top:4px}
+
+.me-page .chips{gap:6px}
+
+.me-page .chips .chip{min-height:44px;padding:8px 12px;border-radius:8px;font-size:13px}
+
+.me-page .field{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:0;padding:10px 0;border-bottom:1px solid var(--line);color:var(--ink);font-size:15px;font-weight:400}
+
+.me-page .field select{width:auto;max-width:66%;min-height:44px;margin:0;padding:8px 10px;font-size:15px;text-overflow:ellipsis}
+
+.me-page .row .field{flex-direction:column;align-items:stretch;flex:1;gap:6px;border-bottom:0}
+
+.me-page .row .field input.input[type="number"][placeholder]{min-height:44px;padding:8px 12px}
+
+.me-page .card.stack,.me-page .stack{gap:0}
+
+.me-page .stack>.field+.detail{margin:8px 0 10px}
+
+.me-page .toggle{padding:14px 0;border-bottom:1px solid var(--line)}
+
+.me-page .toggle input{flex:none;width:22px;height:22px;margin:2px 0 0}
+
+.me-page fieldset{margin:14px 0 0;padding:0;border:0}
+
+.me-page legend{padding:0;margin-bottom:8px;font-size:14px;color:var(--ink)}
+
+.me-page .level-picker{grid-template-columns:repeat(2,minmax(0,1fr))}
+
+.me-page .level-option{min-height:56px;border-radius:8px;overflow-wrap:normal}
+
+.me-page .slider{display:block;margin:14px 0;font-size:14px}
+
+.me-page .slider strong{font-family:var(--serif);font-size:17px;font-weight:400}
+
+.me-page .slider input[type="range"]{width:100%;margin:8px 0 0}
+
+.me-page form>.primary{margin:8px 0 24px}
+
+/* Innstillinger: a grouped, ruled list. */
+.set-group{margin:0 0 8px}
+
+.me-page .settings-list{padding:0;border:0;background:transparent;box-shadow:none}
+
+.me-page .settings-row{align-items:center;gap:14px;min-height:60px;padding:12px 0;font-size:15px}
+
+.me-page .settings-row:last-child{border-bottom:1px solid var(--line)}
+
+.me-page .settings-row label,.me-page .settings-row>div>span,.me-page .settings-row>span{font-size:15px;font-weight:400;color:var(--ink)}
+
+.me-page .settings-row p{margin:2px 0 0;font-size:12px;line-height:1.45;color:var(--muted)}
+
+.me-page .settings-row button{min-height:44px;padding:8px 14px;font-size:13px;white-space:nowrap}
+
+.me-page .settings-row button.primary{width:auto}
+
+.me-page .settings-row select{min-height:44px;font-size:15px}
+
+.me-page details.diagnostics{margin:18px 0 0;border-top:1px solid var(--rs)}
+
+.me-page details.diagnostics .chips{margin:10px 0 6px}
+
+.me-page .detail-line{margin:0;padding:10px 0;border-bottom:1px solid var(--line);font-size:13.5px;line-height:1.5}
+
+@media (prefers-reduced-motion:reduce){
+  .ruled-tabs button,.atlas-page *,.me-page *{transition:none!important;scroll-behavior:auto!important}
+}

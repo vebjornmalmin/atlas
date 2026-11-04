@@ -711,7 +711,9 @@
       {#if paused.length && !quizSetup}<details class="card"><summary>Quizer på pause ({paused.length})</summary>{#each paused as saved}<button class="entity-row" onclick={()=>run(()=>resumeSession(saved))}>{saved.title || 'Quiz'} · {saved.index+1}/{saved.queue.length} →</button>{/each}</details>{/if}
     {/if}
   {:else if view === 'atlas'}
+    <div class="atlas-page">
     {#if entity}
+    <div class="atlas-entity">
       <button class="quiet back-button" onclick={()=>detailId=''}>← Atlas</button><section class="hero"><p class="eyebrow">{typeLabel(entity.type)}</p><h1>{#if entity.geo && entity.iso2}<span aria-hidden="true">{flagEmoji(entity.iso2)} </span>{/if}{entity.label}</h1><p class="lead">{entity.summary}</p></section>{#if entity.type==='topic'}<button class="primary" onclick={()=>openUnit(entity.id.replace(/^unit:/,''))}>Åpne emnet</button>{/if}{#if artworkMedia.find(m=>m.entityId===entity.id)}{@const art=artworkMedia.find(m=>m.entityId===entity.id)}<figure class="artwork-figure"><img src={art.url} alt={`${art.title} av ${art.artist}`} width={art.width} height={art.height}><figcaption class="muted detail">{art.credit} · <a href={art.sourceUrl} target="_blank" rel="noreferrer">Bildekilde</a></figcaption></figure>{/if}
       {#if sourceQueries(entity,data.sources).length}<div class="card stack"><button class="secondary" disabled={busy} onclick={()=>run(()=>loadMoreSources(entity.id))}>Hent bilder og flere spørsmål</button><p class="muted detail">Henter kildebelagte forbindelser og bilder med fri bruk. Innholdet lagres på denne enheten.</p>{#if sourceProgress || sourceStatus}<p class="muted" role="status">{sourceProgress || sourceStatus}</p>{/if}</div>{/if}
       <div class="card stack"><label>Nivå<select class="select" bind:value={quizLevel}>{#each LEVELS as l}<option value={l.id}>{l.id} · {l.name}</option>{/each}<option value={0}>Alle nivåer</option></select></label><button class="primary" disabled={busy || !targets.some(t=>t.entityId===entity.id)} onclick={()=>run(()=>beginSession('mixed',{entityId:entity.id,title:entity.label,level:quizLevel}))}>Quiz om {entity.label}</button>{#if !targets.some(t=>t.entityId===entity.id)}<p class="muted">Denne siden har ikke quizspørsmål ennå.</p>{/if}</div>
@@ -720,42 +722,47 @@
       {#if entityRelationships.length > relationshipLimit}<button class="secondary" onclick={()=>relationshipLimit+=40}>Vis flere forbindelser ({entityRelationships.length})</button>{/if}
       <h2 class="section-title">Flere spørsmål</h2>{#each targets.filter(t=>t.entityId===entity.id && !t.baseId).sort((a,b)=>a.difficulty-b.difficulty).slice(0,6) as target}<div class="card"><small class="muted">Nivå {target.level} · {levelName(target.level)}</small><p>{target.prompt}</p><details><summary>Vis svar</summary><h3>{target.answer}</h3><p class="muted">{target.explanation}</p></details></div>{/each}
       <div class="card"><h2>Kilder</h2>{#each entity.sourceIds as id}{@const source=sourceFor(id)}{#if source}<p><a class="source-link" href={source.url} target="_blank" rel="noreferrer">{source.title} ↗</a></p>{/if}{/each}</div>
+    </div>
     {:else}
-      <section class="hero atlas-hero"><p class="eyebrow">Utforsk</p><h1>Atlas</h1></section>
-      <input class="input atlas-search" id="search" bind:value={query} type="search" placeholder="Søk: en person, et sted, et verk eller en idé" aria-label="Søk i Atlas">
+      <h1 class="sr-only">Atlas</h1>
+      <div class="atlas-searchbar"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="m13.2 13.2 4 4"/></svg><input class="input atlas-search" id="search" bind:value={query} type="search" placeholder="Søk etter person, sted, verk eller idé" aria-label="Søk i Atlas"></div>
       {#if query.trim() || collectionFilter}
-<label class="field">Samling<select class="select" bind:value={collectionFilter}><option value="">All kunnskap</option>{#each data.collections as collection}<option value={collection.id}>{collection.title}</option>{/each}</select></label><p class="muted detail">Søk etter en person, et sted eller et verk.</p><div class="card stack"><button class="secondary" disabled={busy} onclick={()=>run(()=>loadMoreSources())}>Hent flere bilder og spørsmål</button><p class="muted detail">Henter opptil åtte nye kildeposter i valgt samling. Bilder og spørsmål lagres lokalt og kan brukes uten nett.</p><p class="muted" role="status">{sourceProgress || sourceStatus}</p></div>{#if collectionFilter}<div class="card stack"><label>Nivå<select class="select" bind:value={quizLevel}>{#each LEVELS as l}<option value={l.id}>{l.id} · {l.name}</option>{/each}<option value={0}>Alle nivåer</option></select></label><button class="primary" disabled={busy} onclick={()=>run(()=>beginSession('mixed',{collectionId:collectionFilter,level:quizLevel,title:titleFor(collectionFilter)}))}>Start quiz: {titleFor(collectionFilter)}</button></div>{/if}
+      <div class="search-bar-row"><button class="quiet" onclick={()=>{query='';collectionFilter='';}}>← Tilbake til Atlas</button><label class="field search-filter">Samling<select class="select" bind:value={collectionFilter}><option value="">All kunnskap</option>{#each data.collections as collection}<option value={collection.id}>{collection.title}</option>{/each}</select></label></div>
+      {#if collectionFilter}<div class="card stack collection-quiz"><label>Nivå<select class="select" bind:value={quizLevel}>{#each LEVELS as l}<option value={l.id}>{l.id} · {l.name}</option>{/each}<option value={0}>Alle nivåer</option></select></label><button class="primary" disabled={busy} onclick={()=>run(()=>beginSession('mixed',{collectionId:collectionFilter,level:quizLevel,title:titleFor(collectionFilter)}))}>Start quiz: {titleFor(collectionFilter)}</button></div>{/if}
+      <p class="result-count">Viser {matchingEntities.length} av {allMatchingEntities.length} treff.</p>
       <div class="entity-list">{#each matchingEntities as item}<button class="entity-row" onclick={()=>detailId=item.id}><span><small class="eyebrow">{typeLabel(item.type)}</small><strong>{item.label}</strong><small class="muted">{item.summary}</small></span><span aria-hidden="true">↗</span></button>{:else}<p class="empty">Ingen treff ennå. Prøv et annet navn eller en annen samling.</p>{/each}</div>
-      <p class="muted detail">Viser {matchingEntities.length} av {allMatchingEntities.length} treff.</p>{#if matchingEntities.length < allMatchingEntities.length}<button class="secondary" onclick={()=>exploreLimit+=60}>Vis flere</button>{/if}
-      
-    
-        <button class="quiet" onclick={()=>{query='';collectionFilter='';}}>← Tilbake til Atlas</button>
+      {#if matchingEntities.length < allMatchingEntities.length}<button class="secondary more-results" onclick={()=>exploreLimit+=60}>Vis flere</button>{/if}
+      <div class="card stack source-tools"><button class="secondary" disabled={busy} onclick={()=>run(()=>loadMoreSources())}>Hent flere bilder og spørsmål</button><p class="muted detail">Henter opptil åtte nye kildeposter i valgt samling. Bilder og spørsmål lagres lokalt og kan brukes uten nett.</p><p class="muted" role="status">{sourceProgress || sourceStatus}</p></div>
       {:else}
-        <div class="segmented" role="tablist" aria-label="Velg visning">{#each [['tid','Tid'],['kart','Kart'],['emner','Emner']] as [id,label]}<button role="tab" aria-selected={atlasTab===id} onclick={()=>{atlasTab=id;if(id!=='emner')selectedUnit='';}}>{label}</button>{/each}</div>
+        <div class="ruled-tabs" role="tablist" aria-label="Velg visning">{#each [['tid','Tid'],['kart','Kart'],['emner','Emner']] as [id,label]}<button role="tab" aria-selected={atlasTab===id} onclick={()=>{atlasTab=id;if(id!=='emner')selectedUnit='';}}>{label}</button>{/each}</div>
         {#if atlasTab==='tid' && data.curriculum && coreProgress}
-          <StorySpine curriculum={data.curriculum} progress={coreProgress} highlight={selection.units || []} onOpen={openUnit} />
+          <div class="atlas-tid"><StorySpine curriculum={data.curriculum} progress={coreProgress} highlight={selection.units || []} onOpen={openUnit} /></div>
         {:else if atlasTab==='kart'}
           {#if worldGraph && maps.some(m=>m.id==='world')}<WorldExplorer graph={worldGraph} dataset={maps.find(m=>m.id==='world')} bind:relevance={prefs.relevance} {typeLabel} {relationLabel} formatAvailable={id=>targets.some(t=>t.format===id)} onSave={()=>run(()=>put(db,'settings',JSON.parse(JSON.stringify(prefs))))} onOpen={id=>{detailId=id;view='atlas';window.location.hash='atlas';window.scrollTo(0,0);}} onQuiz={(objective,scope)=>run(()=>beginSession(objective,scope))} />
     {:else}<div class="card"><p>Verdensutforskeren trenger kunnskapspakke 2.1.0. Koble til nettet for å oppdatere.</p><button class="secondary" disabled={busy} onclick={()=>run(()=>checkUpdates(true))}>Se etter oppdatering</button></div>{/if}
         {:else}
           {#if data.curriculum && coreProgress}
-      <LearningPath curriculum={data.curriculum} progress={coreProgress} sources={data.sources} bind:selectedUnit {busy}
+      <div class="atlas-emner"><LearningPath curriculum={data.curriculum} progress={coreProgress} sources={data.sources} bind:selectedUnit {busy}
         onstart={id=>run(()=>beginSession(null,{unitId:id,unitMode:'learn',title:unitTitle(id)}))}
         onreview={id=>run(()=>beginSession(null,{unitId:id,unitMode:'review',title:unitTitle(id)}))}
-        mapFor={id=>unitMapTargets(id).length>2} onmap={id=>run(()=>beginSession('geography',{targetIds:unitMapTargets(id),level:0,title:`Kart: ${unitTitle(id)}`}))} />
+        mapFor={id=>unitMapTargets(id).length>2} onmap={id=>run(()=>beginSession('geography',{targetIds:unitMapTargets(id),level:0,title:`Kart: ${unitTitle(id)}`}))} /></div>
       
     {:else}<section class="hero"><h1>Emner</h1><p class="lead">Oppdater innholdet for å få emnene.</p></section>{/if}
         {/if}
       {/if}
     {/if}
+    </div>
   {:else if view === 'me'}
-    <section class="hero"><h1>Deg</h1></section>
-    <div class="segmented" role="tablist" aria-label="Velg visning">{#each [['fremgang','Fremgang'],['okten','Økten'],['innstillinger','Innstillinger']] as [id,label]}<button role="tab" aria-selected={meTab===id} onclick={()=>meTab=id}>{label}</button>{/each}</div>
+    <div class="me-page">
+    <h1 class="me-title">Deg</h1>
+    <div class="ruled-tabs" role="tablist" aria-label="Velg visning">{#each [['fremgang','Fremgang'],['okten','Økten'],['innstillinger','Innstillinger']] as [id,label]}<button role="tab" aria-selected={meTab===id} onclick={()=>meTab=id}>{label}</button>{/each}</div>
     {#if meTab==='fremgang'}
-<div class="chips progress-tabs" role="group" aria-label="Velg fremgangsvisning">{#each [{id:'overview',label:'Oversikt'},{id:'levels',label:'Nivåer og akser'},{id:'topics',label:'Emner'},{id:'library',label:'Innholdsdekning'},{id:'history',label:'Siste svar'}] as tab}<button class="chip" aria-pressed={progressTab===tab.id} onclick={()=>{progressTab=tab.id;window.scrollTo(0,0);}}>{tab.label}</button>{/each}</div>
-    {#if progressTab==='overview' && data.curriculum && coreProgress}<div class="card"><h2>Kunnskapskart</h2><p class="muted">Andel kort du sist svarte riktig på uten hjelp, per fagområde.</p>{#each data.curriculum.domains as domain}{@const row=coreProgress.domains.get(domain.id)}<button class="unit-row" onclick={()=>{selectedUnit='';navigate('learn');}}><span class="unit-text"><strong>{domain.title}</strong><small class="muted">{row.complete} av {row.units} emner gjennomført · {row.correct} av {row.total} kort</small><span class="bar small"><span style={`width:${row.total?Math.round(100*row.correct/row.total):0}%`}></span></span></span></button>{/each}</div>{/if}
+<div class="sub-nav" role="group" aria-label="Velg fremgangsvisning">{#each [{id:'overview',label:'Oversikt'},{id:'levels',label:'Nivåer og akser'},{id:'topics',label:'Emner'},{id:'library',label:'Innholdsdekning'},{id:'history',label:'Siste svar'}] as tab}<button aria-pressed={progressTab===tab.id} onclick={event=>{progressTab=tab.id;event.currentTarget.scrollIntoView?.({inline:'center',block:'nearest'});window.scrollTo(0,0);}}>{tab.label}</button>{/each}</div>
     {#if progressTab==='overview'}
-    <div class="card"><div class="stat-row"><div class="stat"><strong>{summary.answered}</strong><span>Ulike spørsmål besvart</span></div><div class="stat"><strong>{summary.correct}</strong><span>Riktige uten hjelp sist</span></div></div><p class="muted">Dagens økt, emner og fri quiz teller med.</p></div>
+    <section class="ledger-stats"><div class="stat-row"><div class="stat"><strong>{summary.answered}</strong><span>Ulike spørsmål besvart</span></div><div class="stat"><strong>{summary.correct}</strong><span>Riktige uten hjelp sist</span></div></div><p class="muted">Dagens økt, emner og fri quiz teller med.</p></section>
+    {/if}
+    {#if progressTab==='overview' && data.curriculum && coreProgress}<section class="ledger"><h2>Kunnskapskart</h2><p class="muted">Andel kort du sist svarte riktig på uten hjelp, per fagområde.</p>{#each data.curriculum.domains as domain}{@const row=coreProgress.domains.get(domain.id)}{@const pct=row.total?Math.round(100*row.correct/row.total):0}<button class="unit-row ledger-row" onclick={()=>{selectedUnit='';navigate('learn');}}><span class="unit-text"><strong>{domain.title}</strong><small class="muted">{row.complete} av {row.units} emner gjennomført · {row.correct} av {row.total} kort</small><span class="bar small"><span style={`width:${pct}%`}></span></span></span><span class="ledger-num" aria-hidden="true">{pct}<small>%</small></span></button>{/each}</section>{/if}
+    {#if progressTab==='overview'}
     <div class="card"><h2>Øv videre</h2><p class="muted">{progress.retryIds.length} spørsmål hadde sist feil svar eller læringsstøtte.</p><button class="primary" disabled={!progress.retryIds.length || busy} onclick={()=>run(()=>beginSession('mixed',{targetIds:progress.retryIds,level:0,title:'Øv videre'}))}>Øv på det du trenger</button></div>
     <div class="card"><h2>Siste sju dager</h2><div class="week-activity">{#each progress.days as day}<div><strong>{day.count}</strong><span class="activity-bar" style={`height:${8+Math.min(60,day.count*3)}px`}></span><small>{day.label}</small></div>{/each}</div><p class="muted">Antall besvarte oppgaver, inkludert ekstraøving.</p></div>
     {/if}
@@ -770,7 +777,7 @@
         {#each insight.rows as row}<div class="axis-insight"><h3>{row.axis.label}</h3><div class="axis-steps">{#each row.steps as cell}<span><small>{row.axis.steps[cell.step-1]}</small><strong>{cell.rate===null?'–':`${Math.round(cell.rate*100)} %`}</strong><i style:width={`${cell.rate===null?0:Math.round(cell.rate*100)}%`}></i><em>{cell.answered} svar</em></span>{/each}</div></div>{/each}
       </div>
       <h2 class="section-title">Nivåene</h2>
-      {#each LEVELS as level}{@const result=quizProgress(targets.filter(t=>t.level===level.id),reviews)}<div class="card"><h3>{level.id} · {level.name}</h3><p class="muted">{level.note}</p>
+      {#each LEVELS as level}{@const result=quizProgress(targets.filter(t=>t.level===level.id),reviews)}<div class="card level-entry"><h3><span class="level-id">{level.id}</span>{level.name}</h3><p class="muted">{level.note}</p>
         <div class="coverage-track" role="img" aria-label={`${result.correct} riktige uten hjelp, ${result.answered-result.correct} trenger øving, ${result.remaining} usett`}><span class="coverage-correct" style={`width:${result.total?100*result.correct/result.total:0}%`}></span><span class="coverage-practice" style={`width:${result.total?100*(result.answered-result.correct)/result.total:0}%`}></span></div>
         <p class="muted">{result.correct} riktige uten hjelp · {result.answered-result.correct} trenger øving · {result.remaining} usett</p>
         <button class="secondary" disabled={busy} onclick={()=>run(()=>beginSession('mixed',{level:level.id,title:`Nivå ${level.id}: ${level.name}`}))}>Øv på nivå {level.id}</button></div>{/each}
@@ -793,15 +800,23 @@
     </form>
     {:else}
 
-    <div class="card settings-list">
+    <div class="settings-list">
+      <section class="set-group"><h2 class="group-title">Visning</h2><div class="set-rows">
       <div class="settings-row"><label for="theme">Utseende</label><select id="theme" class="select" bind:value={prefs.theme} onchange={()=>run(savePreferences)}><option value="system">Følg enheten</option><option value="light">Lyst</option><option value="dark">Mørkt</option></select></div>
+      </div></section>
+      <section class="set-group"><h2 class="group-title">Påminnelse</h2><div class="set-rows">
       <div class="settings-row"><div><label for="reminder">Daglig påminnelse</label><p>Legges i kalenderen din</p></div><input id="reminder" class="input" type="time" bind:value={prefs.reminderTime} onchange={()=>run(()=>savePreferences(true))}></div>
       <div class="settings-row"><span>Legg påminnelsen i kalenderen</span><button class="secondary" onclick={()=>run(async()=>{await savePreferences(true);download(reminderCalendar(prefs.reminderTime),'atlas-daily-practice.ics','text/calendar');})}>Legg til</button></div>
+      </div></section>
+      <section class="set-group"><h2 class="group-title">Appen</h2><div class="set-rows">
       <div class="settings-row"><div><span>Oppdateringer</span><p>App {APP_VERSION} · innhold {data.version}</p></div><button class="secondary" disabled={busy || appCheck.state==='checking'} onclick={()=>run(async()=>{await checkAppUpdate(true);await checkUpdates(true);})}>{appCheck.state==='checking'?'Sjekker …':'Se etter'}</button></div>
       {#if updateReady}<div class="settings-row"><span>Ny apputgave er klar</span><button class="primary" disabled={busy} onclick={()=>run(applyUpdate)}>Installer</button></div>{:else if appCheck.state==='pending'}<div class="settings-row"><span role="status">Ny utgave er publisert, men ennå ikke aktiv.</span><button class="secondary" onclick={()=>run(async()=>{if(session)await put(db,'sessions',{...session,draft:draftNow()});window.location.reload();})}>Last inn på nytt</button></div>{:else if appCheck.state==='failed'}<p class="settings-note" role="status">{appCheck.message}</p>{/if}
+      {#if !installed}<div class="settings-row"><div><span>Installer Atlas</span><p>iPhone: Del → Legg til på Hjem-skjerm i Safari.</p></div>{#if installPrompt}<button class="secondary" onclick={()=>run(async()=>{await installPrompt.prompt();await installPrompt.userChoice;installPrompt=null;})}>Installer</button>{/if}</div>{/if}
+      </div></section>
+      <section class="set-group"><h2 class="group-title">Data på enheten</h2><div class="set-rows">
       <div class="settings-row"><div><span>Sikkerhetskopi</span><p>Fremgangen lagres bare på denne enheten.</p></div><button class="secondary" disabled={busy} onclick={()=>run(async()=>download(await exportDatabase(db),`atlas-backup-${new Date().toISOString().slice(0,10)}.json`))}>Last ned</button></div>
       <div class="settings-row"><span>Gjenopprett fra sikkerhetskopi</span><button class="secondary" disabled={busy} onclick={()=>restoreInput.click()}>Velg fil</button><input bind:this={restoreInput} type="file" accept=".json,application/json" hidden onchange={event=>run(()=>readBackup(event))}></div>
-      {#if !installed}<div class="settings-row"><div><span>Installer Atlas</span><p>iPhone: Del → Legg til på Hjem-skjerm i Safari.</p></div>{#if installPrompt}<button class="secondary" onclick={()=>run(async()=>{await installPrompt.prompt();await installPrompt.userChoice;installPrompt=null;})}>Installer</button>{/if}</div>{/if}
+      </div></section>
     </div>
     <details class="card diagnostics" ontoggle={event=>{if(event.currentTarget.open)run(async()=>{await checkStorage();await refresh();});}}><summary>Diagnostikk</summary>
       <h3>Lagring og frakoblet tilgang</h3><p>Nettleserbruk: {storageInfo.usage===undefined?'Utilgjengelig':`${Math.round(storageInfo.usage/1024)} KB`} av {storageInfo.quota===undefined?'ukjent kvote':`${Math.round(storageInfo.quota/1024/1024)} MB`}</p><p>Lagrede appdata: {Math.round((storageInfo.cacheBytes || 0)/1024)} KB · {storageInfo.cachedFiles || 0} filer</p><p>Varig lagring: {storageInfo.persistent?'Innvilget':'Ikke innvilget eller støttet'} · Frakoblet app: {offlineReady?'Installert':'Klargjøres eller er utilgjengelig'}</p>
@@ -813,6 +828,7 @@
       <div class="chips"><button class="secondary" onclick={()=>download({exportedAt:new Date().toISOString(),logs},'atlas-diagnostics.json')}>Eksporter</button><button class="quiet danger" onclick={()=>pendingDestruction='logs'}>Tøm loggen…</button></div>
     </details>
     {/if}
+    </div>
   {/if}
   {#if confirmRestore}<div class="card error" role="alert"><h2>Erstatte lokale data?</h2><p>Dette gjenoppretter sikkerhetskopien fra {displayDate(confirmRestore.exportedAt)} og erstatter kunnskapen og læringshistorikken på denne enheten. Eksporter en kopi først hvis du vil beholde den.</p><button class="primary" disabled={busy} onclick={()=>run(restore)}>Erstatt med denne sikkerhetskopien</button><button class="secondary" onclick={()=>confirmRestore=null}>Avbryt</button></div>{/if}
   {#if pendingDestruction==='logs'}<div class="card error" role="alert"><h2>Tømme diagnostikkloggen?</h2><p>Læringshistorikken beholdes. Den lokale diagnostikkloggen slettes.</p><button class="primary" onclick={()=>run(async()=>{await clearLogs(db);pendingDestruction='';await refresh();})}>Tøm diagnostikkloggen</button><button class="secondary" onclick={()=>pendingDestruction=''}>Avbryt</button></div>{/if}

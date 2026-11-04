@@ -156,8 +156,13 @@
   </svg>
   {#if overlay}{@render overlay()}{/if}
   {#if controls}<div class="pz-controls" aria-label="Kartkontroller">
-    <button type="button" aria-label="Zoom inn" onclick={()=>zoomBy(2)}>+</button>
-    <button type="button" aria-label="Zoom ut" onclick={()=>zoomBy(.5)}>−</button>
+    <button type="button" aria-label="Zoom inn" onclick={()=>zoomBy(2)}><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 4v12M4 10h12"/></svg></button>
+    <button type="button" aria-label="Zoom ut" onclick={()=>zoomBy(.5)}><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12"/></svg></button>
     {#if zoomed}<button type="button" class="pz-reset" aria-label="Vis hele kartet" onclick={reset}><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 8V3h5M17 8V3h-5M3 12v5h5M17 12v5h-5"/></svg></button>{/if}
   </div>{/if}
 </div>
+
+<style>
+  .pz-controls button svg{width:18px;height:18px;margin:auto}
+  .pz-controls button svg path{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;vector-effect:none}
+</style>
