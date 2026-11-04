@@ -438,7 +438,7 @@
       "summary": "I middelalderen ble den greske filosofien tatt opp av kristne og arabiske tenkere, som søkte å forene fornuft og tro.",
       "lesson": [
         "Augustin av Hippo (354–430) forente platonisme og nyplatonisme med den kristne troen. Hans filosofi var rådende gjennom store deler av middelalderen og la grunnlaget for teologien.",
-        "Ibn Rushd, kjent i Europa som Averroës, levde 1126–1198. Han var en arabisk filosof som regnes som middelalderens største naturfilosof, og han tolket Aristoteles.",
+        "Ibn Rushd, kjent i Europa som Averroës, levde 1126–1198. Han var en arabisk filosof fra al-Andalus og skrev omfattende kommentarer til Aristoteles.",
         "Thomas av Aquino (1225–1274) var født i Italia. Han ville forene Aristoteles med kristen teologi, og det er hovedtemaet i Summa Theologiae. Denne tradisjonen kalles skolastikk.",
         "Middelalderens tenkere sto overfor et problem: Aristoteles var skrevet før kristendommen. Fornuft og tro måtte få en felles plass, og dette var kjernen i skolastikken."
       ],
@@ -498,14 +498,14 @@
           "id": "ide-middelalder-naturfilosof",
           "step": 1,
           "type": "choice",
-          "prompt": "Hvilken arabisk filosof regnes som middelalderens største naturfilosof?",
+          "prompt": "Hvilken arabisk filosof fra al-Andalus ble kjent i Europa for kommentarene sine til Aristoteles?",
           "answer": "Ibn Rushd",
           "distractors": [
             "Avicenna",
             "Al-Farabi",
             "Al-Ghazali"
           ],
-          "explain": "Han levde 1126–1198 og regnes som middelalderens største naturfilosof."
+          "explain": "Han levde 1126–1198. Kommentarene hans gjorde Aristoteles kjent for lærde i Europa og påvirket blant andre Thomas av Aquino."
         },
         {
           "id": "ide-middelalder-summa-navn",
@@ -1085,7 +1085,7 @@
       },
       "summary": "Etter andre verdenskrig ble spørsmål om menneskets frihet, språk, totalitære styreformer og naturen sentrale i filosofien.",
       "lesson": [
-        "Eksistensialismen handler om menneskets vilkår, som frihet, angst og døden. Jean-Paul Sartre var den mest fremtredende representanten i andre halvdel av 1900-tallet. Hans foredrag Eksistensialisme er humanisme fra 1946 gir en tilgjengelig fremstilling. Han mente at eksistensen går forut for essensen.",
+        "Eksistensialismen handler om menneskets vilkår, som frihet, angst og døden. Jean-Paul Sartre var den mest fremtredende representanten i andre halvdel av 1900-tallet. Foredraget Eksistensialisme er humanisme, holdt i 1945 og utgitt som bok i 1946, gir en tilgjengelig fremstilling. Han mente at eksistensen går forut for essensen.",
         "Hannah Arendt ble internasjonalt kjent med The Origins of Totalitarianism fra 1951. Hun sammenlignet nazisme og stalinisme som to varianter av totalitære styreformer. Totalitarisme betyr at staten har full kontroll over samfunnet, og det kom særlig til uttrykk gjennom konsentrasjonsleirene.",
         "Ludwig Wittgenstein var østerriksk filosof og mente at mange filosofiske problemer skyldes misforståelser av språket. I Filosofiske undersøkelser fra 1953 tok han avstand fra ideene i Tractatus.",
         "Arne Næss grunnla dypøkologien. Han lanserte begrepet i 1973 i artikkelen «The Shallow and the Deep, Long-Range Ecology Movement». Retningen er ikke-antroposentrisk, og Store norske leksikon regner ham som trolig Norges mest kjente filosof."
@@ -1128,7 +1128,7 @@
           "id": "ide-1900-sartre",
           "step": 1,
           "type": "choice",
-          "prompt": "Hvem holdt foredraget Eksistensialisme er humanisme i 1946?",
+          "prompt": "Hvem skrev Eksistensialisme er humanisme, som kom ut som bok i 1946?",
           "answer": "Jean-Paul Sartre",
           "distractors": [
             "Hannah Arendt",
@@ -1203,7 +1203,7 @@
           "prompt": "Sett disse etterkrigsverkene i riktig rekkefølge.",
           "items": [
             {
-              "label": "Eksistensialisme er humanisme",
+              "label": "Eksistensialisme er humanisme utgis",
               "year": 1946
             },
             {

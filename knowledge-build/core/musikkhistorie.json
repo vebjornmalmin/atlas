@@ -132,7 +132,7 @@
           "prompt": "Sett hendelsene i rekkefølge etter når de skjedde.",
           "items": [
             {
-              "label": "Gregoriansk sang tas i bruk",
+              "label": "Gregoriansk sang samles og spres (omkring 800)",
               "year": 800
             },
             {
@@ -988,8 +988,8 @@
               "year": 1913
             },
             {
-              "label": "Schönberg lanserer tolvtonemetoden",
-              "year": 1920
+              "label": "Schönberg tar i bruk tolvtonemetoden (omkring 1923)",
+              "year": 1923
             },
             {
               "label": "Sjostakovitsj' 5. symfoni",
