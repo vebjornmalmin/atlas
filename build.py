@@ -47,7 +47,7 @@ for file in files:
 index = (built / 'index.html').read_text()
 match = re.search(r'<meta http-equiv="content-security-policy" content="([^"]+)"', index)
 csp = html.unescape(match.group(1)) if match else "script-src 'self'; style-src 'self' 'unsafe-inline'"
-csp += "; default-src 'self'; img-src 'self' data:; connect-src 'self' https://*.wikipedia.org https://www.wikidata.org https://commons.wikimedia.org https://upload.wikimedia.org https://collectionapi.metmuseum.org https://images.metmuseum.org; worker-src 'self'; manifest-src 'self'; frame-ancestors 'none'; form-action 'self'"
+csp += "; default-src 'self'; img-src 'self' data:; media-src 'self' https://upload.wikimedia.org; connect-src 'self' https://*.wikipedia.org https://www.wikidata.org https://commons.wikimedia.org https://upload.wikimedia.org https://collectionapi.metmuseum.org https://images.metmuseum.org; worker-src 'self'; manifest-src 'self'; frame-ancestors 'none'; form-action 'self'"
 source = 'const assets = ' + json.dumps(assets) + ';\nconst csp=' + json.dumps(csp) + ';\n' + """export default {
   async fetch(request) {
     const path = new URL(request.url).pathname;
