@@ -83,7 +83,7 @@
           "id": "vue-kina-qin-tang-mur",
           "step": 1,
           "type": "choice",
-          "prompt": "Hvilket verdensberømt forsvarsverk begynte Qin-keiseren å bygge?",
+          "prompt": "Hvilket verdensberømt forsvarsverk lot Qin-keiseren knytte sammen av eldre murer?",
           "answer": "Den kinesiske mur",
           "distractors": [
             "Taj Mahal i India",
@@ -705,7 +705,7 @@
             "Palenque",
             "Uxmal"
           ],
-          "explain": "Tikal lå i Petén i det nordlige Guatemala. Byen erobret Copán i 426, og senere ble Copán en allianse av Tikal."
+          "explain": "Tikal lå i Petén i det nordlige Guatemala og var en av de største mayabyene i den klassiske tiden."
         },
         {
           "id": "vue-amerika-for-europeerne-klassisk",
@@ -747,10 +747,10 @@
           "id": "vue-amerika-for-europeerne-rekkefolge",
           "step": 3,
           "type": "order",
-          "prompt": "Sett Tikals erobring, kollapsen i Petén og grunnleggelsen av Tenochtitlán i kronologisk rekkefølge.",
+          "prompt": "Sett grunnleggelsen av Copáns dynasti, kollapsen i Petén og grunnleggelsen av Tenochtitlán i kronologisk rekkefølge.",
           "items": [
             {
-              "label": "Tikal erobrer Copán",
+              "label": "Copáns kongedynasti grunnlegges",
               "year": 426
             },
             {
@@ -762,7 +762,7 @@
               "year": 1325
             }
           ],
-          "explain": "Mellom Tikals erobring av Copán og grunnleggelsen av Tenochtitlán gikk nesten 900 år. Det viser hvor lenge det fantes store sivilisasjoner i Mellom-Amerika før aztekene."
+          "explain": "Mellom grunnleggelsen av Copáns kongedynasti og grunnleggelsen av Tenochtitlán gikk nesten 900 år. Det viser hvor lenge det fantes store sivilisasjoner i Mellom-Amerika før aztekene."
         },
         {
           "id": "vue-amerika-for-europeerne-forklar-pachacuti",
@@ -797,7 +797,7 @@
             },
             {
               "left": "Copán",
-              "right": "Erobret av Tikal i 426"
+              "right": "Kongedynasti grunnlagt i 426"
             }
           ],
           "explain": "Byene tilhører ulike kulturer og tidsaldre. Tikal blomstret lenge før Tenochtitlán ble grunnlagt, og Cuzco ble maktsentrum først da inkaene vokste fram på 1400-tallet."
@@ -815,7 +815,7 @@
           "id": "vue-amerika-for-europeerne-1532",
           "step": 4,
           "type": "year",
-          "prompt": "I hvilket år erobret spanjolene Inkariket?",
+          "prompt": "I hvilket år tok spanjolene inkaherskeren Atahualpa til fange?",
           "answer": "1532",
           "explain": "Riket hadde eksistert siden tidlig på 1400-tallet, altså i over hundre år. Erobringen markerte slutten på et av verdens største riker i Amerika."
         },
