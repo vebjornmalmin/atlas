@@ -85,7 +85,7 @@
     <details class="neighbour-list"><summary>Velg fra liste</summary><div class="neighbour-grid">{#each nextSteps as next}<button class="secondary" onclick={()=>draft={...draft,path:[...(draft.path||[]),next.id]}}><Flag iso2={next.iso2} />{next.label}</button>{:else}<p class="muted">Ingen landegrenser herfra på kartet.</p>{/each}</div></details>{/if}
   {#if !revealed && walk.length>1}<button class="quiet" onclick={()=>draft={...draft,path:(draft.path||[]).slice(0,-1)}}>Angre siste steg</button>{/if}
 {:else if target.mode==='before-after'}
-  <div class="stack">{#each target.items as item}<button class="secondary" aria-pressed={draft.first===item.id} disabled={revealed} onclick={()=>draft={first:item.id}}>{item.label}</button>{/each}</div>
+  <div class="s-choices" role="group" aria-label="Svaralternativer">{#each target.items as item,i}<button class="s-choice" aria-pressed={draft.first===item.id} disabled={revealed} onclick={()=>draft={first:item.id}}><span class="s-choice-key" aria-hidden="true">{'ABCD'[i] || i+1}</span><span class="s-choice-label">{item.label}</span></button>{/each}</div>
 {:else if target.mode==='arrows' && dataset}
   <PanZoomMap base={dataset.viewBox} initial={arrowView} bind:unit label="Tegn pilen: dra fra ett land til et annet" className="arrow-board"
     onTap={tapCountry} onDragStart={arrowStart} onDragMove={arrowMove} onDragEnd={arrowEnd}>

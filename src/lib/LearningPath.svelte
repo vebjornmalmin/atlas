@@ -40,7 +40,7 @@
       <h2>Kort fortalt</h2>
       {#each unit.lesson as paragraph}<p>{paragraph}</p>{/each}
       <h3>Dette skal sitte</h3>
-      <ul class="key-points">{#each unit.keyPoints as point}<li>{point}</li>{/each}</ul>
+      <ul class="s-key-list">{#each unit.keyPoints as point}<li>{point}</li>{/each}</ul>
     </div>
   {:else}
     <div class="card"><p class="muted">Emnet begynner med en kort innføring. Deretter kommer spørsmål i fire steg: oversikt, kjerne, sammenheng og detaljer. Nye kort spres over flere dager, og repetisjoner kommer når du er i ferd med å glemme.</p></div>

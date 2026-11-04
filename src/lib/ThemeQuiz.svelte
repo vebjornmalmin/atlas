@@ -58,12 +58,13 @@
 
 <section class="theme-quiz">
 
-  <div class="player">
-    <button type="button" class="play" onclick={togglePlay} aria-pressed={isPlaying}>
-      {isPlaying ? 'Stopp' : 'Spill melodien'}
+  <div class="q-melody">
+    <button type="button" class="q-melody-play" onclick={togglePlay} aria-pressed={isPlaying}>
+      <svg viewBox="0 0 24 24" aria-hidden="true">{#if isPlaying}<rect x="6" y="5" width="4" height="14" rx="1" /><rect x="14" y="5" width="4" height="14" rx="1" />{:else}<path d="M8 5.5v13l10.5-6.5z" />{/if}</svg>
+      <span>{isPlaying ? 'Stopp' : 'Spill melodien'}</span>
     </button>
 
-    <svg class="roll" viewBox="0 0 {roll.width} {roll.height}" role="img" aria-label="Melodiens form, uten tonenavn">
+    <svg class="q-roll" viewBox="0 0 {roll.width} {roll.height}" role="img" aria-label="Melodiens form, uten tonenavn">
       {#each roll.bars as bar (bar.index)}
         <rect
           x={bar.x}
@@ -77,131 +78,25 @@
     </svg>
   </div>
 
-  <div class="choices" role="group" aria-label="Svaralternativer">
-    {#each target.choices as choice (choice)}
+  <div class="s-choices" role="group" aria-label="Svaralternativer">
+    {#each target.choices as choice, i (choice)}
       <button
         type="button"
-        class="choice"
-        class:selected={draft.choice === choice}
-        class:correct={revealed && choice === target.answer}
+        class="s-choice"
+        class:is-correct={revealed && choice === target.answer}
+        class:is-wrong={revealed && draft.choice === choice && choice !== target.answer}
         aria-pressed={draft.choice === choice}
         disabled={revealed}
         onclick={() => choose(choice)}
-      >
-        {choice}
-      </button>
+      ><span class="s-choice-key" aria-hidden="true">{'ABCD'[i] || i + 1}</span><span class="s-choice-label">{choice}</span></button>
     {/each}
   </div>
 
   {#if revealed}
-    <div class="reveal">
-      <h3>{target.answer}</h3>
-      <p>{target.composer}</p>
-      <p class="meta">{target.approximate ? 'ca. ' : ''}{target.year} · {target.era}</p>
-      <button type="button" class="again" onclick={replay}>Spill igjen</button>
+    <div class="q-facts">
+      <p><strong>{target.composer}</strong></p>
+      <p>{target.approximate ? 'ca. ' : ''}{target.year} · {target.era}</p>
+      <button type="button" class="secondary q-replay" onclick={replay}>Spill igjen</button>
     </div>
   {/if}
 </section>
-
-<style>
-  .theme-quiz {
-    color: var(--ink);
-    font-size: 16px;
-  }
-  .prompt {
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 1.3;
-    margin: 4px 0 14px;
-  }
-  .player {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-bottom: 16px;
-  }
-  .play {
-    min-height: 56px;
-    width: 100%;
-    border: 0;
-    border-radius: 14px;
-    background: var(--accent);
-    color: var(--surface);
-    font-size: 17px;
-    font-weight: 600;
-  }
-  .roll {
-    width: 100%;
-    height: auto;
-    background: var(--surface-2);
-    border: 1px solid var(--line);
-    border-radius: 14px;
-  }
-  .roll rect {
-    fill: color-mix(in srgb, var(--accent) 35%, var(--surface));
-    transition: fill 0.1s;
-  }
-  .roll rect.active {
-    fill: var(--accent);
-  }
-  .choices {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-  .choice {
-    min-height: 48px;
-    text-align: left;
-    padding: 12px 14px;
-    border: 1px solid var(--line);
-    border-radius: 12px;
-    background: var(--surface);
-    color: var(--ink);
-    font-size: 15px;
-  }
-  .choice.selected {
-    border-color: var(--accent);
-    background: var(--accent-soft, var(--surface-2));
-    color: var(--accent);
-    font-weight: 600;
-  }
-  .choice.correct {
-    border-color: var(--success);
-    color: var(--success);
-    font-weight: 600;
-  }
-  .choice:disabled {
-    opacity: 1;
-  }
-  .reveal {
-    margin-top: 18px;
-    padding: 16px;
-    border-radius: 14px;
-    background: var(--surface);
-    border: 1px solid var(--line);
-  }
-  .reveal h3 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 22px;
-    font-weight: 400;
-    margin: 0 0 6px;
-  }
-  .reveal p {
-    margin: 0 0 4px;
-    color: var(--muted);
-    font-size: 14px;
-  }
-  .reveal .meta {
-    font-size: 13px;
-  }
-  .again {
-    margin-top: 12px;
-    min-height: 44px;
-    padding: 10px 16px;
-    border: 1px solid var(--line);
-    border-radius: 12px;
-    background: var(--surface-2);
-    color: var(--ink);
-    font-size: 14px;
-  }
-</style>
