@@ -10,6 +10,8 @@ Toppfeltet viste «Uten nett» selv om nettet virket. Merket fulgte nettleserens
 
 Kontrollert i iPhone 17 Pro-simulatoren mot produksjonsbygget kjørt lokalt: en installert 1.1.2 oppdaterte seg til 1.1.3 uten merket, merket kom da serveren ble stoppet og «Se etter» trykket, og forsvant igjen da serveren var tilbake. 179 automatiske tester består.
 
+Publisert 4. november 2026: app 1.1.3, utgivelse `5aca29003f4d`, kunnskapspakke 2.1.0 (uendret), via Wrangler fra `main`. Helse- og versjonsendepunktene og tjenestearbeideren samsvarer med bygget. En installert 1.1.2 i iPhone 17 Pro-simulatoren oppdaterte seg til 1.1.3 på den publiserte adressen og viste ikke «Uten nett».
+
 ## 1.1.2: Innstillinger på én side
 
 Innstillinger er én flat liste uten undersider: utseende, daglig påminnelse, oppdateringer, sikkerhetskopi, gjenoppretting og installasjon. Én knapp ser etter både app- og innholdsoppdateringer. Den egne utviklersiden er borte; diagnostikken ligger i en lukket «Diagnostikk»-seksjon nederst på samme side.
