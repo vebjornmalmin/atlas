@@ -30,6 +30,8 @@ Kunnskapspakke 2.2.0 har nivåprofil på alle spørsmål. Appen lager i tillegg 
 
 Kontrollert mot produksjonsbygget kjørt lokalt i en iPhone-visning med berøring: piltegning med én finger, knip, dra og trykk på kartet, trykk-og-hold-sortering, linjekobling, tidslinjeplassering, melodier, «Nærmest i tid», dagens kapittel, Atlas og Deg. 224 automatiske tester består. iOS-simulatoren var ikke tilgjengelig i dette miljøet, så kontrollen i Safari på iPhone 17 Pro gjenstår.
 
+Publisert 4. november 2026: app 1.2.0, utgivelse `46f1bbd71e4c`, kunnskapspakke 2.2.0, via Wrangler fra `main`. Helse- og versjonsendepunktene og tjenestearbeideren samsvarer med bygget. En installert 1.1.3 i Safari i iPhone 17 Pro-simulatoren fant den nye utgaven på den publiserte adressen, oppdaterte seg og viste den nye inndelingen i I dag, Atlas og Deg. 224 automatiske tester består.
+
 ## 1.1.3: «Uten nett» bare når nettet faktisk mangler
 
 Toppfeltet viste «Uten nett» selv om nettet virket. Merket fulgte nettleserens `navigator.onLine`, som Safari kan melde som usann på en tilkoblet enhet; oppdateringene hadde allerede sluttet å stole på det i 1.0.0, men merket hadde ikke. Nå følger merket bare appversjonssjekken: en forespørsel som ikke når serveren, eller tjenestearbeiderens svar når nettet mangler (merket med `X-Atlas-Offline`), betyr frakoblet. Alt annet skjuler merket. Sjekken kjører ved oppstart, hvert femte minutt, når appen kommer tilbake i forgrunnen og når nettleseren melder at forbindelsen endrer seg.
