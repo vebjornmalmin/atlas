@@ -18,7 +18,7 @@ self.addEventListener('fetch', event => {
     const offlineTest = url.searchParams.has('offline-test') || (client && new URL(client.url).searchParams.has('offline-test'));
     if(url.pathname==='/version.json'){
       if(offlineTest)return new Response('Offline test',{status:503});
-      try{return await fetch(event.request,{cache:'no-store'});}catch{return new Response('Offline',{status:503});}
+      try{return await fetch(event.request,{cache:'no-store'});}catch{return new Response('Offline',{status:503,headers:{'X-Atlas-Offline':'1'}});}
     }
     const key = event.request.mode === 'navigate' ? '/' : url.pathname;
     const cached = await (await caches.open(CACHE)).match(key);

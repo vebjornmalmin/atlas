@@ -4,7 +4,7 @@
 
   let { children } = $props();
   let active = $state('today');
-  let status = $state('Starter');
+  let status = $state('');
   const navigation = [
     { id: 'today', label: 'I dag' },
     { id: 'learn', label: 'Emner' },
@@ -19,20 +19,14 @@
       const hash = location.hash.slice(1).split('/')[0];
       active = navigation.some(item => item.id === hash) ? hash : 'today';
     };
-    const syncConnection = () => { status = navigator.onLine ? '' : 'Uten nett'; };
     const updateStatus = event => {
       if (typeof event.detail === 'string') status = event.detail;
     };
     syncRoute();
-    syncConnection();
     window.addEventListener('hashchange', syncRoute);
-    window.addEventListener('online', syncConnection);
-    window.addEventListener('offline', syncConnection);
     window.addEventListener('atlas-status', updateStatus);
     return () => {
       window.removeEventListener('hashchange', syncRoute);
-      window.removeEventListener('online', syncConnection);
-      window.removeEventListener('offline', syncConnection);
       window.removeEventListener('atlas-status', updateStatus);
     };
   });

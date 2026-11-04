@@ -4,7 +4,13 @@ Offline kunnskapstrening på norsk, laget for iPhone 17 Pro.
 
 Live app: https://atlas-first-app.atlas-memory.workers.dev
 
-## Gjeldende utgave — 1.1.2: Innstillinger på én side
+## Gjeldende utgave — 1.1.3: «Uten nett» bare når nettet faktisk mangler
+
+Toppfeltet viste «Uten nett» selv om nettet virket. Merket fulgte nettleserens `navigator.onLine`, som Safari kan melde som usann på en tilkoblet enhet; oppdateringene hadde allerede sluttet å stole på det i 1.0.0, men merket hadde ikke. Nå følger merket bare appversjonssjekken: en forespørsel som ikke når serveren, eller tjenestearbeiderens svar når nettet mangler (merket med `X-Atlas-Offline`), betyr frakoblet. Alt annet skjuler merket. Sjekken kjører ved oppstart, hvert femte minutt, når appen kommer tilbake i forgrunnen og når nettleseren melder at forbindelsen endrer seg.
+
+Kontrollert i iPhone 17 Pro-simulatoren mot produksjonsbygget kjørt lokalt: en installert 1.1.2 oppdaterte seg til 1.1.3 uten merket, merket kom da serveren ble stoppet og «Se etter» trykket, og forsvant igjen da serveren var tilbake. 179 automatiske tester består.
+
+## 1.1.2: Innstillinger på én side
 
 Innstillinger er én flat liste uten undersider: utseende, daglig påminnelse, oppdateringer, sikkerhetskopi, gjenoppretting og installasjon. Én knapp ser etter både app- og innholdsoppdateringer. Den egne utviklersiden er borte; diagnostikken ligger i en lukket «Diagnostikk»-seksjon nederst på samme side.
 

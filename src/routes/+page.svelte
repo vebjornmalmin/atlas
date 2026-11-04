@@ -15,7 +15,7 @@
   import {advanceSession,nextActionNote,retryTargets} from '../lib/repetition.js';
   import {progressDetails,sessionOutcome} from '../lib/progress.js';
   import {assessTargets} from '../lib/difficulty.js';
-  import {APP_VERSION,APP_CHECK_INTERVAL,createAppUpdateChecker} from '../lib/app-updates.js';
+  import {APP_VERSION,APP_CHECK_INTERVAL,OFFLINE_HEADER,createAppUpdateChecker} from '../lib/app-updates.js';
   import {foundationTargets} from '../lib/foundations.js';
   import {factKey,learningStage,quizProgress,overviewBounds,effectiveRating} from '../lib/journey.js';
   import {saveJournal,readJournal,questionDraft,restoreDraft} from '../lib/session-journal.js';
@@ -439,7 +439,6 @@
       await put(db,'settings',lastUpdate);
       if(changed) {await restoreSourceContent();await refresh();}
       await logEvent(db,'updates',changed?'Kunnskapspakkene er oppdatert.':'Kunnskapen er oppdatert.','info',{changed,bytes});
-      reportStatus('');
       if(manual)notify(changed?'Innholdet er oppdatert.':'Kunnskapen din er oppdatert.');
     }catch(caught) {
       const failure=caught instanceof TypeError?new Error('Fikk ikke kontakt med nettet. Installert kunnskap er fortsatt tilgjengelig.'):caught;
@@ -506,7 +505,8 @@
     // The daily plan depends on the time of day; a home-screen app can stay open overnight.
     const tickClock=()=>{clock=Date.now();};const clockTimer=setInterval(tickClock,60000);
     const visible=()=>{if(document.visibilityState==='visible'){tickClock();reconnect();}};
-    window.addEventListener('online',reconnect);document.addEventListener('visibilitychange',visible);
+    const connectionChanged=()=>{if(db){void checkUpdates().catch(failure=>recordError('updates',failure));void checkAppUpdate(true);}};
+    window.addEventListener('online',connectionChanged);window.addEventListener('offline',connectionChanged);document.addEventListener('visibilitychange',visible);
     const unhandled=event=>{if(db)void logEvent(db,'unhandled',String(event.reason?.message || event.reason),'error').catch(()=>{});};
     window.addEventListener('unhandledrejection',unhandled);
     const boot=async()=>{
@@ -535,19 +535,19 @@
           void navigator.serviceWorker.ready.then(()=>checkStorage()).catch(()=>{});
         }
         appChecker=createAppUpdateChecker({
-          fetchVersion:async()=>{if(offlineTest)throw new Error('Koble til nettet for å sjekke oppdateringer.');const response=await fetch('/version.json',{cache:'no-store',signal:AbortSignal.timeout(10000)});if(!response.ok)throw new Error('Kunne ikke sjekke appversjonen. Prøv igjen.');return response.json();},
+          fetchVersion:async()=>{if(offlineTest)throw new Error('Koble til nettet for å sjekke oppdateringer.');const response=await fetch('/version.json',{cache:'no-store',signal:AbortSignal.timeout(10000)});if(response.headers.get(OFFLINE_HEADER))throw Object.assign(new Error('Fikk ikke kontakt med nettet.'),{offline:true});if(!response.ok)throw new Error('Kunne ikke sjekke appversjonen. Prøv igjen.');return response.json();},
           getRegistration:()=>registration,
-          onStatus:status=>{if(disposed)return;appCheck=status;if(status.state==='ready')updateReady=true;}
+          onStatus:status=>{if(disposed)return;appCheck=status;if(status.state==='ready')updateReady=true;if(!offlineTest && status.state!=='checking')reportStatus(status.offline?'Uten nett':'');}
         });
+        reportStatus(offlineTest?'Frakoblet test':'');
         void checkAppUpdate();
         lastUpdate=await get(db,'settings','updates');
         void checkUpdates().catch(failure=>recordError('updates',failure));
-        reportStatus(offlineTest?'Frakoblet test':navigator.onLine?'':'Uten nett');
       }catch(failure){await recordError('startup',failure);}
       finally{if(!disposed)loading=false;}
     };
     void boot();
-    return ()=>{disposed=true;clearInterval(timer);clearInterval(clockTimer);window.removeEventListener('hashchange',route);window.removeEventListener('beforeinstallprompt',prompt);window.removeEventListener('online',reconnect);document.removeEventListener('visibilitychange',visible);window.removeEventListener('unhandledrejection',unhandled);db?.close();};
+    return ()=>{disposed=true;clearInterval(timer);clearInterval(clockTimer);window.removeEventListener('hashchange',route);window.removeEventListener('beforeinstallprompt',prompt);window.removeEventListener('online',connectionChanged);window.removeEventListener('offline',connectionChanged);document.removeEventListener('visibilitychange',visible);window.removeEventListener('unhandledrejection',unhandled);db?.close();};
   });
 </script>
 

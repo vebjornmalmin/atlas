@@ -1,6 +1,9 @@
 import pkg from '../../package.json' with {type:'json'};
 export const APP_VERSION=pkg.version;
 export const APP_CHECK_INTERVAL=5*60*1000;
+export const OFFLINE_HEADER='X-Atlas-Offline';
+// Safari can report navigator.onLine=false while the network works, so connection status comes from the version check: a request that never reached the server, or the service worker's marked offline answer, means offline.
+export function isOffline(error){return error instanceof TypeError || error?.offline===true || error?.name==='TimeoutError';}
 export function createAppUpdateChecker({fetchVersion,getRegistration,version=APP_VERSION,now=Date.now,onStatus=()=>{},waitMs=30000}) {
  let last=0,inFlight=null;
  async function inspect() {
@@ -23,7 +26,7 @@ export function createAppUpdateChecker({fetchVersion,getRegistration,version=APP
    const ready=Boolean(registration?.waiting);
    const result={state:ready?'ready':remote.version!==version?'pending':'current',checkedAt:now(),version:remote.version};
    onStatus(result); return result;
-  }catch(error){const result={state:'failed',checkedAt:now(),message:error.message};onStatus(result);return result;}
+  }catch(error){const result={state:'failed',checkedAt:now(),message:error.message,offline:isOffline(error)};onStatus(result);return result;}
  }
  return {check(manual=false){
   if(inFlight)return inFlight;

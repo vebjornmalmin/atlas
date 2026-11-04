@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {createAppUpdateChecker,APP_CHECK_INTERVAL} from '../src/lib/app-updates.js';
+import {createAppUpdateChecker,APP_CHECK_INTERVAL,isOffline} from '../src/lib/app-updates.js';
 test('manual checks bypass throttling, automatic checks wait five minutes, and use registration.update',async()=>{
  let calls=0,updates=0,time=1000;const statuses=[];
  const checker=createAppUpdateChecker({now:()=>time,version:'0.8.0',fetchVersion:async()=>{calls++;return {version:'0.8.0'};},getRegistration:()=>({update:async()=>{updates++;}}),onStatus:s=>statuses.push(s)});
@@ -23,4 +23,13 @@ test('installation finishing after update resolves is awaited before reporting r
  const worker=new EventTarget();worker.state='installing';const registration={installing:worker,waiting:null,update:async()=>{setTimeout(()=>{worker.state='installed';registration.waiting=worker;worker.dispatchEvent(new Event('statechange'));},5);}};
  const checker=createAppUpdateChecker({fetchVersion:async()=>({version:'0.9.0'}),getRegistration:()=>registration});
  assert.equal((await checker.check(true)).state,'ready');
+});
+test('only a request that never reached the server counts as offline',async()=>{
+ const failing=error=>createAppUpdateChecker({fetchVersion:async()=>{throw error;},getRegistration:()=>null}).check(true);
+ assert.equal((await failing(new TypeError('Load failed'))).offline,true);
+ assert.equal((await failing(Object.assign(new Error('Fikk ikke kontakt med nettet.'),{offline:true}))).offline,true);
+ assert.equal((await failing(new Error('Kunne ikke sjekke appversjonen. Prøv igjen.'))).offline,false);
+ assert.equal(isOffline(new DOMException('Timed out','TimeoutError')),true);
+ const reached=await createAppUpdateChecker({version:'0.8.0',fetchVersion:async()=>({version:'0.8.0'}),getRegistration:()=>null}).check(true);
+ assert.equal(reached.offline,undefined);
 });
