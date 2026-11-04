@@ -3,7 +3,7 @@
 // endYear marks a span; distances always use `year`.
 // Each anchor is checked against the Store norske leksikon (snl.no) pages listed in `sources`.
 export const TIME_ANCHORS = [
-  {id:'lascaux', label:'Lascaux-hulemalerier', year:-11500, approximate:true, uncertainty:1000, kind:'work', familiarity:2, region:'Europa',
+  {id:'lascaux', label:'Lascaux-hulemalerier', year:-15000, approximate:true, uncertainty:2000, kind:'work', familiarity:2, region:'Europa',
     sources:[{title:'Lascaux-hulen – Store norske leksikon', url:'https://snl.no/Lascaux-hulen'}]},
   {id:'kileskrift', label:'Kileskrift i Uruk', year:-3200, approximate:true, uncertainty:200, kind:'event', familiarity:2, region:'Midtøsten',
     sources:[{title:'Kileskrift – Store norske leksikon', url:'https://snl.no/kileskrift'}]},
