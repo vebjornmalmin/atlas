@@ -1,0 +1,1268 @@
+{
+  "domain": {
+    "id": "musikkhistorie",
+    "title": "Musikkhistorie",
+    "subject": "art",
+    "order": 10,
+    "description": "Musikkens utvikling fra gregoriansk sang til jazz og rock: komponistene, verkene og hvordan musikken speilet sin tid."
+  },
+  "units": [
+    {
+      "id": "mus-middelalder-renessanse",
+      "title": "Middelalderens og renessansens musikk",
+      "tier": 1,
+      "prerequisites": [],
+      "years": {
+        "from": 800,
+        "to": 1600
+      },
+      "summary": "Musikken gikk fra gregoriansk enstemmig sang til flerstemmig kirkemusikk og renessansens balanserte messer, og la grunnlaget for operaen.",
+      "lesson": [
+        "Den eldste kirkemusikken vi kjenner i Vest-Europa, er gregoriansk sang: enstemmig latinsk sang i den katolske messen, tatt i bruk fra omkring år 800. Melodiene følger de åtte kirketonene i stedet for dur og moll. Navnet kommer fra pave Gregor den store, men han deltok ikke aktivt i å skape sangen.",
+        "Rundt år 1200 begynte komponister ved Notre-Dame-katedralen i Paris å sette flere stemmer mot hverandre. Det kalles polyfoni, eller mangestemmighet, og Léonin og Pérotin var de viktigste navnene i skolen. Polyfonien ble etter hvert vanlig i kirkens musikk.",
+        "Renessansen (omtrent 1400–1600) la vekt på balanse mellom stemmene og tekstens forståelighet. Giovanni Pierluigi da Palestrina ble den fremste messekomponisten på 1500-tallet, og stilen hans ble et forbilde. Ved overgangen til 1600-tallet tok operaen form, og Claudio Monteverdis «L'Orfeo» regnes som den første store."
+      ],
+      "keyPoints": [
+        "Gregoriansk sang er enstemmig latinsk kirkesang, tatt i bruk fra omkring år 800.",
+        "Notre-Dame-skolen i Paris utviklet polyfoni, flerstemmig musikk, rundt år 1200.",
+        "Léonin og Pérotin var de viktigste komponistene i Notre-Dame-skolen.",
+        "Palestrina fulgte kirkens krav til forståelige tekster, og stilen hans ble et forbilde i renessansen.",
+        "Monteverdis «L'Orfeo» (1607) regnes som den første store operaen."
+      ],
+      "sources": [
+        {
+          "title": "Gregoriansk sang – Store norske leksikon",
+          "url": "https://snl.no/gregoriansk_sang"
+        },
+        {
+          "title": "Notre-Dame-skolen – Store norske leksikon",
+          "url": "https://snl.no/Notre-Dame-skolen"
+        },
+        {
+          "title": "Giovanni Pierluigi da Palestrina – Store norske leksikon",
+          "url": "https://snl.no/Giovanni_Pierluigi_da_Palestrina"
+        },
+        {
+          "title": "Claudio Monteverdi – Store norske leksikon",
+          "url": "https://snl.no/Claudio_Monteverdi"
+        },
+        {
+          "title": "Musikk i renessansen – Store norske leksikon",
+          "url": "https://snl.no/musikk_i_renessansen"
+        }
+      ],
+      "cards": [
+        {
+          "id": "mus-middelalder-renessanse-gregoriansk-kjennetegn",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilken type sang var den gregorianske kirkemusikken?",
+          "answer": "Enstemmig latinsk kirkesang",
+          "distractors": [
+            "Flerstemmig orkestermusikk for symfoniorkester",
+            "Operasang med resitativer og arier",
+            "Dansemusikk for hoff og adel"
+          ],
+          "explain": "Melodiene fulgte de åtte kirketonene, ikke dur og moll. Navnet kommer fra pave Gregor den store, som ikke deltok aktivt i å skape sangen."
+        },
+        {
+          "id": "mus-middelalder-renessanse-polyfoni-begrep",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hva kalles musikk der flere selvstendige stemmer lyder samtidig?",
+          "answer": "Polyfoni",
+          "distractors": [
+            "Monofoni",
+            "Tonalitet",
+            "Ostinato"
+          ],
+          "explain": "Polyfoni betyr mangestemmighet. Motsetningen er monofoni, der bare én melodi lyder."
+        },
+        {
+          "id": "mus-middelalder-renessanse-notre-dame-by",
+          "step": 1,
+          "type": "choice",
+          "prompt": "I hvilken by lå katedralen der Notre-Dame-skolen virket?",
+          "answer": "Paris",
+          "distractors": [
+            "Roma",
+            "Venezia",
+            "Wien"
+          ],
+          "explain": "Léonin og Pérotin virket ved katedralen i Paris. Fra slutten av 1100-tallet ble flerstemmig sang en del av kirkemusikken."
+        },
+        {
+          "id": "mus-middelalder-renessanse-gregoriansk-navn",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva kalles den enstemmige latinske kirkesangen som er oppkalt etter pave Gregor den store?",
+          "answer": "Gregoriansk sang",
+          "accept": [
+            "gregorianske sang",
+            "gregoriansk"
+          ],
+          "explain": "Sangen kom til Norge med tidlige misjonærer på 900- og 1000-tallet. Norsk salmebok fra 2013 har fortsatt rundt 30 gregorianske melodier."
+        },
+        {
+          "id": "mus-middelalder-renessanse-perotin",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvilken komponist var en av de to viktigste i Notre-Dame-skolen, ved siden av Léonin?",
+          "answer": "Pérotin",
+          "accept": [
+            "Perotin"
+          ],
+          "explain": "Léonin og Pérotin regnes som skolens ledende navn. Pérotin ble husket for sin rolle i utviklingen av den flerstemmige sangen."
+        },
+        {
+          "id": "mus-middelalder-renessanse-monteverdi-orfeo",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvilken komponist skrev operaen «L'Orfeo», den første store operaen?",
+          "answer": "Claudio Monteverdi",
+          "accept": [
+            "Monteverdi"
+          ],
+          "explain": "Verket fletter resitativ, arier, ballett og kor til ett dramatisk hele. Dafne fra 1598 regnes av noen som enda tidligere, men den er tapt."
+        },
+        {
+          "id": "mus-middelalder-renessanse-rekkefolge",
+          "step": 3,
+          "type": "order",
+          "prompt": "Sett hendelsene i rekkefølge etter når de skjedde.",
+          "items": [
+            {
+              "label": "Gregoriansk sang tas i bruk",
+              "year": 800
+            },
+            {
+              "label": "Notre-Dame-skolen utvikler polyfoni",
+              "year": 1200
+            },
+            {
+              "label": "Palestrinas «Missa Papae Marcelli» utgis",
+              "year": 1567
+            },
+            {
+              "label": "Monteverdis «L'Orfeo» får premiere",
+              "year": 1607
+            }
+          ],
+          "explain": "Sekvensen viser veien fra én stemme til mange. Palestrinas messe kom i renessansens høyde, og Monteverdis opera markerte overgangen til barokken."
+        },
+        {
+          "id": "mus-middelalder-renessanse-kobling",
+          "step": 3,
+          "type": "match",
+          "prompt": "Koble navnet med det det er knyttet til.",
+          "pairs": [
+            {
+              "left": "Léonin",
+              "right": "Notre-Dame-skolen"
+            },
+            {
+              "left": "Gregoriansk sang",
+              "right": "Enstemmig kirkesang"
+            },
+            {
+              "left": "Palestrina",
+              "right": "Renessansens messestil"
+            },
+            {
+              "left": "Monteverdi",
+              "right": "Den første store operaen"
+            }
+          ],
+          "explain": "Parene følger linjen fra enstemmig sang via polyfoni og renessansens messer til operaen. Hver av dem markerer et skifte i hvordan musikken ble skrevet og framført."
+        },
+        {
+          "id": "mus-middelalder-renessanse-palestrina-hvorfor",
+          "step": 3,
+          "type": "choice",
+          "prompt": "Hvorfor var Palestrinas messestil nyttig for kirken?",
+          "answer": "Teksten ble lettere å forstå",
+          "distractors": [
+            "Den kunne spilles av orgel alene",
+            "Den krevde et stort symfoniorkester",
+            "Den var skrevet for hoff og dans"
+          ],
+          "explain": "Motreformasjonen ønsket forståelige tekster i messen. Palestrina skrev homofont i de lange tekstleddene, men beholdt polyfonien i Kyrie og Agnus Dei."
+        },
+        {
+          "id": "mus-middelalder-renessanse-orfeo-aar",
+          "step": 4,
+          "type": "year",
+          "prompt": "Hvilket år fikk Monteverdis «L'Orfeo» premiere i Mantua?",
+          "answer": "1607",
+          "explain": "Historien om Orfeus og Eurydike er hentet fra Ovids «Metamorfoser». Verket var skrevet for hertugen av Mantua."
+        },
+        {
+          "id": "mus-middelalder-renessanse-kirketoner",
+          "step": 4,
+          "type": "text",
+          "prompt": "Hvor mange kirketoner bygger gregoriansk sang på?",
+          "answer": "Åtte",
+          "accept": [
+            "8"
+          ],
+          "explain": "Kirketonene er moduser som ikke bruker dur- og mollskalaen. Det gir melodiene et annet preg enn klassisk musikk."
+        }
+      ]
+    },
+    {
+      "id": "mus-barokken",
+      "title": "Barokken i dybden",
+      "tier": 2,
+      "prerequisites": [
+        "mus-middelalder-renessanse",
+        "kul-klassisk-musikk"
+      ],
+      "years": {
+        "from": 1600,
+        "to": 1750
+      },
+      "summary": "Barokken gjorde musikken til et dramatisk uttrykk. Monteverdi, Bach, Händel og Vivaldi samlet stilen i opera, oratorium og konsert.",
+      "lesson": [
+        "Barokken (omtrent 1600–1750) var en tid med sterke kontraster og store følelser. Opera ble den nye scenesjangeren. Claudio Monteverdis «L'Orfeo» hadde premiere ved hertugen av Mantuas hoff i 1607, og verket fletter resitativ, arier, ballett og kor til ett dramatisk hele.",
+        "Johann Sebastian Bach var kantor ved Thomaskirken i Leipzig fra 1723 til sin død i 1750. I de første fem årene skrev han omkring 150 kantater, i tillegg til Johannes- og Matteuspassjonen. Brandenburgkonsertene ble tilegnet en markgreve i 1721.",
+        "Georg Friedrich Händel virket i England, og oratoriet «Messias» ble uroppført i Dublin i 1742. Teksten er fra Bibelen, satt sammen av Charles Jennens. Antonio Vivaldis «De fire årstider» ble utgitt i Amsterdam i 1725, med solofiolinen som skildrer hver årstid."
+      ],
+      "keyPoints": [
+        "Monteverdis «L'Orfeo» (1607) regnes som den første store operaen.",
+        "Bach var Thomaskantor i Leipzig fra 1723 til sin død i 1750.",
+        "Händels «Messias» ble uroppført i Dublin i 1742, med tekst fra Bibelen.",
+        "Vivaldis «De fire årstider» ble utgitt i Amsterdam i 1725, med solofiolin mot strykeorkester.",
+        "Barokken samlet dramatikk, kontrapunkt og store former i opera, oratorium og konsert."
+      ],
+      "sources": [
+        {
+          "title": "Claudio Monteverdi – Store norske leksikon",
+          "url": "https://snl.no/Claudio_Monteverdi"
+        },
+        {
+          "title": "Opera – Store norske leksikon",
+          "url": "https://snl.no/opera"
+        },
+        {
+          "title": "Johann Sebastian Bach – Store norske leksikon",
+          "url": "https://snl.no/Johann_Sebastian_Bach"
+        },
+        {
+          "title": "Thomanerkoret – Store norske leksikon",
+          "url": "https://snl.no/Thomanerkoret"
+        },
+        {
+          "title": "Messias – Store norske leksikon",
+          "url": "https://snl.no/Messias_-_oratorium"
+        },
+        {
+          "title": "Georg Friedrich Händel – Store norske leksikon",
+          "url": "https://snl.no/Georg_Friedrich_H%C3%A4ndel"
+        },
+        {
+          "title": "De fire årstider – Store norske leksikon",
+          "url": "https://snl.no/De_fire_%C3%A5rstider"
+        },
+        {
+          "title": "Brandenburgerkonsertene – Store norske leksikon",
+          "url": "https://snl.no/Brandenburgerkonsertene"
+        }
+      ],
+      "cards": [
+        {
+          "id": "mus-barokken-opera-sjanger",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilken scenesjanger ble den viktigste nyskapningen i barokken?",
+          "answer": "Opera",
+          "distractors": [
+            "Symfonien",
+            "Strykekvartetten",
+            "Musikalen"
+          ],
+          "explain": "Opera var først knyttet til fyrstehoffene. Monteverdis «L'Orfeo» regnes som den første store, og den tok utgangspunkt i myten om Orfeus og Eurydike."
+        },
+        {
+          "id": "mus-barokken-mantua",
+          "step": 1,
+          "type": "choice",
+          "prompt": "I hvilken by ble «L'Orfeo» først framført?",
+          "answer": "Mantua",
+          "distractors": [
+            "Firenze",
+            "Venezia",
+            "Dublin"
+          ],
+          "explain": "Hertugen Vincenzo Gonzaga var oppdragsgiveren. Dafne fra 1598 regnes av noen som den aller første operaen, men den er tapt."
+        },
+        {
+          "id": "mus-barokken-messias-komponist",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilken komponist skrev oratoriet «Messias»?",
+          "answer": "Georg Friedrich Händel",
+          "distractors": [
+            "Johann Sebastian Bach",
+            "Antonio Vivaldi",
+            "Claudio Monteverdi"
+          ],
+          "explain": "Messias er et oratorium: et stort verk for kor, solister og orkester, med tekst fra Bibelen satt sammen av Charles Jennens. Hallelujakoret er den mest kjente delen."
+        },
+        {
+          "id": "mus-barokken-thomaskantor",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvilken komponist var kantor ved Thomaskirken i Leipzig til sin død?",
+          "answer": "Johann Sebastian Bach",
+          "accept": [
+            "Bach",
+            "J.S. Bach",
+            "J. S. Bach"
+          ],
+          "explain": "Stillingen innebar å lære guttene i Thomanerkoret, og Bach måtte også undervise dem i latin. Orkesteret var satt sammen av tilfeldige musikere da han kom."
+        },
+        {
+          "id": "mus-barokken-fiolin",
+          "step": 2,
+          "type": "choice",
+          "prompt": "Hvilket instrument har hovedrollen i Vivaldis «De fire årstider»?",
+          "answer": "Fiolin",
+          "distractors": [
+            "Cembalo",
+            "Trompet",
+            "Obo"
+          ],
+          "explain": "Solofiolinen skildrer hver årstid mot et strykeorkester og basso continuo. Konsertene ble utgitt i 1725 sammen med sonetter som beskriver årstidene."
+        },
+        {
+          "id": "mus-barokken-orfeo-komponist",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvilken komponist skrev operaen om Orfeus og Eurydike for hertugen av Mantua?",
+          "answer": "Claudio Monteverdi",
+          "accept": [
+            "Monteverdi"
+          ],
+          "explain": "Verket fletter resitativ, arier, ballett og kor til ett dramatisk hele. Noen forskere ser operaens oppfinnelse som starten på barokken."
+        },
+        {
+          "id": "mus-barokken-rekkefolge",
+          "step": 3,
+          "type": "order",
+          "prompt": "Sett verkene i rekkefølge etter når de ble framført eller utgitt.",
+          "items": [
+            {
+              "label": "Monteverdis «L'Orfeo»",
+              "year": 1607
+            },
+            {
+              "label": "Vivaldis «De fire årstider» utgis",
+              "year": 1725
+            },
+            {
+              "label": "Händels «Messias» uroppføres",
+              "year": 1742
+            },
+            {
+              "label": "Bach dør i Leipzig",
+              "year": 1750
+            }
+          ],
+          "explain": "Verkene dekker hele barokken, fra operaen ved Mantuas hoff til Bachs død. Vivaldi, Händel og Bach virket i ulike land, men deler et tonespråk bygget på kontrapunkt og klare harmonier."
+        },
+        {
+          "id": "mus-barokken-kobling",
+          "step": 3,
+          "type": "match",
+          "prompt": "Koble barokkkomponisten med verket.",
+          "pairs": [
+            {
+              "left": "Claudio Monteverdi",
+              "right": "«L'Orfeo»"
+            },
+            {
+              "left": "Antonio Vivaldi",
+              "right": "«De fire årstider»"
+            },
+            {
+              "left": "Georg Friedrich Händel",
+              "right": "«Messias»"
+            },
+            {
+              "left": "Johann Sebastian Bach",
+              "right": "Brandenburgkonsertene"
+            }
+          ],
+          "explain": "Verkene viser barokkens bredde: opera for scenen, oratorium for kor og orkester, og konsert for solist og orkester."
+        },
+        {
+          "id": "mus-barokken-opera-oratorium",
+          "step": 3,
+          "type": "explain",
+          "prompt": "Forklar forskjellen mellom en opera og et oratorium.",
+          "answer": "Opera er et scenisk verk med handling og scenisk framføring. Oratoriet er et stort verk for kor, solister og orkester, som Messias, med tekst fra Bibelen.",
+          "checklist": [
+            "Opera: scenisk handling",
+            "Oratorium: kor, solister og orkester",
+            "Messias: tekst fra Bibelen"
+          ],
+          "explain": "Händel skrev både operaer og oratorier. Han gikk over til oratoriet, og Messias er i dag det mest framførte av hans verk."
+        },
+        {
+          "id": "mus-barokken-thomaskantor-aar",
+          "step": 4,
+          "type": "year",
+          "prompt": "Hvilket år ble Bach ansatt som kantor ved Thomaskirken i Leipzig?",
+          "answer": "1723",
+          "explain": "Telemann ble tilbudt stillingen i 1722, men takket nei. Bach hadde den til sin død i 1750."
+        },
+        {
+          "id": "mus-barokken-kantater",
+          "step": 4,
+          "type": "number",
+          "prompt": "Omtrent hvor mange kantater skrev Bach i sine fem første år i Leipzig?",
+          "answer": "150",
+          "tolerance": 10,
+          "explain": "I de samme årene skrev han også Johannes- og Matteuspassjonen."
+        }
+      ]
+    },
+    {
+      "id": "mus-wienerklassisisme",
+      "title": "Wienerklassisismen i dybden",
+      "tier": 2,
+      "prerequisites": [
+        "kul-klassisk-musikk",
+        "mus-barokken"
+      ],
+      "years": {
+        "from": 1750,
+        "to": 1820
+      },
+      "summary": "Wienerklassikerne fant en klar form for symfoni og sonate. Beethovens «Eroica» varslet at musikken kunne bli mer personlig.",
+      "lesson": [
+        "Wienerklassisismen (omtrent 1750–1820) bygde på barokkens tradisjoner, men søkte klarhet og balanse. Den viktigste nyvinningen var sonatesatsformen, med kontrasterende temaer, utvikling av dem og spenning gjennom modulasjoner. Den firesatsige symfonien og sonaten fikk sin faste form hos Haydn, Mozart og Beethoven i Wien.",
+        "Joseph Haydn var knyttet til familien Esterházy fra 1761 og ble kapellmester i 1766. Han skrev over hundre symfonier og regnes som symfoniens far. Orkesteret hans talte omkring 25 musikere, og Esterháza var familiens sommerslott.",
+        "Wolfgang Amadeus Mozart skrev operaen «Don Giovanni», uroppført i Prag i 1787. Ludwig van Beethoven utvidet symfonien med «Eroica» (1803–1804). Verket varer nesten en time, og det ble først tilegnet Napoleon. Det regnes som et bindeledd mot romantikken."
+      ],
+      "keyPoints": [
+        "Sonatesatsformen med kontrasterende temaer og utvikling er wienerklassisismens viktigste nyvinning.",
+        "Haydn var knyttet til familien Esterházy fra 1761 og regnes som symfoniens far.",
+        "Mozarts «Don Giovanni» hadde premiere i Prag i 1787.",
+        "Beethovens «Eroica» (1803–1804) er nesten en time lang og ble først tilegnet Napoleon.",
+        "Wienerklassikerne gjorde den firesatsige symfonien og sonaten til faste former."
+      ],
+      "sources": [
+        {
+          "title": "Sonatesatsform – Store norske leksikon",
+          "url": "https://snl.no/sonatesatsform"
+        },
+        {
+          "title": "Joseph Haydn – Store norske leksikon",
+          "url": "https://snl.no/Joseph_Haydn"
+        },
+        {
+          "title": "Don Giovanni – Store norske leksikon",
+          "url": "https://snl.no/Don_Giovanni"
+        },
+        {
+          "title": "Eroica – Store norske leksikon",
+          "url": "https://snl.no/Eroica"
+        },
+        {
+          "title": "Musikk i klassisismen – Store norske leksikon",
+          "url": "https://snl.no/musikk_i_klassisismen"
+        }
+      ],
+      "cards": [
+        {
+          "id": "mus-wienerklassisisme-sonatesatsform",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilken formtype var wienerklassisismens viktigste nyvinning?",
+          "answer": "Sonatesatsformen",
+          "distractors": [
+            "Fugen",
+            "Passacaglien",
+            "Kantaten"
+          ],
+          "explain": "Formen har ofte tre deler, A–B–A', med kontrasterende temaer og spenningsskapende modulasjoner. Den regnes som epokens viktigste nyskapning."
+        },
+        {
+          "id": "mus-wienerklassisisme-esterhazy",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilken familie var Joseph Haydn knyttet til fra 1761?",
+          "answer": "Esterházy",
+          "distractors": [
+            "Habsburg",
+            "Liechtenstein",
+            "Medici"
+          ],
+          "explain": "Haydn skrev mange symfonier for familien, og orkesteret hans talte omkring 25 musikere."
+        },
+        {
+          "id": "mus-wienerklassisisme-wien",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilken keiserby var sentrum for Haydn, Mozart og Beethoven?",
+          "answer": "Wien",
+          "distractors": [
+            "Paris",
+            "London",
+            "Berlin"
+          ],
+          "explain": "Mozart og Beethoven arbeidet lenge i byen, som den gang var en keiserlig residensby."
+        },
+        {
+          "id": "mus-wienerklassisisme-don-giovanni-komponist",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvilken komponist skrev operaen «Don Giovanni» med libretto av Lorenzo Da Ponte?",
+          "answer": "Mozart",
+          "accept": [
+            "Wolfgang Amadeus Mozart",
+            "W.A. Mozart",
+            "W. A. Mozart"
+          ],
+          "explain": "Verket hadde premiere i Prag i 1787, og Mozart ledet selv øvelsene og premieren. Han hadde også skrevet «Figaros bryllup» i 1786."
+        },
+        {
+          "id": "mus-wienerklassisisme-eroica-komponist",
+          "step": 2,
+          "type": "choice",
+          "prompt": "Hvilken komponist skrev «Eroica», symfonien som varer nesten en time?",
+          "answer": "Ludwig van Beethoven",
+          "distractors": [
+            "Joseph Haydn",
+            "Franz Schubert",
+            "Johannes Brahms"
+          ],
+          "explain": "Eroica er Beethovens 3. symfoni. Den var lengre enn noen symfoni før den, og Beethoven endret tittelen da Napoleon kronet seg til keiser."
+        },
+        {
+          "id": "mus-wienerklassisisme-symfoniens-far",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvilken komponist kalles symfoniens far?",
+          "answer": "Haydn",
+          "accept": [
+            "Joseph Haydn"
+          ],
+          "explain": "Haydn skrev over hundre symfonier, og Mozart og Beethoven bygde videre på hans former."
+        },
+        {
+          "id": "mus-wienerklassisisme-rekkefolge",
+          "step": 3,
+          "type": "order",
+          "prompt": "Sett verkene og hendelsene i rekkefølge etter når de skjedde.",
+          "items": [
+            {
+              "label": "Haydn knyttes til familien Esterházy",
+              "year": 1761
+            },
+            {
+              "label": "Mozarts «Don Giovanni» i Prag",
+              "year": 1787
+            },
+            {
+              "label": "Mozarts «Tryllefløyten» i Wien",
+              "year": 1791
+            },
+            {
+              "label": "Beethovens «Eroica»",
+              "year": 1804
+            }
+          ],
+          "explain": "Hendelsene spenner over mer enn førti år, fra Haydns hoffjobb til Beethovens frie symfoni. «Eroica» varslet romantikken."
+        },
+        {
+          "id": "mus-wienerklassisisme-kobling",
+          "step": 3,
+          "type": "match",
+          "prompt": "Koble komponisten med det han er knyttet til.",
+          "pairs": [
+            {
+              "left": "Joseph Haydn",
+              "right": "Familien Esterházy"
+            },
+            {
+              "left": "Wolfgang Amadeus Mozart",
+              "right": "«Don Giovanni»"
+            },
+            {
+              "left": "Ludwig van Beethoven",
+              "right": "«Eroica»"
+            }
+          ],
+          "explain": "Haydn arbeidet for en fyrstefamilie, Mozart skrev opera, og Beethoven utvidet symfonien. Tre ulike veier ble alle en del av wienerklassisismen."
+        },
+        {
+          "id": "mus-wienerklassisisme-sonatespenning",
+          "step": 3,
+          "type": "explain",
+          "prompt": "Forklar hvordan sonatesatsformen bygger spenning i en sats.",
+          "answer": "Formen starter med to kontrasterende temaer, utvikler dem i en midtdel og fører dem tilbake i en ny spenning. Modulasjoner og endringer i dynamikk gjør veien gjennom satsen tydelig.",
+          "checklist": [
+            "To kontrasterende temaer",
+            "Utvikling av temaene i midtdelen",
+            "Modulasjoner og dynamikk skaper spenning"
+          ],
+          "explain": "Oppbygningen gjorde musikken lettere å følge, og den passet epokens ideal om klarhet og balanse."
+        },
+        {
+          "id": "mus-wienerklassisisme-don-giovanni-aar",
+          "step": 4,
+          "type": "year",
+          "prompt": "Hvilket år ble Mozarts «Don Giovanni» uroppført i Prag?",
+          "answer": "1787",
+          "explain": "Mozart ledet selv øvelsene og premieren, og verket ble en av hans største suksesser."
+        },
+        {
+          "id": "mus-wienerklassisisme-eroica-aar",
+          "step": 4,
+          "type": "choice",
+          "prompt": "Omtrent hvilket år ble Beethovens «Eroica» skrevet?",
+          "answer": "1803–1804",
+          "distractors": [
+            "1744–1745",
+            "1824–1825",
+            "1864–1865"
+          ],
+          "explain": "Symfonien er nesten en time lang, og den regnes som et bindeledd mellom wienerklassisismen og romantikken."
+        }
+      ]
+    },
+    {
+      "id": "mus-romantikken",
+      "title": "Romantikken og nasjonalromantikken",
+      "tier": 2,
+      "prerequisites": [
+        "mus-wienerklassisisme",
+        "kul-norsk-musikk"
+      ],
+      "years": {
+        "from": 1820,
+        "to": 1900
+      },
+      "summary": "Romantikkens komponister skrev for følelser, fortelling og nasjonal identitet, fra Berlioz' symfoni til Smetanas «Vltava».",
+      "lesson": [
+        "Romantikken (omtrent 1820–1900) satte følelser, fantasi og det personlige i sentrum. Hector Berlioz skrev «Symphonie fantastique» i 1830, en fortelling i musikk. Den har en tilbakevendende melodi, idée fixe, som endrer karakter i hver sats. Franz Liszt var blant tilhørerne og ble fascinert av verket.",
+        "Liszt skapte begrepet symfonisk dikt i 1854, med verket «Tasso». Sjangeren er en orkesterkomposisjon i én sats med utgangspunkt i et dikt, en fortelling eller et maleri. Richard Wagner samlet operaene i «Nibelungens ring», som ble framført samlet i Bayreuth i 1876.",
+        "Nasjonalromantikken brukte folketoner og folkesagn for å uttrykke et nasjonalt særpreg. Bedřich Smetana skrev de seks symfoniske diktene «Má vlast» mellom 1872 og 1879. Den mest kjente satsen, «Vltava», ble komponert i 1874 og er blitt et tsjekkisk nasjonalsymbol. I Norge fulgte Grieg og Ole Bull samme spor."
+      ],
+      "keyPoints": [
+        "Berlioz' «Symphonie fantastique» (1830) bygger på en fortelling og en tilbakevendende idée fixe.",
+        "Liszt skapte begrepet symfonisk dikt i 1854, med verket «Tasso».",
+        "Wagners «Nibelungens ring» ble framført samlet i Bayreuth i 1876.",
+        "Smetanas «Vltava» er den mest kjente satsen i «Má vlast» og er blitt et tsjekkisk nasjonalsymbol.",
+        "Nasjonalromantikken brukte folketoner for å skape en egen nasjonal tone, også i Norge."
+      ],
+      "sources": [
+        {
+          "title": "Hector Berlioz – Store norske leksikon",
+          "url": "https://snl.no/Hector_Berlioz"
+        },
+        {
+          "title": "Franz Liszt – Store norske leksikon",
+          "url": "https://snl.no/Franz_Liszt"
+        },
+        {
+          "title": "Symfonisk dikt – Store norske leksikon",
+          "url": "https://snl.no/symfonisk_dikt"
+        },
+        {
+          "title": "Nibelungens ring – Store norske leksikon",
+          "url": "https://snl.no/Der_Ring_des_Nibelungen"
+        },
+        {
+          "title": "Má vlast – Store norske leksikon",
+          "url": "https://snl.no/Ma_vlast"
+        },
+        {
+          "title": "Idée fixe – Store norske leksikon",
+          "url": "https://snl.no/id%C3%A9e_fixe"
+        },
+        {
+          "title": "Romantikken i musikken – Store norske leksikon",
+          "url": "https://snl.no/romantikken_-_musikk"
+        }
+      ],
+      "cards": [
+        {
+          "id": "mus-romantikken-symfonisk-dikt",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hva kalles en orkesterkomposisjon i én sats som skildrer et dikt, en fortelling eller et maleri?",
+          "answer": "Symfonisk dikt",
+          "distractors": [
+            "Oratorium",
+            "Kantate",
+            "Singspiel"
+          ],
+          "explain": "Franz Liszt skapte begrepet i 1854 med «Tasso». Noen av hans symfoniske dikt, som «Festklänge» og «Hungaria», har ingen program i det hele tatt."
+        },
+        {
+          "id": "mus-romantikken-berlioz",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilken fransk komponist skrev «Symphonie fantastique»?",
+          "answer": "Hector Berlioz",
+          "distractors": [
+            "Johannes Brahms",
+            "Franz Schubert",
+            "Giuseppe Verdi"
+          ],
+          "explain": "Idée fixe er en melodi som kommer tilbake i hver sats og endrer karakter etter hvert som fortellingen utvikler seg. Berlioz var den første som brukte begrepet om dette verket."
+        },
+        {
+          "id": "mus-romantikken-ring",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilket verk av Richard Wagner ble framført samlet for første gang i Bayreuth?",
+          "answer": "Nibelungens ring",
+          "distractors": [
+            "Tannhäuser",
+            "Parsifal",
+            "Lohengrin"
+          ],
+          "explain": "Wagner grunnla festspillene i Bayreuth, og operahuset der ble innviet med ringen. Hans Richter dirigerte den første fullstendige framføringen."
+        },
+        {
+          "id": "mus-romantikken-smetana",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvilken komponist skrev «Má vlast», de seks symfoniske diktene om det tsjekkiske landskapet?",
+          "answer": "Bedřich Smetana",
+          "accept": [
+            "Smetana"
+          ],
+          "explain": "Smetana ble helt døv i 1874, samme år som han komponerte «Vltava». Han skapte likevel verket om det tsjekkiske landskapet og folkesagnene."
+        },
+        {
+          "id": "mus-romantikken-nasjonalromantikk",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva kalles retningen der komponister brukte folketoner og folkesagn for å uttrykke et nasjonalt særpreg?",
+          "answer": "Nasjonalromantikken",
+          "accept": [
+            "nasjonalromantikk"
+          ],
+          "explain": "I Norge fikk den sterkt uttrykk gjennom Ole Bull og Grieg, med hardingfela som symbol. Tsjekkia fikk sin egen tone gjennom Smetana."
+        },
+        {
+          "id": "mus-romantikken-idee-fixe",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva kalles den tilbakevendende melodien i Berlioz' «Symphonie fantastique», som endrer karakter i hver sats?",
+          "answer": "Idée fixe",
+          "accept": [
+            "idee fixe"
+          ],
+          "explain": "Melodien representerer den unge mannens forelskelse i en kvinne han ikke kan glemme."
+        },
+        {
+          "id": "mus-romantikken-rekkefolge",
+          "step": 3,
+          "type": "order",
+          "prompt": "Sett romantikkens milepæler i rekkefølge etter når de skjedde.",
+          "items": [
+            {
+              "label": "Berlioz' «Symphonie fantastique» uroppføres",
+              "year": 1830
+            },
+            {
+              "label": "Liszt tar i bruk begrepet symfonisk dikt med «Tasso»",
+              "year": 1854
+            },
+            {
+              "label": "«Nibelungens ring» framføres samlet i Bayreuth",
+              "year": 1876
+            },
+            {
+              "label": "Smetanas «Má vlast» er ferdig komponert",
+              "year": 1879
+            }
+          ],
+          "explain": "Hendelsene går fra fortelling i orkester til nasjonalt landskap i symfonisk form. Berlioz og Liszt la grunnlaget, Wagner bygde operaen ut til en syklus, og Smetana brukte symfonien i en nasjonal sak."
+        },
+        {
+          "id": "mus-romantikken-kobling",
+          "step": 3,
+          "type": "match",
+          "prompt": "Koble romantikkens komponist med verket.",
+          "pairs": [
+            {
+              "left": "Hector Berlioz",
+              "right": "«Symphonie fantastique»"
+            },
+            {
+              "left": "Franz Liszt",
+              "right": "«Tasso»"
+            },
+            {
+              "left": "Richard Wagner",
+              "right": "«Nibelungens ring»"
+            },
+            {
+              "left": "Bedřich Smetana",
+              "right": "«Má vlast»"
+            }
+          ],
+          "explain": "Verkene viser romantikkens bredde: fortelling i orkester, musikkdrama i opera og nasjonalt landskap i symfonisk form."
+        },
+        {
+          "id": "mus-romantikken-vltava-symbol",
+          "step": 3,
+          "type": "choice",
+          "prompt": "Hvorfor ble Smetanas «Vltava» et tsjekkisk nasjonalsymbol?",
+          "answer": "Musikken skildrer elva og det tsjekkiske landskapet",
+          "distractors": [
+            "Det ble skrevet for den russiske tsaren",
+            "Det ble bestilt av et kirkekor i Wien",
+            "Det ble spilt inn med et symfoniorkester i London"
+          ],
+          "explain": "Hovedtemaet bygger på den italienske folkesangen «La Mantovana», og temaet har senere inspirert den israelske nasjonalsangen «Hatikvah»."
+        },
+        {
+          "id": "mus-romantikken-berlioz-aar",
+          "step": 4,
+          "type": "year",
+          "prompt": "Hvilket år ble Berlioz' «Symphonie fantastique» uroppført?",
+          "answer": "1830",
+          "explain": "Berlioz begynte på verket etter å ha hørt Beethovens tredje og femte symfoni i 1828. Franz Liszt var til stede ved premieren."
+        },
+        {
+          "id": "mus-romantikken-liszt-aar",
+          "step": 4,
+          "type": "year",
+          "prompt": "Hvilket år ble begrepet «symfonisk dikt» først brukt, om Liszts «Tasso»?",
+          "answer": "1854",
+          "explain": "Liszt skrev i alt 13 symfoniske dikt, og verket ble til i Weimar."
+        }
+      ]
+    },
+    {
+      "id": "mus-1900-tallet",
+      "title": "1900-tallets musikk",
+      "tier": 3,
+      "prerequisites": [
+        "mus-romantikken"
+      ],
+      "years": {
+        "from": 1890,
+        "to": 1955
+      },
+      "summary": "Komponistene på 1900-tallet brøt med dur, moll og fast form. Debussy, Stravinskij, Schönberg, Sjostakovitsj og Cage utvidet hva musikk kan være.",
+      "lesson": [
+        "Mot slutten av 1800-tallet begynte flere komponister å gå utenfor romantikkens tonale rammer. Claude Debussy skrev «Prélude à l'après-midi d'un faune», første gang framført i Paris i 1894. Han vektla klang og farge, og musikken hans kalles ofte impresjonistisk.",
+        "Igor Stravinskij skrev balletten «Vårofferet» for Ballets Russes. Den ble urframført i Paris 29. mai 1913, og det brøt ut slagsmål i salen. Arnold Schönberg lanserte tolvtonemetoden omkring 1920, der alle de 12 tonene i den kromatiske skalaen brukes i en fast rekke.",
+        "Dmitrij Sjostakovitsj skrev sin 5. symfoni i 1937 og «Leningrad»-symfonien i 1941, under politisk press i Sovjetunionen. John Cage skrev «4'33» i 1952: Pianisten sitter stille, og lytteren hører omgivelsene. Verket stiller spørsmål om hva musikk egentlig er."
+      ],
+      "keyPoints": [
+        "Debussys «Prélude à l'après-midi d'un faune» (1894) er et sentralt verk i impresjonismen.",
+        "Stravinskijs «Vårofferet» ble urframført i Paris 29. mai 1913 og utløste slagsmål i salen.",
+        "Schönberg lanserte tolvtonemetoden omkring 1920, med alle 12 toner i en fast rekke.",
+        "Sjostakovitsj skrev 5. symfoni (1937) og «Leningrad»-symfonien (1941).",
+        "John Cage skrev «4'33» (1952), et verk der stillheten og omgivelsene blir musikken."
+      ],
+      "sources": [
+        {
+          "title": "Claude Debussy – Store norske leksikon",
+          "url": "https://snl.no/Claude_Debussy"
+        },
+        {
+          "title": "Prélude à l'Après-midi d'un faune – Store norske leksikon",
+          "url": "https://snl.no/Prelude_%C3%A0_l'Apr%C3%A8s-midi_d'un_faune"
+        },
+        {
+          "title": "Vårofferet – Store norske leksikon",
+          "url": "https://snl.no/V%C3%A5rofferet"
+        },
+        {
+          "title": "Arnold Schönberg – Store norske leksikon",
+          "url": "https://snl.no/Arnold_Sch%C3%B6nberg"
+        },
+        {
+          "title": "Dodekafoni – Store norske leksikon",
+          "url": "https://snl.no/dodekafoni"
+        },
+        {
+          "title": "Dmitrij Sjostakovitsj – Store norske leksikon",
+          "url": "https://snl.no/Dmitrij_Sjostakovitsj"
+        },
+        {
+          "title": "John Cage – Store norske leksikon",
+          "url": "https://snl.no/John_Cage"
+        }
+      ],
+      "cards": [
+        {
+          "id": "mus-1900-tallet-debussy",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilken komponist skrev «Prélude à l'après-midi d'un faune»?",
+          "answer": "Claude Debussy",
+          "distractors": [
+            "Maurice Ravel",
+            "Gabriel Fauré",
+            "Richard Strauss"
+          ],
+          "explain": "Verket bygger på Stéphane Mallarmés dikt «En fauns ettermiddag». Debussy identifiserte seg mer med de franske symbolistene enn med betegnelsen impresjonisme."
+        },
+        {
+          "id": "mus-1900-tallet-vaarofferet-by",
+          "step": 1,
+          "type": "choice",
+          "prompt": "I hvilken by ble Stravinskijs «Vårofferet» urframført?",
+          "answer": "Paris",
+          "distractors": [
+            "Wien",
+            "Berlin",
+            "Moskva"
+          ],
+          "explain": "Ballets Russes under Sergej Diaghilev sto bak framføringen, med koreografi av Vaslav Nijinsky. Publikum var ikke forberedt på musikken."
+        },
+        {
+          "id": "mus-1900-tallet-tolvtone",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilken komponist utviklet tolvtonemetoden?",
+          "answer": "Arnold Schönberg",
+          "distractors": [
+            "Igor Stravinskij",
+            "Dmitrij Sjostakovitsj",
+            "John Cage"
+          ],
+          "explain": "Alban Berg og Anton Webern utviklet metoden videre, og de tre regnes som den andre wienerskolen. Metoden la grunnlaget for den moderne serialismen."
+        },
+        {
+          "id": "mus-1900-tallet-stravinskij",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvilken komponist skrev «Vårofferet»?",
+          "answer": "Igor Stravinskij",
+          "accept": [
+            "Stravinskij",
+            "Stravinsky",
+            "Igor Stravinsky"
+          ],
+          "explain": "Publikum hadde ventet et nytt «Petrusjka» fra ham, og fikk noe helt annet."
+        },
+        {
+          "id": "mus-1900-tallet-leningrad",
+          "step": 2,
+          "type": "choice",
+          "prompt": "Hvilken komponist skrev «Leningrad»-symfonien?",
+          "answer": "Dmitrij Sjostakovitsj",
+          "distractors": [
+            "Sergej Prokofjev",
+            "Aleksandr Skrjabin",
+            "Pjotr Tsjajkovskij"
+          ],
+          "explain": "Symfonien ble skrevet i 1941, og den er sammen med den 5. symfonien blant hans mest spilte verk."
+        },
+        {
+          "id": "mus-1900-tallet-cage",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvilken komponist skrev «4'33», der pianisten sitter ved flygelet uten å spille en tone?",
+          "answer": "John Cage",
+          "accept": [
+            "Cage"
+          ],
+          "explain": "David Tudor urframførte verket og markerte de tre satsene ved å åpne og lukke pianolokket. Cage var opptatt av zen-buddhisme og tilfeldighet."
+        },
+        {
+          "id": "mus-1900-tallet-rekkefolge",
+          "step": 3,
+          "type": "order",
+          "prompt": "Sett verkene i rekkefølge etter når de ble skrevet eller urframført.",
+          "items": [
+            {
+              "label": "Debussys «Prélude»",
+              "year": 1894
+            },
+            {
+              "label": "Stravinskijs «Vårofferet»",
+              "year": 1913
+            },
+            {
+              "label": "Schönberg lanserer tolvtonemetoden",
+              "year": 1920
+            },
+            {
+              "label": "Sjostakovitsj' 5. symfoni",
+              "year": 1937
+            },
+            {
+              "label": "Cages «4'33»",
+              "year": 1952
+            }
+          ],
+          "explain": "Hele endringen skjer på under 60 år. Debussy vektla klang og farge, Stravinskij rytme og brudd, Schönberg faste tonerekker og Cage stillhet som musikk."
+        },
+        {
+          "id": "mus-1900-tallet-kobling",
+          "step": 3,
+          "type": "match",
+          "prompt": "Koble komponisten fra 1900-tallet med verket.",
+          "pairs": [
+            {
+              "left": "Claude Debussy",
+              "right": "«Prélude à l'après-midi d'un faune»"
+            },
+            {
+              "left": "Igor Stravinskij",
+              "right": "«Vårofferet»"
+            },
+            {
+              "left": "Dmitrij Sjostakovitsj",
+              "right": "«Leningrad»-symfonien"
+            },
+            {
+              "left": "John Cage",
+              "right": "«4'33»"
+            }
+          ],
+          "explain": "Verkene er fra ulike retninger. Debussy er impresjonist, Stravinskij bryter med tradisjonen, Sjostakovitsj skriver symfoni under politisk press, og Cage utfordrer selve begrepet musikk."
+        },
+        {
+          "id": "mus-1900-tallet-tolvtonemetoden",
+          "step": 3,
+          "type": "explain",
+          "prompt": "Forklar hva tolvtonemetoden går ut på, og hvorfor den var et brudd med romantikken.",
+          "answer": "Alle de 12 tonene i den kromatiske skalaen brukes i en fast rekke, og ingen tone gjentas før de andre elleve er brukt. Dermed mister dur og moll sin rolle som tonesenter.",
+          "checklist": [
+            "Alle 12 toner brukes i en fast rekke",
+            "Ingen tone gjentas før de andre er brukt",
+            "Ingen tonesenter, i motsetning til dur og moll"
+          ],
+          "explain": "Metoden kan utvides til rytme, styrke og klang, og den la grunnlaget for den moderne serialismen."
+        },
+        {
+          "id": "mus-1900-tallet-vaarofferet-aar",
+          "step": 4,
+          "type": "year",
+          "prompt": "Hvilket år ble Stravinskijs «Vårofferet» urframført i Paris?",
+          "answer": "1913",
+          "explain": "Premieren regnes som en av ballettens mest kjente skandaler."
+        },
+        {
+          "id": "mus-1900-tallet-toner",
+          "step": 4,
+          "type": "number",
+          "prompt": "Hvor mange ulike toner har den kromatiske skalaen innen én oktav?",
+          "answer": "12",
+          "tolerance": 0,
+          "explain": "Dur- og mollskalaene bruker sju av dem. Tolvtonemetoden ga alle tolv lik betydning."
+        }
+      ]
+    },
+    {
+      "id": "mus-jazz-populaer",
+      "title": "Jazz og populærmusikkens røtter",
+      "tier": 2,
+      "prerequisites": [],
+      "years": {
+        "from": 1900,
+        "to": 1960
+      },
+      "summary": "Jazzen vokste fram i New Orleans og ble en av 1900-tallets viktigste musikkformer, med rock'n'roll som populærmusikkens nye ansikt.",
+      "lesson": [
+        "Jazzen vokste fram tidlig på 1900-tallet i New Orleans, en havneby i USA. Den blandet ragtime, blues og marsjmusikk, og ble spilt både til gateparader og dans. Frontlinjen var trompet, trombone og klarinett, med en rytmeseksjon bak.",
+        "Louis Armstrong vokste opp i New Orleans og var en drivkraft i overgangen fra kollektiv til solistisk improvisasjon. Mange musikere flyttet nordover rundt 1920, og Chicago ble et jazzsentrum. Original Dixieland Jass Band regnes for å ha gitt ut den første jazzplaten i 1917.",
+        "Bebop oppsto omkring 1940, med Charlie Parker og Dizzy Gillespie. Harmonikken ble utvidet, og tempoet ble høyere. Fra 1950-tallet kom rock'n'roll i USA. Elvis Presley slo gjennom internasjonalt i 1956 med «Heartbreak Hotel», og ble popmusikkens første superstjerne."
+      ],
+      "keyPoints": [
+        "New Orleans-jazzen vokste fram tidlig på 1900-tallet fra ragtime, blues og marsjmusikk.",
+        "Louis Armstrong gikk fra kollektiv til solistisk improvisasjon og er en av jazzens mest innflytelsesrike musikere.",
+        "Original Dixieland Jass Band regnes for å ha gitt ut den første jazzplaten i 1917.",
+        "Bebop oppsto omkring 1940, med utvidet harmonikk og høyere tempo.",
+        "Rock'n'roll oppsto i USA på 1950-tallet, og Elvis Presley slo gjennom internasjonalt i 1956."
+      ],
+      "sources": [
+        {
+          "title": "New Orleans-jazz – Store norske leksikon",
+          "url": "https://snl.no/New_Orleans-jazz"
+        },
+        {
+          "title": "Louis Armstrong – Store norske leksikon",
+          "url": "https://snl.no/Louis_Armstrong"
+        },
+        {
+          "title": "Jazz – Store norske leksikon",
+          "url": "https://snl.no/jazz"
+        },
+        {
+          "title": "Bebop – Store norske leksikon",
+          "url": "https://snl.no/bebop"
+        },
+        {
+          "title": "Charlie Parker – Store norske leksikon",
+          "url": "https://snl.no/Charlie_Parker"
+        },
+        {
+          "title": "Elvis Presley – Store norske leksikon",
+          "url": "https://snl.no/Elvis_Presley"
+        },
+        {
+          "title": "Rock – Store norske leksikon",
+          "url": "https://snl.no/rock"
+        }
+      ],
+      "cards": [
+        {
+          "id": "mus-jazz-populaer-new-orleans",
+          "step": 1,
+          "type": "choice",
+          "prompt": "I hvilken by vokste den tidlige jazzen fram?",
+          "answer": "New Orleans",
+          "distractors": [
+            "Detroit",
+            "Boston",
+            "Philadelphia"
+          ],
+          "explain": "Musikken ble brukt til gateparader og dans. Rundt 1920 flyttet mange musikere nordover, og Chicago ble et jazzsentrum."
+        },
+        {
+          "id": "mus-jazz-populaer-frontlinje",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilke instrumenter utgjorde frontlinjen i den tidlige New Orleans-jazzen?",
+          "answer": "Trompet, trombone og klarinett",
+          "distractors": [
+            "Fiolin, cello og kontrabass",
+            "Fløyte, obo og fagott",
+            "Piano, gitar og harpe"
+          ],
+          "explain": "Kornetten bar melodien, trombonen spilte en understemme, og klarinetten fylte ut stemmen."
+        },
+        {
+          "id": "mus-jazz-populaer-armstrong",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilken musiker, som vokste opp i New Orleans, regnes som jazzens mest innflytelsesrike?",
+          "answer": "Louis Armstrong",
+          "distractors": [
+            "Charlie Parker",
+            "Dizzy Gillespie",
+            "Elvis Presley"
+          ],
+          "explain": "Han var drivkraften i overgangen fra kollektiv til solistisk improvisasjon. Parker og Gillespie kom senere med bebop."
+        },
+        {
+          "id": "mus-jazz-populaer-odjb",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvilket band med hvite musikere regnes for å ha gitt ut den første jazzplaten?",
+          "answer": "Original Dixieland Jass Band",
+          "accept": [
+            "Dixieland Jass Band",
+            "ODJB"
+          ],
+          "explain": "Stilen fikk navnet dixieland-jazz, og den hadde røtter i ragtime og blues."
+        },
+        {
+          "id": "mus-jazz-populaer-bebop-navn",
+          "step": 2,
+          "type": "choice",
+          "prompt": "Hva kalles den mer avanserte jazzstilen som vokste fram etter swingjazzen?",
+          "answer": "Bebop",
+          "distractors": [
+            "Dixieland",
+            "Ragtime",
+            "Rock'n'roll"
+          ],
+          "explain": "Stilen fikk navnet rebop, senere bebop, og ble ofte kalt bop."
+        },
+        {
+          "id": "mus-jazz-populaer-heartbreak",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvilken artist slo gjennom internasjonalt med sangen «Heartbreak Hotel»?",
+          "answer": "Elvis Presley",
+          "accept": [
+            "Elvis"
+          ],
+          "explain": "Han ble oppdaget av Sun Records i Memphis, og etter overgangen til RCA Records forlot han rockabillystilen."
+        },
+        {
+          "id": "mus-jazz-populaer-rekkefolge",
+          "step": 3,
+          "type": "order",
+          "prompt": "Sett jazzens og rockens milepæler i rekkefølge.",
+          "items": [
+            {
+              "label": "Original Dixieland Jass Band gir ut en tidlig jazzplate",
+              "year": 1917
+            },
+            {
+              "label": "Bebop oppstår omkring 1940",
+              "year": 1940
+            },
+            {
+              "label": "Elvis Presley spiller inn «That's All Right»",
+              "year": 1954
+            },
+            {
+              "label": "Elvis Presley slår gjennom med «Heartbreak Hotel»",
+              "year": 1956
+            }
+          ],
+          "explain": "Jazzen utviklet seg fra dansemusikk til en kunstform med egne stiler. Rock'n'roll ble den nye populærmusikken på 1950-tallet."
+        },
+        {
+          "id": "mus-jazz-populaer-kobling",
+          "step": 3,
+          "type": "match",
+          "prompt": "Koble stilen med kjennetegnet.",
+          "pairs": [
+            {
+              "left": "New Orleans-jazz",
+              "right": "Kollektiv improvisasjon"
+            },
+            {
+              "left": "Bebop",
+              "right": "Utvidet harmonikk og høyere tempo"
+            },
+            {
+              "left": "Rock'n'roll",
+              "right": "Elvis Presley og Chuck Berry"
+            }
+          ],
+          "explain": "Stilene bygger på hverandre: først kollektiv improvisasjon, deretter solistiske og mer avanserte former, og til slutt en populærmusikk som nådde et bredt publikum."
+        },
+        {
+          "id": "mus-jazz-populaer-bebop-forklar",
+          "step": 3,
+          "type": "explain",
+          "prompt": "Forklar hvorfor bebop var et brudd med swingjazzen.",
+          "answer": "Swingjazzen hadde blitt mer kommersiell. Bebop var mer avansert, med utvidet harmonikk, større melodisk frihet for solistene og høyere tempo. Den ble skapt av yngre afroamerikanske musikere, flere med bakgrunn fra swingorkestre.",
+          "checklist": [
+            "Swing hadde blitt mer kommersiell",
+            "Utvidet harmonikk og større frihet for solistene",
+            "Skapt av yngre musikere, mange fra swingorkestre"
+          ],
+          "explain": "Mye av grunnlaget ble lagt under jam-sessions på Minton's Playhouse i Harlem."
+        },
+        {
+          "id": "mus-jazz-populaer-heartbreak-aar",
+          "step": 4,
+          "type": "year",
+          "prompt": "Hvilket år slo Elvis Presley internasjonalt gjennom med «Heartbreak Hotel»?",
+          "answer": "1956",
+          "explain": "Han hadde spilt inn «That's All Right» i 1954, og den regnes som et av de mest innflytelsesrike øyeblikkene i rockens historie."
+        },
+        {
+          "id": "mus-jazz-populaer-odjb-aar",
+          "step": 4,
+          "type": "year",
+          "prompt": "Hvilket år kom plateutgivelsen som regnes som den første jazzplaten?",
+          "answer": "1917",
+          "explain": "Plata ble gitt ut av et band med hvite musikere. Stilen fikk senere navnet dixieland."
+        }
+      ]
+    }
+  ]
+}
