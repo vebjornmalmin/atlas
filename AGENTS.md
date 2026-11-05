@@ -20,4 +20,4 @@ Feedback must remain available everywhere, save locally, and return to the exact
 
 Test in the iOS Simulator on iPhone 17 Pro, together with the unit tests and the production build. Check every user-facing change there, in Safari or the home-screen app. Use a desktop browser only in rare cases where the simulator cannot show what needs checking.
 
-Always merge the work into `main` before deploying, and deploy from `main`.
+Always merge the work into `main` and push `main` to `origin` before deploying, then deploy from `main`. Never deploy a commit that is not on `origin/main`.
