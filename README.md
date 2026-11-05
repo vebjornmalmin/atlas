@@ -17,6 +17,10 @@ Tidslinjen under Atlas → Tid er tegnet om fra en rad prikker til et kart over 
 
 Beslutning som skal holde: tidslinjens skala (`storyPosition` i `src/lib/story.js`) er egen for Tid og I dag. Tallinjen i anslå-året-oppgavene bruker fortsatt `yearToPosition`, slik at retting og svar er uendret.
 
+Kontrollert i iPhone 17 Pro-simulatoren, i lyst og mørkt: dra langs tidslinjen, velge et emne, zoome til middelalderen og fremheve verdenshistorie, og den nye skalaen i dagens kapittel. 228 automatiske tester består.
+
+Publisert 5. november 2026: app 1.4.0, utgivelse `a03f28acaa16`, kunnskapspakke 2.2.0 (uendret), som statiske filer via Wrangler fra `main` etter at `main` var sendt til GitHub. En installert 1.3.1 i Safari i simulatoren fant den nye utgaven på den publiserte adressen, oppdaterte seg og viste den nye tidslinjen.
+
 ## 1.3.1: Filene serveres direkte
 
 Appen ser ut og virker som 1.3.0. Endringen gjelder hvordan Cloudflare leverer filene: i stedet for at Workeren pakker ut hver fil ved hver forespørsel, serveres `build/` som statiske filer. Kunnskapspakken krevde omkring 60 ms prosessortid per nedlasting med den gamle løsningen, mens gratisplanen tillater 10 ms. Nå brukes ingen prosessortid, så første installasjon og oppdateringer er mindre utsatt for feil. Sikkerhetshodene ligger i `build/_headers`, og `/version.json` erstatter `/health`.
