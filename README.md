@@ -4,7 +4,30 @@ Offline kunnskapstrening på norsk, laget for iPhone 17 Pro.
 
 Live app: https://atlas-first-app.atlas-memory.workers.dev
 
-## Gjeldende utgave — 1.5.0: Appen husker hvor du var, og kartet går til det du velger
+## Gjeldende utgave — 1.6.0: Verden som globus, hjerte og kvadrat
+
+Denne utgaven bygger på tilbakemeldinger fra de første brukerne.
+
+**Kartet kan tegnes på ni måter.** Under Atlas → Kart har kartet fått en knapp, «Kart», ved siden av landet du ser på. Der velger du projeksjon: Standard, **Globus**, Mercator, Riktige arealer (Equal Earth), Appelsinskall (Goode), Sør opp, Fra Oslo, Hjerte (Werner) og Kvadrat (Peirce). Under kartet står det én setning om hva projeksjonen beholder og hva den ofrer, for eksempel at Grønland ser like stort ut som Afrika i Mercator, selv om Afrika er omtrent fjorten ganger større.
+- **Globusen snus med fingeren** og zoomes med knip. Trykker du på et land, snur kloden seg dit og zoomer inn på landet og naboene. Baksiden av kloden er skjult, og kloden er skyggelagt som en kule.
+- Linser, farger, landnavn og valg av land virker på samme måte i alle projeksjonene. Valget og utsnittet huskes for hver projeksjon når appen lukkes og åpnes igjen.
+- Tegningen gjøres på telefonen: kartfilen er lagret som ekvirektangulære lengde- og breddegrader, så punktene leses tilbake og projiseres med d3-geo og d3-geo-projection (ISC-lisens, låst til versjoner fra 2021–2024). Ingen nye kartdata lastes ned.
+
+Beslutning som skal holde: projeksjonene finnes bare i Atlas → Kart. Oppgavene bruker fortsatt det flate kartet, fordi piler, grenseruter og lagrede utsnitt i oppgavene regner med det.
+
+**Flervalg uten tull.** De tolv håndskrevne introduksjonsspørsmålene (Kennedy, Lincoln, D-dagen og de andre) hadde to gale svar hver, og de fleste var umulige: Jupiter, en Mars-base og andre verdenskrig for Lincoln. Tre spørsmål røpet dessuten svaret («landgangen i Normandie» → Frankrike). Nå har alle tre gale svar fra samme felt, gjerne vanlige misforståelser: frigjøringserklæringen *avskaffet ikke* slaveriet i hele USA, tyskerne ventet landgangen ved Calais, og Apollo 8 fløy rundt månen før Apollo 11 landet. Forklaringen etter svaret sier hvorfor de nærmeste alternativene er feil.
+- Reglene for flervalg var bare kontrollert for pensumet, ikke for de håndskrevne spørsmålene. Nå bruker begge samme kontroll (`choiceProblems` i `src/lib/core-curriculum.js`), og en test stopper et introduksjonsspørsmål som bryter den.
+- Kontrollen ser nå også etter ordstammer som bare spørsmålet og det riktige svaret har felles («uavhengighetserklæringen» → «uavhengige»). Den fant samme feil i pensumet: spørsmålet om uavhengighetserklæringen hadde «George Washington var konge» som alternativ, og spørsmålet om kinesiske embetsmenn sto med svaret i spørsmålet. Begge er rettet. De 17 andre advarslene må vurderes én for én; mange er ord som er felles uten å røpe noe.
+
+**«Godkjenn svaret mitt».** Knappen het «Svaret mitt var riktig» og ble lest som om appen skrøt av sitt eget svar. Den er nå skrevet som en handling, med en linje under om hva den er til. En egengodkjenning merkes «Godkjent av deg», kan angres før neste spørsmål, lagres som egenvurdering sammen med det du skrev, og gir aldri «Satt lett». Deg → Fremgang viser hvor mange svar du har godkjent selv, og en tilbakemelding tar med de siste 20, slik at formuleringer appen burde godta kan legges inn.
+
+**Linsene påstår ikke mer enn de vet.** Kartet skrev «Gjennom lineær frelseshistorie» over forbindelsene til Fijis utsatte grunnlovsavstemning, selv om den linsen ikke sier noe om Fiji. Nå får forbindelsene linsens navn bare når linsen faktisk ser stedet, og ellers står det at linsen sier lite om det.
+
+Relativitet og kvanter fantes allerede: Atlas → Emner → Naturvitenskap → «Relativitet og kvanter».
+
+Kunnskapspakke 2.2.1 inneholder de rettede pensumspørsmålene. 244 automatiske tester består, og produksjonsbygget lages uten feil. iOS-simulatoren finnes ikke i miljøet der dette ble laget. Derfor ble endringene kontrollert mot produksjonsbygget i Chromium med iPhone-størrelse og berøring, i lyst og mørkt: projeksjonsmenyen, dra for å snu globusen, trykk på Australia som snur og zoomer kloden dit, Hjerte og Mercator med forklaringen under kartet, at valget huskes etter omlasting, Fiji med frelseshistorielinsen, og egengodkjenning med angring og lagret vurdering. Kontrollen i iPhone 17 Pro-simulatoren og som hjemmeskjermapp gjenstår, og utgaven er ikke publisert.
+
+## 1.5.0: Appen husker hvor du var, og kartet går til det du velger
 
 **Åpne der du slapp.** Når appen lukkes og åpnes igjen, kommer du tilbake til samme sted: fanen (I dag, Atlas, Deg) og underfanen, siden du hadde åpen, søket, valgt emne i Emner, tidslinjens epoke, fag og valgte emne, valgene i fri øving og hvor langt ned du hadde rullet. Kartet beholder linse, land og utsnitt. Den påbegynte økten med skrevne svar ble allerede lagret og er uendret.
 

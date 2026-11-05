@@ -65,16 +65,18 @@ Felles felt: `id` (begynner med emne-ID-en), `step`, `type`, `prompt`, `explain`
 ## Kvalitetsregler
 
 1. **Lær før du tester.** Svaret på et kort i steg 1 skal stå i leksjonen. Svaret på et senere kort skal stå i leksjonen, i `keyPoints` eller i forklaringen til et kort på et tidligere eller samme steg. Appen sørger for at et svar som nettopp er vist, først testes i en senere økt.
-2. **Spørsmålet røper ikke svaret.** Ingen ord fra svaret i ledeteksten.
+2. **Spørsmålet røper ikke svaret.** Ingen ord fra svaret i ledeteksten, heller ikke samme ordstamme («uavhengighetserklæringen» → «uavhengige»). En stamme som også står i et galt alternativ, er ingen ledetråd. Kontrollen fanger ikke alt: «landgangen i Normandie» røper «Frankrike» uten at noen ord er felles.
 3. **Ett entydig svar.** Unngå spørsmål der flere svar er like riktige. Si «omtrent» når kildene gjør det.
 4. **Betydning før detaljer.** Steg 1 og 2 skal handle om det en allmenndannet voksen bør vite.
 5. **Usikkerhet skal fram.** Omstridte opplysninger (f.eks. rikssamlingens omfang) formuleres som det de er. Test ikke sagn som fakta.
 6. **Klart, voksent bokmål.** Korte setninger. Ingen fyllfraser («Det gir et konkret holdepunkt …»), ingen utropstegn, ingen engelske stedsnavn når det finnes norske (Beograd, ikke Belgrade).
 7. **Svarformen passer svaret.** Navn og årstall får korte felt; forklaringer får `explain`.
-8. **Distraktorer lærer også.** Bruk ekte personer, steder og perioder fra samme felt. Ikke tull, ikke «alle de ovennevnte». Det riktige svaret skal ikke skille seg ut ved lengde eller form.
+8. **Distraktorer lærer også.** Bruk ekte personer, steder og perioder fra samme felt. Ikke tull, ikke «alle de ovennevnte». Det riktige svaret skal ikke skille seg ut ved lengde eller form. De beste distraktorene er vanlige misforståelser (frigjøringserklæringen avskaffet *ikke* slaveriet i hele USA) og naboer i tid (krigen i 1812 for Lincoln). Forklaringen etter svaret sier gjerne hvorfor den nærmeste distraktoren er feil.
 9. **Faste ID-er.** ID-er endres aldri etter publisering, fordi læringshistorikken følger dem. Endres betydningen av et kort vesentlig, får det ny ID.
 
 ## Kontroll
+
+Reglene for flervalg (`choiceProblems` og `answerLeaks` i `src/lib/core-curriculum.js`) gjelder alt flervalg, også de håndskrevne introduksjonene i `src/lib/foundations.js`. En test stopper en introduksjon som bryter dem. Ordstammekontrollen gir advarsler, ikke feil: den finner også ord som er felles uten å røpe noe, så hver advarsel må vurderes.
 
 ```
 node scripts/validate-core.mjs                 # alle fagområder, med feil og advarsler

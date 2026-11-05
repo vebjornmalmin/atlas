@@ -163,6 +163,7 @@
 .s-grade-note{margin:-4px 0 12px}
 .s-yours{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 0 12px;padding:6px 10px 6px 12px;border-radius:8px;background:var(--surface-2);font-size:14px;line-height:1.4}
 .s-yours p{margin:6px 0}
+.s-override-hint{margin:-6px 0 12px;font-size:12.5px}
 .s-yours .override{flex:none;min-height:44px;padding:0 4px;font-size:13px;font-weight:600;white-space:nowrap}
 .s-explain{margin:0 0 12px;font-size:16px;line-height:1.55;color:var(--ink)}
 .s-feedback .pair-answers{margin:0 0 14px;padding:0;list-style:none;border-top:var(--rule)}

@@ -14,3 +14,10 @@ export function progressDetails(targets,reviews,now=new Date()) {
   const days=Array.from({length:7},(_,i)=>{const d=new Date(now);d.setDate(d.getDate()-6+i);return {label:d.toLocaleDateString('nb-NO',{weekday:'short'}),count:reviews.filter(r=>key(new Date(r.timestamp))===key(d)).length};});
   return {retryIds,days};
 }
+
+/** Typed answers the learner approved although the grader rejected them, newest first: candidates for new accepted answers. */
+export function selfApprovals(targets,reviews,limit=20) {
+  const byId=new Map(targets.map(t=>[t.id,t]));
+  return reviews.filter(r=>r.selfApproved).sort((a,b)=>b.timestamp.localeCompare(a.timestamp)).slice(0,limit)
+    .map(r=>({targetId:r.targetId,prompt:byId.get(r.targetId)?.prompt ?? '',expected:byId.get(r.targetId)?.answer ?? '',typed:r.typedAnswer ?? ''}));
+}

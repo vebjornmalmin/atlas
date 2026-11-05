@@ -69,3 +69,7 @@ Nyhetsutvalget er kontrollert ved stikkprøver mot kildene (Al Jazeera om ebola 
 
 Perspektivlaget ble først bygd på kunnskapspakke 1.2.0 og deretter flyttet oppå læringskjernen i 1.0.0. Fra app 1.1.0 og kunnskapspakke 2.1.0 bygges laget etter at pensumet er satt sammen. Pensumets egne rader (`unit:`, `core:` og tilhørende fakta og kilder) holdes utenfor påvirkningsberegningen. De har ingen forbindelser i grafen og skiftes ut hver gang pensumet kompileres, så laget skal ikke være avhengig av dem. Revisjonstallene er de samme etter sammenslåingen: 8,6 % felles toppnoder og 21 % felles land på kartet.
 
+
+## En linse som ikke ser noe, sier det
+
+Kartet skrev «Gjennom lineær frelseshistorie» over forbindelsene til Fijis utsatte grunnlovsavstemning, selv om den linsen ikke ser noe der: `relatedThrough` gir hver forbindelse minst 0,1 i vekt uansett linse. Nå får forbindelsene linsens overskrift bare når linsen er blant dem `lensesFor` regner som relevante for stedet eller emnet (poeng over 0,3). Ellers står «Sterkeste forbindelser», vektet uten linsen, og en linje sier at linsen sier lite om stedet. Beslutning som skal holde: en linse skal aldri se ut til å mene noe den ikke har grunnlag for.

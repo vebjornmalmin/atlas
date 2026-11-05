@@ -2102,12 +2102,12 @@
           "id": "vh-usa-fram-til-1865-erklaering",
           "step": 1,
           "type": "choice",
-          "prompt": "Hva slo den amerikanske uavhengighetserklæringen fra 1776 fast?",
-          "answer": "At koloniene var frie og uavhengige stater",
+          "prompt": "Hva erklærte de 13 britiske koloniene i Nord-Amerika 4. juli 1776?",
+          "answer": "At de var uavhengige av Storbritannia",
           "distractors": [
-            "At slaveriet var avskaffet overalt",
-            "At George Washington var konge",
-            "At koloniene ble en del av Frankrike"
+            "At koloniene skulle ha en felles grunnlov og en valgt president",
+            "At slaveriet var avskaffet i alle koloniene",
+            "At koloniene ville bli under kongen, men med egne forsamlinger"
           ],
           "explain": "Teksten er i hovedsak skrevet av Thomas Jefferson. Kjernen er et avsnitt om menneskerettigheter, påvirket av John Lockes filosofi."
         },

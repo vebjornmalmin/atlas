@@ -24963,8 +24963,8 @@
     },
     {
       "id": "core:vh-usa-fram-til-1865-erklaering",
-      "prompt": "Hva slo den amerikanske uavhengighetserklæringen fra 1776 fast?",
-      "answer": "At koloniene var frie og uavhengige stater",
+      "prompt": "Hva erklærte de 13 britiske koloniene i Nord-Amerika 4. juli 1776?",
+      "answer": "At de var uavhengige av Storbritannia",
       "entityId": "unit:vh-usa-fram-til-1865",
       "previousDifficulty": 2,
       "difficulty": 2,
@@ -51529,7 +51529,7 @@
     {
       "id": "core:vue-kina-qin-tang-embetsmenn",
       "prompt": "Hvorfor ble embetsmennene i provinsene utnevnt av keiseren og ikke arvet sine stillinger?",
-      "answer": "Så makten ble samlet hos keiseren",
+      "answer": "Så lokale stormenn ikke kunne bygge opp egen makt",
       "entityId": "unit:vue-kina-qin-tang",
       "previousDifficulty": 3,
       "difficulty": 3,
@@ -53070,7 +53070,7 @@
     {
       "id": "foundation:lincoln-emancipation",
       "prompt": "Hva handlet Lincolns frigjøringserklæring om?",
-      "answer": "Frihet for mennesker holdt som slaver i opprørsområdene",
+      "answer": "Slaver i områdene som gjorde opprør, ble erklært frie",
       "entityId": "abraham-lincoln",
       "previousDifficulty": 1,
       "difficulty": 1,
@@ -53093,7 +53093,7 @@
     {
       "id": "foundation:roosevelt-depression",
       "prompt": "Hva skulle Franklin D. Roosevelts «New Deal» hjelpe USA ut av?",
-      "answer": "En dyp økonomisk krise",
+      "answer": "Den store depresjonen",
       "entityId": "franklin-d-roosevelt",
       "previousDifficulty": 1,
       "difficulty": 1,
@@ -53184,7 +53184,7 @@
     },
     {
       "id": "foundation:declaration-independence",
-      "prompt": "Hva erklærte de tretten koloniene med uavhengighetserklæringen?",
+      "prompt": "Hva erklærte de tretten britiske koloniene i Nord-Amerika i juli 1776?",
       "answer": "At de var uavhengige av Storbritannia",
       "entityId": "us-declaration-of-independence-adopted",
       "previousDifficulty": 1,
@@ -53207,8 +53207,8 @@
     },
     {
       "id": "foundation:d-day-france",
-      "prompt": "I hvilket land fant landgangen i Normandie sted?",
-      "answer": "Frankrike",
+      "prompt": "Hvor gikk de allierte i land på D-dagen i juni 1944?",
+      "answer": "Normandie i Nord-Frankrike",
       "entityId": "d-day-landings-in-normandy",
       "previousDifficulty": 1,
       "difficulty": 1,

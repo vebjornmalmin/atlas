@@ -9,6 +9,37 @@ const words = text => String(text || '').trim().split(/\s+/).filter(Boolean);
 const sentences = text => String(text || '').split(/(?<=[.?!])\s+/).filter(s => s.trim());
 const contentWords = text => normalizeAnswer(text).split(' ').filter(w => w.length >= 4);
 
+const escapeRegExp = text => text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+/** Answers that stand verbatim in the question. */
+export function answerLeaks(prompt, answers) {
+  const question = normalizeAnswer(prompt);
+  return answers.map(String).filter(answer => {
+    const value = normalizeAnswer(answer);
+    return value.length >= 4 && new RegExp(`(^| )${escapeRegExp(value)}( |$)`).test(question);
+  }).map(answer => `spørsmålet røper svaret «${answer}».`);
+}
+
+/**
+ * Shared rules for every multiple-choice question, curriculum and hand-written introductions alike:
+ * three distractors, no duplicates, no answer standing out by length, and no word stem that the
+ * question shares with the right answer alone. A stem shared with a distractor is no clue.
+ */
+export function choiceProblems({prompt, answer, distractors = []}) {
+  const errors = [], warnings = [];
+  if (distractors.length !== 3) errors.push('flervalg skal ha nøyaktig 3 distraktorer.');
+  const keys = [answer, ...distractors].map(normalizeAnswer);
+  if (new Set(keys).size !== keys.length) errors.push('like alternativer.');
+  if (answer.length > 95) warnings.push(`svaralternativet er langt (${answer.length} tegn).`);
+  const average = distractors.reduce((sum, d) => sum + d.length, 0) / Math.max(1, distractors.length);
+  if (distractors.length && answer.length > Math.max(25, average * 1.9)) warnings.push('riktig svar er mye lengre enn distraktorene og skiller seg ut.');
+  const stems = text => new Set(normalizeAnswer(text).split(' ').filter(w => w.length >= 6).map(w => w.slice(0, 6)));
+  const asked = stems(prompt), elsewhere = new Set(distractors.flatMap(d => [...stems(d)]));
+  const hints = [...stems(answer)].filter(stem => asked.has(stem) && !elsewhere.has(stem));
+  if (hints.length) warnings.push(`spørsmålet og bare det riktige svaret deler ordstammen «${hints[0]}».`);
+  return {errors, warnings};
+}
+
 /** Accepted answers a learner may type or select for a card. */
 export function cardAnswers(card) {
   return [card.answer, ...(card.accept || [])].filter(value => value !== undefined && value !== null && String(value).trim());
@@ -104,21 +135,14 @@ function validateCard(unit, card, errors, warnings, {cardIds, prompts, mediaIds}
   const prompt = normalizeAnswer(card.prompt);
   if (!['explain','order','match'].includes(card.type)) {
     if (typeof card.answer !== 'string' || !card.answer.trim()) { errors.push(`${at}: mangler svar.`); return; }
-    for (const answer of cardAnswers(card)) {
-      const value = normalizeAnswer(answer);
-      if (value.length >= 4 && new RegExp(`(^| )${value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}( |$)`).test(prompt)) errors.push(`${at}: spørsmålet røper svaret «${answer}».`);
-    }
+    for (const problem of answerLeaks(card.prompt, cardAnswers(card))) errors.push(`${at}: ${problem}`);
     if (normalizeAnswer(card.explain) === normalizeAnswer(card.answer)) errors.push(`${at}: forklaringen gjentar bare svaret.`);
   }
   if (card.accept !== undefined && (!Array.isArray(card.accept) || card.accept.some(value => typeof value !== 'string'))) errors.push(`${at}: accept må være en liste med tekst.`);
   if (card.type === 'choice') {
-    const distractors = card.distractors || [];
-    if (distractors.length !== 3) errors.push(`${at}: flervalg skal ha nøyaktig 3 distraktorer.`);
-    const keys = [card.answer, ...distractors].map(normalizeAnswer);
-    if (new Set(keys).size !== keys.length) errors.push(`${at}: like alternativer.`);
-    if (card.answer.length > 95) warnings.push(`${at}: svaralternativet er langt (${card.answer.length} tegn).`);
-    const average = distractors.reduce((sum, d) => sum + d.length, 0) / Math.max(1, distractors.length);
-    if (distractors.length && card.answer.length > Math.max(25, average * 1.9)) warnings.push(`${at}: riktig svar er mye lengre enn distraktorene og skiller seg ut.`);
+    const checked = choiceProblems(card);
+    errors.push(...checked.errors.map(problem => `${at}: ${problem}`));
+    warnings.push(...checked.warnings.map(problem => `${at}: ${problem}`));
   }
   if (card.type === 'text') {
     if (words(card.answer).length > 5 || card.answer.length > 45) errors.push(`${at}: tekstsvar skal være kort (1–4 ord). Bruk choice eller explain.`);

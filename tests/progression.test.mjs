@@ -213,3 +213,18 @@ test('a fact answered in one form is not asked again in the other form within ho
   const session = buildDailySession({data, targets: all, states, reviews, preferences: {dailyMinutes: 5}, now: new Date('2026-11-03T09:00:00Z')});
   assert.ok(!session.queue.some(row => row.target?.factId === card.factId));
 });
+
+test('self-approved answers are listed newest first with what was typed and expected', async () => {
+  const {selfApprovals} = await import('../src/lib/progress.js');
+  const targets = [{id: 'a', prompt: 'Hvem malte Skrik?', answer: 'Edvard Munch'}, {id: 'b', prompt: 'Hovedstad i Peru?', answer: 'Lima'}];
+  const reviews = [
+    {targetId: 'a', timestamp: '2026-11-01T10:00:00Z', correct: true, selfApproved: true, typedAnswer: 'Munk'},
+    {targetId: 'b', timestamp: '2026-11-02T10:00:00Z', correct: true},
+    {targetId: 'b', timestamp: '2026-11-03T10:00:00Z', correct: true, selfApproved: true, typedAnswer: 'Lima by'}
+  ];
+  assert.deepEqual(selfApprovals(targets, reviews), [
+    {targetId: 'b', prompt: 'Hovedstad i Peru?', expected: 'Lima', typed: 'Lima by'},
+    {targetId: 'a', prompt: 'Hvem malte Skrik?', expected: 'Edvard Munch', typed: 'Munk'}
+  ]);
+  assert.equal(selfApprovals(targets, reviews, 1).length, 1);
+});

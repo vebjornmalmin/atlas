@@ -4,6 +4,7 @@
   import PanZoomMap from './PanZoomMap.svelte';
   import {pathBounds,parseBox,regionAnchor,neighbourhoodFrame} from './map-view.js';
   import {WORLD_FORMAT_CHOICES} from './quiz-formats.js';
+  import {PROJECTIONS,projectionById,worldFeatures,projectWorld,turnGlobe,rotationFor,globeDisc,dragRotation,interpolateRotation} from './projections.js';
   let {graph,dataset,relevance=$bindable({...DEFAULT_RELEVANCE}),typeLabel,relationLabel,onOpen,onQuiz,onSave,formatAvailable}=$props();
 
   const STORE='atlas-world';
@@ -15,23 +16,73 @@
   let pathFrom=$state(saved.pathFrom || ''),pathTo=$state(saved.pathTo || '');
   let fromQuery=$state(''),toQuery=$state('');
   const regionOf=id=>graph.byId.get(graph.countryOf.get(id))?.geo?.mapRegionId;
-  const regionBounds=region=>{const path=dataset.regions.find(r=>r.id===region)?.path;return path?pathBounds(path,true):null;};
-  const focusFrame=id=>neighbourhoodFrame(regionBounds(regionOf(id)),(graph.neighbours.get(id)||[]).map(n=>regionBounds(graph.byId.get(n)?.geo?.mapRegionId)),parseBox(dataset.viewBox)[2]);
-  // Without a saved position the map opens on the focus country, so the tall frame is filled with something to read.
-  let mapView=$state.raw(Array.isArray(saved.mapView)?saved.mapView:focusFrame(saved.focusId || 'norway'));
+  // The same world in the projection the learner chose. The flat map file is the default and is drawn as it is.
+  let features=null;
+  const featuresNow=()=>features??=worldFeatures(dataset);
+  const featureOf=region=>{const i=dataset.regions.findIndex(r=>r.id===region);return i<0?null:featuresNow()[i];};
+  const startProjection=PROJECTIONS.some(p=>p.id===saved.projection)?saved.projection:'standard';
+  const startFeature=startProjection==='globe' && !Array.isArray(saved.rotation)?featureOf(regionOf(saved.focusId || 'norway')):null;
+  const startRotation=Array.isArray(saved.rotation)?saved.rotation:startFeature?rotationFor(startFeature):null;
+  let projectionId=$state(startProjection);
+  let rotation=$state.raw(startRotation);
+  const draw=(id,turn)=>id==='standard'?dataset:projectWorld(dataset,featuresNow(),id,{rotation:turn});
+  let world=$state.raw(draw(startProjection,startRotation));
+  let projection=$derived(projectionById(projectionId));
+  let disc=$derived(globeDisc(world));
+  const regionBounds=region=>{const path=world.regions.find(r=>r.id===region)?.path;return path?pathBounds(path,true):null;};
+  const focusFrame=id=>neighbourhoodFrame(regionBounds(regionOf(id)),(graph.neighbours.get(id)||[]).map(n=>regionBounds(graph.byId.get(n)?.geo?.mapRegionId)),parseBox(world.viewBox)[2]);
+  // Each projection keeps its own view; the flat map opens on the focus country, the others show the whole world.
+  const views={...(saved.views || {})};
+  if(Array.isArray(saved.mapView) && !saved.views)views.standard=saved.mapView;
+  let mapView=$state.raw(Array.isArray(views[startProjection])?views[startProjection]:startProjection==='standard'?focusFrame(saved.focusId || 'norway'):null);
+  let projectionMenu=$state(false);
   let mapUnit=$state(1);
   let lensMenu=$state(false);
   let worldMap=$state();
   let rankedLimit=$state(10);
-  $effect(()=>{const state={lensId,focusId,pathFrom,pathTo,mapView};try {localStorage.setItem(STORE,JSON.stringify(state));} catch {/* The explorer still works without saved position. */}});
+  $effect(()=>{const state={lensId,focusId,pathFrom,pathTo,mapView,projection:projectionId,rotation,views:{...views,[projectionId]:mapView}};try {localStorage.setItem(STORE,JSON.stringify(state));} catch {/* The explorer still works without saved position. */}});
+
+  function setProjection(id){
+    projectionMenu=false;
+    if(id===projectionId)return;
+    views[projectionId]=mapView;
+    if(id==='globe' && !rotation){const f=featureOf(focusRegion);rotation=f?rotationFor(f):null;}
+    world=draw(id,rotation);
+    projectionId=id;
+    mapView=Array.isArray(views[id])?views[id]:null;
+  }
+  // The globe turns under the finger instead of sliding; one redraw per frame however fast the finger moves.
+  let drag=null,pending=null,frame=0,spin=0;
+  function turnTo(next){
+    pending=next;
+    if(frame)return;
+    frame=requestAnimationFrame(()=>{frame=0;rotation=pending;world=turnGlobe(world,featuresNow(),pending);});
+  }
+  const globeDragStart=point=>{if(projectionId!=='globe' || !world.projection)return false;cancelAnimationFrame(spin);drag={point,rotation:rotation || world.projection.rotate()};return true;};
+  const globeDragMove=point=>{if(drag && point)turnTo(dragRotation(drag.rotation,point.x-drag.point.x,point.y-drag.point.y,world.projection.scale()));};
+  const globeDragEnd=()=>{drag=null;};
+  function spinTo(id){
+    const f=featureOf(regionOf(id));
+    if(!f)return;
+    const from=rotation || world.projection.rotate(),to=rotationFor(f),turn=interpolateRotation(from,to);
+    const finish=()=>{rotation=to;world=turnGlobe(world,featuresNow(),to);const box=focusFrame(id);if(box)worldMap?.flyTo(box);};
+    cancelAnimationFrame(spin);
+    if(window.matchMedia?.('(prefers-reduced-motion: reduce)').matches){finish();return;}
+    const start=performance.now();
+    const step=now=>{const t=Math.min(1,(now-start)/700),e=t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2;if(t<1){turnTo(turn(e));spin=requestAnimationFrame(step);}else finish();};
+    spin=requestAnimationFrame(step);
+  }
 
 
   const now=new Date();
   let view=$derived(lensView(graph,lensId,relevance,now));
   let lens=$derived(view.lens);
   let focus=$derived(graph.byId.get(focusId));
-  let related=$derived(focus?relatedThrough(graph,focus.id,view,8):[]);
-  let otherLenses=$derived(focus?lensesFor(graph,focus.id).slice(0,4):[]);
+  let seenBy=$derived(focus?lensesFor(graph,focus.id):[]);
+  // A lens only gets a heading over the connections when it actually says something about the place or topic.
+  let lensSees=$derived(Boolean(lens && seenBy.some(x=>x.lens.id===lens.id)));
+  let related=$derived(focus?relatedThrough(graph,focus.id,lensSees?view:{...view,lens:null},8):[]);
+  let otherLenses=$derived(seenBy.slice(0,4));
   let neighbours=$derived(focus?(graph.neighbours.get(focus.id)||[]).map(id=>graph.byId.get(id)).sort((a,b)=>a.label.localeCompare(b.label,'nb')):[]);
   let focusNews=$derived(focus?graph.news.filter(n=>n.id===focus.id || graph.adjacency.get(n.id).some(l=>l.other===focus.id)):[]);
   let path=$derived(pathFrom && pathTo?findPath(graph,pathFrom,pathTo,lens):null);
@@ -42,18 +93,18 @@
   // Names on the map: the focus country always, its neighbours once they are big enough on screen to hold one.
   let mapLabels=$derived.by(()=>{
     if(!focus)return [];
-    const own=focusRegion && dataset.regions.find(r=>r.id===focusRegion);
+    const own=focusRegion && world.regions.find(r=>r.id===focusRegion && r.path);
     const labels=own?[{id:focus.id,text:focus.label,at:regionAnchor(own.path),main:true}]:[];
     for(const n of neighbours){
       const region=n.geo?.mapRegionId,b=regionBounds(region);
-      if(b && b[2]/mapUnit>n.label.length*7+12)labels.push({id:n.id,text:n.label,at:regionAnchor(dataset.regions.find(r=>r.id===region).path),main:false});
+      if(b && b[2]/mapUnit>n.label.length*7+12)labels.push({id:n.id,text:n.label,at:regionAnchor(world.regions.find(r=>r.id===region).path),main:false});
     }
     return labels.filter(l=>l.at);
   });
   function choose(id,scroll=true){
-    focusId=id;lensMenu=false;
-    const frame=focusFrame(id);
-    if(frame)worldMap?.flyTo(frame);
+    focusId=id;lensMenu=false;projectionMenu=false;
+    if(projectionId==='globe')spinTo(id);
+    else {const box=focusFrame(id);if(box)worldMap?.flyTo(box);}
     if(scroll)document.querySelector('.world-map')?.scrollIntoView({behavior:'smooth',block:'start'});
   }
   function fill(regionId){
@@ -74,19 +125,31 @@
 
 
 {#snippet lensDock()}
-<button type="button" class="map-pill lens-pill" aria-expanded={lensMenu} aria-controls="lens-menu" onclick={()=>lensMenu=!lensMenu}><small>Linse</small>{lens?.name || 'Ingen'}<svg viewBox="0 0 20 20" aria-hidden="true"><path d={lensMenu?'M5 12.5 10 7.5l5 5':'m5 7.5 5 5 5-5'}/></svg></button>
+<button type="button" class="map-pill lens-pill" aria-expanded={lensMenu} aria-controls="lens-menu" onclick={()=>{lensMenu=!lensMenu;projectionMenu=false;}}><small>Linse</small>{lens?.name || 'Ingen'}<svg viewBox="0 0 20 20" aria-hidden="true"><path d={lensMenu?'M5 12.5 10 7.5l5 5':'m5 7.5 5 5 5-5'}/></svg></button>
 {#if lensMenu}<div class="lens-menu" id="lens-menu" role="group" aria-label="Velg historiesyn">
   <button type="button" class="lens-option" aria-pressed={!lens} onclick={()=>{lensId='';lensMenu=false;}}>Ingen linse</button>
   {#each graph.lenses as l}<button type="button" class="lens-option" aria-pressed={lensId===l.id} onclick={()=>{chooseLens(l.id);lensMenu=false;}}>{l.name}</button>{/each}
 </div>{/if}
 {/snippet}
+{#snippet projectionDock()}
+<button type="button" class="map-pill projection-pill" aria-expanded={projectionMenu} aria-controls="projection-menu" onclick={()=>{projectionMenu=!projectionMenu;lensMenu=false;}}><small>Kart</small>{projection.name}<svg viewBox="0 0 20 20" aria-hidden="true"><path d={projectionMenu?'M5 12.5 10 7.5l5 5':'m5 7.5 5 5 5-5'}/></svg></button>
+{#if projectionMenu}<div class="projection-menu" id="projection-menu" role="group" aria-label="Velg kartprojeksjon">
+  {#each PROJECTIONS as p}<button type="button" class="lens-option projection-option" aria-pressed={projectionId===p.id} onclick={()=>setProjection(p.id)}>{p.name}<small>{p.kind}</small></button>{/each}
+</div>{/if}
+{/snippet}
 {#snippet focusPill()}{#if focus}<button class="map-pill" onclick={()=>document.querySelector('#world-focus')?.scrollIntoView({behavior:'smooth',block:'start'})}>{#if flagFor(focus)}<Flag iso2={flagFor(focus)} />{/if}{focus.label} <span aria-hidden="true">↓</span></button>{/if}{/snippet}
 <div class="world-explorer atlas-kart">
-{#snippet mapHud()}{@render focusPill()}{@render lensDock()}{/snippet}
-<PanZoomMap bind:this={worldMap} base={dataset.viewBox} bind:view={mapView} bind:unit={mapUnit} className="world-map" label={`Verdenskart vektet ${lens?`gjennom ${lens.name}`:'etter relevans'}. Dra og knip for å utforske, trykk på et land.`} onTap={({region})=>{if(lensMenu){lensMenu=false;return;}const id=graph.regionToCountry.get(region);if(id)choose(id,false);}} overlay={mapHud}>
-    {#each dataset.regions as region}{@const id=graph.regionToCountry.get(region.id)}<path d={region.path} data-region={region.id} fill-rule="evenodd" style:fill={fill(region.id)} class:focused={focusRegion===region.id} class:neighbour={neighbours.some(n=>n.geo?.mapRegionId===region.id)} />{/each}
+{#snippet mapHud()}{@render focusPill()}{@render projectionDock()}{@render lensDock()}{/snippet}
+{#key projectionId}
+<PanZoomMap bind:this={worldMap} base={world.viewBox} bind:view={mapView} bind:unit={mapUnit} className={`world-map${projectionId==='standard'?'':' projected'}`} label={`Verdenskart${projectionId==='standard'?'':` i projeksjonen ${projection.name}`} vektet ${lens?`gjennom ${lens.name}`:'etter relevans'}. ${projectionId==='globe'?'Dra for å snu kloden, knip for å zoome':'Dra og knip for å utforske'}, trykk på et land.`} onTap={({region})=>{if(lensMenu || projectionMenu){lensMenu=false;projectionMenu=false;return;}const id=graph.regionToCountry.get(region);if(id)choose(id,false);}} onDragStart={globeDragStart} onDragMove={globeDragMove} onDragEnd={globeDragEnd} overlay={mapHud}>
+    {#if world.sphere}<defs><clipPath id="map-sphere-clip"><path d={world.sphere} /></clipPath>{#if disc}<radialGradient id="globe-shade" cx="42%" cy="38%" r="62%"><stop offset="0" class="shade-light" /><stop offset="1" class="shade-dark" /></radialGradient>{/if}</defs><path class="map-sphere" d={world.sphere} />{/if}
+    {#if world.graticule}<path class="map-graticule" d={world.graticule} clip-path={world.sphere?'url(#map-sphere-clip)':null} />{/if}
+    {#each world.regions as region (region.id)}{#if region.path}<path d={region.path} data-region={region.id} fill-rule="evenodd" style:fill={fill(region.id)} class:focused={focusRegion===region.id} class:neighbour={neighbours.some(n=>n.geo?.mapRegionId===region.id)} />{/if}{/each}
+    {#if disc}<circle class="globe-shade" cx={disc.x} cy={disc.y} r={disc.r} fill="url(#globe-shade)" />{/if}
     {#each mapLabels as l (l.id)}<text class="map-label" class:main={l.main} x={l.at.x} y={l.at.y} style:font-size={`${(l.main?14:11)*mapUnit}px`} style:stroke-width={`${3*mapUnit}px`}>{l.text}</text>{/each}
 </PanZoomMap>
+{/key}
+{#if projectionId!=='standard'}<p class="projection-note"><strong>{projection.name}</strong> · {projection.kind}. {projection.note}</p>{/if}
 
 {#if lens}
   <div class="card lens-card">
@@ -121,7 +184,7 @@
     </div>
     {#if otherLenses.length}<h3>Andre linser ser her</h3><div class="stack compact">{#each otherLenses as other}<button class="lens-switch" aria-pressed={other.lens.id===lensId} onclick={()=>chooseLens(other.lens.id)}><strong>{other.lens.name}</strong><small>{other.reason || other.lens.question}</small></button>{/each}</div>{/if}
     {#if neighbours.length}<h3>Naboland</h3><div class="chips">{#each neighbours as n}<button class="chip" onclick={()=>choose(n.id)}>{#if flagFor(n)}<Flag iso2={flagFor(n)} />{/if}{n.label}</button>{/each}</div>{/if}
-    {#if related.length}<h3>{lens?`Gjennom ${lens.name.toLocaleLowerCase('nb')}`:'Sterkeste forbindelser'}</h3>
+    {#if related.length}<h3>{lensSees?`Gjennom ${lens.name.toLocaleLowerCase('nb')}`:'Sterkeste forbindelser'}</h3>{#if lens && !lensSees}<p class="muted detail">{lens.name} sier lite om {focus.label}. Forbindelsene er derfor ikke vektet gjennom linsen.</p>{/if}
       {#each related as r}<button class="entity-row" onclick={()=>choose(r.entity.id)}><span><small class="eyebrow">{relationLabel(r.relation.type)}{r.outgoing || SYMMETRIC.has(r.relation.type)?'':' · inngående'}</small><strong>{#if flagFor(r.entity)}<Flag iso2={flagFor(r.entity)} />{/if}{r.entity.label}</strong><small class="muted">{r.relation.context}</small></span></button>{/each}{/if}
     {#if focusNews.length}<h3>I nyhetene</h3>{#each focusNews as n}<p class="news-line"><small class="muted">{n.metadata.date} · {n.metadata.publisher}</small><br><button class="link-button" onclick={()=>choose(n.id)}>{n.label}</button></p>{/each}{/if}
     {#if focus.type==='news-event'}<p class="muted">{focus.metadata.background || ''}</p><a class="source-link" href={focus.metadata.url} target="_blank" rel="noreferrer">Les saken hos {focus.metadata.publisher} ↗</a>{/if}

@@ -1,8 +1,8 @@
 {
   "id": "atlas-foundation",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "schemaVersion": 1,
-  "generatedAt": "2026-11-04T21:00:00Z",
+  "generatedAt": "2026-11-05T18:00:00Z",
   "collections": [
     {
       "id": "us-presidents",
@@ -228755,8 +228755,8 @@
       "collectionIds": [
         "verdenshistorie"
       ],
-      "prompt": "Hva slo den amerikanske uavhengighetserklæringen fra 1776 fast?",
-      "answer": "At koloniene var frie og uavhengige stater",
+      "prompt": "Hva erklærte de 13 britiske koloniene i Nord-Amerika 4. juli 1776?",
+      "answer": "At de var uavhengige av Storbritannia",
       "acceptedAnswers": [],
       "explanation": "Teksten er i hovedsak skrevet av Thomas Jefferson. Kjernen er et avsnitt om menneskerettigheter, påvirket av John Lockes filosofi.",
       "sourceIds": [
@@ -228784,10 +228784,10 @@
       "legacyFactId": "core:vh-usa-fram-til-1865-erklaering",
       "year": 1773,
       "options": [
-        "At koloniene var frie og uavhengige stater",
-        "At slaveriet var avskaffet overalt",
-        "At George Washington var konge",
-        "At koloniene ble en del av Frankrike"
+        "At de var uavhengige av Storbritannia",
+        "At koloniene skulle ha en felles grunnlov og en valgt president",
+        "At slaveriet var avskaffet i alle koloniene",
+        "At koloniene ville bli under kongen, men med egne forsamlinger"
       ],
       "difficultyFamily": "core-curriculum",
       "difficultyReason": "Oversikt: hva, når og hvorfor det betyr noe. Svaret er undervist i emnets innledning.",
@@ -299132,9 +299132,9 @@
         "verden-utenfor-europa"
       ],
       "prompt": "Hvorfor ble embetsmennene i provinsene utnevnt av keiseren og ikke arvet sine stillinger?",
-      "answer": "Så makten ble samlet hos keiseren",
+      "answer": "Så lokale stormenn ikke kunne bygge opp egen makt",
       "acceptedAnswers": [],
-      "explanation": "Embetsmennene ble stadig flyttet og holdt under skarp kontroll. Dermed kunne ingen lokal stormann bygge opp egen makt i provinsen.",
+      "explanation": "Embetsmennene ble stadig flyttet og holdt under skarp kontroll. Makten ble dermed samlet hos keiseren og hoffet, ikke hos slekter i provinsene.",
       "sourceIds": [
         "core-source:snl-no-qin-shi-huangdi",
         "core-source:snl-no-qin-dynastiet",
@@ -299161,7 +299161,7 @@
       "legacyFactId": "core:vue-kina-qin-tang-embetsmenn",
       "year": -221,
       "options": [
-        "Så makten ble samlet hos keiseren",
+        "Så lokale stormenn ikke kunne bygge opp egen makt",
         "Så adelen kunne velge sine egne lensherrer",
         "Så provinsene kunne styre seg selv",
         "Så byene kunne sende egne sendemenn"
@@ -458183,7 +458183,7 @@
         "abraham-lincoln"
       ],
       "relationshipIds": [],
-      "statement": "Lincoln ledet Unionen under borgerkrigen. Slaveriet var sentralt i konflikten.",
+      "statement": "Lincoln ledet Unionen under borgerkrigen, og slaveriet var sentralt i konflikten. Krigen i 1812 og krigen mot Mexico i 1846–1848 kom før han ble president, krigen mot Spania i 1898 etter.",
       "sourceIds": [
         "foundation-emancipation"
       ],
@@ -458219,7 +458219,7 @@
         "franklin-d-roosevelt"
       ],
       "relationshipIds": [],
-      "statement": "Roosevelt ledet USA gjennom det meste av landets deltakelse i krigen. Han døde i 1945, før krigen var slutt.",
+      "statement": "Roosevelt ledet USA gjennom det meste av landets deltakelse i krigen. Han døde i april 1945, og visepresident Harry S. Truman tok over før krigen var slutt.",
       "sourceIds": [
         "foundation-source-1997"
       ],
@@ -458231,7 +458231,7 @@
         "john-f-kennedy"
       ],
       "relationshipIds": [],
-      "statement": "Månelandingen var et sentralt mål i romkappløpet. Kennedy satte målet; Apollo 11 gjennomførte det senere.",
+      "statement": "Månelandingen var et sentralt mål i romkappløpet. Kennedy satte målet i 1961, og Apollo 11 gjennomførte det i 1969. USAs første satellitt var allerede skutt opp i 1958, før Kennedy ble president.",
       "sourceIds": [
         "foundation-kennedy"
       ],
@@ -458255,7 +458255,7 @@
         "us-declaration-of-independence-adopted"
       ],
       "relationshipIds": [],
-      "statement": "Erklæringen markerte et politisk brudd med Storbritannia. Den betydde ikke at krigen var over.",
+      "statement": "Erklæringen markerte et politisk brudd med Storbritannia. Den betydde ikke at krigen var over: freden kom først i 1783.",
       "sourceIds": [
         "culture-declaration-primary"
       ],
@@ -458267,7 +458267,7 @@
         "d-day-landings-in-normandy"
       ],
       "relationshipIds": [],
-      "statement": "Normandie ligger i Nord-Frankrike. Landgangen i 1944 ble starten på en større offensiv i Vest-Europa.",
+      "statement": "Landgangen i Normandie åpnet en ny front i Vest-Europa. Tyskerne ventet angrepet ved Calais, der kanalen er smalest. Sicilia ble invadert i 1943, og Provence i august 1944.",
       "sourceIds": [
         "event-d-day-landings-in-normandy"
       ],
@@ -458291,7 +458291,7 @@
         "apollo-11-moon-landing"
       ],
       "relationshipIds": [],
-      "statement": "Apollo 11 var første gang mennesker landet på månen. Alle de tre astronautene kom tilbake til jorden.",
+      "statement": "Apollo 11 var første gang mennesker landet på månen, og alle de tre astronautene kom tilbake til jorden. Apollo 8 hadde fløyet i bane rundt månen i 1968 uten å lande.",
       "sourceIds": [
         "event-apollo-11-moon-landing"
       ],
@@ -481418,7 +481418,7 @@
         "unit:vue-kina-qin-tang"
       ],
       "relationshipIds": [],
-      "statement": "Embetsmennene ble stadig flyttet og holdt under skarp kontroll. Dermed kunne ingen lokal stormann bygge opp egen makt i provinsen.",
+      "statement": "Embetsmennene ble stadig flyttet og holdt under skarp kontroll. Makten ble dermed samlet hos keiseren og hoffet, ikke hos slekter i provinsene.",
       "sourceIds": [
         "core-source:snl-no-qin-shi-huangdi",
         "core-source:snl-no-qin-dynastiet",

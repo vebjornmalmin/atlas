@@ -99,3 +99,13 @@ test('generated questions avoid giveaways and implausible options', () => {
   const bigHosts = new Set(Object.entries(stats).sort((a, b) => b[1].inflow - a[1].inflow).slice(0, 15).map(([id]) => data.entities.find(e => e.id === id)?.label));
   for (const t of targets.filter(t => t.format === 'knowledge-flow')) assert.ok(t.options.every(o => bigHosts.has(o)), t.id);
 });
+
+test('a lens that says nothing about a place does not claim its connections', () => {
+  // Atlas once titled Fiji's postponed constitution vote "Gjennom lineær frelseshistorie".
+  for (const id of ['geo-fji', 'news-2026-11-02-fiji-grunnlov-utsatt']) {
+    if (!graph.byId.has(id)) continue;
+    const seen = lensesFor(graph, id).map(x => x.lens.id);
+    assert.ok(!seen.includes('providential'), id);
+    assert.ok(seen.includes('geopolitics'), id);
+  }
+});

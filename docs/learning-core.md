@@ -55,7 +55,7 @@ Svar rett etter innføringen viser lite om hva som huskes. Derfor krever «Grunn
 - Tekstsvar godtar dokumenterte varianter, små skrivefeil i lengre navn (én feil fra 5 tegn, to fra 10, samme forbokstav) og etternavn alene når spørsmålet gjelder en person. Korte svar må være eksakte. Et annet kjent navn godtas aldri som skrivefeil (Irland for Island, Zambia for Gambia).
 - Autokorrektur er slått av for korte svar på iPhone, slik at navn ikke byttes ut med engelske ord.
 - Årstall og tall kan ha en dokumentert toleranse når kildene sier «omkring».
-- Eleven kan godkjenne et tekstsvar selv når appen ikke kjente igjen en riktig formulering.
+- Eleven kan godkjenne et tekstsvar selv når appen ikke kjente igjen en riktig formulering. Knappen heter «Godkjenn svaret mitt» og er skrevet som en handling: «Svaret mitt var riktig» ble lest som om appen skrøt av sitt eget svar. En egengodkjenning lagres med `assessment: 'self'`, `selfApproved` og det skrevne svaret, kan angres før neste spørsmål, teller som riktig, men gir aldri vurderingen «Satt lett». Deg → Fremgang viser hvor mange svar som er godkjent slik, og tilbakemeldinger tar med de siste 20, slik at formuleringer som burde godtas kan legges inn i kortene. Det kan ikke hindre juks, og skal ikke: det er bare egen læring som går tapt. Målet er at statistikken forteller sannheten.
 - Forklaringskort vurderes mot sjekklisten: alt med gir «riktig», noe gir «delvis».
 - Etter et riktig svar holder ett trykk på «Neste». «Var usikker» og «Satt lett» justerer intervallet for dem som vil.
 

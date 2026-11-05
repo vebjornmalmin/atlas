@@ -55,3 +55,24 @@ test('every president has an introductory period question using the earliest ter
   assert.equal(periods.find(target => target.entityId === 'donald-trump').year, 2017);
   assert.ok(periods.every(target => target.sourceIds.length && target.sources.length));
 });
+
+test('hand-written introductions follow the same multiple-choice rules as the curriculum', async () => {
+  const { choiceProblems, answerLeaks } = await import('../src/lib/core-curriculum.js');
+  const curated = foundationTargets(data).filter(target => !target.id.startsWith('foundation:period:'));
+  assert.equal(curated.length, 12);
+  for (const target of curated) {
+    const distractors = target.options.filter(option => !option.correct).map(option => option.label);
+    const { errors, warnings } = choiceProblems({ prompt: target.prompt, answer: target.answer, distractors });
+    assert.deepEqual([...errors, ...warnings, ...answerLeaks(target.prompt, [target.answer])], [], target.id);
+    assert.equal(makeRecognitionOptions(target, foundationTargets(data)).length, 4, target.id);
+  }
+});
+
+test('the shared check catches a question that hints at the answer or too few options', async () => {
+  const { choiceProblems } = await import('../src/lib/core-curriculum.js');
+  const old = choiceProblems({ prompt: 'Hva erklærte de tretten koloniene med uavhengighetserklæringen?', answer: 'At de var uavhengige av Storbritannia', distractors: ['At de ville bli en del av Frankrike', 'At de opprettet FN'] });
+  assert.ok(old.errors.some(e => /3 distraktorer/.test(e)));
+  assert.ok(old.warnings.some(w => /ordstammen «uavhen»/.test(w)));
+  const shared = choiceProblems({ prompt: 'Hva handlet frigjøringserklæringen om?', answer: 'Frigjøring i opprørsområdene', distractors: ['Frigjøring i hele USA', 'Stemmerett for frigjorte', 'Retur av flyktede slaver'] });
+  assert.deepEqual(shared.warnings, []);
+});

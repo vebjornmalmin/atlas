@@ -24,7 +24,7 @@
   import {buildDistanceTargets} from '../lib/time-distance.js';
   import {TIME_ANCHORS} from '../../knowledge-build/time-anchors.mjs';
   import {advanceSession,nextActionNote,retryTargets} from '../lib/repetition.js';
-  import {progressDetails,sessionOutcome} from '../lib/progress.js';
+  import {progressDetails,sessionOutcome,selfApprovals} from '../lib/progress.js';
   import {assessTargets} from '../lib/difficulty.js';
   import {APP_VERSION,APP_CHECK_INTERVAL,OFFLINE_HEADER,createAppUpdateChecker} from '../lib/app-updates.js';
   import {foundationTargets} from '../lib/foundations.js';
@@ -61,6 +61,8 @@
   let sessionScreen = $state(false);
   let introduction = $state(false);
   let learnedFirst = $state(false);
+  // The learner approved a typed answer the grader did not recognise. Stored as self-assessment, never as "Satt lett".
+  let selfApproved = $state(false);
   let preparedTargetId = $state('');
   let savedSessions = $state.raw([]);
   let quizCollection = $state('');
@@ -80,7 +82,7 @@
   $effect(()=>{const state=uiSnapshot();if(uiReady && state)keepUiState();});
   let journalWarning = false;
   const stageLabel = stage => ({foundation:'Grunnlag',details:'Detaljer',connections:'Avansert'}[stage] || stage);
-  function draftNow() { return questionDraft(current?.id,{answer,formatDraft,correct,revealed,usedHint,timelineOrder,selectedRegion,mapView,introduction,learnedFirst,gradeNote}); }
+  function draftNow() { return questionDraft(current?.id,{answer,formatDraft,correct,revealed,usedHint,timelineOrder,selectedRegion,mapView,introduction,learnedFirst,gradeNote,selfApproved}); }
   $effect(()=>{
     if(loading || !session || (current && preparedTargetId!==current.id))return;
     const draft=draftNow();
@@ -252,6 +254,7 @@
   let progress = $derived(progressDetails(targets,reviews));
   let contentCoverage = $derived(data?learningCoverage(data,targets):[]);
   let abilities = $derived(evidenceOverview(targets,reviews));
+  let selfApprovedCount = $derived(reviews.filter(r=>r.selfApproved).length);
   let outcome = $derived(sessionOutcome(session?.results || []));
   let outcomeTotal = $derived(outcome.independent + outcome.supported + outcome.retry);
   let retryIds = $derived(retryTargets(session?.results || []));
@@ -353,7 +356,7 @@
     usedHint = saved?.usedHint || false; selectedRegion = saved?.selectedRegion || ''; mapView = saved?.mapView || null;
     timelineOrder = saved?.timelineOrder || (current?.mode === 'timeline' ? buildTimelineExercise(current.timeline).items : []);
     introduction = saved?.introduction ?? Boolean(session?.queue[session.index]?.reason==='Connected introduction' && current?.snapshot);
-    learnedFirst = saved?.learnedFirst || false; gradeNote = saved?.gradeNote || ''; preparedTargetId=current?.id || currentLesson?.id || '';
+    learnedFirst = saved?.learnedFirst || false; gradeNote = saved?.gradeNote || ''; selfApproved = saved?.selfApproved || false; preparedTargetId=current?.id || currentLesson?.id || '';
     await tick(); document.querySelector('#main-view')?.focus({preventScroll:true}); window.scrollTo({top:0,behavior:'instant'});
   }
   async function archiveActive() {
@@ -417,7 +420,7 @@
     const entry=session.queue[session.index];
     const result=scheduleReview(schedulingKey(target),currentState,rating,now);
     const event={id:`${session.sessionId}:${session.index}`,targetId:target.id,entityId:target.entityId || null,timestamp:now.toISOString(),rating,mode:target.mode,correct,usedHint,learnedFirst,
-      factId:factKey(target),claimIds:target.claimIds,evidenceKind:evidenceKind(target),answerFormat:target.answerFormat,assessment:target.answerFormat==='explanation'?'self':'answer',reason:entry.reason,schedulerId:schedulingKey(target),sessionRetry:Boolean(entry.sessionRetry),nextDue:result.card.due,log:result.log};
+      factId:factKey(target),claimIds:target.claimIds,evidenceKind:evidenceKind(target),answerFormat:target.answerFormat,assessment:target.answerFormat==='explanation' || selfApproved?'self':'answer',...(selfApproved?{selfApproved:true,typedAnswer:answer.trim()}:{}),reason:entry.reason,schedulerId:schedulingKey(target),sessionRetry:Boolean(entry.sessionRetry),nextDue:result.card.due,log:result.log};
     // A first answer always starts the long-term schedule, even in free practice; otherwise the card would never return.
     const practice=(session.practice || entry.sessionRetry) && Boolean(currentState);
     const saved=practice?{...event,practice:true,nextDue:null,log:null}:event, mirror={...result.card,id:legacyFactKey(target)};
@@ -695,10 +698,11 @@
         {/if}
         {#if revealed}
           <div class="s-feedback" class:is-right={correct===true} class:is-wrong={correct===false}>
-            <p class="s-verdict">{#if correct===true}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>{:else if correct===false}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 7 10 10M17 7 7 17"/></svg>{:else}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4.5h10v15l-5-3.5-5 3.5z"/></svg>{/if}<span>{correct===true?'RIKTIG':correct===false?'IKKE HELT':'SVARET'}</span></p>
-            <h2 id="answer-heading" class="s-answer" class:is-long={String(current.answer ?? '').length>48} tabindex="-1"><span class="sr-only">{correct===true?'Riktig. ':correct===false?'Ikke helt. Riktig svar: ':'Svaret: '}</span>{current.mode==='matching'?'De riktige parene':current.answer}</h2>
+            <p class="s-verdict">{#if correct===true}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>{:else if correct===false}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 7 10 10M17 7 7 17"/></svg>{:else}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4.5h10v15l-5-3.5-5 3.5z"/></svg>{/if}<span>{selfApproved?'GODKJENT AV DEG':correct===true?'RIKTIG':correct===false?'IKKE HELT':'SVARET'}</span></p>
+            <h2 id="answer-heading" class="s-answer" class:is-long={String(current.answer ?? '').length>48} tabindex="-1"><span class="sr-only">{selfApproved?'Godkjent av deg. Svaret er: ':correct===true?'Riktig. ':correct===false?'Ikke helt. Riktig svar: ':'Svaret: '}</span>{current.mode==='matching'?'De riktige parene':current.answer}</h2>
             {#if gradeNote}<p class="s-meta s-grade-note">{gradeNote}</p>{/if}
-            {#if correct===false && answer.trim() && current.mode!=='timeline' && !STRUCTURED_MODES.includes(current.mode) && current.answerFormat!=='explanation'}<div class="s-yours"><p>Du {current.mode==='recognition'?'valgte':'skrev'}: <strong>{answer}</strong></p>{#if current.mode==='recall'}<button class="quiet override" onclick={()=>{correct=true;gradeNote='Du godkjente svaret ditt selv.';}}>Svaret mitt var riktig</button>{/if}</div>{/if}
+            {#if correct===false && answer.trim() && current.mode!=='timeline' && !STRUCTURED_MODES.includes(current.mode) && current.answerFormat!=='explanation'}<div class="s-yours"><p>Du {current.mode==='recognition'?'valgte':'skrev'}: <strong>{answer}</strong></p>{#if current.mode==='recall'}<button class="quiet override" onclick={()=>{correct=true;selfApproved=true;gradeNote='Du godkjente svaret ditt selv. Det lagres som egenvurdering.';}}>Godkjenn svaret mitt</button>{/if}</div>{#if current.mode==='recall'}<p class="s-meta s-override-hint">Mente du det samme med andre ord? Da kan du godkjenne svaret selv.</p>{/if}{/if}
+            {#if selfApproved}<div class="s-yours"><p>Du skrev: <strong>{answer}</strong></p><button class="quiet override" onclick={()=>{correct=false;selfApproved=false;gradeNote='';}}>Angre godkjenningen</button></div>{/if}
             {#if current.mode==='matching'}<ul class="pair-answers">{#each current.pairs as pair}<li>{pair.label} <strong>{pair.answer}</strong></li>{/each}</ul>{/if}
             {#if current.mode==='border-walk'}{@const result=gradeStructured(current,formatDraft,worldGraph.neighbours)}<p class="s-meta">{result.arrived && result.valid?`Du krysset ${result.crossings} grenser. Korteste rute krysser ${result.shortest}.`:'Ruten nådde ikke målet.'}</p>{/if}
             {#if current.mode==='arrows'}{@const result=gradeStructured(current,formatDraft)}<p class="s-meta">Retning: {result.directionCorrect?'riktig':'må øves'} · År: {result.yearCorrect?'riktig':'må øves'}</p>{/if}
@@ -712,8 +716,8 @@
           {#if !current.unitId && (current.snapshot || current.followUp || currentArtwork || connections.length)}<details class="s-disclosure s-context-details"><summary>Fordypning og forbindelser</summary>{#if current.snapshot}<p>{current.snapshot}</p>{/if}{#if current.followUp}<p>{current.followUp}</p>{/if}{#if currentArtwork}<details class="s-disclosure"><summary>Om bildet og bildekilden</summary><p>{currentArtwork.context}</p><p class="s-meta">{currentArtwork.credit} · <a href={currentArtwork.sourceUrl} target="_blank" rel="noreferrer">Bildekilde</a> · <a href={currentArtwork.licenseUrl} target="_blank" rel="noreferrer">Lisens og bruk</a></p></details>{/if}{#if connections.length}<details class="s-disclosure"><summary>Les videre ({connections.length})</summary>{#each connections as relation}<p>{relation.context}</p><small class="s-meta">{relation.practiced?'Du har øvd på':'Et nytt holdepunkt:'} {relation.label}</small>{#if relation.evidenceStatus!=='documented'}<p class="s-meta">{relation.evidenceStatus==='disputed'?'Forbindelsen er omstridt.':'Forbindelsen er usikker.'}</p>{/if}{#each relation.sourceIds as sourceId}{@const source=sourceFor(sourceId)}{#if source}<a class="source-link" href={source.url} target="_blank" rel="noreferrer">{source.title} ↗</a>{/if}{/each}{/each}</details>{/if}</details>{/if}
           <details class="s-disclosure"><summary>Kilder</summary>{#each (current.sources || []) as source}<a class="source-link" href={source.url} target="_blank" rel="noreferrer">{source.title} ↗</a>{/each}{#each current.sourceIds as sourceId}{@const source=sourceFor(sourceId)}{#if source}<a class="source-link" href={source.url} target="_blank" rel="noreferrer">{source.title} ↗</a>{/if}{/each}</details>
           </div>
-          {#if usedHint || learnedFirst || correct!==true || session.practice || session.queue[session.index]?.sessionRetry}
-            <p class="s-next-note">{retryNote(fallbackRating()) || (session.queue[session.index]?.sessionRetry?'Lagret som øving i denne quizen':'Svar uten hjelp lagres som riktig')}</p>
+          {#if usedHint || learnedFirst || selfApproved || correct!==true || session.practice || session.queue[session.index]?.sessionRetry}
+            <p class="s-next-note">{selfApproved?'Lagres som riktig etter egenvurdering':retryNote(fallbackRating()) || (session.queue[session.index]?.sessionRetry?'Lagret som øving i denne quizen':'Svar uten hjelp lagres som riktig')}</p>
             <div class="s-bar"><button class="primary" disabled={busy} onclick={()=>run(()=>rate(fallbackRating()))}>Neste</button></div>
           {:else}
             <p class="s-next-note">Neste repetisjon {whenLabel(intervals[3])}</p>
@@ -830,7 +834,7 @@
     <div class="card"><h2>Siste sju dager</h2><div class="week-activity">{#each progress.days as day}<div><strong>{day.count}</strong><span class="activity-bar" style={`height:${8+Math.min(60,day.count*3)}px`}></span><small>{day.label}</small></div>{/each}</div><p class="muted">Antall besvarte oppgaver, inkludert ekstraøving.</p></div>
     {/if}
     
-    {#if progressTab==='overview'}<div class="card"><h2>Hva slags øving?</h2><p class="muted">Siste svar uten hjelp, fordelt på ferdighet. Egenvurderte forklaringer er ikke en måling av full mestring.</p><div class="result-grid"><span><strong>{abilities.recognized}</strong>gjenkjent</span><span><strong>{abilities.recalled}</strong>hentet fram</span><span><strong>{abilities.explained}</strong>forklart med egenvurdering</span></div></div>{/if}
+    {#if progressTab==='overview'}<div class="card"><h2>Hva slags øving?</h2><p class="muted">Siste svar uten hjelp, fordelt på ferdighet. Egenvurderte forklaringer er ikke en måling av full mestring.</p><div class="result-grid"><span><strong>{abilities.recognized}</strong>gjenkjent</span><span><strong>{abilities.recalled}</strong>hentet fram</span><span><strong>{abilities.explained}</strong>forklart med egenvurdering</span></div>{#if selfApprovedCount}<p class="muted">{selfApprovedCount} tekstsvar er godkjent av deg selv. De teller som riktige, men aldri som «Satt lett».</p>{/if}</div>{/if}
     {#if progressTab==='levels'}
       {@const insight=axisInsights(targets,reviews)}
       <div class="card"><h2>Hva gjør det vanskelig for deg?</h2>
@@ -896,5 +900,5 @@
   {#if confirmRestore}<div class="card confirm" role="alert"><h2>Erstatte lokale data?</h2><p>Dette gjenoppretter sikkerhetskopien fra {displayDate(confirmRestore.exportedAt)} og erstatter kunnskapen og læringshistorikken på denne enheten. Eksporter en kopi først hvis du vil beholde den.</p><button class="primary" disabled={busy} onclick={()=>run(restore)}>Erstatt med denne sikkerhetskopien</button><button class="secondary" onclick={()=>confirmRestore=null}>Avbryt</button></div>{/if}
   {#if pendingDestruction==='logs'}<div class="card confirm" role="alert"><h2>Tømme diagnostikkloggen?</h2><p>Læringshistorikken beholdes. Den lokale diagnostikkloggen slettes.</p><button class="primary" onclick={()=>run(async()=>{await clearLogs(db);pendingDestruction='';await refresh();})}>Tøm diagnostikkloggen</button><button class="secondary" onclick={()=>pendingDestruction=''}>Avbryt</button></div>{/if}
 </main>
-<Feedback context={()=>({appVersion:APP_VERSION,view,packageId:data?.id,packageVersion:data?.version,target:current?{id:current.id,prompt:current.prompt,mode:current.mode,entityId:current.entityId}:null,session:sessionScreen?{index:session?.index,total:session?.queue.length,revealed,correct,usedHint}:null,focus:JSON.parse(JSON.stringify(prefs)),offlineTest,error})}/>
+<Feedback context={()=>({appVersion:APP_VERSION,view,packageId:data?.id,packageVersion:data?.version,target:current?{id:current.id,prompt:current.prompt,mode:current.mode,entityId:current.entityId}:null,session:sessionScreen?{index:session?.index,total:session?.queue.length,revealed,correct,usedHint}:null,focus:JSON.parse(JSON.stringify(prefs)),selfApproved:selfApprovals(targets,reviews),offlineTest,error})}/>
 {#if toast}<div id="toast" class="toast" role="status" aria-live="polite"><span>{toast}</span><button class="quiet" aria-label="Lukk melding" onclick={()=>toast=''}>×</button></div>{/if}

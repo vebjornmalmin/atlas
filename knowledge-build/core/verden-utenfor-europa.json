@@ -167,13 +167,13 @@
           "step": 3,
           "type": "choice",
           "prompt": "Hvorfor ble embetsmennene i provinsene utnevnt av keiseren og ikke arvet sine stillinger?",
-          "answer": "Så makten ble samlet hos keiseren",
+          "answer": "Så lokale stormenn ikke kunne bygge opp egen makt",
           "distractors": [
             "Så adelen kunne velge sine egne lensherrer",
             "Så provinsene kunne styre seg selv",
             "Så byene kunne sende egne sendemenn"
           ],
-          "explain": "Embetsmennene ble stadig flyttet og holdt under skarp kontroll. Dermed kunne ingen lokal stormann bygge opp egen makt i provinsen."
+          "explain": "Embetsmennene ble stadig flyttet og holdt under skarp kontroll. Makten ble dermed samlet hos keiseren og hoffet, ikke hos slekter i provinsene."
         },
         {
           "id": "vue-kina-qin-tang-aar",

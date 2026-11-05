@@ -10,6 +10,12 @@ Natural Earth data is [public domain](https://www.naturalearthdata.com/about/ter
 
 Coordinates use a simple equirectangular display projection: x = 2 × (longitude + 180), y = 2 × (85 − latitude). Douglas–Peucker simplification uses a tolerance of 0.25 display units. Regions use lowercase ISO A3 IDs, with Natural Earth administrative IDs for entries lacking an ISO code. The current data includes Norway (`nor`), France (`fra`), Italy (`ita`), Brazil (`bra`), Japan (`jpn`), Egypt (`egy`), United States of America (`usa`), India (`ind`), and Australia (`aus`).
 
+## Projections in Atlas → Kart
+
+Because the world map is equirectangular, `src/lib/projections.js` reads longitude and latitude back from the paths (lon = x/2 − 180, lat = 85 − y/2). Long edges are split every 2° so borders that follow a parallel keep following it, rings inside a larger ring become holes (Lesotho), and every ring is turned to enclose the small side of the sphere as d3 expects. `d3-geo` 3.1.1 and `d3-geo-projection` 4.0.0 (ISC) then draw the same regions in the chosen projection with the same region IDs, so colouring, labels, tapping and grading by ID work unchanged.
+
+The geometry was simplified in flat map units, so it is coarser near the poles than near the equator. Natural Earth cuts Russia and Fiji at the antimeridian; on the globe the cut can show as a faint line. The quizzes keep the flat map.
+
 ## Norway
 
 `public/maps/norway.json` contains all 15 official counties. It derives from [Kartverket – Administrative enheter fylker](https://kartkatalog.geonorge.no/metadata/administrative-enheter-fylker/6093c8a8-fa80-11e6-bc64-92361f002671), reference date 1 January 2026, retrieved 10 October 2026. [Download ZIP, EUREF89 / UTM zone 33](https://nedlasting.geonorge.no/geonorge/Basisdata/Fylker/GeoJSON/Basisdata_0000_Norge_25833_Fylker_GeoJSON.zip).

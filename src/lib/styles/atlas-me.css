@@ -185,6 +185,21 @@
 .atlas-kart .lens-menu{position:absolute;z-index:6;left:8px;right:8px;bottom:54px;max-height:calc(100% - 118px);overflow-y:auto;display:grid;grid-template-columns:1fr 1fr;gap:0 12px;padding:6px 12px;border:1px solid var(--line);border-radius:var(--r-l);background:color-mix(in srgb,var(--surface) 96%,transparent);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 12px 30px #1b231a24;overscroll-behavior:contain}
 .atlas-kart .lens-option{min-height:44px;padding:8px 2px;border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;box-shadow:none;color:var(--ink);font-size:13.5px;text-align:left;line-height:1.25}
 .atlas-kart .lens-option[aria-pressed="true"]{color:var(--accent);font-weight:650;box-shadow:inset 3px 0 0 var(--accent);padding-left:10px}
+/* Projections: inside the globe's outline is sea, outside it is page. The globe is shaded like a ball. */
+.atlas-kart .world-map.projected{background:var(--bg)}
+.atlas-kart .world-map path.map-sphere{fill:var(--surface-2);stroke:var(--line);stroke-width:1;pointer-events:none}
+.atlas-kart .world-map path.map-graticule{fill:none;stroke:color-mix(in srgb,var(--muted) 22%,transparent);stroke-width:.5;pointer-events:none}
+.atlas-kart .world-map .globe-shade{pointer-events:none}
+.atlas-kart .world-map .shade-light{stop-color:#fff;stop-opacity:0}
+.atlas-kart .world-map .shade-dark{stop-color:#000;stop-opacity:.16}
+.atlas-kart .projection-pill{left:auto;right:6px;display:inline-flex;align-items:center;gap:7px;max-width:calc(100% - 150px);padding:0 14px;color:var(--ink);font-weight:600}
+.atlas-kart .projection-pill small{font-size:10px;font-weight:650;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.atlas-kart .projection-pill svg{flex:none;width:14px;height:14px}
+.atlas-kart .projection-pill svg path{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.atlas-kart .projection-menu{position:absolute;z-index:6;left:8px;right:8px;top:50px;max-height:calc(100% - 112px);overflow-y:auto;display:grid;grid-template-columns:1fr 1fr;gap:0 12px;padding:6px 12px;border:1px solid var(--line);border-radius:var(--r-l);background:color-mix(in srgb,var(--surface) 96%,transparent);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 12px 30px #1b231a24;overscroll-behavior:contain}
+.atlas-kart .projection-option small{display:block;margin-top:2px;font-size:11px;font-weight:400;color:var(--muted)}
+.atlas-kart .projection-note{margin:12px 0 0;font-size:14px;line-height:1.5}
+.atlas-kart .projection-note strong{font-family:var(--serif);font-weight:400;font-size:16px}
 .atlas-kart .world-map text.map-label{fill:var(--muted);stroke:var(--bg);paint-order:stroke;stroke-linejoin:round;font-family:var(--sans);font-weight:600;text-anchor:middle;dominant-baseline:middle;pointer-events:none}
 .atlas-kart .world-map text.map-label.main{fill:var(--ink);font-family:var(--serif);font-weight:400}
 

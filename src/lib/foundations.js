@@ -14,86 +14,86 @@ const anchors = [
   {
     id: 'washington-first', entityId: 'george-washington', collectionIds: ['us-presidents'], year: 1789,
     prompt: 'Hva er George Washington særlig kjent for?', answer: 'Han var USAs første president.',
-    distractors: ['Han ledet USA under andre verdenskrig.', 'Han satte målet om en bemannet månelanding.'],
+    distractors: ['Han skrev hovedutkastet til uavhengighetserklæringen.', 'Han ledet Unionen under borgerkrigen.', 'Han kjøpte Louisiana fra Frankrike.'],
     snapshot: 'George Washington ble USAs første president i 1789. Han hadde tidligere ledet hæren i kampen for uavhengighet fra Storbritannia.',
     explanation: 'Washington var med på å grunnlegge USA og ble landets første president.', sources: [washington]
   },
   {
     id: 'jefferson-declaration', entityId: 'thomas-jefferson', collectionIds: ['us-presidents', 'history'], year: 1776,
     prompt: 'Hvilket dokument skrev Thomas Jefferson hovedutkastet til?', answer: 'USAs uavhengighetserklæring',
-    distractors: ['FN-pakten', 'Magna Carta'],
+    distractors: ['USAs grunnlov', 'Frigjøringserklæringen', 'Monroe-doktrinen'],
     snapshot: 'Thomas Jefferson skrev hovedutkastet til USAs uavhengighetserklæring i 1776. Andre i komiteen og Kongressen endret teksten.',
     explanation: 'Erklæringen begrunnet kolonienes brudd med Storbritannia. Jefferson skrev hovedutkastet, men teksten var et felles arbeid.', sources: [declaration]
   },
   {
     id: 'lincoln-civil-war', entityId: 'abraham-lincoln', collectionIds: ['us-presidents'], year: 1861,
     prompt: 'Hvilken krig var Abraham Lincoln president under?', answer: 'Den amerikanske borgerkrigen',
-    distractors: ['Første verdenskrig', 'Andre verdenskrig'],
+    distractors: ['Den meksikansk-amerikanske krigen', 'Krigen i 1812', 'Den spansk-amerikanske krigen'],
     snapshot: 'Abraham Lincoln var president under den amerikanske borgerkrigen på 1860-tallet. Nordstatene kjempet mot sørstatene som hadde brutt ut av USA.',
-    explanation: 'Lincoln ledet Unionen under borgerkrigen. Slaveriet var sentralt i konflikten.', sources: [emancipation]
+    explanation: 'Lincoln ledet Unionen under borgerkrigen, og slaveriet var sentralt i konflikten. Krigen i 1812 og krigen mot Mexico i 1846–1848 kom før han ble president, krigen mot Spania i 1898 etter.', sources: [emancipation]
   },
   {
     id: 'lincoln-emancipation', entityId: 'abraham-lincoln', collectionIds: ['us-presidents'], year: 1863,
-    prompt: 'Hva handlet Lincolns frigjøringserklæring om?', answer: 'Frihet for mennesker holdt som slaver i opprørsområdene',
-    distractors: ['Uavhengighet fra Storbritannia', 'Opprettelsen av FN'],
+    prompt: 'Hva handlet Lincolns frigjøringserklæring om?', answer: 'Slaver i områdene som gjorde opprør, ble erklært frie',
+    distractors: ['Slaveriet ble forbudt i hele USA', 'Frigjorte slaver fikk stemmerett', 'Slaver som flyktet nordover, skulle sendes tilbake'],
     snapshot: 'Lincoln utstedte frigjøringserklæringen under borgerkrigen. Den erklærte slaver i opprørsområdene frie, men avskaffet ikke slaveriet i hele USA.',
     explanation: 'Erklæringen var et viktig steg. Slaveriet i hele USA ble forbudt gjennom det 13. grunnlovstillegget i 1865.', sources: [emancipation]
   },
   {
     id: 'roosevelt-depression', entityId: 'franklin-d-roosevelt', collectionIds: ['us-presidents'], year: 1933,
-    prompt: 'Hva skulle Franklin D. Roosevelts «New Deal» hjelpe USA ut av?', answer: 'En dyp økonomisk krise',
-    distractors: ['En borgerkrig', 'En krig om uavhengighet'],
+    prompt: 'Hva skulle Franklin D. Roosevelts «New Deal» hjelpe USA ut av?', answer: 'Den store depresjonen',
+    distractors: ['Panikken i 1907', 'Oljekrisen på 1970-tallet', 'Finanskrisen i 2008'],
     snapshot: 'Franklin D. Roosevelt tok over under den store depresjonen, da millioner var uten arbeid. «New Deal» var tiltak for arbeid, hjelp og økonomiske reformer.',
     explanation: 'Den store depresjonen var en alvorlig økonomisk krise. New Deal samlet tiltak for å hjelpe befolkningen og endre økonomien.', sources: [roosevelt]
   },
   {
     id: 'roosevelt-world-war', entityId: 'franklin-d-roosevelt', collectionIds: ['us-presidents'], year: 1941,
     prompt: 'Hvem var USAs president da landet gikk inn i andre verdenskrig?', answer: 'Franklin D. Roosevelt',
-    distractors: ['George Washington', 'Abraham Lincoln'],
+    distractors: ['Harry S. Truman', 'Herbert Hoover', 'Woodrow Wilson'],
     snapshot: 'USA gikk inn i andre verdenskrig etter Japans angrep på Pearl Harbor i 1941. Franklin D. Roosevelt var da president.',
-    explanation: 'Roosevelt ledet USA gjennom det meste av landets deltakelse i krigen. Han døde i 1945, før krigen var slutt.', sources: [roosevelt]
+    explanation: 'Roosevelt ledet USA gjennom det meste av landets deltakelse i krigen. Han døde i april 1945, og visepresident Harry S. Truman tok over før krigen var slutt.', sources: [roosevelt]
   },
   {
     id: 'kennedy-moon', entityId: 'john-f-kennedy', collectionIds: ['us-presidents'], year: 1961,
     prompt: 'Hvilket mål satte John F. Kennedy for det amerikanske romprogrammet?', answer: 'Å lande mennesker på månen og få dem trygt hjem',
-    distractors: ['Å bygge en bemannet base på Mars', 'Å sende mennesker til Jupiter'],
+    distractors: ['Å skyte opp USAs første satellitt', 'Å bygge en fast bemannet romstasjon', 'Å sende en romsonde ut av solsystemet'],
     snapshot: 'John F. Kennedy satte som mål å sende mennesker til månen og trygt hjem innen 1960-tallet var over. Apollo 11 nådde månen i 1969, etter hans død.',
-    explanation: 'Månelandingen var et sentralt mål i romkappløpet. Kennedy satte målet; Apollo 11 gjennomførte det senere.', sources: [kennedy]
+    explanation: 'Månelandingen var et sentralt mål i romkappløpet. Kennedy satte målet i 1961, og Apollo 11 gjennomførte det i 1969. USAs første satellitt var allerede skutt opp i 1958, før Kennedy ble president.', sources: [kennedy]
   },
   {
     id: 'obama-first-black', entityId: 'barack-obama', collectionIds: ['us-presidents'], year: 2009,
     prompt: 'Hva var historisk ved Barack Obamas valgseier?', answer: 'Han ble USAs første svarte president.',
-    distractors: ['Han ble USAs første president.', 'Han ble den første presidenten på 1900-tallet.'],
+    distractors: ['Han ble USAs yngste valgte president.', 'Han ble USAs første katolske president.', 'Han fikk flest valgmannsstemmer noensinne.'],
     snapshot: 'Barack Obama vant presidentvalget i 2008. Da han tiltrådte i 2009, ble han USAs første svarte president.',
     explanation: 'Obama var den første afroamerikaneren som ble valgt til USAs president.', sources: [obama]
   },
   {
     id: 'declaration-independence', entityId: 'us-declaration-of-independence-adopted', collectionIds: ['history'], year: 1776,
-    prompt: 'Hva erklærte de tretten koloniene med uavhengighetserklæringen?', answer: 'At de var uavhengige av Storbritannia',
-    distractors: ['At de ville bli en del av Frankrike', 'At de opprettet FN'],
+    prompt: 'Hva erklærte de tretten britiske koloniene i Nord-Amerika i juli 1776?', answer: 'At de var uavhengige av Storbritannia',
+    distractors: ['At de ville forbli lojale mot kongen og forhandle', 'At de hadde sluttet fred med Storbritannia', 'At slavehandelen skulle avskaffes'],
     snapshot: 'I 1776 erklærte tretten britiske kolonier i Nord-Amerika seg uavhengige. Uavhengighetserklæringen forklarte hvorfor de ville bryte med Storbritannia.',
-    explanation: 'Erklæringen markerte et politisk brudd med Storbritannia. Den betydde ikke at krigen var over.', sources: [declaration]
+    explanation: 'Erklæringen markerte et politisk brudd med Storbritannia. Den betydde ikke at krigen var over: freden kom først i 1783.', sources: [declaration]
   },
   {
     id: 'd-day-france', entityId: 'd-day-landings-in-normandy', collectionIds: ['history'], year: 1944,
-    prompt: 'I hvilket land fant landgangen i Normandie sted?', answer: 'Frankrike',
-    distractors: ['Norge', 'Italia'],
+    prompt: 'Hvor gikk de allierte i land på D-dagen i juni 1944?', answer: 'Normandie i Nord-Frankrike',
+    distractors: ['Calais i Nord-Frankrike', 'Provence i Sør-Frankrike', 'Sicilia i Sør-Italia'],
     snapshot: 'På D-dagen gikk allierte styrker i land i Normandie i Frankrike. Landgangen åpnet en ny front mot Nazi-Tyskland i Vest-Europa.',
-    explanation: 'Normandie ligger i Nord-Frankrike. Landgangen i 1944 ble starten på en større offensiv i Vest-Europa.', sources: [dday]
+    explanation: 'Landgangen i Normandie åpnet en ny front i Vest-Europa. Tyskerne ventet angrepet ved Calais, der kanalen er smalest. Sicilia ble invadert i 1943, og Provence i august 1944.', sources: [dday]
   },
   {
     id: 'un-peace', entityId: 'united-nations-begins', collectionIds: ['history'], year: 1945,
     prompt: 'Hva var et hovedmål da FN ble opprettet?', answer: 'Å bevare fred og forebygge nye kriger',
-    distractors: ['Å styre alle land som én stat', 'Å erstatte alle nasjonale språk'],
+    distractors: ['Å gjenreise Europa med amerikanske lån', 'Å forsvare medlemmene mot Sovjetunionen', 'Å skape et felles marked i Europa'],
     snapshot: 'FN ble opprettet i 1945 etter ødeleggelsene under andre verdenskrig. Landene ville samarbeide for å bevare fred og forebygge nye kriger.',
     explanation: 'FN er en organisasjon der medlemsland samarbeider. Fred og internasjonal sikkerhet er sentrale mål.', sources: [un]
   },
   {
     id: 'apollo-moon', entityId: 'apollo-11-moon-landing', collectionIds: ['history'], year: 1969,
     prompt: 'Hva oppnådde Apollo 11?', answer: 'Den første bemannede landingen på månen',
-    distractors: ['Den første bemannede landingen på Mars', 'Den første satellitten i bane rundt jorden'],
+    distractors: ['Den første bemannede ferden rundt månen', 'Den første romvandringen', 'Det første mennesket i bane rundt jorden'],
     snapshot: 'Apollo 11 landet på månen i 1969. Neil Armstrong og Buzz Aldrin gikk på overflaten, mens Michael Collins var i bane rundt månen.',
-    explanation: 'Apollo 11 var første gang mennesker landet på månen. Alle de tre astronautene kom tilbake til jorden.', sources: [apollo]
+    explanation: 'Apollo 11 var første gang mennesker landet på månen, og alle de tre astronautene kom tilbake til jorden. Apollo 8 hadde fløyet i bane rundt månen i 1968 uten å lande.', sources: [apollo]
   }
 ];
 
