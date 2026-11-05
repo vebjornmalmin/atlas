@@ -8,6 +8,8 @@ Live app: https://atlas-first-app.atlas-memory.workers.dev
 
 Appen ser ut og virker som 1.3.0. Endringen gjelder hvordan Cloudflare leverer filene: i stedet for at Workeren pakker ut hver fil ved hver forespørsel, serveres `build/` som statiske filer. Kunnskapspakken krevde omkring 60 ms prosessortid per nedlasting med den gamle løsningen, mens gratisplanen tillater 10 ms. Nå brukes ingen prosessortid, så første installasjon og oppdateringer er mindre utsatt for feil. Sikkerhetshodene ligger i `build/_headers`, og `/version.json` erstatter `/health`.
 
+Publisert 5. november 2026: app 1.3.1, utgivelse `2549ed8cd190`, kunnskapspakke 2.2.0 (uendret), som statiske filer via Wrangler fra `main` etter at `main` var sendt til GitHub. `/`, `/sw.js` og kunnskapspakken svarer med sikkerhetshodene, ETag og Brotli-komprimering, og `/_app/immutable/*` caches i ett år. `/_headers` og `/health` svarer 404. I iPhone 17 Pro-simulatoren oppdaterte en installert eldre utgave seg mot det lokale bygget, og den publiserte adressen viste I dag med dagens kapittel.
+
 ## 1.3.0: Et atlas, ikke en mal
 
 Hele grensesnittet er tegnet om, slik at appen ser ut som et redigert oppslagsverk og bruker skjermen bedre. Funksjoner, spørsmål, retting og data er uendret.
