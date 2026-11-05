@@ -34,6 +34,7 @@
   import {answerPresentation,contextualExplanation,questionSupport} from '../lib/presentation.js';
   import { openDatabase, all, get, put, installPackage, recordReview, logEvent, exportDatabase, restoreDatabase, clearLogs, transaction } from '../lib/storage.js';
   import { validatePackage, contentHash, readiness } from '../lib/content.js';
+  import { readUiState, saveUiState } from '../lib/ui-state.js';
   import { DEFAULT_PREFERENCES, selectSession, selectPracticeSession, scheduleReview, stateForTarget, ratingIntervals, memorySummary, reminderCalendar, targetMatches } from '../lib/learning.js';
   import { checkAnswer, makeRecognitionOptions, buildRecognitionIndex, hasRecognitionOptions, buildTimelineExercise, gradeTimeline, createMapExercise, gradeMapSelection } from '../lib/exercises.js';
 
@@ -69,6 +70,14 @@
   let quizMode = $state('mixed');
   let quizSetup = $state(false);
   let progressTab = $state('overview');
+  // Where the learner was (tabs, open page, search, timeline, quiz choices, scroll), kept between visits.
+  let timelineState = $state({zoom:'',domain:'',selectedId:''});
+  let scrollY = $state(0);
+  let uiReady = $state(false);
+  let restoreScroll = 0;
+  const uiSnapshot = () => ({view,atlasTab,meTab,progressTab,query,collectionFilter,selectedUnit,detailId,quizSetup,quiz:{collection:quizCollection,level:quizLevel,mode:quizMode},timeline:{...timelineState},scrollY});
+  function keepUiState(){try{saveUiState(localStorage,uiSnapshot());}catch{/* The app still works; it just opens at the start next time. */}}
+  $effect(()=>{const state=uiSnapshot();if(uiReady && state)keepUiState();});
   let journalWarning = false;
   const stageLabel = stage => ({foundation:'Grunnlag',details:'Detaljer',connections:'Avansert'}[stage] || stage);
   function draftNow() { return questionDraft(current?.id,{answer,formatDraft,correct,revealed,usedHint,timelineOrder,selectedRegion,mapView,introduction,learnedFirst,gradeNote}); }
@@ -335,6 +344,8 @@
     return next;
   }
   function navigate(route) { const next = resolveRoute(route); window.location.hash = next; view = next; sessionScreen = false; window.scrollTo(0,0); }
+  // The relevance weights live in one place, next to the map that shows what they do.
+  async function openWeights() { atlasTab = 'kart'; navigate('atlas'); await tick(); requestAnimationFrame(()=>{ const panel=document.querySelector('#world-weights'); if (panel) { panel.open=true; panel.scrollIntoView({block:'start'}); } }); }
   function openUnit(id) { selectedUnit = id; detailId = ''; query = ''; collectionFilter = ''; atlasTab = 'emner'; navigate('atlas'); }
   async function prepareQuestion(draft = null) {
     const saved=restoreDraft(current,draft);
@@ -521,7 +532,21 @@
       if(view!=='today')sessionScreen=false;
       detailId='';error='';
     };
+    // Reopen where the learner left off. A link with its own #route wins over the saved view.
+    let ui=null;
+    try{ui=readUiState(localStorage);}catch{/* No saved place; start on I dag. */}
+    if(ui){
+      ({atlasTab,meTab,progressTab,query,collectionFilter,selectedUnit}=ui);
+      quizCollection=ui.quiz.collection;quizLevel=ui.quiz.level;quizMode=ui.quiz.mode;timelineState=ui.timeline;
+      if(!window.location.hash.slice(1))history.replaceState(null,'',`#${ui.view}`);
+    }
     route(); window.addEventListener('hashchange',route);
+    if(ui && view===ui.view){detailId=ui.detailId;quizSetup=ui.quizSetup && view==='today';restoreScroll=ui.scrollY;}
+    uiReady=true;
+    let scrollTimer;
+    const onScroll=()=>{if(!scrollTimer)scrollTimer=setTimeout(()=>{scrollTimer=undefined;scrollY=Math.round(window.scrollY);},300);};
+    const onHide=()=>{if(document.visibilityState==='hidden'){scrollY=Math.round(window.scrollY);keepUiState();}};
+    window.addEventListener('scroll',onScroll,{passive:true});document.addEventListener('visibilitychange',onHide);window.addEventListener('pagehide',onHide);
     offlineTest=new URLSearchParams(window.location.search).has('offline-test');
     installed=window.matchMedia('(display-mode: standalone)').matches || Boolean(navigator.standalone);
     const prompt=event=>{event.preventDefault();installPrompt=event;};
@@ -571,9 +596,10 @@
         void checkUpdates().catch(failure=>recordError('updates',failure));
       }catch(failure){await recordError('startup',failure);}
       finally{if(!disposed)loading=false;}
+      if(!disposed && restoreScroll && !sessionScreen){await tick();requestAnimationFrame(()=>window.scrollTo(0,restoreScroll));}
     };
     void boot();
-    return ()=>{disposed=true;clearInterval(timer);clearInterval(clockTimer);window.removeEventListener('hashchange',route);window.removeEventListener('beforeinstallprompt',prompt);window.removeEventListener('online',connectionChanged);window.removeEventListener('offline',connectionChanged);document.removeEventListener('visibilitychange',visible);window.removeEventListener('unhandledrejection',unhandled);db?.close();};
+    return ()=>{disposed=true;clearInterval(timer);clearInterval(clockTimer);window.removeEventListener('hashchange',route);window.removeEventListener('scroll',onScroll);document.removeEventListener('visibilitychange',onHide);window.removeEventListener('pagehide',onHide);window.removeEventListener('beforeinstallprompt',prompt);window.removeEventListener('online',connectionChanged);window.removeEventListener('offline',connectionChanged);document.removeEventListener('visibilitychange',visible);window.removeEventListener('unhandledrejection',unhandled);db?.close();};
   });
 </script>
 
@@ -773,7 +799,7 @@
       {:else}
         <div class="ruled-tabs" role="tablist" aria-label="Velg visning">{#each [['tid','Tid'],['kart','Kart'],['emner','Emner']] as [id,label]}<button role="tab" aria-selected={atlasTab===id} onclick={()=>{atlasTab=id;if(id!=='emner')selectedUnit='';}}>{label}</button>{/each}</div>
         {#if atlasTab==='tid' && data.curriculum && coreProgress}
-          <div class="atlas-tid"><StorySpine curriculum={data.curriculum} progress={coreProgress} highlight={selection.units || []} onOpen={openUnit} /></div>
+          <div class="atlas-tid"><StorySpine curriculum={data.curriculum} progress={coreProgress} highlight={selection.units || []} onOpen={openUnit} bind:zoom={timelineState.zoom} bind:domain={timelineState.domain} bind:selectedId={timelineState.selectedId} /></div>
         {:else if atlasTab==='kart'}
           {#if worldGraph && maps.some(m=>m.id==='world')}<WorldExplorer graph={worldGraph} dataset={maps.find(m=>m.id==='world')} bind:relevance={prefs.relevance} {typeLabel} {relationLabel} formatAvailable={id=>targets.some(t=>t.format===id)} onSave={()=>run(()=>put(db,'settings',JSON.parse(JSON.stringify(prefs))))} onOpen={id=>{detailId=id;view='atlas';window.location.hash='atlas';window.scrollTo(0,0);}} onQuiz={(objective,scope)=>run(()=>beginSession(objective,scope))} />
     {:else}<div class="card"><p>Verdensutforskeren trenger kunnskapspakke 2.1.0. Koble til nettet for å oppdatere.</p><button class="secondary" disabled={busy} onclick={()=>run(()=>checkUpdates(true))}>Se etter oppdatering</button></div>{/if}
@@ -794,7 +820,7 @@
     <h1 class="me-title">Deg</h1>
     <div class="ruled-tabs" role="tablist" aria-label="Velg visning">{#each [['fremgang','Fremgang'],['okten','Økten'],['innstillinger','Innstillinger']] as [id,label]}<button role="tab" aria-selected={meTab===id} onclick={()=>meTab=id}>{label}</button>{/each}</div>
     {#if meTab==='fremgang'}
-<div class="sub-nav" role="group" aria-label="Velg fremgangsvisning">{#each [{id:'overview',label:'Oversikt'},{id:'levels',label:'Nivåer og akser'},{id:'topics',label:'Emner'},{id:'library',label:'Innholdsdekning'},{id:'history',label:'Siste svar'}] as tab}<button aria-pressed={progressTab===tab.id} onclick={event=>{progressTab=tab.id;event.currentTarget.scrollIntoView?.({inline:'center',block:'nearest'});window.scrollTo(0,0);}}>{tab.label}</button>{/each}</div>
+<div class="sub-nav" role="group" aria-label="Velg fremgangsvisning">{#each [{id:'overview',label:'Oversikt'},{id:'levels',label:'Nivåer og akser'},{id:'topics',label:'Quiztemaer'},{id:'history',label:'Siste svar'}] as tab}<button aria-pressed={progressTab===tab.id} onclick={event=>{progressTab=tab.id;event.currentTarget.scrollIntoView?.({inline:'center',block:'nearest'});window.scrollTo(0,0);}}>{tab.label}</button>{/each}</div>
     {#if progressTab==='overview'}
     <section class="ledger-stats"><div class="stat-row"><div class="stat"><strong>{summary.answered}</strong><span>Ulike spørsmål besvart</span></div><div class="stat"><strong>{summary.correct}</strong><span>Riktige uten hjelp sist</span></div></div><p class="muted">Dagens økt, emner og fri quiz teller med.</p></section>
     {/if}
@@ -805,7 +831,6 @@
     {/if}
     
     {#if progressTab==='overview'}<div class="card"><h2>Hva slags øving?</h2><p class="muted">Siste svar uten hjelp, fordelt på ferdighet. Egenvurderte forklaringer er ikke en måling av full mestring.</p><div class="result-grid"><span><strong>{abilities.recognized}</strong>gjenkjent</span><span><strong>{abilities.recalled}</strong>hentet fram</span><span><strong>{abilities.explained}</strong>forklart med egenvurdering</span></div></div>{/if}
-    {#if progressTab==='library'}<div class="card"><h2>Hva inneholder biblioteket?</h2><p class="muted">Dette viser innhold og mangler. Det måler ikke kunnskapen din eller full dekning av et fag.</p></div>{#each contentCoverage as coverage}<details class="card"><summary>{coverage.title}</summary><p class="muted">{coverage.scope}</p><p>{coverage.facts} testede fakta · {coverage.introductions} introduksjoner · {coverage.connections} sammenhengsøvelser · {coverage.paths} læringsstier</p><p class="muted">{coverage.untestedEntities} registeroppføringer uten øvelser. {coverage.sourced} testede fakta har kilder.</p>{#if coverage.gaps.length}<h3>Videre utvikling</h3><ul>{#each coverage.gaps as gap}<li>{gap}</li>{/each}</ul>{/if}</details>{/each}{/if}
     {#if progressTab==='levels'}
       {@const insight=axisInsights(targets,reviews)}
       <div class="card"><h2>Hva gjør det vanskelig for deg?</h2>
@@ -819,7 +844,7 @@
         <p class="muted">{result.correct} riktige uten hjelp · {result.answered-result.correct} trenger øving · {result.remaining} usett</p>
         <button class="secondary" disabled={busy} onclick={()=>run(()=>beginSession('mixed',{level:level.id,title:`Nivå ${level.id}: ${level.name}`}))}>Øv på nivå {level.id}</button></div>{/each}
     {/if}
-    {#if progressTab==='topics'}<h2 class="section-title">Emner du har øvd på</h2>{#each data.collections as collection}{@const result=quizProgress(targets.filter(t=>t.collectionIds.includes(collection.id)),reviews)}{#if result.answered}<button class="entity-row" onclick={()=>{quizCollection=collection.id;quizSetup=true;navigate('today');quizSetup=true;}}><span><strong>{collection.title}</strong><small>{result.answered} besvart · {result.correct} riktige sist</small></span><span>→</span></button>{/if}{/each}
+    {#if progressTab==='topics'}<h2 class="section-title">Quiztemaer du har øvd på</h2>{#each data.collections as collection}{@const result=quizProgress(targets.filter(t=>t.collectionIds.includes(collection.id)),reviews)}{#if result.answered}<button class="entity-row" onclick={()=>{quizCollection=collection.id;quizSetup=true;navigate('today');quizSetup=true;}}><span><strong>{collection.title}</strong><small>{result.answered} besvart · {result.correct} riktige sist</small></span><span>→</span></button>{/if}{/each}
     {/if}
     {#if !summary.answered && progressTab==='overview'}<p class="muted">Start en quiz for å se fremgangen din.</p><button class="primary" onclick={()=>navigate('today')}>Velg quiz</button>{/if}
     {#if progressTab==='history'}<details class="card" open><summary>Siste svar</summary>{#each [...reviews].sort((a,b)=>b.timestamp.localeCompare(a.timestamp)).slice(0,10) as review}<p class="detail"><strong>{targets.find(t=>t.id===review.targetId)?.prompt || 'Tidligere spørsmål'}</strong><br><span class="muted">{review.learnedFirst?'Lært først':review.usedHint?'Med hint':review.correct===true?'Riktig':review.correct===false?'Feil':'Svar vist'} · {displayDate(review.timestamp)}</span></p>{/each}</details>{/if}
@@ -832,7 +857,7 @@
         <label class="row toggle"><input type="checkbox" checked={prefs.story!==false} onchange={e=>prefs.story=e.currentTarget.checked}><span>Følg historien gjennom tid<small class="muted">Nye emner åpnes i tidsrekkefølge på tvers av fag, med et tidløst emne innimellom.</small></span></label>
         <fieldset><legend>Nivå for perspektiver og registre</legend><div class="level-picker">{#each LEVELS as l}<button type="button" class="level-option" aria-pressed={preferredLevel(prefs)===l.id} onclick={()=>prefs.level=l.id}><strong>{l.id}</strong><small>{l.name}</small></button>{/each}</div><p class="level-note">{LEVELS.find(l=>l.id===preferredLevel(prefs))?.note || 'Alle nivåer.'}</p></fieldset></div>
       <details class="card"><summary>Registre og fri quiz</summary><p class="muted">Disse valgene gjelder bare quizer fra registrene (Nobelpriser, kommuner, land), ikke emnene.</p><h3>Samlinger</h3><div class="chips">{#each data.collections.filter(c=>!c.core) as collection}<button type="button" class="chip" class:active={prefs.collectionIds.includes(collection.id)} aria-pressed={prefs.collectionIds.includes(collection.id)} onclick={()=>toggleCollection(collection.id)}>{collection.title}</button>{/each}</div>
-      <h3>Hva er relevant for deg?</h3><p class="muted">Spørsmål fra registrene vektes etter hvor sentralt temaet står i nettverket, hvor aktuelt det er i nyhetene, og hvor nær Oslo det ligger.</p>{#each [['impact','Påvirkning'],['actuality','Aktualitet'],['locality','Nærhet']] as [key,name]}<label class="slider">{name} <strong>{prefs.relevance?.[key] ?? DEFAULT_RELEVANCE[key]}</strong><input type="range" min="0" max="100" step="5" value={prefs.relevance?.[key] ?? DEFAULT_RELEVANCE[key]} oninput={e=>prefs.relevance={...DEFAULT_RELEVANCE,...prefs.relevance,[key]:Number(e.currentTarget.value)}}></label>{/each}<div class="stack"><label class="field">Fagområde<select class="select" bind:value={prefs.subject}><option value="all">Alle fagområder</option>{#each [...new Set(data.collections.map(c=>c.subject))] as subject}<option value={subject}>{subjectLabel(subject)}</option>{/each}</select></label><label class="field">Geografisk relevans<select class="select" bind:value={prefs.geography}><option value="global">Global betydning</option><option value="norway">Mer norsk relevans</option></select></label><p class="muted detail">Norske spørsmål prioriteres.</p><label class="field">Bredde<select class="select" bind:value={prefs.breadth}><option value="broad">Veksle mellom fagområder</option><option value="deep">Fordypning</option></select></label><div class="row"><label class="field">Fra år<input class="input" type="number" min="-10000" max="2100" placeholder="Valgfritt" bind:value={prefs.fromYear}></label><label class="field">Til år<input class="input" type="number" min="-10000" max="2100" placeholder="Valgfritt" bind:value={prefs.toYear}></label></div><p class="muted detail">Årsfilteret gjelder spørsmål med dato.</p></div></details>
+      <h3>Hva er relevant for deg?</h3><p class="muted">Spørsmål fra registrene vektes etter påvirkning, aktualitet og nærhet. Nå: Påvirkning {prefs.relevance?.impact ?? DEFAULT_RELEVANCE.impact} · Aktualitet {prefs.relevance?.actuality ?? DEFAULT_RELEVANCE.actuality} · Nærhet {prefs.relevance?.locality ?? DEFAULT_RELEVANCE.locality}.</p><button type="button" class="secondary" onclick={openWeights}>Endre vektingen i Kart</button><div class="stack"><label class="field">Fagområde<select class="select" bind:value={prefs.subject}><option value="all">Alle fagområder</option>{#each [...new Set(data.collections.map(c=>c.subject))] as subject}<option value={subject}>{subjectLabel(subject)}</option>{/each}</select></label><label class="field">Geografisk relevans<select class="select" bind:value={prefs.geography}><option value="global">Global betydning</option><option value="norway">Mer norsk relevans</option></select></label><p class="muted detail">Norske spørsmål prioriteres.</p><label class="field">Bredde<select class="select" bind:value={prefs.breadth}><option value="broad">Veksle mellom fagområder</option><option value="deep">Fordypning</option></select></label><div class="row"><label class="field">Fra år<input class="input" type="number" min="-10000" max="2100" placeholder="Valgfritt" bind:value={prefs.fromYear}></label><label class="field">Til år<input class="input" type="number" min="-10000" max="2100" placeholder="Valgfritt" bind:value={prefs.toYear}></label></div><p class="muted detail">Årsfilteret gjelder spørsmål med dato.</p></div></details>
       <button class="primary" type="submit" disabled={busy}>Lagre</button>
     </form>
     {:else}
@@ -860,6 +885,7 @@
       <div class="chips"><button class="secondary" onclick={()=>run(async()=>{const granted=await navigator.storage?.persist?.();await checkStorage();notify(granted?'Varig lagring er innvilget.':'Nettleseren innvilget ikke varig lagring. Ta sikkerhetskopi jevnlig.');})}>Be om varig lagring</button><button class="secondary" onclick={()=>run(()=>offlineMode(true))}>Test uten nettverk</button></div>
       <h3>Kunnskap</h3><p>{data.id} · {data.version} · skjema {data.schemaVersion}</p><p>{data.entities.length} kunnskapselementer · {data.relationships.length} forbindelser · {data.targets.length} øvelsesmål · {data.sources.length} kilder</p><p>Kunnskapsberedskap: {readiness(data).score}% <span class="muted">(40 % kildedekning + 30 % forklaringsdekning + 30 % forbindelsesdekning)</span></p><p class="muted">Siste innholdssjekk: {lastUpdate?new Date(lastUpdate.checkedAt).toLocaleString('nb-NO'):'Ikke kontrollert'} · {lastUpdate?.status === 'success' ? 'Vellykket' : lastUpdate?.status === 'failed' ? 'Mislyktes' : 'Ukjent'}{lastUpdate?.message?` · ${lastUpdate.message}`:''}</p>
       <div class="chips"><button class="secondary" onclick={()=>run(validateKnowledge)}>Valider</button><button class="secondary" onclick={()=>run(async()=>{await installPackage(db,data,{hash:data.hash});notify('Kunnskapsindeksene er gjenbygd; læringshistorikken er beholdt.');})}>Bygg indeksene på nytt</button></div>
+      <h3>Innholdsdekning</h3><p class="muted">Hva biblioteket inneholder og mangler. Dette måler ikke kunnskapen din.</p>{#each contentCoverage as coverage}<details class="coverage"><summary>{coverage.title}</summary><p class="muted">{coverage.scope}</p><p>{coverage.facts} testede fakta · {coverage.introductions} introduksjoner · {coverage.connections} sammenhengsøvelser · {coverage.paths} læringsstier</p><p class="muted">{coverage.untestedEntities} registeroppføringer uten øvelser. {coverage.sourced} testede fakta har kilder.</p>{#if coverage.gaps.length}<h3>Videre utvikling</h3><ul>{#each coverage.gaps as gap}<li>{gap}</li>{/each}</ul>{/if}</details>{/each}
       <h3>Repetisjonsplan</h3><p class="muted">FSRS · ts-fsrs 5.4.2 · mål for bevaring 90 %</p>{#each [...reviews].reverse().slice(0,8) as review}{@const state=states.find(s=>s.id===(review.schedulerId || review.targetId))}<p class="detail-line"><strong>{review.targetId}</strong><br>{reasonLabel(review.reason)} · {ratingLabels[review.rating-1]} · stabilitet {state?.stability?.toFixed(1) || '0'} d · vanskelighet {state?.difficulty?.toFixed(1) || '0'}<br><span class="muted">{review.nextDue?`Neste: ${new Date(review.nextDue).toLocaleString('nb-NO')}`:'Ekstraøving'}</span></p>{/each}
       <h3>Logg</h3>{#each [...logs].sort((a,b)=>b.timestamp.localeCompare(a.timestamp)).slice(0,10) as log}<p class="detail-line"><strong>{log.component} · {log.severity === 'error' ? 'Feil' : log.severity === 'warning' ? 'Advarsel' : 'Informasjon'}</strong><br>{log.message}<br><span class="muted">{new Date(log.timestamp).toLocaleString('nb-NO')}</span></p>{:else}<p class="muted">Ingen feil er registrert.</p>{/each}
       <div class="chips"><button class="secondary" onclick={()=>download({exportedAt:new Date().toISOString(),logs},'atlas-diagnostics.json')}>Eksporter</button><button class="quiet danger" onclick={()=>pendingDestruction='logs'}>Tøm loggen…</button></div>

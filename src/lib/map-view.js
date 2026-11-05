@@ -66,6 +66,18 @@ export function unionBox(boxes, pad = 0, minSize = 0) {
   return [(x0 + x1) / 2 - w / 2, (y0 + y1) / 2 - h / 2, w, h];
 }
 
+/**
+ * Frame a region with its neighbours, so the map closes in on it without losing the surroundings.
+ * Tiny regions get at least `minShare` of the world's width; a neighbourhood wider than `maxShare`
+ * of the world (Russia, China) falls back to the region itself.
+ */
+export function neighbourhoodFrame(own, near, worldWidth, {pad = .3, minShare = .1, maxShare = .6} = {}) {
+  if (!own) return null;
+  const margin = Math.max(own[2], own[3]) * pad, min = worldWidth * minShare;
+  const box = unionBox([own, ...near], margin, min);
+  return box[2] > worldWidth * maxShare ? unionBox([own], margin, min) : box;
+}
+
 /** A gently curved arrow from a to b; the head is a filled triangle that keeps its size on screen. */
 export function arrowGeometry(a, b, unit = 1, bend = 0.18) {
   const dx = b.x - a.x, dy = b.y - a.y, length = Math.hypot(dx, dy) || 1;

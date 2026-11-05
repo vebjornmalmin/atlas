@@ -2,7 +2,7 @@
   import Flag from './Flag.svelte';
   import {lensView,relatedThrough,lensesFor,findPath,newsWeight,METRIC_NOTES,DEFAULT_RELEVANCE} from './world-graph.js';
   import PanZoomMap from './PanZoomMap.svelte';
-  import {pathBounds} from './map-view.js';
+  import {pathBounds,parseBox,regionAnchor,neighbourhoodFrame} from './map-view.js';
   import {WORLD_FORMAT_CHOICES} from './quiz-formats.js';
   let {graph,dataset,relevance=$bindable({...DEFAULT_RELEVANCE}),typeLabel,relationLabel,onOpen,onQuiz,onSave,formatAvailable}=$props();
 
@@ -14,19 +14,17 @@
   let focusId=$state(saved.focusId || 'norway');
   let pathFrom=$state(saved.pathFrom || ''),pathTo=$state(saved.pathTo || '');
   let fromQuery=$state(''),toQuery=$state('');
+  const regionOf=id=>graph.byId.get(graph.countryOf.get(id))?.geo?.mapRegionId;
+  const regionBounds=region=>{const path=dataset.regions.find(r=>r.id===region)?.path;return path?pathBounds(path,true):null;};
+  const focusFrame=id=>neighbourhoodFrame(regionBounds(regionOf(id)),(graph.neighbours.get(id)||[]).map(n=>regionBounds(graph.byId.get(n)?.geo?.mapRegionId)),parseBox(dataset.viewBox)[2]);
   // Without a saved position the map opens on the focus country, so the tall frame is filled with something to read.
-  const regionBox=id=>{
-    const region=graph.byId.get(graph.countryOf.get(id))?.geo?.mapRegionId,path=dataset.regions.find(r=>r.id===region)?.path;
-    const b=path && pathBounds(path,true);
-    return b?[b[0]-b[2]*1.5-8,b[1]-b[3]*1.5-8,b[2]*4+16,b[3]*4+16]:null;
-  };
-  let mapView=$state.raw(Array.isArray(saved.mapView)?saved.mapView:regionBox(saved.focusId || 'norway'));
+  let mapView=$state.raw(Array.isArray(saved.mapView)?saved.mapView:focusFrame(saved.focusId || 'norway'));
+  let mapUnit=$state(1);
+  let lensMenu=$state(false);
   let worldMap=$state();
   let rankedLimit=$state(10);
   $effect(()=>{const state={lensId,focusId,pathFrom,pathTo,mapView};try {localStorage.setItem(STORE,JSON.stringify(state));} catch {/* The explorer still works without saved position. */}});
 
-  // Keep the chosen lens in view in the strip that sits on the map.
-  $effect(()=>{lensId;const frame=requestAnimationFrame(()=>{const dock=document.querySelector('.lens-strip.dock'),chip=dock?.querySelector('[aria-pressed="true"]');if(dock && chip)dock.scrollLeft=chip.offsetLeft-(dock.clientWidth-chip.offsetWidth)/2;});return ()=>cancelAnimationFrame(frame);});
 
   const now=new Date();
   let view=$derived(lensView(graph,lensId,relevance,now));
@@ -41,11 +39,22 @@
   const percent=value=>Math.round(100*(value||0));
   const label=id=>graph.byId.get(id)?.label || id;
   const flagFor=entity=>entity?.iso2 && entity.geo?entity.iso2:'';
+  // Names on the map: the focus country always, its neighbours once they are big enough on screen to hold one.
+  let mapLabels=$derived.by(()=>{
+    if(!focus)return [];
+    const own=focusRegion && dataset.regions.find(r=>r.id===focusRegion);
+    const labels=own?[{id:focus.id,text:focus.label,at:regionAnchor(own.path),main:true}]:[];
+    for(const n of neighbours){
+      const region=n.geo?.mapRegionId,b=regionBounds(region);
+      if(b && b[2]/mapUnit>n.label.length*7+12)labels.push({id:n.id,text:n.label,at:regionAnchor(dataset.regions.find(r=>r.id===region).path),main:false});
+    }
+    return labels.filter(l=>l.at);
+  });
   function choose(id,scroll=true){
-    focusId=id;
-    const region=graph.byId.get(graph.countryOf.get(id))?.geo?.mapRegionId,path=dataset.regions.find(r=>r.id===region)?.path;
-    const b=path && pathBounds(path,true);
-    if(scroll){if(b)worldMap?.flyTo([b[0]-b[2]*1.5-8,b[1]-b[3]*1.5-8,b[2]*4+16,b[3]*4+16]);document.querySelector('.world-map')?.scrollIntoView({behavior:'smooth',block:'start'});}
+    focusId=id;lensMenu=false;
+    const frame=focusFrame(id);
+    if(frame)worldMap?.flyTo(frame);
+    if(scroll)document.querySelector('.world-map')?.scrollIntoView({behavior:'smooth',block:'start'});
   }
   function fill(regionId){
     const id=graph.regionToCountry.get(regionId),value=view.countryScores.get(id);
@@ -65,16 +74,18 @@
 
 
 {#snippet lensDock()}
-<div class="lens-strip dock" role="group" aria-label="Velg historiesyn">
-  <button class="chip" aria-pressed={!lens} onclick={()=>{lensId='';}}>Uten linse</button>
-  {#each graph.lenses as l}<button class="chip" aria-pressed={lensId===l.id} onclick={()=>chooseLens(l.id)}>{l.name}</button>{/each}
-</div>
+<button type="button" class="map-pill lens-pill" aria-expanded={lensMenu} aria-controls="lens-menu" onclick={()=>lensMenu=!lensMenu}><small>Linse</small>{lens?.name || 'Ingen'}<svg viewBox="0 0 20 20" aria-hidden="true"><path d={lensMenu?'M5 12.5 10 7.5l5 5':'m5 7.5 5 5 5-5'}/></svg></button>
+{#if lensMenu}<div class="lens-menu" id="lens-menu" role="group" aria-label="Velg historiesyn">
+  <button type="button" class="lens-option" aria-pressed={!lens} onclick={()=>{lensId='';lensMenu=false;}}>Ingen linse</button>
+  {#each graph.lenses as l}<button type="button" class="lens-option" aria-pressed={lensId===l.id} onclick={()=>{chooseLens(l.id);lensMenu=false;}}>{l.name}</button>{/each}
+</div>{/if}
 {/snippet}
 {#snippet focusPill()}{#if focus}<button class="map-pill" onclick={()=>document.querySelector('#world-focus')?.scrollIntoView({behavior:'smooth',block:'start'})}>{#if flagFor(focus)}<Flag iso2={flagFor(focus)} />{/if}{focus.label} <span aria-hidden="true">↓</span></button>{/if}{/snippet}
 <div class="world-explorer atlas-kart">
 {#snippet mapHud()}{@render focusPill()}{@render lensDock()}{/snippet}
-<PanZoomMap bind:this={worldMap} base={dataset.viewBox} bind:view={mapView} className="world-map" label={`Verdenskart vektet ${lens?`gjennom ${lens.name}`:'etter relevans'}. Dra og knip for å utforske, trykk på et land.`} onTap={({region})=>{const id=graph.regionToCountry.get(region);if(id)choose(id,false);}} overlay={mapHud}>
+<PanZoomMap bind:this={worldMap} base={dataset.viewBox} bind:view={mapView} bind:unit={mapUnit} className="world-map" label={`Verdenskart vektet ${lens?`gjennom ${lens.name}`:'etter relevans'}. Dra og knip for å utforske, trykk på et land.`} onTap={({region})=>{if(lensMenu){lensMenu=false;return;}const id=graph.regionToCountry.get(region);if(id)choose(id,false);}} overlay={mapHud}>
     {#each dataset.regions as region}{@const id=graph.regionToCountry.get(region.id)}<path d={region.path} data-region={region.id} fill-rule="evenodd" style:fill={fill(region.id)} class:focused={focusRegion===region.id} class:neighbour={neighbours.some(n=>n.geo?.mapRegionId===region.id)} />{/each}
+    {#each mapLabels as l (l.id)}<text class="map-label" class:main={l.main} x={l.at.x} y={l.at.y} style:font-size={`${(l.main?14:11)*mapUnit}px`} style:stroke-width={`${3*mapUnit}px`}>{l.text}</text>{/each}
 </PanZoomMap>
 
 {#if lens}
@@ -88,13 +99,13 @@
   </div>
 {/if}
 
-<details class="card weights" open={!lens}>
+<details class="card weights" id="world-weights" open={!lens}>
   <summary>Hva er relevant? Påvirkning {relevance.impact} · Aktualitet {relevance.actuality} · Nærhet {relevance.locality}</summary>
   {#each [['impact','Påvirkning','Hvor sentralt noden står i kunnskapsnettverket.'],['actuality','Aktualitet','Hvor mye den er i nyhetene nå. Vekten halveres hver 14. dag.'],['locality','Nærhet','Hvor nær Oslo stedet ligger.']] as [key,name,note]}
     <label class="slider">{name} <strong>{relevance[key]}</strong><input type="range" min="0" max="100" step="5" value={relevance[key]} oninput={e=>relevance={...relevance,[key]:Number(e.currentTarget.value)}} onchange={()=>onSave?.()}><small class="muted">{note}</small></label>
   {/each}
   {#if lens}<button class="quiet" onclick={()=>{relevance={...lens.weights};onSave?.();}}>Bruk linsens vekting</button>{/if}
-  <p class="muted detail">Samme vekting brukes når dagens quiz velger nye spørsmål.</p>
+  <p class="muted detail">Samme vekting avgjør hvilke spørsmål fri quiz henter fra registrene.</p>
 </details>
 
 <p class="muted map-note">{lens?.metric?METRIC_NOTES[lens.metric]:'Mørkere farge: mer av det linsen ser, knyttet til landet og vektet etter relevans.'} Trykk på et land.</p>

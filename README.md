@@ -4,7 +4,31 @@ Offline kunnskapstrening på norsk, laget for iPhone 17 Pro.
 
 Live app: https://atlas-first-app.atlas-memory.workers.dev
 
-## Gjeldende utgave — 1.4.0: En tidslinje du kan utforske
+## Gjeldende utgave — 1.5.0: Appen husker hvor du var, og kartet går til det du velger
+
+**Åpne der du slapp.** Når appen lukkes og åpnes igjen, kommer du tilbake til samme sted: fanen (I dag, Atlas, Deg) og underfanen, siden du hadde åpen, søket, valgt emne i Emner, tidslinjens epoke, fag og valgte emne, valgene i fri øving og hvor langt ned du hadde rullet. Kartet beholder linse, land og utsnitt. Den påbegynte økten med skrevne svar ble allerede lagret og er uendret.
+
+Beslutning som skal holde: etter mer enn 12 timer åpner appen på I dag igjen, med tom søkelinje og uten åpen side, men beholder fanevalg, tidslinjevisning og øvingsvalg. Tilstanden lagres i `localStorage` på enheten (`src/lib/ui-state.js`) og sjekkes felt for felt, så en skadet eller eldre lagring aldri hindrer appen i å starte. En lenke med egen `#rute` vinner over det lagrede.
+
+**Kartet**
+- Trykk på et land, og kartet glir inn til landet sammen med nabolandene. Små land får alltid nok omgivelser rundt seg, og store naboskap (Russland, Kina) viser bare landet (`neighbourhoodFrame` i `src/lib/map-view.js`).
+- Navnet på valgt land står på kartet, og nabolandene får navn når de er store nok på skjermen.
+- De 20 linsene lå som en rad med knapper oppå kartet. Nå er det én knapp, «Linse», som åpner en liste over kartet.
+- Kartet åpnet seg stadig lenger ut hver gang appen ble startet på nytt, fordi det lagrede utsnittet ble tilpasset før kartet visste sin egen størrelse. Det er rettet.
+
+**Hvert skjermbilde har én jobb.** Jeg gikk gjennom alle skjermbildene og hvordan man kommer dit. I dag er det du skal gjøre i dag, Atlas er å utforske på egen hånd, og Deg er fremgang og innstillinger. Fire steder passet ikke:
+- Emner → Tidslinje er fjernet. Visningen var eldre enn Atlas → Tid og viste de samme emnene i tidsrekkefølge, med færre muligheter. Emner viser nå bare fagområdene.
+- Deg → Fremgang → «Emner» het det samme som Atlas → Emner, men viste quiztemaene du har øvd på. Den heter nå «Quiztemaer».
+- Innholdsdekning handler om hva biblioteket inneholder, ikke om din fremgang. Den ligger nå under Innstillinger → Diagnostikk.
+- Vektingen av påvirkning, aktualitet og nærhet kunne endres to steder. Den endres nå bare under Kart, der du ser hva den gjør, og Deg → Økten viser verdiene med en knapp dit. Teksten ved glidebryterne sier nå riktig at vektingen styrer fri quiz fra registrene, ikke dagens kapittel.
+
+Beslutning som skal holde: én ting skal ha ett sted. Når noe kan nås fra flere skjermbilder, er det snarveier til samme side, ikke kopier.
+
+**Testing som hjemmeskjermapp.** Atlas brukes som installert app. Testene i simulatoren gjøres nå med produksjonsbygget servert lokalt (`npx wrangler dev`), lagt til på hjemskjermen fra Safari, åpnet derfra, og lukket og åpnet igjen. Dette står i `AGENTS.md`.
+
+Kontrollert slik i iPhone 17 Pro-simulatoren: appen ble avsluttet helt og åpnet fra hjemskjermen igjen, og kom tilbake til Atlas → Tid med middelalderen, verdenshistorie og samme rulling, og til Kart med Egypt, linsen «Store personer» og samme utsnitt. Oppryddingen ble kontrollert på samme måte: en app som sist sto på Innholdsdekning åpnet på Oversikt etter oppdateringen, Fremgang viser «Quiztemaer», «Endre vektingen i Kart» åpner Kart med glidebryterne, Emner har ingen tidslinjeknapp, Innholdsdekning ligger under Diagnostikk, og appen kom tilbake til Innstillinger etter at den ble lukket helt.
+
+## 1.4.0: En tidslinje du kan utforske
 
 Tidslinjen under Atlas → Tid er tegnet om fra en rad prikker til et kart over tid.
 

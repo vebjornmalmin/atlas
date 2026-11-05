@@ -142,6 +142,10 @@
     const block=event=>{if(event.cancelable)event.preventDefault();};
     svg.addEventListener('touchmove',block,{passive:false});
     svg.addEventListener('gesturestart',block);
+    // Measure before restoring a saved view: fitting it to the default aspect first would widen it,
+    // and the map would open further out every time.
+    const box=svg.getBoundingClientRect();
+    if(box.width&&box.height)size={w:box.width,h:box.height};
     if(view && !current)current=clampView(fitAspect(view,aspect()),baseBox,maxZoom);
     return ()=>{observer.disconnect();stop();svg?.removeEventListener('wheel',wheel);svg?.removeEventListener('touchmove',block);svg?.removeEventListener('gesturestart',block);};
   });

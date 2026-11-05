@@ -6,32 +6,35 @@
   import {ERAS,eraOf,yearSpan,storyCursor,STORY_VIEW,eraView,storyPosition,storyYear,storyTicks,storyLanes,unitsAt,concurrentUnits} from './story.js';
   import {formatYear} from './core-curriculum.js';
   import {UNIT_STATUS} from './progression.js';
-  let {curriculum,progress,highlight=[],compact=false,onOpen=()=>{}}=$props();
+  // zoom, domain and selectedId can be bound so the page can keep them between visits.
+  let {curriculum,progress,highlight=[],compact=false,onOpen=()=>{},zoom=$bindable(''),domain=$bindable(''),selectedId=$bindable('')}=$props();
   const LANE=8, TOP=22;
   const domainTitle=id=>curriculum.domains.find(d=>d.id===id)?.title || '';
   const dated=$derived(curriculum.units.filter(u=>u.years).sort((a,b)=>a.years.from-b.years.from || a.years.to-b.years.to));
   const timeless=$derived(curriculum.domains.map(d=>({domain:d,units:curriculum.units.filter(u=>!u.years && u.domainId===d.id)})).filter(g=>g.units.length));
   const datedDomains=$derived(curriculum.domains.filter(d=>dated.some(u=>u.domainId===d.id)));
+  const activeDomain=$derived(datedDomains.some(d=>d.id===domain)?domain:'');
   const cursor=$derived(storyCursor(curriculum,progress));
   const status=id=>progress.units.get(id)?.status || 'new';
   const pct=x=>`${(x*100).toFixed(2)}%`;
   const label=year=>year<0?`${-year} f.Kr.`:String(year);
 
-  let zoom=$state(''), domain=$state(''), selectedId=$state(''), scrubYear=$state(null), hoverYear=$state(null);
+  let scrubYear=$state(null), hoverYear=$state(null);
   let chartEl=$state(), width=$state(0), drag=null;
-  const view=$derived(zoom?eraView(ERAS.find(e=>e.id===zoom)):STORY_VIEW);
+  const zoomedEra=$derived(ERAS.find(e=>e.id===zoom));
+  const view=$derived(zoomedEra?eraView(zoomedEra):STORY_VIEW);
   const lanes=$derived(storyLanes(dated,view,width||360));
   const chartHeight=$derived(TOP+lanes.lanes*LANE+30);
   const ticks=$derived(storyTicks(view));
   const bands=$derived(ERAS.filter(e=>e.to>=view.from && e.from<=view.to).map((era,i)=>{const x=storyPosition(Math.max(era.from,view.from),view), end=storyPosition(Math.min(era.to+1,view.to),view);return {era,i,x,w:end-x};}));
   const readYear=$derived(hoverYear ?? scrubYear);
-  const underway=$derived(readYear===null?[]:unitsAt(domain?dated.filter(u=>u.domainId===domain):dated,readYear));
+  const underway=$derived(readYear===null?[]:unitsAt(activeDomain?dated.filter(u=>u.domainId===activeDomain):dated,readYear));
   const selected=$derived(dated.find(u=>u.id===selectedId) || null);
   const alongside=$derived(selected?concurrentUnits(selected,dated):[]);
   const alongsideIds=$derived(new Set(alongside.map(u=>u.id)));
-  const dim=unit=>(domain && unit.domainId!==domain) || (readYear!==null && !(unit.years.from<=readYear && unit.years.to>=readYear)) || (!!selected && unit.id!==selected.id && !alongsideIds.has(unit.id));
-  const groups=$derived(ERAS.filter(era=>!zoom || era.id===zoom).map(era=>({era,units:dated.filter(u=>eraOf(u.years.from).id===era.id && (!domain || u.domainId===domain))})).filter(g=>g.units.length));
-  const timelessShown=$derived(zoom?[]:timeless.filter(g=>!domain || g.domain.id===domain));
+  const dim=unit=>(activeDomain && unit.domainId!==activeDomain) || (readYear!==null && !(unit.years.from<=readYear && unit.years.to>=readYear)) || (!!selected && unit.id!==selected.id && !alongsideIds.has(unit.id));
+  const groups=$derived(ERAS.filter(era=>!zoomedEra || era.id===zoom).map(era=>({era,units:dated.filter(u=>eraOf(u.years.from).id===era.id && (!activeDomain || u.domainId===activeDomain))})).filter(g=>g.units.length));
+  const timelessShown=$derived(zoomedEra?[]:timeless.filter(g=>!activeDomain || g.domain.id===activeDomain));
 
   function select(id){selectedId=id; scrubYear=null; hoverYear=null;}
   function setZoom(id){zoom=id; scrubYear=null; if(selected && id){const v=eraView(ERAS.find(e=>e.id===id)); if(selected.years.to<v.from || selected.years.from>v.to) selectedId='';}}
@@ -72,10 +75,10 @@
 {:else}
   <section class="tl" aria-label="Tidslinje">
     <div class="chips scroll tl-eras" role="group" aria-label="Zoom inn på en epoke">
-      <button type="button" class="chip" aria-pressed={!zoom} onclick={()=>setZoom('')}>Hele tiden</button>
+      <button type="button" class="chip" aria-pressed={!zoomedEra} onclick={()=>setZoom('')}>Hele tiden</button>
       {#each ERAS as era}<button type="button" class="chip" aria-pressed={zoom===era.id} onclick={()=>setZoom(era.id)}>{era.label}</button>{/each}
     </div>
-    <div class="tl-chart" class:focus={!!domain || readYear!==null || !!selected} bind:this={chartEl} bind:clientWidth={width} style:height={`${chartHeight}px`} tabindex="0" role="slider"
+    <div class="tl-chart" class:focus={!!activeDomain || readYear!==null || !!selected} bind:this={chartEl} bind:clientWidth={width} style:height={`${chartHeight}px`} tabindex="0" role="slider"
       aria-label="Tidslinje. Dra eller bruk piltastene for å se hva som pågikk samtidig." aria-valuemin={view.from} aria-valuemax={view.to} aria-valuenow={readYear ?? view.from}
       aria-valuetext={readYear===null?'Ingen år valgt':`${formatYear(readYear)}: ${underway.length} emner pågår`}
       onpointerdown={down} onpointermove={move} onpointerup={up} onpointercancel={()=>drag=null} onpointerleave={()=>hoverYear=null} onkeydown={key}>
@@ -103,7 +106,7 @@
       {/if}
     </div>
     <div class="chips scroll tl-domains" role="group" aria-label="Fremhev et fag">
-      <button type="button" class="chip" aria-pressed={!domain} onclick={()=>domain=''}>Alle fag</button>
+      <button type="button" class="chip" aria-pressed={!activeDomain} onclick={()=>domain=''}>Alle fag</button>
       {#each datedDomains as d}<button type="button" class="chip" aria-pressed={domain===d.id} onclick={()=>domain=domain===d.id?'':d.id}>{d.title}</button>{/each}
     </div>
   </section>
@@ -115,7 +118,7 @@
         <span class="unit-text"><strong>{unit.title}</strong><small class="muted">{yearSpan(unit)} · {domainTitle(unit.domainId)} · {UNIT_STATUS[s].label}</small></span><span aria-hidden="true">›</span>
       </button>{/each}</div>
   {:else}
-    <p class="muted tl-empty">Ingen emner i {domainTitle(domain)} i denne epoken.</p>
+    <p class="muted tl-empty">Ingen emner i {domainTitle(activeDomain)} i denne epoken.</p>
   {/each}
   {#if timelessShown.length}<h3 class="story-era">Tidløst</h3>{/if}
   {#each timelessShown as group}<details class="card story-list"><summary>{group.domain.title} <span class="muted">· {group.units.filter(u=>status(u.id)!=='new').length} av {group.units.length} påbegynt</span></summary>

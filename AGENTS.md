@@ -18,6 +18,6 @@ Feedback must remain available everywhere, save locally, and return to the exact
 
 ## Testing and deployment
 
-Test in the iOS Simulator on iPhone 17 Pro, together with the unit tests and the production build. Check every user-facing change there, in Safari or the home-screen app. Use a desktop browser only in rare cases where the simulator cannot show what needs checking.
+Test in the iOS Simulator on iPhone 17 Pro, together with the unit tests and the production build. Check every user-facing change there. Atlas is used as an installed home-screen app (PWA), so serve the production build locally (`npx wrangler dev`), add it to the home screen from Safari, and test it opened from the home screen, including closing and reopening it. Use Safari alone for quick checks, and a desktop browser only in rare cases where the simulator cannot show what needs checking.
 
 Always merge the work into `main` and push `main` to `origin` before deploying, then deploy from `main`. Never deploy a commit that is not on `origin/main`.

@@ -166,21 +166,27 @@
 .atlas-kart .pz-controls button:active:not(:disabled){transform:none;background:var(--surface-2)}
 
 /* Pills that read small but are 44 pt to hit. */
-.atlas-kart .map-pill,.atlas-kart .lens-strip.dock .chip{position:relative;isolation:isolate;min-height:44px;border:0;background:transparent;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none}
+.atlas-kart .map-pill{position:relative;isolation:isolate;min-height:44px;border:0;background:transparent;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none}
 
 .atlas-kart .map-pill{position:absolute;left:6px;top:2px;padding:0 16px;font-size:13px}
 
-.atlas-kart .map-pill:before,.atlas-kart .lens-strip.dock .chip:before{content:"";position:absolute;z-index:-1;inset:5px 0;border:1px solid var(--line);border-radius:17px;background:color-mix(in srgb,var(--surface) 92%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.atlas-kart .map-pill:before{content:"";position:absolute;z-index:-1;inset:5px 0;border:1px solid var(--line);border-radius:17px;background:color-mix(in srgb,var(--surface) 92%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
 
-.atlas-kart .lens-strip.dock{position:absolute;left:0;right:64px;bottom:6px;display:flex;gap:0;margin:0;padding:0 0 0 4px;overflow-x:auto;scrollbar-width:none;touch-action:pan-x}
 
-.atlas-kart .lens-strip.dock::-webkit-scrollbar{display:none}
 
-.atlas-kart .lens-strip.dock .chip{flex:none;padding:0 14px;color:var(--ink);font-size:12.5px;font-weight:550;white-space:nowrap;text-decoration:none}
 
-.atlas-kart .lens-strip.dock .chip[aria-pressed="true"]{color:var(--accent-ink)}
 
-.atlas-kart .lens-strip.dock .chip[aria-pressed="true"]:before{border-color:var(--accent);background:var(--accent)}
+
+/* One lens button on the map instead of twenty chips; the list opens over the map. */
+.atlas-kart .lens-pill{position:absolute;left:6px;top:auto;bottom:4px;display:inline-flex;align-items:center;gap:7px;max-width:calc(100% - 76px);padding:0 14px;color:var(--ink);font-size:13px;font-weight:600}
+.atlas-kart .lens-pill small{font-size:10px;font-weight:650;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.atlas-kart .lens-pill svg{flex:none;width:14px;height:14px}
+.atlas-kart .lens-pill svg path{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.atlas-kart .lens-menu{position:absolute;z-index:6;left:8px;right:8px;bottom:54px;max-height:calc(100% - 118px);overflow-y:auto;display:grid;grid-template-columns:1fr 1fr;gap:0 12px;padding:6px 12px;border:1px solid var(--line);border-radius:var(--r-l);background:color-mix(in srgb,var(--surface) 96%,transparent);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 12px 30px #1b231a24;overscroll-behavior:contain}
+.atlas-kart .lens-option{min-height:44px;padding:8px 2px;border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;box-shadow:none;color:var(--ink);font-size:13.5px;text-align:left;line-height:1.25}
+.atlas-kart .lens-option[aria-pressed="true"]{color:var(--accent);font-weight:650;box-shadow:inset 3px 0 0 var(--accent);padding-left:10px}
+.atlas-kart .world-map text.map-label{fill:var(--muted);stroke:var(--bg);paint-order:stroke;stroke-linejoin:round;font-family:var(--sans);font-weight:600;text-anchor:middle;dominant-baseline:middle;pointer-events:none}
+.atlas-kart .world-map text.map-label.main{fill:var(--ink);font-family:var(--serif);font-weight:400}
 
 .atlas-kart .map-note{margin:10px 0 4px;font-size:12px}
 
@@ -251,12 +257,6 @@
 
 .atlas-emner .hero:not(.unit-hero) .lead{max-width:none;margin:0;font-size:13px;line-height:1.55}
 
-.atlas-emner .layout-switch{gap:20px;margin:0 0 4px}
-
-.atlas-emner .layout-switch .chip{min-height:44px;padding:0;border:0;border-radius:0;background:transparent;font-size:13px;font-weight:600;color:var(--muted);text-decoration:none;letter-spacing:.02em}
-
-.atlas-emner .layout-switch .chip[aria-pressed="true"]{color:var(--ink);box-shadow:inset 0 -2px 0 var(--accent)}
-
 .atlas-emner .domain-card{padding:0;margin:0;border-top:1px solid var(--line)}
 
 .atlas-emner .domain-card:first-of-type{border-top:1px solid var(--rs)}
@@ -284,12 +284,6 @@
 .atlas-emner .unit-text strong{font-family:var(--serif);font-size:17px;font-weight:400;line-height:1.3}
 
 .atlas-emner .unit-text small{font-size:12px}
-
-.atlas-emner .unit-years{width:62px;font-family:var(--serif);font-size:14px;font-weight:400;line-height:1.3;text-align:right;color:var(--ink)}
-
-.atlas-emner .unit-years small{font-size:12px;color:var(--muted)}
-
-.atlas-emner .timeline-units{border-top:1px solid var(--rs)}
 
 .atlas-emner .unit-hero,.atlas-entity .hero{padding:2px 0 16px;border-bottom:1px solid var(--rs)}
 

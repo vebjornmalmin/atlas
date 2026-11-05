@@ -373,9 +373,6 @@ dialog .row{margin-top:20px}
 .resume-card .primary{width:100%}
 .today-links{display:flex;flex-direction:column;gap:6px;margin-top:10px}
 .today-links>button{width:100%}
-.layout-switch{margin:-6px 0 14px}
-.unit-years{flex:none;width:52px;font-size:13px;font-weight:600;line-height:1.2;font-variant-numeric:tabular-nums}
-.unit-years small{font-weight:400;color:var(--muted)}
 #answer-heading:focus,#answer-heading:focus-visible{outline:none}
 .unit-row{border-radius:0}
 .unit-row[data-status="practiced"] .unit-dot{border-color:var(--accent);background:linear-gradient(90deg,var(--accent) 65%,transparent 65%)}
