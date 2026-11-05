@@ -20,6 +20,8 @@ Funnet, men ikke rettet: verdenskartet er laget uten Antarktis (se `docs/map-sou
 
 250 automatiske tester består, og produksjonsbygget lages uten feil. Hver rettelse ble kontrollert i den installerte hjemmeskjermappen i simulatoren etter oppdatering fra 1.6.0: Brasil og naboene på kartet, fanebytte fra en nedrullet side, trykk på I dag fra Lag en quiz, «11 000» på én linje etter at innholdet ble oppdatert til 2.2.2, pilene under Brasil og i Quiztemaer, og at økten fortsatte på samme spørsmål etter at appen ble lukket og åpnet igjen.
 
+Publisert 5. november 2026: app 1.6.1, utgivelse `4916cc20872a`, kunnskapspakke 2.2.2, som statiske filer via Wrangler fra `main` etter at `main` var sendt til GitHub. 1.6.0 ble aldri publisert for seg; endringene i den følger med her. En installert 1.5.0 i Safari i simulatoren fant den nye utgaven, oppdaterte til 1.6.1 og hentet innhold 2.2.2.
+
 ## 1.6.0: Verden som globus, hjerte og kvadrat
 
 Denne utgaven bygger på tilbakemeldinger fra de første brukerne.
