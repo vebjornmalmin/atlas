@@ -2,7 +2,7 @@
 // alternating with timeless units, so each day reads as a chapter: an era, a place, and what
 // happened elsewhere at the same time. Perspectives are woven into the session rather than
 // living on their own page.
-import {levelAccepts} from './levels.js';
+import {levelAccepts,PRESENT_YEAR} from './levels.js';
 import {buildTimelineExercise} from './exercises.js';
 import {formatYear} from './core-curriculum.js';
 
@@ -17,6 +17,61 @@ export const ERAS = [
 export const eraOf = year => ERAS.find(e => year >= e.from && year <= e.to) || ERAS[0];
 export const unitYear = unit => unit?.years ? unit.years.from : null;
 export const yearSpan = unit => !unit?.years ? '' : unit.years.from === unit.years.to ? formatYear(unit.years.from) : `${formatYear(unit.years.from)}–${formatYear(unit.years.to)}`;
+
+/**
+ * The story timeline is logarithmic in years before now, so the last centuries get room, with a
+ * 50-year offset so the newest decades don't take a third of the width. A zoomed era is linear.
+ */
+export const STORY_START = -3600;
+const STORY_OFFSET = 50;
+export const STORY_VIEW = {from: STORY_START, to: PRESENT_YEAR, log: true};
+export const eraView = era => ({from: Math.max(STORY_START, era.from), to: Math.min(PRESENT_YEAR, era.to + 1), log: false});
+const logAge = (view, year) => Math.log(view.to - year + STORY_OFFSET + 1);
+export function storyPosition(year, view = STORY_VIEW) {
+  const y = Math.min(view.to, Math.max(view.from, year));
+  if (!view.log) return (y - view.from) / (view.to - view.from);
+  return (logAge(view, view.from) - logAge(view, y)) / (logAge(view, view.from) - logAge(view, view.to));
+}
+export function storyYear(position, view = STORY_VIEW) {
+  const p = Math.min(1, Math.max(0, position));
+  if (!view.log) return Math.round(view.from + p * (view.to - view.from));
+  const lo = logAge(view, view.from), hi = logAge(view, view.to);
+  return Math.round(view.to + STORY_OFFSET + 1 - Math.exp(lo - p * (lo - hi)));
+}
+/** Year marks that fit the view: fixed marks on the full line, round steps inside an era. */
+export function storyTicks(view = STORY_VIEW) {
+  if (view.log) return [-3000, 0, 1000, 1500, 1800, 1900, 2000];
+  const span = view.to - view.from, step = [10, 20, 25, 50, 100, 250, 500, 1000].find(s => span / s <= 5) || 1000;
+  const ticks = [];
+  for (let y = Math.ceil(view.from / step) * step; y <= view.to; y += step) ticks.push(y);
+  return ticks;
+}
+/**
+ * Stack each unit's span in the first lane where it fits after the previous span, at a given width
+ * in points, so overlapping periods sit above each other. Units outside the view are left out.
+ */
+export function storyLanes(units, view = STORY_VIEW, width = 360, {minWidth = 7, gap = 5} = {}) {
+  const ends = [], rows = [];
+  const visible = units.filter(u => u.years && u.years.to >= view.from && u.years.from <= view.to)
+    .sort((a, b) => a.years.from - b.years.from || a.years.to - b.years.to);
+  for (const unit of visible) {
+    const x = storyPosition(unit.years.from, view) * width;
+    const end = Math.max(x + minWidth, storyPosition(unit.years.to, view) * width);
+    let lane = ends.findIndex(e => x >= e + gap);
+    if (lane < 0) lane = ends.push(0) - 1;
+    ends[lane] = end;
+    rows.push({unit, lane, x: x / width, w: (end - x) / width});
+  }
+  return {rows, lanes: ends.length};
+}
+/** Units under way in a given year. */
+export const unitsAt = (units, year) => units.filter(u => u.years && u.years.from <= year && u.years.to >= year);
+/** Units in other subjects that overlap a unit's span, closest start first. */
+export function concurrentUnits(unit, units) {
+  if (!unit?.years) return [];
+  return units.filter(u => u.id !== unit.id && u.years && u.domainId !== unit.domainId && u.years.from <= unit.years.to && u.years.to >= unit.years.from)
+    .sort((a, b) => Math.abs(a.years.from - unit.years.from) - Math.abs(b.years.from - unit.years.from));
+}
 
 /**
  * The order in which ready, unstarted units appear: dated units chronologically, continuing from

@@ -4,7 +4,20 @@ Offline kunnskapstrening på norsk, laget for iPhone 17 Pro.
 
 Live app: https://atlas-first-app.atlas-memory.workers.dev
 
-## Gjeldende utgave — 1.3.1: Filene serveres direkte
+## Gjeldende utgave — 1.4.0: En tidslinje du kan utforske
+
+Tidslinjen under Atlas → Tid er tegnet om fra en rad prikker til et kart over tid.
+
+- **Logaritmisk med plass til de siste århundrene**: skalaen var allerede logaritmisk, men regnet fra i dag, så 2000–2026 tok over en tredjedel av bredden mens 74 emner trengtes sammen til venstre. Nå regnes avstanden fra i dag pluss 50 år: år 0 ligger ved en femdel, 1500 ved halvparten, 1900 ved tre firedeler og 2000 ved ni tideler. Dagens kapittel på I dag bruker samme skala.
+- **Hvert emne er en strek over hele perioden**, stablet i rader så ingen overlapper, og farget etter hvor godt det sitter.
+- **Dra langs tidslinjen** for å se et årstall og hvilke emner som pågikk da. Med mus vises det samme ved hover, og piltastene flytter året.
+- **Trykk på en strek** for å velge emnet: det fremheves sammen med emner i andre fag fra samme tid, og kan åpnes derfra.
+- **Zoom inn på en epoke**: da blir skalaen lineær med runde årstall, og listen under viser bare den epoken.
+- **Fremhev et fag**: de andre emnene tones ned, og listen viser bare faget.
+
+Beslutning som skal holde: tidslinjens skala (`storyPosition` i `src/lib/story.js`) er egen for Tid og I dag. Tallinjen i anslå-året-oppgavene bruker fortsatt `yearToPosition`, slik at retting og svar er uendret.
+
+## 1.3.1: Filene serveres direkte
 
 Appen ser ut og virker som 1.3.0. Endringen gjelder hvordan Cloudflare leverer filene: i stedet for at Workeren pakker ut hver fil ved hver forespørsel, serveres `build/` som statiske filer. Kunnskapspakken krevde omkring 60 ms prosessortid per nedlasting med den gamle løsningen, mens gratisplanen tillater 10 ms. Nå brukes ingen prosessortid, så første installasjon og oppdateringer er mindre utsatt for feil. Sikkerhetshodene ligger i `build/_headers`, og `/version.json` erstatter `/health`.
 
