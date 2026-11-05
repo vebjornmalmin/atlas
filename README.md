@@ -4,7 +4,11 @@ Offline kunnskapstrening på norsk, laget for iPhone 17 Pro.
 
 Live app: https://atlas-first-app.atlas-memory.workers.dev
 
-## Gjeldende utgave — 1.3.0: Et atlas, ikke en mal
+## Gjeldende utgave — 1.3.1: Filene serveres direkte
+
+Appen ser ut og virker som 1.3.0. Endringen gjelder hvordan Cloudflare leverer filene: i stedet for at Workeren pakker ut hver fil ved hver forespørsel, serveres `build/` som statiske filer. Kunnskapspakken krevde omkring 60 ms prosessortid per nedlasting med den gamle løsningen, mens gratisplanen tillater 10 ms. Nå brukes ingen prosessortid, så første installasjon og oppdateringer er mindre utsatt for feil. Sikkerhetshodene ligger i `build/_headers`, og `/version.json` erstatter `/health`.
+
+## 1.3.0: Et atlas, ikke en mal
 
 Hele grensesnittet er tegnet om, slik at appen ser ut som et redigert oppslagsverk og bruker skjermen bedre. Funksjoner, spørsmål, retting og data er uendret.
 
@@ -108,11 +112,11 @@ Publiseringen gikk denne gangen via Wrangler, fordi Cloudflare-tilkoblingen ikke
 
 ## Source and deployment
 
-The app lives in `src/`; public knowledge, maps, icons, and the manifest are in `public/`. Run `npm install`, `npm test`, and `npm run build`. The build validates and hashes knowledge, compiles the SvelteKit app, generates a versioned service worker, and creates `worker.mjs` with compressed public assets. Run `npm run dev` for local development.
+The app lives in `src/`; public knowledge, maps, icons, and the manifest are in `public/`. Run `npm install`, `npm test`, and `npm run build`. The build validates and hashes knowledge, compiles the SvelteKit app into `build/`, generates a versioned service worker and `version.json`, and writes `build/_headers` with the security headers and the content security policy. Run `npm run dev` for local development, and `npx wrangler dev` to try the built app with Cloudflare's static asset serving and headers.
 
-Deployment uses the authenticated Cloudflare plugin's API tools. Upload `worker.mjs` as a module using multipart metadata with `main_module: worker.mjs`, compatibility date `2026-10-10`, and observability enabled. The Worker is named `atlas-first-app`; its workers.dev route is enabled. No Wrangler CLI is required. Precompressed responses use explicit manual body encoding.
+Since 1.3.1 the Worker `atlas-first-app` has no script: Cloudflare serves `build/` as Workers static assets, configured in `wrangler.toml` (compatibility date `2026-10-10`, workers.dev enabled, observability on). Deploy from `main` after pushing it, with `npx wrangler deploy` from the repository root. Static asset requests run no code, so they use no CPU time and don't count toward the free plan's daily request limit. The limits that apply are 20,000 files and 25 MiB per file.
 
-When the Cloudflare tools can't upload a Worker, deploy with Wrangler from a folder that holds only `worker.mjs` and a `wrangler.toml` with the settings above (`no_bundle = true`). Running Wrangler from the repository root also uploads stray text files (licences, `src/app.html`) as extra modules. Keep the compressed upload under 3 MiB: 1.3.0 is about 2.8 MiB, and the flag bundle accounts for about 0.35 MiB of it.
+Headers come from `build/_headers`, not from code. After a deploy, check that `/` and `/sw.js` return the `Content-Security-Policy` header and that `/version.json` reports the new release. `/_app/immutable/*` is cached for a year; everything else is revalidated on each request with an ETag. The former `/health` endpoint is gone; `/version.json` replaces it.
 
 Cloudflare serves public assets only. Personal learning data remains on the current browser/device and may be cleared by browser settings. Offline learning needs one successful online visit and completed cache installation.
 

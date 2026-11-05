@@ -7,3 +7,4 @@ build/
 .svelte-kit/
 .claude/
 .wrangler/
+worker.mjs
