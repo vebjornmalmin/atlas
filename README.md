@@ -26,7 +26,9 @@ Beslutning som skal holde: én ting skal ha ett sted. Når noe kan nås fra fler
 
 **Testing som hjemmeskjermapp.** Atlas brukes som installert app. Testene i simulatoren gjøres nå med produksjonsbygget servert lokalt (`npx wrangler dev`), lagt til på hjemskjermen fra Safari, åpnet derfra, og lukket og åpnet igjen. Dette står i `AGENTS.md`.
 
-Kontrollert slik i iPhone 17 Pro-simulatoren: appen ble avsluttet helt og åpnet fra hjemskjermen igjen, og kom tilbake til Atlas → Tid med middelalderen, verdenshistorie og samme rulling, og til Kart med Egypt, linsen «Store personer» og samme utsnitt. Oppryddingen ble kontrollert på samme måte: en app som sist sto på Innholdsdekning åpnet på Oversikt etter oppdateringen, Fremgang viser «Quiztemaer», «Endre vektingen i Kart» åpner Kart med glidebryterne, Emner har ingen tidslinjeknapp, Innholdsdekning ligger under Diagnostikk, og appen kom tilbake til Innstillinger etter at den ble lukket helt.
+Kontrollert slik i iPhone 17 Pro-simulatoren: appen ble avsluttet helt og åpnet fra hjemskjermen igjen, og kom tilbake til Atlas → Tid med middelalderen, verdenshistorie og samme rulling, og til Kart med Egypt, linsen «Store personer» og samme utsnitt. Oppryddingen ble kontrollert på samme måte: en app som sist sto på Innholdsdekning åpnet på Oversikt etter oppdateringen, Fremgang viser «Quiztemaer», «Endre vektingen i Kart» åpner Kart med glidebryterne, Emner har ingen tidslinjeknapp, Innholdsdekning ligger under Diagnostikk, og appen kom tilbake til Innstillinger etter at den ble lukket helt. 236 automatiske tester består.
+
+Publisert 5. november 2026: app 1.5.0, utgivelse `72202032d8cc`, kunnskapspakke 2.2.0 (uendret), som statiske filer via Wrangler fra `main` etter at `main` var sendt til GitHub. En installert 1.4.0 i Safari i simulatoren fant den nye utgaven på den publiserte adressen, oppdaterte seg og viste Fremgang med «Quiztemaer» og uten Innholdsdekning.
 
 ## 1.4.0: En tidslinje du kan utforske
 
