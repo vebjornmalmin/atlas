@@ -257,6 +257,15 @@
   let selfApprovedCount = $derived(reviews.filter(r=>r.selfApproved).length);
   let outcome = $derived(sessionOutcome(session?.results || []));
   let outcomeTotal = $derived(outcome.independent + outcome.supported + outcome.retry);
+  const riktig = n => n === 1 ? 'riktig' : 'riktige';
+  // The separator stays at the end of a line, never at the start of the next.
+  let progressNote = $derived.by(() => {
+    const retries = session?.queue?.filter(q => q.sessionRetry).length || 0;
+    return [
+      ...(outcomeTotal > 0 ? [`${outcome.independent} ${riktig(outcome.independent)} uten hjelp`, `${outcome.supported} med støtte`, `${outcome.retry} å øve videre på`] : []),
+      ...(retries ? [`${retries} ekstra forsøk lagt til etter spørsmålene`] : [])
+    ];
+  });
   let retryIds = $derived(retryTargets(session?.results || []));
   let current = $derived(session && !isLessonEntry(session.queue[session.index]) ? targets.find(t => t.id === session.queue[session.index]?.id) : null);
   let currentArtwork = $derived(artworkMedia.find(m=>m.entityId===(current?.media || current?.entityId)));
@@ -530,8 +539,10 @@
   onMount(() => {
     let disposed=false;
     const route=()=>{
-      const hash=window.location.hash.slice(1);
+      const hash=window.location.hash.slice(1),before=view;
       view=resolveRoute(hash);
+      // Another part of the app opens at its top, not at the scroll position of the page left behind.
+      if(uiReady && view!==before)window.scrollTo(0,0);
       if(view!=='today')sessionScreen=false;
       detailId='';error='';
     };
@@ -544,6 +555,8 @@
       if(!window.location.hash.slice(1))history.replaceState(null,'',`#${ui.view}`);
     }
     route(); window.addEventListener('hashchange',route);
+    const tabAgain=event=>{if(event.detail===view && !sessionScreen){quizSetup=false;detailId='';}};
+    window.addEventListener('atlas-tab-again',tabAgain);
     if(ui && view===ui.view){detailId=ui.detailId;quizSetup=ui.quizSetup && view==='today';restoreScroll=ui.scrollY;}
     uiReady=true;
     let scrollTimer;
@@ -602,7 +615,7 @@
       if(!disposed && restoreScroll && !sessionScreen){await tick();requestAnimationFrame(()=>window.scrollTo(0,restoreScroll));}
     };
     void boot();
-    return ()=>{disposed=true;clearInterval(timer);clearInterval(clockTimer);window.removeEventListener('hashchange',route);window.removeEventListener('scroll',onScroll);document.removeEventListener('visibilitychange',onHide);window.removeEventListener('pagehide',onHide);window.removeEventListener('beforeinstallprompt',prompt);window.removeEventListener('online',connectionChanged);window.removeEventListener('offline',connectionChanged);document.removeEventListener('visibilitychange',visible);window.removeEventListener('unhandledrejection',unhandled);db?.close();};
+    return ()=>{disposed=true;clearInterval(timer);clearInterval(clockTimer);window.removeEventListener('hashchange',route);window.removeEventListener('atlas-tab-again',tabAgain);window.removeEventListener('scroll',onScroll);document.removeEventListener('visibilitychange',onHide);window.removeEventListener('pagehide',onHide);window.removeEventListener('beforeinstallprompt',prompt);window.removeEventListener('online',connectionChanged);window.removeEventListener('offline',connectionChanged);document.removeEventListener('visibilitychange',visible);window.removeEventListener('unhandledrejection',unhandled);db?.close();};
   });
 </script>
 
@@ -617,7 +630,7 @@
     <div class="s-steps" role="progressbar" aria-label="Fullførte spørsmål" aria-valuemin="0" aria-valuemax={session.queue.length} aria-valuenow={session.index}>{#each session.queue as item,i}<span class:done={i<session.index} class:independent={session.results[i]?.correct===true && !session.results[i]?.usedHint && !session.results[i]?.learnedFirst} class:active={i===session.index} aria-hidden="true"></span>{/each}</div>
     <span class="s-count"><strong>{session.index}</strong>/{session.queue.length}<span class="sr-only"> fullført, {session.queue.length-session.index} igjen</span></span>
   </div>
-  {#if outcomeTotal>0 || session.queue.some(q=>q.sessionRetry)}<p class="s-progress-note">{#if outcomeTotal>0}{outcome.independent} riktige uten hjelp · {outcome.supported} med støtte · {outcome.retry} å øve videre på{/if}{#if session.queue.some(q=>q.sessionRetry)}{outcomeTotal>0?' · ':''}{session.queue.filter(q=>q.sessionRetry).length} ekstra forsøk lagt til etter spørsmålene{/if}</p>{/if}
+  {#if progressNote.length}<p class="s-progress-note">{progressNote.join('\u00a0· ')}</p>{/if}
 </div>
 {/snippet}
 
@@ -844,11 +857,11 @@
       </div>
       <h2 class="section-title">Nivåene</h2>
       {#each LEVELS as level}{@const result=quizProgress(targets.filter(t=>t.level===level.id),reviews)}<div class="card level-entry"><h3><span class="level-id">{level.id}</span>{level.name}</h3><p class="muted">{level.note}</p>
-        <div class="coverage-track" role="img" aria-label={`${result.correct} riktige uten hjelp, ${result.answered-result.correct} trenger øving, ${result.remaining} usett`}><span class="coverage-correct" style={`width:${result.total?100*result.correct/result.total:0}%`}></span><span class="coverage-practice" style={`width:${result.total?100*(result.answered-result.correct)/result.total:0}%`}></span></div>
-        <p class="muted">{result.correct} riktige uten hjelp · {result.answered-result.correct} trenger øving · {result.remaining} usett</p>
+        <div class="coverage-track" role="img" aria-label={`${result.correct} ${riktig(result.correct)} uten hjelp, ${result.answered-result.correct} trenger øving, ${result.remaining} usett`}><span class="coverage-correct" style={`width:${result.total?100*result.correct/result.total:0}%`}></span><span class="coverage-practice" style={`width:${result.total?100*(result.answered-result.correct)/result.total:0}%`}></span></div>
+        <p class="muted">{result.correct} {riktig(result.correct)} uten hjelp · {result.answered-result.correct} trenger øving · {result.remaining} usett</p>
         <button class="secondary" disabled={busy} onclick={()=>run(()=>beginSession('mixed',{level:level.id,title:`Nivå ${level.id}: ${level.name}`}))}>Øv på nivå {level.id}</button></div>{/each}
     {/if}
-    {#if progressTab==='topics'}<h2 class="section-title">Quiztemaer du har øvd på</h2>{#each data.collections as collection}{@const result=quizProgress(targets.filter(t=>t.collectionIds.includes(collection.id)),reviews)}{#if result.answered}<button class="entity-row" onclick={()=>{quizCollection=collection.id;quizSetup=true;navigate('today');quizSetup=true;}}><span><strong>{collection.title}</strong><small>{result.answered} besvart · {result.correct} riktige sist</small></span><span>→</span></button>{/if}{/each}
+    {#if progressTab==='topics'}<h2 class="section-title">Quiztemaer du har øvd på</h2>{#each data.collections as collection}{@const result=quizProgress(targets.filter(t=>t.collectionIds.includes(collection.id)),reviews)}{#if result.answered}<button class="entity-row" onclick={()=>{quizCollection=collection.id;quizSetup=true;navigate('today');quizSetup=true;}}><span><strong>{collection.title}</strong><small>{result.answered} besvart · {result.correct} {riktig(result.correct)} sist</small></span></button>{/if}{/each}
     {/if}
     {#if !summary.answered && progressTab==='overview'}<p class="muted">Start en quiz for å se fremgangen din.</p><button class="primary" onclick={()=>navigate('today')}>Velg quiz</button>{/if}
     {#if progressTab==='history'}<details class="card" open><summary>Siste svar</summary>{#each [...reviews].sort((a,b)=>b.timestamp.localeCompare(a.timestamp)).slice(0,10) as review}<p class="detail"><strong>{targets.find(t=>t.id===review.targetId)?.prompt || 'Tidligere spørsmål'}</strong><br><span class="muted">{review.learnedFirst?'Lært først':review.usedHint?'Med hint':review.correct===true?'Riktig':review.correct===false?'Feil':'Svar vist'} · {displayDate(review.timestamp)}</span></p>{/each}</details>{/if}

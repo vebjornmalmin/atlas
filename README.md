@@ -4,7 +4,23 @@ Offline kunnskapstrening på norsk, laget for iPhone 17 Pro.
 
 Live app: https://atlas-first-app.atlas-memory.workers.dev
 
-## Gjeldende utgave — 1.6.0: Verden som globus, hjerte og kvadrat
+## Gjeldende utgave — 1.6.1: Rettelser etter en runde gjennom hele appen
+
+Før 1.6.0 ble publisert, ble alle sidene gått gjennom i appen installert på hjemmeskjermen i iPhone 17 Pro-simulatoren: I dag med dagens kapittel, riktige og gale svar, lukking og gjenåpning midt i et spørsmål, Atlas → Tid, Kart (Standard og Globus) og Emner, Deg → Fremgang, Økten og Innstillinger, og Lag en quiz. Dette ble rettet:
+
+- **Kartet rammer inn landet og naboene, ikke halve verden.** Utsnittet var landet pluss naboenes hele omriss. Frankrike grenser til Brasil gjennom Fransk Guyana, så et trykk på Brasil zoomet ut til et utsnitt fra Sør-Amerika til Paris, med Brasil nede i hjørnet og Argentina utenfor. Nå teller bare den delen av en nabo som ligger nærmest landet, og en stor nabo tas bare med så langt den ligger nær landet: Russland ved siden av Aserbajdsjan er Kaukasus, ikke Sibir. Brasil fyller nå kartet med alle naboene og navnene deres. Logikken ligger i `regionFrame` i `src/lib/map-view.js`, med tester for Brasil, Aserbajdsjan og Norge.
+- **En ny fane åpner øverst.** Byttet du fra en side du hadde rullet ned på, åpnet neste fane like langt nede, så overskriften var borte. Nå åpner I dag, Atlas og Deg alltid øverst. Trykker du på fanen du allerede er i, går du til toppen og tilbake til fanens start, for eksempel fra Lag en quiz til I dag, slik andre iPhone-apper gjør.
+- **Tall brytes ikke midt i.** «12 000» ble delt over to linjer som «12» og «000», og «4000 f.Kr.» som «4000» og «f.Kr.». Det siste byggesteget for kunnskapspakken (`scripts/package-knowledge.mjs`) setter nå hardt mellomrom i sifergrupper og mellom årstall og f.Kr./e.Kr. i all tekst (`src/lib/typography.js`). Retting av svar påvirkes ikke, fordi svarene normaliseres før de sammenlignes, og en test sjekker begge deler. Kunnskapspakke 2.2.2 har bare denne endringen.
+- **Pilene i listene i Atlas og Deg.** To stilark tegnet hver sin pil. Den ene ble vridd til en vinkel ved siden av «›», og i lange rader lå den oppå teksten (Peter Medawar under Brasil). Nå er det én pil, og den tar plass i raden. Quiztemaer under Deg → Fremgang hadde i tillegg en egen «→».
+- **«1 riktig», ikke «1 riktige».** Gjelder linjen over spørsmålene i økten, Quiztemaer og innholdsdekningen. Linjen over spørsmålene brytes nå slik at skilletegnet står på slutten av linjen og ikke først på neste.
+
+Beslutning som skal holde: tall, årstall og tidsregning skrives med hardt mellomrom i innholdet, og det gjøres i byggingen, ikke for hånd i hver tekst.
+
+Funnet, men ikke rettet: verdenskartet er laget uten Antarktis (se `docs/map-sources.md`). Det merkes ikke på det flate kartet, men på Globus, Fra Oslo og Kvadrat mangler et helt kontinent rundt Sydpolen. Det krever nye kartdata fra Natural Earth.
+
+250 automatiske tester består, og produksjonsbygget lages uten feil. Hver rettelse ble kontrollert i den installerte hjemmeskjermappen i simulatoren etter oppdatering fra 1.6.0: Brasil og naboene på kartet, fanebytte fra en nedrullet side, trykk på I dag fra Lag en quiz, «11 000» på én linje etter at innholdet ble oppdatert til 2.2.2, pilene under Brasil og i Quiztemaer, og at økten fortsatte på samme spørsmål etter at appen ble lukket og åpnet igjen.
+
+## 1.6.0: Verden som globus, hjerte og kvadrat
 
 Denne utgaven bygger på tilbakemeldinger fra de første brukerne.
 

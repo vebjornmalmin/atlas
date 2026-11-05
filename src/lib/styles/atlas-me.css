@@ -25,7 +25,7 @@
 
 .atlas-page .entity-row,.me-page .entity-row{min-height:60px;padding:14px 0;gap:14px}
 
-.atlas-page .entity-row:after,.me-page .entity-row:after{content:"\203A";font-family:var(--serif);font-size:22px;line-height:1;color:var(--muted)}
+.atlas-page .entity-row:after,.me-page .entity-row:after{content:"\203A";position:static;flex:none;width:auto;height:auto;margin:0;border:0;transform:none;font-family:var(--serif);font-size:22px;line-height:1;color:var(--muted)}
 
 .atlas-page .entity-row>span[aria-hidden="true"]:last-child{display:none}
 

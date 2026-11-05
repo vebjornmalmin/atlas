@@ -71,11 +71,34 @@ export function unionBox(boxes, pad = 0, minSize = 0) {
  * Tiny regions get at least `minShare` of the world's width; a neighbourhood wider than `maxShare`
  * of the world (Russia, China) falls back to the region itself.
  */
-export function neighbourhoodFrame(own, near, worldWidth, {pad = .3, minShare = .1, maxShare = .6} = {}) {
+export function neighbourhoodFrame(own, near, worldWidth, {pad = .3, minShare = .1, maxShare = .6, reach = 1} = {}) {
   if (!own) return null;
   const margin = Math.max(own[2], own[3]) * pad, min = worldWidth * minShare;
-  const box = unionBox([own, ...near], margin, min);
+  // Only the part of a neighbour close to the country counts: Russia next to Azerbaijan is the Caucasus, not Siberia.
+  const window = unionBox([own], Math.max(own[2], own[3], min / 2) * reach);
+  const box = unionBox([own, ...near.map(b => b && intersectBox(b, window))], margin, min);
   return box[2] > worldWidth * maxShare ? unionBox([own], margin, min) : box;
+}
+
+function intersectBox(a, b) {
+  const x0 = Math.max(a[0], b[0]), y0 = Math.max(a[1], b[1]);
+  const x1 = Math.min(a[0] + a[2], b[0] + b[2]), y1 = Math.min(a[1] + a[3], b[1] + b[3]);
+  return x1 > x0 && y1 > y0 ? [x0, y0, x1 - x0, y1 - y0] : null;
+}
+
+/** The piece of a multi-part region closest to `box`: French Guiana, not mainland France, when seen from Brazil. */
+export function nearestPieceBounds(path, box) {
+  const pieces = String(path).split(/(?=M)/).map(piece => pathBounds(piece)).filter(Boolean);
+  const gap = b => Math.hypot(Math.max(0, b[0] - (box[0] + box[2]), box[0] - (b[0] + b[2])), Math.max(0, b[1] - (box[1] + box[3]), box[1] - (b[1] + b[3])));
+  return pieces.sort((a, b) => gap(a) - gap(b) || b[2] * b[3] - a[2] * a[3])[0] || null;
+}
+
+/** Frame a region of the map with its neighbours; `pathOf` returns a region's SVG path. */
+export function regionFrame(pathOf, region, neighbours, worldWidth) {
+  const path = region && pathOf(region);
+  const own = path ? pathBounds(path, true) : null;
+  if (!own) return null;
+  return neighbourhoodFrame(own, neighbours.map(id => pathOf(id)).filter(Boolean).map(p => nearestPieceBounds(p, own)), worldWidth);
 }
 
 /** A gently curved arrow from a to b; the head is a filled triangle that keeps its size on screen. */

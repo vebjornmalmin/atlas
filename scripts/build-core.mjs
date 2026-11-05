@@ -12,6 +12,6 @@ const merged = mergeCore(applyCorrections(data, corrections), compileCore(domain
 const legacyPrompts = new Map(merged.targets.filter(t => !t.unitId).map(t => [t.prompt.trim().toLowerCase(), t.id]));
 const clashes = merged.targets.filter(t => t.unitId && legacyPrompts.has(t.prompt.trim().toLowerCase()));
 if (clashes.length) throw new Error(`Kort med samme spørsmål som registeret:\n${clashes.map(t => `${t.id} = ${legacyPrompts.get(t.prompt.trim().toLowerCase())}`).join('\n')}`);
-Object.assign(merged, {version: '2.2.1', generatedAt: '2026-11-05T18:00:00Z'});
+Object.assign(merged, {version: '2.2.2', generatedAt: '2026-11-05T21:00:00Z'});
 await writeFile('public/knowledge/foundation.json', JSON.stringify(merged, null, 2) + '\n');
 console.log(JSON.stringify({...check.counts, warnings: check.warnings.length, targets: merged.targets.length}));

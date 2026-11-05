@@ -41,6 +41,11 @@
   }
 
   function navigate(id) {
+    // Tapping the tab you are on goes back to its start and to the top, as in other iPhone apps.
+    if (active === id && location.hash.slice(1).split('/')[0] === id) {
+      window.dispatchEvent(new CustomEvent('atlas-tab-again', { detail: id }));
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
     active = id;
     location.hash = id;
   }

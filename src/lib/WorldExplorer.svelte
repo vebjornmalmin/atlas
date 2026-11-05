@@ -2,7 +2,7 @@
   import Flag from './Flag.svelte';
   import {lensView,relatedThrough,lensesFor,findPath,newsWeight,METRIC_NOTES,DEFAULT_RELEVANCE} from './world-graph.js';
   import PanZoomMap from './PanZoomMap.svelte';
-  import {pathBounds,parseBox,regionAnchor,neighbourhoodFrame} from './map-view.js';
+  import {pathBounds,parseBox,regionAnchor,regionFrame} from './map-view.js';
   import {WORLD_FORMAT_CHOICES} from './quiz-formats.js';
   import {PROJECTIONS,projectionById,worldFeatures,projectWorld,turnGlobe,rotationFor,globeDisc,dragRotation,interpolateRotation} from './projections.js';
   let {graph,dataset,relevance=$bindable({...DEFAULT_RELEVANCE}),typeLabel,relationLabel,onOpen,onQuiz,onSave,formatAvailable}=$props();
@@ -30,7 +30,7 @@
   let projection=$derived(projectionById(projectionId));
   let disc=$derived(globeDisc(world));
   const regionBounds=region=>{const path=world.regions.find(r=>r.id===region)?.path;return path?pathBounds(path,true):null;};
-  const focusFrame=id=>neighbourhoodFrame(regionBounds(regionOf(id)),(graph.neighbours.get(id)||[]).map(n=>regionBounds(graph.byId.get(n)?.geo?.mapRegionId)),parseBox(world.viewBox)[2]);
+  const focusFrame=id=>regionFrame(region=>world.regions.find(r=>r.id===region)?.path,regionOf(id),(graph.neighbours.get(id)||[]).map(n=>graph.byId.get(n)?.geo?.mapRegionId).filter(Boolean),parseBox(world.viewBox)[2]);
   // Each projection keeps its own view; the flat map opens on the focus country, the others show the whole world.
   const views={...(saved.views || {})};
   if(Array.isArray(saved.mapView) && !saved.views)views.standard=saved.mapView;

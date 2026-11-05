@@ -1,8 +1,8 @@
 {
   "id": "atlas-foundation",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "schemaVersion": 1,
-  "generatedAt": "2026-11-05T18:00:00Z",
+  "generatedAt": "2026-11-05T21:00:00Z",
   "collections": [
     {
       "id": "us-presidents",
@@ -71749,7 +71749,7 @@
       "id": "work-histories-polybius",
       "label": "Historíai (Polybios)",
       "type": "scholarly-work",
-      "summary": "Polybios' fremstilling av Romas vei til makten 264–146 f.Kr., med teorien om forfatningskretsløpet i bok 6; året er omtrentlig.",
+      "summary": "Polybios' fremstilling av Romas vei til makten 264–146 f.Kr., med teorien om forfatningskretsløpet i bok 6; året er omtrentlig.",
       "collectionIds": [
         "world-lenses"
       ],
@@ -71766,7 +71766,7 @@
       "id": "work-shiji",
       "label": "Shiji",
       "type": "scholarly-work",
-      "summary": "Sima Qians kinesiske historie i 130 kapitler, trolig fullført rundt 94 f.Kr.",
+      "summary": "Sima Qians kinesiske historie i 130 kapitler, trolig fullført rundt 94 f.Kr.",
       "collectionIds": [
         "world-lenses"
       ],
@@ -73492,7 +73492,7 @@
       "id": "news-2026-10-31-frankrike-ungdomsprotester",
       "label": "Ungdomsprotester i Frankrike for tredje helg på rad",
       "type": "news-event",
-      "summary": "Ifølge myndighetene demonstrerte rundt 320 000 mennesker i Frankrike lørdag 31. oktober, flest unge som protesterte mot levekostnader og utdanningspolitikk, og om lag 70 000 politifolk var i beredskap. Innenriksminister Laurent Nuñez hadde advart om høy risiko for uro rundt halloween, og det er også meldt om lignende protester i Tyskland og Italia.",
+      "summary": "Ifølge myndighetene demonstrerte rundt 320 000 mennesker i Frankrike lørdag 31. oktober, flest unge som protesterte mot levekostnader og utdanningspolitikk, og om lag 70 000 politifolk var i beredskap. Innenriksminister Laurent Nuñez hadde advart om høy risiko for uro rundt halloween, og det er også meldt om lignende protester i Tyskland og Italia.",
       "collectionIds": [
         "current-affairs"
       ],
@@ -73637,7 +73637,7 @@
       "id": "news-2026-10-31-ebola-kongo-over-5000-dode",
       "label": "Over 5000 døde i ebolautbruddet i DR Kongo",
       "type": "news-event",
-      "summary": "Ifølge myndighetene i DR Kongo har over 5000 mennesker dødd og over 10 000 blitt smittet siden mai. Utbruddet skyldes Bundibugyo-varianten, som det ikke finnes godkjent behandling eller vaksine mot. Kenya, Uganda og Nigeria har også meldt om tilfeller.",
+      "summary": "Ifølge myndighetene i DR Kongo har over 5000 mennesker dødd og over 10 000 blitt smittet siden mai. Utbruddet skyldes Bundibugyo-varianten, som det ikke finnes godkjent behandling eller vaksine mot. Kenya, Uganda og Nigeria har også meldt om tilfeller.",
       "collectionIds": [
         "current-affairs"
       ],
@@ -73725,7 +73725,7 @@
       "id": "news-2026-11-02-india-to-sykloner-pa-en-uke",
       "label": "India evakuerer tusenvis før ny syklon",
       "type": "news-event",
-      "summary": "Syklonen Murasu var ventet ved Ongole i Andhra Pradesh 2. november, mindre enn en uke etter at syklonen Arnab drepte seks mennesker på samme kyst. Myndighetene planlegger å evakuere rundt 30 000, og skolene er stengt i flere delstater.",
+      "summary": "Syklonen Murasu var ventet ved Ongole i Andhra Pradesh 2. november, mindre enn en uke etter at syklonen Arnab drepte seks mennesker på samme kyst. Myndighetene planlegger å evakuere rundt 30 000, og skolene er stengt i flere delstater.",
       "collectionIds": [
         "current-affairs"
       ],
@@ -212399,7 +212399,7 @@
         "norgeshistorie"
       ],
       "prompt": "Når kom de første menneskene til det som i dag er Norge?",
-      "answer": "For over 11 000 år siden, etter istiden",
+      "answer": "For over 11 000 år siden, etter istiden",
       "acceptedAnswers": [],
       "explanation": "Funnene på Høgnipen i Sarpsborg er fra en tid da iskanten lå bare noen få mil lenger nord. De ligner funnene fra de tidligste boplassene i Sør-Sverige og Danmark.",
       "sourceIds": [
@@ -212426,8 +212426,8 @@
       "retrievalRole": "default",
       "legacyFactId": "core:nh-forhistorie-forste",
       "options": [
-        "For over 11 000 år siden, etter istiden",
-        "For over 100 000 år siden, før istiden",
+        "For over 11 000 år siden, etter istiden",
+        "For over 100 000 år siden, før istiden",
         "For omkring 6000 år siden, med jordbruket",
         "For omkring 2000 år siden, i romertiden"
       ],
@@ -212514,7 +212514,7 @@
       "collectionIds": [
         "norgeshistorie"
       ],
-      "prompt": "Hva var den store nyvinningen i yngre steinalder, fra omkring 4000 f.Kr.?",
+      "prompt": "Hva var den store nyvinningen i yngre steinalder, fra omkring 4000 f.Kr.?",
       "answer": "Husdyrhold og korndyrking",
       "acceptedAnswers": [],
       "explanation": "De første sporene etter februk og korndyrking finnes særlig langs Oslofjorden. I bronsealderen ble gården med langhus og faste, gjødslede åkrer rammen for livet. Jakt, fangst og fiske var likevel fortsatt viktig.",
@@ -212998,9 +212998,9 @@
         "norgeshistorie"
       ],
       "prompt": "Omtrent når var bronsealderen i Sør- og Midt-Norge?",
-      "answer": "Omkring 1700–500 f.Kr.",
+      "answer": "Omkring 1700–500 f.Kr.",
       "acceptedAnswers": [],
-      "explanation": "Lenger nord brukes ikke betegnelsen bronsealder. Der snakker arkeologene om tidlig metalltid, fra omkring 2000 f.Kr. til 300 e.Kr.",
+      "explanation": "Lenger nord brukes ikke betegnelsen bronsealder. Der snakker arkeologene om tidlig metalltid, fra omkring 2000 f.Kr. til 300 e.Kr.",
       "sourceIds": [
         "core-source:snl-no-steinalderen-i-norge",
         "core-source:snl-no-bronsealderen-i-norge",
@@ -213025,10 +213025,10 @@
       "retrievalRole": "default",
       "legacyFactId": "core:nh-forhistorie-bronse-periode",
       "options": [
-        "Omkring 1700–500 f.Kr.",
-        "Omkring 4000–2000 f.Kr.",
-        "Omkring 500 f.Kr.–550 e.Kr.",
-        "Omkring 10 000–8000 f.Kr."
+        "Omkring 1700–500 f.Kr.",
+        "Omkring 4000–2000 f.Kr.",
+        "Omkring 500 f.Kr.–550 e.Kr.",
+        "Omkring 10 000–8000 f.Kr."
       ],
       "difficultyFamily": "core-curriculum",
       "difficultyReason": "Detalj: et presist årstall, tall eller navn.",
@@ -213058,7 +213058,7 @@
       "prompt": "Hvilket år ble de første helleristningene i Alta oppdaget?",
       "answer": "1973",
       "acceptedAnswers": [],
-      "explanation": "Ristningene er datert til mellom omkring 4200 og 500 f.Kr., blant annet ut fra hvordan havnivået har endret seg. Alta museum åpnet ved feltet i 1991.",
+      "explanation": "Ristningene er datert til mellom omkring 4200 og 500 f.Kr., blant annet ut fra hvordan havnivået har endret seg. Alta museum åpnet ved feltet i 1991.",
       "sourceIds": [
         "core-source:snl-no-steinalderen-i-norge",
         "core-source:snl-no-bronsealderen-i-norge",
@@ -217543,7 +217543,7 @@
       "prompt": "Hvor mange stemte nei i folkeavstemningen om unionsoppløsningen 13. august 1905?",
       "answer": "184",
       "acceptedAnswers": [],
-      "explanation": "Det ga ja-siden 99,95 prosent. Kvinner hadde ikke stemmerett, men samlet inn nesten 280 000 underskrifter for oppløsningen.",
+      "explanation": "Det ga ja-siden 99,95 prosent. Kvinner hadde ikke stemmerett, men samlet inn nesten 280 000 underskrifter for oppløsningen.",
       "sourceIds": [
         "core-source:snl-no-unionsoppl-c3-b8sningen-i-1905",
         "core-source:snl-no-folkeavstemningen-om-unionsoppl-c3-b8sning-i-1905",
@@ -217656,9 +217656,9 @@
         "norgeshistorie"
       ],
       "prompt": "Omtrent hvor mange nordmenn utvandret til Nord-Amerika mellom 1836 og 1915?",
-      "answer": "Over 750 000",
+      "answer": "Over 750 000",
       "acceptedAnswers": [],
-      "explanation": "Det var nesten like mange som bodde i Norge i 1801. Fra 1862 ga homestead-loven i USA innvandrere rett til egen jord. Den største bølgen kom i 1880-årene, med rekordåret 1882 og 29 000 utvandrere.",
+      "explanation": "Det var nesten like mange som bodde i Norge i 1801. Fra 1862 ga homestead-loven i USA innvandrere rett til egen jord. Den største bølgen kom i 1880-årene, med rekordåret 1882 og 29 000 utvandrere.",
       "sourceIds": [
         "core-source:snl-no-norges-historie-fra-1815-til-1905",
         "core-source:snl-no-utvandringa-fr-c3-a5-noreg-til-nord-amerika",
@@ -217684,9 +217684,9 @@
       "legacyFactId": "core:nh-1800-tallets-norge-utvandring",
       "year": 1836,
       "options": [
-        "Over 750 000",
-        "Over 75 000",
-        "Over 250 000",
+        "Over 750 000",
+        "Over 75 000",
+        "Over 250 000",
         "Over 2 millioner"
       ],
       "difficultyFamily": "core-curriculum",
@@ -218357,7 +218357,7 @@
       "year": 1836,
       "options": [
         "Omtrent 2,2 millioner",
-        "Omtrent 900 000",
+        "Omtrent 900 000",
         "Omtrent 1,4 millioner",
         "Omtrent 3,5 millioner"
       ],
@@ -218680,7 +218680,7 @@
       "acceptedAnswers": [
         "Hjemmestyrkene"
       ],
-      "explanation": "Ved krigens slutt hadde Milorg om lag 40 000 personer. Det siste krigsåret fikk organisasjonen våpen og instruktører utenfra og drev også sabotasje.",
+      "explanation": "Ved krigens slutt hadde Milorg om lag 40 000 personer. Det siste krigsåret fikk organisasjonen våpen og instruktører utenfra og drev også sabotasje.",
       "sourceIds": [
         "core-source:snl-no-norge-under-andre-verdenskrig",
         "core-source:snl-no-senkingen-av-bl-c3-bccher",
@@ -221697,7 +221697,7 @@
         "Shang-dynastiet",
         "Shangdynastiet"
       ],
-      "explanation": "De eldste kinesiske skrifttegnene står på såkalte orakelbein fra Shang-tiden. Dynastiet regnes som høydepunktet for kinesisk bronsestøping og tok slutt omkring 1046 f.Kr.",
+      "explanation": "De eldste kinesiske skrifttegnene står på såkalte orakelbein fra Shang-tiden. Dynastiet regnes som høydepunktet for kinesisk bronsestøping og tok slutt omkring 1046 f.Kr.",
       "sourceIds": [
         "core-source:snl-no-asias-tidlige-historie",
         "core-source:snl-no-mesopotamia",
@@ -221950,9 +221950,9 @@
         "verdenshistorie"
       ],
       "prompt": "Omtrent når ble Egypt samlet under én konge?",
-      "answer": "Omkring 2900 f.Kr.",
+      "answer": "Omkring 2900 f.Kr.",
       "acceptedAnswers": [],
-      "explanation": "Egypt ble samlet tidlig, mens Mesopotamia lenge besto av løst tilknyttede bystater. Den gammelegyptiske historien varte i nesten 3000 år, til romerne erobret landet i år 30 f.Kr.",
+      "explanation": "Egypt ble samlet tidlig, mens Mesopotamia lenge besto av løst tilknyttede bystater. Den gammelegyptiske historien varte i nesten 3000 år, til romerne erobret landet i år 30 f.Kr.",
       "sourceIds": [
         "core-source:snl-no-asias-tidlige-historie",
         "core-source:snl-no-mesopotamia",
@@ -221978,10 +221978,10 @@
       "legacyFactId": "core:vh-forste-sivilisasjoner-samling-egypt",
       "year": -3600,
       "options": [
-        "Omkring 2900 f.Kr.",
-        "Omkring 4500 f.Kr.",
-        "Omkring 1500 f.Kr.",
-        "Omkring 500 f.Kr."
+        "Omkring 2900 f.Kr.",
+        "Omkring 4500 f.Kr.",
+        "Omkring 1500 f.Kr.",
+        "Omkring 500 f.Kr."
       ],
       "difficultyFamily": "core-curriculum",
       "difficultyReason": "Detalj: et presist årstall, tall eller navn.",
@@ -222011,7 +222011,7 @@
       "prompt": "Hvilken farao er særlig kjent for sin store pyramide fra Det gamle riket?",
       "answer": "Kheops",
       "acceptedAnswers": [],
-      "explanation": "Det gamle riket (om lag 2543–2120 f.Kr.) var pyramidenes tid. Forskerne diskuterer fortsatt hvordan egypterne bygde Kheops' pyramide med datidens hjelpemidler.",
+      "explanation": "Det gamle riket (om lag 2543–2120 f.Kr.) var pyramidenes tid. Forskerne diskuterer fortsatt hvordan egypterne bygde Kheops' pyramide med datidens hjelpemidler.",
       "sourceIds": [
         "core-source:snl-no-asias-tidlige-historie",
         "core-source:snl-no-mesopotamia",
@@ -222068,9 +222068,9 @@
         "verdenshistorie"
       ],
       "prompt": "Omtrent når begynte folk i Den fruktbare halvmåne å dyrke korn?",
-      "answer": "For omkring 12 000 år siden",
+      "answer": "For omkring 12 000 år siden",
       "acceptedAnswers": [],
-      "explanation": "Husdyrhold med geit, sau, svin og storfe kom fra omkring 10 000 år siden. I Kina ble ris dyrket ved Chang Jiang omtrent like tidlig som hirse ved Huang He.",
+      "explanation": "Husdyrhold med geit, sau, svin og storfe kom fra omkring 10 000 år siden. I Kina ble ris dyrket ved Chang Jiang omtrent like tidlig som hirse ved Huang He.",
       "sourceIds": [
         "core-source:snl-no-asias-tidlige-historie",
         "core-source:snl-no-mesopotamia",
@@ -222096,8 +222096,8 @@
       "legacyFactId": "core:vh-forste-sivilisasjoner-tidspunkt-jordbruk",
       "year": -3600,
       "options": [
-        "For omkring 12 000 år siden",
-        "For omkring 50 000 år siden",
+        "For omkring 12 000 år siden",
+        "For omkring 50 000 år siden",
         "For omkring 5000 år siden",
         "For omkring 2500 år siden"
       ],
@@ -222185,7 +222185,7 @@
       "collectionIds": [
         "verdenshistorie"
       ],
-      "prompt": "Hvilken styreform innførte Athen like før 500 f.Kr.?",
+      "prompt": "Hvilken styreform innførte Athen like før 500 f.Kr.?",
       "answer": "Demokrati",
       "acceptedAnswers": [],
       "explanation": "Reformene ble gjennomført av Kleisthenes. Folkestyret var direkte: Borgerne møtte selv i folkeforsamlingen, og embeter ble fordelt ved loddtrekning. Bare voksne mannlige borgere kunne delta, mens kvinner, slaver og innflyttere sto utenfor.",
@@ -222244,7 +222244,7 @@
       "collectionIds": [
         "verdenshistorie"
       ],
-      "prompt": "Hvilken stormakt invaderte Hellas i 490 og 480 f.Kr.?",
+      "prompt": "Hvilken stormakt invaderte Hellas i 490 og 480 f.Kr.?",
       "answer": "Perserriket",
       "acceptedAnswers": [],
       "explanation": "Athen og Sparta kjempet side om side mot invasjonene. Seieren i flåteslaget ved Salamis gjorde Athen til den ledende sjømakten i Hellas.",
@@ -222306,7 +222306,7 @@
       "prompt": "Hvor ofte ble de olympiske leker holdt i antikken?",
       "answer": "Hvert fjerde år",
       "acceptedAnswers": [],
-      "explanation": "Ifølge en bevart seiersliste startet lekene i 776 f.Kr., men de kan være eldre. Lekene var religiøse fester for Zevs og Hera, og vinneren fikk en krans fra et hellig oliventre.",
+      "explanation": "Ifølge en bevart seiersliste startet lekene i 776 f.Kr., men de kan være eldre. Lekene var religiøse fester for Zevs og Hera, og vinneren fikk en krans fra et hellig oliventre.",
       "sourceIds": [
         "core-source:snl-no-den-greske-antikkens-historie",
         "core-source:snl-no-det-athenske-demokratiet",
@@ -222362,7 +222362,7 @@
       "collectionIds": [
         "verdenshistorie"
       ],
-      "prompt": "Hvilken athensk statsmann var den ledende skikkelsen i byens politikk fra 450-årene til 429 f.Kr.?",
+      "prompt": "Hvilken athensk statsmann var den ledende skikkelsen i byens politikk fra 450-årene til 429 f.Kr.?",
       "answer": "Perikles",
       "acceptedAnswers": [
         "Pericles",
@@ -222536,7 +222536,7 @@
       "prompt": "Hva kalles kulturfellesskapet rundt det østlige Middelhavet etter Aleksanders erobringer?",
       "answer": "Hellenismen",
       "acceptedAnswers": [],
-      "explanation": "Aleksander døde 32 år gammel i Babylon i 323 f.Kr., og riket falt raskt fra hverandre. Overklassen i Egypt og Midtøsten ble likevel lenge knyttet til gresk kultur, og mange tok i bruk gresk språk.",
+      "explanation": "Aleksander døde 32 år gammel i Babylon i 323 f.Kr., og riket falt raskt fra hverandre. Overklassen i Egypt og Midtøsten ble likevel lenge knyttet til gresk kultur, og mange tok i bruk gresk språk.",
       "sourceIds": [
         "core-source:snl-no-den-greske-antikkens-historie",
         "core-source:snl-no-det-athenske-demokratiet",
@@ -222654,7 +222654,7 @@
       "prompt": "Koble personen med det han er kjent for.",
       "answer": "Kleisthenes – Demokratiske reformer i Athen · Perikles – Ledet Athen i storhetstiden · Filip 2. – Samlet Hellas under Makedonia · Aristoteles – Lærer for Aleksander den store",
       "acceptedAnswers": [],
-      "explanation": "Filip vant slaget ved Khaironeia i 338 f.Kr., der den unge Aleksander ledet rytteriet. Både Filip og Aleksander begrunnet krigen mot Persia med hevn for ødeleggelsene perserne hadde påført greske helligdommer.",
+      "explanation": "Filip vant slaget ved Khaironeia i 338 f.Kr., der den unge Aleksander ledet rytteriet. Både Filip og Aleksander begrunnet krigen mot Persia med hevn for ødeleggelsene perserne hadde påført greske helligdommer.",
       "sourceIds": [
         "core-source:snl-no-den-greske-antikkens-historie",
         "core-source:snl-no-det-athenske-demokratiet",
@@ -222729,7 +222729,7 @@
       "prompt": "Forklar hvordan det athenske demokratiet skilte seg fra et moderne demokrati.",
       "answer": "Det var et direkte folkestyre der borgerne selv møtte i folkeforsamlingen og vedtok lover, og mange embeter ble fordelt ved loddtrekning. Bare mannlige borgere deltok. Kvinner, slaver og frie innflyttere uten borgerrett sto utenfor.",
       "acceptedAnswers": [],
-      "explanation": "Rundt 430 f.Kr. hadde Athen trolig om lag 40 000 borgere, mens slavene kanskje var over 100 000. Tanken var likevel at makten skulle ligge hos borgerne, ikke hos eksperter og mektige enkeltmenn.",
+      "explanation": "Rundt 430 f.Kr. hadde Athen trolig om lag 40 000 borgere, mens slavene kanskje var over 100 000. Tanken var likevel at makten skulle ligge hos borgerne, ikke hos eksperter og mektige enkeltmenn.",
       "sourceIds": [
         "core-source:snl-no-den-greske-antikkens-historie",
         "core-source:snl-no-det-athenske-demokratiet",
@@ -222799,9 +222799,9 @@
         "verdenshistorie"
       ],
       "prompt": "Hvilket år regnes tradisjonelt som starten på de olympiske leker i antikken?",
-      "answer": "776 f.Kr.",
+      "answer": "776 f.Kr.",
       "acceptedAnswers": [],
-      "explanation": "Årstallet bygger på en liste over seierherrer. Lekene ble holdt for siste gang i 393 e.Kr., da den kristne keiseren Theodosius forbød dem som hedenske.",
+      "explanation": "Årstallet bygger på en liste over seierherrer. Lekene ble holdt for siste gang i 393 e.Kr., da den kristne keiseren Theodosius forbød dem som hedenske.",
       "sourceIds": [
         "core-source:snl-no-den-greske-antikkens-historie",
         "core-source:snl-no-det-athenske-demokratiet",
@@ -222827,10 +222827,10 @@
       "legacyFactId": "core:vh-antikkens-hellas-ol-start",
       "year": -800,
       "options": [
-        "776 f.Kr.",
-        "753 f.Kr.",
-        "508 f.Kr.",
-        "490 f.Kr."
+        "776 f.Kr.",
+        "753 f.Kr.",
+        "508 f.Kr.",
+        "490 f.Kr."
       ],
       "difficultyFamily": "core-curriculum",
       "difficultyReason": "Detalj: et presist årstall, tall eller navn.",
@@ -222858,7 +222858,7 @@
         "verdenshistorie"
       ],
       "prompt": "Hvilket år sto slaget ved Marathon?",
-      "answer": "490 f.Kr.",
+      "answer": "490 f.Kr.",
       "acceptedAnswers": [],
       "explanation": "Ved Marathon slo athenerne og deres allierte den første persiske invasjonen. Ti år senere kom perserne tilbake og ødela Akropolis i Athen.",
       "sourceIds": [
@@ -222886,10 +222886,10 @@
       "legacyFactId": "core:vh-antikkens-hellas-marathon",
       "year": -800,
       "options": [
-        "490 f.Kr.",
-        "480 f.Kr.",
-        "508 f.Kr.",
-        "431 f.Kr."
+        "490 f.Kr.",
+        "480 f.Kr.",
+        "508 f.Kr.",
+        "431 f.Kr."
       ],
       "difficultyFamily": "core-curriculum",
       "difficultyReason": "Detalj: et presist årstall, tall eller navn.",
@@ -223211,7 +223211,7 @@
       "collectionIds": [
         "verdenshistorie"
       ],
-      "prompt": "Hvilken romersk hærfører erobret Gallia og ble drept av sammensvorne republikanere i 44 f.Kr.?",
+      "prompt": "Hvilken romersk hærfører erobret Gallia og ble drept av sammensvorne republikanere i 44 f.Kr.?",
       "answer": "Julius Cæsar",
       "acceptedAnswers": [
         "Cæsar",
@@ -223766,7 +223766,7 @@
         "verdenshistorie"
       ],
       "prompt": "Hvilket år ble Roma grunnlagt ifølge romernes egen tradisjon?",
-      "answer": "753 f.Kr.",
+      "answer": "753 f.Kr.",
       "acceptedAnswers": [],
       "explanation": "Årstallet bygger på romernes egen opphavshistorie og er ingen sikker datering. Byen lå gunstig til ved Tiberen og var en betydelig handelsplass fra 600-tallet f.Kr.",
       "sourceIds": [
@@ -223794,10 +223794,10 @@
       "legacyFactId": "core:vh-romerriket-grunnleggelse",
       "year": -509,
       "options": [
-        "753 f.Kr.",
-        "509 f.Kr.",
-        "776 f.Kr.",
-        "1000 f.Kr."
+        "753 f.Kr.",
+        "509 f.Kr.",
+        "776 f.Kr.",
+        "1000 f.Kr."
       ],
       "difficultyFamily": "core-curriculum",
       "difficultyReason": "Detalj: et presist årstall, tall eller navn.",
@@ -226915,7 +226915,7 @@
       "prompt": "Hvor mange afrikanere ble skipet over Atlanterhavet som slaver mellom 1450 og 1850?",
       "answer": "Minst 12,5 millioner",
       "acceptedAnswers": [],
-      "explanation": "Anslaget bygger på data fra over 35 000 skipsanløp. Om lag to millioner døde under overfarten, og mer enn 40 prosent av alle ble solgt til Brasil.",
+      "explanation": "Anslaget bygger på data fra over 35 000 skipsanløp. Om lag to millioner døde under overfarten, og mer enn 40 prosent av alle ble solgt til Brasil.",
       "sourceIds": [
         "core-source:snl-no-oppdagelsesreiser",
         "core-source:snl-no-vasco-da-gama",
@@ -226944,7 +226944,7 @@
         "Minst 12,5 millioner",
         "Under 2 millioner",
         "Over 50 millioner",
-        "Under 500 000"
+        "Under 500 000"
       ],
       "difficultyFamily": "core-curriculum",
       "difficultyReason": "Detalj: et presist årstall, tall eller navn.",
@@ -229481,7 +229481,7 @@
         "verdenshistorie"
       ],
       "prompt": "Hvor mange mennesker døde i den amerikanske borgerkrigen?",
-      "answer": "Over 620 000",
+      "answer": "Over 620 000",
       "acceptedAnswers": [],
       "explanation": "Enda flere ble såret. Krigen avgjorde også hvor mye makt delstatene skulle ha overfor unionen.",
       "sourceIds": [
@@ -229509,9 +229509,9 @@
       "legacyFactId": "core:vh-usa-fram-til-1865-dode",
       "year": 1773,
       "options": [
-        "Over 620 000",
-        "Under 60 000",
-        "Under 200 000",
+        "Over 620 000",
+        "Under 60 000",
+        "Under 200 000",
         "Over 2 millioner"
       ],
       "difficultyFamily": "core-curriculum",
@@ -230308,8 +230308,8 @@
       "year": 1870,
       "options": [
         "Mellom én og ti millioner",
-        "Rundt 10 000",
-        "Rundt 100 000",
+        "Rundt 10 000",
+        "Rundt 100 000",
         "Over 50 millioner"
       ],
       "difficultyFamily": "core-curriculum",
@@ -230996,7 +230996,7 @@
       "prompt": "Sett hendelsene fra første verdenskrig i kronologisk rekkefølge.",
       "answer": "Skuddene i Sarajevo (1914) → Slaget ved Verdun (1916) → USA går inn i krigen (1917) → Versaillestraktaten undertegnes (1919)",
       "acceptedAnswers": [],
-      "explanation": "Versaillestraktaten ble undertegnet 28. juni 1919, på femårsdagen for skuddene i Sarajevo. Ved Verdun ble det anslått 750 000 drepte og sårede på ti måneder.",
+      "explanation": "Versaillestraktaten ble undertegnet 28. juni 1919, på femårsdagen for skuddene i Sarajevo. Ved Verdun ble det anslått 750 000 drepte og sårede på ti måneder.",
       "sourceIds": [
         "core-source:snl-no-f-c3-b8rste-verdenskrig",
         "core-source:snl-no-skuddene-i-sarajevo",
@@ -231984,7 +231984,7 @@
         "moderne-historie"
       ],
       "prompt": "Omtrent hvor mange mennesker ble skutt under Den store terror i 1937–1938?",
-      "answer": "Omkring 700 000",
+      "answer": "Omkring 700 000",
       "acceptedAnswers": [],
       "explanation": "Omtrent like mange ble sendt til GULag-leirene. Utrenskningene rammet alle samfunnsgrupper, men særlig intellektuelle, partimedlemmer og offiserer.",
       "sourceIds": [
@@ -232012,9 +232012,9 @@
       "legacyFactId": "core:mh-russiske-revolusjon-terror",
       "year": 1917,
       "options": [
-        "Omkring 700 000",
+        "Omkring 700 000",
         "Omkring 7000",
-        "Omkring 70 000",
+        "Omkring 70 000",
         "Omkring 7 millioner"
       ],
       "difficultyFamily": "core-curriculum",
@@ -233300,7 +233300,7 @@
       "acceptedAnswers": [
         "Normandy"
       ],
-      "explanation": "Landgangen er den største amfibieoperasjonen som er gjennomført. Omkring 156 000 soldater gikk i land på fem strender med kodenavnene Utah, Omaha, Gold, Juno og Sword, under ledelse av Dwight D. Eisenhower.",
+      "explanation": "Landgangen er den største amfibieoperasjonen som er gjennomført. Omkring 156 000 soldater gikk i land på fem strender med kodenavnene Utah, Omaha, Gold, Juno og Sword, under ledelse av Dwight D. Eisenhower.",
       "sourceIds": [
         "core-source:snl-no-andre-verdenskrig",
         "core-source:snl-no-andre-verdenskrig-viktige-hendelser",
@@ -233412,7 +233412,7 @@
       "prompt": "Hvilke to japanske byer ble rammet av atombomber i august 1945?",
       "answer": "Hiroshima og Nagasaki",
       "acceptedAnswers": [],
-      "explanation": "Rundt 80 000 mennesker ble drept øyeblikkelig i Hiroshima 6. august og omkring 40 000 i Nagasaki tre dager senere, og mange flere døde av skadene etterpå. Keiser Hirohito bestemte 14. august at Japan skulle kapitulere.",
+      "explanation": "Rundt 80 000 mennesker ble drept øyeblikkelig i Hiroshima 6. august og omkring 40 000 i Nagasaki tre dager senere, og mange flere døde av skadene etterpå. Keiser Hirohito bestemte 14. august at Japan skulle kapitulere.",
       "sourceIds": [
         "core-source:snl-no-andre-verdenskrig",
         "core-source:snl-no-andre-verdenskrig-viktige-hendelser",
@@ -233737,7 +233737,7 @@
       "prompt": "Hvor mange mennesker antas å ha mistet livet i andre verdenskrig?",
       "answer": "Minst 70 millioner",
       "acceptedAnswers": [],
-      "explanation": "Sovjetunionen hadde de største tapene, omkring 27 millioner, og Kina mistet 15–20 millioner. Norge mistet omkring 10 000 mennesker. Alle tallene er omtrentlige.",
+      "explanation": "Sovjetunionen hadde de største tapene, omkring 27 millioner, og Kina mistet 15–20 millioner. Norge mistet omkring 10 000 mennesker. Alle tallene er omtrentlige.",
       "sourceIds": [
         "core-source:snl-no-andre-verdenskrig",
         "core-source:snl-no-andre-verdenskrig-viktige-hendelser",
@@ -233883,7 +233883,7 @@
       "options": [
         "Mer enn seks millioner",
         "Under én million",
-        "Under 600 000",
+        "Under 600 000",
         "Over 20 millioner"
       ],
       "difficultyFamily": "core-curriculum",
@@ -233973,7 +233973,7 @@
       "prompt": "Hvilke andre grupper ble også systematisk forfulgt og drept av nazistene?",
       "answer": "Romer og funksjonshemmede",
       "acceptedAnswers": [],
-      "explanation": "I det såkalte eutanasiprogrammet ble om lag 70 000 funksjonshemmede drept i 1939–1941, mange med gass. Erfaringene ble senere brukt i dødsleirene. Også homoseksuelle og Jehovas vitner ble forfulgt.",
+      "explanation": "I det såkalte eutanasiprogrammet ble om lag 70 000 funksjonshemmede drept i 1939–1941, mange med gass. Erfaringene ble senere brukt i dødsleirene. Også homoseksuelle og Jehovas vitner ble forfulgt.",
       "sourceIds": [
         "core-source:snl-no-holocaust",
         "core-source:snl-no-novemberpogromen",
@@ -235904,7 +235904,7 @@
       "prompt": "Forklar hvorfor frigjøringen ble langt mer voldelig i noen kolonier enn i andre.",
       "answer": "Der kolonimakten kunne forhandle med lokale eliter, gikk overgangen raskt og fredelig. Der et hvitt mindretall eide jorden og dominerte politikken, som i Algerie, Kenya og Sør-Rhodesia, ville de ikke gi fra seg makten, og frigjøringsbevegelsene grep til væpnet kamp.",
       "acceptedAnswers": [],
-      "explanation": "I Algerie bodde rundt én million europeere, og landet ble regnet som en del av Frankrike. Krigen kostet trolig rundt 500 000 liv, men anslagene varierer mye.",
+      "explanation": "I Algerie bodde rundt én million europeere, og landet ble regnet som en del av Frankrike. Krigen kostet trolig rundt 500 000 liv, men anslagene varierer mye.",
       "sourceIds": [
         "core-source:snl-no-avkolonisering",
         "core-source:snl-no-mahatma-gandhi",
@@ -236951,7 +236951,7 @@
         "moderne-historie"
       ],
       "prompt": "Omtrent hvor mange ble drept i Bosniakrigen 1992–1995?",
-      "answer": "Rundt 100 000",
+      "answer": "Rundt 100 000",
       "acceptedAnswers": [],
       "explanation": "Mellom 35 og 40 prosent av de drepte var sivile. Krigen var den største i Europa siden andre verdenskrig fram til Russlands angrep på Ukraina i 2022.",
       "sourceIds": [
@@ -236979,9 +236979,9 @@
       "legacyFactId": "core:mh-murens-fall-bosnia-dode",
       "year": 1985,
       "options": [
-        "Rundt 100 000",
-        "Rundt 10 000",
-        "Rundt 500 000",
+        "Rundt 100 000",
+        "Rundt 10 000",
+        "Rundt 500 000",
         "Rundt 2 millioner"
       ],
       "difficultyFamily": "core-curriculum",
@@ -237827,7 +237827,7 @@
       "year": 2001,
       "options": [
         "Over 7 millioner",
-        "Rundt 700 000",
+        "Rundt 700 000",
         "Rundt 70 millioner",
         "Over 700 millioner"
       ],
@@ -238033,7 +238033,7 @@
       "prompt": "Hva er ekvator?",
       "answer": "En tenkt sirkel midt mellom polene",
       "acceptedAnswers": [],
-      "explanation": "Ekvator er omtrent 40 000 kilometer rundt. Der er dag og natt omtrent like lange hele året, og temperaturen endrer seg lite gjennom året.",
+      "explanation": "Ekvator er omtrent 40 000 kilometer rundt. Der er dag og natt omtrent like lange hele året, og temperaturen endrer seg lite gjennom året.",
       "sourceIds": [
         "core-source:snl-no-verdensdel",
         "core-source:snl-no-verdenshav",
@@ -238566,7 +238566,7 @@
         "geografi"
       ],
       "prompt": "Omtrent hvor lang er ekvator rundt Jorda?",
-      "answer": "Omtrent 40 000 kilometer",
+      "answer": "Omtrent 40 000 kilometer",
       "acceptedAnswers": [],
       "explanation": "Jorda er litt sammenklemt ved polene og buler ut ved ekvator fordi den roterer. Derfor er omkretsen størst rundt ekvator.",
       "sourceIds": [
@@ -238593,10 +238593,10 @@
       "retrievalRole": "default",
       "legacyFactId": "core:geo-kontinenter-hav-omkrets",
       "options": [
-        "Omtrent 40 000 kilometer",
-        "Omtrent 12 000 kilometer",
-        "Omtrent 100 000 kilometer",
-        "Omtrent 400 000 kilometer"
+        "Omtrent 40 000 kilometer",
+        "Omtrent 12 000 kilometer",
+        "Omtrent 100 000 kilometer",
+        "Omtrent 400 000 kilometer"
       ],
       "difficultyFamily": "core-curriculum",
       "difficultyReason": "Detalj: et presist årstall, tall eller navn.",
@@ -239094,7 +239094,7 @@
         "Hardangerviddi",
         "Vidda"
       ],
-      "explanation": "Vidda ligger stort sett 1100–1400 meter over havet, over tregrensen. Her lever en villreinstamme på om lag 10 000 dyr.",
+      "explanation": "Vidda ligger stort sett 1100–1400 meter over havet, over tregrensen. Her lever en villreinstamme på om lag 10 000 dyr.",
       "sourceIds": [
         "core-source:snl-no-norges-geografi",
         "core-source:snl-no-fjord",
@@ -239291,7 +239291,7 @@
       "prompt": "Hvorfor har Norge en så lang kystlinje?",
       "answer": "Fjorder og tallrike øyer gjør kysten svært innskåret",
       "acceptedAnswers": [],
-      "explanation": "Øyenes strandlinje alene er over 73 000 kilometer. Fastlandet med fjorder og viker står for knapt 30 000.",
+      "explanation": "Øyenes strandlinje alene er over 73 000 kilometer. Fastlandet med fjorder og viker står for knapt 30 000.",
       "sourceIds": [
         "core-source:snl-no-norges-geografi",
         "core-source:snl-no-fjord",
@@ -239642,7 +239642,7 @@
       "prompt": "Hvilken øygruppe i nord er en del av kongeriket Norge, men underlagt en egen traktat?",
       "answer": "Svalbard",
       "acceptedAnswers": [],
-      "explanation": "Svalbardtraktaten gir andre land rettigheter på enkelte områder. Med Bjørnøya er øygruppen omtrent 60 000 kvadratkilometer.",
+      "explanation": "Svalbardtraktaten gir andre land rettigheter på enkelte områder. Med Bjørnøya er øygruppen omtrent 60 000 kvadratkilometer.",
       "sourceIds": [
         "core-source:snl-no-fylke",
         "core-source:snl-no-norges-st-c3-b8rste-byer",
@@ -239878,7 +239878,7 @@
       "acceptedAnswers": [
         "Trondhjem"
       ],
-      "explanation": "Trondheim har rundt 200 000 innbyggere og er den største byen i Trøndelag, eller Midt-Norge. I middelalderen het byen Nidaros og ble sete for Norges erkebiskop fra 1150-årene.",
+      "explanation": "Trondheim har rundt 200 000 innbyggere og er den største byen i Trøndelag, eller Midt-Norge. I middelalderen het byen Nidaros og ble sete for Norges erkebiskop fra 1150-årene.",
       "sourceIds": [
         "core-source:snl-no-fylke",
         "core-source:snl-no-norges-st-c3-b8rste-byer",
@@ -242137,7 +242137,7 @@
         "Lake Victoria",
         "Victoria Nyanza"
       ],
-      "explanation": "Sjøen dekker 68 800 kvadratkilometer. Ved byen Jinja i Uganda renner Den hvite Nil ut av den.",
+      "explanation": "Sjøen dekker 68 800 kvadratkilometer. Ved byen Jinja i Uganda renner Den hvite Nil ut av den.",
       "sourceIds": [
         "core-source:snl-no-afrika",
         "core-source:snl-no-nilen",
@@ -246591,7 +246591,7 @@
         "Melkeveigalaksen",
         "Melkeveiensystemet"
       ],
-      "explanation": "Melkeveien er en flat, roterende skive med spiralarmer, rundt 100 000 lysår på tvers. Sola ligger omtrent 30 000 lysår fra sentrum, og selve skiven ser vi som et lysende bånd over nattehimmelen.",
+      "explanation": "Melkeveien er en flat, roterende skive med spiralarmer, rundt 100 000 lysår på tvers. Sola ligger omtrent 30 000 lysår fra sentrum, og selve skiven ser vi som et lysende bånd over nattehimmelen.",
       "sourceIds": [
         "core-source:snl-no-universet",
         "core-source:snl-no-big-bang",
@@ -246998,7 +246998,7 @@
       "prompt": "Omtrent hvor langt er ett lysår?",
       "answer": "Omtrent 9,46 billioner kilometer",
       "acceptedAnswers": [],
-      "explanation": "Lyset går omtrent 300 000 kilometer i sekundet og bruker rundt åtte minutter fra Sola til Jorda. Astronomer bruker også enheten parsec, som er 3,26 lysår.",
+      "explanation": "Lyset går omtrent 300 000 kilometer i sekundet og bruker rundt åtte minutter fra Sola til Jorda. Astronomer bruker også enheten parsec, som er 3,26 lysår.",
       "sourceIds": [
         "core-source:snl-no-universet",
         "core-source:snl-no-big-bang",
@@ -247025,8 +247025,8 @@
       "options": [
         "Omtrent 9,46 billioner kilometer",
         "Omtrent 150 millioner kilometer",
-        "Omtrent 300 000 kilometer",
-        "Omtrent 384 000 kilometer"
+        "Omtrent 300 000 kilometer",
+        "Omtrent 384 000 kilometer"
       ],
       "difficultyFamily": "core-curriculum",
       "difficultyReason": "Detalj: et presist årstall, tall eller navn.",
@@ -250513,7 +250513,7 @@
       "prompt": "En vannkoker er koblet til 230 volt og trekker 10 ampere. Hvor stor er effekten?",
       "answer": "Omtrent 2300 watt",
       "acceptedAnswers": [],
-      "explanation": "Effekt er spenning ganger strøm: 230 V · 10 A = 2300 W, eller 2,3 kilowatt. Står vannkokeren på i ett minutt, omdanner den altså rundt 138 000 joule til varme.",
+      "explanation": "Effekt er spenning ganger strøm: 230 V · 10 A = 2300 W, eller 2,3 kilowatt. Står vannkokeren på i ett minutt, omdanner den altså rundt 138 000 joule til varme.",
       "sourceIds": [
         "core-source:snl-no-energi",
         "core-source:snl-no-elektrisk-str-c3-b8m",
@@ -250541,7 +250541,7 @@
         "Omtrent 2300 watt",
         "Omtrent 23 watt",
         "Omtrent 240 watt",
-        "Omtrent 23 000 watt"
+        "Omtrent 23 000 watt"
       ],
       "difficultyFamily": "core-curriculum",
       "difficultyReason": "Sammenheng: forklar årsaker, følger eller forskjeller.",
@@ -250746,7 +250746,7 @@
         "naturvitenskap"
       ],
       "prompt": "Omtrent hvor fort går lyset i tomt rom?",
-      "answer": "Omtrent 300 000 km i sekundet",
+      "answer": "Omtrent 300 000 km i sekundet",
       "acceptedAnswers": [],
       "explanation": "Ingenting med masse kan nå denne farten, og ingen informasjon kan overføres raskere. Siden 1983 er meteren definert ut fra hvor langt lyset går på en brøkdel av et sekund.",
       "sourceIds": [
@@ -250773,10 +250773,10 @@
       "retrievalRole": "default",
       "legacyFactId": "core:nat-lys-lyd-lysfart",
       "options": [
-        "Omtrent 300 000 km i sekundet",
+        "Omtrent 300 000 km i sekundet",
         "Omtrent 340 meter i sekundet",
         "Omtrent 300 km i sekundet",
-        "Omtrent 300 000 km i timen"
+        "Omtrent 300 000 km i timen"
       ],
       "difficultyFamily": "core-curriculum",
       "difficultyReason": "Oversikt: hva, når og hvorfor det betyr noe. Svaret er undervist i emnets innledning.",
@@ -251006,7 +251006,7 @@
         "Omtrent 340 meter i sekundet",
         "Omtrent 34 meter i sekundet",
         "Omtrent 3400 meter i sekundet",
-        "Omtrent 300 000 km i sekundet"
+        "Omtrent 300 000 km i sekundet"
       ],
       "difficultyFamily": "core-curriculum",
       "difficultyReason": "Kjerne: hent fram et sentralt navn, begrep eller sted.",
@@ -251263,7 +251263,7 @@
         "naturvitenskap"
       ],
       "prompt": "Forklar den viktigste forskjellen på lys og lyd som bølger.",
-      "answer": "Lys er elektromagnetiske bølger som kan gå gjennom tomt rom med omtrent 300 000 km/s. Lyd er trykkbølger i et stoff, trenger et medium og går mye langsommere, omkring 340 m/s i luft.",
+      "answer": "Lys er elektromagnetiske bølger som kan gå gjennom tomt rom med omtrent 300 000 km/s. Lyd er trykkbølger i et stoff, trenger et medium og går mye langsommere, omkring 340 m/s i luft.",
       "acceptedAnswers": [],
       "explanation": "Lys går saktere i stoff enn i tomt rom, mens lyd går raskere i vann enn i luft. Begge kan reflekteres, og et ekko er lyd som kastes tilbake fra en stor flate.",
       "sourceIds": [
@@ -255111,9 +255111,9 @@
         "biologi"
       ],
       "prompt": "Omtrent hvor lenge har mennesker av arten Homo sapiens levd på Jorda?",
-      "answer": "Omtrent 300 000 år",
+      "answer": "Omtrent 300 000 år",
       "acceptedAnswers": [],
-      "explanation": "Arten oppsto i Afrika og begynte å spre seg ut av kontinentet for mer enn 100 000 år siden. Mange nålevende mennesker har noen få prosent DNA fra neandertalerne.",
+      "explanation": "Arten oppsto i Afrika og begynte å spre seg ut av kontinentet for mer enn 100 000 år siden. Mange nålevende mennesker har noen få prosent DNA fra neandertalerne.",
       "sourceIds": [
         "core-source:snl-no-evolusjon",
         "core-source:snl-no-charles-darwin",
@@ -255139,10 +255139,10 @@
       "retrievalRole": "default",
       "legacyFactId": "core:bio-evolusjon-homo-sapiens",
       "options": [
-        "Omtrent 300 000 år",
-        "Omtrent 30 000 år",
+        "Omtrent 300 000 år",
+        "Omtrent 30 000 år",
         "Omtrent 3 millioner år",
-        "Omtrent 10 000 år"
+        "Omtrent 10 000 år"
       ],
       "difficultyFamily": "core-curriculum",
       "difficultyReason": "Detalj: et presist årstall, tall eller navn.",
@@ -255844,7 +255844,7 @@
       "prompt": "Omtrent hvor mange prosent av alle beskrevne nålevende arter er virveldyr?",
       "answer": "5",
       "acceptedAnswers": [],
-      "explanation": "Det er registrert omtrent 69 000 nålevende arter av virveldyr. De aller fleste beskrevne artene er altså ikke virveldyr.",
+      "explanation": "Det er registrert omtrent 69 000 nålevende arter av virveldyr. De aller fleste beskrevne artene er altså ikke virveldyr.",
       "sourceIds": [
         "core-source:snl-no-art",
         "core-source:snl-no-liv-systematisk-inndeling",
@@ -257417,7 +257417,7 @@
       "prompt": "I hvilke år herjet spanskesyken?",
       "answer": "1918–1920",
       "acceptedAnswers": [],
-      "explanation": "Mellom 50 og 100 millioner mennesker døde, flere enn i begge verdenskrigene til sammen. I Norge tok sykdommen omkring 15 000 liv, de fleste høsten 1918.",
+      "explanation": "Mellom 50 og 100 millioner mennesker døde, flere enn i begge verdenskrigene til sammen. I Norge tok sykdommen omkring 15 000 liv, de fleste høsten 1918.",
       "sourceIds": [
         "core-source:sml-snl-no-virus",
         "core-source:sml-snl-no-antistoffer",
@@ -264259,7 +264259,7 @@
         "samfunn"
       ],
       "prompt": "Omtrent når levde Buddha?",
-      "answer": "Omkring 400 f.Kr.",
+      "answer": "Omkring 400 f.Kr.",
       "acceptedAnswers": [],
       "explanation": "Nøyaktig når Buddha levde, er usikkert. Buddhismen er i dag delt i to hovedtradisjoner, theravada og mahayana.",
       "sourceIds": [
@@ -264289,10 +264289,10 @@
       "retrievalRole": "default",
       "legacyFactId": "core:sam-religioner-buddha-tid",
       "options": [
-        "Omkring 400 f.Kr.",
-        "Omkring 1500 f.Kr.",
-        "Omkring år 30 e.Kr.",
-        "Omkring år 600 e.Kr."
+        "Omkring 400 f.Kr.",
+        "Omkring 1500 f.Kr.",
+        "Omkring år 30 e.Kr.",
+        "Omkring år 600 e.Kr."
       ],
       "difficultyFamily": "core-curriculum",
       "difficultyReason": "Detalj: et presist årstall, tall eller navn.",
@@ -269410,7 +269410,7 @@
       "prompt": "Hva var pyramidene i Egypt?",
       "answer": "Gravanlegg for kongene",
       "acceptedAnswers": [],
-      "explanation": "De ble bygd fra omkring 2600 til 1600 f.Kr., og vi kjenner 138 av dem. De eldste hadde trappetrinn, men i det fjerde dynastiet fikk de glatte sider.",
+      "explanation": "De ble bygd fra omkring 2600 til 1600 f.Kr., og vi kjenner 138 av dem. De eldste hadde trappetrinn, men i det fjerde dynastiet fikk de glatte sider.",
       "sourceIds": [
         "core-source:snl-no-pyramidene-i-egypt",
         "core-source:snl-no-s-c3-b8yleordener",
@@ -269720,7 +269720,7 @@
       "collectionIds": [
         "kunst-musikk"
       ],
-      "prompt": "Hva heter amfiteateret i Roma som ble innviet i år 80 og hadde plass til omkring 50 000 tilskuere?",
+      "prompt": "Hva heter amfiteateret i Roma som ble innviet i år 80 og hadde plass til omkring 50 000 tilskuere?",
       "answer": "Colosseum",
       "acceptedAnswers": [
         "Kolosseum",
@@ -276333,7 +276333,7 @@
       "prompt": "Koble klassikerens forfatter med verket.",
       "answer": "Homer – Odysseen · Dante Alighieri – Den guddommelige komedie · Miguel de Cervantes – Don Quijote · Johann Wolfgang von Goethe – Faust",
       "acceptedAnswers": [],
-      "explanation": "Verkene spenner over mer enn 2000 år, fra eposene fra omkring 700 f.Kr. til «Faust», som Goethe arbeidet med til han døde.",
+      "explanation": "Verkene spenner over mer enn 2000 år, fra eposene fra omkring 700 f.Kr. til «Faust», som Goethe arbeidet med til han døde.",
       "sourceIds": [
         "core-source:snl-no-homer",
         "core-source:snl-no-den-guddommelige-komedie",
@@ -282615,7 +282615,7 @@
       "prompt": "Hvilken metode brukte Sokrates i samtalene sine?",
       "answer": "Ved å stille spørsmål til andre",
       "acceptedAnswers": [],
-      "explanation": "Han døde i 399 f.Kr. og etterlot seg ingen skrifter. Det vi vet om ham, kommer først og fremst fra Platons dialoger.",
+      "explanation": "Han døde i 399 f.Kr. og etterlot seg ingen skrifter. Det vi vet om ham, kommer først og fremst fra Platons dialoger.",
       "sourceIds": [
         "core-source:snl-no-antikkens-filosofi",
         "core-source:snl-no-sokrates",
@@ -282901,7 +282901,7 @@
         "ideer"
       ],
       "prompt": "Sett disse hendelsene i riktig rekkefølge.",
-      "answer": "Sokrates dør (399 f.Kr.) → Akademiet grunnlegges (387 f.Kr.) → Aristoteles dør (322 f.Kr.)",
+      "answer": "Sokrates dør (399 f.Kr.) → Akademiet grunnlegges (387 f.Kr.) → Aristoteles dør (322 f.Kr.)",
       "acceptedAnswers": [],
       "explanation": "Platon grunnla Akademiet om lag tolv år etter Sokrates' død. Aristoteles døde 77 år etter Sokrates, altså i neste generasjon av tenkere.",
       "sourceIds": [
@@ -283168,7 +283168,7 @@
         "ideer"
       ],
       "prompt": "Hvilket år døde Aristoteles?",
-      "answer": "322 f.Kr.",
+      "answer": "322 f.Kr.",
       "acceptedAnswers": [],
       "explanation": "Aristoteles døde 77 år etter Sokrates. Akademiet, som Platon grunnla, varte i over 900 år.",
       "sourceIds": [
@@ -283196,10 +283196,10 @@
       "legacyFactId": "core:ide-antikken-aristoteles-dod",
       "year": -600,
       "options": [
-        "322 f.Kr.",
-        "399 f.Kr.",
-        "387 f.Kr.",
-        "529 e.Kr."
+        "322 f.Kr.",
+        "399 f.Kr.",
+        "387 f.Kr.",
+        "529 e.Kr."
       ],
       "difficultyFamily": "core-curriculum",
       "difficultyReason": "Detalj: et presist årstall, tall eller navn.",
@@ -283282,7 +283282,7 @@
       "collectionIds": [
         "ideer"
       ],
-      "prompt": "Hvilken skole grunnla Zenon av Kition i Athen rundt år 300 f.Kr.?",
+      "prompt": "Hvilken skole grunnla Zenon av Kition i Athen rundt år 300 f.Kr.?",
       "answer": "Stoisismen",
       "acceptedAnswers": [],
       "explanation": "Navnet kommer fra stoaen i Athen, der Zenon underviste. Skolen fikk stor betydning både i den greske og i den romerske tiden.",
@@ -283634,9 +283634,9 @@
         "ideer"
       ],
       "prompt": "Sett disse hendelsene fra hellenismen i riktig rekkefølge.",
-      "answer": "Hellenismen begynner med Aleksanders død (323 f.Kr.) → Stoisismen grunnlegges i Athen (300 f.Kr.) → Egypt blir romersk (30 f.Kr.)",
+      "answer": "Hellenismen begynner med Aleksanders død (323 f.Kr.) → Stoisismen grunnlegges i Athen (300 f.Kr.) → Egypt blir romersk (30 f.Kr.)",
       "acceptedAnswers": [],
-      "explanation": "Stoisismen kom rundt 300 f.Kr., omtrent 20 år etter hellenismens start. Egypt ble romersk 270 år senere.",
+      "explanation": "Stoisismen kom rundt 300 f.Kr., omtrent 20 år etter hellenismens start. Egypt ble romersk 270 år senere.",
       "sourceIds": [
         "core-source:snl-no-hellenismen",
         "core-source:snl-no-stoisisme",
@@ -283905,7 +283905,7 @@
         "ideer"
       ],
       "prompt": "Hvilket år begynte hellenismen?",
-      "answer": "323 f.Kr.",
+      "answer": "323 f.Kr.",
       "acceptedAnswers": [],
       "explanation": "Hellenismen begynte med Aleksander den stores død. Perioden varte i nesten tre århundrer, til Egypt ble romersk.",
       "sourceIds": [
@@ -283934,10 +283934,10 @@
       "legacyFactId": "core:ide-hellenismen-start",
       "year": -323,
       "options": [
-        "323 f.Kr.",
-        "300 f.Kr.",
-        "30 f.Kr.",
-        "180 e.Kr."
+        "323 f.Kr.",
+        "300 f.Kr.",
+        "30 f.Kr.",
+        "180 e.Kr."
       ],
       "difficultyFamily": "core-curriculum",
       "difficultyReason": "Detalj: et presist årstall, tall eller navn.",
@@ -287370,7 +287370,7 @@
         "teknologi"
       ],
       "prompt": "Sett hjulfunnene, slutten på bronsealderen og tydingen av kileskriften i rekkefølge, eldst først.",
-      "answer": "De eldste kjente hjulfunnene (omkring 3500 f.Kr.) (3500 f.Kr.) → Bronsealderen i Midtøsten tar slutt (omkring 1200 f.Kr.) (1200 f.Kr.) → Rawlinson tyder gammelpersisk kileskrift (1846)",
+      "answer": "De eldste kjente hjulfunnene (omkring 3500 f.Kr.) (3500 f.Kr.) → Bronsealderen i Midtøsten tar slutt (omkring 1200 f.Kr.) (1200 f.Kr.) → Rawlinson tyder gammelpersisk kileskrift (1846)",
       "acceptedAnswers": [],
       "explanation": "Årstallene er omtrentlige, og flere av dem er datert ut fra funn, ikke skriftlige kilder. Rekkefølgen er sikrere enn selve årstallene.",
       "sourceIds": [
@@ -287403,12 +287403,12 @@
         "items": [
           {
             "id": "tek-skrift-hjul-metaller-rekkefolge-0",
-            "label": "De eldste kjente hjulfunnene (omkring 3500 f.Kr.)",
+            "label": "De eldste kjente hjulfunnene (omkring 3500 f.Kr.)",
             "year": -3500
           },
           {
             "id": "tek-skrift-hjul-metaller-rekkefolge-1",
-            "label": "Bronsealderen i Midtøsten tar slutt (omkring 1200 f.Kr.)",
+            "label": "Bronsealderen i Midtøsten tar slutt (omkring 1200 f.Kr.)",
             "year": -1200
           },
           {
@@ -287637,9 +287637,9 @@
         "teknologi"
       ],
       "prompt": "Omtrent når er de eldste kjente hjulfunnene datert?",
-      "answer": "Omkring 3500 f.Kr.",
+      "answer": "Omkring 3500 f.Kr.",
       "acceptedAnswers": [],
-      "explanation": "Hjulet var i bruk i Egypt omtrent 2500 f.Kr., altså over tusen år senere. Dateringene kan endres når nye funn gjøres.",
+      "explanation": "Hjulet var i bruk i Egypt omtrent 2500 f.Kr., altså over tusen år senere. Dateringene kan endres når nye funn gjøres.",
       "sourceIds": [
         "core-source:snl-no-kileskrift",
         "core-source:snl-no-hjul",
@@ -287665,10 +287665,10 @@
       "legacyFactId": "core:tek-skrift-hjul-metaller-hjulets-alder",
       "year": -3500,
       "options": [
-        "Omkring 3500 f.Kr.",
-        "Omkring 500 f.Kr.",
-        "Omkring 1500 f.Kr.",
-        "Omkring 7000 f.Kr."
+        "Omkring 3500 f.Kr.",
+        "Omkring 500 f.Kr.",
+        "Omkring 1500 f.Kr.",
+        "Omkring 7000 f.Kr."
       ],
       "difficultyFamily": "core-curriculum",
       "difficultyReason": "Detalj: et presist årstall, tall eller navn.",
@@ -290501,7 +290501,7 @@
       "prompt": "Hva kalles komponentene ENIAC brukte til å bytte signaler?",
       "answer": "Elektronrør",
       "acceptedAnswers": [],
-      "explanation": "ENIAC hadde flere enn 17 000 elektronrør. Transistoren kom senere og kunne gjøre de samme oppgavene med mindre plass og strøm.",
+      "explanation": "ENIAC hadde flere enn 17 000 elektronrør. Transistoren kom senere og kunne gjøre de samme oppgavene med mindre plass og strøm.",
       "sourceIds": [
         "core-source:snl-no-eniac",
         "core-source:snl-no-elektronikk",
@@ -291443,7 +291443,7 @@
         "medisin"
       ],
       "prompt": "Sett disse milepælene fra oldtiden og fram til Vesalius i riktig rekkefølge.",
-      "answer": "Hippokrates lever (400 f.Kr.) → Galen skriver sine verker (ca.) (150) → Vesalius gir ut sin anatomiatlas (1543)",
+      "answer": "Hippokrates lever (400 f.Kr.) → Galen skriver sine verker (ca.) (150) → Vesalius gir ut sin anatomiatlas (1543)",
       "acceptedAnswers": [],
       "explanation": "Mellom Hippokrates og Vesalius gikk nesten 1950 år. Galens lære var det mest brukte grunnlaget for medisinen i store deler av denne tiden.",
       "sourceIds": [
@@ -295014,7 +295014,7 @@
       "collectionIds": [
         "romfart"
       ],
-      "prompt": "Hvilket verk fra rundt 150 e.Kr. er vår viktigste kilde til antikkens astronomi?",
+      "prompt": "Hvilket verk fra rundt 150 e.Kr. er vår viktigste kilde til antikkens astronomi?",
       "answer": "Almagest",
       "acceptedAnswers": [],
       "explanation": "Verket inneholder også en stjernekatalog med over tusen stjerner. Det er derfor en av de viktigste kildene til hvordan stjernene så ut før teleskopet.",
@@ -295312,7 +295312,7 @@
         "romfart"
       ],
       "prompt": "Sett disse hendelsene fra oldtiden i kronologisk rekkefølge.",
-      "answer": "Et stort antall stjernebilder er identifisert i Mesopotamia (700 f.Kr.) → Ptolemaios skriver Almagest (150) → Kopernikus gir ut boken om et heliosentrisk verdensbilde (1543) → Galilei ser fire måner rundt Jupiter (1610)",
+      "answer": "Et stort antall stjernebilder er identifisert i Mesopotamia (700 f.Kr.) → Ptolemaios skriver Almagest (150) → Kopernikus gir ut boken om et heliosentrisk verdensbilde (1543) → Galilei ser fire måner rundt Jupiter (1610)",
       "acceptedAnswers": [],
       "explanation": "Det gikk over 1300 år fra Almagest til Kopernikus. Hvert steg viser at vitenskap bygger på eldre arbeid, selv når det eldre arbeidet senere blir erstattet.",
       "sourceIds": [
@@ -295476,8 +295476,8 @@
       "options": [
         "Over tusen",
         "Omtrent 300",
-        "Omtrent 10 000",
-        "Over 100 000"
+        "Omtrent 10 000",
+        "Over 100 000"
       ],
       "difficultyFamily": "core-curriculum",
       "difficultyReason": "Detalj: et presist årstall, tall eller navn.",
@@ -298632,10 +298632,10 @@
       "collectionIds": [
         "verden-utenfor-europa"
       ],
-      "prompt": "Hvem samlet de stridende kongedømmene i Kina til ett rike i 221 f.Kr.?",
+      "prompt": "Hvem samlet de stridende kongedømmene i Kina til ett rike i 221 f.Kr.?",
       "answer": "Qin Shi Huangdi",
       "acceptedAnswers": [],
-      "explanation": "Han kalte seg første keiser og avskaffet det føydale systemet. Dynastiet var kort, bare 221 til 206 f.Kr., men modellen med ett sentralt styre ble stående.",
+      "explanation": "Han kalte seg første keiser og avskaffet det føydale systemet. Dynastiet var kort, bare 221 til 206 f.Kr., men modellen med ett sentralt styre ble stående.",
       "sourceIds": [
         "core-source:snl-no-qin-shi-huangdi",
         "core-source:snl-no-qin-dynastiet",
@@ -298988,7 +298988,7 @@
         "verden-utenfor-europa"
       ],
       "prompt": "Sett Qin, Han og Tang i kronologisk rekkefølge.",
-      "answer": "Qin samler Kina til ett rike (221 f.Kr.) → Qin-dynastiet faller (206 f.Kr.) → Tang-dynastiet begynner (618)",
+      "answer": "Qin samler Kina til ett rike (221 f.Kr.) → Qin-dynastiet faller (206 f.Kr.) → Tang-dynastiet begynner (618)",
       "acceptedAnswers": [],
       "explanation": "Qin varte bare i 15 år, men modellen med ett sentralt keisertige ble stående. Tang kom mer enn 800 år etter at Qin falt.",
       "sourceIds": [
@@ -299065,7 +299065,7 @@
       "prompt": "Hvorfor var Silkeveien mer enn en handelsvei for silke?",
       "answer": "Varene var bare én del av det som gikk langs rutene. Papir, bokstrykk og kompasset spredte seg vestover, og ideer og religioner fulgte med de reisende. Rutene knyttet dermed kulturer sammen over lange avstander.",
       "acceptedAnswers": [],
-      "explanation": "Silkeveien er et samlebegrep for mange ruter, ikke én vei. De viktigste var særlig betydningsfulle omkring 400 til 700 e.Kr. og igjen på 1200- og 1300-tallet.",
+      "explanation": "Silkeveien er et samlebegrep for mange ruter, ikke én vei. De viktigste var særlig betydningsfulle omkring 400 til 700 e.Kr. og igjen på 1200- og 1300-tallet.",
       "sourceIds": [
         "core-source:snl-no-qin-shi-huangdi",
         "core-source:snl-no-qin-dynastiet",
@@ -299307,7 +299307,7 @@
       "prompt": "Hvor lenge varte Qin-dynastiet?",
       "answer": "Omkring 15 år",
       "acceptedAnswers": [],
-      "explanation": "Qin startet i 221 f.Kr. og falt i 206 f.Kr., altså omkring 15 år. Det var kort, men det la grunnlaget for keisertiden som fulgte.",
+      "explanation": "Qin startet i 221 f.Kr. og falt i 206 f.Kr., altså omkring 15 år. Det var kort, men det la grunnlaget for keisertiden som fulgte.",
       "sourceIds": [
         "core-source:snl-no-qin-shi-huangdi",
         "core-source:snl-no-qin-dynastiet",
@@ -458993,7 +458993,7 @@
         "unit:nh-forhistorie"
       ],
       "relationshipIds": [],
-      "statement": "Lenger nord brukes ikke betegnelsen bronsealder. Der snakker arkeologene om tidlig metalltid, fra omkring 2000 f.Kr. til 300 e.Kr.",
+      "statement": "Lenger nord brukes ikke betegnelsen bronsealder. Der snakker arkeologene om tidlig metalltid, fra omkring 2000 f.Kr. til 300 e.Kr.",
       "sourceIds": [
         "core-source:snl-no-steinalderen-i-norge",
         "core-source:snl-no-bronsealderen-i-norge",
@@ -459008,7 +459008,7 @@
         "unit:nh-forhistorie"
       ],
       "relationshipIds": [],
-      "statement": "Ristningene er datert til mellom omkring 4200 og 500 f.Kr., blant annet ut fra hvordan havnivået har endret seg. Alta museum åpnet ved feltet i 1991.",
+      "statement": "Ristningene er datert til mellom omkring 4200 og 500 f.Kr., blant annet ut fra hvordan havnivået har endret seg. Alta museum åpnet ved feltet i 1991.",
       "sourceIds": [
         "core-source:snl-no-steinalderen-i-norge",
         "core-source:snl-no-bronsealderen-i-norge",
@@ -460131,7 +460131,7 @@
         "unit:nh-unionstiden-1905"
       ],
       "relationshipIds": [],
-      "statement": "Det ga ja-siden 99,95 prosent. Kvinner hadde ikke stemmerett, men samlet inn nesten 280 000 underskrifter for oppløsningen.",
+      "statement": "Det ga ja-siden 99,95 prosent. Kvinner hadde ikke stemmerett, men samlet inn nesten 280 000 underskrifter for oppløsningen.",
       "sourceIds": [
         "core-source:snl-no-unionsoppl-c3-b8sningen-i-1905",
         "core-source:snl-no-folkeavstemningen-om-unionsoppl-c3-b8sning-i-1905",
@@ -460161,7 +460161,7 @@
         "unit:nh-1800-tallets-norge"
       ],
       "relationshipIds": [],
-      "statement": "Det var nesten like mange som bodde i Norge i 1801. Fra 1862 ga homestead-loven i USA innvandrere rett til egen jord. Den største bølgen kom i 1880-årene, med rekordåret 1882 og 29 000 utvandrere.",
+      "statement": "Det var nesten like mange som bodde i Norge i 1801. Fra 1862 ga homestead-loven i USA innvandrere rett til egen jord. Den største bølgen kom i 1880-årene, med rekordåret 1882 og 29 000 utvandrere.",
       "sourceIds": [
         "core-source:snl-no-norges-historie-fra-1815-til-1905",
         "core-source:snl-no-utvandringa-fr-c3-a5-noreg-til-nord-amerika",
@@ -460416,7 +460416,7 @@
         "unit:nh-andre-verdenskrig"
       ],
       "relationshipIds": [],
-      "statement": "Ved krigens slutt hadde Milorg om lag 40 000 personer. Det siste krigsåret fikk organisasjonen våpen og instruktører utenfra og drev også sabotasje.",
+      "statement": "Ved krigens slutt hadde Milorg om lag 40 000 personer. Det siste krigsåret fikk organisasjonen våpen og instruktører utenfra og drev også sabotasje.",
       "sourceIds": [
         "core-source:snl-no-norge-under-andre-verdenskrig",
         "core-source:snl-no-senkingen-av-bl-c3-bccher",
@@ -461166,7 +461166,7 @@
         "unit:vh-forste-sivilisasjoner"
       ],
       "relationshipIds": [],
-      "statement": "De eldste kinesiske skrifttegnene står på såkalte orakelbein fra Shang-tiden. Dynastiet regnes som høydepunktet for kinesisk bronsestøping og tok slutt omkring 1046 f.Kr.",
+      "statement": "De eldste kinesiske skrifttegnene står på såkalte orakelbein fra Shang-tiden. Dynastiet regnes som høydepunktet for kinesisk bronsestøping og tok slutt omkring 1046 f.Kr.",
       "sourceIds": [
         "core-source:snl-no-asias-tidlige-historie",
         "core-source:snl-no-mesopotamia",
@@ -461226,7 +461226,7 @@
         "unit:vh-forste-sivilisasjoner"
       ],
       "relationshipIds": [],
-      "statement": "Egypt ble samlet tidlig, mens Mesopotamia lenge besto av løst tilknyttede bystater. Den gammelegyptiske historien varte i nesten 3000 år, til romerne erobret landet i år 30 f.Kr.",
+      "statement": "Egypt ble samlet tidlig, mens Mesopotamia lenge besto av løst tilknyttede bystater. Den gammelegyptiske historien varte i nesten 3000 år, til romerne erobret landet i år 30 f.Kr.",
       "sourceIds": [
         "core-source:snl-no-asias-tidlige-historie",
         "core-source:snl-no-mesopotamia",
@@ -461241,7 +461241,7 @@
         "unit:vh-forste-sivilisasjoner"
       ],
       "relationshipIds": [],
-      "statement": "Det gamle riket (om lag 2543–2120 f.Kr.) var pyramidenes tid. Forskerne diskuterer fortsatt hvordan egypterne bygde Kheops' pyramide med datidens hjelpemidler.",
+      "statement": "Det gamle riket (om lag 2543–2120 f.Kr.) var pyramidenes tid. Forskerne diskuterer fortsatt hvordan egypterne bygde Kheops' pyramide med datidens hjelpemidler.",
       "sourceIds": [
         "core-source:snl-no-asias-tidlige-historie",
         "core-source:snl-no-mesopotamia",
@@ -461256,7 +461256,7 @@
         "unit:vh-forste-sivilisasjoner"
       ],
       "relationshipIds": [],
-      "statement": "Husdyrhold med geit, sau, svin og storfe kom fra omkring 10 000 år siden. I Kina ble ris dyrket ved Chang Jiang omtrent like tidlig som hirse ved Huang He.",
+      "statement": "Husdyrhold med geit, sau, svin og storfe kom fra omkring 10 000 år siden. I Kina ble ris dyrket ved Chang Jiang omtrent like tidlig som hirse ved Huang He.",
       "sourceIds": [
         "core-source:snl-no-asias-tidlige-historie",
         "core-source:snl-no-mesopotamia",
@@ -461316,7 +461316,7 @@
         "unit:vh-antikkens-hellas"
       ],
       "relationshipIds": [],
-      "statement": "Ifølge en bevart seiersliste startet lekene i 776 f.Kr., men de kan være eldre. Lekene var religiøse fester for Zevs og Hera, og vinneren fikk en krans fra et hellig oliventre.",
+      "statement": "Ifølge en bevart seiersliste startet lekene i 776 f.Kr., men de kan være eldre. Lekene var religiøse fester for Zevs og Hera, og vinneren fikk en krans fra et hellig oliventre.",
       "sourceIds": [
         "core-source:snl-no-den-greske-antikkens-historie",
         "core-source:snl-no-det-athenske-demokratiet",
@@ -461376,7 +461376,7 @@
         "unit:vh-antikkens-hellas"
       ],
       "relationshipIds": [],
-      "statement": "Aleksander døde 32 år gammel i Babylon i 323 f.Kr., og riket falt raskt fra hverandre. Overklassen i Egypt og Midtøsten ble likevel lenge knyttet til gresk kultur, og mange tok i bruk gresk språk.",
+      "statement": "Aleksander døde 32 år gammel i Babylon i 323 f.Kr., og riket falt raskt fra hverandre. Overklassen i Egypt og Midtøsten ble likevel lenge knyttet til gresk kultur, og mange tok i bruk gresk språk.",
       "sourceIds": [
         "core-source:snl-no-den-greske-antikkens-historie",
         "core-source:snl-no-det-athenske-demokratiet",
@@ -461406,7 +461406,7 @@
         "unit:vh-antikkens-hellas"
       ],
       "relationshipIds": [],
-      "statement": "Filip vant slaget ved Khaironeia i 338 f.Kr., der den unge Aleksander ledet rytteriet. Både Filip og Aleksander begrunnet krigen mot Persia med hevn for ødeleggelsene perserne hadde påført greske helligdommer.",
+      "statement": "Filip vant slaget ved Khaironeia i 338 f.Kr., der den unge Aleksander ledet rytteriet. Både Filip og Aleksander begrunnet krigen mot Persia med hevn for ødeleggelsene perserne hadde påført greske helligdommer.",
       "sourceIds": [
         "core-source:snl-no-den-greske-antikkens-historie",
         "core-source:snl-no-det-athenske-demokratiet",
@@ -461421,7 +461421,7 @@
         "unit:vh-antikkens-hellas"
       ],
       "relationshipIds": [],
-      "statement": "Rundt 430 f.Kr. hadde Athen trolig om lag 40 000 borgere, mens slavene kanskje var over 100 000. Tanken var likevel at makten skulle ligge hos borgerne, ikke hos eksperter og mektige enkeltmenn.",
+      "statement": "Rundt 430 f.Kr. hadde Athen trolig om lag 40 000 borgere, mens slavene kanskje var over 100 000. Tanken var likevel at makten skulle ligge hos borgerne, ikke hos eksperter og mektige enkeltmenn.",
       "sourceIds": [
         "core-source:snl-no-den-greske-antikkens-historie",
         "core-source:snl-no-det-athenske-demokratiet",
@@ -461436,7 +461436,7 @@
         "unit:vh-antikkens-hellas"
       ],
       "relationshipIds": [],
-      "statement": "Årstallet bygger på en liste over seierherrer. Lekene ble holdt for siste gang i 393 e.Kr., da den kristne keiseren Theodosius forbød dem som hedenske.",
+      "statement": "Årstallet bygger på en liste over seierherrer. Lekene ble holdt for siste gang i 393 e.Kr., da den kristne keiseren Theodosius forbød dem som hedenske.",
       "sourceIds": [
         "core-source:snl-no-den-greske-antikkens-historie",
         "core-source:snl-no-det-athenske-demokratiet",
@@ -462456,7 +462456,7 @@
         "unit:vh-oppdagelsesreisene"
       ],
       "relationshipIds": [],
-      "statement": "Anslaget bygger på data fra over 35 000 skipsanløp. Om lag to millioner døde under overfarten, og mer enn 40 prosent av alle ble solgt til Brasil.",
+      "statement": "Anslaget bygger på data fra over 35 000 skipsanløp. Om lag to millioner døde under overfarten, og mer enn 40 prosent av alle ble solgt til Brasil.",
       "sourceIds": [
         "core-source:snl-no-oppdagelsesreiser",
         "core-source:snl-no-vasco-da-gama",
@@ -463476,7 +463476,7 @@
         "unit:mh-forste-verdenskrig"
       ],
       "relationshipIds": [],
-      "statement": "Versaillestraktaten ble undertegnet 28. juni 1919, på femårsdagen for skuddene i Sarajevo. Ved Verdun ble det anslått 750 000 drepte og sårede på ti måneder.",
+      "statement": "Versaillestraktaten ble undertegnet 28. juni 1919, på femårsdagen for skuddene i Sarajevo. Ved Verdun ble det anslått 750 000 drepte og sårede på ti måneder.",
       "sourceIds": [
         "core-source:snl-no-f-c3-b8rste-verdenskrig",
         "core-source:snl-no-skuddene-i-sarajevo",
@@ -464046,7 +464046,7 @@
         "unit:mh-andre-verdenskrig"
       ],
       "relationshipIds": [],
-      "statement": "Landgangen er den største amfibieoperasjonen som er gjennomført. Omkring 156 000 soldater gikk i land på fem strender med kodenavnene Utah, Omaha, Gold, Juno og Sword, under ledelse av Dwight D. Eisenhower.",
+      "statement": "Landgangen er den største amfibieoperasjonen som er gjennomført. Omkring 156 000 soldater gikk i land på fem strender med kodenavnene Utah, Omaha, Gold, Juno og Sword, under ledelse av Dwight D. Eisenhower.",
       "sourceIds": [
         "core-source:snl-no-andre-verdenskrig",
         "core-source:snl-no-andre-verdenskrig-viktige-hendelser",
@@ -464076,7 +464076,7 @@
         "unit:mh-andre-verdenskrig"
       ],
       "relationshipIds": [],
-      "statement": "Rundt 80 000 mennesker ble drept øyeblikkelig i Hiroshima 6. august og omkring 40 000 i Nagasaki tre dager senere, og mange flere døde av skadene etterpå. Keiser Hirohito bestemte 14. august at Japan skulle kapitulere.",
+      "statement": "Rundt 80 000 mennesker ble drept øyeblikkelig i Hiroshima 6. august og omkring 40 000 i Nagasaki tre dager senere, og mange flere døde av skadene etterpå. Keiser Hirohito bestemte 14. august at Japan skulle kapitulere.",
       "sourceIds": [
         "core-source:snl-no-andre-verdenskrig",
         "core-source:snl-no-andre-verdenskrig-viktige-hendelser",
@@ -464151,7 +464151,7 @@
         "unit:mh-andre-verdenskrig"
       ],
       "relationshipIds": [],
-      "statement": "Sovjetunionen hadde de største tapene, omkring 27 millioner, og Kina mistet 15–20 millioner. Norge mistet omkring 10 000 mennesker. Alle tallene er omtrentlige.",
+      "statement": "Sovjetunionen hadde de største tapene, omkring 27 millioner, og Kina mistet 15–20 millioner. Norge mistet omkring 10 000 mennesker. Alle tallene er omtrentlige.",
       "sourceIds": [
         "core-source:snl-no-andre-verdenskrig",
         "core-source:snl-no-andre-verdenskrig-viktige-hendelser",
@@ -464211,7 +464211,7 @@
         "unit:mh-holocaust"
       ],
       "relationshipIds": [],
-      "statement": "I det såkalte eutanasiprogrammet ble om lag 70 000 funksjonshemmede drept i 1939–1941, mange med gass. Erfaringene ble senere brukt i dødsleirene. Også homoseksuelle og Jehovas vitner ble forfulgt.",
+      "statement": "I det såkalte eutanasiprogrammet ble om lag 70 000 funksjonshemmede drept i 1939–1941, mange med gass. Erfaringene ble senere brukt i dødsleirene. Også homoseksuelle og Jehovas vitner ble forfulgt.",
       "sourceIds": [
         "core-source:snl-no-holocaust",
         "core-source:snl-no-novemberpogromen",
@@ -464691,7 +464691,7 @@
         "unit:mh-avkolonisering"
       ],
       "relationshipIds": [],
-      "statement": "I Algerie bodde rundt én million europeere, og landet ble regnet som en del av Frankrike. Krigen kostet trolig rundt 500 000 liv, men anslagene varierer mye.",
+      "statement": "I Algerie bodde rundt én million europeere, og landet ble regnet som en del av Frankrike. Krigen kostet trolig rundt 500 000 liv, men anslagene varierer mye.",
       "sourceIds": [
         "core-source:snl-no-avkolonisering",
         "core-source:snl-no-mahatma-gandhi",
@@ -465216,7 +465216,7 @@
         "unit:geo-kontinenter-hav"
       ],
       "relationshipIds": [],
-      "statement": "Ekvator er omtrent 40 000 kilometer rundt. Der er dag og natt omtrent like lange hele året, og temperaturen endrer seg lite gjennom året.",
+      "statement": "Ekvator er omtrent 40 000 kilometer rundt. Der er dag og natt omtrent like lange hele året, og temperaturen endrer seg lite gjennom året.",
       "sourceIds": [
         "core-source:snl-no-verdensdel",
         "core-source:snl-no-verdenshav",
@@ -465494,7 +465494,7 @@
         "unit:geo-norges-landskap"
       ],
       "relationshipIds": [],
-      "statement": "Vidda ligger stort sett 1100–1400 meter over havet, over tregrensen. Her lever en villreinstamme på om lag 10 000 dyr.",
+      "statement": "Vidda ligger stort sett 1100–1400 meter over havet, over tregrensen. Her lever en villreinstamme på om lag 10 000 dyr.",
       "sourceIds": [
         "core-source:snl-no-norges-geografi",
         "core-source:snl-no-fjord",
@@ -465542,7 +465542,7 @@
         "unit:geo-norges-landskap"
       ],
       "relationshipIds": [],
-      "statement": "Øyenes strandlinje alene er over 73 000 kilometer. Fastlandet med fjorder og viker står for knapt 30 000.",
+      "statement": "Øyenes strandlinje alene er over 73 000 kilometer. Fastlandet med fjorder og viker står for knapt 30 000.",
       "sourceIds": [
         "core-source:snl-no-norges-geografi",
         "core-source:snl-no-fjord",
@@ -465641,7 +465641,7 @@
         "unit:geo-norges-fylker-byer"
       ],
       "relationshipIds": [],
-      "statement": "Svalbardtraktaten gir andre land rettigheter på enkelte områder. Med Bjørnøya er øygruppen omtrent 60 000 kvadratkilometer.",
+      "statement": "Svalbardtraktaten gir andre land rettigheter på enkelte områder. Med Bjørnøya er øygruppen omtrent 60 000 kvadratkilometer.",
       "sourceIds": [
         "core-source:snl-no-fylke",
         "core-source:snl-no-norges-st-c3-b8rste-byer",
@@ -465709,7 +465709,7 @@
         "unit:geo-norges-fylker-byer"
       ],
       "relationshipIds": [],
-      "statement": "Trondheim har rundt 200 000 innbyggere og er den største byen i Trøndelag, eller Midt-Norge. I middelalderen het byen Nidaros og ble sete for Norges erkebiskop fra 1150-årene.",
+      "statement": "Trondheim har rundt 200 000 innbyggere og er den største byen i Trøndelag, eller Midt-Norge. I middelalderen het byen Nidaros og ble sete for Norges erkebiskop fra 1150-årene.",
       "sourceIds": [
         "core-source:snl-no-fylke",
         "core-source:snl-no-norges-st-c3-b8rste-byer",
@@ -466293,7 +466293,7 @@
         "unit:geo-afrika"
       ],
       "relationshipIds": [],
-      "statement": "Sjøen dekker 68 800 kvadratkilometer. Ved byen Jinja i Uganda renner Den hvite Nil ut av den.",
+      "statement": "Sjøen dekker 68 800 kvadratkilometer. Ved byen Jinja i Uganda renner Den hvite Nil ut av den.",
       "sourceIds": [
         "core-source:snl-no-afrika",
         "core-source:snl-no-nilen",
@@ -467433,7 +467433,7 @@
         "unit:nat-universet"
       ],
       "relationshipIds": [],
-      "statement": "Melkeveien er en flat, roterende skive med spiralarmer, rundt 100 000 lysår på tvers. Sola ligger omtrent 30 000 lysår fra sentrum, og selve skiven ser vi som et lysende bånd over nattehimmelen.",
+      "statement": "Melkeveien er en flat, roterende skive med spiralarmer, rundt 100 000 lysår på tvers. Sola ligger omtrent 30 000 lysår fra sentrum, og selve skiven ser vi som et lysende bånd over nattehimmelen.",
       "sourceIds": [
         "core-source:snl-no-universet",
         "core-source:snl-no-big-bang",
@@ -467538,7 +467538,7 @@
         "unit:nat-universet"
       ],
       "relationshipIds": [],
-      "statement": "Lyset går omtrent 300 000 kilometer i sekundet og bruker rundt åtte minutter fra Sola til Jorda. Astronomer bruker også enheten parsec, som er 3,26 lysår.",
+      "statement": "Lyset går omtrent 300 000 kilometer i sekundet og bruker rundt åtte minutter fra Sola til Jorda. Astronomer bruker også enheten parsec, som er 3,26 lysår.",
       "sourceIds": [
         "core-source:snl-no-universet",
         "core-source:snl-no-big-bang",
@@ -468453,7 +468453,7 @@
         "unit:nat-energi-elektrisitet"
       ],
       "relationshipIds": [],
-      "statement": "Effekt er spenning ganger strøm: 230 V · 10 A = 2300 W, eller 2,3 kilowatt. Står vannkokeren på i ett minutt, omdanner den altså rundt 138 000 joule til varme.",
+      "statement": "Effekt er spenning ganger strøm: 230 V · 10 A = 2300 W, eller 2,3 kilowatt. Står vannkokeren på i ett minutt, omdanner den altså rundt 138 000 joule til varme.",
       "sourceIds": [
         "core-source:snl-no-energi",
         "core-source:snl-no-elektrisk-str-c3-b8m",
@@ -469673,7 +469673,7 @@
         "unit:bio-evolusjon"
       ],
       "relationshipIds": [],
-      "statement": "Arten oppsto i Afrika og begynte å spre seg ut av kontinentet for mer enn 100 000 år siden. Mange nålevende mennesker har noen få prosent DNA fra neandertalerne.",
+      "statement": "Arten oppsto i Afrika og begynte å spre seg ut av kontinentet for mer enn 100 000 år siden. Mange nålevende mennesker har noen få prosent DNA fra neandertalerne.",
       "sourceIds": [
         "core-source:snl-no-evolusjon",
         "core-source:snl-no-charles-darwin",
@@ -469865,7 +469865,7 @@
         "unit:bio-livets-mangfold"
       ],
       "relationshipIds": [],
-      "statement": "Det er registrert omtrent 69 000 nålevende arter av virveldyr. De aller fleste beskrevne artene er altså ikke virveldyr.",
+      "statement": "Det er registrert omtrent 69 000 nålevende arter av virveldyr. De aller fleste beskrevne artene er altså ikke virveldyr.",
       "sourceIds": [
         "core-source:snl-no-art",
         "core-source:snl-no-liv-systematisk-inndeling",
@@ -470330,7 +470330,7 @@
         "unit:bio-sykdom-immunforsvar"
       ],
       "relationshipIds": [],
-      "statement": "Mellom 50 og 100 millioner mennesker døde, flere enn i begge verdenskrigene til sammen. I Norge tok sykdommen omkring 15 000 liv, de fleste høsten 1918.",
+      "statement": "Mellom 50 og 100 millioner mennesker døde, flere enn i begge verdenskrigene til sammen. I Norge tok sykdommen omkring 15 000 liv, de fleste høsten 1918.",
       "sourceIds": [
         "core-source:sml-snl-no-virus",
         "core-source:sml-snl-no-antistoffer",
@@ -473618,7 +473618,7 @@
         "unit:kul-arkitektur"
       ],
       "relationshipIds": [],
-      "statement": "De ble bygd fra omkring 2600 til 1600 f.Kr., og vi kjenner 138 av dem. De eldste hadde trappetrinn, men i det fjerde dynastiet fikk de glatte sider.",
+      "statement": "De ble bygd fra omkring 2600 til 1600 f.Kr., og vi kjenner 138 av dem. De eldste hadde trappetrinn, men i det fjerde dynastiet fikk de glatte sider.",
       "sourceIds": [
         "core-source:snl-no-pyramidene-i-egypt",
         "core-source:snl-no-s-c3-b8yleordener",
@@ -475492,7 +475492,7 @@
         "unit:lit-verdensklassikere"
       ],
       "relationshipIds": [],
-      "statement": "Verkene spenner over mer enn 2000 år, fra eposene fra omkring 700 f.Kr. til «Faust», som Goethe arbeidet med til han døde.",
+      "statement": "Verkene spenner over mer enn 2000 år, fra eposene fra omkring 700 f.Kr. til «Faust», som Goethe arbeidet med til han døde.",
       "sourceIds": [
         "core-source:snl-no-homer",
         "core-source:snl-no-den-guddommelige-komedie",
@@ -477200,7 +477200,7 @@
         "unit:ide-antikken"
       ],
       "relationshipIds": [],
-      "statement": "Han døde i 399 f.Kr. og etterlot seg ingen skrifter. Det vi vet om ham, kommer først og fremst fra Platons dialoger.",
+      "statement": "Han døde i 399 f.Kr. og etterlot seg ingen skrifter. Det vi vet om ham, kommer først og fremst fra Platons dialoger.",
       "sourceIds": [
         "core-source:snl-no-antikkens-filosofi",
         "core-source:snl-no-sokrates",
@@ -477461,7 +477461,7 @@
         "unit:ide-hellenismen"
       ],
       "relationshipIds": [],
-      "statement": "Stoisismen kom rundt 300 f.Kr., omtrent 20 år etter hellenismens start. Egypt ble romersk 270 år senere.",
+      "statement": "Stoisismen kom rundt 300 f.Kr., omtrent 20 år etter hellenismens start. Egypt ble romersk 270 år senere.",
       "sourceIds": [
         "core-source:snl-no-hellenismen",
         "core-source:snl-no-stoisisme",
@@ -478499,7 +478499,7 @@
         "unit:tek-skrift-hjul-metaller"
       ],
       "relationshipIds": [],
-      "statement": "Hjulet var i bruk i Egypt omtrent 2500 f.Kr., altså over tusen år senere. Dateringene kan endres når nye funn gjøres.",
+      "statement": "Hjulet var i bruk i Egypt omtrent 2500 f.Kr., altså over tusen år senere. Dateringene kan endres når nye funn gjøres.",
       "sourceIds": [
         "core-source:snl-no-kileskrift",
         "core-source:snl-no-hjul",
@@ -479225,7 +479225,7 @@
         "unit:tek-datamaskin-internett"
       ],
       "relationshipIds": [],
-      "statement": "ENIAC hadde flere enn 17 000 elektronrør. Transistoren kom senere og kunne gjøre de samme oppgavene med mindre plass og strøm.",
+      "statement": "ENIAC hadde flere enn 17 000 elektronrør. Transistoren kom senere og kunne gjøre de samme oppgavene med mindre plass og strøm.",
       "sourceIds": [
         "core-source:snl-no-eniac",
         "core-source:snl-no-elektronikk",
@@ -481290,7 +481290,7 @@
         "unit:vue-kina-qin-tang"
       ],
       "relationshipIds": [],
-      "statement": "Han kalte seg første keiser og avskaffet det føydale systemet. Dynastiet var kort, bare 221 til 206 f.Kr., men modellen med ett sentralt styre ble stående.",
+      "statement": "Han kalte seg første keiser og avskaffet det føydale systemet. Dynastiet var kort, bare 221 til 206 f.Kr., men modellen med ett sentralt styre ble stående.",
       "sourceIds": [
         "core-source:snl-no-qin-shi-huangdi",
         "core-source:snl-no-qin-dynastiet",
@@ -481402,7 +481402,7 @@
         "unit:vue-kina-qin-tang"
       ],
       "relationshipIds": [],
-      "statement": "Silkeveien er et samlebegrep for mange ruter, ikke én vei. De viktigste var særlig betydningsfulle omkring 400 til 700 e.Kr. og igjen på 1200- og 1300-tallet.",
+      "statement": "Silkeveien er et samlebegrep for mange ruter, ikke én vei. De viktigste var særlig betydningsfulle omkring 400 til 700 e.Kr. og igjen på 1200- og 1300-tallet.",
       "sourceIds": [
         "core-source:snl-no-qin-shi-huangdi",
         "core-source:snl-no-qin-dynastiet",
@@ -481466,7 +481466,7 @@
         "unit:vue-kina-qin-tang"
       ],
       "relationshipIds": [],
-      "statement": "Qin startet i 221 f.Kr. og falt i 206 f.Kr., altså omkring 15 år. Det var kort, men det la grunnlaget for keisertiden som fulgte.",
+      "statement": "Qin startet i 221 f.Kr. og falt i 206 f.Kr., altså omkring 15 år. Det var kort, men det la grunnlaget for keisertiden som fulgte.",
       "sourceIds": [
         "core-source:snl-no-qin-shi-huangdi",
         "core-source:snl-no-qin-dynastiet",
@@ -499582,15 +499582,15 @@
         "prerequisites": [],
         "summary": "Funnene fra steinalder, bronsealder og jernalder viser hvordan samfunnet i Norge gikk fra jakt og fangst til jordbruk, metall og skrift.",
         "lesson": [
-          "Da isen trakk seg tilbake etter siste istid, kom de første menneskene til Norge, for over 11 000 år siden. De sikrest daterte boplassene ligger i Brunlanes ved Larvik og er inntil 11 800 år gamle. Folk levde som jegere, fangstfolk og sankere, flyttet med årstidene og laget redskaper av flint, stein, bein og tre. De første tusen årene bodde det kanskje bare noen få hundre mennesker i landet.",
-          "Arkeologene deler forhistorien inn etter materialet i redskaper og våpen: steinalder, bronsealder og jernalder. Omkring 4000 f.Kr. begynte yngre steinalder. Da lærte folk i deler av landet å holde husdyr og dyrke korn. Bronsealderen (omkring 1700–500 f.Kr.) har navn etter bronse, en blanding av kobber og tinn. Begge metallene måtte hentes langveisfra.",
-          "Jernalderen varte fra omkring 500 f.Kr. til omkring 1050. Jern kunne utvinnes av myrmalm her i landet. I romertiden hadde Norden mye kontakt med Romerriket, og da ble runeskriften kjent. Helleristninger er bilder hugget inn i berg, og de viser hva folk var opptatt av. I Alta i Finnmark avbildet fangstfolk rein, elg og bjørn, mens bøndene i bronsealderen blant annet ristet inn skip."
+          "Da isen trakk seg tilbake etter siste istid, kom de første menneskene til Norge, for over 11 000 år siden. De sikrest daterte boplassene ligger i Brunlanes ved Larvik og er inntil 11 800 år gamle. Folk levde som jegere, fangstfolk og sankere, flyttet med årstidene og laget redskaper av flint, stein, bein og tre. De første tusen årene bodde det kanskje bare noen få hundre mennesker i landet.",
+          "Arkeologene deler forhistorien inn etter materialet i redskaper og våpen: steinalder, bronsealder og jernalder. Omkring 4000 f.Kr. begynte yngre steinalder. Da lærte folk i deler av landet å holde husdyr og dyrke korn. Bronsealderen (omkring 1700–500 f.Kr.) har navn etter bronse, en blanding av kobber og tinn. Begge metallene måtte hentes langveisfra.",
+          "Jernalderen varte fra omkring 500 f.Kr. til omkring 1050. Jern kunne utvinnes av myrmalm her i landet. I romertiden hadde Norden mye kontakt med Romerriket, og da ble runeskriften kjent. Helleristninger er bilder hugget inn i berg, og de viser hva folk var opptatt av. I Alta i Finnmark avbildet fangstfolk rein, elg og bjørn, mens bøndene i bronsealderen blant annet ristet inn skip."
         ],
         "keyPoints": [
-          "De første menneskene kom etter istiden, for over 11 000 år siden.",
-          "Husdyrhold og korndyrking kom med yngre steinalder, fra omkring 4000 f.Kr.",
-          "Bronsealderen (omkring 1700–500 f.Kr.) bygde på handel fordi kobber og tinn måtte hentes utenfra.",
-          "I jernalderen (omkring 500 f.Kr.–1050) utvant folk jern av myrmalm, og runeskriften kom til Norden.",
+          "De første menneskene kom etter istiden, for over 11 000 år siden.",
+          "Husdyrhold og korndyrking kom med yngre steinalder, fra omkring 4000 f.Kr.",
+          "Bronsealderen (omkring 1700–500 f.Kr.) bygde på handel fordi kobber og tinn måtte hentes utenfra.",
+          "I jernalderen (omkring 500 f.Kr.–1050) utvant folk jern av myrmalm, og runeskriften kom til Norden.",
           "Helleristningene i Alta er Nord-Europas største samling med jaktmotiver."
         ],
         "sourceIds": [
@@ -499859,7 +499859,7 @@
         "lesson": [
           "Unionen med Sverige fra 1814 var nesten en ren personalunion. Norge hadde egen regjering, eget storting, egne lover og egen hær, men felles konge og utenrikspolitikk med Sverige. Kong Karl Johan forsøkte å styrke kongemakten og knytte rikene tettere sammen, men møtte sterk motstand fra Stortinget.",
           "Fra 1880-årene vokste motsetningene. Venstre kom til makten i 1884 og krevde et eget norsk konsulatvesen, slik at norske konsuler kunne ivareta norsk handel og skipsfart i utlandet. Konsulatsaken ble den formelle årsaken til bruddet. Da kong Oscar 2. i 1905 nektet å godkjenne en lov om norske konsuler, gikk regjeringen til statsminister Christian Michelsen av.",
-          "Den 7. juni 1905 vedtok Stortinget at kongen hadde sluttet å virke som norsk konge, og at unionen var oppløst. For å mildne det ensidige bruddet ble tronen tilbudt en av Oscars sønner. I folkeavstemningen 13. august stemte 368 208 ja og 184 nei. Etter forhandlinger i Karlstad ble bruddet fredelig, og den danske prins Carl ble konge som Haakon 7."
+          "Den 7. juni 1905 vedtok Stortinget at kongen hadde sluttet å virke som norsk konge, og at unionen var oppløst. For å mildne det ensidige bruddet ble tronen tilbudt en av Oscars sønner. I folkeavstemningen 13. august stemte 368 208 ja og 184 nei. Etter forhandlinger i Karlstad ble bruddet fredelig, og den danske prins Carl ble konge som Haakon 7."
         ],
         "keyPoints": [
           "Unionen var nesten en ren personalunion med felles konge og utenrikspolitikk, men ellers norsk selvstyre.",
@@ -499904,13 +499904,13 @@
         ],
         "summary": "Befolkningsvekst, utvandring, industri og nye folkebevegelser forklarer hvordan Norge ble et moderne samfunn på 1800-tallet.",
         "lesson": [
-          "Norge var lenge et bondesamfunn, men fra midten av 1800-tallet endret landet seg raskt. Grunnlaget for moderne industri ble lagt i 1840-årene med tekstilfabrikker og mekaniske verksteder. Folketallet økte fra under 900 000 i 1801 til omtrent 2,2 millioner i 1900, og andelen som bodde i byer, steg fra under 9 til 28 prosent.",
-          "Mange søkte framtiden et annet sted. Mellom 1836 og 1915 utvandret over 750 000 nordmenn til Nord-Amerika. Bare Irland mistet en større del av befolkningen. Samtidig krevde nye grupper innflytelse. Marcus Thrane stiftet i 1848 den første arbeiderforeningen, og thranebevegelsen kjempet for allmenn stemmerett og bedre kår for husmenn og arbeidere.",
+          "Norge var lenge et bondesamfunn, men fra midten av 1800-tallet endret landet seg raskt. Grunnlaget for moderne industri ble lagt i 1840-årene med tekstilfabrikker og mekaniske verksteder. Folketallet økte fra under 900 000 i 1801 til omtrent 2,2 millioner i 1900, og andelen som bodde i byer, steg fra under 9 til 28 prosent.",
+          "Mange søkte framtiden et annet sted. Mellom 1836 og 1915 utvandret over 750 000 nordmenn til Nord-Amerika. Bare Irland mistet en større del av befolkningen. Samtidig krevde nye grupper innflytelse. Marcus Thrane stiftet i 1848 den første arbeiderforeningen, og thranebevegelsen kjempet for allmenn stemmerett og bedre kår for husmenn og arbeidere.",
           "Embetsmennene dominerte regjeringen fram til 1884. Da ble regjeringen Selmer dømt i riksrett, og Venstres leder Johan Sverdrup dannet regjering med støtte fra flertallet i Stortinget. Dermed var parlamentarismen innført. Nasjonalromantikken søkte det særegent norske i bondekulturen. Eksempler er Asbjørnsen og Moes folkeeventyr, folkemusikken og malerier som «Brudeferd i Hardanger»."
         ],
         "keyPoints": [
           "Folketallet ble mer enn doblet på 1800-tallet, og byene vokste.",
-          "Over 750 000 nordmenn utvandret til Nord-Amerika mellom 1836 og 1915.",
+          "Over 750 000 nordmenn utvandret til Nord-Amerika mellom 1836 og 1915.",
           "Thranebevegelsen var Norges første politiske massebevegelse.",
           "Parlamentarismen ble innført i 1884, og siden har regjeringen måttet ha Stortingets tillit.",
           "Nasjonalromantikken søkte det særegent norske i bondekulturen."
@@ -499953,7 +499953,7 @@
         "lesson": [
           "Norge var nøytralt, men 9. april 1940 angrep Tyskland. Tyskerne ville ha baser for flåten og kontroll med jernmalmen som ble skipet ut fra Narvik. I Oslofjorden senket kanonene på Oscarsborg festning ved Drøbak krysseren Blücher. Det ga kongen og regjeringen tid til å flykte fra Oslo. Etter to måneders kamper overga de norske styrkene seg 10. juni.",
           "Kong Haakon 7. og regjeringen Nygaardsvold dro 7. juni 1940 til London og førte krigen videre derfra. I Norge styrte den tyske rikskommissæren Josef Terboven. Nasjonal Samling (NS), ledet av Vidkun Quisling, var det eneste lovlige partiet. Hjemmefronten drev en våpenløs holdningskamp mot nazifiseringen og bygde opp Milorg. Den mest kjente sabotasjen var tungtvannsaksjonen på Rjukan.",
-          "Over 770 norske jøder ble deportert i 1942–1943, de fleste til Auschwitz, og færre enn 40 overlevde. Det var norsk politi som arresterte dem. Høsten 1944 rykket sovjetiske tropper inn i Øst-Finnmark, mens tyskerne brente resten av Finnmark og Nord-Troms. Tyskerne i Norge overga seg 8. mai 1945. I landssvikoppgjøret ble over 90 000 saker etterforsket, men deportasjonen av jødene fikk liten plass."
+          "Over 770 norske jøder ble deportert i 1942–1943, de fleste til Auschwitz, og færre enn 40 overlevde. Det var norsk politi som arresterte dem. Høsten 1944 rykket sovjetiske tropper inn i Øst-Finnmark, mens tyskerne brente resten av Finnmark og Nord-Troms. Tyskerne i Norge overga seg 8. mai 1945. I landssvikoppgjøret ble over 90 000 saker etterforsket, men deportasjonen av jødene fikk liten plass."
         ],
         "keyPoints": [
           "Tyskland angrep 9. april 1940, og senkingen av Blücher ga kongen og regjeringen tid til å flykte.",
@@ -500134,14 +500134,14 @@
         "prerequisites": [],
         "summary": "Jordbruket forklarer hvorfor de første byene, statene og skriftsystemene vokste fram langs store elver i Midtøsten, India og Kina.",
         "lesson": [
-          "Jordbruket begynte i Den fruktbare halvmåne, en landstripe fra Israel og Palestina via Syria og Sør-Tyrkia til Irak og Iran. For omkring 12 000 år siden begynte folk her å dyrke bygg og hvete, og senere holdt de husdyr. Overgangen tok flere tusen år og markerer starten på yngre steinalder. Ved Huang He i Nord-Kina ble hirse dyrket for om lag 10 000 år siden.",
-          "Mesopotamia, landet mellom elvene Eufrat og Tigris i dagens Irak, fikk noen av de første byene. Fra omkring 3600 f.Kr. vokste det fram selvstendige bystater, blant dem Uruk og Ur i Sumer. Her oppsto kileskriften mellom 3600 og 3000 f.Kr. Den ble skrevet på leirtavler, som har bevart alt fra regnskap og kongelister til heltediktet om Gilgamesj.",
-          "Egypt langs Nilen ble samlet under én konge omkring 2900 f.Kr. Kongene, faraoene, ble regnet som solgudens sønner. I Det gamle riket ble de store pyramidene bygd som gravmonumenter, og egypterne skrev med hieroglyfer. Ved Indus oppsto byer og skrift i det tredje årtusen f.Kr. I Kina er Shang-dynastiet i det andre årtusen f.Kr. det første med sikre skriftlige kilder."
+          "Jordbruket begynte i Den fruktbare halvmåne, en landstripe fra Israel og Palestina via Syria og Sør-Tyrkia til Irak og Iran. For omkring 12 000 år siden begynte folk her å dyrke bygg og hvete, og senere holdt de husdyr. Overgangen tok flere tusen år og markerer starten på yngre steinalder. Ved Huang He i Nord-Kina ble hirse dyrket for om lag 10 000 år siden.",
+          "Mesopotamia, landet mellom elvene Eufrat og Tigris i dagens Irak, fikk noen av de første byene. Fra omkring 3600 f.Kr. vokste det fram selvstendige bystater, blant dem Uruk og Ur i Sumer. Her oppsto kileskriften mellom 3600 og 3000 f.Kr. Den ble skrevet på leirtavler, som har bevart alt fra regnskap og kongelister til heltediktet om Gilgamesj.",
+          "Egypt langs Nilen ble samlet under én konge omkring 2900 f.Kr. Kongene, faraoene, ble regnet som solgudens sønner. I Det gamle riket ble de store pyramidene bygd som gravmonumenter, og egypterne skrev med hieroglyfer. Ved Indus oppsto byer og skrift i det tredje årtusen f.Kr. I Kina er Shang-dynastiet i det andre årtusen f.Kr. det første med sikre skriftlige kilder."
         ],
         "keyPoints": [
-          "Jordbruket begynte i Den fruktbare halvmåne for omkring 12 000 år siden.",
+          "Jordbruket begynte i Den fruktbare halvmåne for omkring 12 000 år siden.",
           "Mesopotamia mellom Eufrat og Tigris fikk de første bystatene og kileskriften.",
-          "Egypt ble samlet omkring 2900 f.Kr. og styrt av faraoer, og pyramidene var kongegraver.",
+          "Egypt ble samlet omkring 2900 f.Kr. og styrt av faraoer, og pyramidene var kongegraver.",
           "Ved Indus og i Kina oppsto byer og skrift uavhengig av Mesopotamia."
         ],
         "years": {
@@ -500182,14 +500182,14 @@
         ],
         "summary": "Antikkens Hellas er opphavet til demokratiet, filosofien og idrettslekene som fortsatt preger Europa.",
         "lesson": [
-          "Etter 800 f.Kr. vokste det fram hundrevis av selvstyrte bystater i Hellas. En slik bystat ble kalt en polis. Grekerne grunnla kolonier rundt Middelhavet og Svartehavet. Tilhørigheten til egen bystat var viktigst. Likevel delte grekerne språk, guder og helligdommer som Olympia, der de olympiske leker ble holdt hvert fjerde år.",
-          "Athen og Sparta ble de mektigste. Athen innførte demokrati i 508/507 f.Kr. Byen måtte importere korn sjøveien og bygde en stor flåte. Sparta var en landmakt styrt av et fåtall, og ufrie heloter dyrket jorden. Da Athen støttet et gresk opprør i Lilleasia, svarte Perserriket med invasjoner, de såkalte perserkrigene. Grekerne slo dem tilbake, blant annet ved Marathon i 490 f.Kr. og Salamis i 480 f.Kr.",
-          "Under Perikles på 400-tallet f.Kr. var Athen sentrum for drama, filosofi og byggverk som Parthenon. Byen fostret Sokrates, og senere virket Platon og Aristoteles der. I 338 f.Kr. tok kong Filip 2. av Makedonia kontroll over Hellas. Sønnen hans, Aleksander den store, som hadde hatt Aristoteles som lærer, erobret Perserriket helt til Indus."
+          "Etter 800 f.Kr. vokste det fram hundrevis av selvstyrte bystater i Hellas. En slik bystat ble kalt en polis. Grekerne grunnla kolonier rundt Middelhavet og Svartehavet. Tilhørigheten til egen bystat var viktigst. Likevel delte grekerne språk, guder og helligdommer som Olympia, der de olympiske leker ble holdt hvert fjerde år.",
+          "Athen og Sparta ble de mektigste. Athen innførte demokrati i 508/507 f.Kr. Byen måtte importere korn sjøveien og bygde en stor flåte. Sparta var en landmakt styrt av et fåtall, og ufrie heloter dyrket jorden. Da Athen støttet et gresk opprør i Lilleasia, svarte Perserriket med invasjoner, de såkalte perserkrigene. Grekerne slo dem tilbake, blant annet ved Marathon i 490 f.Kr. og Salamis i 480 f.Kr.",
+          "Under Perikles på 400-tallet f.Kr. var Athen sentrum for drama, filosofi og byggverk som Parthenon. Byen fostret Sokrates, og senere virket Platon og Aristoteles der. I 338 f.Kr. tok kong Filip 2. av Makedonia kontroll over Hellas. Sønnen hans, Aleksander den store, som hadde hatt Aristoteles som lærer, erobret Perserriket helt til Indus."
         ],
         "keyPoints": [
           "Hellas besto av mange selvstendige bystater (poleis).",
-          "Athen ble et demokrati i 508/507 f.Kr., mens Sparta var et oligarki og en landmakt.",
-          "Grekerne slo tilbake perserne i 490 og 480–479 f.Kr.",
+          "Athen ble et demokrati i 508/507 f.Kr., mens Sparta var et oligarki og en landmakt.",
+          "Grekerne slo tilbake perserne i 490 og 480–479 f.Kr.",
           "Athen var sentrum for filosofer som Sokrates, Platon og Aristoteles.",
           "Aleksander den store spredte gresk kultur til Egypt og Asia, og dette kulturfellesskapet kalles hellenismen."
         ],
@@ -500231,13 +500231,13 @@
         ],
         "summary": "Romerriket viser hvordan en bystat ble et verdensrike, gikk fra republikk til keiserdømme og ble kristent.",
         "lesson": [
-          "Ifølge romernes egen tradisjon ble Roma grunnlagt i 753 f.Kr. Rundt 509 f.Kr. ble kongene fjernet, og Roma ble en republikk. To konsuler, valgt for ett år om gangen, hadde den utøvende makten. Senatet, som besto av tidligere embetsmenn, styrte i praksis finanser og utenrikspolitikk. Gjennom kriger, blant annet mot Kartago, ble Roma herre over Middelhavet.",
-          "I senrepublikken kjempet mektige hærførere om makten, med hærer som var mer lojale mot dem enn mot staten. Julius Cæsar erobret Gallia, krysset elven Rubicon med hæren og ble diktator, men ble drept 15. mars 44 f.Kr. Adoptivsønnen Octavian vant borgerkrigen, fikk ærestittelen Augustus i 27 f.Kr. og regnes som den første keiseren. Han la grunnlaget for Pax Romana, rundt 200 år med stabile forhold innad i riket.",
+          "Ifølge romernes egen tradisjon ble Roma grunnlagt i 753 f.Kr. Rundt 509 f.Kr. ble kongene fjernet, og Roma ble en republikk. To konsuler, valgt for ett år om gangen, hadde den utøvende makten. Senatet, som besto av tidligere embetsmenn, styrte i praksis finanser og utenrikspolitikk. Gjennom kriger, blant annet mot Kartago, ble Roma herre over Middelhavet.",
+          "I senrepublikken kjempet mektige hærførere om makten, med hærer som var mer lojale mot dem enn mot staten. Julius Cæsar erobret Gallia, krysset elven Rubicon med hæren og ble diktator, men ble drept 15. mars 44 f.Kr. Adoptivsønnen Octavian vant borgerkrigen, fikk ærestittelen Augustus i 27 f.Kr. og regnes som den første keiseren. Han la grunnlaget for Pax Romana, rundt 200 år med stabile forhold innad i riket.",
           "Kristendommen spredte seg tross forfølgelser. Keiser Konstantin begunstiget de kristne og flyttet hovedstaden til Konstantinopel i 330. På slutten av 300-tallet ble kristendommen statsreligion. Riket ble delt for godt i 395. Vestriket hadde lang grense mot germanske folk og svakere økonomi, og i 476 ble den siste vestromerske keiseren avsatt. Østromerriket levde videre i nesten tusen år."
         ],
         "keyPoints": [
-          "Roma var republikk fra omkring 509 f.Kr. og ble styrt av konsuler og senat.",
-          "Cæsar ble drept i 44 f.Kr., og Augustus regnes som den første keiseren.",
+          "Roma var republikk fra omkring 509 f.Kr. og ble styrt av konsuler og senat.",
+          "Cæsar ble drept i 44 f.Kr., og Augustus regnes som den første keiseren.",
           "Pax Romana var rundt 200 år med indre fred fra Augustus’ tid.",
           "Kristendommen ble statsreligion på slutten av 300-tallet.",
           "Vestromerriket falt i 476, mens Østromerriket med Konstantinopel besto til 1453."
@@ -500571,7 +500571,7 @@
         "lesson": [
           "Fra begynnelsen av 1600-tallet ble det etablert 13 britiske kolonier langs østkysten av Nord-Amerika. Striden om Storbritannias rett til å skattlegge koloniene, som ikke var representert i det britiske parlamentet, førte til krig i 1775. Den 4. juli 1776 erklærte koloniene seg uavhengige. Uavhengighetskrigen varte til 1783, med George Washington som øverstkommanderende.",
           "I 1787 laget en forsamling i Philadelphia en ny grunnlov med tre likeverdige statsmakter: Kongressen, presidenten og den føderale domstolen. Washington ble den første presidenten i 1789. USA vokste vestover gjennom kjøp, kriger og fortrengning av urbefolkningen, og midt på 1800-tallet nådde landet Stillehavet.",
-          "Slaveriet delte landet. En ny maskin for å rense bomull gjorde bomullsdyrking svært lønnsom i sør, og plantasjene bygde på slaver. Da Abraham Lincoln ble valgt til president i 1860, meldte sørstatene seg ut og dannet Amerikas konfødererte stater. Borgerkrigen 1861–1865 kostet over 620 000 liv og endte med at nordstatene vant. Etter krigen avskaffet det 13. grunnlovstillegget slaveriet i hele USA."
+          "Slaveriet delte landet. En ny maskin for å rense bomull gjorde bomullsdyrking svært lønnsom i sør, og plantasjene bygde på slaver. Da Abraham Lincoln ble valgt til president i 1860, meldte sørstatene seg ut og dannet Amerikas konfødererte stater. Borgerkrigen 1861–1865 kostet over 620 000 liv og endte med at nordstatene vant. Etter krigen avskaffet det 13. grunnlovstillegget slaveriet i hele USA."
         ],
         "keyPoints": [
           "De 13 britiske koloniene erklærte seg uavhengige 4. juli 1776.",
@@ -500716,7 +500716,7 @@
         "lesson": [
           "Russland gikk inn i første verdenskrig som et fattig keiserrike med en enevoldig tsar. Krig, matmangel og dyrtid utløste revolusjon i 1917. I februarrevolusjonen måtte tsar Nikolaj 2. gå av, og en provisorisk regjering tok over. I oktober tok bolsjevikene under Vladimir Lenin makten i et nesten ublodig opprør i Petrograd. Etter vår kalender skjedde dette i mars og november.",
           "Bolsjevikene sluttet separatfred med Tyskland i Brest-Litovsk i 1918 og vant den nådeløse borgerkrigen mellom «de røde» og «de hvite» i 1918–1921. I 1922 ble Sovjetunionen opprettet, en forbundsstat styrt av kommunistpartiet. Lenin døde i 1924, og Josef Stalin vant maktkampen etter ham.",
-          "Stalin innførte planøkonomi med femårsplaner og tvangskollektiviserte jordbruket. Bøndene ble samlet i kollektivbruk, og de mer velstående bøndene, kulakkene, ble deportert. Hungersnøden i 1932–1933 kostet anslagsvis 6–7 millioner liv. Under Den store terror i 1937–1938 ble omkring 700 000 mennesker skutt. Sovjetunionen ble en industrimakt, men til en enorm menneskelig pris."
+          "Stalin innførte planøkonomi med femårsplaner og tvangskollektiviserte jordbruket. Bøndene ble samlet i kollektivbruk, og de mer velstående bøndene, kulakkene, ble deportert. Hungersnøden i 1932–1933 kostet anslagsvis 6–7 millioner liv. Under Den store terror i 1937–1938 ble omkring 700 000 mennesker skutt. Sovjetunionen ble en industrimakt, men til en enorm menneskelig pris."
         ],
         "keyPoints": [
           "Februarrevolusjonen i 1917 styrtet tsaren, og i oktober tok bolsjevikene makten.",
@@ -500857,7 +500857,7 @@
         "summary": "Holocaust er nazistenes systematiske folkemord på Europas jøder, og forbrytelsene, som også rammet romer og andre grupper, endret synet på menneskerettigheter.",
         "lesson": [
           "Holocaust er nazistenes folkemord på Europas jøder. Mer enn seks millioner jøder ble drept, om lag 60 prosent av jødene i Europa. Mange jøder bruker det hebraiske ordet «shoah». Nazismen bygde på en rasebasert antisemittisme der jødene ble framstilt som en fiende av det tyske folket.",
-          "Forfølgelsen skjedde trinnvis. Fra 1933 ble jøder boikottet og presset ut av samfunnslivet. Nürnberglovene i 1935 fratok dem statsborgerskapet og forbød ekteskap med ikke-jøder. Under novemberpogromen 9.–10. november 1938, også kalt krystallnatten, ble jødiske forretninger, hjem og synagoger angrepet, og rundt 30 000 jøder ble sendt til konsentrasjonsleirer.",
+          "Forfølgelsen skjedde trinnvis. Fra 1933 ble jøder boikottet og presset ut av samfunnslivet. Nürnberglovene i 1935 fratok dem statsborgerskapet og forbød ekteskap med ikke-jøder. Under novemberpogromen 9.–10. november 1938, også kalt krystallnatten, ble jødiske forretninger, hjem og synagoger angrepet, og rundt 30 000 jøder ble sendt til konsentrasjonsleirer.",
           "Under krigen ble jødene i Øst-Europa stengt inne i gettoer, og mobile drapsenheter drepte drøyt én million jøder etter angrepet på Sovjetunionen. På Wannsee-konferansen i januar 1942 ble «den endelige løsningen» samordnet. I dødsleirer som Auschwitz ble mennesker drept med gass. Også romer, funksjonshemmede og andre grupper ble forfulgt og drept. Etter krigen ble ledende nazister stilt for en alliert rettssak, Nürnbergprosessen, i 1945–1946."
         ],
         "keyPoints": [
@@ -501003,7 +501003,7 @@
         "lesson": [
           "Mikhail Gorbatsjov ble leder for det sovjetiske kommunistpartiet i 1985. Han satte i gang to store reformer. Perestrojka betydde økonomisk omstrukturering med mer markedsøkonomi, og glasnost betydde økt åpenhet og ytringsfrihet. Han ville fornye kommuniststyret, ikke avskaffe det, men reformene slapp løs krefter han ikke kontrollerte.",
           "Sovjetunionens endrede holdning åpnet for systemskifter i Øst-Europa i 1989–1990. Den 9. november 1989 åpnet DDR grensen, og Berlinmuren falt. Den 3. oktober 1990 ble Tyskland gjenforent.",
-          "Sovjetrepublikkene krevde stadig mer selvstyre. Et mislykket kuppforsøk mot Gorbatsjov i august 1991 framskyndet oppløsningen, og den russiske lederen Boris Jeltsin overtok initiativet. Den 25. desember 1991 gikk Gorbatsjov av, og Sovjetunionen var historie. Samtidig gikk Jugoslavia i oppløsning i blodige kriger. I Bosniakrigen 1992–1995 ble rundt 100 000 drept, og i Srebrenica ble over 8000 bosnjakiske gutter og menn massakrert i juli 1995."
+          "Sovjetrepublikkene krevde stadig mer selvstyre. Et mislykket kuppforsøk mot Gorbatsjov i august 1991 framskyndet oppløsningen, og den russiske lederen Boris Jeltsin overtok initiativet. Den 25. desember 1991 gikk Gorbatsjov av, og Sovjetunionen var historie. Samtidig gikk Jugoslavia i oppløsning i blodige kriger. I Bosniakrigen 1992–1995 ble rundt 100 000 drept, og i Srebrenica ble over 8000 bosnjakiske gutter og menn massakrert i juli 1995."
         ],
         "keyPoints": [
           "Gorbatsjov innførte glasnost og perestrojka fra 1985.",
@@ -501138,13 +501138,13 @@
         "lesson": [
           "Norge ligger på den vestlige og nordlige delen av Den skandinaviske halvøy. Landet er langt og smalt og grenser i øst mot Sverige, Finland og Russland. Ellers er det omgitt av hav: Barentshavet, Norskehavet, Nordsjøen og Skagerrak. Polarsirkelen krysser landet i Nordland, litt nord for Mo i Rana. Nord for den er det midnattssol om sommeren og mørketid om vinteren.",
           "Landskapet er formet av istidene, da tykke isdekker lå over landet. Isbreene gravde ut daler og fjorder. En fjord er en dal som isen har gravd så dyp at havet har fylt den. Sognefjorden er landets lengste og dypeste fjord, 1303 meter på det dypeste. Mellom fjordene ligger flatere vidder. Hardangervidda regnes som Europas største høyfjellsplatå.",
-          "Norges høyeste fjell er Galdhøpiggen i Jotunheimen, 2469 meter over havet. Den lengste elva er Glomma, og den største innsjøen er Mjøsa. Jostedalsbreen er den største breen på fastlandet. Med alle fjorder og øyer er kystlinjen over 100 000 kilometer. Bare ett land i verden har lengre kyst: Canada."
+          "Norges høyeste fjell er Galdhøpiggen i Jotunheimen, 2469 meter over havet. Den lengste elva er Glomma, og den største innsjøen er Mjøsa. Jostedalsbreen er den største breen på fastlandet. Med alle fjorder og øyer er kystlinjen over 100 000 kilometer. Bare ett land i verden har lengre kyst: Canada."
         ],
         "keyPoints": [
           "Norge grenser mot Sverige, Finland og Russland; polarsirkelen krysser landet i Nordland.",
           "Istidene formet landskapet; fjordene er daler som isen gravde ut og havet fylte.",
           "Galdhøpiggen (2469 moh.) er høyest, Glomma lengst, Mjøsa størst og Sognefjorden lengst og dypest.",
-          "Kystlinjen med fjorder og øyer er over 100 000 km; bare Canada har lengre."
+          "Kystlinjen med fjorder og øyer er over 100 000 km; bare Canada har lengre."
         ],
         "sourceIds": [
           "core-source:snl-no-norges-geografi",
@@ -501827,12 +501827,12 @@
         "summary": "Lys og lyd er bølger av helt ulike slag, og forskjellen forklarer alt fra regnbuen til at tordenen kommer etter lynet.",
         "lesson": [
           "En bølge er en svingning som brer seg og frakter energi. Bølgelengden er avstanden mellom to bølgetopper, og frekvensen er hvor mange svingninger som passerer per sekund, målt i hertz. Jo kortere bølgelengde, desto høyere frekvens. Lys er elektromagnetiske bølger. Det synlige lyset er en liten del av et stort spekter som også omfatter radiobølger, infrarød og ultrafiolett stråling, røntgen og gammastråling.",
-          "Lyset går omtrent 300 000 kilometer i sekundet i tomt rom og saktere gjennom luft og vann. Hvitt sollys er en blanding av farger med ulik bølgelengde: Rødt har lengst, fiolett kortest. Når sollys går inn i en vanndråpe, brytes fargene ulikt mye og skilles fra hverandre. Slik oppstår regnbuen når sola står bak deg og regnbygen er foran deg.",
-          "Lyd er trykkbølger i et stoff, som luft, vann eller fast materiale. Lyd trenger et medium og kan ikke bre seg i tomt rom. I luft går lyden omkring 340 meter i sekundet, nesten en million ganger langsommere enn lyset. Høy frekvens gir lys tone. Mennesker hører lyd fra omtrent 20 til 20 000 svingninger i sekundet."
+          "Lyset går omtrent 300 000 kilometer i sekundet i tomt rom og saktere gjennom luft og vann. Hvitt sollys er en blanding av farger med ulik bølgelengde: Rødt har lengst, fiolett kortest. Når sollys går inn i en vanndråpe, brytes fargene ulikt mye og skilles fra hverandre. Slik oppstår regnbuen når sola står bak deg og regnbygen er foran deg.",
+          "Lyd er trykkbølger i et stoff, som luft, vann eller fast materiale. Lyd trenger et medium og kan ikke bre seg i tomt rom. I luft går lyden omkring 340 meter i sekundet, nesten en million ganger langsommere enn lyset. Høy frekvens gir lys tone. Mennesker hører lyd fra omtrent 20 til 20 000 svingninger i sekundet."
         ],
         "keyPoints": [
           "Bølgelengde og frekvens henger sammen: Kort bølgelengde gir høy frekvens.",
-          "Lys er elektromagnetiske bølger og går omtrent 300 000 km/s i tomt rom.",
+          "Lys er elektromagnetiske bølger og går omtrent 300 000 km/s i tomt rom.",
           "Synlig lys er en liten del av det elektromagnetiske spekteret.",
           "Regnbuen oppstår fordi fargene i sollyset brytes ulikt i vanndråpene.",
           "Lyd er trykkbølger som trenger et medium; i luft går de omkring 340 m/s."
@@ -502051,7 +502051,7 @@
         "lesson": [
           "Evolusjon betyr at arvelige egenskaper blir vanligere eller sjeldnere i en populasjon over generasjoner. Det er populasjonen som endrer seg, ikke enkeltindividet. Charles Darwin la grunnlaget for evolusjonsbiologien i boka «Artenes opprinnelse» fra 1859. Ideene vokste fram etter en fem år lang jordomseiling med skipet Beagle. Alfred Russel Wallace kom omtrent samtidig fram til den samme teorien.",
           "Naturlig utvalg bygger på tre forutsetninger: Det fødes flere individer enn miljøet kan bære, individene varierer, og variasjonen er delvis arvelig. De best tilpassede overlever oftere og får flere avkom. Er det etter en tørke mest store frø igjen, klarer fugler med store nebb seg best, og andelen med store nebb øker. Mutasjoner er den opprinnelige kilden til variasjon, og de oppstår tilfeldig, uavhengig av hva organismen trenger.",
-          "Ifølge evolusjonsteorien har alt liv et felles opphav. Fossiler, likheter i anatomi og likheter i DNA peker samme vei. Mennesket hører til de store menneskeapene, sammen med sjimpanser, gorillaer og orangutanger. Sjimpansene, vanlig sjimpanse og bonobo, er våre nærmeste nålevende slektninger, men vi stammer ikke fra dem; vi har felles forfedre. Vår egen art, Homo sapiens, har levd i omtrent 300 000 år."
+          "Ifølge evolusjonsteorien har alt liv et felles opphav. Fossiler, likheter i anatomi og likheter i DNA peker samme vei. Mennesket hører til de store menneskeapene, sammen med sjimpanser, gorillaer og orangutanger. Sjimpansene, vanlig sjimpanse og bonobo, er våre nærmeste nålevende slektninger, men vi stammer ikke fra dem; vi har felles forfedre. Vår egen art, Homo sapiens, har levd i omtrent 300 000 år."
         ],
         "keyPoints": [
           "Darwin la fram teorien om evolusjon ved naturlig utvalg i «Artenes opprinnelse» (1859).",
@@ -502569,7 +502569,7 @@
         "summary": "De fem store verdensreligionene bygger på hver sine skrifter og lærer, og religion har fortsatt en plass i det norske samfunnet.",
         "lesson": [
           "Jødedom, kristendom og islam deler troen på én Gud og regnes som abrahamittiske religioner. Jødedommens hellige skrift er Tanakh, den hebraiske bibel. Kristendommen bygger på Jesus fra Nasaret, som de kristne tror er Guds sønn, og Bibelen består av Det gamle og Det nye testamentet. Kristendommen er verdens største religion, fulgt av islam.",
-          "Islam oppsto på Den arabiske halvøy på 600-tallet. Muslimer tror at Koranen er Guds ord, åpenbart for profeten Muhammed. Hinduismen har ingen stifter, men er et mangfold av tradisjoner fra India. Buddhismen ble grunnlagt av Buddha i Nord-India omkring 400 f.Kr., og skriftene samles i Tripitaka. Begge lærer om karma og gjenfødelse. I buddhismen er målet nirvana, frihet fra gjenfødelse.",
+          "Islam oppsto på Den arabiske halvøy på 600-tallet. Muslimer tror at Koranen er Guds ord, åpenbart for profeten Muhammed. Hinduismen har ingen stifter, men er et mangfold av tradisjoner fra India. Buddhismen ble grunnlagt av Buddha i Nord-India omkring 400 f.Kr., og skriftene samles i Tripitaka. Begge lærer om karma og gjenfødelse. I buddhismen er målet nirvana, frihet fra gjenfødelse.",
           "Den norske kirke er evangelisk-luthersk og Norges største trossamfunn. Den var statskirke fram til 2012, men står fortsatt i Grunnloven som Norges folkekirke. Sekularisering betyr at religion mister innflytelse over mennesker og samfunn, for eksempel ved at færre tror, deltar i religiøse ritualer eller er medlemmer av et trossamfunn."
         ],
         "keyPoints": [
@@ -503272,7 +503272,7 @@
         "prerequisites": [],
         "summary": "Fem verk fra Homers epos til Goethes «Faust» har formet europeisk litteratur og er fortsatt felles referanser.",
         "lesson": [
-          "De greske eposene «Iliaden» og «Odysseen» tilskrives Homer og ble trolig til omkring 700 f.Kr.. «Iliaden» skildrer konflikten mellom helten Akilles og hærføreren Agamemnon under krigen om Troja, og «Odysseen» følger Odyssevs' hjemferd etter krigen. Om begge eposene har samme dikter, og hvem Homer var, er usikkert.",
+          "De greske eposene «Iliaden» og «Odysseen» tilskrives Homer og ble trolig til omkring 700 f.Kr.. «Iliaden» skildrer konflikten mellom helten Akilles og hærføreren Agamemnon under krigen om Troja, og «Odysseen» følger Odyssevs' hjemferd etter krigen. Om begge eposene har samme dikter, og hvem Homer var, er usikkert.",
           "I «Den guddommelige komedie», påbegynt omkring 1307, skildrer italieneren Dante Alighieri en reise gjennom Helvete, Skjærsilden og Paradiset. Den romerske dikteren Vergil fører ham gjennom helvete og skjærsild, og Beatrice leder ham videre mot Gud. Dante skrev på tidens talespråk, ikke latin. Engelskmannen William Shakespeare regnes som verdenslitteraturens største dramatiker etter antikken, med tragedier som «Hamlet» og «Romeo og Julie».",
           "Spanjolen Miguel de Cervantes ga ut «Don Quijote» i to deler, 1605 og 1615, om en adelsmann som har lest så mange ridderromaner at han ikke skiller dikt fra virkelighet. Boken regnes som den moderne romanens viktigste forløper. Tyskeren Johann Wolfgang von Goethe arbeidet til sin død med «Faust», om en lærd mann som selger sjelen sin til djevelen for å vinne erkjennelse."
         ],
@@ -503703,14 +503703,14 @@
         ],
         "summary": "Fra de første greske filosofene til Aristoteles spurte tenkerne hva som er virkelig, hva vi kan vite og hvordan vi bør leve.",
         "lesson": [
-          "De første greske filosofene søkte et grunnprinsipp bak alt som finnes. Sokrates skrev ingenting selv. Han førte samtaler i Athen ved å stille spørsmål til andre, og han døde i 399 f.Kr.",
-          "Platon var elev av Sokrates. Han skilte mellom sansenes verden og ideenes verden, og mente at ideene er mer virkelige enn det vi sanser. Om lag 387 f.Kr. grunnla han Akademiet nær Athen. Akademiet virket til 529 e.Kr., da det ble stengt.",
-          "Aristoteles var elev av Platon og lærer for Aleksander den store. Han grunnla skolen Lykeion og skrev om biologi, logikk, etikk og politikk. Han grunnla formell logikk med syllogismen. Han døde i 322 f.Kr."
+          "De første greske filosofene søkte et grunnprinsipp bak alt som finnes. Sokrates skrev ingenting selv. Han førte samtaler i Athen ved å stille spørsmål til andre, og han døde i 399 f.Kr.",
+          "Platon var elev av Sokrates. Han skilte mellom sansenes verden og ideenes verden, og mente at ideene er mer virkelige enn det vi sanser. Om lag 387 f.Kr. grunnla han Akademiet nær Athen. Akademiet virket til 529 e.Kr., da det ble stengt.",
+          "Aristoteles var elev av Platon og lærer for Aleksander den store. Han grunnla skolen Lykeion og skrev om biologi, logikk, etikk og politikk. Han grunnla formell logikk med syllogismen. Han døde i 322 f.Kr."
         ],
         "keyPoints": [
           "Sokrates skrev ingenting selv og er kjent gjennom Platon.",
           "Platon mente at ideenes verden er mer virkelig enn sansenes.",
-          "Akademiet ble grunnlagt om lag 387 f.Kr. og stengt i 529 e.Kr.",
+          "Akademiet ble grunnlagt om lag 387 f.Kr. og stengt i 529 e.Kr.",
           "Aristoteles grunnla formell logikk med syllogismen."
         ],
         "years": {
@@ -503750,17 +503750,17 @@
         ],
         "summary": "Etter Aleksander den store delte filosofien seg i skoler som stoikere og epikureere, og de formet livssyn i Hellas og i Roma.",
         "lesson": [
-          "Hellenismen er perioden fra Aleksander den stores død i 323 f.Kr. og fram til Egypt ble romersk i 30 f.Kr. Filosofien var ikke ett system, men flere skoler som konkurrerte med hverandre, blant dem platonikere, epikureere og stoikere.",
-          "Stoisismen ble grunnlagt i Athen rundt år 300 f.Kr. av Zenon av Kition, som underviste i stoaen, en søylegang i byen. Stoikerne ville forstå verden slik at frykt og sinne ikke tok overhånd. Fornuften skulle styre følelsene.",
+          "Hellenismen er perioden fra Aleksander den stores død i 323 f.Kr. og fram til Egypt ble romersk i 30 f.Kr. Filosofien var ikke ett system, men flere skoler som konkurrerte med hverandre, blant dem platonikere, epikureere og stoikere.",
+          "Stoisismen ble grunnlagt i Athen rundt år 300 f.Kr. av Zenon av Kition, som underviste i stoaen, en søylegang i byen. Stoikerne ville forstå verden slik at frykt og sinne ikke tok overhånd. Fornuften skulle styre følelsene.",
           "Epikur grunnla en skole i Athen og mente at lykke er fravær av smerte, ikke overflod av nytelse. Målet var ataraksia, en indre ro. Epikureerne vektla følelsene, mens stoikerne vektla fornuften.",
-          "Stoisismen ble også romersk. Keiser Marcus Aurelius var stoiker og skrev dagboken Til meg selv. Han døde i 180 e.Kr."
+          "Stoisismen ble også romersk. Keiser Marcus Aurelius var stoiker og skrev dagboken Til meg selv. Han døde i 180 e.Kr."
         ],
         "keyPoints": [
-          "Hellenismen varte fra 323 f.Kr. til Egypt ble romersk i 30 f.Kr.",
-          "Stoisismen ble grunnlagt i Athen rundt 300 f.Kr.",
+          "Hellenismen varte fra 323 f.Kr. til Egypt ble romersk i 30 f.Kr.",
+          "Stoisismen ble grunnlagt i Athen rundt 300 f.Kr.",
           "Stoikerne ville la fornuften styre følelsene.",
           "Epikur mente at lykke er ro og fravær av smerte.",
-          "Marcus Aurelius var keiser og stoiker, og han døde i 180 e.Kr."
+          "Marcus Aurelius var keiser og stoiker, og han døde i 180 e.Kr."
         ],
         "years": {
           "from": -323,
@@ -504000,13 +504000,13 @@
         "summary": "Skrift, hjulet og bronsen er blant de eldste teknologiene som ga mennesker varig makt over tid, rom og materialer.",
         "lesson": [
           "Skrift oppsto i Mesopotamia, der sumererne begynte å bruke tegn til å føre oversikt over varer og avtaler. Tegnene ble presset inn i våt leire med en griffel. Formen minner om kiler, og derfor kalles skriften kileskrift.",
-          "Hjulet er en av de tidligste store oppfinnelsene i Midtøsten. De eldste hjulfunnene er omkring 3500 f.Kr. Egypterne tok i bruk hjulet omtrent 2500 f.Kr. Bronse, en legering av kobber og tinn, ble det viktigste metallet i bronsealderen, som i Midtøsten varte omtrent fra 3300 til 1200 f.Kr.",
+          "Hjulet er en av de tidligste store oppfinnelsene i Midtøsten. De eldste hjulfunnene er omkring 3500 f.Kr. Egypterne tok i bruk hjulet omtrent 2500 f.Kr. Bronse, en legering av kobber og tinn, ble det viktigste metallet i bronsealderen, som i Midtøsten varte omtrent fra 3300 til 1200 f.Kr.",
           "Akkaderne tok over skriften og brukte den til sitt eget språk, akkadisk. Kileskriften ble til slutt fortrengt av alfabetisk skrift. Den britiske forskeren H. C. Rawlinson tydet den gammelpersiske varianten i 1846."
         ],
         "keyPoints": [
           "Skriften oppsto i Mesopotamia og ble skrevet med kiler i våt leire.",
           "Hjulet og bronsen er blant de eldste store teknologiske gjennombruddene i Midtøsten.",
-          "Jern tok over etter bronsealderen, som i Midtøsten var avsluttet rundt 1200 f.Kr.",
+          "Jern tok over etter bronsealderen, som i Midtøsten var avsluttet rundt 1200 f.Kr.",
           "Datering av oppfinnelser fra oldtiden er usikker, og kildene gir ulike årstall."
         ],
         "years": {
@@ -504231,7 +504231,7 @@
         ],
         "summary": "Elektroniske datamaskiner, transistoren, nettverk og mobiltelefonen er blant de viktigste teknologiene i det 20. århundre.",
         "lesson": [
-          "ENIAC var en av de første store, helt elektroniske regnemaskinene. Den ble utviklet i USA fra 1943 for å regne ut skytetabeller under andre verdenskrig. Den veide omkring 27 tonn og hadde flere enn 17 000 elektronrør. Kildene er ikke enige om når den var klar, 1945 eller 1946. Det britiske Colossus regnes også som en tidlig elektronisk maskin.",
+          "ENIAC var en av de første store, helt elektroniske regnemaskinene. Den ble utviklet i USA fra 1943 for å regne ut skytetabeller under andre verdenskrig. Den veide omkring 27 tonn og hadde flere enn 17 000 elektronrør. Kildene er ikke enige om når den var klar, 1945 eller 1946. Det britiske Colossus regnes også som en tidlig elektronisk maskin.",
           "Transistoren ble utviklet ved Bell Laboratories i 1947 av John Bardeen, William Shockley og Walter Brattain. Den kunne erstatte elektronrør, og kretsene ble mindre og brukte mindre strøm. NUSSE ble Norges første digitale datamaskin, med første byggetrinn ferdig i 1954.",
           "ARPANET startet i 1969 med fire noder ved universiteter og forskningsinstitusjoner i vest i USA. Nettverket brukte pakkesvitsjing, der data deles i pakker som sendes hver for seg. Norge ble koblet til via NORSAR på Kjeller i 1973. Tim Berners-Lee foreslo World Wide Web ved CERN i 1989."
         ],
@@ -504548,13 +504548,13 @@
         ],
         "summary": "Babylonske observasjoner og Ptolemaios' verdensbilde med Jorda i midten forklarte himmelen i over tusen år.",
         "lesson": [
-          "Lenge før teleskopet fantes, fulgte folk himmelen med det blotte øyet og skrev opp det de så. Babylonerne gjorde nøye observasjoner over mange århundrer, og rundt 700 f.Kr. var et stort antall stjernebilder identifisert. Mange av dagens inndelinger av tid og vinkler, som grader, minutter og sekunder, kan spores tilbake til deres beregninger.",
-          "Grekerne tok over mye av kunnskapen og bygde den videre. Ptolemaios skrev rundt 150 e.Kr. verket Almagest, der Jorda står i midten av universet. Sola, Månen og planetene går i baner rundt Jorda, og banene forklares med episykler, sammensatte sirkelbevegelser. Modellen ble stående urokkelig gjennom hele middelalderen.",
+          "Lenge før teleskopet fantes, fulgte folk himmelen med det blotte øyet og skrev opp det de så. Babylonerne gjorde nøye observasjoner over mange århundrer, og rundt 700 f.Kr. var et stort antall stjernebilder identifisert. Mange av dagens inndelinger av tid og vinkler, som grader, minutter og sekunder, kan spores tilbake til deres beregninger.",
+          "Grekerne tok over mye av kunnskapen og bygde den videre. Ptolemaios skrev rundt 150 e.Kr. verket Almagest, der Jorda står i midten av universet. Sola, Månen og planetene går i baner rundt Jorda, og banene forklares med episykler, sammensatte sirkelbevegelser. Modellen ble stående urokkelig gjennom hele middelalderen.",
           "Ptolemaios bygget videre på greske astronomer som Hipparkhos og Evdoksos. Modellen var så god til å beregne himmelens bevegelser at den ikke ble erstattet før Kopernikus tok over med et heliosentrisk system. Verdensbildet med Jorda i midten kalles det geosentriske."
         ],
         "keyPoints": [
           "Babylonerne gjorde nøye observasjoner over mange århundrer, og mange av dagens inndelinger av tid og vinkler har røtter der.",
-          "Ptolemaios' Almagest, skrevet rundt 150 e.Kr., beskrev et verdensbilde der Jorda står i midten av universet.",
+          "Ptolemaios' Almagest, skrevet rundt 150 e.Kr., beskrev et verdensbilde der Jorda står i midten av universet.",
           "Planetenes baner ble forklart med episykler, sammensatte sirkelbevegelser.",
           "Det geosentriske verdensbildet ble stående til Kopernikus tok over med et heliosentrisk system.",
           "Ptolemaios bygget videre på Hipparkhos og Evdoksos."
@@ -504821,12 +504821,12 @@
         ],
         "summary": "Kina ble samlet til ett keiserrike under Qin, og Tang-dynastiet gjorde Chang'an til en av verdens største byer langs handelsrutene som kalles Silkeveien.",
         "lesson": [
-          "Kina ble samlet til ett rike i 221 f.Kr., da staten Qin erobret de andre kongedømmene. Qin Shi Huangdi kalte seg første keiser. Riket ble delt i 40 provinser styrt av embetsmenn som keiseren utnevnte, og det føydale systemet ble avskaffet. Qin begynte også arbeidet med den kinesiske mur, men dynastiet varte bare til 206 f.Kr.",
-          "Silkeveien er et nettverk av karavaneveier fra Kina til Middelhavet, ikke én bestemt vei. Rutene var særlig viktige omkring 400 til 700 e.Kr. og igjen på 1200- og 1300-tallet. Silke var den kjente varen, men også ideer og teknikker fulgte med. Papir, bokstrykk og kompasset spredte seg fra Kina mot Midtøsten.",
+          "Kina ble samlet til ett rike i 221 f.Kr., da staten Qin erobret de andre kongedømmene. Qin Shi Huangdi kalte seg første keiser. Riket ble delt i 40 provinser styrt av embetsmenn som keiseren utnevnte, og det føydale systemet ble avskaffet. Qin begynte også arbeidet med den kinesiske mur, men dynastiet varte bare til 206 f.Kr.",
+          "Silkeveien er et nettverk av karavaneveier fra Kina til Middelhavet, ikke én bestemt vei. Rutene var særlig viktige omkring 400 til 700 e.Kr. og igjen på 1200- og 1300-tallet. Silke var den kjente varen, men også ideer og teknikker fulgte med. Papir, bokstrykk og kompasset spredte seg fra Kina mot Midtøsten.",
           "Tang-dynastiet regjerte fra 618 til omkring 907, etter at Li Yuan tok makten fra Sui-keiseren. Hovedstaden Chang'an, dagens Xi'an, var en av verdens største byer, med anslagsvis én million innbyggere rundt år 800. Der fantes buddhistiske, taoistiske, zoroastriske og nestorianske templer side om side."
         ],
         "keyPoints": [
-          "Qin samlet Kina til ett rike i 221 f.Kr., og keiserne styrte fra et sentralt embetsverk.",
+          "Qin samlet Kina til ett rike i 221 f.Kr., og keiserne styrte fra et sentralt embetsverk.",
           "Silkeveien var et nettverk av ruter som knyttet Kina til Middelhavet.",
           "Papir, bokstrykk og kompasset spredte seg fra Kina vestover.",
           "Tang-dynastiet regjerte fra 618 til omkring 907, med Chang'an som hovedstad."
@@ -504917,7 +504917,7 @@
         "summary": "Ghana, Mali og Songhai ble rike på gull og handel over Sahara, og Timbuktu ble et lærdomssenter før Marokko erobret byen i 1591.",
         "lesson": [
           "Vest-Afrika hadde store handelsriker i savannen sør for Sahara. Ghanariket lå i innlandet, i grenseområdet til dagens Mali, Mauritania og Senegal. Det tjente på gull og slaver som ble ført nordover gjennom Sahara. Herskeren kalte seg «gullets herre», og riket fikk inntekter fra toll på handelen.",
-          "Mali tok over Ghanas ledende stilling i Vest-Afrika og ble grunnlagt av Sundjata Keita. I gullalderen fra 1312 til 1337 ble Mansa Musa kjent i hele den islamske verden. På pilegrimsreisen til Mekka i 1324 tok han med seg en karavane som kildene oppgir til over 60 000 mennesker, og mye gull. Etter sigende falt gullprisen i Kairo.",
+          "Mali tok over Ghanas ledende stilling i Vest-Afrika og ble grunnlagt av Sundjata Keita. I gullalderen fra 1312 til 1337 ble Mansa Musa kjent i hele den islamske verden. På pilegrimsreisen til Mekka i 1324 tok han med seg en karavane som kildene oppgir til over 60 000 mennesker, og mye gull. Etter sigende falt gullprisen i Kairo.",
           "Songhai ble det største riket i regionen under Sunni Ali, som regjerte fra 1464 til 1492. Han tok Gao og erobret Timbuktu, som ble et lærdomssenter med universiteter for rett, teologi og historie. Marokkanske styrker tok byen i 1591, og Songhai-riket gikk i oppløsning."
         ],
         "keyPoints": [
@@ -506191,7 +506191,7 @@
           "confidence": "medium"
         }
       ],
-      "note": "Fødsels- og dødsår for antikke tenkere (Herodot, Tukydid, Polybios, Sima Qian) og årstall for antikke verk er omtrentlige og lagret som negative heltall for f.Kr. Edward Said ble født i Jerusalem under britisk mandat; birthCountryIso3 er satt til null fordi dagens statstilhørighet for byen er politisk omstridt. Carlo Ginzburg døde 16./17. juni 2026 i Bologna (Wikipedia og UCLA). Pierre Nora døde 2. juni 2025. Joan W. Scott, Jared Diamond, David Christian, Dipesh Chakrabarty, Francis Fukuyama og J. R. McNeill er i live; bare offentlig faglig informasjon er tatt med. J. R. McNeills fødested Chicago er hentet fra et kunnskapspanel i søkeresultatet, ikke fra en åpnet side; fødselsåret 1954 er bekreftet av flere kilder. David Christians Wikipedia-side gir to ulike fødselsdatoer i 1946; året er sikkert. Maps of Time oppgis som 2004 (UC Press, katalogpost) og 2005 et sted på samme side. Big history-tersklenes datoer følger Big History Project (OER Project): 13,8 mrd., 13,7 mrd., 13 mrd., 4,5 mrd., 3,8 mrd., 250 000, 12 000 og 300 år siden. Wikipedia oppgir andre tall for noen (stjerner ca. 12 mrd., Homo sapiens ca. 300 000, jordbruk ca. 11 000). Tallene er bevisst avrundet. Metahistory: Wikipedias oversiktstabell knytter hver rad (trope, emplotment, argument, ideologi) til én historiker og én filosof. Rader viser slektskap mellom kategoriene; White selv understreket at enkelthistorikere kan kombinere dem på tvers. Emplotment og trope for de fire historikerne er sikre; argument og ideologi er bare satt der tabell og sekundærlitteratur stemmer overens. For filosofene er kun trope satt, med middels sikkerhet. Formuleringen «Who rules East Europe commands the Heartland» er fra Democratic Ideals and Reality (1919), bekreftet på Mackinders Wikipedia-side; den er bare omskrevet, ikke sitert. Kildene for Collingwoods oversettelse av Croces Vico-bok gir ulike år (1913 på Vico-siden, 1923 på Croce-siden); året er derfor utelatt. Påvirkningen Herodot → Tukydid er en avstandtagen mer enn en arv; Tukydid → Ranke bygger bare på at Tukydid var en yndlingsforfatter. Begge er svakere enn de andre kantene. Toynbees ros av Muqaddimah er godt belagt, men ordlyden varierer mellom gjengivelsene; den er bare omskrevet. evidenceStatus brukes slik: documented = tilnærmingen og tilskrivningene er godt dokumentert og fortsatt i faglig bruk; disputed = kjernepåstanden om hvordan historien virker er sterkt omstridt eller i stor grad forlatt (frelseshistorie, sykluser, fremskritt, store personer, sivilisasjoner, økologisk determinisme, klassisk geopolitikk). Linser med få eksempler (store personer, materialisme, mikrohistorie, makt og diskurs, kjønn) har bevisst færre koblinger fordi Atlas mangler enheter med en sterk og dokumentert forbindelse (f.eks. Napoleon, Manchester, Friuli, fengsler). Wikipedia-sider for Ibn Khaldun, Bloch, Halbwachs og Nora bekreftet ikke selv alle påvirkningskoblinger; Halbwachs → Nora bygger på Noras essay fra 1989 og sekundære omtaler, og Bloch → Ginzburg på Ginzburgs Wikipedia-side. Feltene critique for frelseshistorie, sykluser, kjønn, nettverk (andre setning) og big history er mine egne sammenfatninger av alminnelig kjent kritikk, ikke knyttet til én bestemt åpnet kilde; de øvrige critique-feltene bygger på kritikk som er referert på de oppgitte sidene. Arbeidet Polybios' Historie er datert til ca. 140 f.Kr. som en omtrentlig ramme; verket ble skrevet etter 146 f.Kr. og over lang tid. Michelets ideologi er utelatt i Atlas fordi oversiktstabellen og teksten peker i ulike retninger. Bare lesninger med høy sikkerhet brukes i quiz."
+      "note": "Fødsels- og dødsår for antikke tenkere (Herodot, Tukydid, Polybios, Sima Qian) og årstall for antikke verk er omtrentlige og lagret som negative heltall for f.Kr. Edward Said ble født i Jerusalem under britisk mandat; birthCountryIso3 er satt til null fordi dagens statstilhørighet for byen er politisk omstridt. Carlo Ginzburg døde 16./17. juni 2026 i Bologna (Wikipedia og UCLA). Pierre Nora døde 2. juni 2025. Joan W. Scott, Jared Diamond, David Christian, Dipesh Chakrabarty, Francis Fukuyama og J. R. McNeill er i live; bare offentlig faglig informasjon er tatt med. J. R. McNeills fødested Chicago er hentet fra et kunnskapspanel i søkeresultatet, ikke fra en åpnet side; fødselsåret 1954 er bekreftet av flere kilder. David Christians Wikipedia-side gir to ulike fødselsdatoer i 1946; året er sikkert. Maps of Time oppgis som 2004 (UC Press, katalogpost) og 2005 et sted på samme side. Big history-tersklenes datoer følger Big History Project (OER Project): 13,8 mrd., 13,7 mrd., 13 mrd., 4,5 mrd., 3,8 mrd., 250 000, 12 000 og 300 år siden. Wikipedia oppgir andre tall for noen (stjerner ca. 12 mrd., Homo sapiens ca. 300 000, jordbruk ca. 11 000). Tallene er bevisst avrundet. Metahistory: Wikipedias oversiktstabell knytter hver rad (trope, emplotment, argument, ideologi) til én historiker og én filosof. Rader viser slektskap mellom kategoriene; White selv understreket at enkelthistorikere kan kombinere dem på tvers. Emplotment og trope for de fire historikerne er sikre; argument og ideologi er bare satt der tabell og sekundærlitteratur stemmer overens. For filosofene er kun trope satt, med middels sikkerhet. Formuleringen «Who rules East Europe commands the Heartland» er fra Democratic Ideals and Reality (1919), bekreftet på Mackinders Wikipedia-side; den er bare omskrevet, ikke sitert. Kildene for Collingwoods oversettelse av Croces Vico-bok gir ulike år (1913 på Vico-siden, 1923 på Croce-siden); året er derfor utelatt. Påvirkningen Herodot → Tukydid er en avstandtagen mer enn en arv; Tukydid → Ranke bygger bare på at Tukydid var en yndlingsforfatter. Begge er svakere enn de andre kantene. Toynbees ros av Muqaddimah er godt belagt, men ordlyden varierer mellom gjengivelsene; den er bare omskrevet. evidenceStatus brukes slik: documented = tilnærmingen og tilskrivningene er godt dokumentert og fortsatt i faglig bruk; disputed = kjernepåstanden om hvordan historien virker er sterkt omstridt eller i stor grad forlatt (frelseshistorie, sykluser, fremskritt, store personer, sivilisasjoner, økologisk determinisme, klassisk geopolitikk). Linser med få eksempler (store personer, materialisme, mikrohistorie, makt og diskurs, kjønn) har bevisst færre koblinger fordi Atlas mangler enheter med en sterk og dokumentert forbindelse (f.eks. Napoleon, Manchester, Friuli, fengsler). Wikipedia-sider for Ibn Khaldun, Bloch, Halbwachs og Nora bekreftet ikke selv alle påvirkningskoblinger; Halbwachs → Nora bygger på Noras essay fra 1989 og sekundære omtaler, og Bloch → Ginzburg på Ginzburgs Wikipedia-side. Feltene critique for frelseshistorie, sykluser, kjønn, nettverk (andre setning) og big history er mine egne sammenfatninger av alminnelig kjent kritikk, ikke knyttet til én bestemt åpnet kilde; de øvrige critique-feltene bygger på kritikk som er referert på de oppgitte sidene. Arbeidet Polybios' Historie er datert til ca. 140 f.Kr. som en omtrentlig ramme; verket ble skrevet etter 146 f.Kr. og over lang tid. Michelets ideologi er utelatt i Atlas fordi oversiktstabellen og teksten peker i ulike retninger. Bare lesninger med høy sikkerhet brukes i quiz."
     },
     "countryStats": {
       "geo-usa": {

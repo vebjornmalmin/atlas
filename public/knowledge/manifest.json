@@ -3,9 +3,9 @@
   "packages": [
     {
       "id": "atlas-foundation",
-      "version": "2.2.1",
+      "version": "2.2.2",
       "url": "/knowledge/foundation.json",
-      "hash": "82b0623cd3ef2270958923dd28e5049a87b12b6015d605bbbf31d159472097fb"
+      "hash": "0de4d5c4f0fb0cad632cb4c516f150b2cafabf7f00e069199e64f29f4d29b078"
     }
   ]
 }
