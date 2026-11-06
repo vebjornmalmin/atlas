@@ -41,6 +41,10 @@
         {
           "title": "Alta-ristningene – Store norske leksikon",
           "url": "https://snl.no/Alta-ristningene"
+        },
+        {
+          "title": "Vingen – Store norske leksikon",
+          "url": "https://snl.no/Vingen"
         }
       ],
       "cards": [
@@ -237,7 +241,7 @@
       "summary": "Vikingtiden viser hvordan skandinaviske plyndrere, handelsfolk og nybyggere knyttet Norden til resten av Europa.",
       "lesson": [
         "Vikingtiden er perioden fra omkring 800 til omkring 1050. Starten knyttes ofte til angrepet på klosteret Lindisfarne i Nord-England i 793. Det er den første norske hendelsen som kan tidfestes noenlunde sikkert i skriftlige kilder. Vikingenes lette skip kunne både ros og seiles, krysse åpent hav og gå langt opp elver.",
-        "Skandinavene snakket norrønt og dro ut med havgående skip for å plyndre, handle og bosette seg. Nordmenn slo seg ned på Island, Grønland og De britiske øyer. Hjemme var gården den viktigste enheten. Kanskje en fjerdedel til en tredjedel av folket var treller, ufrie mennesker som ble behandlet som eiendom. Frie menn møttes på tinget, en forsamling som avgjorde tvister og vedtok lover.",
+        "Skandinavene snakket norrønt og dro ut med havgående skip for å plyndre, handle og bosette seg. Nordmenn slo seg ned på Island, Grønland og De britiske øyer. Hjemme var gården den viktigste enheten. Mange var treller, ufrie mennesker som ble behandlet som eiendom. Anslagene over hvor mange de var, spriker fra en tidel til en tredjedel av folket. Frie menn møttes på tinget, en forsamling som avgjorde tvister og vedtok lover.",
         "Vikingtiden tok slutt gradvis, ikke med ett slag. Kristendommen og kirken fikk fotfeste, byer vokste fram, og kongedømmene ble en del av det kristne Europa."
       ],
       "keyPoints": [
@@ -262,6 +266,10 @@
         {
           "title": "Osebergskipet – Store norske leksikon",
           "url": "https://snl.no/Osebergskipet"
+        },
+        {
+          "title": "Trell – Store norske leksikon",
+          "url": "https://snl.no/trell"
         }
       ],
       "cards": [
@@ -420,15 +428,15 @@
           "id": "nh-vikingtiden-treller",
           "step": 4,
           "type": "choice",
-          "prompt": "Omtrent hvor stor del av befolkningen i vikingtiden kan ha vært treller?",
-          "answer": "En fjerdedel til en tredjedel",
+          "prompt": "Omtrent hvor stor del av befolkningen i vikingtiden kan ha vært treller, ifølge ulike anslag?",
+          "answer": "Mellom en tidel og en tredjedel",
           "distractors": [
-            "Under én av hundre",
-            "Omtrent halvparten",
-            "Tre av fire"
+            "Mellom en hundredel og en femtidel",
+            "Mellom halvparten og to tredjedeler",
+            "Mellom tre fjerdedeler og ni tideler"
           ],
-          "explain": "Treller var ufrie og ble behandlet som eiendom. De var en viktig del av arbeidskraften på gårdene, og plyndringstokt skaffet nye treller.",
-          "hint": "Trellene var en viktig del av arbeidskraften, men ikke flertallet."
+          "explain": "Kildene er for få til et sikkert tall. Ett anslag bygger på bedre kjente forhold i England og lander på rundt ti prosent. Trellene var en viktig del av arbeidskraften på gårdene, og plyndringstokt skaffet nye treller.",
+          "hint": "Tenk på at trellene var en viktig del av arbeidskraften på gårdene."
         }
       ]
     },
@@ -472,6 +480,10 @@
         {
           "title": "Olav den hellige – Store norske leksikon",
           "url": "https://snl.no/Olav_den_hellige"
+        },
+        {
+          "title": "Jon Birgersson – Store norske leksikon",
+          "url": "https://snl.no/Jon_Birgersson"
         }
       ],
       "cards": [
@@ -557,7 +569,7 @@
             "Olav Tryggveson",
             "Olav 1. Tryggvason"
           ],
-          "explain": "Før han ble konge, hadde han herjet som vikinghøvding i England, og der ble han kristen. Sagaene gjør ham til en lysende helteskikkelse, men opplysningene om ham er uvanlig usikre.",
+          "explain": "Før han ble konge, hadde han herjet som vikinghøvding i England. Der ble han døpt eller konfirmert i 994, med den engelske kongen som fadder. Sagaene gjør ham til en lysende helteskikkelse, men opplysningene om ham er uvanlig usikre.",
           "hint": "Ifølge sagaene grunnla han Nidaros, et par tiår før helgenkongen tok makten."
         },
         {
@@ -1600,7 +1612,7 @@
             "Om festningene mot Sverige skulle rives",
             "Om kvinner skulle få stemmerett"
           ],
-          "explain": "Omtrent 79 prosent stemte for kongedømme. Prins Carl ville selv ha en folkeavstemning, slik at han visste at folket ønsket ham som konge.",
+          "explain": "Formelt gjaldt avstemningen en fullmakt til å tilby prins Carl tronen, men i praksis var det et valg av statsform. 78,9 prosent stemte ja. Prins Carl hadde selv krevd en folkeavstemning, slik at han visste at folket ønsket ham som konge.",
           "hint": "Prins Carl ville ha svar fra folket før han sa ja til tronen."
         }
       ]
@@ -1864,6 +1876,14 @@
         {
           "title": "Landssvikoppgjøret – Store norske leksikon",
           "url": "https://snl.no/landssvikoppgj%C3%B8ret"
+        },
+        {
+          "title": "Tyskerjenter – Store norske leksikon",
+          "url": "https://snl.no/tyskerjenter"
+        },
+        {
+          "title": "Sabotasje i Norge under andre verdenskrig – Store norske leksikon",
+          "url": "https://snl.no/sabotasje_i_Norge_under_andre_verdenskrig"
         }
       ],
       "cards": [
@@ -2070,7 +2090,7 @@
       "summary": "Gjenreisningen, NATO-medlemskapet og velferdsstaten viser hvordan Arbeiderpartiet formet Norge fra 1945 til EF-striden i 1972.",
       "lesson": [
         "Etter frigjøringen ledet Arbeiderpartiets formann Einar Gerhardsen først en samlingsregjering. Ved valget i 1945 fikk partiet flertall alene på Stortinget. Gjenreisningen gikk raskere enn ventet, blant annet fordi tyskerne hadde bygd ut kraftverk, veier og havner under krigen. Allerede i 1946 var forbruk og produksjon tilbake på førkrigsnivå. Marshallhjelpen fra USA bidro også.",
-        "Gerhardsen var statsminister i 17 år, lenger enn noen annen, og fikk tilnavnet «landsfaderen». Perioden fra 1935 til midten av 1960-årene, da Arbeiderpartiet var det dominerende regjeringspartiet, kalles ofte arbeiderpartistaten. I 1949 ble Norge med i forsvarsalliansen NATO etter strid i Arbeiderpartiet, mens Sverige ble stående utenfor.",
+        "Gerhardsen var statsminister i 17 år, lenger enn noen annen, og fikk tilnavnet «landsfaderen». Perioden fra 1935 og inn i 1960-årene, da Arbeiderpartiet var det dominerende regjeringspartiet, kalles ofte arbeiderpartistaten. I 1949 ble Norge med i forsvarsalliansen NATO etter strid i Arbeiderpartiet, mens Sverige ble stående utenfor.",
         "Lang økonomisk vekst, kraftig økte skatter og bred politisk enighet fra Fellesprogrammet i 1945 gjorde det mulig å bygge ut velferdsstaten. Kronen på verket var folketrygden, som ble vedtatt i 1966 og trådte i kraft 1. januar 1967. Mot slutten av perioden ble politikken mer omstridt. I folkeavstemningen 25. september 1972 stemte 53,5 prosent nei til medlemskap i EF, etter den bitreste politiske striden i norsk etterkrigstid."
       ],
       "keyPoints": [
@@ -2170,7 +2190,7 @@
           "id": "nh-etterkrigstiden-arbeiderpartistaten",
           "step": 2,
           "type": "text",
-          "prompt": "Hva kalles perioden fra 1935 til midten av 1960-årene, da ett parti hadde regjeringsmakten nesten hele tiden?",
+          "prompt": "Hva kalles perioden fra 1935 og inn i 1960-årene, da ett parti hadde regjeringsmakten nesten hele tiden?",
           "answer": "Arbeiderpartistaten",
           "accept": [
             "arbeiderpartistat",
@@ -2178,7 +2198,7 @@
             "ettpartistaten",
             "ettpartistat"
           ],
-          "explain": "Kjennetegn var teknokrati og korporativisme: eksperter og interesseorganisasjoner fikk stor plass i styringen av samfunnet. Grunnlaget ble lagt med kriseforliket og den første hovedavtalen i 1935.",
+          "explain": "Kjennetegn var teknokrati og korporativisme: eksperter og interesseorganisasjoner fikk stor plass i styringen av samfunnet. Grunnlaget ble lagt med kriseforliket og den første hovedavtalen i 1935. Noen lar perioden slutte med regjeringsskiftet i 1965, andre mot slutten av 1960-årene.",
           "hint": "Historikeren Jens Arup Seip sammenlignet perioden med den gamle embetsmannsstaten."
         },
         {
@@ -2310,6 +2330,10 @@
         {
           "title": "EU-kampen – Store norske leksikon",
           "url": "https://snl.no/EU-kampen"
+        },
+        {
+          "title": "Ekofisk – Store norske leksikon",
+          "url": "https://snl.no/Ekofisk"
         }
       ],
       "cards": [
@@ -2459,7 +2483,7 @@
             "Norge kjøpte rettigheter av Storbritannia",
             "Danmark fikk fiskerettigheter i bytte"
           ],
-          "explain": "Den dype Norskerenna langs norskekysten kunne vært brukt som argument for en mindre norsk sokkel, men den ble ikke regnet med. Ekofisk, det første drivverdige funnet, kom fire år senere og ligger på norsk side nær delelinjen.",
+          "explain": "Den dype Norskerenna langs norskekysten kunne vært brukt som argument for en mindre norsk sokkel, men den ble ikke regnet med. Ekofisk, det første drivverdige funnet, kom fire år senere og ligger lengst sør i den norske delen, nesten 300 kilometer fra norskekysten.",
           "hint": "Tenk på hvilket prinsipp delingen fulgte, ikke på hvem som fant olje først."
         },
         {

@@ -41,6 +41,14 @@
         {
           "title": "lokalforvaltning i Norge – Store norske leksikon",
           "url": "https://snl.no/lokalforvaltning_i_Norge"
+        },
+        {
+          "title": "Grunnlova – Store norske leksikon",
+          "url": "https://snl.no/Grunnlova"
+        },
+        {
+          "title": "Statsråd – Store norske leksikon",
+          "url": "https://snl.no/statsr%C3%A5d"
         }
       ],
       "cards": [
@@ -273,6 +281,14 @@
         {
           "title": "Norges politiske system – Store norske leksikon",
           "url": "https://snl.no/Norges_politiske_system"
+        },
+        {
+          "title": "Senterpartiet – Store norske leksikon",
+          "url": "https://snl.no/Senterpartiet"
+        },
+        {
+          "title": "Kristelig Folkeparti – Store norske leksikon",
+          "url": "https://snl.no/Kristelig_Folkeparti"
         }
       ],
       "cards": [
@@ -438,7 +454,7 @@
               "right": "Strengere innvandringspolitikk"
             }
           ],
-          "explain": "Skillelinjene speiler gamle motsetninger. Senterpartiet ble stiftet som Bondepartiet i 1920, og KrF i 1933 for å gi kristne verdier en egen stemme. Venstre er Norges eldste parti, fra 1884. Navnet viste til at partiet sto til venstre for datidens Høyre, men i dag regnes det som et liberalt sentrumsparti.",
+          "explain": "Skillelinjene speiler gamle motsetninger. Senterpartiet ble stiftet i 1920 for å ivareta bøndenes interesser og het Bondepartiet fram til 1959, mens KrF ble stiftet i Hordaland i 1933 av kristne som var misfornøyde med Venstre. Venstre er Norges eldste parti, fra 1884. Navnet viste til at partiet sto til venstre for datidens Høyre, men i dag regnes det som et liberalt sentrumsparti.",
           "hint": "Ett av partiene vokste fram fra bondebevegelsen i mellomkrigstiden."
         },
         {
@@ -517,6 +533,10 @@
         {
           "title": "Eleanor Roosevelt – Store norske leksikon",
           "url": "https://snl.no/Eleanor_Roosevelt"
+        },
+        {
+          "title": "Menneskerettigheter i Grunnloven – Store norske leksikon",
+          "url": "https://snl.no/Menneskerettigheter_i_Grunnloven"
         }
       ],
       "cards": [
@@ -758,6 +778,10 @@
         {
           "title": "NATO – Store norske leksikon",
           "url": "https://snl.no/NATO"
+        },
+        {
+          "title": "Krigen i Ukraina siden 2022 – Store norske leksikon",
+          "url": "https://snl.no/Krigen_i_Ukraina_siden_2022"
         }
       ],
       "cards": [
@@ -920,7 +944,7 @@
           "prompt": "Hvor mange land sitter i FNs sikkerhetsråd?",
           "answer": "15",
           "explain": "Rådet kan bruke militærmakt og har plikt til å gripe inn når internasjonal fred er truet. Etter den kalde krigen har det også tatt opp borgerkriger og terrorisme når de truer freden.",
-          "hint": "Rådet ble utvidet i 1965, og i dag har de valgte medlemmene klart flertall."
+          "hint": "Utvidelsen ble vedtatt i 1963 og trådte i kraft i 1965, og i dag har de valgte medlemmene klart flertall."
         },
         {
           "id": "sam-fn-nato-stoltenberg",
@@ -972,6 +996,14 @@
         {
           "title": "Schengensamarbeidet – Store norske leksikon",
           "url": "https://snl.no/Schengensamarbeidet"
+        },
+        {
+          "title": "Brexit – Store norske leksikon",
+          "url": "https://snl.no/Brexit"
+        },
+        {
+          "title": "Toll – Store norske leksikon",
+          "url": "https://snl.no/toll"
         }
       ],
       "cards": [
@@ -1015,7 +1047,7 @@
             "Nei i 1972, ja i 1994"
           ],
           "explain": "I 1972 stemte 53,5 prosent nei, i 1994 52,2 prosent. EU-saken regnes som den mest omstridte politiske saken i Norge etter 1945.",
-          "hint": "Bønder, fiskere og distriktene veide tungt begge gangene."
+          "hint": "Tenk på hvilken side bøndene, fiskerne og distriktene sto på i kampanjene."
         },
         {
           "id": "sam-eu-eos-tilknytning",
@@ -1058,7 +1090,7 @@
             "Sveits, Liechtenstein og Norge",
             "Island, Storbritannia og Norge"
           ],
-          "explain": "Sammen med Sveits utgjør de tre landene EFTA. Sveits har i stedet over hundre egne avtaler med EU. Storbritannia gikk ut av både EU og EØS i 2020.",
+          "explain": "Sammen med Sveits utgjør de tre landene EFTA. Sveits har i stedet et nett av egne avtaler med EU, rundt 20 hovedavtaler og over hundre mindre. Storbritannia gikk ut av både EU og EØS i 2020.",
           "hint": "Ett av EFTA-landene sa nei til EØS i en folkeavstemning i 1992."
         },
         {
@@ -1702,6 +1734,14 @@
         {
           "title": "Arne Næss – Store norske leksikon",
           "url": "https://snl.no/Arne_N%C3%A6ss"
+        },
+        {
+          "title": "Dyreetikk – Store norske leksikon",
+          "url": "https://snl.no/dyreetikk"
+        },
+        {
+          "title": "Den gylne middelvei – Store norske leksikon",
+          "url": "https://snl.no/den_gylne_middelvei"
         }
       ],
       "cards": [
