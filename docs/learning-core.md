@@ -80,7 +80,9 @@ Alle kort ble gjennomgått i fire runder av uavhengige anmeldere per fagområde:
 
 Resultat: 1520 kort i 120 emner. 1161 kort har samme ID som før, 680 av dem med endret innhold. 329 kort spurte om noe annet enn det som var verdt å vite og ble erstattet av 359 nye kort med nye ID-er; læringshistorikken på de gamle kortene følger ikke med. Alle kort har nå et skrevet hint, og validatoren stopper kort uten hint.
 
-Nettverket stengte for snl.no under gjennomgangen. Anmelderne endret bare fakta de var sikre på. Påstandene de var usikre på, står i [fact-check-queue.md](fact-check-queue.md) og bør kontrolleres mot kildene.
+Nettverket stengte for snl.no under gjennomgangen. Anmelderne endret bare fakta de var sikre på og listet opp 310 påstander de var usikre på. Alle ble etterpå kontrollert mot SNL, med offentlige etater og museer der SNL ikke dekker saken: 222 stemte, 45 ble rettet og 40 omformulert fordi kildene gir et spenn eller er uenige. Kildene som rettelsene bygger på, er lagt til i emnenes `sources`. Tre påstander kunne ikke bekreftes og står fortsatt i [fact-check-queue.md](fact-check-queue.md).
+
+Påstander om noe som endrer seg (Voyager 1, månelandinger, oppskytinger fra Andøya, land som har sluttet seg til Svalbardtraktaten) er formulert slik at de holder seg, men må sjekkes på nytt ved senere gjennomganger.
 
 ## Kart
 
