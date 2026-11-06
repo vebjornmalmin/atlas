@@ -548,3 +548,44 @@
 @media (prefers-reduced-motion:reduce){
   .ruled-tabs button,.atlas-page *,.me-page *{transition:none!important;scroll-behavior:auto!important}
 }
+
+/* Connections from the chosen place: arrows that keep their width on screen, under the names. */
+.atlas-kart .world-map .map-links{pointer-events:none}
+.atlas-kart .world-map svg path.link-shaft{fill:none;stroke:var(--warm);stroke-linecap:round;vector-effect:non-scaling-stroke;opacity:.85;transition:opacity .2s}
+.atlas-kart .world-map svg path.link-tip{fill:var(--warm);stroke:none;opacity:.85;transition:opacity .2s}
+.atlas-kart .world-map .map-links.has-active .map-link:not(.active) path{opacity:.25}
+.atlas-kart .world-map .map-link.active path.link-shaft{stroke:var(--ink);opacity:1}
+.atlas-kart .world-map .map-link.active path.link-tip{fill:var(--ink);opacity:1}
+.atlas-kart .link-card{position:absolute;left:8px;right:62px;bottom:52px;padding:12px 40px 12px 14px;border:1px solid var(--line);border-radius:14px;background:color-mix(in srgb,var(--surface) 95%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:0 6px 24px rgb(0 0 0 / .12);font-size:13px;line-height:1.45}
+.atlas-kart .link-card .eyebrow{margin:0 0 2px}
+.atlas-kart .link-card strong{display:block;font-size:14px}
+.atlas-kart .link-card p{margin:4px 0 0;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
+.atlas-kart .link-card .link-close{position:absolute;top:4px;right:4px;width:36px;height:36px;min-height:0;padding:0;border:0;background:transparent;box-shadow:none;color:var(--muted)}
+.atlas-kart .link-card .link-close svg{width:16px;height:16px;margin:auto}
+.atlas-kart .link-card .link-close svg path{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round}
+.atlas-kart .link-card .link-go{margin-top:8px;min-height:36px;padding:0 12px;font-size:13px}
+.atlas-kart .link-row[aria-pressed="true"]{background:var(--surface-2)}
+.atlas-kart .world-map.pz-map{scroll-margin-top:env(safe-area-inset-top)}
+.atlas-kart .world-map .map-link.shared path.link-shaft{stroke-dasharray:4 4;opacity:.6}
+.atlas-kart .world-map .map-links.has-active .map-link.shared:not(.active) path{opacity:.15}
+.atlas-kart .link-card .link-topics{display:flex;flex-wrap:wrap;gap:4px 10px;-webkit-line-clamp:unset}
+.atlas-kart .link-card .link-topics .link-button{font-size:13px}
+/* What the map shows: a layers button beside the lens pill opens three switches. */
+.atlas-kart .layer-pill{top:auto;bottom:4px;left:6px;width:44px;padding:0;color:var(--ink)}
+.atlas-kart .layer-pill:before{border-radius:50%;inset:5px}
+.atlas-kart .layer-pill svg{width:18px;height:18px;margin:auto;display:block}
+.atlas-kart .layer-pill svg path{fill:none;stroke:currentColor;stroke-width:1.5;stroke-linejoin:round;stroke-linecap:round}
+.atlas-kart .layer-pill[aria-expanded="true"]{color:var(--accent)}
+.atlas-kart .lens-pill{left:52px;max-width:calc(100% - 122px)}
+.atlas-kart .layer-menu{grid-template-columns:1fr;padding:8px 14px 4px}
+.atlas-kart .layer-menu .eyebrow{margin:4px 0 2px}
+.atlas-kart .layer-option{display:flex;align-items:center;gap:12px;min-height:56px;padding:8px 0;border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;box-shadow:none;color:var(--ink);text-align:left}
+.atlas-kart .layer-option:last-child{border-bottom:0}
+.atlas-kart .layer-option>span:first-child{flex:1;display:flex;flex-direction:column;gap:2px}
+.atlas-kart .layer-option strong{font-size:14px;font-weight:600}
+.atlas-kart .layer-option small{font-size:12px;line-height:1.35;color:var(--muted)}
+.atlas-kart .layer-option .switch{flex:none;position:relative;width:44px;height:26px;border-radius:13px;background:var(--line);transition:background .2s}
+.atlas-kart .layer-option .switch:after{content:"";position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgb(0 0 0 / .25);transition:transform .2s}
+.atlas-kart .layer-option[aria-checked="true"] .switch{background:var(--accent)}
+.atlas-kart .layer-option[aria-checked="true"] .switch:after{transform:translateX(18px)}
+.atlas-kart .layer-option:active:not(:disabled){transform:none}

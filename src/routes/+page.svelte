@@ -818,7 +818,7 @@
         {#if atlasTab==='tid' && data.curriculum && coreProgress}
           <div class="atlas-tid"><StorySpine curriculum={data.curriculum} progress={coreProgress} highlight={selection.units || []} onOpen={openUnit} bind:zoom={timelineState.zoom} bind:domain={timelineState.domain} bind:selectedId={timelineState.selectedId} /></div>
         {:else if atlasTab==='kart'}
-          {#if worldGraph && maps.some(m=>m.id==='world')}<WorldExplorer graph={worldGraph} dataset={maps.find(m=>m.id==='world')} bind:relevance={prefs.relevance} {typeLabel} {relationLabel} formatAvailable={id=>targets.some(t=>t.format===id)} onSave={()=>run(()=>put(db,'settings',JSON.parse(JSON.stringify(prefs))))} onOpen={id=>{detailId=id;view='atlas';window.location.hash='atlas';window.scrollTo(0,0);}} onQuiz={(objective,scope)=>run(()=>beginSession(objective,scope))} />
+          {#if worldGraph && maps.some(m=>m.id==='world')}<WorldExplorer graph={worldGraph} dataset={maps.find(m=>m.id==='world')} bind:relevance={prefs.relevance} {typeLabel} {relationLabel} formatAvailable={id=>targets.some(t=>t.format===id)} onSave={()=>run(()=>put(db,'settings',JSON.parse(JSON.stringify(prefs))))} onOpen={id=>{detailId=id;view='atlas';window.location.hash='atlas';window.scrollTo(0,0);}} onQuiz={(objective,scope)=>run(()=>beginSession(objective,scope))} onUnit={openUnit} />
     {:else}<div class="card"><p>Verdensutforskeren trenger kunnskapspakke 2.1.0. Koble til nettet for å oppdatere.</p><button class="secondary" disabled={busy} onclick={()=>run(()=>checkUpdates(true))}>Se etter oppdatering</button></div>{/if}
         {:else}
           {#if data.curriculum && coreProgress}

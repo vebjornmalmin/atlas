@@ -41,7 +41,72 @@ export function buildWorldGraph(data) {
   const countries = data.entities.filter(e => e.geo);
   const regionToCountry = new Map(countries.map(e => [e.geo.mapRegionId, e.id]));
   const neighbours = new Map(countries.map(c => [c.id, adjacency.get(c.id).filter(l => l.relation.type === 'borders').map(l => l.other)]));
-  return {data, byId, adjacency, countryOf, perspectives, lenses: perspectives.lenses || [], news, countries, regionToCountry, neighbours};
+  const members = new Map();
+  for (const [id, country] of countryOf) { if (!members.has(country)) members.set(country, []); members.get(country).push(id); }
+  return {data, byId, adjacency, countryOf, members, perspectives, lenses: perspectives.lenses || [], news, countries, regionToCountry, neighbours};
+}
+
+// Only relations that say something across borders are drawn as connections on the map; borders,
+// regions and capitals are geography, and the neighbours are shown already.
+const LINK_KINDS = {'knowledge-flow': 'nobel', 'award-time-affiliation': 'nobel', influenced: 'ideas', mentions: 'news'};
+
+/**
+ * Countries a place is connected to, strongest first. A country gathers the links of everything placed
+ * in it; anything else (a person, a news story) uses its own links, drawn from its country. Nobel
+ * links use the national tally where one exists, so laureates are not counted twice. With `content`
+ * (from contentPlaces), a country is also linked to the countries named in the same topics; those
+ * links have no direction.
+ */
+// `sourced: false` leaves out the register's own links (Nobel prizes, influence, news); without
+// `content` there are no shared-topic links. The map's switches turn each kind off this way.
+export function placeLinks(graph, id, limit = 10, content = null, {sourced = true} = {}) {
+  const entity = graph.byId.get(id);
+  const home = entity?.geo ? id : graph.countryOf.get(id) || null;
+  if (!home) return {home: null, links: [], total: 0};
+  const sources = entity.geo ? [home, ...(graph.members.get(home) || []).filter(m => m !== home)] : [id];
+  const partners = new Map();
+  if (sourced) for (const source of sources) for (const link of graph.adjacency.get(source) || []) {
+    const kind = LINK_KINDS[link.relation.type];
+    const other = kind && graph.countryOf.get(link.other);
+    if (!other || other === home || !graph.byId.get(other)?.geo?.mapRegionId) continue;
+    if (!partners.has(other)) partners.set(other, {country: other, tally: {}, items: {}, examples: []});
+    const p = partners.get(other), direction = link.outgoing ? 'out' : 'in', key = `${kind}:${direction}`;
+    if (link.relation.type === 'knowledge-flow') p.tally[key] = (p.tally[key] || 0) + (link.relation.count || 1);
+    else {
+      p.items[key] = (p.items[key] || 0) + 1;
+      // Name the person or story behind the link, not the institution at the other end.
+      const ends = [source, link.other].filter(e => e !== home).map(e => graph.byId.get(e)).filter(Boolean);
+      const who = ends.find(e => e.type === 'person') || ends.find(e => e.type === 'news-event') || ends[0];
+      if (who && p.examples.length < 3 && !p.examples.some(e => e.id === who.id)) p.examples.push({id: who.id, label: who.label, context: link.relation.context, kind, direction});
+    }
+    if (link.relation.type === 'knowledge-flow' && !p.flowContext) p.flowContext = link.relation.context;
+  }
+  const shared = {}, topicExamples = {};
+  if (content && entity.geo) for (const unitId of content.countries.get(home)?.topics || []) {
+    const title = graph.byId.get(`unit:${unitId}`)?.label;
+    for (const other of content.topicCountries.get(unitId) || []) {
+      if (other === home || !graph.byId.get(other)?.geo?.mapRegionId) continue;
+      shared[other] = (shared[other] || 0) + 1;
+      if (!topicExamples[other]) topicExamples[other] = [];
+      if (title && topicExamples[other].length < 3) topicExamples[other].push({id: `unit:${unitId}`, unitId, label: title, context: `Emnet «${title}» nevner både ${graph.byId.get(home).label} og ${graph.byId.get(other).label}.`, kind: 'topic', direction: 'both'});
+    }
+  }
+  for (const other of Object.keys(shared)) if (!partners.has(other)) partners.set(other, {country: other, tally: {}, items: {}, examples: []});
+  const links = [...partners.values()].map(p => {
+    const counts = {};
+    for (const key of new Set([...Object.keys(p.tally), ...Object.keys(p.items)])) counts[key] = p.tally[key] ?? p.items[key];
+    const sum = test => Object.entries(counts).filter(([key]) => test(key)).reduce((total, [, n]) => total + n, 0);
+    const kinds = ['nobel', 'ideas', 'news'].map(kind => ({kind, count: sum(key => key.startsWith(`${kind}:`))})).filter(k => k.count);
+    const together = shared[p.country] || 0;
+    if (together) kinds.push({kind: 'topic', count: together});
+    const flow = p.flowContext ? [{id: p.country, label: graph.byId.get(p.country).label, context: p.flowContext, kind: 'nobel', direction: counts['nobel:out'] ? 'out' : 'in'}] : [];
+    // Both kinds get an example; the kind with more links comes first.
+    const register = p.examples.length ? p.examples : flow, topics = topicExamples[p.country] || [];
+    const first = together > sum(() => true) ? topics : register, second = first === topics ? register : topics;
+    const examples = [...first.slice(0, second.length ? 2 : 3), ...second].slice(0, 3);
+    return {country: p.country, out: sum(key => key.endsWith(':out')), in: sum(key => key.endsWith(':in')), shared: together, count: sum(() => true) + together, kinds, examples};
+  }).sort((a, b) => b.count - a.count || graph.byId.get(a.country).label.localeCompare(graph.byId.get(b.country).label, 'nb'));
+  return {home, links: links.slice(0, limit), total: links.length};
 }
 
 export function newsWeight(item, now = new Date(), halfLife = 14) {

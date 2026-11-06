@@ -4,7 +4,31 @@ Offline kunnskapstrening på norsk, laget for iPhone 17 Pro.
 
 Live app: https://atlas-first-app.atlas-memory.workers.dev
 
-## Gjeldende utgave — 1.6.1: Rettelser etter en runde gjennom hele appen
+## Gjeldende utgave — 1.7.0: Forbindelser og varmekart på kartet
+
+**Velger du et land eller en person i Atlas → Kart, tegnes forbindelsene til andre land.** Hele linjer med pilspiss er kildebelagte forbindelser med retning: nobelprisvinnere og institusjonen de var knyttet til da prisen ble tildelt, påvirkning mellom tenkere, og nyheter som omtaler et annet land. Stiplede linjer uten pilspiss er land som nevnes i samme emne i Atlas, for eksempel Brasil og Angola i «Oppdagelsesreisene» eller Egypt og Hellas i «Antikkens Hellas». Linjene er tykkere jo flere forbindelser det er, og vifter ut når flere går samme vei. Inntil 30 land tegnes, de sterkeste først.
+- **Trykk på et land med linje**, på kartet eller i listen «Forbindelser på kartet»: linjen utheves, de andre tones ned, landet får navn, og et kort sier hva forbindelsen er, med kildesetningen eller emnet. Emnene i kortet åpnes i Emner. Trykk på landet igjen eller på «Gå til …» for å gå dit. På globusen snus kloden til landet først, og land på baksiden får ingen linje.
+- Norge har nå forbindelser til 33 land (4 fra registrene alene), Brasil til 14 (2), Egypt til 37 (0), og 93 av 172 land har minst én. Grenser, regioner og hovedsteder er geografi og tegnes ikke som linjer.
+
+**Varmekart: «Innhold i Atlas».** Kartet kan farges etter hvor mye av Atlas som er knyttet til hvert land: emner, spørsmål og personer, steder og verk. Skalaen er logaritmisk, så land med lite innhold synes. 164 land har noe. Under landet står «I Atlas» med antallet, knapper til emnene og «Øv på spørsmål om …», som starter en quiz med bare de spørsmålene.
+
+**Slå av og på.** Lagknappen nederst til venstre på kartet åpner «Vis på kartet» med tre brytere: Piler (kildebelagte forbindelser), Stiplede linjer (felles emner) og Varmekart. Hver kan slås av for seg, og valgene huskes på enheten, også etter at appen lukkes. Listen «Forbindelser på kartet» under landet følger bryterne, og er begge linjetypene av, står det der med en knapp som slår dem på igjen. Varmekartet erstatter linsens farger mens det er på; slås det av, kommer linsen du hadde tilbake. Linsemenyen har bare linser.
+- Bryterne er skjult når de ikke brukes. Panelet lukkes litt etter siste endring, så kartet viser hva som ble endret, og ellers ved et trykk utenfor, når siden rulles, eller med Esc. Det samme gjelder linse- og kartmenyen. Et trykk på kartet som lukker en meny, velger ikke et land.
+
+**Hvordan et emne eller spørsmål knyttes til et land** (`src/lib/content-places.js`): teksten i emnet (tittel, sammendrag, leksjon og hovedpunkter) og i spørsmålet (spørsmål, svar og forklaring) leses etter navn på dagens land og hovedsteder, også i genitiv («Norges»). Et emne får også landene spørsmålene i det nevner. Et registerspørsmål knyttes i tillegg til landet personen eller stedet det spør om hører til. England, Skottland, Wales og Nord-Irland regnes som Storbritannia, og Holland som Nederland.
+
+Beslutninger som skal holde:
+- Ingenting gjettes. Navn som like gjerne betyr noe annet, er utelatt: Georgia (også en delstat), Jordan og Niger (også elver), Sofia (Hagia Sofia) og hovedsteder som deler navn med andre steder (Santiago, San José, Kingston med flere).
+- Historiske navn oversettes ikke til dagens land. Mesopotamia blir ikke Irak, og Romerriket blir ikke Italia, med mindre teksten selv nevner landet. Kartet viser dagens land, og forklaringen under kartet sier det.
+- En linje mellom to land som nevnes i samme emne sier bare at Atlas behandler dem sammen, ikke hva forbindelsen var. Kortet og listen sier derfor «Emnet … nevner både …».
+
+**Lett for telefonen.** Registeret over innhold per land bygges én gang når Kart åpnes (rundt 13 ms på en Mac), og bare det valgte stedet regnes ut deretter (under 2 ms for Norge, som har flest emner).
+
+Logikken er `contentPlaces` og `placesIn` i `src/lib/content-places.js` og `placeLinks` i `src/lib/world-graph.js`, med tester for navnematching (genitiv, lengste navn først, Sør-Sudan og Guinea-Bissau, utelatte navn), at hvert land samler emner, spørsmål og elementer uten dobbelttelling, de stiplede forbindelsene, at hver linjetype kan slås av for seg, og at registeret bygges én gang. 261 automatiske tester består, og produksjonsbygget lages uten feil. Kontrollert i den installerte hjemmeskjermappen i iPhone 17 Pro-simulatoren, lyst og mørkt: Brasil og USA på flatt kart og globus, kortet med «Gå til USA», listevalget som snur globusen, varmekartet over hele verden, «I Atlas» for USA, «Øv på spørsmål om USA» som startet en quiz med ti spørsmål, og at varmekartet var valgt etter at appen ble lukket og åpnet igjen. Bryterne er kontrollert på samme måte: hver av dem av og på, at valgene huskes etter at appen lukkes, meldingen når begge linjetypene er av, at linsen kommer tilbake når varmekartet slås av, at panelet lukker seg selv etter en endring, og at et trykk på kartet som lukker panelet ikke velger et land.
+
+Funnet underveis og rettet: når kartet ble rullet fram, havnet knappene øverst på kartet under statuslinjen. Kartet holder nå avstand til den.
+
+## 1.6.1: Rettelser etter en runde gjennom hele appen
 
 Før 1.6.0 ble publisert, ble alle sidene gått gjennom i appen installert på hjemmeskjermen i iPhone 17 Pro-simulatoren: I dag med dagens kapittel, riktige og gale svar, lukking og gjenåpning midt i et spørsmål, Atlas → Tid, Kart (Standard og Globus) og Emner, Deg → Fremgang, Økten og Innstillinger, og Lag en quiz. Dette ble rettet:
 
