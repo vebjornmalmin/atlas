@@ -40,6 +40,32 @@ export function choiceProblems({prompt, answer, distractors = []}) {
   return {errors, warnings};
 }
 
+/**
+ * A hint narrows the search without handing over the answer: no accepted answer, year or pair
+ * partner in the hint, nothing that repeats the question, and a length that reads in a glance.
+ */
+export function hintProblems(card) {
+  const errors = [], warnings = [];
+  const hint = typeof card.hint === 'string' ? card.hint.trim() : '';
+  if (!hint) { warnings.push('mangler hint.'); return {errors, warnings}; }
+  if (hint.length > 220) errors.push(`hintet er for langt (${hint.length} tegn).`);
+  else if (hint.length > 160) warnings.push(`hintet er langt (${hint.length} tegn).`);
+  if (!/[.?]$/.test(hint)) warnings.push('hintet bør slutte med punktum.');
+  if (normalizeAnswer(hint) === normalizeAnswer(card.prompt)) errors.push('hintet gjentar spørsmålet.');
+  if (['choice','text','year','number'].includes(card.type)) {
+    errors.push(...answerLeaks(hint, cardAnswers(card)).map(problem => problem.replace('spørsmålet', 'hintet')));
+    if (['year','number'].includes(card.type) && new RegExp(`(^|[^\\d])${escapeRegExp(String(card.answer))}([^\\d]|$)`).test(hint)) errors.push(`hintet røper svaret «${card.answer}».`);
+    if (['choice','text'].includes(card.type)) {
+      const stems = text => new Set(normalizeAnswer(text).split(' ').filter(w => w.length >= 6).map(w => w.slice(0, 6)));
+      const asked = stems(hint), shared = [...stems(card.answer)].filter(stem => asked.has(stem));
+      if (shared.length) warnings.push(`hintet og svaret deler ordstammen «${shared[0]}».`);
+    }
+  }
+  if (card.type === 'match') for (const pair of card.pairs || []) if (normalizeAnswer(hint).includes(normalizeAnswer(pair.left)) && normalizeAnswer(hint).includes(normalizeAnswer(pair.right))) errors.push(`hintet røper paret «${pair.left} – ${pair.right}».`);
+  if (card.type === 'order' && (card.items || []).some(item => new RegExp(`(^|[^\\d])${Math.abs(item.year)}([^\\d]|$)`).test(hint))) errors.push('hintet røper et årstall i rekkefølgen.');
+  return {errors: [...new Set(errors)], warnings};
+}
+
 /** Accepted answers a learner may type or select for a card. */
 export function cardAnswers(card) {
   return [card.answer, ...(card.accept || [])].filter(value => value !== undefined && value !== null && String(value).trim());
@@ -171,6 +197,9 @@ function validateCard(unit, card, errors, warnings, {cardIds, prompts, mediaIds}
     if (!card.answer?.trim() || card.answer.length > 420) errors.push(`${at}: modellsvaret mangler eller er for langt.`);
     if (!Array.isArray(card.checklist) || card.checklist.length < 2 || card.checklist.length > 4) errors.push(`${at}: forklaringskort trenger 2–4 sjekkpunkter.`);
   }
+  const hinted = hintProblems(card);
+  errors.push(...hinted.errors.map(problem => `${at}: ${problem}`));
+  warnings.push(...hinted.warnings.map(problem => `${at}: ${problem}`));
   if (!taughtBefore(unit, card)) warnings.push(`${at}: svaret «${String(card.answer).slice(0, 50)}» ser ikke ut til å være undervist før det testes.`);
 }
 
