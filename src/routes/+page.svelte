@@ -30,6 +30,7 @@
   import {foundationTargets} from '../lib/foundations.js';
   import {factKey,learningStage,quizProgress,overviewBounds,effectiveRating} from '../lib/journey.js';
   import {saveJournal,readJournal,questionDraft,restoreDraft} from '../lib/session-journal.js';
+  import {hintSteps,removesOption,removedOption} from '../lib/hints.js';
   import Feedback from '../lib/Feedback.svelte';
   import {answerPresentation,contextualExplanation,questionSupport} from '../lib/presentation.js';
   import { openDatabase, all, get, put, installPackage, recordReview, logEvent, exportDatabase, restoreDatabase, clearLogs, transaction } from '../lib/storage.js';
@@ -82,7 +83,7 @@
   $effect(()=>{const state=uiSnapshot();if(uiReady && state)keepUiState();});
   let journalWarning = false;
   const stageLabel = stage => ({foundation:'Grunnlag',details:'Detaljer',connections:'Avansert'}[stage] || stage);
-  function draftNow() { return questionDraft(current?.id,{answer,formatDraft,correct,revealed,usedHint,timelineOrder,selectedRegion,mapView,introduction,learnedFirst,gradeNote,selfApproved}); }
+  function draftNow() { return questionDraft(current?.id,{answer,formatDraft,correct,revealed,usedHint,hintLevel,timelineOrder,selectedRegion,mapView,introduction,learnedFirst,gradeNote,selfApproved}); }
   $effect(()=>{
     if(loading || !session || (current && preparedTargetId!==current.id))return;
     const draft=draftNow();
@@ -96,6 +97,7 @@
   $effect(()=>{if(revealed && sessionScreen){void tick().then(()=>{document.querySelector('#recall')?.blur();document.querySelector('#answer-heading')?.focus({preventScroll:true});window.scrollTo({top:0,behavior:'instant'});});}});
   let correct = $state(null);
   let usedHint = $state(false);
+  let hintLevel = $state(0);
   let timelineOrder = $state.raw([]);
   let selectedRegion = $state('');
   let query = $state('');
@@ -270,6 +272,8 @@
   let current = $derived(session && !isLessonEntry(session.queue[session.index]) ? targets.find(t => t.id === session.queue[session.index]?.id) : null);
   let currentArtwork = $derived(artworkMedia.find(m=>m.entityId===(current?.media || current?.entityId)));
   let answerStyle = $derived(answerPresentation(current));
+  let hints = $derived(hintSteps(current));
+  function nextHint() { if (hintLevel < hints.length) { hintLevel += 1; usedHint = true; } }
   let explanationContext = $derived(contextualExplanation(data || {},current,targets,reviews,session?.queue.slice((session?.index||0)+1).map(q=>q.id)||[]));
   let connections = $derived(explanationContext.connections);
   let currentObjective = $derived(data?.learningObjectives?.find(o=>o.id===session?.queue[session.index]?.objectiveId));
@@ -369,7 +373,7 @@
   async function prepareQuestion(draft = null) {
     const saved=restoreDraft(current,draft);
     answer = saved?.answer || ''; formatDraft = saved?.formatDraft || {}; correct = saved?.correct ?? null; revealed = saved?.revealed || false;
-    usedHint = saved?.usedHint || false; selectedRegion = saved?.selectedRegion || ''; mapView = saved?.mapView || null;
+    usedHint = saved?.usedHint || false; hintLevel = saved?.hintLevel ?? (usedHint ? 1 : 0); selectedRegion = saved?.selectedRegion || ''; mapView = saved?.mapView || null;
     timelineOrder = saved?.timelineOrder || (current?.mode === 'timeline' ? buildTimelineExercise(current.timeline).items : []);
     introduction = saved?.introduction ?? Boolean(session?.queue[session.index]?.reason==='Connected introduction' && current?.snapshot);
     learnedFirst = saved?.learnedFirst || false; gradeNote = saved?.gradeNote || ''; selfApproved = saved?.selfApproved || false; preparedTargetId=current?.id || currentLesson?.id || '';
@@ -435,7 +439,7 @@
     rating=effectiveRating(rating,{correct,learnedFirst,usedHint,mode:target.mode});
     const entry=session.queue[session.index];
     const result=scheduleReview(schedulingKey(target),currentState,rating,now);
-    const event={id:`${session.sessionId}:${session.index}`,targetId:target.id,entityId:target.entityId || null,timestamp:now.toISOString(),rating,mode:target.mode,correct,usedHint,learnedFirst,
+    const event={id:`${session.sessionId}:${session.index}`,targetId:target.id,entityId:target.entityId || null,timestamp:now.toISOString(),rating,mode:target.mode,correct,usedHint,...(hintLevel?{hintLevel}:{}),learnedFirst,
       factId:factKey(target),claimIds:target.claimIds,evidenceKind:evidenceKind(target),answerFormat:target.answerFormat,assessment:target.answerFormat==='explanation' || selfApproved?'self':'answer',...(selfApproved?{selfApproved:true,typedAnswer:answer.trim()}:{}),reason:entry.reason,schedulerId:schedulingKey(target),sessionRetry:Boolean(entry.sessionRetry),nextDue:result.card.due,log:result.log};
     // A first answer always starts the long-term schedule, even in free practice; otherwise the card would never return.
     const practice=(session.practice || entry.sessionRetry) && Boolean(currentState);
@@ -699,13 +703,13 @@
         {/if}
         {#if !revealed}
           {#if current.mode === 'recognition'}
-            <div class="s-choices" role="group" aria-label="Svaralternativer">{#each makeRecognitionOptions(current.options ? current : data.targets.find(t=>t.id===current.baseId),data.targets,4,recognitionIndex) as option,i}<button class="s-choice" onclick={()=>answerChoice(option)}><span class="s-choice-key" aria-hidden="true">{'ABCD'[i] || i+1}</span><span class="s-choice-label">{option.label}</span></button>{/each}</div>
+            <div class="s-choices" role="group" aria-label="Svaralternativer">{@const options=makeRecognitionOptions(current.options ? current : data.targets.find(t=>t.id===current.baseId),data.targets,4,recognitionIndex)}{@const removed=removesOption(current,hintLevel)?removedOption(current,options):null}{#each options as option,i}<button class="s-choice" class:is-removed={option.id===removed} disabled={option.id===removed} aria-label={option.id===removed?`${option.label}, fjernet av hintet`:undefined} onclick={()=>answerChoice(option)}><span class="s-choice-key" aria-hidden="true">{'ABCD'[i] || i+1}</span><span class="s-choice-label">{option.label}</span></button>{/each}</div>
           {:else if !STRUCTURED_MODES.includes(current.mode) && current.mode !== 'map' && current.mode !== 'timeline'}
             <form class="s-form" onsubmit={event=>{event.preventDefault();reveal();}}><label class="s-field-label" for="recall">{answerStyle.label}</label>{#if answerStyle.extended}<textarea id="recall" class="textarea recall-long s-input" bind:value={answer} rows="3" placeholder={answerStyle.placeholder} autocomplete="off"></textarea>{:else}<input id="recall" class="input recall-short s-input" class:recall-year={['numeric','decimal'].includes(answerStyle.inputMode)} bind:value={answer} inputmode={answerStyle.inputMode} placeholder={answerStyle.placeholder} autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="done">{/if}<button class="primary" type="submit">{answer.trim()?'Kontroller svaret':'Vis svaret'}</button></form>
           {/if}
-          {#if usedHint}<p class="s-hint">{current.hint || `Svaret begynner med “${current.answer[0]}”.`}</p>{/if}
+          {#if hintLevel}<div class="s-hint" role="status">{#each hints.slice(0,hintLevel) as text,i}<p><span class="s-hint-step">Hint {i+1}</span> {text}</p>{/each}</div>{/if}
           <div class="s-help"><button class="quiet" onclick={()=>{learnedFirst=true;correct=null;revealed=true;}}>Jeg vil lære dette først</button>
-          {#if !['map','timeline',...STRUCTURED_MODES].includes(current.mode) && (current.hint || current.mode!=='recognition') && current.answerFormat!=='explanation'}<button class="quiet" onclick={()=>usedHint=true}>Hint</button>{/if}</div>
+          {#if hintLevel < hints.length}<button class="quiet" onclick={nextHint}>{hintLevel?'Mer hjelp':'Hint'}</button>{/if}</div>
           {#if STRUCTURED_MODES.includes(current.mode) || current.mode === 'timeline' || current.mode === 'map'}
             <div class="s-bar">
               {#if current.mode === 'map'}<button class="quiet" onclick={()=>{selectedRegion='';reveal();}}>Vis meg stedet</button>{/if}

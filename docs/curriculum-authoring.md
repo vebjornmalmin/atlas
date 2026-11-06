@@ -48,7 +48,7 @@ Typisk fordeling: 3–4 kort i steg 1, 3–4 i steg 2, 2–3 i steg 3 (minst ett
 
 ### Kort
 
-Felles felt: `id` (begynner med emne-ID-en), `step`, `type`, `prompt`, `explain`. Valgfritt: `hint` (skal hjelpe uten å røpe svaret) og `media` (ID til et lisensavklart bilde i `public/knowledge/media.json`, f.eks. `the-scream`). Bildet vises sammen med spørsmålet, så spørsmålet skal ikke spørre om noe tittelen eller kunstnernavnet i bildeteksten røper; tittelen vises først etter svaret.
+Felles felt: `id` (begynner med emne-ID-en), `step`, `type`, `prompt`, `explain` og `hint` (se «Hint» under). Valgfritt: `media` (ID til et lisensavklart bilde i `public/knowledge/media.json`, f.eks. `the-scream`). Bildet vises sammen med spørsmålet, så spørsmålet skal ikke spørre om noe tittelen eller kunstnernavnet i bildeteksten røper; tittelen vises først etter svaret.
 
 | Type | Ekstra felt | Brukes til |
 |---|---|---|
@@ -61,6 +61,22 @@ Felles felt: `id` (begynner med emne-ID-en), `step`, `type`, `prompt`, `explain`
 | `explain` | `answer` (modellsvar, 1–3 setninger), `checklist` (2–4 punkter) | Forklar med egne ord. Eleven vurderer seg selv mot sjekklisten. |
 
 `explain` (forklaringen etter svaret) er obligatorisk for alle kort. Den skal lære bort noe nytt: en årsak, en følge eller en forbindelse til et annet emne – ikke gjenta svaret.
+
+### Hint
+
+Alle kort har et skrevet `hint`. Hintet er første hjelpetrinn: et faglig holdepunkt som gjør det lettere å hente fram svaret, uten å gi det bort. Eleven skal fortsatt måtte huske noe selv.
+
+- Én setning, helst under 120 tegn (maks 160), som slutter med punktum.
+- Gi en ledetråd fra sammenhengen: tid, sted, fagfelt, en kjent person eller hendelse i nærheten, ordets opprinnelse eller en huskeregel. «Han var dansk og arbeidet med atomets bygning.» – ikke «Han heter Niels.»
+- Aldri svaret, et godtatt svar, samme ordstamme som svaret, årstallet selv eller et helt par fra en kobling. Validatoren stopper de tydeligste tilfellene.
+- Ikke gjenta spørsmålet med andre ord, og ikke snevre inn til ett mulig svar.
+- Flervalg: pek på hva som skiller det riktige alternativet («Tenk på hvem av dem som var lege.»).
+- Årstall og tall: gi et holdepunkt i tid eller størrelse («Det var året etter at krigen sluttet.», «Tenk på antall fylker før reformen.»), ikke tiåret – det gir appen selv i neste trinn.
+- Rekkefølge: hjelp med én forankring («Bare én av hendelsene skjedde før vår tidsregning.»).
+- Kobling: hjelp med ett par uten å nevne begge sider.
+- Forklaring: si hvilke sider svaret bør dekke («Tenk både på økonomien og på religionen.»).
+
+Appen har et andre hjelpetrinn som lages automatisk: forbokstav og antall bokstaver for tekstsvar, århundre eller tiår for årstall, størrelsesorden for tall og ett alternativ fjernet for flervalg. Et svar med hint lagres som støttet, ikke som selvstendig.
 
 ## Kvalitetsregler
 
