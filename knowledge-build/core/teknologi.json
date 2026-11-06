@@ -16,17 +16,18 @@
         "from": -3500,
         "to": -1000
       },
-      "summary": "Skrift, hjulet og bronsen er blant de eldste teknologiene som ga mennesker varig makt over tid, rom og materialer.",
+      "summary": "Skrift, hjul og metaller er blant de eldste teknologiene: skriften ga staten en hukommelse, hjulet flyttet tunge lass, og bronse og jern ga bedre redskaper.",
       "lesson": [
-        "Skrift oppsto i Mesopotamia, der sumererne begynte å bruke tegn til å føre oversikt over varer og avtaler. Tegnene ble presset inn i våt leire med en griffel. Formen minner om kiler, og derfor kalles skriften kileskrift.",
-        "Hjulet er en av de tidligste store oppfinnelsene i Midtøsten. De eldste hjulfunnene er omkring 3500 f.Kr. Egypterne tok i bruk hjulet omtrent 2500 f.Kr. Bronse, en legering av kobber og tinn, ble det viktigste metallet i bronsealderen, som i Midtøsten varte omtrent fra 3300 til 1200 f.Kr.",
-        "Akkaderne tok over skriften og brukte den til sitt eget språk, akkadisk. Kileskriften ble til slutt fortrengt av alfabetisk skrift. Den britiske forskeren H. C. Rawlinson tydet den gammelpersiske varianten i 1846."
+        "Den eldste kjente skriften oppsto omkring 3200 f.Kr. i sumeriske byer som Uruk i Mesopotamia. Den begynte som regnskap over korn, dyr og avtaler, ikke som litteratur. Tegnene ble presset inn i våte leirtavler med en griffel og fikk form som kiler, derfor navnet kileskrift. Rundt 1750 f.Kr. lot kong Hammurabi av Babylon hogge lovene sine inn i en steinstøtte.",
+        "Hjul og vogner dukker opp omkring 3500 f.Kr., nesten samtidig i Mesopotamia, Sentral-Europa og på steppene nord for Svartehavet. Hvor hjulet ble oppfunnet først, vet vi ikke. Bronse er en legering av kobber og tinn og er hardere enn rent kobber. Den ga navn til bronsealderen, som i Midtøsten varte fra omkring 3300 til 1200 f.Kr.",
+        "Etter 1200 f.Kr. tok jernet over. Jernmalm finnes nesten overalt, mens tinn måtte hentes langveisfra, så jern ble billigere når man først behersket den varmere smeltingen. Kileskriften gikk ut av bruk i århundrene rundt Kristi fødsel. Først på 1800-tallet klarte forskere å lese den igjen."
       ],
       "keyPoints": [
-        "Skriften oppsto i Mesopotamia og ble skrevet med kiler i våt leire.",
-        "Hjulet og bronsen er blant de eldste store teknologiske gjennombruddene i Midtøsten.",
-        "Jern tok over etter bronsealderen, som i Midtøsten var avsluttet rundt 1200 f.Kr.",
-        "Datering av oppfinnelser fra oldtiden er usikker, og kildene gir ulike årstall."
+        "Kileskriften oppsto i sumeriske byer i Mesopotamia omkring 3200 f.Kr. og begynte som regnskap.",
+        "Tegnene ble presset inn i våte leirtavler.",
+        "Hjulet dukker opp omkring 3500 f.Kr. flere steder, og hvor det ble oppfunnet først, er usikkert.",
+        "Rundt 1750 f.Kr. lot Hammurabi av Babylon lovene sine hogge inn i stein.",
+        "Bronse er kobber og tinn. Jern tok over etter 1200 f.Kr. fordi jernmalm finnes nesten overalt."
       ],
       "sources": [
         {
@@ -48,154 +49,180 @@
       ],
       "cards": [
         {
-          "id": "tek-skrift-hjul-metaller-region",
+          "id": "tek-skrift-hjul-metaller-regnskap",
           "step": 1,
           "type": "choice",
-          "prompt": "I hvilken region i Midtøsten oppstod kileskriften?",
-          "answer": "Mesopotamia",
+          "prompt": "Hva ble den eldste skriften i Mesopotamia først brukt til?",
+          "answer": "Regnskap over varer og avtaler",
           "distractors": [
-            "Nildalen",
-            "Indusdalen",
-            "Kreta"
+            "Bønner og hellige tekster",
+            "Dikt og fortellinger",
+            "Brev mellom konger"
           ],
-          "explain": "Egypt hadde også egne skrifter, men kileskriften kommer fra Sør-Mesopotamia. Den var i bruk i omtrent tre tusen år."
+          "explain": "Skriften vokste fram av behovet for å holde orden på lagre, skatter og handel i de første byene. Litteratur som Gilgamesj-eposet kom flere hundre år senere.",
+          "hint": "Tenk på hva templene og byene måtte holde orden på når de samlet inn korn og dyr."
         },
         {
           "id": "tek-skrift-hjul-metaller-leire",
           "step": 1,
           "type": "choice",
-          "prompt": "Hvilket materiale ble tegnene presset inn i?",
-          "answer": "Våt leire",
+          "prompt": "Hva skrev man kileskrift på?",
+          "answer": "Leirtavler",
           "distractors": [
             "Papyrus",
             "Pergament",
             "Voksplater"
           ],
-          "explain": "Papyrus og pergament var skrivematerialer i andre deler av verden. Leire tørket og holdt tegnene i tusenvis av år."
+          "explain": "Papyrus var egypternes skrivemateriale, og pergament av dyrehud kom senere. Leire var billig, og tørkede eller brente tavler har holdt seg i over 4000 år.",
+          "hint": "Materialet fantes overalt på elvesletta mellom Eufrat og Tigris."
         },
         {
-          "id": "tek-skrift-hjul-metaller-hjul",
+          "id": "tek-skrift-hjul-metaller-hjul-opphav",
           "step": 1,
           "type": "choice",
-          "prompt": "Hvilken eldgammel oppfinnelse fra Midtøsten la grunnlaget for transport med kjøretøy?",
-          "answer": "Hjulet",
+          "prompt": "Hva viser funnene om hvor hjulet ble oppfunnet?",
+          "answer": "Det dukker opp nesten samtidig flere steder",
           "distractors": [
-            "Kruttet",
-            "Kompasset",
-            "Boktrykkerpressen"
+            "Det kom fra Egypt, til pyramidebyggingen",
+            "Det kom fra Kina langs Silkeveien",
+            "Det kom fra Mesopotamia, sammen med skriften"
           ],
-          "explain": "Kruttet, kompasset og boktrykkerpressen er alle senere oppfinnelser enn hjulet. Sumererne brukte også hjulet i pottemakerarbeid."
+          "explain": "Hjul og vogner finnes fra omkring 3500 f.Kr. i Mesopotamia, Sentral-Europa og på steppene. Mange bøker sier Mesopotamia, men funnene der er ikke eldre enn de andre. Egypterne bygde pyramidene uten vogner, og i Mellom-Amerika kjente man hjulet bare fra små leketøysfigurer.",
+          "hint": "Tenk på at de eldste funnene ligger langt fra hverandre, men er omtrent like gamle."
         },
         {
           "id": "tek-skrift-hjul-metaller-sumerer",
           "step": 2,
           "type": "text",
-          "prompt": "Hvilket folk i den sørlige delen av Midtøsten utviklet kileskriften?",
+          "prompt": "Hvilket folk i byer som Uruk og Ur utviklet kileskriften?",
           "answer": "Sumerer",
           "explain": "Akkaderne overtok skriften senere og brukte den til sitt eget språk. Språket deres var et helt annet enn sumerisk.",
           "accept": [
             "Sumererne",
-            "Sumer"
-          ]
+            "Sumer",
+            "sumerere"
+          ],
+          "hint": "Folket bodde sør i Mesopotamia, og språket deres er ikke i slekt med noe kjent språk."
         },
         {
           "id": "tek-skrift-hjul-metaller-bronse",
           "step": 2,
           "type": "text",
-          "prompt": "Hvilket metall ga navn til en tidsepoke i Midtøsten?",
+          "prompt": "Hva kalles legeringen av kobber og tinn som ga navn til en hel tidsalder?",
           "answer": "Bronse",
-          "explain": "Bronse er en legering av kobber og tinn, og den er hardere enn rent kobber. Når bronse ble det viktigste metallet, fikk perioden navnet bronsealderen.",
+          "explain": "Tinn fantes bare noen få steder, blant annet i Cornwall og Sentral-Asia, så bronsen skapte lange handelsruter. I Norden varte bronsealderen fra omkring 1700 til 500 f.Kr., lenger enn i Midtøsten.",
           "accept": [
             "Bronsen"
-          ]
+          ],
+          "hint": "Kirkeklokker og mange gamle statuer er støpt av denne legeringen."
         },
         {
-          "id": "tek-skrift-hjul-metaller-jern",
+          "id": "tek-skrift-hjul-metaller-hammurabi",
           "step": 2,
           "type": "text",
-          "prompt": "Hvilket metall tok over som det viktigste etter bronsealderen?",
-          "answer": "Jern",
-          "explain": "Overgangen fra bronse til jern skjedde over lang tid, og bronse og jern ble brukt side om side en stund.",
+          "prompt": "Hvilken babylonsk konge lot lovene sine hogge inn i en steinstøtte rundt 1750 f.Kr.?",
+          "answer": "Hammurabi",
           "accept": [
-            "Jernet"
-          ]
+            "Hammurapi",
+            "Khammurabi",
+            "kong Hammurabi"
+          ],
+          "explain": "Lovene er blant de eldste kjente lovsamlingene. Straffene fulgte prinsippet «øye for øye», men avhang av hvem som var offer og gjerningsmann: å skade en stormann ga strengere straff enn å skade en slave.",
+          "hint": "Steinstøtten ble funnet i Iran i 1901 og står i dag i Louvre i Paris."
+        },
+        {
+          "id": "tek-skrift-hjul-metaller-jern-hvorfor",
+          "step": 3,
+          "type": "choice",
+          "prompt": "Hvorfor tok jernet etter hvert over for bronsen?",
+          "answer": "Jernmalm finnes nesten overalt, mens tinn var sjeldent",
+          "distractors": [
+            "Jern smelter ved lavere temperatur enn bronse",
+            "Jern ruster ikke, slik bronse gjør",
+            "Kobbergruvene i Midtøsten var tømt"
+          ],
+          "explain": "Jern krever høyere temperatur å utvinne, og derfor kom teknikken sent. Da den først var lært, kunne langt flere skaffe seg redskaper og våpen av metall.",
+          "hint": "Tenk på hvor lett det var å skaffe råstoffene til de to metallene."
         },
         {
           "id": "tek-skrift-hjul-metaller-rekkefolge",
           "step": 3,
           "type": "order",
-          "prompt": "Sett hjulfunnene, slutten på bronsealderen og tydingen av kileskriften i rekkefølge, eldst først.",
+          "prompt": "Sett hendelsene i rekkefølge, eldst først.",
           "items": [
             {
-              "label": "De eldste kjente hjulfunnene (omkring 3500 f.Kr.)",
+              "label": "De første hjulene og vognene",
               "year": -3500
             },
             {
-              "label": "Bronsealderen i Midtøsten tar slutt (omkring 1200 f.Kr.)",
-              "year": -1200
+              "label": "Kileskriften oppstår i Uruk",
+              "year": -3200
             },
             {
-              "label": "Rawlinson tyder gammelpersisk kileskrift",
-              "year": 1846
+              "label": "Hammurabi lar lovene sine hogge inn i stein",
+              "year": -1750
+            },
+            {
+              "label": "Bronsealderen i Midtøsten tar slutt",
+              "year": -1200
             }
           ],
-          "explain": "Årstallene er omtrentlige, og flere av dem er datert ut fra funn, ikke skriftlige kilder. Rekkefølgen er sikrere enn selve årstallene."
+          "explain": "Årstallene er omtrentlige og bygger på funn, men rekkefølgen er sikrere enn tallene. Skriften var allerede over tusen år gammel da Hammurabi brukte den til lover.",
+          "hint": "Lovene til Hammurabi ble skrevet med en skrift som allerede var gammel."
         },
         {
           "id": "tek-skrift-hjul-metaller-forklar-skrift",
           "step": 3,
           "type": "explain",
           "prompt": "Forklar hvorfor skrift var nyttig for å styre større byer og riker.",
-          "answer": "Skrift gjorde det mulig å lagre informasjon utenfor hukommelsen, for eksempel avtaler og oversikt over varer. Det gjorde det lettere å styre større samfunn over tid, selv når de som hadde avtalt noe, ikke var til stede.",
+          "answer": "Skrift lagret informasjon utenfor hukommelsen, som regnskap over skatter, lagre og avtaler. Da kunne en stat kontrollere hvem som hadde betalt, og lover og avtaler kunne gjelde over tid og avstand, også når de som hadde avtalt noe, ikke var til stede.",
           "checklist": [
             "Skrift lagrer informasjon utenfor hukommelsen",
             "Avtaler og lagre kan kontrolleres over tid",
             "Større samfunn kan styres med færre personer til stede"
           ],
-          "explain": "Skrift var ikke bare et språk på papir. Når informasjon kunne lagres i leire, ble styring av store samfunn lettere."
+          "explain": "Hammurabis lover viser det samme: når loven er skrevet ned, kan alle vise til den samme teksten. Leirtavlene som er bevart, er også vår viktigste kilde til livet i Mesopotamia.",
+          "hint": "Tenk på regnskap, lover og avtaler som skal huskes lenge og gjelde langt unna."
         },
         {
           "id": "tek-skrift-hjul-metaller-koble",
           "step": 3,
           "type": "match",
-          "prompt": "Koble skrift- og metallbegrepet til forklaringen.",
+          "prompt": "Koble teknologien med hva den gjorde mulig.",
           "pairs": [
             {
-              "left": "Kileskrift",
-              "right": "Tegn presset inn i våt leire"
-            },
-            {
-              "left": "Bronse",
-              "right": "Legering av kobber og tinn"
+              "left": "Skrift",
+              "right": "Regnskap og lover som varte"
             },
             {
               "left": "Hjulet",
-              "right": "Brukt til transport"
+              "right": "Frakt av tunge lass over land"
+            },
+            {
+              "left": "Bronse",
+              "right": "Hardere redskaper enn av rent kobber"
+            },
+            {
+              "left": "Jern",
+              "right": "Billige redskaper for folk flest"
             }
           ],
-          "explain": "Kileskrift, bronse og hjulet er tre ulike gjennombrudd som til sammen lå til grunn for byer og handel."
+          "explain": "Til sammen gjorde de det mulig å styre større samfunn, flytte varer og dyrke mer jord. Alle fire bygde på handel og arbeidsdeling i byene.",
+          "hint": "Bare ett av metallene hadde råstoff som fantes nesten overalt."
         },
         {
-          "id": "tek-skrift-hjul-metaller-rawlinson",
-          "step": 4,
-          "type": "year",
-          "prompt": "Hvilket år tydet H. C. Rawlinson den gammelpersiske kileskriften?",
-          "answer": "1846",
-          "explain": "Den gammelpersiske varianten var lettere å tyde enn den sumeriske. Den sumeriske skriften ble først tolket i begynnelsen av 1900-tallet.",
-          "tolerance": 0
-        },
-        {
-          "id": "tek-skrift-hjul-metaller-hjulets-alder",
+          "id": "tek-skrift-hjul-metaller-skrift-alder",
           "step": 4,
           "type": "choice",
-          "prompt": "Omtrent når er de eldste kjente hjulfunnene datert?",
-          "answer": "Omkring 3500 f.Kr.",
+          "prompt": "Omtrent når oppsto kileskriften?",
+          "answer": "Omkring 3200 f.Kr.",
           "distractors": [
-            "Omkring 500 f.Kr.",
-            "Omkring 1500 f.Kr.",
-            "Omkring 7000 f.Kr."
+            "Omkring 5000 f.Kr.",
+            "Omkring 2000 f.Kr.",
+            "Omkring 1200 f.Kr."
           ],
-          "explain": "Hjulet var i bruk i Egypt omtrent 2500 f.Kr., altså over tusen år senere. Dateringene kan endres når nye funn gjøres."
+          "explain": "Skriften er altså litt over 5000 år gammel. Egypterne fikk hieroglyfer nesten samtidig, og skrift oppsto senere også uavhengig i Kina og Mellom-Amerika.",
+          "hint": "Skriften kom noen hundre år etter de eldste hjulene."
         }
       ]
     },
@@ -204,23 +231,24 @@
       "title": "Trykkekunsten og boktrykkets følger",
       "tier": 2,
       "prerequisites": [
-        "vh-reformasjonen"
+        "vh-middelalderen"
       ],
       "years": {
         "from": 1041,
         "to": 1520
       },
-      "summary": "Boktrykkerkunsten gjorde bøker billigere og ideer raskere å spre, og den ga støtet til Reformasjonen og den moderne offentligheten.",
+      "summary": "Løse metalltyper gjorde bøker billigere og ideer raskere å spre, og trykkpressen ble en forutsetning for reformasjonen og den nye vitenskapen.",
       "lesson": [
-        "Johann Gutenberg utviklet boktrykkerkunsten på 1450-tallet. Han brukte løse, bevegelige typer i metall, en bokstav om gangen, som kunne settes sammen til nye tekster og brukes igjen. Trykkpressen presset papiret mot typene. Kina og Korea hadde bevegelige typer før ham, så Gutenberg var ikke den første, men hans system ble avgjørende i Europa.",
-        "Gutenbergbibelen, trykt rundt 1455, er hans mest kjente verk. Den er i to bind med til sammen 1282 sider. Opplaget var omtrent 200 eksemplarer, og boken regnes som den første masseproduserte boken i Europa. Femti år etter Gutenbergs første trykk fantes det trykkerier på 271 steder i Europa.",
-        "Trykte bøker ble raskt billigere, og flere kunne lese. Nye religiøse og politiske ideer kunne spres langt raskere enn med håndskrevne kopier. Det var en av forutsetningene for Reformasjonen."
+        "Johann Gutenberg i Mainz utviklet boktrykkerkunsten på 1450-tallet. Det nye var løse typer støpt i metall, én for hver bokstav, som kunne settes sammen til en side og brukes om igjen. En presse etter mønster av vinpressen trykket arket mot typene. Papiret, som var kommet fra Kina via den arabiske verden, var mye billigere enn pergament.",
+        "Gutenberg var ikke først. I Kina laget Bi Sheng løse typer av brent leire rundt 1041, og i Korea ble en bok trykt med metalltyper i 1377. Gutenbergbibelen, trykt rundt 1455, er hans mest kjente verk. Opplaget var trolig rundt 180 eksemplarer. Det høres lite ut, men en avskriver kunne bruke over et år på én bibel.",
+        "Rundt 1500 fantes det trykkerier i flere hundre europeiske byer. Bøker ble billigere, og samme tekst nådde mange på kort tid. Luthers skrifter ble trykt i hundretusenvis av eksemplarer etter 1517. Forskere fikk like kopier av tabeller og figurer, og bøker på folkespråk ga mer faste skrivemåter."
       ],
       "keyPoints": [
-        "Gutenberg utviklet boktrykkerkunsten på 1450-tallet med løse metalltyper.",
-        "Gutenbergbibelen, trykt rundt 1455, var en stor og kostbar bok.",
-        "Kina og Korea hadde bevegelige typer før Gutenberg, og det er omstridt hvem som er først.",
-        "Trykkerier spredte seg raskt i Europa og gjorde bøker billigere."
+        "Gutenberg utviklet boktrykkerkunsten i Mainz på 1450-tallet med løse metalltyper som kunne brukes om igjen.",
+        "Kina og Korea trykte med løse typer før Gutenberg.",
+        "Gutenbergbibelen ble trykt rundt 1455.",
+        "Papiret kom fra Kina gjennom den arabiske verden og var mye billigere enn pergament.",
+        "Billig papir og trykk spredte Luthers skrifter, vitenskap og skriftspråk raskt."
       ],
       "sources": [
         {
@@ -248,60 +276,68 @@
           "prompt": "Hvem utviklet boktrykkerkunsten i Europa på 1450-tallet?",
           "answer": "Johann Gutenberg",
           "distractors": [
-            "Leonardo da Vinci",
-            "Erasmus av Rotterdam",
-            "Nicolaus Kopernikus"
+            "William Caxton",
+            "Aldus Manutius",
+            "Albrecht Dürer"
           ],
-          "explain": "Kina og Korea hadde bevegelige typer lenge før. Systemet til Gutenberg var det som ble tatt i bruk i Europa."
+          "explain": "Kina og Korea hadde løse typer lenge før. Caxton og Manutius var boktrykkere som tok teknikken videre til England og Venezia noen tiår senere, og Dürer laget tresnitt og kobberstikk.",
+          "hint": "Han kunne metallarbeid og drev verkstedet sitt i en by ved Rhinen."
         },
         {
           "id": "tek-boktrykk-typer",
           "step": 1,
           "type": "choice",
-          "prompt": "Hva kalles enkeltbokstavene i metall som kunne settes sammen til trykkeplater?",
-          "answer": "Bevegelige typer",
+          "prompt": "Hva var det avgjørende nye i Gutenbergs oppfinnelse?",
+          "answer": "Gjenbrukbare typer av metall",
           "distractors": [
-            "Trefigurer",
-            "Kobberplater",
-            "Pergamentruller"
+            "Utskårne treblokker for hver side",
+            "Papir laget av tremasse",
+            "Fargetrykk fra kobberplater"
           ],
-          "explain": "Kobberplater ble brukt til gravering, men de var ikke laget for å settes sammen til nye tekster. Løse typer kunne brukes om igjen."
+          "explain": "Blokktrykk med en utskåret treblokk for hver side var kjent fra før, også i Europa. Papir av tremasse kom først på 1800-tallet; Gutenberg trykket på papir av filler og på pergament.",
+          "hint": "Tenk på hva som kunne tas fra hverandre etter én side og settes sammen til den neste."
         },
         {
           "id": "tek-boktrykk-kina",
           "step": 1,
           "type": "choice",
-          "prompt": "Hvilket land hadde bevegelige typer i brent leire allerede på 1000-tallet?",
+          "prompt": "Gutenberg var ikke den første som trykte med løse typer. Hvilket land brukte løse typer av brent leire alt på 1000-tallet?",
           "answer": "Kina",
           "distractors": [
-            "Frankrike",
-            "England",
-            "Norge"
+            "Japan",
+            "India",
+            "Persia"
           ],
-          "explain": "Pi Sheng utviklet skrifttyper av brent leire i 1041. Blokktrykk var likevel den vanligste metoden i Kina, fordi de tusenvis av tegnene gjorde løse typer tungvinte."
+          "explain": "Bi Sheng laget typene rundt 1041. Blokktrykk forble vanligst i Kina, fordi skriften har tusenvis av tegn, og da er løse typer tungvinte. Et alfabet med få bokstaver passet langt bedre.",
+          "hint": "Landet var Øst-Asias største rike og hadde trykt med utskårne treblokker i flere hundre år."
         },
         {
-          "id": "tek-boktrykk-bibelen",
+          "id": "tek-boktrykk-billigere",
           "step": 2,
-          "type": "text",
-          "prompt": "Hvilken bok trykte Gutenberg først i stort opplag?",
-          "answer": "Bibelen",
-          "explain": "Gutenbergbibelen er i to bind og har til sammen 1282 sider. Den regnes som et av de store hovedverkene i europeisk boktrykk.",
-          "accept": [
-            "Gutenbergbibelen",
-            "Gutenbergbibel"
-          ]
+          "type": "choice",
+          "prompt": "En avskriver kunne bruke over et år på én bibel. Hvorfor ble bøkene så mye billigere med trykkpressen?",
+          "answer": "Én satt side kunne trykkes i mange like eksemplarer",
+          "distractors": [
+            "Kirken betalte for trykkingen av alle bøker",
+            "Papiret ble laget av billig tremasse",
+            "Bøkene ble skrevet på folkespråk i stedet for latin"
+          ],
+          "explain": "Det dyre var å sette sidene. Når typene først sto, kostet hvert nytt ark lite. Derfor lønte det seg med store opplag, og bøker ble en vare for et marked, ikke bare bestillingsverk for kirker og fyrster.",
+          "hint": "Tenk på hvor mye arbeid det var å lage kopi nummer to."
         },
         {
-          "id": "tek-boktrykk-trykkpressen",
+          "id": "tek-boktrykk-spredning",
           "step": 2,
-          "type": "text",
-          "prompt": "Hva kalles maskinen som presser papiret mot de satte typene?",
-          "answer": "Trykkpressen",
-          "explain": "Typene ble satt i en ramme, og pressen ga et jevnt trykk på hvert ark. Presse og typer hørte sammen i et system som kunne gjentas mange ganger.",
-          "accept": [
-            "Pressen"
-          ]
+          "type": "choice",
+          "prompt": "Gutenberg begynte i Mainz på 1450-tallet. Hvor langt hadde den nye teknikken spredt seg rundt 1500?",
+          "answer": "Det fantes trykkerier i flere hundre byer",
+          "distractors": [
+            "Den fantes fortsatt bare i Mainz",
+            "Den var begrenset til byene langs Rhinen",
+            "Kirken tillot den bare i klostrene"
+          ],
+          "explain": "Boktrykkerne fulgte handelsveiene og pengene, og Venezia, med sine rike kjøpmenn, ble et av de største trykkesentrene. Norden var sent ute: Norge fikk sitt første faste trykkeri i Christiania først i 1643.",
+          "hint": "Tenk på hvor raskt Luthers skrifter nådde ut over hele Europa noen tiår senere."
         },
         {
           "id": "tek-boktrykk-rekkefolge",
@@ -310,82 +346,100 @@
           "prompt": "Sett disse trykkehistoriske hendelsene i rekkefølge, eldst først.",
           "items": [
             {
-              "label": "Kina bruker skrifttyper av brent leire",
+              "label": "Kina tar i bruk løse typer av brent leire",
               "year": 1041
+            },
+            {
+              "label": "Korea trykker en bok med løse metalltyper",
+              "year": 1377
             },
             {
               "label": "Gutenbergbibelen trykkes",
               "year": 1455
             },
             {
-              "label": "Luther fremsetter 95 teser",
+              "label": "Luther setter fram 95 teser",
               "year": 1517
             }
           ],
-          "explain": "Mellom den kinesiske leirtypen og Gutenbergbibelen gikk det over 400 år. Kina brukte blokktrykk lenge, fordi tegnsystemet gjorde løse typer tungvinte."
+          "explain": "Det gikk over 400 år fra de kinesiske leirtypene til Gutenberg, og det er usikkert om den asiatiske teknikken nådde Europa. Etter Gutenberg gikk det bare to generasjoner før trykket forandret kirken.",
+          "hint": "Begge de asiatiske hendelsene kom før den første europeiske."
         },
         {
-          "id": "tek-boktrykk-forklar",
+          "id": "tek-boktrykk-alfabet",
           "step": 3,
           "type": "explain",
-          "prompt": "Forklar hvorfor løse typer var en fordel framfor en utskåret blokk for hver side.",
-          "answer": "Løse typer kan settes sammen til en ny tekst og brukes om igjen. En utskåret blokk måtte lages på nytt for hver side, og den kunne ikke brukes til noe annet.",
+          "prompt": "Forklar hvorfor løse typer forandret Europa mer enn Kina, der de var kjent flere hundre år tidligere.",
+          "answer": "Kinesisk skrift har tusenvis av tegn, så et sett med løse typer ble stort og tungvint, og blokktrykk forble vanligst. Et alfabet har noen titalls bokstaver som kan settes sammen til enhver tekst og brukes om igjen. I Europa kom typene sammen med pressen og billig papir, og det ga raske og store opplag.",
           "checklist": [
-            "Løse typer kan brukes om igjen",
-            "En blokk er bare til én side",
-            "Samme utstyr kan gi mange ulike bøker"
+            "Kinesisk skrift har tusenvis av tegn",
+            "Et alfabet har få bokstaver som kan brukes om igjen i alle tekster",
+            "Pressen og billig papir gjorde trykket raskt og billig"
           ],
-          "explain": "Når typene kunne brukes om igjen, ble kostnaden per tekst lavere. Det var en av grunnene til at boktrykk spredte seg raskt."
+          "explain": "Korea fikk et eget alfabet, hangul, på 1440-tallet, men bøkene ble fortsatt mest trykt med kinesiske tegn. Teknikken alene var altså ikke nok: skriftsystemet og markedet avgjorde.",
+          "hint": "Tenk på hvor mange tegn de to skriftsystemene har, og hva annet som fulgte med typene i Europa."
         },
         {
           "id": "tek-boktrykk-koble",
           "step": 3,
           "type": "match",
-          "prompt": "Koble trykkebegrepet til forklaringen.",
+          "prompt": "Koble området med hvordan boktrykket forandret det.",
           "pairs": [
             {
-              "left": "Gutenbergbibelen",
-              "right": "Stor trykt bok i to bind"
+              "left": "Reformasjonen",
+              "right": "Luthers skrifter spredt i store opplag"
             },
             {
-              "left": "Kina",
-              "right": "Skrifttyper i brent leire"
+              "left": "Vitenskapen",
+              "right": "Like kopier av tabeller og figurer"
             },
             {
-              "left": "Trykkpressen",
-              "right": "Presser papiret mot typene"
+              "left": "Skriftspråket",
+              "right": "Faste skrivemåter i trykte bøker"
             }
           ],
-          "explain": "Gutenbergbibelen, de kinesiske leirtypene og trykkpressen er tre ulike deler av samme utvikling."
+          "explain": "Før trykket kunne hver avskrift få nye feil. Med like eksemplarer kunne lesere over hele Europa vise til den samme teksten.",
+          "hint": "Tenk på hvilket område som trengte at alle lesere så nøyaktig de samme tallene."
         },
         {
-          "id": "tek-boktrykk-aar-bibelen",
+          "id": "tek-boktrykk-venezia",
           "step": 4,
-          "type": "year",
-          "prompt": "Omtrent hvilket år ble Gutenbergbibelen trykket?",
-          "answer": "1455",
-          "explain": "Kildene gir 1455 eller 1456, så dateringen er omtrentlig. Opplaget var omtrent 200 eksemplarer, og boken er i to bind.",
-          "tolerance": 1
+          "type": "choice",
+          "prompt": "Rundt 1500 var Venezia en av Europas største trykkebyer. Hvorfor nettopp der?",
+          "answer": "Byen hadde rike kjøpmenn og mange handelsveier",
+          "distractors": [
+            "Gutenberg flyttet verkstedet sitt dit fra Mainz",
+            "Paven samlet all trykking av bøker der",
+            "Byen hadde enerett på å trykke bibler"
+          ],
+          "explain": "En boktrykker måtte betale for papir, typer og arbeid lenge før bøkene ble solgt, og en rik handelsby hadde både investorer og kjøpere. Aldus Manutius trykket greske klassikere i Venezia og gjorde små bøker i lommeformat med kursiv skrift populære.",
+          "hint": "Tenk på hva en boktrykker trengte før det første eksemplaret var solgt."
         },
         {
-          "id": "tek-boktrykk-opplag",
+          "id": "tek-boktrykk-papir-vei",
           "step": 4,
-          "type": "number",
-          "prompt": "Hvor stort var omtrent opplaget av Gutenbergbibelen?",
-          "answer": "200",
-          "explain": "Mange bøker ble før skrevet av hånd, ett eksemplar om gangen. Med trykk kunne samme tekst lages i mange like eksemplarer.",
-          "unit": "eksemplarer",
-          "tolerance": 50
+          "type": "choice",
+          "prompt": "Hvilken vei kom papiret til Europa?",
+          "answer": "Fra Kina, gjennom den arabiske verden",
+          "distractors": [
+            "Fra Egypt, utviklet av papyrus",
+            "Fra Bysants, gjennom klostrene",
+            "Fra India, med portugisiske sjøfolk"
+          ],
+          "explain": "Papyrus er noe annet: plantestengler lagt i kryss og presset sammen, ikke fibre løst opp i vann. Papirmøller fantes i Bagdad fra slutten av 700-tallet, og i Spania og Italia fra 1100- og 1200-tallet.",
+          "hint": "Tenk på hvem som hadde kontakt både med Kina og med Spania i middelalderen."
         },
         {
-          "id": "tek-boktrykk-steder",
+          "id": "tek-boktrykk-mainz",
           "step": 4,
-          "type": "number",
-          "prompt": "Hvor mange steder i Europa fantes det trykkerier femti år etter Gutenbergs første trykk?",
-          "answer": "271",
-          "explain": "Trykkerier spredte seg raskt i Europa etter Gutenberg. Det viser hvor fort ny teknologi kan spre seg når den gjør kopiering billigere.",
-          "unit": "steder",
-          "tolerance": 0
+          "type": "text",
+          "prompt": "I hvilken by arbeidet Gutenberg?",
+          "answer": "Mainz",
+          "accept": [
+            "Mainz am Rhein"
+          ],
+          "explain": "Mainz var sete for en mektig erkebiskop og hadde både kapital og kunder til kostbare bøker. Derfra spredte boktrykkerne seg langs Rhinen og videre til Italia.",
+          "hint": "Byen ligger ved Rhinen, vest for Frankfurt."
         }
       ]
     },
@@ -403,14 +457,14 @@
       },
       "summary": "Dampmaskinen ble først brukt til å pumpe vann i gruver og ble senere grunnlaget for jernbanen, som knyttet landene sammen.",
       "lesson": [
-        "Den første praktisk brukbare dampmaskinen ble bygd av Thomas Newcomen i 1712, selv om noen kilder gir 1705. Den pumpet vann ut av gruver i England. Damp ble kondensert med vann, og lufttrykket presset stempelet ned. Maskinen var stor og lite effektiv.",
-        "James Watt gjorde dampmaskinen langt mer effektiv, og fikk patent på sin modell i 1769. Dampen kunne da drive fabrikker og lokomotiver. George Stephenson bygde lokomotivet Rocket, som vant prøvene ved Rainhill i 1829. Jernbanen mellom Liverpool og Manchester åpnet i 1830, og jernbanen fraktet varer raskere og tyngre enn hest og vogn.",
-        "Norges første jernbane var Hovedbanen mellom Christiania (Oslo) og Eidsvoll. Den åpnet 1. september 1854 og var omtrent 68 kilometer lang. Robert Stephenson, sønn av George, ledet byggingen. Banen ble først og fremst bygget for å frakte tømmer fra Mjøsområdet til sagbrukene rundt Christiania."
+        "Thomas Newcomen bygde den første praktisk brukbare dampmaskinen i 1712, selv om noen kilder gir 1705. Den pumpet vann ut av kullgruver i England. Damp ble kondensert med kaldt vann inne i sylinderen, og lufttrykket presset stempelet ned. Fordi sylinderen ble avkjølt hver gang, brukte maskinen svært mye kull.",
+        "James Watt fikk i 1769 patent på en maskin der dampen ble kjølt i et eget kammer. Sylinderen holdt seg varm, og maskinen brukte langt mindre kull. Watts maskiner kunne også drive hjul rundt, så fabrikker kunne ligge i byene, ikke bare ved elver og fosser. George Stephensons lokomotiv Rocket vant prøvene ved Rainhill i 1829, og banen Liverpool–Manchester åpnet i 1830.",
+        "Norges første jernbane, Hovedbanen mellom Christiania og Eidsvoll, åpnet 1. september 1854. Robert Stephenson, sønn av George, ledet byggingen. Banen skulle først og fremst frakte tømmer fra Mjøsområdet til sagbrukene rundt Christiania. Jernbanen krevde felles rutetider, og etter hvert ble klokkene stilt likt over hele landet."
       ],
       "keyPoints": [
-        "Newcomens maskin fra 1712 var den første praktisk brukbare dampmaskinen.",
-        "Watt gjorde dampmaskinen langt mer effektiv, og den kunne drive fabrikker og lokomotiver.",
-        "Rocket vant prøvene ved Rainhill i 1829, og jernbanen åpnet i 1830.",
+        "Newcomens dampmaskin (1712) pumpet vann ut av gruver.",
+        "Watt gjorde maskinen mye mer effektiv med et eget kjølekammer, og den kunne drive fabrikker.",
+        "Stephensons Rocket vant ved Rainhill i 1829, og den første store jernbanen åpnet i 1830.",
         "Norges første jernbane, Hovedbanen, åpnet i 1854 og fraktet først og fremst tømmer."
       ],
       "sources": [
@@ -443,20 +497,22 @@
             "Å trykke bøker på store presser",
             "Å spinne garn i hjemmet"
           ],
-          "explain": "Vannmøller og spinning var viktige før dampmaskinen. Watts forbedringer gjorde dampmaskinen egnet til fabrikker og lokomotiver."
+          "explain": "Gruvene ble stadig dypere, og vannet måtte pumpes ut. Kullet fantes jo i gruva, så det gjorde mindre at maskinen brukte mye brensel.",
+          "hint": "Tenk på hva som fylte de stadig dypere kullgruvene i England."
         },
         {
           "id": "tek-dampmaskin-jernbane-ingenior",
           "step": 1,
           "type": "choice",
-          "prompt": "Hvilken ingeniør stod bak lokomotivet som vant prøvene ved Rainhill?",
+          "prompt": "Hvilken engelsk ingeniør kalles jernbanens far og bygde lokomotivet Rocket?",
           "answer": "George Stephenson",
           "distractors": [
+            "Richard Trevithick",
             "Isambard Kingdom Brunel",
-            "Thomas Newcomen",
-            "Michael Faraday"
+            "James Watt"
           ],
-          "explain": "Rainhill-prøvene skulle finne den beste lokomotivtypen for banen mellom Liverpool og Manchester. Fem lokomotiver deltok, og Stephenson vant."
+          "explain": "Trevithick bygde det første damplokomotivet på skinner i 1804, men Stephensons Rocket vant prøvene ved Rainhill i 1829 og viste at jernbanen kunne bli lønnsom.",
+          "hint": "Sønnen hans ledet senere byggingen av Norges første jernbane."
         },
         {
           "id": "tek-dampmaskin-jernbane-norge",
@@ -469,7 +525,8 @@
             "Trondheim og Støren",
             "Drammen og Kongsberg"
           ],
-          "explain": "Hovedbanen gikk gjennom Lillestrøm og var først og fremst laget for å frakte tømmer fra Mjøsområdet."
+          "explain": "Hovedbanen gikk gjennom Lillestrøm og skulle frakte tømmer fra Mjøsområdet. Fra Eidsvoll gikk varer og folk videre med dampskip på Mjøsa.",
+          "hint": "Banen skulle frakte tømmer fra innlandet til sagbrukene i hovedstaden."
         },
         {
           "id": "tek-dampmaskin-jernbane-watt",
@@ -477,21 +534,37 @@
           "type": "text",
           "prompt": "Hvem fikk patent på en langt mer effektiv dampmaskin på 1700-tallet?",
           "answer": "James Watt",
-          "explain": "Watt kom etter Newcomen og gjorde dampmaskinen mer energiøkonomisk. Derfor kunne den drive fabrikker og lokomotiver, ikke bare pumper.",
+          "explain": "Watt gikk sammen med fabrikkeieren Matthew Boulton i Birmingham, og firmaet deres solgte maskiner til gruver og fabrikker over hele Storbritannia. Enheten for effekt, watt, er oppkalt etter ham.",
           "accept": [
             "Watt"
-          ]
+          ],
+          "hint": "Han var skotsk instrumentmaker ved universitetet i Glasgow."
         },
         {
-          "id": "tek-dampmaskin-jernbane-rocket",
+          "id": "tek-dampmaskin-jernbane-newcomen",
           "step": 2,
           "type": "text",
-          "prompt": "Hva het lokomotivet som vant prøvene ved Rainhill?",
-          "answer": "Rocket",
-          "explain": "Fem lokomotiver deltok i konkurransen. Rocket vant, og banen mellom Liverpool og Manchester åpnet året etter.",
+          "prompt": "Hvilken engelsk jernvarehandler bygde den første praktisk brukbare dampmaskinen i 1712?",
+          "answer": "Thomas Newcomen",
           "accept": [
-            "Rocket-lokomotivet"
-          ]
+            "Newcomen"
+          ],
+          "explain": "Maskinen hans var i bruk i over 50 år før Watt forbedret den, og hundrevis ble bygd ved gruver i Storbritannia og Europa. Watt fikk ideen til det separate kjølekammeret mens han reparerte en modell av Newcomens maskin.",
+          "hint": "Han kom fra Dartmouth i Devon og var baptistisk lekpredikant."
+        },
+        {
+          "id": "tek-dampmaskin-jernbane-watt-hvorfor",
+          "step": 3,
+          "type": "choice",
+          "prompt": "Hvorfor brukte Watts dampmaskin mye mindre kull enn Newcomens?",
+          "answer": "Dampen ble kjølt utenfor sylinderen",
+          "distractors": [
+            "Den brukte damp med mye høyere trykk",
+            "Den ble fyrt med koks i stedet for kull",
+            "Den hadde en mye større sylinder"
+          ],
+          "explain": "I Newcomens maskin ble sylinderen avkjølt og varmet opp igjen ved hvert slag, og det sløste varme. Høytrykksdamp tok andre i bruk senere, blant dem Trevithick.",
+          "hint": "Tenk på hva som skjedde med temperaturen inne i den eldre maskinen ved hvert slag."
         },
         {
           "id": "tek-dampmaskin-jernbane-rekkefolge",
@@ -516,7 +589,8 @@
               "year": 1854
             }
           ],
-          "explain": "Fra Newcomens maskin til Norges første jernbane gikk det 142 år. Dampen gikk fra å pumpe vann ut av gruver til å dra tog og vogner."
+          "explain": "Fra Newcomens maskin til Norges første jernbane gikk det 142 år. Dampen gikk fra å pumpe vann ut av gruver til å dra tog og vogner.",
+          "hint": "Watt forbedret en maskin som allerede var i bruk."
         },
         {
           "id": "tek-dampmaskin-jernbane-forklar",
@@ -529,64 +603,53 @@
             "Knytter råvarer til fabrikker",
             "Varer kommer raskere ut til markedet"
           ],
-          "explain": "Jernbanen gjorde det mulig å flytte råvarer inn til fabrikker og varer ut, uansett hvor fabrikken lå. Det var et viktig steg i industrialiseringen."
+          "explain": "Før jernbanen gikk tungt gods helst på kanaler, som var trege og frøs om vinteren. Jernbanen ble også selv en stor kunde: skinner, lokomotiver og bruer krevde enorme mengder jern og kull, og det drev industrien videre.",
+          "hint": "Tenk på mengde, fart og pris for frakt av kull, jern og tømmer."
         },
         {
           "id": "tek-dampmaskin-jernbane-koble",
           "step": 3,
           "type": "match",
-          "prompt": "Koble personen eller banen til det som passer.",
+          "prompt": "Koble nyvinningen med følgen den fikk.",
           "pairs": [
             {
-              "left": "Thomas Newcomen",
-              "right": "Pumpedampmaskin til gruver"
+              "left": "Watts dampmaskin i fabrikkene",
+              "right": "Fabrikker trengte ikke lenger ligge ved fosser"
             },
             {
-              "left": "James Watt",
-              "right": "Mer effektiv dampmaskin"
-            },
-            {
-              "left": "Rocket",
-              "right": "Vant prøvene ved Rainhill"
+              "left": "Jernbanen",
+              "right": "Felles klokkeslett over hele landet"
             },
             {
               "left": "Hovedbanen",
-              "right": "Oslo–Eidsvoll, åpnet 1854"
+              "right": "Tømmer fra Mjøsa til sagbrukene i Christiania"
             }
           ],
-          "explain": "Newcomen, Watt, Rocket og Hovedbanen henger sammen som ett utviklingsløp fra gruvepumping til jernbane."
+          "explain": "Før jernbanen hadde hver by sin egen tid etter Sola. Rutetabellene krevde felles tid, og i Norge ble felles normaltid innført i 1895.",
+          "hint": "Tenk på hva en rutetabell krever av klokkene på stasjonene."
         },
         {
-          "id": "tek-dampmaskin-jernbane-aar",
+          "id": "tek-dampmaskin-jernbane-hovedbanen-aar",
           "step": 4,
           "type": "year",
-          "prompt": "Hvilket år åpnet jernbanen mellom Liverpool og Manchester?",
-          "answer": "1830",
-          "explain": "Banen åpnet et år etter prøvene ved Rainhill. Jernbanen og dampskipene knyttet markedene sammen og gjorde transport billigere.",
-          "tolerance": 0
-        },
-        {
-          "id": "tek-dampmaskin-jernbane-lengde",
-          "step": 4,
-          "type": "number",
-          "prompt": "Omtrent hvor lang var Norges første jernbane, i kilometer?",
-          "answer": "68",
-          "explain": "Strekningen gikk gjennom Lillestrøm, og banen ble senere forlenget til Hamar. Den er i dag en del av Dovrebanen.",
-          "unit": "km",
-          "tolerance": 1
+          "prompt": "Hvilket år åpnet Hovedbanen, Norges første jernbane?",
+          "answer": "1854",
+          "explain": "Banen åpnet 1. september. Liverpool–Manchester-banen hadde da gått i 24 år. Norge kom sent med fordi landet hadde lite kapital, og fjell og fjorder gjorde jernbane dyr å bygge.",
+          "hint": "Det var 40 år etter at Grunnloven ble skrevet på stedet der banen endte."
         },
         {
           "id": "tek-dampmaskin-jernbane-robert",
           "step": 4,
           "type": "choice",
-          "prompt": "Hvem ledet byggingen av Hovedbanen, sønn av en av jernbanens pionerer?",
+          "prompt": "Hvilken britisk ingeniør ledet byggingen av Hovedbanen?",
           "answer": "Robert Stephenson",
           "distractors": [
-            "Thomas Newcomen",
+            "Joseph Locke",
             "Isambard Kingdom Brunel",
             "Richard Trevithick"
           ],
-          "explain": "Byggingen av Hovedbanen foregikk i 1851–1854 og ble finansiert med norsk og britisk kapital. Det var et britisk ingeniørprosjekt i Norge."
+          "explain": "Byggingen tok tre år, fra 1851 til 1854. Banen ble finansiert dels med britisk og dels med norsk kapital, og britiske ingeniører ledet arbeidet.",
+          "hint": "Han bygde jernbanebroen over Menaistredet i Wales like før arbeidet i Norge begynte."
         }
       ]
     },
@@ -602,17 +665,17 @@
         "from": 1837,
         "to": 1905
       },
-      "summary": "Elektrisiteten ga oss telegrafen og telefonen, og den ble senere brukt i industrien. Birkeland og Eyde ga Norge en av de tidligste store industrielle elektrisitetsmetodene.",
+      "summary": "Telegrafen og telefonen sendte beskjeder med elektrisitet, og Birkeland og Eyde brukte norsk vannkraft til å lage kunstgjødsel av luft.",
       "lesson": [
-        "Samuel Morse søkte patent på telegrafen i 1837, og det tok sju år før patentet ble godkjent. Morsekoden, med korte og lange signaler, ble utviklet i 1838. Den første meldingen mellom Washington og Baltimore gikk i 1844. I Norge fikk telegrafen sin start i 1855.",
-        "Alexander Graham Bell fikk patent på telefonen 7. mars 1876. Patentet ble utfordret i retten, men ble stadfestet av USAs høyesterett. Italieneren Antonio Meucci hadde bygd en enkel telefon før, men han hadde ikke råd til å søke patent. I 2002 ga den amerikanske representantkammeret ham symbolsk anerkjennelse.",
-        "Kristian Birkeland og Sam Eyde utviklet en metode for å lage salpetersyre og kunstgjødsel fra luftens nitrogen, ved hjelp av elektrisk kraft. Metoden ble grunnlaget for Norsk Hydro, stiftet i 1905. På 1920-tallet gikk selskapet over til Haber–Bosch-metoden."
+        "Samuel Morse søkte patent på en elektrisk telegraf i 1837. Koden med korte og lange signaler, morsealfabetet, laget han sammen med Alfred Vail. I 1844 gikk den første meldingen mellom Washington og Baltimore. For første gang kunne en beskjed reise raskere enn et menneske, en hest eller et skip. Telegrafen kom til Norge i 1855.",
+        "Alexander Graham Bell fikk patent på telefonen 7. mars 1876. Telefonen sendte selve stemmen som elektriske svingninger og trengte ingen telegrafist. Patentet ble angrepet i retten, men USAs høyesterett lot det stå. Italieneren Antonio Meucci hadde laget en tidlig telefon i New York, men fikk aldri patent.",
+        "Rundt 1900 trengte verdens åkre mer nitrogen enn salpeteret fra Chile kunne gi. Fysikeren Kristian Birkeland og industribyggeren Sam Eyde laget salpetersyre av luftens nitrogen med en elektrisk lysbue. Metoden krevde enorme mengder strøm, og Norge hadde billig vannkraft. Norsk Hydro ble stiftet i 1905. På slutten av 1920-tallet gikk selskapet over til Haber–Bosch-metoden, som lager ammoniakk av nitrogen og hydrogen og bruker langt mindre strøm."
       ],
       "keyPoints": [
         "Morse søkte patent på telegrafen i 1837, og den første meldingen gikk i 1844.",
-        "Bell fikk patent på telefonen i 1876. Meucci er også regnet som en pioner.",
-        "Birkeland og Eyde utviklet en metode for å lage kunstgjødsel av luftens nitrogen.",
-        "Norsk Hydro ble stiftet i 1905 på grunnlag av denne metoden."
+        "Bell fikk patent på telefonen i 1876, men flere arbeidet med det samme, blant dem Meucci.",
+        "Birkeland og Eyde laget kunstgjødsel av luftens nitrogen ved hjelp av elektrisk kraft.",
+        "Norsk Hydro ble stiftet i 1905 fordi metoden krevde mye strøm og Norge hadde billig vannkraft."
       ],
       "sources": [
         {
@@ -641,63 +704,68 @@
           "id": "tek-elektrisitet-telegraf-hydro",
           "step": 1,
           "type": "choice",
-          "prompt": "Hvilket selskap ble stiftet på grunnlag av metoden til Birkeland og Eyde?",
+          "prompt": "Hvilket selskap ble grunnlagt for å lage kunstgjødsel av luftens nitrogen med billig norsk vannkraft?",
           "answer": "Norsk Hydro",
           "distractors": [
             "Tandbergs Radiofabrikk",
             "Telegrafverket",
             "Kongsberg Våpenfabrikk"
           ],
-          "explain": "Selskapet vokste raskt og bygde opp en stor produksjon av kunstgjødsel. Det var et av de første store industrieventyrene i Norge."
+          "explain": "Rjukan og Notodden vokste fram rundt fabrikkene og kraftverkene. Norsk Hydro ble et av Norges største industriselskaper.",
+          "hint": "Selskapet ble stiftet samme år som unionen med Sverige ble oppløst."
         },
         {
           "id": "tek-elektrisitet-telegraf-morse",
           "step": 1,
           "type": "choice",
-          "prompt": "Hvem sendte den første telegrafmeldingen mellom Washington og Baltimore?",
+          "prompt": "Hvilken amerikaner fikk den elektriske telegrafen til å slå gjennom, med den første lange linjen i 1844?",
           "answer": "Samuel Morse",
           "distractors": [
             "Werner von Siemens",
             "Thomas Edison",
             "Guglielmo Marconi"
           ],
-          "explain": "Morse er mest kjent for telegrafen og morsekoden. Telegrafen var et av de første elektriske kommunikasjonssystemene som ble tatt i bruk på stor skala."
+          "explain": "Koden av korte og lange signaler, morsealfabetet, bærer navnet hans, men han laget den sammen med Alfred Vail. Telegrafen var et av de første elektriske kommunikasjonssystemene som ble tatt i bruk i stor skala.",
+          "hint": "Han var portrettmaler og professor i kunst før han ble oppfinner."
         },
         {
           "id": "tek-elektrisitet-telegraf-bell",
           "step": 1,
           "type": "choice",
-          "prompt": "Hvem fikk patent på telefonen?",
+          "prompt": "Hvem fikk patent på telefonen i 1876?",
           "answer": "Alexander Graham Bell",
           "distractors": [
             "Thomas Edison",
-            "Nikola Tesla",
-            "Werner von Siemens"
+            "Elisha Gray",
+            "Nikola Tesla"
           ],
-          "explain": "Bells patent ble angrepet i retten, men ble stadfestet av USAs høyesterett. Flere andre pionerer har senere fått sin del av æren."
+          "explain": "Elisha Gray leverte inn et patentvarsel for en telefon samme dag som Bell søkte. Striden om hvem som var først, endte i Bells favør i USAs høyesterett.",
+          "hint": "Han var født i Skottland og arbeidet med undervisning av døve."
         },
         {
-          "id": "tek-elektrisitet-telegraf-morsekode",
+          "id": "tek-elektrisitet-telegraf-eyde",
           "step": 2,
           "type": "text",
-          "prompt": "Hva kalles alfabetet av korte og lange signaler som ble brukt på telegrafen?",
-          "answer": "Morsealfabetet",
-          "explain": "Koden ble utviklet i 1838, før telegrafen ble tatt i bruk. Bokstaver og tall ble oversatt til korte og lange signaler.",
+          "prompt": "Hvilken norsk ingeniør og industribygger kjøpte opp fossefall og grunnla Norsk Hydro i 1905?",
+          "answer": "Sam Eyde",
           "accept": [
-            "Morsekode",
-            "Morse"
-          ]
+            "Eyde",
+            "Samuel Eyde"
+          ],
+          "explain": "Birkeland sto for fysikken, Eyde for kapitalen og industrien. Med svensk og fransk kapital bygde han kraftverk og fabrikker på Notodden og Rjukan, og byene vokste fram rundt dem.",
+          "hint": "Han var fra Arendal og hadde utdannet seg som ingeniør i Tyskland."
         },
         {
-          "id": "tek-elektrisitet-telegraf-meucci",
+          "id": "tek-elektrisitet-telegraf-birkeland",
           "step": 2,
           "type": "text",
-          "prompt": "Hvilken italiensk oppfinner bygde en enkel telefon før Bell, men hadde ikke råd til å søke patent?",
-          "answer": "Antonio Meucci",
-          "explain": "Meucci fikk ikke midler til å søke patent. I 2002 ga USAs representantkammer ham symbolsk anerkjennelse som telefonens oppfinner.",
+          "prompt": "Hvilken norsk fysiker, kjent for forskningen på nordlyset, fant metoden Norsk Hydro bygde på?",
+          "answer": "Kristian Birkeland",
           "accept": [
-            "Meucci"
-          ]
+            "Birkeland"
+          ],
+          "explain": "Birkeland forklarte nordlyset med ladde partikler fra Sola. Han var avbildet på den forrige 200-kroneseddelen.",
+          "hint": "Lysbuen fant han ved et uhell, da en elektromagnetisk kanon han hadde bygd, kortsluttet."
         },
         {
           "id": "tek-elektrisitet-telegraf-rekkefolge",
@@ -722,64 +790,77 @@
               "year": 1905
             }
           ],
-          "explain": "Bare 32 år etter den første telegrafmeldingen ble telefonen patentert. Norsk Hydro kom 29 år senere, og viser hvor raskt elektrisitet ble tatt i bruk i industrien."
+          "explain": "Telegrafen krevde en telegrafist som kunne koden, mens telefonen kunne brukes av hvem som helst. Med Norsk Hydro ble elektrisiteten brukt i tungindustri, ikke bare til beskjeder.",
+          "hint": "Telegrafen var i bruk i flere tiår før telefonen kom."
         },
         {
           "id": "tek-elektrisitet-telegraf-forklar",
           "step": 3,
           "type": "explain",
           "prompt": "Forklar hvorfor telegrafen betydde så mye for handel og styring.",
-          "answer": "Før telegrafen måtte meldinger bæres fysisk fra sted til sted. Med telegrafen kunne beskjeder sendes over store avstander på kort tid, og det ga nye muligheter for handel og styring.",
+          "answer": "Før telegrafen gikk en beskjed ikke raskere enn et bud, et tog eller et skip. Med telegrafen kom den fram på minutter. Kjøpmenn kunne følge prisene på fjerne markeder og sende ordre samme dag, og regjeringer, hærer og jernbaner kunne styres fra ett sted.",
           "checklist": [
-            "Meldinger ble sendt over store avstander",
-            "Tiden mellom beslutning og svar ble kortere",
-            "Handel og styring kunne skje over flere steder"
+            "Før gikk beskjeder bare så fort som et bud eller et skip",
+            "Med telegrafen kom svaret på minutter i stedet for dager",
+            "Kjøpmenn kunne følge priser og sende ordre samme dag",
+            "Stat, hær og jernbane kunne styres fra ett sted"
           ],
-          "explain": "Telegrafen var ikke bare en raskere post. Den gjorde at informasjon kunne flytte seg raskere enn folk og varer."
+          "explain": "Telegraflinjene ble ofte strukket langs jernbanen, og stasjonene brukte dem til å melde fra om togene. Med kabelen over Atlanterhavet fra 1866 kunne priser og nyheter gå mellom Europa og Amerika samme dag.",
+          "hint": "Tenk på tiden en beskjed brukte før og etter, og hva det betydde for priser og ordre."
         },
         {
           "id": "tek-elektrisitet-telegraf-koble",
           "step": 3,
           "type": "match",
-          "prompt": "Koble personen til det han er kjent for.",
+          "prompt": "Koble teknologien med hvordan den virker.",
           "pairs": [
             {
-              "left": "Samuel Morse",
-              "right": "Telegrafen og morsekoden"
+              "left": "Telegrafen",
+              "right": "Koder av korte og lange strømstøt"
             },
             {
-              "left": "Alexander Graham Bell",
-              "right": "Patent på telefonen"
+              "left": "Telefonen",
+              "right": "Stemmen som elektriske svingninger"
             },
             {
-              "left": "Kristian Birkeland",
-              "right": "Metoden for kunstgjødsel av luftens nitrogen"
+              "left": "Birkeland–Eyde-metoden",
+              "right": "Luft og elektrisk lysbue gir salpetersyre"
             },
             {
-              "left": "Sam Eyde",
-              "right": "Forretningsmannen bak Norsk Hydro"
+              "left": "Haber–Bosch-metoden",
+              "right": "Nitrogen og hydrogen gir ammoniakk"
             }
           ],
-          "explain": "Morse, Bell, Birkeland og Eyde har alle bidratt til elektrisk kommunikasjon eller industri. Metodene deres kom fra ulike områder, men bygget på elektrisitet."
+          "explain": "Alle fire bygger på elektrisitet eller kjemi som var ny på 1800-tallet. Lysbuen brukte langt mer strøm enn Haber–Bosch-metoden, og derfor ble den til slutt for dyr.",
+          "hint": "Lyn binder nitrogen i naturen, og én av metodene etterligner dem."
         },
         {
-          "id": "tek-elektrisitet-telegraf-norge",
-          "step": 4,
-          "type": "year",
-          "prompt": "Hvilket år fikk Norge sin første telegrafvirksomhet?",
-          "answer": "1855",
-          "explain": "Telegrafen i Norge ble etablert i 1855, to år før Norges første jernbane åpnet. Senere ble det statlige Telegrafverket etablert.",
-          "tolerance": 0
+          "id": "tek-elektrisitet-telegraf-gjodsel-hvorfor",
+          "step": 3,
+          "type": "choice",
+          "prompt": "Hvorfor ble Birkeland og Eydes metode grunnlaget for en stor norsk industri?",
+          "answer": "Den krevde mye strøm, og Norge hadde billig vannkraft",
+          "distractors": [
+            "Norge hadde store forekomster av salpeter",
+            "Lufta i Norge inneholder mer nitrogen",
+            "Norske bønder trengte mer gjødsel enn andre"
+          ],
+          "explain": "Lufta er omtrent 78 prosent nitrogen overalt, så råstoffet var gratis. Det dyre var strømmen, og Norge hadde fossefall som kunne bygges ut billig.",
+          "hint": "Tenk på hva det kostet å holde en elektrisk lysbue i gang døgnet rundt."
         },
         {
-          "id": "tek-elektrisitet-telegraf-aar",
+          "id": "tek-elektrisitet-telegraf-patentstrid",
           "step": 4,
-          "type": "number",
-          "prompt": "Hvor mange år gikk det fra Morses patentsøknad til den første telegrafmeldingen?",
-          "answer": "7",
-          "explain": "Morse søkte patent i 1837, og den første meldingen gikk i 1844. Det tok altså omtrent sju år før telegrafen var klar til bruk.",
-          "unit": "år",
-          "tolerance": 0
+          "type": "choice",
+          "prompt": "Bells patent på telefonen ble angrepet i retten mange ganger. Hva var grunnen?",
+          "answer": "Flere andre hadde arbeidet med telefoner samtidig",
+          "distractors": [
+            "Telefonen var allerede i vanlig bruk i Europa",
+            "Edison hadde vist fram en telefon året før",
+            "Staten ville eie alle telefonlinjene selv"
+          ],
+          "explain": "Italieneren Antonio Meucci hadde laget en tidlig telefon i New York, men hadde ikke råd til å fornye patentvarselet sitt. Slik går det ofte med oppfinnelser: flere er på sporet samtidig, og patentet avgjør hvem som får æren.",
+          "hint": "Tenk på italieneren i New York som aldri fikk patent."
         },
         {
           "id": "tek-elektrisitet-telegraf-haber",
@@ -792,7 +873,8 @@
             "Solvay-metoden",
             "Leblanc-metoden"
           ],
-          "explain": "Metoden ble brukt til å lage ammoniakk til kunstgjødsel, og den var den Norsk Hydro gikk over til. De andre alternativene er kjemiske prosesser fra samme tid, men ikke den som ble brukt i Norge."
+          "explain": "Haber–Bosch lager ammoniakk av nitrogen og hydrogen og trenger langt mindre strøm enn lysbuen. Bessemer-metoden lager stål, og Solvay- og Leblanc-metoden lager soda.",
+          "hint": "Den er oppkalt etter to tyske kjemikere og lager fortsatt nesten all kunstgjødsel."
         }
       ]
     },
@@ -808,17 +890,18 @@
         "from": 1886,
         "to": 1933
       },
-      "summary": "Motorer, fly og radio gjorde det mulig å bevege seg og kommunisere raskere enn før. Mange av de første «først»-påstandene er omstridte.",
+      "summary": "Forbrenningsmotoren ga oss bilen og flyet, og radioen sendte signaler uten ledning. Mange av de første «først»-påstandene er omstridte.",
       "lesson": [
-        "Karl Benz bygde i 1886 en av de første bilene med forbrenningsmotor. Motoren hadde elektrisk tenning og vannkjøling, og bilen kom opp i omtrent tre kilometer i timen. Kildene er ikke enige om de første forsøkene: både 1883 og 1886 nevnes. Gottlieb Daimler arbeidet samtidig med motorer.",
-        "Brødrene Wilbur og Orville Wright gjennomførte de første kontrollerte flygningene med et motordrevet fly 17. desember 1903 ved Kitty Hawk i USA. Flyet hadde en motor på 8,8 kilowatt. Orville fløy først, over 36 meter på 12 sekunder. Andre, blant annet Gustave Whitehead, har hevdet å ha vært tidligere ute.",
-        "Guglielmo Marconi sendte radiosignaler over Atlanterhavet. I 1914 fløy Tryggve Gran over Nordsjøen fra Cruden Bay i Skottland til Revtangen på Jæren. Flyet var en Blériot XI. I 1933 startet Vebjørn Tandberg en radiofabrikk i Oslo."
+        "I en forbrenningsmotor brenner drivstoffet inne i sylinderen, ikke under en kjele som i dampmaskinen. Motoren kunne derfor bli liten og lett. Karl Benz fikk i 1886 patent på en motorvogn med bensinmotor, og Gottlieb Daimler bygde en samme år. Henry Ford gjorde bilen til allemannseie: fra 1913 ble Model T satt sammen på samlebånd av like deler, og prisen falt kraftig.",
+        "Brødrene Wilbur og Orville Wright gjennomførte de første kontrollerte flygningene med motorfly 17. desember 1903 ved Kitty Hawk i USA. Den første turen varte 12 sekunder. Flyet hadde en lett bensinmotor, men like viktig var at det kunne styres i luften. Andre har hevdet å være tidligere ute, uten at det er godt dokumentert. I 1914 fløy Tryggve Gran som første over Nordsjøen.",
+        "Guglielmo Marconi sendte i 1901 trådløse signaler over Atlanterhavet med elektromagnetiske bølger. Radioen ble først brukt til morsesignaler mellom skip og land. På 1920-tallet kom kringkasting av tale og musikk. I Norge ble NRK opprettet i 1933, samme år som Vebjørn Tandberg startet radiofabrikken sin i Oslo."
       ],
       "keyPoints": [
-        "Benz bygde en bil med forbrenningsmotor i 1886. Kildene er ikke helt enige om datoene.",
-        "Wright-brødrene fløy det første kontrollerte motorflyet i 1903.",
-        "Marconi sendte radiosignaler over Atlanterhavet, og Tryggve Gran var først over Nordsjøen i 1914.",
-        "Tandbergs Radiofabrikk ble startet i Oslo i 1933."
+        "I forbrenningsmotoren brenner drivstoffet inne i motoren, så den kan bli liten og lett.",
+        "Benz fikk patent på en bil med bensinmotor i 1886, og Ford gjorde bilen billig med samlebåndet fra 1913.",
+        "Wright-brødrene gjennomførte de første kontrollerte motorflygningene i 1903.",
+        "Marconi sendte radiosignaler over Atlanterhavet i 1901.",
+        "Tryggve Gran fløy som første over Nordsjøen i 1914."
       ],
       "sources": [
         {
@@ -851,27 +934,29 @@
           "id": "tek-fly-bil-radio-benz",
           "step": 1,
           "type": "choice",
-          "prompt": "Hvilken tysk ingeniør bygde en av de første bilene med forbrenningsmotor?",
+          "prompt": "Hvilken tysk ingeniør fikk i 1886 patent på en motorvogn med bensinmotor, ofte regnet som den første bilen?",
           "answer": "Karl Benz",
           "distractors": [
             "Rudolf Diesel",
             "Nikolaus Otto",
             "Ferdinand Porsche"
           ],
-          "explain": "Benz tegnet bilen med tre hjul fra grunnen av. Daimler monterte en motor på en hestevogn. Kildene gir 1883 som et første forsøksår for begge."
+          "explain": "Patentet fra januar 1886 kalles ofte bilens fødselsattest. Gottlieb Daimler bygde en motorvogn samme år, uavhengig av Benz.",
+          "hint": "Han arbeidet i Mannheim, og en annen tysk ingeniør bygde en motorvogn samme år uten å kjenne til ham."
         },
         {
           "id": "tek-fly-bil-radio-motor",
           "step": 1,
           "type": "choice",
-          "prompt": "Hva kalles en motor der drivstoffet brenner inne i selve motoren?",
-          "answer": "Forbrenningsmotor",
+          "prompt": "Hva er hovedforskjellen mellom en bensinmotor og en dampmaskin?",
+          "answer": "Drivstoffet brenner inne i selve motoren",
           "distractors": [
-            "Dampmaskin",
-            "Vannturbin",
-            "Vindmølle"
+            "Den har ingen stempler som går fram og tilbake",
+            "Den drives av strøm fra et batteri",
+            "Den bruker damp med høyere trykk"
           ],
-          "explain": "En dampmaskin brenner drivstoffet utenfor selve maskinen og bruker damp til å drive stempelet. Forbrenningsmotoren fungerer på et annet prinsipp."
+          "explain": "I dampmaskinen brenner brenselet under en kjele, og dampen driver stempelet. Begge maskinene har stempler i sylindre. Uten kjele ble forbrenningsmotoren så lett at den kunne drive biler og fly.",
+          "hint": "Tenk på hvor ilden er i de to maskinene."
         },
         {
           "id": "tek-fly-bil-radio-wright",
@@ -884,7 +969,8 @@
             "Lumière-brødrene",
             "Dodge-brødrene"
           ],
-          "explain": "Montgolfier-brødrene var pionerer innen ballongflyging, og Lumière-brødrene innen film. Ingen av dem fløy et motordrevet fly."
+          "explain": "Montgolfier-brødrene var pionerer innen ballongflyging, og Lumière-brødrene innen film. Ingen av dem fløy et motordrevet fly.",
+          "hint": "De drev en sykkelforretning i Ohio."
         },
         {
           "id": "tek-fly-bil-radio-marconi",
@@ -895,18 +981,34 @@
           "explain": "Radiotelegrafi bruker elektromagnetiske bølger i stedet for ledninger. Det gjorde det mulig å sende meldinger til skip og over havet uten kabel.",
           "accept": [
             "Guglielmo Marconi"
-          ]
+          ],
+          "hint": "Han fikk Nobelprisen i fysikk i 1909 for trådløs telegrafi."
         },
         {
-          "id": "tek-fly-bil-radio-revtangen",
+          "id": "tek-fly-bil-radio-ford",
           "step": 2,
           "type": "text",
-          "prompt": "Hvilket sted på Jæren landet Tryggve Gran etter flygningen over Nordsjøen?",
-          "answer": "Revtangen",
-          "explain": "Gran startet fra Cruden Bay i Skottland, i svært dårlig vær. Flygningen ble overskygget av første verdenskrig, som brøt ut to dager senere.",
+          "prompt": "Hvilken amerikansk industrimann gjorde bilen til allemannseie med Model T?",
+          "answer": "Henry Ford",
           "accept": [
-            "Revtangen på Jæren"
-          ]
+            "Ford"
+          ],
+          "explain": "Model T kom i 1908 og ble laget til 1927, i over 15 millioner eksemplarer. USA ble det første landet der vanlige familier eide bil, og byer og veier ble bygd om etter bilen.",
+          "hint": "Han hadde fabrikken sin i Detroit."
+        },
+        {
+          "id": "tek-fly-bil-radio-radiotelegrafi",
+          "step": 2,
+          "type": "choice",
+          "prompt": "Hva ble radioen mest brukt til før kringkastingen begynte på 1920-tallet?",
+          "answer": "Morsesignaler mellom skip og land",
+          "distractors": [
+            "Telefonsamtaler mellom byene",
+            "Overføring av fotografier til aviser",
+            "Fjernstyring av fyr og signaler"
+          ],
+          "explain": "For skipene var det første gang de kunne nå land fra åpent hav. Da Titanic sank i 1912, fikk radiotelegrafistene skipet Carpathia til å komme, og etterpå ble det krav om radiovakt døgnet rundt på passasjerskip.",
+          "hint": "Marconis første kunder var rederier og marinen."
         },
         {
           "id": "tek-fly-bil-radio-rekkefolge",
@@ -915,89 +1017,64 @@
           "prompt": "Sett bilens, flyets og radioens milepæler i riktig rekkefølge, eldst først.",
           "items": [
             {
-              "label": "Carl Benz' bil med forbrenningsmotor",
+              "label": "Karl Benz får patent på en bil med bensinmotor",
               "year": 1886
+            },
+            {
+              "label": "Marconi sender signaler over Atlanterhavet",
+              "year": 1901
             },
             {
               "label": "Wright-brødrenes flygning ved Kitty Hawk",
               "year": 1903
             },
             {
-              "label": "Tandbergs Radiofabrikk stiftes i Oslo",
-              "year": 1933
+              "label": "Ford tar i bruk samlebåndet",
+              "year": 1913
             }
           ],
-          "explain": "Fra den første bilen til Tandbergs radiofabrikk gikk det 47 år. Begge gjennombruddene bygde på elektrisitet og maskinteknikk som ble utviklet på 1800-tallet."
+          "explain": "På under 30 år kom bilen, flyet og radioen. Alle bygde på motorer, elektrisitet og metallarbeid fra 1800-tallet.",
+          "hint": "Bilpatentet kom før århundreskiftet, de tre andre etter."
         },
         {
           "id": "tek-fly-bil-radio-forklar",
           "step": 3,
           "type": "explain",
-          "prompt": "Forklar hvorfor en lett motor med høy effekt var avgjørende for det første motorflyet.",
-          "answer": "Et motorfly må løfte både seg selv, motoren og drivstoffet. Flyer 1 hadde en motor på 8,8 kilowatt som drev to propeller, og konstruksjonen måtte være lett nok til å løftes.",
+          "prompt": "Forklar hvorfor motorflyet kom først etter at bensinmotoren var utviklet.",
+          "answer": "Et fly må løfte seg selv, motoren og drivstoffet. Dampmaskiner var for tunge i forhold til kraften de ga, mens bensinmotoren ga mye kraft for lite vekt. Wright-brødrene trengte i tillegg et fly som kunne styres og holdes stabilt i luften.",
           "checklist": [
-            "Flyet må løfte både seg selv og motoren",
-            "Motoren må gi nok effekt i forhold til vekten",
-            "Drivstoffet må også bæres i luften"
+            "Dampmaskinen var for tung i forhold til kraften",
+            "Bensinmotoren ga mye kraft for lite vekt",
+            "Flyet måtte også kunne styres og holdes stabilt"
           ],
-          "explain": "Den lette motoren var ikke den eneste utfordringen. Brødrene måtte også få flyet til å holde seg stabilt og kontrollerbart i luften."
+          "explain": "Wright-brødrene laget motoren selv, fordi ingen fantes som var lett nok. De testet også vingeformer i en hjemmelaget vindtunnel.",
+          "hint": "Tenk på vekt i forhold til kraft, og på hva som skal til for å styre i luften."
         },
         {
-          "id": "tek-fly-bil-radio-koble",
+          "id": "tek-fly-bil-radio-ford-hvorfor",
           "step": 3,
-          "type": "match",
-          "prompt": "Koble pioneren til det vedkommende er kjent for innen fly, bil og radio.",
-          "pairs": [
-            {
-              "left": "Karl Benz",
-              "right": "Bil med forbrenningsmotor, 1886"
-            },
-            {
-              "left": "Wright-brødrene",
-              "right": "Første kontrollerte motorfly"
-            },
-            {
-              "left": "Guglielmo Marconi",
-              "right": "Radiosignaler over Atlanterhavet"
-            },
-            {
-              "left": "Vebjørn Tandberg",
-              "right": "Radiofabrikk i Oslo"
-            }
-          ],
-          "explain": "Benz, Wright, Marconi og Tandberg er alle eksempler på pionerer innen transport og radio. Hver av dem bygde på tidligere oppfinnelser."
-        },
-        {
-          "id": "tek-fly-bil-radio-gran",
-          "step": 4,
-          "type": "year",
-          "prompt": "Hvilket år fløy Tryggve Gran over Nordsjøen?",
-          "answer": "1914",
-          "explain": "Gran fløy over Nordsjøen to dager før første verdenskrig brøt ut. Flygningen var den lengste over åpent hav på den tiden.",
-          "tolerance": 0
-        },
-        {
-          "id": "tek-fly-bil-radio-timer",
-          "step": 4,
-          "type": "number",
-          "prompt": "Hvor mange hele timer tok flygningen over Nordsjøen?",
-          "answer": "4",
-          "explain": "Flygningen tok 4 timer og 10 minutter, i svært dårlig vær. Den var en av de første store flyprestasjonene i Norge.",
-          "unit": "timer",
-          "tolerance": 0
-        },
-        {
-          "id": "tek-fly-bil-radio-blériot",
-          "step": 4,
           "type": "choice",
-          "prompt": "Hvilken flytype fløy Tryggve Gran over Nordsjøen?",
-          "answer": "Blériot XI",
+          "prompt": "Hvorfor kunne Ford selge Model T så billig?",
+          "answer": "Den ble satt sammen på samlebånd av like deler",
           "distractors": [
-            "Wright Flyer",
-            "Fokker Eindecker",
-            "Sopwith Camel"
+            "Staten betalte en del av prisen",
+            "Karosseriet var laget av tre",
+            "Arbeiderne fikk svært lav lønn"
           ],
-          "explain": "Gran kjøpte flyet fra Louis Blériot. Det het først «Ça Flotte», men fikk navnet «Nordsjøen» etter flygningen. I dag står det på Norsk Teknisk Museum i Oslo."
+          "explain": "Med samlebåndet gikk tiden det tok å sette sammen en bil, ned fra over tolv timer til rundt halvannen. Ford betalte tvert imot høy lønn, fem dollar dagen fra 1914, for å holde på arbeiderne.",
+          "hint": "Tenk på hvordan arbeidet ble delt opp i fabrikken."
+        },
+        {
+          "id": "tek-fly-bil-radio-tryggve-gran",
+          "step": 4,
+          "type": "text",
+          "prompt": "Hvilken nordmann fløy som første over Nordsjøen, fra Skottland til Jæren?",
+          "answer": "Tryggve Gran",
+          "accept": [
+            "Gran"
+          ],
+          "explain": "Gran hadde vært med på Robert Scotts sydpolekspedisjon og var med da de døde polfarerne ble funnet i 1912. Flygningen over Nordsjøen tok over fire timer, i tåke og dårlig vær.",
+          "hint": "Han hadde tidligere vært med på en britisk ekspedisjon til Antarktis."
         }
       ]
     },
@@ -1013,17 +1090,18 @@
         "from": 1945,
         "to": 1989
       },
-      "summary": "Elektroniske datamaskiner, transistoren, nettverk og mobiltelefonen er blant de viktigste teknologiene i det 20. århundre.",
+      "summary": "Elektronrør, transistoren og nett med datapakker førte fra de første regnemaskinene til internett, weben og mobiltelefonen.",
       "lesson": [
-        "ENIAC var en av de første store, helt elektroniske regnemaskinene. Den ble utviklet i USA fra 1943 for å regne ut skytetabeller under andre verdenskrig. Den veide omkring 27 tonn og hadde flere enn 17 000 elektronrør. Kildene er ikke enige om når den var klar, 1945 eller 1946. Det britiske Colossus regnes også som en tidlig elektronisk maskin.",
-        "Transistoren ble utviklet ved Bell Laboratories i 1947 av John Bardeen, William Shockley og Walter Brattain. Den kunne erstatte elektronrør, og kretsene ble mindre og brukte mindre strøm. NUSSE ble Norges første digitale datamaskin, med første byggetrinn ferdig i 1954.",
-        "ARPANET startet i 1969 med fire noder ved universiteter og forskningsinstitusjoner i vest i USA. Nettverket brukte pakkesvitsjing, der data deles i pakker som sendes hver for seg. Norge ble koblet til via NORSAR på Kjeller i 1973. Tim Berners-Lee foreslo World Wide Web ved CERN i 1989."
+        "ENIAC var en av de første store, helt elektroniske datamaskinene. Den ble bygd i USA fra 1943 for å regne ut skytetabeller for artilleriet, og sto ferdig i 1945 eller 1946. Den veide omkring 27 tonn og hadde over 17 000 elektronrør. Britenes Colossus, bygd for å knekke tyske koder, var enda tidligere. NUSSE ble Norges første datamaskin, ferdig i 1954.",
+        "Transistoren ble utviklet ved Bell Labs i 1947 av John Bardeen, William Shockley og Walter Brattain. Den gjorde samme jobb som elektronrøret, men var mye mindre og brukte langt mindre strøm. Senere ble tusenvis, og i dag milliarder, av transistorer samlet på én brikke. I 1981 åpnet NMT i Norden, et av verdens første automatiske mobiltelefonnett.",
+        "ARPANET startet i 1969 med fire maskiner i USA og ble forløperen til internett. Data ble delt i pakker som ble sendt hver for seg. Da kunne mange maskiner dele de samme linjene, og pakkene kunne ta en annen vei hvis en linje falt ut. Norge ble koblet til via NORSAR på Kjeller i 1973, som første land utenfor USA. I 1989 foreslo Tim Berners-Lee ved CERN World Wide Web: lenkede sider som bruker internett."
       ],
       "keyPoints": [
-        "ENIAC var en tidlig elektronisk datamaskin, utviklet i USA under andre verdenskrig.",
-        "Transistoren fra 1947 gjorde elektronikken mindre og mer strømsparende.",
-        "ARPANET var forløperen til internett, og Norge ble koblet til i 1973.",
-        "NMT-nettet åpnet i Norge i 1981, og var et av de første automatiske mobiltelefonnettene."
+        "ENIAC var en tidlig elektronisk datamaskin med elektronrør, bygd i USA under andre verdenskrig.",
+        "Transistoren fra 1947 gjorde elektronikken liten og strømsparende.",
+        "ARPANET (1969) var forløperen til internett, og Norge ble koblet til i 1973.",
+        "World Wide Web, foreslått av Tim Berners-Lee i 1989, er en tjeneste som bruker internett.",
+        "NMT-nettet åpnet i Norden i 1981 og var et av de første automatiske mobilnettene."
       ],
       "sources": [
         {
@@ -1057,65 +1135,87 @@
       ],
       "cards": [
         {
-          "id": "tek-datamaskin-internett-usa",
+          "id": "tek-datamaskin-internett-eniac-formal",
           "step": 1,
           "type": "choice",
-          "prompt": "I hvilket land ble ENIAC utviklet?",
-          "answer": "USA",
+          "prompt": "De første elektroniske datamaskinene ble bygd under andre verdenskrig. Hva skulle de brukes til?",
+          "answer": "Skytetabeller for artilleriet og knekking av koder",
           "distractors": [
-            "Storbritannia",
-            "Tyskland",
-            "Sovjetunionen"
+            "Regnskap og lønn for de store bankene",
+            "Folketellinger og skatteligninger for staten",
+            "Styring av telefonsentraler i storbyene"
           ],
-          "explain": "ENIAC ble utviklet ved University of Pennsylvania. Den var en av de første store, helt elektroniske maskinene."
+          "explain": "ENIAC regnet ut skytetabeller for det amerikanske artilleriet, og britenes Colossus knekket tyske koder. Folketellinger ble gjort med hullkortmaskiner allerede fra 1890.",
+          "hint": "Tenk på hva hærene og etterretningen trengte å få regnet ut raskt."
         },
         {
           "id": "tek-datamaskin-internett-ror",
           "step": 1,
           "type": "choice",
-          "prompt": "Hva kalles komponentene ENIAC brukte til å bytte signaler?",
+          "prompt": "Hvilke komponenter gjorde regnearbeidet i ENIAC?",
           "answer": "Elektronrør",
           "distractors": [
-            "Vakuumpumper",
-            "Kjøleribber",
-            "Stålkabler"
+            "Transistorer",
+            "Mikrobrikker",
+            "Releer"
           ],
-          "explain": "ENIAC hadde flere enn 17 000 elektronrør. Transistoren kom senere og kunne gjøre de samme oppgavene med mindre plass og strøm."
+          "explain": "Rørene ble varme og gikk ofte i stykker, så maskinen var vanskelig å holde i gang. Transistoren kom først i 1947 og mikrobrikken enda senere.",
+          "hint": "Komponentene lignet glødelamper og ble svært varme."
         },
         {
-          "id": "tek-datamaskin-internett-arpanet",
+          "id": "tek-datamaskin-internett-arpanet-hva",
           "step": 1,
           "type": "choice",
-          "prompt": "Hvilket land ble først koblet til ARPANET utenfor USA?",
-          "answer": "Norge",
+          "prompt": "ARPANET startet i USA i 1969 med fire maskiner. Hva ble det til?",
+          "answer": "Forløperen til internett",
           "distractors": [
-            "Storbritannia",
-            "Sverige",
-            "Frankrike"
+            "Det første mobiltelefonnettet",
+            "Den første utgaven av World Wide Web",
+            "Et nett av militære radarstasjoner"
           ],
-          "explain": "Koblingen skjedde via NORSAR på Kjeller i 1973. Det var den første internasjonale forbindelsen til ARPANET."
+          "explain": "Nettet ble betalt av det amerikanske forsvarsdepartementet og bandt sammen universiteter og forskningssentre. Fra 1983 brukte det protokollen TCP/IP, som internett fortsatt bygger på.",
+          "hint": "Nettet bandt sammen datamaskiner ved universiteter og forskningssentre."
         },
         {
-          "id": "tek-datamaskin-internett-bardeen",
+          "id": "tek-datamaskin-internett-transistor",
           "step": 2,
           "type": "text",
-          "prompt": "Hvem var en av oppfinnerne av transistoren ved Bell Labs?",
-          "answer": "John Bardeen",
-          "explain": "Bardeen, Shockley og Brattain fikk Nobelprisen i fysikk i 1956 for transistoren. Bardeen fikk prisen en gang til, i 1972.",
+          "prompt": "Hvilken komponent fra Bell Labs i 1947 er grunnlaget for all moderne elektronikk?",
+          "answer": "Transistoren",
           "accept": [
-            "Bardeen"
-          ]
+            "Transistor",
+            "transistorer"
+          ],
+          "explain": "Bardeen, Shockley og Brattain fikk Nobelprisen i fysikk i 1956 for oppfinnelsen. En moderne mobiltelefon har milliarder av dem.",
+          "hint": "Den erstattet de store, varme glassrørene og er laget av halvledere som silisium."
         },
         {
-          "id": "tek-datamaskin-internett-pakke",
+          "id": "tek-datamaskin-internett-pakker",
+          "step": 2,
+          "type": "choice",
+          "prompt": "I ARPANET ble data delt i små pakker som ble sendt hver for seg. Hva var fordelen?",
+          "answer": "Mange kunne dele linjene, og pakkene kunne ta andre veier",
+          "distractors": [
+            "Hver forbindelse fikk sin egen faste linje hele veien",
+            "Pakkene var krypterte og kunne ikke avlyttes",
+            "Maskinene kunne sende data uten noen kabler"
+          ],
+          "explain": "Teknikken kalles pakkesvitsjing. Telefonnettet ga derimot hver samtale en fast linje så lenge den varte. Det sies ofte at ARPANET ble bygd for å overleve en atomkrig, men hovedformålet var å la forskere dele dyre datamaskiner.",
+          "hint": "Tenk på hvordan telefonnettet koblet opp en samtale, og hva som skjedde ved et brudd."
+        },
+        {
+          "id": "tek-datamaskin-internett-berners-lee",
           "step": 2,
           "type": "text",
-          "prompt": "Hva kalles teknikken som deler data i små pakker som sendes hver for seg?",
-          "answer": "Pakkesvitsjing",
-          "explain": "Pakkene kan sendes ulike veier gjennom nettverket og settes sammen igjen hos mottakeren.",
+          "prompt": "Hvem foreslo World Wide Web ved CERN?",
+          "answer": "Tim Berners-Lee",
           "accept": [
-            "Pakkesvitsjing"
-          ]
+            "Berners-Lee",
+            "Berners Lee",
+            "Tim Berners Lee"
+          ],
+          "explain": "Han var britisk fysiker og informatiker. CERN ga bort teknologien gratis i 1993, og det var en viktig grunn til at weben spredte seg så raskt.",
+          "hint": "Han var britisk og ble senere adlet for oppfinnelsen sin."
         },
         {
           "id": "tek-datamaskin-internett-rekkefolge",
@@ -1132,53 +1232,58 @@
               "year": 1969
             },
             {
-              "label": "Norge kobles til ARPANET via NORSAR",
-              "year": 1973
+              "label": "Det nordiske mobilnettet åpner",
+              "year": 1981
             },
             {
-              "label": "NMT-nettet åpner i Norge",
-              "year": 1981
+              "label": "Berners-Lee foreslår World Wide Web",
+              "year": 1989
             }
           ],
-          "explain": "Det gikk 34 år fra transistoren til NMT-nettet i Norge. I de årene ble datamaskiner og nettverk koblet sammen."
+          "explain": "Hvert steg bygde på det forrige: uten transistorer ingen små datamaskiner, og uten nettet ingen web.",
+          "hint": "Weben kom sist, fordi den bygger på et nett som allerede fantes."
         },
         {
           "id": "tek-datamaskin-internett-forklar",
           "step": 3,
           "type": "explain",
           "prompt": "Forklar hvorfor transistoren gjorde små, batteridrevne enheter mulig.",
-          "answer": "Transistorer er mindre enn elektronrør og bruker mindre strøm. Når kretsene ble små og sparsommelige, kunne de plasseres i en enhet man bar med seg.",
+          "answer": "Transistorer er mye mindre enn elektronrør, bruker langt mindre strøm og blir ikke like varme. Da fikk kretsene plass i en lomme og kunne drives lenge på et batteri.",
           "checklist": [
-            "Transistorer er mindre enn elektronrør",
-            "De bruker mindre strøm",
-            "Små kretser gjør det mulig å bære en enhet"
+            "Transistorer er mye mindre enn elektronrør",
+            "De bruker lite strøm, så et batteri holder lenge",
+            "De blir ikke like varme og går sjeldnere i stykker"
           ],
-          "explain": "Mobiltelefonen var ikke mulig før elektronikken ble liten og sparsommelig nok. Transistoren var et av de viktigste stegene dit."
+          "explain": "Allerede i 1954 kom den første transistorradioen som fikk plass i lomma. Mobiltelefonen krevde at tusenvis, senere milliarder, av transistorer ble samlet på én brikke.",
+          "hint": "Tenk på størrelse, strømforbruk og varme."
         },
         {
-          "id": "tek-datamaskin-internett-koble",
+          "id": "tek-datamaskin-internett-web-forskjell",
           "step": 3,
-          "type": "match",
-          "prompt": "Koble datamaskin- og nettbegrepet til forklaringen.",
-          "pairs": [
-            {
-              "left": "ENIAC",
-              "right": "Utviklet i USA under andre verdenskrig"
-            },
-            {
-              "left": "Transistoren",
-              "right": "Utviklet ved Bell Labs i 1947"
-            },
-            {
-              "left": "ARPANET",
-              "right": "Forløperen til internett"
-            },
-            {
-              "left": "Tim Berners-Lee",
-              "right": "Foreslo World Wide Web"
-            }
+          "type": "choice",
+          "prompt": "Hva er forskjellen på internett og World Wide Web?",
+          "answer": "Weben er lenkede sider som bruker internett",
+          "distractors": [
+            "De er to navn på det samme",
+            "Internett er den trådløse delen av weben",
+            "Weben er eldre og ble bygd om til internett"
           ],
-          "explain": "ENIAC, transistoren, ARPANET og World Wide Web er fire steg i utviklingen fra regnemaskin til internett."
+          "explain": "Internett er selve nettet av maskiner og forbindelser, og det fantes lenge før weben. E-post og strømming bruker internett uten å være en del av weben.",
+          "hint": "Tenk på hvilken av dem som kom først, og hva den andre bygger på."
+        },
+        {
+          "id": "tek-datamaskin-internett-arpanet",
+          "step": 4,
+          "type": "choice",
+          "prompt": "Hvilket land ble først koblet til ARPANET utenfor USA?",
+          "answer": "Norge",
+          "distractors": [
+            "Storbritannia",
+            "Sverige",
+            "Frankrike"
+          ],
+          "explain": "Koblingen gikk via NORSAR på Kjeller, som målte jordskjelv og atomprøver. Kort etter ble London koblet til via Norge.",
+          "hint": "Landet hadde en forskningsstasjon som overvåket atomprøvesprengninger med seismografer."
         },
         {
           "id": "tek-datamaskin-internett-www",
@@ -1186,31 +1291,22 @@
           "type": "year",
           "prompt": "Hvilket år foreslo Tim Berners-Lee World Wide Web?",
           "answer": "1989",
-          "explain": "Berners-Lee foreslo World Wide Web ved CERN i 1989. Kildene er ikke enige om når webben ble offentlig tilgjengelig, så spørsmålet gjelder forslaget.",
-          "tolerance": 0
+          "explain": "Berners-Lee foreslo World Wide Web ved CERN i 1989. Kildene er ikke enige om når weben ble offentlig tilgjengelig, så spørsmålet gjelder forslaget.",
+          "tolerance": 0,
+          "hint": "Det var samme år som Berlinmuren falt."
         },
         {
-          "id": "tek-datamaskin-internett-tonn",
+          "id": "tek-datamaskin-internett-nmt",
           "step": 4,
-          "type": "number",
-          "prompt": "Omtrent hvor mange tonn veide ENIAC?",
-          "answer": "27",
-          "explain": "ENIAC var svært stor sammenlignet med dagens datamaskiner. Den veide omkring 27 tonn og fylte et stort rom.",
-          "unit": "tonn",
-          "tolerance": 3
-        },
-        {
-          "id": "tek-datamaskin-internett-nusse",
-          "step": 4,
-          "type": "choice",
-          "prompt": "Hva het Norges første digitale datamaskin?",
-          "answer": "NUSSE",
-          "distractors": [
-            "ENIAC",
-            "Colossus",
-            "EDSAC"
+          "type": "text",
+          "prompt": "Hva het det automatiske mobiltelefonnettet som åpnet i Norge og Sverige i 1981?",
+          "answer": "NMT",
+          "accept": [
+            "Nordisk Mobiltelefon",
+            "Nordisk mobiltelefoni"
           ],
-          "explain": "NUSSE var den første digitale datamaskinen i Norge. Første byggetrinn ble ferdig i 1954, nesten ti år etter ENIAC."
+          "explain": "NMT var et samarbeid mellom de nordiske televerkene og la grunnlaget for at Norden ble ledende i mobiltelefoni. Etterfølgeren GSM kom på 1990-tallet.",
+          "hint": "Navnet var en forkortelse, og nettet ble etterfulgt av GSM."
         }
       ]
     }

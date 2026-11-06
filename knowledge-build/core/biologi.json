@@ -14,7 +14,7 @@
       "prerequisites": [],
       "summary": "Cellen er livets minste enhet, og oppbygningen dens er nøkkelen til å forstå arv, sykdom og økosystemer.",
       "lesson": [
-        "Cellen er den minste enheten for liv. Alle organismer består av én eller flere celler. Bakterier er encellede, mens planter og dyr er flercellede og har mange ulike celletyper; et menneske har omtrent 220. De fleste celler kan bare ses i mikroskop. Alle celler stammer fra andre celler, og trolig fra én felles urcelle.",
+        "Cellen er den minste enheten for liv. Alle organismer består av én eller flere celler. Bakterier er encellede, mens planter og dyr er flercellede og har mange ulike celletyper. Alle cellene i et menneske har det samme DNA-et, men de bruker ulike deler av det. De fleste celler kan bare ses i mikroskop. Alle celler stammer fra andre celler, og trolig fra én felles urcelle.",
         "Alle celler er omgitt av cellemembranen, en tynn, fettaktig hinne som skiller cellens indre fra omgivelsene. Celler med cellekjerne kalles eukaryote. Hos dem ligger arvestoffet, DNA, beskyttet inne i kjernen. Planter, dyr og sopp er bygd av eukaryote celler. Celler uten kjerne kalles prokaryote. Bakterier er prokaryote, og arvestoffet deres ligger fritt i cellen. De kan dele seg raskt og utveksle arvestoff med hverandre.",
         "Mitokondriene er cellens energiverk. Der brytes næringsstoffer ned ved hjelp av oksygen i celleåndingen. Planteceller har i tillegg en stiv cellevegg av cellulose og kloroplaster, også kalt grønnkorn, der fotosyntesen foregår. Det grønne fargestoffet klorofyll fanger energien i sollyset."
       ],
@@ -54,7 +54,7 @@
             "Molekylet",
             "Genet"
           ],
-          "explain": "Et menneske består av mellom 30 og 40 billioner celler. Alle stammer fra andre celler, noe som tyder på at alt liv har utviklet seg fra én felles urcelle.",
+          "explain": "Atomer, molekyler og gener er byggesteiner, men ingen av dem kan ta opp næring, vokse eller formere seg på egen hånd. Et menneske består av mellom 30 og 40 billioner celler.",
           "hint": "Tenk på det minste som selv kan ta opp næring, vokse og formere seg."
         },
         {
@@ -69,7 +69,7 @@
             "Cytoskjelettet"
           ],
           "explain": "Membranen er en tynn, fettaktig hinne. Planter, sopp og bakterier har i tillegg en cellevegg utenpå membranen, men dyreceller mangler den.",
-          "hint": "Tenk på den tynne, fettaktige hinnen som også dyreceller har, selv om de mangler cellevegg."
+          "hint": "Tenk på hva dyreceller har ytterst, siden de mangler cellevegg."
         },
         {
           "id": "bio-cellen-eukaryot",
@@ -83,7 +83,7 @@
             "Den kan formere seg ved deling"
           ],
           "explain": "Eukaryot betyr kjerneholdig. Alle flercellede organismer er bygd av eukaryote celler, mens alle prokaryote organismer er encellede.",
-          "hint": "Tenk på hva som skiller cellene i en sopp fra cellene i en bakterie."
+          "hint": "Tenk på hvor DNA-et ligger i en bakterie, og hvor det ligger i dine egne celler."
         },
         {
           "id": "bio-cellen-prokaryot",
@@ -119,7 +119,7 @@
           "id": "bio-cellen-kloroplaster",
           "step": 2,
           "type": "text",
-          "prompt": "Hva heter de grønne organellene i planteceller der fotosyntesen foregår?",
+          "prompt": "Hva heter organellene i planteceller der fotosyntesen foregår?",
           "answer": "Kloroplaster",
           "accept": [
             "kloroplast",
@@ -128,7 +128,7 @@
             "grønnkornene"
           ],
           "explain": "Fargen kommer fra klorofyll, som fanger energi fra sollyset. Om høsten brytes klorofyllet ned, og de gule pigmentene i bladene kommer til syne.",
-          "hint": "De fanger energien i sollyset og finnes i bladene, men ikke i dyreceller."
+          "hint": "De gir bladene fargen sin og stammer trolig fra bakterier som drev fotosyntese."
         },
         {
           "id": "bio-cellen-cellevegg",
@@ -155,7 +155,7 @@
             "Mitokondriene lager sukker som kloroplastene bryter ned",
             "Kloroplastene gir energi om dagen, mitokondriene om natten"
           ],
-          "explain": "Fotosyntesen lagrer solenergi som sukker, men cellen kan ikke bruke sukkeret direkte. Mitokondriene bryter det ned med oksygen og gjør energien om til ATP, som cellen kan bruke.",
+          "explain": "Fotosyntesen lagrer solenergi som sukker, men cellen kan ikke bruke sukkeret direkte. Mitokondriene bryter det ned med oksygen og gjør energien om til ATP. Celleåndingen går døgnet rundt, også mens fotosyntesen er i gang om dagen.",
           "hint": "Tenk på hva kloroplastene lager, og hva cellen må gjøre for å få brukbar energi ut av det."
         },
         {
@@ -163,7 +163,7 @@
           "step": 3,
           "type": "choice",
           "prompt": "Hvorfor kan bakterier spre egenskaper som antibiotikaresistens så raskt?",
-          "answer": "De deler seg raskt og utveksler arvestoff med hverandre",
+          "answer": "De deler seg raskt og bytter arvestoff seg imellom",
           "distractors": [
             "De har en cellekjerne som beskytter nye gener",
             "De lærer av antibiotika de har møtt tidligere",
@@ -187,14 +187,18 @@
           "hint": "Tenk på hvilke deler alle celler har, og hva slike fellestrekk sier om slektskap."
         },
         {
-          "id": "bio-cellen-celletyper",
-          "step": 4,
-          "type": "number",
-          "prompt": "Omtrent hvor mange ulike celletyper har et menneske?",
-          "answer": "220",
-          "tolerance": 30,
-          "explain": "Cellene blir ulike gjennom celledifferensiering, slik at muskelceller, blodceller og nerveceller får hver sine oppgaver. Noen nerveceller strekker seg gjennom store deler av kroppen.",
-          "hint": "Muskel-, nerve-, blod- og hudceller er bare noen av dem, men det er langt færre enn tusen typer."
+          "id": "bio-cellen-hvorfor-ulike-celler",
+          "step": 3,
+          "type": "choice",
+          "prompt": "En nervecelle og en muskelcelle i samme kropp har det samme DNA-et. Hvorfor er de likevel så ulike?",
+          "answer": "De bruker ulike deler av det samme arvestoffet",
+          "distractors": [
+            "De har mistet genene de ikke trenger",
+            "De har fått ulike mutasjoner i fosterlivet",
+            "De har arvet ulike gener fra mor og far"
+          ],
+          "explain": "Hver celletype slår på de genene den trenger og holder resten avslått. Det kalles celledifferensiering. Stamceller i fosteret kan ennå bli til mange ulike celletyper.",
+          "hint": "Tenk på en kokebok der hver kokk bare følger noen av oppskriftene."
         },
         {
           "id": "bio-cellen-antall-celler",
@@ -209,6 +213,19 @@
           ],
           "explain": "En billion er en million millioner. Antallet celler i en organisme avhenger blant annet av størrelsen; en elefant har flere celler enn en mus.",
           "hint": "Kroppen har langt flere celler enn Melkeveien har stjerner, og den har noen hundre milliarder."
+        },
+        {
+          "id": "bio-cellen-atp",
+          "step": 4,
+          "type": "text",
+          "prompt": "Hva heter molekylet som mitokondriene lager, og som cellen bruker som energivaluta?",
+          "answer": "ATP",
+          "accept": [
+            "adenosintrifosfat",
+            "adenosin-trifosfat"
+          ],
+          "explain": "Et menneske bryter ned og bygger opp igjen omtrent sin egen kroppsvekt i ATP hver dag. Molekylet driver alt fra muskelarbeid til byggingen av proteiner.",
+          "hint": "Molekylet lades opp i mitokondriene og brukes overalt i cellen, som et oppladbart batteri."
         }
       ]
     },
@@ -275,7 +292,7 @@
             "En celle som fører arvestoffet videre"
           ],
           "explain": "Proteiner gjør mye av arbeidet i cellen: De bygger vev, frakter stoffer og styrer kjemiske reaksjoner som enzymer. Hvert gen har sin faste plass på et kromosom.",
-          "hint": "Et kromosom kan ha tusenvis av dem, og de bestemmer hva cellen bygger."
+          "hint": "Et kromosom bærer hundrevis eller tusenvis av dem, omtrent som en bok bærer mange kapitler."
         },
         {
           "id": "bio-arv-dna-form",
@@ -289,7 +306,7 @@
             "En kule av tett pakkede baser"
           ],
           "explain": "Basene sitter i faste par: A med T og C med G. Utstrukket ville DNA-et i én menneskecelle vært omtrent to meter langt.",
-          "hint": "Formen kalles dobbelheliks, og basene sitter parvis mellom to sider."
+          "hint": "Basene A og T, C og G danner par, og hvert par holdes på plass fra hver sin side."
         },
         {
           "id": "bio-arv-dna-mendel",
@@ -315,6 +332,20 @@
           "hint": "Tallet er dobbelt så stort som i en eggcelle eller en sædcelle."
         },
         {
+          "id": "bio-arv-dna-rna",
+          "step": 2,
+          "type": "text",
+          "prompt": "Cellen bygger ikke proteinet direkte etter DNA-et. Hva slags molekyl kopierer den genet over i først?",
+          "answer": "RNA",
+          "accept": [
+            "mRNA",
+            "budbringer-RNA",
+            "ribonukleinsyre"
+          ],
+          "explain": "Kopien kalles budbringer-RNA, mRNA. Den fraktes ut av kjernen til ribosomene, som leser basene tre og tre og setter sammen aminosyrer til et protein. RNA-vaksinene mot covid-19 gir cellene nettopp en slik kopi, med oppskriften på et virusprotein.",
+          "hint": "Molekylet ligner DNA, men består av bare én tråd og brytes raskt ned igjen."
+        },
+        {
           "id": "bio-arv-dna-watson-crick",
           "step": 2,
           "type": "choice",
@@ -338,7 +369,7 @@
             "Franklin",
             "Rosalind Elsie Franklin"
           ],
-          "explain": "Bildet er kjent som fotografi 51. En kollega viste det til Watson uten at Franklin visste om det, og Watson kalte det senere en nøkkelbegivenhet.",
+          "explain": "Bildet er kjent som fotografi 51. En kollega viste det til Watson uten at Franklin visste om det, og Watson beskrev senere hvor sterkt det gjorde inntrykk på ham.",
           "hint": "Hun arbeidet ved King's College i London og døde bare 37 år gammel."
         },
         {
@@ -375,7 +406,7 @@
           "step": 3,
           "type": "choice",
           "prompt": "En person får en mutasjon i en hudcelle etter mye sol. Hva betyr det for barn personen får senere?",
-          "answer": "Mutasjonen går ikke i arv, for den rammer ikke kjønnscellene",
+          "answer": "Barna arver den ikke, for den er ikke i kjønnscellene",
           "distractors": [
             "Barna arver den, fordi alle celler har samme DNA",
             "Barna arver den bare hvis den er dominant",
@@ -442,7 +473,7 @@
       "summary": "Arter endrer seg over generasjoner gjennom naturlig utvalg, og derfor er alt liv på Jorda i slekt.",
       "lesson": [
         "Evolusjon betyr at arvelige egenskaper blir vanligere eller sjeldnere i en populasjon over generasjoner. Det er populasjonen som endrer seg, ikke enkeltindividet. Charles Darwin la grunnlaget for evolusjonsbiologien i boka «Artenes opprinnelse» fra 1859. Ideene vokste fram etter en fem år lang jordomseiling med skipet Beagle. Alfred Russel Wallace kom omtrent samtidig fram til den samme teorien.",
-        "Naturlig utvalg bygger på tre forutsetninger: Det fødes flere individer enn miljøet kan bære, individene varierer, og variasjonen er delvis arvelig. De best tilpassede overlever oftere og får flere avkom. Er det etter en tørke mest store frø igjen, klarer fugler med store nebb seg best, og andelen med store nebb øker. Mutasjoner er den opprinnelige kilden til variasjon, og de oppstår tilfeldig, uavhengig av hva organismen trenger.",
+        "Naturlig utvalg bygger på tre forutsetninger: Det fødes flere individer enn miljøet kan bære, individene varierer, og variasjonen er delvis arvelig. De best tilpassede får flest avkom. Da bjørkestammene i engelske industribyer ble svarte av sot, ble mørke bjørkemålere vanskeligere for fuglene å se, og andelen mørke sommerfugler økte. Mutasjoner er den opprinnelige kilden til variasjon, og de oppstår tilfeldig, uavhengig av hva organismen trenger.",
         "Ifølge evolusjonsteorien har alt liv et felles opphav. Fossiler, likheter i anatomi og likheter i DNA peker samme vei. Mennesket hører til de store menneskeapene, sammen med sjimpanser, gorillaer og orangutanger. Sjimpansene, vanlig sjimpanse og bonobo, er våre nærmeste nålevende slektninger, men vi stammer ikke fra dem; vi har felles forfedre. Vår egen art, Homo sapiens, har levd i omtrent 300 000 år."
       ],
       "keyPoints": [
@@ -486,21 +517,21 @@
             "Jean-Baptiste Lamarck"
           ],
           "explain": "Darwin var naturforsker om bord på skipet Beagle i fem år. Fossile pattedyr fra Sør-Amerika og fuglelivet på Galápagos ble avgjørende for ideene hans.",
-          "hint": "Han var naturforsker om bord på Beagle og besøkte Galápagos."
+          "hint": "Han var engelsk, og ideene vokste fram etter en lang reise rundt jorda."
         },
         {
           "id": "bio-evolusjon-hva-endrer-seg",
           "step": 1,
           "type": "choice",
           "prompt": "Hva skjer når en art utvikler seg?",
-          "answer": "Arvelige egenskaper blir vanligere eller sjeldnere i populasjonen",
+          "answer": "Andelen arvelige egenskaper i bestanden endres",
           "distractors": [
             "Hvert individ tilpasser seg i løpet av livet",
             "Egenskaper individene lærer, går videre i arv",
             "Arten velger selv hvilke egenskaper den trenger"
           ],
           "explain": "Egenskaper et individ tilegner seg i løpet av livet, føres ikke videre til neste generasjon. Bare egenskaper som arves via gener, kan endre seg gjennom evolusjon.",
-          "hint": "Tenk på hvem som endrer seg: det enkelte dyret eller hele bestanden over generasjoner."
+          "hint": "Tenk på om det er det enkelte dyret som forandrer seg, eller noe som skjer over flere generasjoner."
         },
         {
           "id": "bio-evolusjon-felles-opphav",
@@ -528,22 +559,22 @@
             "naturens utvalg",
             "seleksjon"
           ],
-          "explain": "Darwin sammenlignet med avl, der mennesker velger hvilke planter og dyr som får formere seg. Han kalte det kunstig utvalg og hevdet at en lignende sortering foregår i naturen.",
+          "explain": "Uttrykket «survival of the fittest» kom fra filosofen Herbert Spencer, og Darwin tok det inn i senere utgaver. «Fittest» betyr best tilpasset, ikke sterkest.",
           "hint": "Darwin sammenlignet med avl, der mennesker bestemmer hvilke dyr som får formere seg."
         },
         {
-          "id": "bio-evolusjon-wallace",
+          "id": "bio-evolusjon-arvelig-variasjon",
           "step": 2,
-          "type": "text",
-          "prompt": "Hvilken britisk naturforsker kom omtrent samtidig med Darwin fram til den samme evolusjonsteorien?",
-          "answer": "Alfred Russel Wallace",
-          "accept": [
-            "Wallace",
-            "Alfred Wallace",
-            "A. R. Wallace"
+          "type": "choice",
+          "prompt": "Darwin så at det fødes flere individer enn miljøet kan bære, og at individene er ulike. Hva må i tillegg gjelde for at arten skal endre seg over generasjoner?",
+          "answer": "Variasjonen må delvis være arvelig",
+          "distractors": [
+            "Individene må prøve å tilpasse seg",
+            "Miljøet må endre seg raskt",
+            "Bestanden må være svært stor"
           ],
-          "explain": "Wallace sendte Darwin et manuskript i 1858. Darwins venner sørget for at Wallaces tekst og et kort utdrag av Darwins arbeid ble lagt fram sammen samme år, og året etter kom «Artenes opprinnelse».",
-          "hint": "Han samlet dyr i Sørøst-Asia og sendte Darwin et manuskript om ideen sin."
+          "explain": "Overproduksjon, variasjon og arv er de tre forutsetningene for naturlig utvalg. Darwin visste ikke hvordan arven virket. Mendels forsøk kunne forklart det, men ble først kjent i 1900, og evolusjonsteorien og genetikken ble forent på 1930- og 1940-tallet.",
+          "hint": "Tenk på hva som skjer med en egenskap et dyr har fått ved trening, når det får unger."
         },
         {
           "id": "bio-evolusjon-sjimpansen",
@@ -556,7 +587,7 @@
             "Orangutangene",
             "Gibbonene"
           ],
-          "explain": "Vanlig sjimpanse og bonobo står oss like nært. Både genetiske og anatomiske studier viser dette. Slektslinjene skilte trolig lag for sju til ti millioner år siden, men anslagene spriker mye.",
+          "explain": "Vanlig sjimpanse og bonobo står oss like nært. Både genetiske og anatomiske studier viser dette. Slektslinjene skilte trolig lag for seks til ti millioner år siden, men anslagene spriker mye.",
           "hint": "De lever i Afrika, bruker redskaper og deler omtrent 98–99 prosent av DNA-et med oss."
         },
         {
@@ -570,7 +601,7 @@
             "Fuglene utvikler store nebb fordi de trenger dem",
             "Ingenting, for tørke påvirker ikke arvelige egenskaper"
           ],
-          "explain": "Ingen enkeltfugl forandrer seg; det er sammensetningen av populasjonen som endres. Darwin visste ikke hvordan arv fungerte; forklaringen kom med Mendels arvelover, som ble kjent først i 1900.",
+          "explain": "Ingen enkeltfugl forandrer seg; det er sammensetningen av bestanden som endres. Peter og Rosemary Grant målte nettopp dette hos finker på Galápagos: Etter en tørke i 1977 hadde neste generasjon i gjennomsnitt større nebb.",
           "hint": "Tenk på hvilke fugler som oftest overlever og får unger, ikke på hva hver fugl gjør."
         },
         {
@@ -578,7 +609,7 @@
           "step": 3,
           "type": "choice",
           "prompt": "Oppstår mutasjoner fordi en organisme trenger en ny egenskap?",
-          "answer": "Nei, de oppstår tilfeldig, og utvalget sorterer etterpå",
+          "answer": "Nei, de skjer tilfeldig, og utvalget sorterer etterpå",
           "distractors": [
             "Ja, miljøet utløser de mutasjonene arten trenger",
             "Ja, men bare hos arter med kort generasjonstid",
@@ -616,12 +647,26 @@
           "hint": "Tenk på det som ligger i bergartene, det som ses i kroppens bygning, og det som kan leses i arvestoffet."
         },
         {
+          "id": "bio-evolusjon-wallace",
+          "step": 4,
+          "type": "text",
+          "prompt": "Hvilken britisk naturforsker kom omtrent samtidig med Darwin fram til den samme evolusjonsteorien?",
+          "answer": "Alfred Russel Wallace",
+          "accept": [
+            "Wallace",
+            "Alfred Wallace",
+            "A. R. Wallace"
+          ],
+          "explain": "Wallace sendte Darwin et manuskript i 1858. Darwins venner sørget for at Wallaces tekst og et kort utdrag av Darwins arbeid ble lagt fram sammen samme år, og året etter kom «Artenes opprinnelse».",
+          "hint": "Han samlet dyr i Sørøst-Asia og sendte Darwin et manuskript om ideen sin."
+        },
+        {
           "id": "bio-evolusjon-aar-artenes-opprinnelse",
           "step": 4,
           "type": "year",
           "prompt": "Hvilket år kom Darwins hovedverk om artenes utvikling ut?",
           "answer": "1859",
-          "explain": "Boka kom ut 24. november 1859, og førsteopplaget på 1250 eksemplarer ble solgt ut samme dag. Darwin reviderte den fem ganger.",
+          "explain": "Boka kom ut 24. november 1859, og førsteopplaget på 1250 eksemplarer ble raskt utsolgt. Darwin reviderte den fem ganger.",
           "hint": "Boka kom året før Abraham Lincoln ble valgt til president i USA."
         },
         {
@@ -647,12 +692,12 @@
       "prerequisites": [],
       "summary": "Biologer ordner millioner av arter i et system, og mangfoldet av liv er verdt å forstå og ta vare på.",
       "lesson": [
-        "Den svenske naturforskeren Carl von Linné ordnet på 1700-tallet artene i et hierarkisk system: arter samles i slekter, slekter i familier og videre i ordener, klasser, rekker og riker. Han innførte også vitenskapelige navn med to ledd, slektsnavn og artsnavn. Systemet kalles binær nomenklatur. Hegg heter for eksempel Prunus padus.",
+        "Den svenske naturforskeren Carl von Linné ordnet på 1700-tallet artene i et hierarkisk system. I dag samles arter i slekter, slekter i familier og videre i ordener, klasser, rekker og riker. Linné gjorde det også til standard å gi artene vitenskapelige navn med to ledd: først slekten arten hører til, så et eget artsnavn. Systemet kalles binær nomenklatur. Hegg heter for eksempel Prunus padus.",
         "Linné delte livet i to riker, dyr og planter. I dag regner de fleste med tre domener: bakterier, arker og eukaryoter. Eukaryotene omfatter blant annet dyr, planter og sopp. Sopp er et eget rike. Soppene driver ikke fotosyntese, men lever av organisk stoff, og de regnes for å stå nærmere dyrene enn plantene. En art er vanligvis alle individer som kan få forplantningsdyktige avkom sammen.",
         "Virveldyrene har ryggrad og hodeskalle: fisker, amfibier, reptiler, fugler og pattedyr. Amfibier, som frosker, må som regel tilbake til vann for å formere seg. Biologisk mangfold er variasjonen av liv: arter, genetisk variasjon og leveområder. Omtrent én million arter er truet av utryddelse. Hovedårsaken er menneskelig aktivitet: Natur bygges ned, og fremmede arter, forurensning, overhøsting og klimaendringer svekker bestander."
       ],
       "keyPoints": [
-        "Linné innførte det hierarkiske systemet og navn med slektsnavn og artsnavn.",
+        "Linné ordnet artene i et hierarkisk system og gjorde navn med slektsnavn og artsnavn til standard.",
         "I dag deles livet i tre domener: bakterier, arker og eukaryoter.",
         "Virveldyrene er fisker, amfibier, reptiler, fugler og pattedyr.",
         "En art er individer som kan få forplantningsdyktige avkom sammen.",
@@ -685,7 +730,7 @@
           "id": "bio-livets-mangfold-linne",
           "step": 1,
           "type": "choice",
-          "prompt": "Hvem innførte systemet med vitenskapelige artsnavn i to ledd?",
+          "prompt": "Hvem gjorde vitenskapelige artsnavn i to ledd til standard i biologien?",
           "answer": "Carl von Linné",
           "distractors": [
             "Charles Darwin",
@@ -693,7 +738,7 @@
             "Ernst Haeckel"
           ],
           "explain": "Linné delte alt liv i to riker, dyr og planter. Sopp og bakterier plasserte han i planteriket.",
-          "hint": "Han var svensk og levde på 1700-tallet."
+          "hint": "Han var professor i Uppsala og en ivrig samler av planter."
         },
         {
           "id": "bio-livets-mangfold-art",
@@ -720,22 +765,22 @@
             "De har fjær eller pels",
             "De puster med lunger hele livet"
           ],
-          "explain": "Virveldyrene utgjør bare omtrent 5 prosent av alle beskrevne nålevende arter. De første virveldyrene var kjeveløse fisker i havet.",
+          "explain": "Virveldyrene utgjør bare omtrent 5 prosent av alle beskrevne dyrearter; de fleste dyr er virvelløse, særlig insekter. De første virveldyrene var kjeveløse fisker i havet.",
           "hint": "Tenk på hva fisk, frosker, fugler og mennesker har felles inni kroppen."
         },
         {
-          "id": "bio-livets-mangfold-binaer-nomenklatur",
+          "id": "bio-livets-mangfold-slektsnavn",
           "step": 2,
-          "type": "text",
-          "prompt": "Hva kalles navnesystemet der hver art får et slektsnavn og et artsnavn?",
-          "answer": "Binær nomenklatur",
-          "accept": [
-            "binomial nomenklatur",
-            "binominal nomenklatur",
-            "binomen"
+          "type": "choice",
+          "prompt": "Mennesket heter Homo sapiens på latin. Hva forteller det første leddet, Homo?",
+          "answer": "Hvilken slekt arten hører til",
+          "distractors": [
+            "Hvilken familie arten hører til",
+            "Hvem som beskrev arten først",
+            "Hvilken orden arten hører til"
           ],
-          "explain": "Arter i samme slekt deler det første navnet. Hegg heter Prunus padus og slåpetorn Prunus spinosa, fordi de er nære slektninger.",
-          "hint": "Systemet har et latinsk navn som viser til tallet to, og Linné gjorde det til standard."
+          "explain": "Det andre leddet, sapiens, skiller arten fra andre arter i samme slekt. Neandertaleren heter Homo neanderthalensis og regnes til samme slekt som oss. Systemet med to ledd kalles binær nomenklatur.",
+          "hint": "Hegg heter Prunus padus og slåpetorn Prunus spinosa, og de er to ulike arter."
         },
         {
           "id": "bio-livets-mangfold-domener",
@@ -763,7 +808,7 @@
             "amfibie"
           ],
           "explain": "Reptiler, fugler og pattedyr ble uavhengige av vann fordi fosteret utvikles i et egg som tåler uttørking, eller i en livmor.",
-          "hint": "Frosker og salamandere legger egg uten skall, og ungene lever ofte som rumpetroll."
+          "hint": "Navnet er gresk og betyr «med to liv», i vann og på land."
         },
         {
           "id": "bio-livets-mangfold-biologisk-mangfold",
@@ -788,37 +833,25 @@
           "answer": "De driver ikke fotosyntese, men lever av organisk stoff",
           "distractors": [
             "De har celler uten cellekjerne, slik bakterier har",
-            "De formerer seg bare ved at cellene deler seg",
-            "De mangler arvestoff i form av DNA i cellene"
+            "De formerer seg med sporer i stedet for med frø",
+            "De er nærmere i slekt med bakteriene enn med plantene"
           ],
-          "explain": "Soppriket ble foreslått av nordmannen Olav Johan Sopp i 1887. Til forskjell fra dyr fordøyer soppen maten utenfor kroppen: Den skiller ut enzymer og tar opp de oppløste stoffene. Soppene lagrer glykogen, slik dyr gjør, og regnes for å ha felles rot med dyreriket.",
+          "explain": "Sporer skiller ikke sopp fra planter, for bregner og moser formerer seg også med sporer. Soppene skiller ut enzymer og tar opp næringen utenfra, og de lagrer glykogen, slik dyr gjør. Soppriket ble foreslått av nordmannen Olav Johan Sopp i 1887.",
           "hint": "Tenk på hvordan en sopp skaffer seg næring sammenlignet med en plante."
         },
         {
-          "id": "bio-livets-mangfold-koble-kjennetegn",
+          "id": "bio-livets-mangfold-hvorfor-landegg",
           "step": 3,
-          "type": "match",
-          "prompt": "Koble hver gruppe med riktig kjennetegn.",
-          "pairs": [
-            {
-              "left": "Bakterier",
-              "right": "Encellede, uten cellekjerne"
-            },
-            {
-              "left": "Planter",
-              "right": "Lager næring ved fotosyntese"
-            },
-            {
-              "left": "Sopp",
-              "right": "Bryter ned organisk stoff utenfor kroppen"
-            },
-            {
-              "left": "Amfibier",
-              "right": "Virveldyr som trenger vann for å formere seg"
-            }
+          "type": "choice",
+          "prompt": "Frosker må tilbake til vann for å legge egg. Hvorfor kan reptiler, fugler og pattedyr formere seg på tørt land?",
+          "answer": "Fosteret ligger i et egg som tåler tørke, eller i livmoren",
+          "distractors": [
+            "De voksne har tykkere hud som holder på vannet",
+            "Ungene har gjeller de første ukene av livet",
+            "De legger eggene sine i fuktig jord eller mose"
           ],
-          "explain": "Kjennetegnene speiler hvordan organismene skaffer seg næring og hvordan cellene er bygd. Moderne systematikk prøver i tillegg å gruppere etter slektskap.",
-          "hint": "Bare én av gruppene er virveldyr."
+          "explain": "Egget med skall og en væskefylt hinne rundt fosteret var en av de store nyvinningene i evolusjonen. Med det kunne virveldyrene erobre tørt land for godt.",
+          "hint": "Tenk på hva et hønseegg har rundt kyllingen, og hva et froskeegg mangler."
         },
         {
           "id": "bio-livets-mangfold-forklar-tap",
@@ -831,7 +864,7 @@
             "Natur bygges ned eller stykkes opp",
             "Minst én til: fremmede arter, forurensning, overhøsting eller klima"
           ],
-          "explain": "Tidligere masseutryddelser skyldtes blant annet klimaendringer, vulkanisme og meteornedslag. I Norge regnes om lag 12 prosent av artene som er vurdert, som truet.",
+          "explain": "Tidligere masseutryddelser skyldtes blant annet klimaendringer, vulkanisme og meteornedslag. I den norske rødlista fra 2021 regnes om lag 12 prosent av artene som er vurdert, som truet.",
           "hint": "Tenk på hva som skjer med leveområdene, og nevn minst én trussel til."
         },
         {
@@ -852,11 +885,11 @@
           "id": "bio-livets-mangfold-andel-virveldyr",
           "step": 4,
           "type": "number",
-          "prompt": "Omtrent hvor mange prosent av alle beskrevne nålevende arter er virveldyr?",
+          "prompt": "Omtrent hvor mange prosent av alle beskrevne dyrearter er virveldyr?",
           "answer": "5",
           "unit": "prosent",
           "tolerance": 2,
-          "explain": "Det er registrert omtrent 69 000 nålevende arter av virveldyr. De aller fleste beskrevne artene er altså ikke virveldyr.",
+          "explain": "Det er beskrevet rundt 70 000 nålevende arter av virveldyr, og over halvparten av dem er fisker. Insektene alene teller rundt én million beskrevne arter.",
           "hint": "Insektene alene utgjør over halvparten av alle beskrevne arter."
         }
       ]
@@ -870,13 +903,13 @@
       "lesson": [
         "Hjertet er en muskel som pumper blodet rundt i kroppen. Det er en dobbel pumpe med fire kamre. Høyre side sender oksygenfattig blod til lungene, venstre side sender oksygenrikt blod ut i hovedpulsåren og videre til hele kroppen. Den engelske legen William Harvey viste i 1628 at det samme blodet sirkulerer rundt i kroppen, drevet av hjertet.",
         "I lungene går lufta ned i små lungeblærer. I veggene deres tar blodet opp oksygen og avgir karbondioksid. Fordøyelsen bryter maten ned til små molekyler. Nesten all nedbryting og nesten alt opptak av næring skjer i tynntarmen, mens tykktarmen først og fremst tar opp vann.",
-        "Nervesystemet styrer kroppen med raske elektriske signaler. Hjernen og ryggmargen utgjør sentralnervesystemet. Hormonsystemet er langsommere. Kjertler skiller ut hormoner, kjemiske budbringere som fraktes med blodet og regulerer blant annet vekst, forplantning og blodsukker. Skjelettet bærer kroppen og beskytter organene; et voksent menneske har normalt 206 knokler."
+        "Nervesystemet styrer kroppen med raske elektriske signaler. Hjernen og ryggmargen utgjør sentralnervesystemet. Hormonsystemet er langsommere. Kjertler skiller ut hormoner, kjemiske budbringere som fraktes med blodet og regulerer blant annet vekst, forplantning og blodsukker. Skjelettet bærer kroppen og beskytter organene, og i beinmargen lages blodcellene. Et voksent menneske har normalt 206 knokler."
       ],
       "keyPoints": [
-        "Hjertet er en dobbel pumpe med fire kamre; Harvey beskrev blodomløpet i 1628.",
+        "Hjertet er en dobbel pumpe med fire kamre; William Harvey viste at blodet går i et kretsløp.",
         "Gassutvekslingen skjer i lungeblærene, næringsopptaket i tynntarmen.",
         "Nervesystemet sender raske signaler, hormonene langsommere signaler via blodet.",
-        "Et voksent skjelett har normalt 206 knokler."
+        "Skjelettet bærer og beskytter kroppen, og i beinmargen lages blodcellene."
       ],
       "sources": [
         {
@@ -917,7 +950,7 @@
             "Å lage nye røde blodceller"
           ],
           "explain": "Venstre side pumper det oksygenrike blodet ut i hovedpulsåren, aorta. Blodet går derfor i to kretsløp: lungekretsløpet og systemkretsløpet til resten av kroppen.",
-          "hint": "Tenk på hvor blodet som kommer tilbake fra kroppen, må få nytt oksygen."
+          "hint": "Blodet som kommer tilbake fra kroppen, strømmer først inn i høyre side."
         },
         {
           "id": "bio-menneskekroppen-tynntarmen",
@@ -957,7 +990,7 @@
             "Harvey",
             "W. Harvey"
           ],
-          "explain": "Harvey var elev av Fabrizio, som hadde beskrevet klaffene i venene. Klaffene overbeviste Harvey om at blodet bare strømmer én vei.",
+          "explain": "Harvey var elev av Fabricius i Padova, som hadde beskrevet klaffene i venene. Klaffene overbeviste Harvey om at blodet bare strømmer én vei.",
           "hint": "Han studerte i Padova og var livlege for Karl 1. av England."
         },
         {
@@ -1001,7 +1034,7 @@
             "ryggmarg og hjerne"
           ],
           "explain": "Nervene som går ut fra hjernen og ryggmargen, utgjør det perifere nervesystemet. Det autonome nervesystemet styrer de indre organene uten at vi tenker over det.",
-          "hint": "Begge ligger beskyttet inne i skjelettet: det ene i skallen, det andre i ryggraden."
+          "hint": "Begge ligger beskyttet av bein: det ene i hodeskallen, det andre i virvelsøylen."
         },
         {
           "id": "bio-menneskekroppen-hvorfor-tarmtotter",
@@ -1014,7 +1047,7 @@
             "De skiller ut saltsyre som dreper bakterier",
             "De skyver maten videre mot tykktarmen"
           ],
-          "explain": "Hver celle på tottene har i tillegg opptil 1000 mikroskopiske utløpere. Maten skyves videre av bølger i tarmmuskulaturen, og saltsyren kommer fra magesekken.",
+          "explain": "Cellene på tottene har i tillegg bittesmå utløpere, mikrovilli, som øker overflaten enda mer. Maten skyves videre av bølger i tarmmuskulaturen, og saltsyren kommer fra magesekken.",
           "hint": "Tenk på hvorfor et frottéhåndkle suger opp mer enn et glatt."
         },
         {
@@ -1032,18 +1065,18 @@
           "hint": "Tenk på forskjellen mellom en melding til én person og en sending på radio til alle."
         },
         {
-          "id": "bio-menneskekroppen-hvorfor-harvey-ny",
+          "id": "bio-menneskekroppen-hvorfor-venstre-kammer",
           "step": 3,
           "type": "choice",
-          "prompt": "Hva var det nye i Harveys forståelse av blodet?",
-          "answer": "At det samme blodet sirkulerer, drevet av hjertet",
+          "prompt": "Hvorfor er muskelveggen i venstre hjertekammer mye tykkere enn i høyre?",
+          "answer": "Det må presse blodet ut gjennom hele kroppen",
           "distractors": [
-            "At blodet dannes i leveren og brukes opp i kroppen",
-            "At blodet strømmer gjennom porer i hjerteveggen",
-            "At blodet ebber og flor fram og tilbake i årene"
+            "Det pumper mer blod per slag enn høyre kammer",
+            "Det må tåle oksygenrikt blod, som er tyngre",
+            "Det må varme opp blodet før det går ut i kroppen"
           ],
-          "explain": "De gale svarene bygger på læren til oldtidslegen Galenos, som hadde dominert i om lag 1500 år. Harvey regnet ut at hjertet pumper langt mer blod enn kroppen kan lage, og konkluderte med at det samme blodet må gå i et sammenhengende kretsløp.",
-          "hint": "Tenk på hva Harvey regnet ut om mengden blod hjertet pumper."
+          "explain": "Begge kamrene pumper like mye blod per slag, men trykket i kroppskretsløpet er flere ganger høyere enn i lungekretsløpet. Langvarig høyt blodtrykk kan gjøre veggen i venstre kammer enda tykkere og stivere.",
+          "hint": "Tenk på hvor stort område hver side av hjertet forsyner."
         },
         {
           "id": "bio-menneskekroppen-forklar-oksygen",
@@ -1069,13 +1102,22 @@
           "hint": "Et nyfødt barn har flere, rundt 300, fordi mange knokler vokser sammen under oppveksten."
         },
         {
-          "id": "bio-menneskekroppen-aar-harvey",
+          "id": "bio-menneskekroppen-beinmarg",
           "step": 4,
-          "type": "year",
-          "prompt": "Hvilket år ga William Harvey ut boka der han påviste hjertets pumpefunksjon?",
-          "answer": "1628",
-          "explain": "Boka heter på kortform «De motu cordis» («Om hjertets bevegelse»). Harvey var senere livlege for de engelske kongene Jakob 1. og Karl 1.",
-          "hint": "Boka kom i første halvdel av trettiårskrigen, mens Karl 1. var konge i England."
+          "type": "text",
+          "prompt": "Hvor i kroppen lages de røde og hvite blodcellene hos en voksen?",
+          "answer": "I beinmargen",
+          "accept": [
+            "beinmargen",
+            "benmargen",
+            "beinmarg",
+            "benmarg",
+            "i benmargen",
+            "rød beinmarg",
+            "margen"
+          ],
+          "explain": "Røde blodceller lever bare omkring fire måneder, så det må lages flere hundre milliarder nye hver dag. Hos barn lager nesten alle knokler blod, hos voksne mest de flate, som bekkenet, brystbeinet og ribbeina.",
+          "hint": "Vevet kan doneres til pasienter med leukemi, og frivillige givere står i et eget register."
         }
       ]
     },
@@ -1089,7 +1131,7 @@
       "summary": "Bakterier og virus er ulike smittestoffer, og forskjellen avgjør hva immunforsvaret, vaksiner og antibiotika kan stanse.",
       "lesson": [
         "Mange sykdommer skyldes smittestoffer, særlig bakterier og virus. Bakterier er encellede organismer som formerer seg på egen hånd. Virus er langt mindre og består av arvestoff i en kapsel av protein. De kan bare formere seg inne i en vertscelle, og det er uklart om de kan regnes som levende.",
-        "Immunforsvaret bruker blant annet antistoffer: proteiner som binder seg til et bestemt smittestoff og hjelper resten av forsvaret å uskadeliggjøre det. Etter en infeksjon beholder kroppen hukommelsesceller. Møter kroppen det samme smittestoffet igjen, svarer den raskt, og man er immun. Vaksiner utnytter dette og gir immunitet uten at man gjennomgår sykdommen. Edward Jenner la i 1798 fram bevis for at kukopper beskyttet mot kopper.",
+        "Immunforsvaret bruker blant annet antistoffer, proteiner som binder seg til et bestemt smittestoff. Etter en infeksjon beholder kroppen hukommelsesceller. Møter kroppen det samme smittestoffet igjen, svarer den raskt, og man er immun. Vaksiner utnytter dette og gir immunitet uten at man gjennomgår sykdommen. Når nesten alle er immune, stopper smittekjedene, og også de uvaksinerte blir beskyttet. Edward Jenner la i 1798 fram bevis for at kukopper beskyttet mot kopper.",
         "Antibiotika er legemidler mot bakterier. Alexander Fleming oppdaget i 1928 at muggsoppen Penicillium dreper bakterier, og kalte stoffet penicillin. Antibiotika virker ikke mot virus. Overforbruk gir antibiotikaresistens: Resistente bakterier overlever, formerer seg og blir en stadig større andel. En pandemi er en epidemi over store deler av verden, som spanskesyken 1918–1920 og koronapandemien fra 2020."
       ],
       "keyPoints": [
@@ -1173,7 +1215,7 @@
             "Mot alle mikroorganismer"
           ],
           "explain": "Antibiotika angriper strukturer som bare finnes i bakterier. Legemidler mot virus kalles antiviralia, og legemidler mot sopp antimykotika.",
-          "hint": "Penicillin hindrer at det bygges cellevegg, og det har bare én av gruppene."
+          "hint": "Tenk på hvorfor legen ikke skriver ut antibiotika når du har influensa."
         },
         {
           "id": "bio-sykdom-immunforsvar-antistoffer",
@@ -1211,16 +1253,16 @@
           "distractors": [
             "Svekket smittestoff fra pest",
             "Ekstrakt fra muggsopp",
-            "Blod fra overlevende"
+            "Materiale fra koppesår hos syke"
           ],
-          "explain": "Jenner hadde ingen forklaring på hvorfor metoden virket. Immunologien begynte først å utvikles med Louis Pasteurs vaksineforsøk rundt 1880.",
+          "explain": "Den eldre metoden, inokulasjon, brukte materiale fra ekte kopper og kunne gi alvorlig sykdom og smitte andre. Jenner kunne ikke forklare hvorfor kukopper beskyttet; immunologien begynte å utvikles med Louis Pasteurs vaksineforsøk rundt 1880.",
           "hint": "Tenk på hva melkepikene på gårdene i England så ut til å være beskyttet av."
         },
         {
           "id": "bio-sykdom-immunforsvar-pandemi",
           "step": 2,
           "type": "text",
-          "prompt": "Hva kalles en epidemi som sprer seg over store deler av verden?",
+          "prompt": "Hva kalles et smitteutbrudd som sprer seg over store deler av verden?",
           "answer": "Pandemi",
           "accept": [
             "en pandemi",
@@ -1241,21 +1283,21 @@
             "Antibiotika virker bare etter flere ukers bruk"
           ],
           "explain": "Penicillin hindrer for eksempel bakterier i å bygge ny cellevegg, og virus har ingen cellevegg. Unødig bruk ved virusinfeksjoner øker bare risikoen for resistens.",
-          "hint": "Tenk på hva slags smittestoff som gir forkjølelse, og hva penicillin angriper."
+          "hint": "Tenk på hva slags smittestoff som gir snue og sår hals, og hva penicillin ødelegger hos bakterier."
         },
         {
           "id": "bio-sykdom-immunforsvar-hvorfor-resistens",
           "step": 3,
           "type": "choice",
           "prompt": "Hva skjer når bakterier gang på gang utsettes for antibiotika?",
-          "answer": "Resistente bakterier overlever og blir en stadig større andel",
+          "answer": "Resistente bakterier overlever og blir stadig flere",
           "distractors": [
             "Hver bakterie venner seg til stoffet og blir immun",
             "Pasienten blir immun mot antibiotikumet",
             "Antibiotikumet blir svakere jo oftere det brukes"
           ],
           "explain": "Resistens oppstår ved mutasjoner eller ved at bakterier overtar resistensgener fra andre bakterier. Det er naturlig utvalg som går svært raskt, fordi bakterier formerer seg raskt.",
-          "hint": "Tenk på naturlig utvalg: Hvem overlever behandlingen, og hvem får formere seg?"
+          "hint": "Tenk på naturlig utvalg: Bakteriene i en bestand er ikke helt like."
         },
         {
           "id": "bio-sykdom-immunforsvar-forklar-vaksine",
@@ -1272,6 +1314,20 @@
           "hint": "Tenk på hva kroppen lærte av vaksinen, og hva som skjer ved neste møte med smittestoffet."
         },
         {
+          "id": "bio-sykdom-immunforsvar-hvorfor-flokkimmunitet",
+          "step": 3,
+          "type": "choice",
+          "prompt": "Hvordan kan vaksinasjon beskytte også de få som ikke selv er vaksinert?",
+          "answer": "Smitten stopper fordi den sjelden møter noen den kan smitte",
+          "distractors": [
+            "De vaksinerte overfører antistoffer til dem rundt seg",
+            "Vaksinen svekker smittestoffet i hele befolkningen",
+            "Smittestoffet muterer til en mildere form"
+          ],
+          "explain": "Dette kalles flokkimmunitet. Hvor stor andel som må være immune, avhenger av hvor smittsom sykdommen er; for meslinger må rundt 95 prosent være det. Flokkimmuniteten beskytter spedbarn og syke som ikke kan vaksineres.",
+          "hint": "Tenk på hvordan en skogbrann slukner når det ikke er mer tørr skog rundt."
+        },
+        {
           "id": "bio-sykdom-immunforsvar-aar-penicillin",
           "step": 4,
           "type": "year",
@@ -1280,15 +1336,6 @@
           "tolerance": 1,
           "explain": "Fleming publiserte funnet året etter. Han, Chain og Florey fikk nobelprisen i fysiologi eller medisin i 1945, samme år som penicillin ble tilgjengelig for allmennheten.",
           "hint": "Det var året før børskrakket i New York."
-        },
-        {
-          "id": "bio-sykdom-immunforsvar-aar-jenner",
-          "step": 4,
-          "type": "year",
-          "prompt": "Hvilket år publiserte Edward Jenner forsøkene som viste at kukopper beskytter mot kopper?",
-          "answer": "1798",
-          "explain": "Metoden spredte seg raskt i Europa og til Amerika. I 1840 ble den eldre og farligere metoden variolasjon forbudt i Storbritannia.",
-          "hint": "Det var samme år som Napoleon dro på felttog til Egypt."
         },
         {
           "id": "bio-sykdom-immunforsvar-spanskesyken",
@@ -1302,7 +1349,7 @@
             "1957–1958"
           ],
           "explain": "Anslagene spriker fra omkring 20 til 100 millioner døde, trolig flere enn i hele første verdenskrig. I Norge tok sykdommen omkring 15 000 liv, de fleste høsten 1918.",
-          "hint": "Den kom i sluttfasen av første verdenskrig."
+          "hint": "Navnet kom av at aviser i det nøytrale Spania skrev fritt om sykdommen."
         }
       ]
     },
@@ -1353,7 +1400,7 @@
           "step": 1,
           "type": "choice",
           "prompt": "Hva er et økosystem?",
-          "answer": "Organismene på et sted sammen med miljøet de lever i",
+          "answer": "Organismene på et sted og miljøet rundt dem",
           "distractors": [
             "Alle individer av én art i et område",
             "Alle artene som inngår i én næringskjede",
@@ -1374,7 +1421,7 @@
             "Oksygen og nitrogen"
           ],
           "explain": "Råstoffene er karbondioksid og vann, og energien kommer fra lys. Fotosyntesen gjør strålingsenergi om til kjemisk energi i sukker. Den samme lagrede solenergien frigjøres når vi spiser, eller når vi brenner ved, kull og olje.",
-          "hint": "Tenk på hva planter gir oss å puste i, og hva de lagrer energien i."
+          "hint": "Tenk på hvilke av stoffene plantene tar opp, og hvilke de gir fra seg."
         },
         {
           "id": "bio-okologi-nedbrytere",
@@ -1387,7 +1434,7 @@
             "De lager organisk stoff ved hjelp av energi fra sollys",
             "De sprer frø og pollen mellom plantene i området"
           ],
-          "explain": "På land ender ofte mesteparten av plantematerialet hos nedbryterne, ikke hos dyr som beiter. En meitemark som spiser døde planterester, kan selv bli spist av en fugl.",
+          "explain": "Uten nedbrytere ville døde planter og dyr hopet seg opp, og næringsstoffene ville vært bundet i dem. På land ender ofte mesteparten av plantematerialet hos nedbryterne, ikke hos dyr som beiter.",
           "hint": "Tenk på hva meitemark, sopp og bakterier gjør med løvet om høsten."
         },
         {
@@ -1416,35 +1463,21 @@
             "aerob celleånding",
             "cellulær respirasjon"
           ],
-          "explain": "Prosessen er det motsatte av fotosyntesen: Sukker og oksygen blir til karbondioksid, vann og energi. Lufta vi puster inn, har rundt 0,04 prosent CO₂, lufta vi puster ut rundt 5 prosent.",
+          "explain": "Prosessen er det motsatte av fotosyntesen: Sukker og oksygen blir til karbondioksid, vann og energi. Lufta vi puster inn, har rundt 0,04 prosent CO₂, lufta vi puster ut rundt 4 prosent.",
           "hint": "Prosessen skjer i mitokondriene og er fotosyntesen baklengs."
         },
         {
           "id": "bio-okologi-naeringsnett",
           "step": 2,
           "type": "text",
-          "prompt": "Hva kalles det når mange næringskjeder henger sammen fordi arter spiser og blir spist av flere andre arter?",
+          "prompt": "Reven spiser mus, fugler og bær og kan selv bli tatt av ørn. Hva kalles helheten når mange slike kjeder av hvem som spiser hvem, henger sammen?",
           "answer": "Næringsnett",
           "accept": [
             "næringsnettet",
             "et næringsnett"
           ],
           "explain": "Det øverste leddet i en næringskjede kalles toppredator. De fleste næringskjeder har bare tre til fire ledd.",
-          "hint": "Tenk på hvordan en edderkopp bygger noe av mange tråder som krysser hverandre."
-        },
-        {
-          "id": "bio-okologi-nitrogen",
-          "step": 2,
-          "type": "choice",
-          "prompt": "Hvilken gass utgjør omtrent 78 prosent av lufta?",
-          "answer": "Nitrogen",
-          "distractors": [
-            "Oksygen",
-            "Karbondioksid",
-            "Argon"
-          ],
-          "explain": "Bindingen mellom de to atomene i nitrogengass er så sterk at de fleste organismer ikke kan bruke den. Nitrogenfikserende bakterier gjør den om til ammonium, som planter kan ta opp. Industrien binder også nitrogen fra lufta for å lage kunstgjødsel; Norsk Hydro ble grunnlagt i 1905 for å gjøre nettopp det.",
-          "hint": "Det er ikke gassen vi trenger for å puste, men en som inngår i alle proteiner."
+          "hint": "Begrepet er et bilde på mange tråder som krysser hverandre og er knyttet sammen."
         },
         {
           "id": "bio-okologi-hvorfor-korte-kjeder",
@@ -1454,7 +1487,7 @@
           "answer": "Mye av energien går tapt for hvert ledd",
           "distractors": [
             "Rovdyr spiser bare én type byttedyr",
-            "Nedbryterne tar de fleste rovdyrene",
+            "Store rovdyr formerer seg for langsomt",
             "Hvert økosystem har for få arter"
           ],
           "explain": "Mye av det et dyr spiser, brukes i celleåndingen og blir til varme i stedet for kroppsmasse. Med omtrent 90 prosent tap per ledd blir 1000 kilo planteplankton til bare rundt 1 kilo torsk via dyreplankton og småfisk.",
@@ -1473,6 +1506,20 @@
           ],
           "explain": "Stoffer forsvinner ikke, de skifter form. Planter henter karbonet fra CO₂ i lufta, ikke fra jorda. En del av karbonet blir likevel lagret i jordsmonnet i lang tid før det går tilbake til atmosfæren.",
           "hint": "Tenk på hvor planter henter karbonet sitt fra, og hvordan det kommer tilbake dit."
+        },
+        {
+          "id": "bio-okologi-nitrogen",
+          "step": 3,
+          "type": "choice",
+          "prompt": "Lufta er nesten 80 prosent nitrogen, og alle proteiner inneholder nitrogen. Hvorfor trenger åkrene likevel nitrogengjødsel?",
+          "answer": "Plantene kan ikke bruke nitrogengassen direkte, den må bindes først",
+          "distractors": [
+            "Nitrogengassen i lufta når ikke ned til røttene i jorda",
+            "Plantene bruker opp nitrogenet i lufta over åkeren",
+            "Nitrogengassen er giftig for plantene i store mengder"
+          ],
+          "explain": "Bindingen mellom de to atomene i nitrogengass er så sterk at de fleste organismer ikke kan bryte den. Nitrogenfikserende bakterier, blant annet i rotknollene til kløver og erter, gjør den om til ammonium. Avlingene fører nitrogen bort fra åkeren, og Norsk Hydro ble grunnlagt i 1905 for å binde nitrogen fra lufta til kunstgjødsel.",
+          "hint": "Tenk på hvorfor kløver og erter, med små knoller på røttene, klarer seg med lite gjødsel."
         },
         {
           "id": "bio-okologi-forklar-energi-og-stoff",
@@ -1510,7 +1557,7 @@
             "4 prosent",
             "21 prosent"
           ],
-          "explain": "Selv om andelen er liten, er CO₂ sentral for den naturlige drivhuseffekten, som gjør Jorda levelig. Forbrenning av fossilt karbon har økt konsentrasjonen og ført til global oppvarming.",
+          "explain": "Lufta vi puster ut, har rundt 4 prosent CO₂. Selv om andelen i atmosfæren er liten, er CO₂ sentral for den naturlige drivhuseffekten, og økningen fra fossilt karbon har ført til global oppvarming.",
           "hint": "CO₂ er en sporgass; argon er langt vanligere, med nesten én prosent av lufta."
         }
       ]
@@ -1524,15 +1571,16 @@
       ],
       "summary": "Økte utslipp av klimagasser varmer opp Jorda, og verden har svart med klimaforskning og klimaavtaler.",
       "lesson": [
-        "Drivhuseffekten er naturlig. Vanndamp, CO₂ og andre drivhusgasser slipper sollyset gjennom, men fanger en del av varmestrålingen fra bakken. Uten dem ville middeltemperaturen på Jorda vært omtrent minus 18 grader i stedet for omkring pluss 15. Når vi brenner fossile brensler som kull, olje og gass, øker mengden CO₂ i atmosfæren, og drivhuseffekten forsterkes.",
+        "Drivhuseffekten er naturlig. Vanndamp, CO₂ og andre drivhusgasser i lufta slipper sollyset gjennom, men holder på en del av varmen fra bakken. Uten dem ville middeltemperaturen på Jorda vært omtrent minus 18 grader i stedet for omkring pluss 15. Kull, olje og gass er fossile brensler, dannet av planter og alger som tok opp CO₂ for millioner av år siden. Når vi brenner dem, øker mengden CO₂ i atmosfæren, og drivhuseffekten forsterkes.",
         "FNs klimapanel ble opprettet i 1988 og sammenfatter forskningen om klima. Panelet slår fast at menneskelig aktivitet har varmet opp atmosfæren, havet og landjorda. Oppvarmingen gir mer kraftig nedbør, og havet stiger fordi is på land smelter og varmere vann utvider seg. Havet tar også opp mer CO₂ og blir surere. Det rammer organismer som bygger skall av kalk, og dermed næringskjedene i havet.",
-        "I Parisavtalen fra 2015 ble praktisk talt alle land enige om å begrense oppvarmingen til godt under 2 grader, og helst til 1,5 grader, sammenlignet med førindustriell tid. Landene setter selv sine utslippsmål og skal skjerpe dem hvert femte år. Klimaendringene får også følger for det biologiske mangfoldet."
+        "I Parisavtalen fra 2015 ble praktisk talt alle land enige om å begrense oppvarmingen til godt under 2 grader, og helst til 1,5 grader, sammenlignet med førindustriell tid. Landene setter selv sine utslippsmål og skal skjerpe dem hvert femte år. Begrepet bærekraftig utvikling ble kjent gjennom FN-kommisjonen som Gro Harlem Brundtland ledet i 1987: Dagens behov skal dekkes uten å ødelegge for kommende generasjoner."
       ],
       "keyPoints": [
         "Drivhuseffekten er naturlig; CO₂ fra fossile brensler forsterker den.",
         "FNs klimapanel slår fast at menneskelig aktivitet har ført til global oppvarming.",
         "Mer CO₂ i havet gir havforsuring, som rammer kalkbyggende organismer.",
-        "Parisavtalen fra 2015 skal begrense oppvarmingen til godt under 2 grader, helst 1,5 grader."
+        "Parisavtalen fra 2015 skal begrense oppvarmingen til godt under 2 grader, helst 1,5 grader.",
+        "Bærekraftig utvikling betyr å dekke dagens behov uten å ødelegge for kommende generasjoner."
       ],
       "sources": [
         {
@@ -1565,15 +1613,15 @@
           "id": "bio-klima-miljo-drivhuseffekten",
           "step": 1,
           "type": "choice",
-          "prompt": "Hva er drivhuseffekten?",
-          "answer": "At gasser i atmosfæren holder på varme fra Jorda",
+          "prompt": "Drivhuseffekten nevnes ofte som et klimaproblem. Hva er den egentlig?",
+          "answer": "En naturlig effekt der gasser i lufta holder på varme",
           "distractors": [
-            "At hull i ozonlaget slipper inn mer sollys",
-            "At forurensning gjør sollyset sterkere",
-            "At havet avgir lagret varme om vinteren"
+            "En oppvarming som skyldes utslipp fra industrien",
+            "Et hull i ozonlaget som slipper inn mer sollys",
+            "Varme som havet avgir til lufta om vinteren"
           ],
           "explain": "Drivhuseffekten i seg selv gjør Jorda levelig. Det er forsterkningen av den, gjennom mer CO₂ i atmosfæren, som gir global oppvarming.",
-          "hint": "Tenk på hvordan et teppe holder deg varm om natten."
+          "hint": "Tenk på hvordan et teppe gjør deg varm uten å lage varme selv."
         },
         {
           "id": "bio-klima-miljo-hovedarsak",
@@ -1598,7 +1646,7 @@
           "distractors": [
             "Å stanse all bruk av olje innen 2030",
             "Å holde utslippene på 1990-nivå",
-            "Å plante skog på all ledig landjord"
+            "Å forby nye kullkraftverk i alle land"
           ],
           "explain": "Avtalen forplikter alle land til å melde inn og skjerpe egne utslippsmål, men selve målene er ikke juridisk bindende. Den er derfor kritisert for å mangle mekanismer som sikrer at målene nås.",
           "hint": "Målet er en temperaturgrense, ikke et årstall eller et utslippsnivå."
@@ -1607,30 +1655,29 @@
           "id": "bio-klima-miljo-klimapanelet",
           "step": 2,
           "type": "text",
-          "prompt": "Hvilket FN-organ vurderer og sammenfatter forskningen om klimaendringer i store hovedrapporter?",
+          "prompt": "Hvilket FN-organ sammenfatter forskningen om global oppvarming i store hovedrapporter?",
           "answer": "FNs klimapanel",
           "accept": [
             "IPCC",
             "klimapanelet",
             "FNs klimapanel IPCC"
           ],
-          "explain": "Panelet driver ikke egen forskning, men vurderer den beste tilgjengelige kunnskapen. Det fikk Nobels fredspris i 2007 sammen med Al Gore.",
+          "explain": "Panelet driver ikke egen forskning, men vurderer den beste tilgjengelige kunnskapen. Sammendragene for beslutningstakere godkjennes linje for linje av regjeringene i medlemslandene.",
           "hint": "Det delte Nobels fredspris i 2007 med Al Gore."
         },
         {
-          "id": "bio-klima-miljo-fossile-brensler",
+          "id": "bio-klima-miljo-fossilt-karbon",
           "step": 2,
-          "type": "text",
-          "prompt": "Hva kalles kull, olje og naturgass under ett?",
-          "answer": "Fossile brensler",
-          "accept": [
-            "fossilt brensel",
-            "fossil energi",
-            "fossile brennstoffer",
-            "fossilt brennstoff"
+          "type": "choice",
+          "prompt": "Hvor kommer karbonet i kull, olje og naturgass opprinnelig fra?",
+          "answer": "Fra CO₂ som planter og alger tok opp for millioner av år siden",
+          "distractors": [
+            "Fra Jordas indre, der det har ligget siden planeten ble dannet",
+            "Fra vulkanske gasser som ble fanget i berggrunnen",
+            "Fra kalkskall som ble presset sammen på havbunnen"
           ],
-          "explain": "Karbonet i dem ble en gang tatt opp av planter ved fotosyntese og lagret i millioner av år. I 2021 kom omtrent 80 prosent av verdens energiforbruk fra fossile kilder.",
-          "hint": "De er rester av planter og dyr som levde for millioner av år siden."
+          "explain": "Når vi brenner fossile brensler, slipper vi ut karbon som har vært ute av kretsløpet i millioner av år. Derfor stiger CO₂-innholdet i atmosfæren, selv om hav og skog tar opp en del. I 2021 kom omtrent 80 prosent av verdens energiforbruk fra fossile kilder.",
+          "hint": "Tenk på hvordan karbon i det hele tatt kommer inn i levende organismer."
         },
         {
           "id": "bio-klima-miljo-havforsuring",
@@ -1647,15 +1694,29 @@
           "hint": "Det samme skjer i liten skala når kullsyre løses i vann og gir brus en syrlig smak."
         },
         {
+          "id": "bio-klima-miljo-baerekraft",
+          "step": 2,
+          "type": "choice",
+          "prompt": "Hva betyr bærekraftig utvikling, slik Brundtlandkommisjonen gjorde begrepet kjent i 1987?",
+          "answer": "Å dekke dagens behov uten å ødelegge for kommende generasjoner",
+          "distractors": [
+            "Å holde den økonomiske veksten uten å øke utslippene",
+            "Å verne all natur som ennå ikke er berørt av mennesker",
+            "Å gi alle land samme levestandard innen år 2000"
+          ],
+          "explain": "Kommisjonen la fram rapporten «Vår felles framtid». Den knyttet miljø, fattigdom og utvikling sammen og la grunnlaget for FNs miljøtoppmøte i Rio de Janeiro i 1992.",
+          "hint": "Tenk på hvem som skal leve med følgene av valgene vi tar i dag."
+        },
+        {
           "id": "bio-klima-miljo-hvorfor-co2-varmer",
           "step": 3,
           "type": "choice",
-          "prompt": "Hvorfor gir mer CO₂ i atmosfæren høyere temperatur ved bakken?",
-          "answer": "CO₂ fanger varmestråling fra Jorda og sender noe tilbake",
+          "prompt": "Drivhusgassene slipper sollyset gjennom. Hvordan kan mer CO₂ likevel gjøre det varmere ved jordoverflaten?",
+          "answer": "Gassen fanger varmestråling fra bakken og sender noe tilbake",
           "distractors": [
-            "CO₂ slipper mer sollys inn gjennom ozonlaget",
-            "CO₂ reagerer med oksygen og avgir varme",
-            "CO₂ gjør skydekket tynnere, så mer sol slipper inn"
+            "Gassen slipper mer sollys inn gjennom ozonlaget",
+            "Gassen reagerer med oksygen og avgir varme",
+            "Gassen gjør skydekket tynnere, så mer sol når ned"
           ],
           "explain": "Sollyset er kortbølget og slipper gjennom, mens Jorda sender ut langbølget varmestråling. Omtrent halvparten av strålingen drivhusgassene fanger, sendes tilbake mot bakken.",
           "hint": "Tenk på at Jorda selv avgir stråling mot verdensrommet, ikke bare tar imot sollys."
@@ -1672,7 +1733,7 @@
             "Fordampningen fra havet stanser i varmt klima"
           ],
           "explain": "Fra 1880 til 2023 steg havnivået globalt med anslagsvis 21–24 centimeter. Varm luft kan dessuten holde på mer vanndamp, og kraftig nedbør er blitt hyppigere.",
-          "hint": "Tenk på isbreene på Grønland og på hva varme gjør med volumet til vann."
+          "hint": "Tenk på isbreene på Grønland og i Antarktis, men husk at de bare forklarer en del av økningen."
         },
         {
           "id": "bio-klima-miljo-forklar-havet",
@@ -1709,16 +1770,7 @@
             "Omtrent pluss 5 grader"
           ],
           "explain": "I dag er middeltemperaturen omkring 15 °C. Venus, med en atmosfære av rundt 96 prosent CO₂, har en overflatetemperatur på omkring 470 °C.",
-          "hint": "Det ville vært godt under frysepunktet, men ikke på langt nær så kaldt som på Mars."
-        },
-        {
-          "id": "bio-klima-miljo-aar-klimapanelet",
-          "step": 4,
-          "type": "year",
-          "prompt": "Hvilket år ble FNs klimapanel opprettet?",
-          "answer": "1988",
-          "explain": "Panelet ble opprettet av FNs miljøprogram og Den meteorologiske verdensorganisasjon. Den første hovedrapporten kom i 1990, den sjette i 2021–2023.",
-          "hint": "Panelet kom året før Berlinmuren falt."
+          "hint": "Drivhuseffekten løfter i dag middeltemperaturen med over 30 grader."
         },
         {
           "id": "bio-klima-miljo-paris-ambisjon",
@@ -1728,7 +1780,7 @@
           "answer": "1,5",
           "unit": "grader",
           "explain": "Tallet gjelder økningen sammenlignet med førindustriell tid. For å nå målet skal utslipp og opptak av klimagasser være i balanse i andre halvdel av dette århundret, såkalt netto null.",
-          "hint": "Grensen er lavere enn hovedmålet om godt under 2 grader."
+          "hint": "Den lave grensen kom med etter press fra små øystater som frykter at havet skal oversvømme dem."
         }
       ]
     }

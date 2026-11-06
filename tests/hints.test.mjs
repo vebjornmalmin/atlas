@@ -43,5 +43,5 @@ test('the validator stops hints that give the answer away', () => {
   assert.ok(hintProblems({type: 'order', prompt: 'Ordne.', items: [{label: 'a', year: -400}, {label: 'b', year: 150}], hint: 'Den første var rundt 400 f.Kr.'}).errors.length);
   assert.ok(hintProblems({type: 'match', prompt: 'Koble.', pairs: [{left: 'Ibsen', right: 'Et dukkehjem'}], hint: 'Ibsen skrev Et dukkehjem.'}).errors.length);
   assert.deepEqual(hintProblems({type: 'choice', prompt: 'Hvem?', answer: 'Galen', hint: 'Han var romersk lege.'}), {errors: [], warnings: []});
-  assert.deepEqual(hintProblems({type: 'choice', prompt: 'Hvem?', answer: 'Galen'}).warnings, ['mangler hint.']);
+  assert.deepEqual(hintProblems({type: 'choice', prompt: 'Hvem?', answer: 'Galen'}).errors, ['mangler hint.']);
 });

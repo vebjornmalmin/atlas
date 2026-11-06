@@ -74,6 +74,14 @@ Svar rett etter innføringen viser lite om hva som huskes. Derfor krever «Grunn
 
 84 emner og 1093 kort: 300 oversikt, 333 kjerne, 264 sammenheng og 196 detalj. Kortformene er 500 flervalg, 302 korte tekstsvar, 132 årstall og tall, 84 forklaringer, 38 koblinger og 37 rekkefølger. `docs/core-report.json` viser fordelingen per emne.
 
+## Gjennomgang og hint (november 2026)
+
+Alle kort ble gjennomgått i fire runder av uavhengige anmeldere per fagområde: to runder for riktighet (fakta, entydige svar, distraktorer, røpte svar, at svaret er undervist før det testes), én runde for verdi og spørsmålsform (er det verdt å vite, er det quiz eller forståelse, er det spurt slik en god lærer ville spurt, testes alle punktene i `keyPoints`), og en siste kontroll av endringene fra verdirunden. Regelen «Verdt å vite, ikke quiz» i [curriculum-authoring.md](curriculum-authoring.md) kom fra denne gjennomgangen.
+
+Resultat: 1520 kort i 120 emner. 1161 kort har samme ID som før, 680 av dem med endret innhold. 329 kort spurte om noe annet enn det som var verdt å vite og ble erstattet av 359 nye kort med nye ID-er; læringshistorikken på de gamle kortene følger ikke med. Alle kort har nå et skrevet hint, og validatoren stopper kort uten hint.
+
+Nettverket stengte for snl.no under gjennomgangen. Anmelderne endret bare fakta de var sikre på. Påstandene de var usikre på, står i [fact-check-queue.md](fact-check-queue.md) og bør kontrolleres mot kildene.
+
 ## Kart
 
 Emnene om verdensdeler og Norge kobles til kartøving. Kartet bruker de 176 landene i kartpakken med norske navn fra registeret; land som er for små til å treffes med en finger på telefonen, er utelatt.
