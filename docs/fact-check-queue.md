@@ -39,17 +39,8 @@ Gjennomgangen av kunnskapskjernen i november 2026 ble gjort uten tilgang til snl
 
 ## Filosofi og idéhistorie
 
-- [ ] `ide-1800-overmennesket` – Nietzsche foraktet antisemittismen.. *Står i hintet. Det er godt kjent at han brøt med antisemittene, blant annet med søsterens mann, men formuleringen bør sjekkes.*
-- [ ] `ide-1800-tidslinje` – Den norske tittelen er «Den muntre vitenskap» (ikke «vitenskapen»). *Skrivemåten er endret ut fra hukommelsen om den norske oversettelsen*
-- [ ] `ide-1900-arendt` – Arendt var statsløs fra 1937 til 1951.. *Hun mistet det tyske statsborgerskapet i 1937 og ble amerikansk statsborger i 1951. Jeg er ganske sikker, men har ikke kunnet slå det opp.*
-- [ ] `ide-1900-ondskapens-banalitet` – Senere forskning har vist at Eichmann var en mer overbevist nazist enn han ga inntrykk av i retten.. *Bygger på Bettina Stangneths forskning. Formuleringen bør kontrolleres mot Store norske leksikon.*
-- [ ] `ide-antikken-akademiet-stengt` – Justinian stengte filosofiskolene i Athen i 529; skolen var en nyplatonsk videreføring. *Historikerne er uenige om hvor reell stengingen var. Teksten er nå forsiktig formulert*
-- [ ] `ide-antikken-sokrates-dom` – I «Sokrates' forsvarstale» sier Sokrates at et liv uten prøvelse ikke er verdt å leve.. *Den norske gjengivelsen av sitatet bør sjekkes mot en norsk oversettelse.*
-- [ ] `ide-antikken-tidslinje` – Aristoteles forlot Athen etter Aleksanders død i 323 f.Kr. og døde året etter. Utsagnet om at athenerne ikke skulle synde mot filosofien to ganger er markert med «skal ha sagt».. *Utsagnet er en tradisjon og står med forbehold, men det bør vurderes om det i det hele tatt skal stå der.*
-- [ ] `ide-fornuft-tidslinje` – Lockes hovedverk om erkjennelsen er datert 1690. *Verket kom ut i desember 1689 med 1690 på tittelbladet*
-- [ ] `ide-fornuft-tom-tavle` – Descartes regnet ideen om Gud som medfødt, og Lockes syn fikk betydning for synet på oppdragelse.. *Ny forklaring, og leksjonen sier nå at rasjonalistene mente noen ideer er medfødte.*
-- [ ] `ide-hellenismen-stoisme` – Ifølge tradisjonen var Zenon en kjøpmann fra Kypros. *Bygger på tradisjon og er merket som det*
-- [ ] `ide-middelalder-arabisk-arv` – Greske verk ble oversatt til arabisk i Bagdad på 800-tallet og videre til latin fra 1100-tallet, særlig i Toledo.. *Ny forklaring om oversettelsesbevegelsene.*
+- [ ] `ide-antikken-sokrates-dom` – I «Sokrates' forsvarstale» sier Sokrates at et liv uten prøvelse ikke er verdt å leve. *Ikke funnet i SNL (november 2026): Utsagnet står i Platons forsvarstale (38a), men SNL siterer det ikke, og jeg fant ingen norsk oversettelse å kontrollere ordlyden mot. Kortet gjengir utsagnet med egne ord og uten anførselstegn, så teksten står urørt.*
+- [ ] `ide-hellenismen-stoisme` – Ifølge tradisjonen var Zenon en kjøpmann fra Kypros. *Ikke funnet i SNL (november 2026): SNL bekrefter at Zenon fra Kition grunnla stoaen og underviste i Stoa poikile, men nevner ikke at han var kjøpmann. Opplysningen kommer fra Diogenes Laertios og er allerede merket som tradisjon. Teksten står urørt.*
 
 ## Geografi
 
@@ -83,61 +74,6 @@ Gjennomgangen av kunnskapskjernen i november 2026 ble gjort uten tilgang til snl
 - [ ] `geo-norges-landskap-sognefjorden` – Den grunne terskelen ved fjordmunningen er der breen stoppet og la igjen grus og stein.. *Terskler kan også være fast fjell, så generaliseringen bør kontrolleres*
 - [ ] `geo-norges-landskap-sognefjorden` – Regnet fra havet er Sognefjorden 226 kilometer lang. *Lengden oppgis ofte som 204–205 km. Kilden bør sjekkes.*
 - [ ] `geo-norges-landskap-sognefjorden` – Største dyp er 1303 m, utenfor Vadheim, og munningen er 150–200 m dyp. *Noen kilder oppgir 1308 m. Jeg er heller ikke sikker på at det dypeste punktet ligger ved Vadheim.*
-
-## Kunst, arkitektur og musikk
-
-- [ ] `kul-arkitektur-kapitel` – Romerne foretrakk den korintiske ordenen, og søylene foran Pantheon er korintiske.. *Ny forklaring og ny leksjonstekst om kapitelene.*
-- [ ] `kul-arkitektur-nidaros` – Nidarosdomen er den eneste kirken i Norge med gjennomgående gotiske strebebuer. *Påstanden er sterk, og jeg kunne ikke kontrollere den.*
-- [ ] `kul-arkitektur-nidaros` – Nidarosdomen er den eneste kirken i Norge med gjennomgående gotiske strebebuer.. *Påstanden er absolutt, og jeg kan ikke kontrollere den. Stavanger domkirke har gotiske deler.*
-- [ ] `kul-arkitektur-pyramider` – Vi kjenner 138 pyramider, bygd fra omkring 2600 til 1600 f.Kr.. *Antallet varierer mellom kildene (118–138), og Djosers pyramide er nærmere 2650 f.Kr.*
-- [ ] `kul-klassisk-musikk-chopin` – Chopin forlot Warszawa like før opprøret i 1830 og vendte aldri hjem; han levde i mange år med George Sand.. *Nytt kort.*
-- [ ] `kul-kunstepoker-ekspresjonisme` – Nazistene stemplet ekspresjonismen som «entartet» og fjernet den fra tyske museer, også mange bilder av Munch.. *Ny forklaring.*
-- [ ] `kul-mesterverk-nattevakten-nytt` – Det nye ved «Nattevakten» var at skytterkompaniet vises i bevegelse, ikke oppstilt på rekke som i eldre gruppeportretter.. *Nytt svar og ny leksjonstekst; standard kunsthistorie, men ikke kontrollert mot kilden i emnet.*
-- [ ] `kul-mesterverk-vermeer` – Thoré-Bürger gjenoppdaget Vermeer i 1866; turbanen er malt med ultramarin av lapis lazuli.. *Ny forklaring, skrevet fra hukommelsen.*
-- [ ] `kul-mesterverk-vermeer-lys` – Mange av Vermeers bilder viser samme hjørne av et rom med lys fra et vindu til venstre.. *Ny forklaring; dette er en vanlig beskrivelse, men ikke kildekontrollert.*
-- [ ] `kul-moderne-kunst-impulser` – Cézanne døde i 1906, og minneutstillingen i Paris i 1907 fikk stor betydning for Picasso og Braque.. *Ny forklaring.*
-- [ ] `kul-moderne-kunst-kandinskij` – Kandinskij sluttet omkring 1909 å framstille en synlig virkelighet.. *Mange kilder setter de første helt abstrakte bildene til 1910–1911. Sjekk ordlyden mot SNL.*
-- [ ] `kul-moderne-kunst-kandinskij` – Kandinskij sluttet omkring 1909 å fremstille en synlig virkelighet. *Mange kilder setter de første abstrakte bildene til 1910–1911. «Omkring» dekker trolig dette, men bør sjekkes mot SNL.*
-- [ ] `kul-norsk-kunst-brudeferd-aar` – En gjentakelse fra 1848 har Ole Bull som modell for felespilleren.. *Jeg kan ikke bekrefte detaljen, og snl.no var blokkert. Den står i forklaringen fra tidligere runder.*
-- [ ] `kul-norsk-kunst-brudeferd-aar` – Samme år ble en gjentakelse malt der Ole Bull satt modell for felespilleren. *Jeg kan ikke bekrefte at Ole Bull var modell for felespilleren i gjentakelsen fra 1848.*
-- [ ] `kul-norsk-kunst-brudeferd-aar` – Samme år ble en gjentakelse malt der Ole Bull satt modell for felespilleren.. *Jeg fant ingen sikker bekreftelse på denne opplysningen. Den står urørt.*
-- [ ] `kul-norsk-kunst-kielland` – Kielland delte bolig med Harriet Backer i både München og Paris. *At de bodde sammen i Paris, er godt kjent. München er mindre sikkert.*
-- [ ] `kul-norsk-kunst-kielland` – Kielland og Harriet Backer delte bolig i både München og Paris.. *Jeg er sikker på Paris, men ikke på München.*
-- [ ] `kul-norsk-kunst-skrik-versjon` – Munch laget fem versjoner av «Skrik»: to malerier, én i fargestift, én i pastell og et litografi.. *Kildene teller ulikt. Noen regner to pasteller (1893 og 1895), og litografiet finnes i mange trykk.*
-- [ ] `kul-norsk-musikk-a-moll` – Klaverkonserten i a-moll (1868) gjorde Grieg kjent i Europa før «Peer Gynt»; Liszt spilte den fra bladet i Roma; finalen bruker hallingrytme; Schumanns konsert var forbilde.. *Nytt kort og ny leksjonssetning; gjennombruddsformuleringen og hallingrytmen er skrevet fra hukommelsen, uten SNL-kontroll.*
-- [ ] `kul-norsk-musikk-backer-grondahl` – Hun skrev rundt 250 romanser og 150 klaverstykker. *Tallene på romansene varierer mellom kildene, og jeg kunne ikke kontrollere dem mot SNL.*
-- [ ] `kul-norsk-musikk-halvorsen` – Halvorsen redigerte den første trykte utgaven av hele scenemusikken til «Peer Gynt» i 1908.. *Jeg har rettet formuleringen fra minnet. Årstallet og Halvorsens rolle bør sjekkes mot SNL.*
-- [ ] `kul-norsk-musikk-halvorsen` – Han ledet orkesteret 1899–1929 med ett års avbrudd og satte i 1908 sammen den første trykte utgaven av «Peer Gynt»-musikken. *Avbruddet og påstanden om 1908-utgaven kunne ikke kontrolleres.*
-- [ ] `kul-norsk-musikk-myllarguten` – Ole Bull møtte Myllarguten første gang i 1831 (også årstallet i kul-norsk-musikk-rekkefolge).. *De mest kjente felles konsertene var i 1849. Jeg er ikke sikker på 1831 som første møte.*
-- [ ] `kul-norsk-musikk-nasjonalromantikk` – I 1849 ble «Brudeferd i Hardanger» vist som levende bilde i Christiania med Ole Bull som felespiller i båten.. *Tablået fra 1849 er kjent, men jeg er usikker på at Ole Bull deltok. Påstanden står urørt.*
-- [ ] `kul-norsk-musikk-nasjonalromantikk` – I 1849 ble «Brudeferd i Hardanger» vist som levende bilde, med Ole Bull som felespiller i båten. *Det er usikkert om Ole Bull selv opptrådte i levende bilder-forestillingen i 1849.*
-
-## Litteratur og språk
-
-- [ ] `lit-1900-tallet-norsk-aar-hamsun` – Hintet: Norge ble medlem av Folkeforbundet i 1920. *Hintet bygger på dette årstallet*
-- [ ] `lit-1900-tallet-norsk-undset-krig` – Undsets sønn Anders falt i kamp mot tyskerne i april 1940.. *Jeg er ganske sikker (Segalstad bru, 27. april 1940), men opplysningen er ny i dette kortet.*
-- [ ] `lit-ibsen-utlandet` – Reisen i 1864 ble finansiert med et reisestipend og penger som Bjørnson samlet inn. Etter «Brand» fikk Ibsen en årlig diktergasje fra Stortinget.. *Jeg har skrevet dette om fra en usikker formulering. Det bør kontrolleres mot SNL.*
-- [ ] `lit-moderne-norsk-beatles` – «Beatles» er blant de mest leste norske romanene etter krigen, og «Halvbroren» fikk Nordisk råds litteraturpris. *Prisen er sikker. Lesertallene er en vurdering*
-- [ ] `lit-moderne-norsk-forklar-autofiksjon` – Familie og venner opptrer under egne navn i «Min kamp». *Gjelder for de fleste, men noen navn kan være endret i enkelte bind*
-- [ ] `lit-moderne-norsk-fosse-nobel` – Begrunnelsen på nynorsk er «for hans nyskapande dramatikk og prosa som gjev stemme til det useielege» (står også i leksjonen L2).. *Jeg mener NRK og andre også har brukt «gjev røyst til det useielege». Ordlyden bør sjekkes mot Svenska Akademiens norske tekst.*
-- [ ] `lit-moderne-norsk-hovedlinje` – «25. septemberplassen» kom i 1974, «Beatles» i 1984, «Flaggermusmannen» i 1997 og første bind av «Min kamp» i 2009.. *Årstallene vises etter svaret i et nytt rekkefølgekort.*
-- [ ] `lit-moderne-norsk-nesbo` – Jo Nesbø er vokalist i Di Derre, og bøkene er oversatt til over 40 språk.. *Opplysningen om Di Derre er ny og står i hintet.*
-- [ ] `lit-moderne-norsk-solstad` – Solstad fikk Nordisk råds litteraturpris for «Roman 1987», og Fløgstad, Obrestad og Haavardsholm var venstreradikale forfattere i 1970-årene.. *Det er nye distraktorer og et nytt hint. Det må kontrolleres at ingen av distraktorene skrev «Genanse og verdighet», og at prisåret er 1989.*
-- [ ] `lit-norron-litteratur-kenning` – «havets hest» er en kenning for skip, og «Sivs hår» er en kenning for gull.. *Eksemplene er vanlige i lærebøker, men den eksakte norske ordlyden bør bekreftes.*
-- [ ] `lit-norron-litteratur-skald` – Vi kjenner navnet på mer enn 250 skalder, sju av dem kvinner.. *Tallene er presise og kom fra en tidligere runde. Jeg har ikke kunnet kontrollere dem mot Store norske leksikon.*
-- [ ] `lit-norron-litteratur-skaldekvad-kilde` – Snorre skrev i forordet til «Heimskringla» at diktene er minst forandret når de er riktig kvedet, og at ingen skald ville hylle kongen for bragder alle visste var usanne.. *Innholdet er gjengitt fra hukommelsen. Ordlyden bør kontrolleres mot en oversettelse av forordet.*
-- [ ] `lit-norsk-sprak-jamstilling` – Jamstillingsvedtaket ble gjort med 78 stemmer fra Venstre, mens Høyre og to fra Venstre stemte mot.. *Den eksakte stemmefordelingen står i forklaringen fra tidligere runder, og jeg kunne ikke kontrollere den. Det kan ha vært enstemmig eller en annen fordeling.*
-- [ ] `lit-norsk-sprak-samisk` – Offentlige organer har samme ansvar for nordsamisk, lulesamisk og sørsamisk som for bokmål og nynorsk.. *Formuleringen i språkloven § 1 bør sjekkes ordrett.*
-- [ ] `lit-norsk-sprak-samnorsk` – Stortinget oppga samnorskpolitikken (tilnærmingspolitikken) i 2002 (leksjonen). *Sikker på hovedtrekket, men årstallet for den formelle avviklingen bør bekreftes mot SNL*
-- [ ] `lit-norske-klassikere-fire-store` – Gyldendal brukte betegnelsen «de fire store» i markedsføringen, og slik festet den seg.. *Jeg er ikke sikker på at det var forlaget som skapte eller spredte betegnelsen.*
-- [ ] `lit-norske-klassikere-ja-vi-elsker` – Det første barnetoget 17. mai i 1870 kom på Bjørnsons initiativ.. *Bjørnson får vanligvis æren, men kildene kan tilskrive initiativet andre.*
-- [ ] `lit-norske-klassikere-ja-vi-elsker` – Det første barnetoget i 1870 ble arrangert på Bjørnsons initiativ (eksisterende forklaring). *Kildene er delvis uenige om hvem som tok initiativet og om årstallet*
-- [ ] `lit-norske-klassikere-utelatt` – Amalie Skram var fra Bergen og debuterte sent, etter et ulykkelig første ekteskap med en skipskaptein.. *Det er et nytt hint. Første ekteskap var med kaptein August Müller, og debuten kom i 1882.*
-- [ ] `lit-norske-klassikere-welhaven` – Welhaven var fra Bergen. Wergelands tilhengere ville bryte med det danske, mens Welhavens krets ville bygge videre på den dansk-europeiske dannelsen.. *Ny forklaring skrevet uten tilgang til SNL. Hovedlinjen er sikker, men formuleringen av de to leirene bør sjekkes.*
-- [ ] `lit-romanens-storhetstid-elendige` – Hugo skrev «De elendige» ferdig i eksil på Guernsey, fordi han var motstander av Napoleon 3.. *Jeg er sikker, men har ikke kunnet slå det opp.*
-- [ ] `lit-romanens-storhetstid-raskolnikov` – Sonja hjelper Raskolnikov til å tilstå.. *Ny forklaring.*
-- [ ] `lit-verdensklassikere-dante-reise` – Dantes helvete har ni kretser, og Dante plasserte paver og politiske fiender fra Firenze der.. *Ny forklaring.*
-- [ ] `lit-verdensklassikere-rekkefolge` – «Hamlet» er tidfestet til år 1600 i rekkefølgekortet.. *Stykket ble til omkring 1599–1601. Kortet og leksjonen sier «omkring», men tallet vises etter svaret.*
 
 ## Liv, kropp og miljø
 
