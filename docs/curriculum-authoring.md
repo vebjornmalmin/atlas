@@ -88,7 +88,8 @@ Appen har et andre hjelpetrinn som lages automatisk: forbokstav og antall boksta
 6. **Klart, voksent bokmål.** Korte setninger. Ingen fyllfraser («Det gir et konkret holdepunkt …»), ingen utropstegn, ingen engelske stedsnavn når det finnes norske (Beograd, ikke Belgrade).
 7. **Svarformen passer svaret.** Navn og årstall får korte felt; forklaringer får `explain`.
 8. **Distraktorer lærer også.** Bruk ekte personer, steder og perioder fra samme felt. Ikke tull, ikke «alle de ovennevnte». Det riktige svaret skal ikke skille seg ut ved lengde eller form. De beste distraktorene er vanlige misforståelser (frigjøringserklæringen avskaffet *ikke* slaveriet i hele USA) og naboer i tid (krigen i 1812 for Lincoln). Forklaringen etter svaret sier gjerne hvorfor den nærmeste distraktoren er feil.
-9. **Faste ID-er.** ID-er endres aldri etter publisering, fordi læringshistorikken følger dem. Endres betydningen av et kort vesentlig, får det ny ID.
+9. **Verdt å vite, ikke quiz.** Hvert kort skal kunne forsvares som noe en allmenndannet voksen har nytte av å vite. Kuriositeter, tilfeldige antall, rekordtall og perifere navn hører ikke hjemme i steg 1–3, og sjelden i steg 4. Still spørsmålet slik en god lærer ville gjort: med nok sammenheng til at det gir mening og eleven skjønner hva slags svar som ventes, uten gåteform, «Hvilket av følgende» eller formuleringer kopiert fra leksjonen. Foretrekk hva noe er, hvorfor det skjedde og hva det førte til framfor isolerte fakta. Ankerne som bærer kunnskapen (1814, 1905, Ibsen, fotosyntese) er ikke trivia og skal testes skarpt. Alle punktene i `keyPoints` skal testes av minst ett kort, og to kort skal ikke teste det samme.
+10. **Faste ID-er.** ID-er endres aldri etter publisering, fordi læringshistorikken følger dem. Endres betydningen av et kort vesentlig, får det ny ID.
 
 ## Kontroll
 
