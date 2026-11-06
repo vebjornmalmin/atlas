@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {factKey,learningStage,quizProgress,overviewBounds} from '../src/lib/journey.js';
 import {selectSession,selectPracticeSession,targetMatches} from '../src/lib/learning.js';
-import {saveJournal,readJournal,questionDraft,restoreDraft} from '../src/lib/session-journal.js';
+import {saveJournal,readJournal,questionDraft,restoreDraft,dropRetired} from '../src/lib/session-journal.js';
 const target=(id,extra={})=>({id,entityId:id,mode:'recall',collectionIds:['history'],difficulty:2,significance:4,answer:id,...extra});
 const now=new Date('2026-10-11T09:00:00Z');
 test('levels are bands: a typed exact year is too hard for orientation, and a high level leaves out easy questions',()=>{
@@ -50,6 +50,20 @@ test('reload restores the exact draft, without applying it to another question o
  assert.equal(readJournal(storage,{...session,index:3}),null);
  assert.equal(readJournal(storage,{...session,sessionId:'two'}),null);
  assert.equal(restoreDraft(target('b'),draft),null);
+});
+
+test('a saved session skips cards retired by a content update and keeps the answers already given',()=>{
+ const known=new Set(['a','c','d']),exists=entry=>known.has(entry.id);
+ const session={sessionId:'one',status:'active',index:1,queue:[{id:'gone'},{id:'b'},{id:'c'},{id:'old'},{id:'d'}],draft:{targetId:'b',answer:'x'}};
+ const pruned=dropRetired(session,exists);
+ assert.deepEqual(pruned.queue.map(e=>e.id),['gone','c','d']);
+ assert.equal(pruned.index,1);assert.equal(pruned.draft,null);assert.equal(pruned.status,'active');
+ const intact={...session,queue:[{id:'a'},{id:'c'}],draft:{targetId:'c'}};
+ assert.equal(dropRetired(intact,exists),intact);
+ const kept=dropRetired({...session,queue:[{id:'a'},{id:'c'},{id:'old'}]},exists);
+ assert.deepEqual(kept.draft,session.draft);
+ assert.equal(dropRetired({...session,queue:[{id:'a'},{id:'old'}]},exists).status,'completed');
+ assert.equal(dropRetired(null,exists),null);
 });
 
 test('map panning reveals all regions without centering a target and is clamped to the dataset',()=>{

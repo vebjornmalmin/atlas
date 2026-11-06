@@ -29,7 +29,7 @@
   import {APP_VERSION,APP_CHECK_INTERVAL,OFFLINE_HEADER,createAppUpdateChecker} from '../lib/app-updates.js';
   import {foundationTargets} from '../lib/foundations.js';
   import {factKey,learningStage,quizProgress,overviewBounds,effectiveRating} from '../lib/journey.js';
-  import {saveJournal,readJournal,questionDraft,restoreDraft} from '../lib/session-journal.js';
+  import {saveJournal,readJournal,questionDraft,restoreDraft,dropRetired} from '../lib/session-journal.js';
   import {hintSteps,removesOption,removedOption} from '../lib/hints.js';
   import Feedback from '../lib/Feedback.svelte';
   import {answerPresentation,contextualExplanation,questionSupport} from '../lib/presentation.js';
@@ -411,8 +411,10 @@
     await put(db,'sessions',session);
     await prepareQuestion();
   }
+  // A content update can retire cards that a saved session still has ahead of it.
+  const entryExists = entry => isLessonEntry(entry) ? Boolean(data?.curriculum?.units.some(u=>u.id===entry.unitId)) : targets.some(t=>t.id===entry?.id);
   async function resumeSession(saved = null) {
-    if(saved) {await archiveActive();session={...saved,id:'active'};await put(db,'sessions',session);await prepareQuestion(saved.draft);await refresh();}
+    if(saved) {await archiveActive();session={...dropRetired(saved,entryExists),id:'active'};await put(db,'sessions',session);await prepareQuestion(session.draft);await refresh();}
     if (!current && !currentLesson) { notify('Spørsmålet er ikke tilgjengelig. Du kan starte en ny quiz.'); return; }
     sessionScreen = true; view='today';window.location.hash='today'; window.scrollTo(0,0);
   }
@@ -600,6 +602,7 @@
         await restoreSourceContent();
         maps=await Promise.all(['world','norway'].map(async id=>{const r=await fetch(`/maps/${id}.json`);if(!r.ok)throw new Error('Kartpakken er utilgjengelig.');return r.json();}));
         await refresh();session=await get(db,'sessions','active') || null;
+        const pruned=dropRetired(session,entryExists);if(pruned!==session){session=pruned;await put(db,'sessions',session);}
         const journal=readJournal(localStorage,session);
         await prepareQuestion(journal?.draft || session?.draft);
         if(journal?.view===view){sessionScreen=Boolean(journal.screen && session);detailId=journal.detailId || '';}
