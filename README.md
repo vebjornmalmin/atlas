@@ -6,6 +6,8 @@ Live app: https://atlas-first-app.atlas-memory.workers.dev
 
 ## Gjeldende utgave — 1.7.0: Forbindelser og varmekart på kartet
 
+Publisert 6. november 2026: app 1.7.0, utgivelse `873e7755ff74`, kunnskapspakke 2.2.2 (uendret), som statiske filer via Wrangler fra `main` etter at `main` var sendt til GitHub. Safari i simulatoren fant den nye utgaven på den publiserte adressen, oppdaterte seg og viste Kart med forbindelseslinjene og lagknappen.
+
 **Velger du et land eller en person i Atlas → Kart, tegnes forbindelsene til andre land.** Hele linjer med pilspiss er kildebelagte forbindelser med retning: nobelprisvinnere og institusjonen de var knyttet til da prisen ble tildelt, påvirkning mellom tenkere, og nyheter som omtaler et annet land. Stiplede linjer uten pilspiss er land som nevnes i samme emne i Atlas, for eksempel Brasil og Angola i «Oppdagelsesreisene» eller Egypt og Hellas i «Antikkens Hellas». Linjene er tykkere jo flere forbindelser det er, og vifter ut når flere går samme vei. Inntil 30 land tegnes, de sterkeste først.
 - **Trykk på et land med linje**, på kartet eller i listen «Forbindelser på kartet»: linjen utheves, de andre tones ned, landet får navn, og et kort sier hva forbindelsen er, med kildesetningen eller emnet. Emnene i kortet åpnes i Emner. Trykk på landet igjen eller på «Gå til …» for å gå dit. På globusen snus kloden til landet først, og land på baksiden får ingen linje.
 - Norge har nå forbindelser til 33 land (4 fra registrene alene), Brasil til 14 (2), Egypt til 37 (0), og 93 av 172 land har minst én. Grenser, regioner og hovedsteder er geografi og tegnes ikke som linjer.
