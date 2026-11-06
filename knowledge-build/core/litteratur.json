@@ -47,6 +47,10 @@
         {
           "title": "Snorre Sturlason – Store norske leksikon",
           "url": "https://snl.no/Snorre_Sturlason"
+        },
+        {
+          "title": "Heimskringla – Store norske leksikon",
+          "url": "https://snl.no/Heimskringla"
         }
       ],
       "cards": [
@@ -175,7 +179,7 @@
             "Skaldene var kongenes egne sønner og brødre",
             "Kirken hadde godkjent skaldediktene som sanne"
           ],
-          "explain": "Snorre skrev selv at diktene er minst forandret når de er riktig kvedet. Han pekte også på at skaldene framførte diktene for kongen og hirden, og at ingen ville våge å hylle kongen for bragder alle visste var usanne.",
+          "explain": "Snorre skrev selv at diktene er minst forandret når de er riktig kvedet og forstandig tolket. Han pekte også på at skaldene framførte diktene for kongen og hirden, og at ingen ville våge å hylle kongen for bragder alle visste var usanne.",
           "hint": "Tenk på forskjellen mellom å gjenfortelle en historie og å gjengi et dikt med strenge regler for rytme og rim."
         },
         {
@@ -279,6 +283,14 @@
         {
           "title": "De fire store – Store norske leksikon",
           "url": "https://snl.no/de_fire_store"
+        },
+        {
+          "title": "barnetog – Store norske leksikon",
+          "url": "https://snl.no/barnetog"
+        },
+        {
+          "title": "Johan Sebastian Welhaven – Store norske leksikon",
+          "url": "https://snl.no/Johan_Sebastian_Welhaven"
         }
       ],
       "cards": [
@@ -336,7 +348,7 @@
             "Bjørnstjerne",
             "Bjørnstjerne Bjørnsson"
           ],
-          "explain": "Den første versjonen kom i 1859, og melodien skrev fetteren Rikard Nordraak. Bjørnson fikk tilnavnet «nasjonalskald», og det var på hans initiativ at det første barnetoget ble arrangert på 17. mai i 1870.",
+          "explain": "Den første versjonen kom i 1859, og melodien skrev fetteren Rikard Nordraak. Bjørnson fikk tilnavnet «nasjonalskald». I 1870 tok han initiativ til det første store barnetoget på 17. mai i Christiania, året etter at skolebestyrer Peter Qvam hadde gått i tog med elevene ved sin egen skole.",
           "hint": "Melodien skrev fetteren hans, Rikard Nordraak."
         },
         {
@@ -467,7 +479,7 @@
             "Ivar Aasen",
             "Andreas Munch"
           ],
-          "explain": "Striden handlet også om nasjonen: Wergelands tilhengere ville bryte med det danske, mens Welhaven og kretsen hans ville bygge videre på den dansk-europeiske dannelsen. Welhaven er selv husket som en av romantikkens fineste lyrikere.",
+          "explain": "Striden handlet også om nasjonen: Wergelands krets, «Norskhetspartiet», ville skape en særnorsk kultur, mens Welhaven og «Intelligenspartiet» ville bygge videre på det beste i tysk-dansk klassisisme og romantikk. Welhaven er selv husket som en av romantikkens fineste lyrikere.",
           "hint": "Han var bergenser og ville ha en klar, harmonisk diktning etter dansk mønster."
         }
       ]
@@ -553,7 +565,7 @@
             "I København og Stockholm",
             "I Paris og London"
           ],
-          "explain": "Et reisestipend og penger som Bjørnson samlet inn, gjorde reisen mulig, og etter «Brand» fikk han en årlig diktergasje fra Stortinget. Han flyttet tilbake i 1891 og skrev de fire siste skuespillene i Norge.",
+          "explain": "Et reisestipend fra Stortinget og en landsdekkende innsamling gjorde reisen mulig, og etter «Brand» fikk han en årlig diktergasje fra Stortinget. Han flyttet tilbake i 1891 og skrev de fire siste skuespillene i Norge.",
           "hint": "Han reiste ut i 1864, skuffet over at Norge ikke hjalp Danmark i krigen mot Preussen og Østerrike."
         },
         {
@@ -923,7 +935,7 @@
       "lesson": [
         "Fra 1960-årene ble norsk litteratur først eksperimenterende og så politisk. Dag Solstad etablerte seg i 1970-årene som sin generasjons sentrale romanforfatter. Fra 1980-årene vendte mange seg bort fra den politiske litteraturen, og «den gode fortelling» fikk en renessanse hos blant andre Herbjørg Wassmo og Lars Saabye Christensen, som skrev «Beatles» (1984). Krimromanen ble «stueren», og etter 1990 utgjør krim- og spenningslitteratur nær halvparten av skjønnlitteraturen som selges.",
         "Jon Fosse debuterte i 1983 med romanen «Raudt, svart» og ble på 1990-tallet en av landets viktigste dramatikere og romanforfattere. Han skriver på nynorsk, med gjentakelser, musikalitet og minimalisme. Han er blant de mest spilte levende dramatikerne i verden. I 2023 fikk han nobelprisen i litteratur «for hans nyskapande dramatikk og prosa som gjev stemme til det useielege».",
-        "Etter 2000 ble selvbiografisk roman og autofiksjon vanlig. Hovedeksempelet er Karl Ove Knausgårds seksbindsverk «Min kamp» (2009–2011), der familie og venner opptrer under egne navn. Norsk litteratur har også nådd et verdenspublikum. Jostein Gaarders «Sofies verden» (1991), en roman om filosofiens historie, ble en av verdens mest solgte bøker. Jo Nesbøs kriminalromaner om etterforskeren Harry Hole er oversatt til over 40 språk."
+        "Etter 2000 ble selvbiografisk roman og autofiksjon vanlig. Hovedeksempelet er Karl Ove Knausgårds seksbindsverk «Min kamp» (2009–2011), der familie og venner for det meste opptrer under egne navn. Norsk litteratur har også nådd et verdenspublikum. Jostein Gaarders «Sofies verden» (1991), en roman om filosofiens historie, ble en av verdens mest solgte bøker. Jo Nesbøs kriminalromaner om etterforskeren Harry Hole er oversatt til over 40 språk."
       ],
       "keyPoints": [
         "Jon Fosse skriver på nynorsk og fikk nobelprisen i litteratur i 2023.",
@@ -947,6 +959,14 @@
         {
           "title": "Jo Nesbø – Store norske leksikon",
           "url": "https://snl.no/Jo_Nesb%C3%B8"
+        },
+        {
+          "title": "Karl Ove Knausgård – Store norske leksikon",
+          "url": "https://snl.no/Karl_Ove_Knausg%C3%A5rd"
+        },
+        {
+          "title": "Lars Saabye Christensen – Store norske leksikon",
+          "url": "https://snl.no/Lars_Saabye_Christensen"
         }
       ],
       "cards": [
@@ -1071,7 +1091,7 @@
           "step": 3,
           "type": "explain",
           "prompt": "Forklar hva autofiksjon er, og hvorfor «Min kamp» vakte så sterke reaksjoner.",
-          "answer": "Autofiksjon er romaner som bygger tett på forfatterens eget liv, med virkelige personer som modeller. I «Min kamp» opptrer Knausgårds familie og venner under egne navn, og noen av dem mente de ble utlevert. Samtidig fascinerte ærligheten og nærheten mange lesere.",
+          "answer": "Autofiksjon er romaner som bygger tett på forfatterens eget liv, med virkelige personer som modeller. I «Min kamp» skriver Knausgård om familie og venner, de fleste under egne navn, og noen av dem mente de ble utlevert. Samtidig fascinerte ærligheten og nærheten mange lesere.",
           "checklist": [
             "Romaner tett på forfatterens eget liv",
             "Virkelige personer følte seg utlevert",
@@ -1117,7 +1137,7 @@
             "Saabye",
             "Christensen"
           ],
-          "explain": "Romanen er en av de mest leste norske romanene etter krigen. For «Halvbroren» (2001) fikk Saabye Christensen Nordisk råds litteraturpris.",
+          "explain": "Romanen er en av de største salgssuksessene i norsk litteratur. For «Halvbroren» (2001) fikk Saabye Christensen Nordisk råds litteraturpris.",
           "hint": "Forfatteren er også lyriker og skrev senere «Halvbroren»."
         },
         {
@@ -1131,7 +1151,7 @@
             "Tor Obrestad",
             "Espen Haavardsholm"
           ],
-          "explain": "Solstad var med på å utvikle den episke modernismen på slutten av 1960-tallet. I 1970-årene skrev han politiske romaner som «25. septemberplassen» (1974), da han hadde tilknytning til AKP. Fløgstad, Obrestad og Haavardsholm var også venstreradikale forfattere i samme tiår.",
+          "explain": "Solstad var med på å utvikle den episke modernismen på slutten av 1960-tallet. I 1970-årene skrev han politiske romaner som «25. septemberplassen» (1974), da han hadde tilknytning til AKP. Fløgstad, Obrestad og Haavardsholm skrev også politisk engasjert litteratur i samme tiår.",
           "hint": "Han var fra Sandefjord og fikk Nordisk råds litteraturpris for «Roman 1987»."
         }
       ]
@@ -1663,6 +1683,10 @@
         {
           "title": "Språklova – Store norske leksikon",
           "url": "https://snl.no/spr%C3%A5klova"
+        },
+        {
+          "title": "samnorsk – Store norske leksikon",
+          "url": "https://snl.no/samnorsk"
         }
       ],
       "cards": [

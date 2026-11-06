@@ -47,6 +47,10 @@
         {
           "title": "akademi – Store norske leksikon",
           "url": "https://snl.no/akademi"
+        },
+        {
+          "title": "Justinian 1. – Store norske leksikon",
+          "url": "https://snl.no/Justinian_1."
         }
       ],
       "cards": [
@@ -155,7 +159,7 @@
               "year": -322
             }
           ],
-          "explain": "Platon grunnla Akademiet om lag tolv år etter Sokrates' død. Da Aleksander døde, vendte athenerne seg mot alt makedonsk, og Aristoteles, som hadde vært læreren hans, flyktet fra byen. Han ville ikke, som han skal ha sagt, la athenerne synde mot filosofien to ganger.",
+          "explain": "Platon grunnla Akademiet om lag tolv år etter Sokrates' død. Da Aleksander døde, vendte athenerne seg mot alt makedonsk, og Aristoteles, som hadde vært læreren hans, forlot byen. Han døde året etter på Euboia.",
           "hint": "Aristoteles måtte forlate Athen da hans berømte elev døde."
         },
         {
@@ -482,6 +486,10 @@
         {
           "title": "aristotelisme – Store norske leksikon",
           "url": "https://snl.no/aristotelisme"
+        },
+        {
+          "title": "arabisk filosofi – Store norske leksikon",
+          "url": "https://snl.no/arabisk_filosofi"
         },
         {
           "title": "Vestens filosofer – Store norske leksikon",
@@ -904,7 +912,7 @@
         "Georg Wilhelm Friedrich Hegel så historien som fornuftens utvikling gjennom motsetninger, der hver tilstand fører fram til sin motsetning og en ny helhet. Hovedverket «Åndens fenomenologi» kom i 1807, og han skrev at det som er virkelig, er fornuftig. Karl Marx bygde på Hegel, men mente at økonomien og produksjonsforholdene, ikke ideene, driver historien. Synet kalles historisk materialisme. Med Friedrich Engels skrev han «Det kommunistiske manifest» (1848), som slutter med «Proletarer i alle land, foren dere».",
         "John Stuart Mill var utilitarist: Riktig handling er den som gir størst mulig lykke for flest mulig. I «Om friheten» (1859) hevdet han at staten bare skal gripe inn i den enkeltes liv for å hindre skade på andre.",
         "Søren Kierkegaard satte den enkeltes valg over Hegels system og skrev at subjektiviteten er sannheten. I «Enten-Eller» (1843) satte han det estetiske livet, som jager etter nytelse, opp mot det etiske, som bygger på plikt og valg. Senere la han til det religiøse som en tredje måte å leve på.",
-        "Friedrich Nietzsche kritiserte kristen moral og tradisjonell metafysikk. I «Den muntre vitenskap» (1882) skrev han at Gud er død: Troen som hadde båret moralen i Europa, var i ferd med å forsvinne. Faren var nihilisme, at de høyeste verdiene mister sin kraft. I «Slik talte Zarathustra» (1883–1885) satte han opp overmennesket, som skaper sine egne verdier."
+        "Friedrich Nietzsche kritiserte kristen moral og tradisjonell metafysikk. I «Den muntre vitenskapen» (1882) skrev han at Gud er død: Troen som hadde båret moralen i Europa, var i ferd med å forsvinne. Faren var nihilisme, at de høyeste verdiene mister sin kraft. I «Slik talte Zarathustra» (1883–1885) satte han opp overmennesket, som skaper sine egne verdier."
       ],
       "keyPoints": [
         "Hegel så historien som fornuftens utvikling gjennom motsetninger.",
@@ -963,7 +971,7 @@
           "distractors": [
             "Om friheten",
             "Enten-Eller",
-            "Den muntre vitenskap"
+            "Den muntre vitenskapen"
           ],
           "explain": "Det kom først ut anonymt i London i februar 1848, samme måned som revolusjonen i Paris. Det fikk liten virkning det året, men ble et av verdens mest utbredte politiske skrifter.",
           "hint": "Skriftet var et program for en liten forening av revolusjonære arbeidere og håndverkere."
@@ -1060,7 +1068,7 @@
               "year": 1859
             },
             {
-              "label": "Nietzsches «Den muntre vitenskap»",
+              "label": "Nietzsches «Den muntre vitenskapen»",
               "year": 1882
             }
           ],
@@ -1134,7 +1142,7 @@
             "Der Übermensch"
           ],
           "explain": "Begrepet står i «Slik talte Zarathustra», der en profet forkynner det. Nazistene misbrukte senere idéen som om den gjaldt en rase, blant annet med hjelp fra Nietzsches søster, som forfalsket deler av arven hans.",
-          "hint": "Begrepet ble senere misbrukt av nazistene, selv om Nietzsche foraktet antisemittismen."
+          "hint": "Begrepet ble senere misbrukt av nazistene, selv om Nietzsche tok avstand fra antisemittene i sin egen tid."
         }
       ]
     },
@@ -1230,7 +1238,7 @@
             "Jean-Paul Sartre",
             "Ludwig Wittgenstein"
           ],
-          "explain": "Arendt var selv statsløs fra 1937 til 1951 og skrev at flyktninger uten statsborgerskap hadde mistet «retten til å ha rettigheter». Senere skrev hun om rettssaken mot Adolf Eichmann.",
+          "explain": "Arendt levde selv i mange år som statsløs flyktning før hun ble amerikansk statsborger i 1951, og hun skrev at flyktninger uten statsborgerskap hadde mistet «retten til å ha rettigheter». Senere skrev hun om rettssaken mot Adolf Eichmann.",
           "hint": "Filosofen flyktet fra Tyskland i 1933 og ble kjent i USA etter krigen."
         },
         {
@@ -1357,7 +1365,7 @@
             "Banality of evil",
             "The banality of evil"
           ],
-          "explain": "Arendt mente at Eichmann ikke var drevet av hat, men av tankeløs lydighet og karrierelyst. Uttrykket er omstridt, blant annet fordi senere forskning har vist at Eichmann var en mer overbevist nazist enn han ga inntrykk av i retten.",
+          "explain": "Arendt mente at Eichmann ikke var drevet av hat, men av tankeløs lydighet og karrierelyst. Uttrykket er omstridt. Kritikerne mente at hun tonet ned Eichmanns motiver, og senere forskning tyder på at han var en mer overbevist nazist og antisemitt enn han ga inntrykk av i retten.",
           "hint": "Hun fulgte rettssaken i Jerusalem i 1961 og ble slått av hvor alminnelig han virket."
         }
       ]
