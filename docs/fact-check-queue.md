@@ -2,41 +2,6 @@
 
 Gjennomgangen av kunnskapskjernen i november 2026 ble gjort uten tilgang til snl.no. Anmelderne endret bare fakta de var sikre på, og listet opp resten her. Hver linje er en påstand som står i et kort eller en leksjon nå, og som bør kontrolleres med `node scripts/snl.mjs read …` før den regnes som sikker. Stryk linjen når den er kontrollert eller rettet.
 
-## Det moderne århundret
-
-- [ ] `mh-2000-tallet-aar-taliban` – Ti norske soldater ble drept i Afghanistan. Taliban forbød skolegang for jenter etter sjette klasse.. *Nye faktaopplysninger i forklaringen, ikke kontrollert mot kilde.*
-- [ ] `mh-2000-tallet-hvorfor-irak` – Storbritannia, Australia, Polen og Danmark deltok i invasjonen av Irak i 2003. *Dansk deltakelse var med marinefartøyer. Det bør sjekkes om ordet «invasjonen» passer for Danmark*
-- [ ] `mh-2000-tallet-pandemi-dode` – Over 7 millioner rapporterte koronadødsfall ved utgangen av 2024. *Tallet fra WHO kunne ikke kontrolleres uten nett*
-- [ ] `mh-2000-tallet-pandemi-tiltak` – Erna Solberg kalte tiltakene 12. mars 2020 de mest inngripende Norge hadde hatt i fredstid.. *Sitatet er gjengitt etter hukommelsen. Ordlyden bør sjekkes.*
-- [ ] `mh-andre-verdenskrig-barbarossa` – Østfronten var krigens største slagmark, og der led Tyskland de største tapene.. *Ny påstand i forklaringen. Den er godt etablert, men ikke kontrollert mot kilde.*
-- [ ] `mh-andre-verdenskrig-dode` – Anslagene over døde i andre verdenskrig ligger mellom 70 og 85 millioner. *Spennet er vanlig, men SNL kan bruke en annen formulering, for eksempel «minst 70 millioner» eller «60–70 millioner»*
-- [ ] `mh-avkolonisering-afrikas-ar` – Sytten afrikanske kolonier ble selvstendige i 1960, de fleste franske.. *Tallet er standard, men jeg kunne ikke kontrollere det mot SNL, og det er nå svaret på kortet og står i leksjonen.*
-- [ ] `mh-avkolonisering-ghana` – Ghana ble et forbilde for frigjøringen i Afrika, og navnet er hentet fra middelalderriket Ghana. Nkrumah ble avsatt ved et kupp i 1966.. *Nytt kort. Fakta skrevet etter hukommelsen.*
-- [ ] `mh-avkolonisering-india-aar` – Clement Attlees Labour-regjering ga India selvstendighet. *Nytt hint. Attlee var statsminister 1945–1951, men det er ikke kontrollert mot kilden*
-- [ ] `mh-forste-verdenskrig-hvorfor-usa` – Om lag 2000 norske sjøfolk omkom under første verdenskrig.. *Nytt norsk tall i forklaringen, skrevet etter hukommelsen. Kildene oppgir ofte «nærmere 2000».*
-- [ ] `mh-forste-verdenskrig-periode` – Mellom 15 og 20 millioner soldater og sivile ble drept i første verdenskrig (leksjonen). *Jeg erstattet «nærmere 18 millioner» med et spenn. Bør sjekkes mot SNL*
-- [ ] `mh-forste-verdenskrig-rekkefolge` – Ved Verdun ble det anslått 750 000 drepte og sårede på ti måneder.. *Anslagene jeg kjenner ligger rundt 700 000. Tallet er ikke endret.*
-- [ ] `mh-holocaust-antall` – Omkring seks millioner jøder ble drept (tidligere: «Mer enn seks millioner»). *Anslagene ligger på omtrent 5,1–6,2 millioner. Jeg tror «omkring» stemmer med SNL, men har ikke kunnet sjekke ordlyden*
-- [ ] `mh-holocaust-einsatzgruppen` – Einsatzgruppen skjøt drøyt én million jøder, og over 33 000 ble drept ved Babij Jar i september 1941. *Nytt kort, skrevet ut fra egen kunnskap uten at SNL kunne kontrolleres*
-- [ ] `mh-holocaust-forklar-flukt` – Over 30 land møttes på Évian-konferansen sommeren 1938, og nesten ingen ville ta imot flere jødiske flyktninger.. *Ny påstand er lagt inn uten en ny kilde, og emnet har ingen kilde om Évian.*
-- [ ] `mh-holocaust-hva` – Ordet Holocaust ble tatt i bruk om folkemordet først på 1960-tallet.. *Ordet var i bruk fra slutten av 1950-årene og ble allment kjent i 1970-årene. Tidsangivelsen er ikke endret.*
-- [ ] `mh-imperialismen-andel-1870` – Omkring en tidel av Afrika var under europeisk styre i 1870, omkring ni tideler i 1914. *Mye brukt lærebokanslag. Står ikke i de oppgitte SNL-kildene, og kunne ikke kontrolleres uten nett*
-- [ ] `mh-imperialismen-gummi` – Elfenben var Kongostatens viktigste vare før gummien tok over fra midten av 1890-årene. *Lagt til i forklaringen etter egen kunnskap*
-- [ ] `mh-imperialismen-hvorfor-innlandet` – Kinin senket dødeligheten av malaria kraftig, og maskingeværet ga overtaket, som ved Omdurman i 1898. *Ny forklaring skrevet etter egen kunnskap. Omdurman 1898 og Isandlwana-motstanden er godt kjent, men ikke kontrollert mot SNL*
-- [ ] `mh-imperialismen-kongo-dode` – Rundt 200 norske «kongofarere» tjenestegjorde i Fristaten Kongo. *Jeg tror tallet er omtrent riktig, men andre kilder kan si et annet antall skandinaver*
-- [ ] `mh-imperialismen-kongo-dode` – Rundt 200 norske «kongofarere» tjenestegjorde i Fristaten Kongo.. *Jeg husker tall mellom omkring 200 og 300 nordmenn. Jeg lot tallet stå, men det bør sjekkes mot SNL.*
-- [ ] `mh-imperialismen-kongo-dode` – Rundt 200 norske «kongofarere» tjenestegjorde i kolonien. *Fra en tidligere runde. Tallet varierer mellom kilder (noen sier flere enn 200)*
-- [ ] `mh-kalde-krigen-aar-warszawa` – Warszawapakten sto bak invasjonen av Tsjekkoslovakia i 1968 og ble oppløst i 1991.. *Ny forklaring.*
-- [ ] `mh-kalde-krigen-korea` – Norge sendte feltsykehuset NORMASH, og våpenhvilen fulgte omtrent den gamle delingslinjen. *Ny forklaring skrevet etter egen kunnskap*
-- [ ] `mh-kalde-krigen-vietnam` – Over 58 000 amerikanske soldater falt. Krigen endte med Nord-Vietnams seier i 1975.. *Nytt kort og ny setning i leksjonen.*
-- [ ] `mh-mellomkrigstiden-ledighet` – Hintet sier at Tyskland hadde rundt seks millioner registrerte arbeidsløse.. *Toppen var omkring 6 millioner i 1932–1933. Tallet bør sjekkes mot SNL.*
-- [ ] `mh-mellomkrigstiden-oppslutning` – NSDAP fikk 33 prosent i november 1932 og 44 prosent i mars 1933.. *Nye tall i distraktorene og forklaringen (33,1 og 43,9 prosent etter hukommelsen).*
-- [ ] `mh-murens-fall-bosnia-dode` – Omtrent 40 prosent av de drepte i Bosniakrigen var sivile, og over to millioner ble drevet på flukt. *Bygger på tallene fra Research and Documentation Center i Sarajevo (omtrent 97 000 drepte, omtrent 40 prosent sivile) slik jeg husker dem*
-- [ ] `mh-russiske-revolusjon` – Hungersnøden 1932–1933 kostet anslagsvis 6–7 millioner liv. *Faglige anslag spenner fra omkring 5,5 til 8,7 millioner. Kan bør vises som et bredere spenn*
-- [ ] `mh-russiske-revolusjon-gulag` – Solsjenitsyns «GULag-arkipelet» kom ut i 1973. Mange fanger ble løslatt etter Stalins død i 1953.. *Nytt kort. Skrivemåten «Solsjenitsyn» og utgivelsesåret bør sjekkes.*
-- [ ] `mh-russiske-revolusjon-stalin-styre` – Stalin var enerådende i partiet fra slutten av 1920-årene, og GULag hadde omkring 2,5 millioner fanger tidlig på 1950-tallet.. *Den gamle teksten sa «fra slutten av 1930-årene» og «høydepunkt i 1952». Jeg endret til slutten av 1920-årene og «tidlig på 1950-tallet» ut fra det jeg vet. Begge formuleringene bør sjekkes mot SNL.*
-- [ ] `mh-russiske-revolusjon-terror` – I de verste femten månedene ble i snitt over tusen mennesker skutt hver dag. *Hint beregnet fra omkring 680 000 henrettelser fra august 1937 til november 1938*
-
 ## Filosofi og idéhistorie
 
 - [ ] `ide-antikken-sokrates-dom` – I «Sokrates' forsvarstale» sier Sokrates at et liv uten prøvelse ikke er verdt å leve. *Ikke funnet i SNL (november 2026): Utsagnet står i Platons forsvarstale (38a), men SNL siterer det ikke, og jeg fant ingen norsk oversettelse å kontrollere ordlyden mot. Kortet gjengir utsagnet med egne ord og uten anførselstegn, så teksten står urørt.*
@@ -89,33 +54,6 @@ Gjennomgangen av kunnskapskjernen i november 2026 ble gjort uten tilgang til snl
 - [ ] `bio-menneskekroppen-tynntarmen` – Tynntarmen er fire til fem meter lang hos en voksen.. *Kildene oppgir ulike tall, fra omtrent 3 til 7 meter, avhengig av om tarmen måles hos levende eller døde.*
 - [ ] `bio-sykdom-immunforsvar-hvorfor-flokkimmunitet` – For meslinger må rundt 95 prosent være immune for å oppnå flokkimmunitet.. *Nytt tall. Dette er et vanlig anslag fra FHI og WHO, men det er ikke sjekket mot emnets kilder.*
 - [ ] `bio-sykdom-immunforsvar-spanskesyken` – I Norge tok spanskesyken omkring 15 000 liv.. *Anslagene varierer fra omtrent 13 000 til 15 000. «Omkring» står allerede, men tallet bør sjekkes mot SML.*
-
-## Medisinens historie
-
-- [ ] `med-1900-tallet-banting` – Verdens diabetesdag 14. november er lagt til Bantings fødselsdag, og han fikk ideen i 1920.. *Nytt kort skrevet ut fra egen kunnskap, uten en kilde om Banting i kildelisten. Jeg er ganske sikker på at det stemmer.*
-- [ ] `med-1900-tallet-norge-aar` – Den første nyretransplantasjonen i Norge ble utført i 1956.. *Emnet har ingen kilde som dekker årstallet, så det kunne ikke kontrolleres her.*
-- [ ] `med-anatomi-blodomlop-hvorfor-klaffer` – Fabricius trodde at veneklaffene bremset blodet på vei ut i armer og bein.. *Dette er standardframstillingen, men formuleringen bør sjekkes mot en kilde om Fabricius.*
-- [ ] `med-anatomi-blodomlop-veneklaffer` – Med en stram binding rundt overarmen viste Harvey at blodet i venene bare lot seg presse mot hjertet.. *Forsøket gjengis her fra minnet.*
-- [ ] `med-antibiotika-krigen` – Florey reiste til USA for å få i gang produksjonen, og en særlig produktiv soppstamme ble funnet på en mugglen melon i Peoria.. *Ny forklaring. Jeg er ganske sikker (Peoria 1943), men har ikke fått sjekket det mot kilden i dette miljøet.*
-- [ ] `med-antibiotika-tilfeldig` – Soppsporen kom trolig fra et annet laboratorium i bygningen mens Fleming var på ferie.. *Opplysningen er formulert med forbehold, men den er ny.*
-- [ ] `med-bakteriene-armauer-hansen` – Norge hadde et nasjonalt lepraregister fra 1856.. *Ny påstand skrevet etter egen kunnskap. Jeg er ganske sikker, men den er ikke sjekket mot en kilde.*
-- [ ] `med-bakteriene-kolera` – Snows vannpost i Broad Street; Koch påviste kolerabakterien i 1883–1884.. *Nytt kort skrevet ut fra egen kunnskap, og emnet har ingen kilde om John Snow eller kolera.*
-- [ ] `med-vaksinen-koppene-1980` – Kopper tok trolig rundt 300 millioner liv på 1900-tallet.. *Mye sitert anslag, skrevet med «trolig». Ikke sjekket mot SML.*
-- [ ] `med-vaksinen-koppene-forsoket` – Jenner samlet flere slike tilfeller før han publiserte i 1798, fordi ett forsøk på ett barn ikke overbeviste kollegene.. *Ny forklaring. Det stemmer at Inquiry (1798) beskriver flere tilfeller, men begrunnelsen bør sjekkes mot en kilde.*
-
-## Musikkhistorie
-
-- [ ] `mus-barokken-mendelssohn` – Mendelssohn, 20 år gammel, satte opp Matteuspassjonen i Berlin i 1829; Bach-selskapet ble stiftet i 1850.. *Nytt kort og ny leksjonstekst; kildene i emnet (SNL) er ikke lest i denne runden.*
-- [ ] `mus-barokken-sjangre` – Vivaldi skrev mange konserter for jentene ved Ospedale della Pietà i Venezia, der han var musikklærer.. *Ny forklaring.*
-- [ ] `mus-middelalder-renessanse-gregoriansk-navn` – Norsk salmebok fra 2013 har fortsatt rundt 30 gregorianske melodier. *Jeg kunne ikke kontrollere tallet.*
-- [ ] `mus-middelalder-renessanse-palestrina` – Palestrina var kapellmester ved Peterskirken, og stilen hans ble grunnlaget for undervisning i kontrapunkt i flere hundre år.. *Nytt kort.*
-- [ ] `mus-middelalder-renessanse-perotin` – Pérotin skrev firestemmige organa, blant annet «Viderunt omnes» fra rundt 1198. *Påstanden er ny, skrevet ut fra egen kunnskap. Dateringen bygger på et biskoppelig dekret og regnes som sannsynlig, ikke sikker.*
-- [ ] `mus-romantikken-rekkefolge` – Leksjonen sier at «Má vlast» ble skrevet mellom 1872 og 1879.. *Vanlige oppslagsverk oppgir 1874–1879. Årstallet 1879 på kortet stemmer uansett.*
-- [ ] `mus-romantikken-ring-syklus` – Orkestergraven i Bayreuth ble bygd inn under scenen slik at publikum bare skulle se dramaet.. *Ny forklaring.*
-- [ ] `mus-romantikken-smetana` – «Má vlast» ble skrevet mellom 1872 og 1879. *Flere kilder oppgir 1874–1879.*
-- [ ] `mus-wienerklassisisme-eroica-komponist` – «Eroica» varer nesten en time (står også i leksjonen og keyPoints). *Vanlige framføringer varer 45–52 minutter. «Rundt 50 minutter» kan være mer presist.*
-- [ ] `mus-wienerklassisisme-eroica-napoleon` – Ifølge Ferdinand Ries strøk Beethoven tilegnelsen da Napoleon utropte seg til keiser; partituret med navnet skrapt ut er bevart; verket ble utgitt i 1806 «til minne om en stor mann».. *Nytt kort bygd på en kjent anekdote; den er markert som Ries' beretning, men bør kontrolleres.*
-- [ ] `mus-wienerklassisisme-esterhazy` – Orkesteret ble oppløst etter fyrst Nikolaus' død i 1790, og Haydns tolv London-symfonier ble en triumf.. *Ny forklaring.*
 
 ## Verden utenfor Europa
 

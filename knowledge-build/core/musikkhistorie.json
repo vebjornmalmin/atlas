@@ -106,7 +106,7 @@
             "gregoriansk kirkesang",
             "gregorianikk"
           ],
-          "explain": "Sangen kom til Norge med misjonærene på 900- og 1000-tallet og ble brukt i kirkene her gjennom hele middelalderen. Flere gregorianske melodier står fortsatt i Norsk salmebok.",
+          "explain": "Sangen kom til Norge med misjonærene på 900- og 1000-tallet og ble brukt i kirkene her gjennom hele middelalderen. I Norsk salmebok fra 2013 står det fortsatt rundt 30 gregorianske melodier.",
           "hint": "Navnet kommer fra en pave som levde rundt år 600."
         },
         {
@@ -218,7 +218,7 @@
             "Perotinus",
             "Pérotinus"
           ],
-          "explain": "Léonin skrev tostemmig organum, der en langsom grunnmelodi fikk en fri stemme over seg. Pérotin utvidet til tre og fire stemmer, blant annet i «Viderunt omnes» fra rundt 1198.",
+          "explain": "Léonin skrev tostemmig organum, der en langsom grunnmelodi fikk en fri stemme over seg. Pérotin utvidet til tre og fire stemmer, blant annet i den firestemmige «Viderunt omnes», som trolig ble skrevet like før 1200.",
           "hint": "Han utvidet sangen fra to til fire stemmer rundt år 1200."
         },
         {
@@ -247,7 +247,7 @@
       "summary": "Barokken gjorde musikken til et dramatisk uttrykk. Monteverdi, Bach, Händel og Vivaldi samlet stilen i opera, oratorium og konsert.",
       "lesson": [
         "Barokken (omtrent 1600–1750) var en tid med sterke kontraster og store følelser. Under nesten all musikk lå generalbassen, eller basso continuo: en basslinje der cembalo eller orgel fylte ut akkordene. Opera ble den nye scenesjangeren. Claudio Monteverdis «L'Orfeo» hadde premiere ved hertugen av Mantuas hoff i 1607, og verket fletter resitativ, arier, ballett og kor til ett dramatisk hele.",
-        "Johann Sebastian Bach var kantor ved Thomaskirken i Leipzig fra 1723 til sin død i 1750. Der skrev han omkring 150 kantater, verk for kor, solister og instrumenter til gudstjenesten, og Matteuspassjonen. Han var en mester i kontrapunkt, særlig i fugen, der ett kort tema slår inn i stemme etter stemme. Etter hans død ble kirkeverkene lite spilt, til Felix Mendelssohn satte opp Matteuspassjonen i Berlin i 1829.",
+        "Johann Sebastian Bach var kantor ved Thomaskirken i Leipzig fra 1723 til sin død i 1750. Der skrev han omkring 150 kantater, verk for kor, solister og instrumenter til gudstjenesten, og Matteuspasjonen. Han var en mester i kontrapunkt, særlig i fugen, der ett kort tema slår inn i stemme etter stemme. Etter hans død ble kirkeverkene lite spilt, til Felix Mendelssohn satte opp Matteuspasjonen i Berlin i 1829.",
         "Georg Friedrich Händel virket i England, og oratoriet «Messias» ble uroppført i Dublin i 1742, med tekst fra Bibelen satt sammen av Charles Jennens. Et oratorium er et stort verk for solister, kor og orkester, men framføres uten scene og kostymer. Antonio Vivaldi gjorde solokonserten, der én solist veksler med orkesteret, til tidens mest populære instrumentalform. Hans «De fire årstider» ble utgitt i Amsterdam i 1725."
       ],
       "keyPoints": [
@@ -457,7 +457,7 @@
           "id": "mus-barokken-mendelssohn",
           "step": 4,
           "type": "text",
-          "prompt": "Bachs store kirkeverk ble sjelden framført etter hans død. Hvilken komponist satte i gang gjenoppdagelsen med Matteuspassjonen i Berlin i 1829?",
+          "prompt": "Bachs store kirkeverk ble sjelden framført etter hans død. Hvilken komponist satte i gang gjenoppdagelsen med Matteuspasjonen i Berlin i 1829?",
           "answer": "Felix Mendelssohn",
           "accept": [
             "Mendelssohn",
@@ -485,13 +485,13 @@
       "lesson": [
         "Wienerklassisismen (omtrent 1750–1820) bygde på barokkens tradisjoner, men søkte klarhet og balanse. Den viktigste nyvinningen var sonatesatsformen, med kontrasterende temaer, utvikling av dem og spenning gjennom modulasjoner, før temaene vender tilbake. Den firesatsige symfonien og sonaten fikk sin faste form hos Haydn, Mozart og Beethoven i Wien.",
         "Joseph Haydn var knyttet til familien Esterházy fra 1761 og ble kapellmester i 1766. Han skrev over hundre symfonier og regnes som symfoniens far. Orkesteret hans talte omkring 25 musikere, og ved familiens avsidesliggende sommerslott Esterháza kunne han prøve seg fram i ro.",
-        "Wolfgang Amadeus Mozart skrev operaen «Don Giovanni», uroppført i Prag i 1787. Ludwig van Beethoven utvidet symfonien med «Eroica» (1803–1804), som varer nesten en time. Han ville tilegne verket til Napoleon, men strøk navnet da Napoleon utropte seg til keiser. Symfonien regnes som et bindeledd mot romantikken."
+        "Wolfgang Amadeus Mozart skrev operaen «Don Giovanni», uroppført i Prag i 1787. Ludwig van Beethoven utvidet symfonien med «Eroica» (1803–1804), som varer omkring 50 minutter. Han ville tilegne verket til Napoleon, men strøk navnet da Napoleon utropte seg til keiser. Symfonien regnes som et bindeledd mot romantikken."
       ],
       "keyPoints": [
         "Sonatesatsformen med kontrasterende temaer og utvikling er wienerklassisismens viktigste nyvinning.",
         "Haydn var knyttet til familien Esterházy fra 1761 og regnes som symfoniens far.",
         "Mozarts «Don Giovanni» hadde premiere i Prag i 1787.",
-        "Beethovens «Eroica» (1803–1804) er nesten en time lang. Tilegnelsen til Napoleon ble strøket da han utropte seg til keiser.",
+        "Beethovens «Eroica» (1803–1804) varer omkring 50 minutter. Tilegnelsen til Napoleon ble strøket da han utropte seg til keiser.",
         "Wienerklassikerne gjorde den firesatsige symfonien og sonaten til faste former."
       ],
       "sources": [
@@ -664,7 +664,7 @@
             "Han ville ikke betale for verket",
             "Sensuren i Wien forbød tilegnelsen"
           ],
-          "explain": "Ifølge Ries sa Beethoven at Napoleon nå bare var et vanlig menneske som ville trampe på alles rettigheter. Partituret med navnet skrapt ut er bevart. Symfonien ble utgitt i 1806 «til minne om en stor mann». Franskmennene inntok Wien først i 1805.",
+          "explain": "Ifølge Ries sa Beethoven at Napoleon nå bare var et vanlig menneske som ville trampe på alles rettigheter. En avskrift av partituret der navnet er skrapt bort, er bevart. Symfonien ble utgitt i 1806 «til minne om en stor mann». Franskmennene inntok Wien først i 1805.",
           "hint": "Tenk på hvilke idealer fra den franske revolusjonen Beethoven hadde trodd at førstekonsulen forsvarte."
         },
         {

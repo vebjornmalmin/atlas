@@ -308,6 +308,10 @@
         {
           "title": "Lungene – Store medisinske leksikon",
           "url": "https://sml.snl.no/lungene"
+        },
+        {
+          "title": "Girolamo Fabrizio – Store norske leksikon",
+          "url": "https://snl.no/Girolamo_Fabrizio"
         }
       ],
       "cards": [
@@ -620,7 +624,7 @@
             "Han sammenlignet ham med uvaksinerte barn",
             "Han ventet på neste koppeepidemi i bygda"
           ],
-          "explain": "Jenner samlet flere slike tilfeller før han publiserte i 1798, fordi ett forsøk på ett barn ikke overbeviste kollegene. Antistoffer og virus var ukjent på hans tid.",
+          "explain": "Royal Society avviste en kort rapport om forsøket i 1797. Jenner samlet flere tilfeller og ga selv ut boka i 1798, med 23 sykehistorier. Antistoffer og virus var ukjent på hans tid.",
           "hint": "Forsøket ville aldri blitt godkjent i dag, fordi det satte barnets liv i fare."
         },
         {
@@ -1254,6 +1258,14 @@
         {
           "title": "Nyrene – Store medisinske leksikon",
           "url": "https://sml.snl.no/nyrene"
+        },
+        {
+          "title": "Frederick Grant Banting – Store norske leksikon",
+          "url": "https://snl.no/Frederick_Grant_Banting"
+        },
+        {
+          "title": "Norsk transplantasjonsmedisin gjennom 50 år – Tidsskrift for Den norske legeforening",
+          "url": "https://tidsskriftet.no/2006/12/medisinsk-historie/norsk-transplantasjonsmedisin-gjennom-50-ar"
         }
       ],
       "cards": [
@@ -1443,7 +1455,7 @@
           "type": "year",
           "prompt": "Hvilket år ble den første nyretransplantasjonen i Norge utført?",
           "answer": "1956",
-          "explain": "Teknikken for å sy sammen blodårer var utviklet av Alexis Carrel, som fikk nobelprisen for den i 1912. Problemet var ikke kirurgien, men avstøtningen.",
+          "explain": "Teknikken for å sy sammen blodårer var utviklet av Alexis Carrel, som fikk nobelprisen for den i 1912. Problemet var ikke kirurgien, men avstøtningen: Den første norske pasienten levde bare omkring en måned med den nye nyren.",
           "hint": "Det var to år etter tvillingtransplantasjonen i Boston."
         }
       ]
