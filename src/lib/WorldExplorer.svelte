@@ -1,10 +1,11 @@
 <script>
   import Flag from './Flag.svelte';
-  import {lensView,relatedThrough,lensesFor,findPath,newsWeight,placeLinks,METRIC_NOTES,DEFAULT_RELEVANCE} from './world-graph.js';
+  import {lensView,relatedThrough,lensesFor,findPath,newsWeight,placeLinks,lensLinkWeights,METRIC_NOTES,DEFAULT_RELEVANCE} from './world-graph.js';
   import PanZoomMap from './PanZoomMap.svelte';
   import {pathBounds,parseBox,regionAnchor,regionFrame,unionBox,arrowGeometry} from './map-view.js';
   import {WORLD_FORMAT_CHOICES} from './quiz-formats.js';
   import {contentPlaces} from './content-places.js';
+  import {PROJECTION_ICONS,LENS_ICON,HEAT_ICON} from './map-icons.js';
   import {PROJECTIONS,projectionById,worldFeatures,projectWorld,turnGlobe,rotationFor,globeDisc,dragRotation,interpolateRotation} from './projections.js';
   let {graph,dataset,relevance=$bindable({...DEFAULT_RELEVANCE}),typeLabel,relationLabel,onOpen,onQuiz,onSave,onUnit,formatAvailable}=$props();
 
@@ -46,6 +47,15 @@
   let projectionMenu=$state(false);
   let mapUnit=$state(1);
   let lensMenu=$state(false);
+  // Once the learner starts working the map, the buttons on it shrink to their icon or flag so the map shows.
+  // A tap on the flag shows the country's name for three seconds; the next touch on the map hides it again.
+  let compact=$state(false),peek=$state(false),peekTimer=0;
+  function interacted(){compact=true;peek=false;clearTimeout(peekTimer);}
+  function showName(){peek=true;clearTimeout(peekTimer);peekTimer=setTimeout(()=>peek=false,3000);}
+  function tapFocusPill(){
+    if(compact && !peek && flagFor(focus)){showName();return;}
+    document.querySelector('#world-focus')?.scrollIntoView({behavior:'smooth',block:'start'});
+  }
   // The menus over the map stay out of the way: they close on a tap anywhere outside them, when the page
   // scrolls, and the switches a moment after the last change, so the map shows what changed.
   let menusClosedAt=0,layerTimer=0;
@@ -118,7 +128,7 @@
   let focusRegion=$derived(graph.byId.get(graph.countryOf.get(focusId))?.geo?.mapRegionId);
   // Connections from the chosen place to other countries, drawn as arrows. Only the chosen place is
   // computed, and at most ten partners are drawn, so the map stays light.
-  let places=$derived(focus?placeLinks(graph,focus.id,30,showTopics?content:null,{sourced:showArrows}):{home:null,links:[],total:0});
+  let places=$derived(focus?placeLinks(graph,focus.id,30,showTopics?content:null,{sourced:showArrows,lens}):{home:null,links:[],total:0});
   let inAtlas=$derived(focus?.geo?content.countries.get(focus.id):null);
   let topicLimit=$state(6);
   let activeLink=$state('');
@@ -138,9 +148,14 @@
       const bend=(near%2?-1:1)*(.14+.05*Math.min(6,Math.ceil(near/2))),shape=link.out>=link.in?arrowGeometry(from,to,mapUnit,bend):arrowGeometry(to,from,mapUnit,-bend);
       // A shared topic has no direction: a dashed line without a head.
       const directed=link.out+link.in>0;
-      return {...link,directed,shaft:shape.shaft,tip:directed?shape.tip:'',width:1+1.4*Math.log10(1+link.count)};
+      // Under a lens that weights some kinds of line, the lines it does not weight are toned down.
+      return {...link,directed,quiet:places.lensSees && !link.lensWeight,shaft:shape.shaft,tip:directed?shape.tip:'',width:1+1.4*Math.log10(1+link.count)};
     }).filter(Boolean);
   });
+  const LENS_KIND_TEXT={nobel:'nobelpriser',ideas:'påvirkning mellom tenkere',news:'nyheter'};
+  const joinNb=items=>items.length>1?`${items.slice(0,-1).join(', ')} og ${items.at(-1)}`:items[0] || '';
+  // What the lens weights among the lines, in words: «nobelpriser og påvirkning mellom tenkere».
+  let lensKinds=$derived(lens?joinNb(Object.entries(lensLinkWeights(lens)).filter(([kind,w])=>w>0 && LENS_KIND_TEXT[kind]).sort((a,b)=>b[1]-a[1]).map(([kind])=>LENS_KIND_TEXT[kind])):'');
   const KIND_NAMES={nobel:['Nobelpris-forbindelse','Nobelpris-forbindelser'],ideas:['påvirkning','påvirkninger'],news:['nyhet','nyheter'],topic:['felles emne','felles emner']};
   const kindText=link=>link.kinds.map(k=>`${k.count} ${KIND_NAMES[k.kind][k.count===1?0:1]}`).join(' · ');
   const directionText=link=>link.out&&link.in?' · begge veier':link.out?` · fra ${label(places.home)}`:link.in?` · til ${label(places.home)}`:'';
@@ -179,6 +194,7 @@
   });
   function choose(id,scroll=true){
     focusId=id;lensMenu=false;projectionMenu=false;layerMenu=false;activeLink='';topicLimit=6;
+    if(compact)showName();
     if(projectionId==='globe')spinTo(id);
     else {const box=focusFrame(id);if(box)worldMap?.flyTo(box);}
     if(scroll)document.querySelector('.world-map')?.scrollIntoView({behavior:'smooth',block:'start'});
@@ -217,25 +233,28 @@
   ] as layer (layer.name)}<button type="button" class="layer-option" role="switch" aria-checked={layer.on} onclick={()=>flipLayer(layer)}><span><strong>{layer.name}</strong><small>{layer.note}</small></span><span class="switch" aria-hidden="true"></span></button>{/each}
 </div>{/if}
 {/snippet}
+{#snippet pillIcon(markup)}<svg class="pill-icon" viewBox="0 0 20 20" aria-hidden="true">{@html markup}</svg>{/snippet}
+{#snippet chevron(open)}<svg class="pill-chevron" viewBox="0 0 20 20" aria-hidden="true"><path d={open?'M5 12.5 10 7.5l5 5':'m5 7.5 5 5 5-5'}/></svg>{/snippet}
 {#snippet lensDock()}
-<button type="button" class="map-pill lens-pill" aria-expanded={lensMenu} aria-controls="lens-menu" onclick={()=>{lensMenu=!lensMenu;projectionMenu=false;layerMenu=false;}}><small>{heat?'Farge':'Linse'}</small>{heat?'Innhold i Atlas':lens?.name || 'Ingen'}<svg viewBox="0 0 20 20" aria-hidden="true"><path d={lensMenu?'M5 12.5 10 7.5l5 5':'m5 7.5 5 5 5-5'}/></svg></button>
+<button type="button" class="map-pill lens-pill" class:compact={compact && !lensMenu} aria-expanded={lensMenu} aria-controls="lens-menu" aria-label={heat?'Farge: Innhold i Atlas':`Linse: ${lens?.name || 'Ingen'}`} onclick={()=>{lensMenu=!lensMenu;projectionMenu=false;layerMenu=false;}}>{@render pillIcon(heat?HEAT_ICON:LENS_ICON)}<span class="pill-label">{heat?'Innhold i Atlas':lens?.name || 'Ingen'}</span>{@render chevron(lensMenu)}</button>
 {#if lensMenu}<div class="lens-menu" id="lens-menu" role="group" aria-label="Velg historiesyn">
   <button type="button" class="lens-option" aria-pressed={!lensId && !heat} onclick={()=>{lensId='';heat=false;lensMenu=false;}}>Ingen linse</button>
   {#each graph.lenses as l}<button type="button" class="lens-option" aria-pressed={!heat && lensId===l.id} onclick={()=>{chooseLens(l.id);lensMenu=false;}}>{l.name}</button>{/each}
 </div>{/if}
 {/snippet}
 {#snippet projectionDock()}
-<button type="button" class="map-pill projection-pill" aria-expanded={projectionMenu} aria-controls="projection-menu" onclick={()=>{projectionMenu=!projectionMenu;lensMenu=false;layerMenu=false;}}><small>Kart</small>{projection.name}<svg viewBox="0 0 20 20" aria-hidden="true"><path d={projectionMenu?'M5 12.5 10 7.5l5 5':'m5 7.5 5 5 5-5'}/></svg></button>
+<button type="button" class="map-pill projection-pill" class:compact={compact && !projectionMenu} aria-expanded={projectionMenu} aria-controls="projection-menu" aria-label={`Kart: ${projection.name}`} onclick={()=>{projectionMenu=!projectionMenu;lensMenu=false;layerMenu=false;}}>{@render pillIcon(PROJECTION_ICONS[projectionId])}<span class="pill-label">{projection.name}</span>{@render chevron(projectionMenu)}</button>
 {#if projectionMenu}<div class="projection-menu" id="projection-menu" role="group" aria-label="Velg kartprojeksjon">
-  {#each PROJECTIONS as p}<button type="button" class="lens-option projection-option" aria-pressed={projectionId===p.id} onclick={()=>setProjection(p.id)}>{p.name}<small>{p.kind}</small></button>{/each}
+  {#each PROJECTIONS as p}<button type="button" class="lens-option projection-option" aria-pressed={projectionId===p.id} onclick={()=>setProjection(p.id)}>{@render pillIcon(PROJECTION_ICONS[p.id])}<span>{p.name}<small>{p.kind}</small></span></button>{/each}
 </div>{/if}
 {/snippet}
-{#snippet focusPill()}{#if focus}<button class="map-pill" onclick={()=>document.querySelector('#world-focus')?.scrollIntoView({behavior:'smooth',block:'start'})}>{#if flagFor(focus)}<Flag iso2={flagFor(focus)} />{/if}{focus.label} <span aria-hidden="true">↓</span></button>{/if}{/snippet}
+{#snippet focusPill()}{#if focus}<button class="map-pill focus-pill" class:compact={compact && !peek && Boolean(flagFor(focus))} aria-label={`${focus.label}, gå til omtalen under kartet`} onclick={tapFocusPill}>{#if flagFor(focus)}<Flag iso2={flagFor(focus)} />{/if}<span class="pill-label">{focus.label}</span><span class="pill-down" aria-hidden="true">↓</span></button>{/if}{/snippet}
 <div class="world-explorer atlas-kart">
 {#snippet linkCard()}{#if active}<div class="link-card" role="status">
   <button type="button" class="link-close" aria-label="Lukk forbindelsen" onclick={()=>activeLink=''}><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg></button>
   <p class="eyebrow">{label(places.home)} {linkSign(active)} {label(active.country)}</p>
   <strong>{kindText(active)}</strong>
+  {#if places.lensSees}<p class="muted link-lens">{active.lensWeight?`${lens.name} legger vekt på dette.`:`${lens.name} sier lite om dette.`}</p>{/if}
   <p>{active.examples[0].context}</p>
   {#if active.examples.some(e=>e.kind!=='topic') && active.examples.length>1}<p class="muted">Også: {active.examples.slice(1).filter(e=>e.kind!=='topic').map(e=>e.label).join(', ') || '–'}</p>{/if}
   {#if active.examples.some(e=>e.kind==='topic')}<p class="link-topics">{#each active.examples.filter(e=>e.kind==='topic') as e}<button type="button" class="link-button" onclick={()=>onUnit?.(e.unitId)}>«{e.label}»</button>{/each}</p>{/if}
@@ -243,12 +262,12 @@
 </div>{/if}{/snippet}
 {#snippet mapHud()}{@render focusPill()}{@render projectionDock()}{@render layerDock()}{@render lensDock()}{@render linkCard()}{/snippet}
 {#key projectionId}
-<PanZoomMap bind:this={worldMap} base={world.viewBox} bind:view={mapView} bind:unit={mapUnit} className={`world-map${projectionId==='standard'?'':' projected'}`} label={`Verdenskart${projectionId==='standard'?'':` i projeksjonen ${projection.name}`} vektet ${lens?`gjennom ${lens.name}`:'etter relevans'}. ${projectionId==='globe'?'Dra for å snu kloden, knip for å zoome':'Dra og knip for å utforske'}, trykk på et land.`} onTap={({region})=>{if(lensMenu || projectionMenu || layerMenu || performance.now()-menusClosedAt<800){closeMenus();return;}const id=graph.regionToCountry.get(region);if(!id)return;if(activeLink!==id && places.links.some(l=>l.country===id)){selectLink(id);return;}choose(id,false);}} onDragStart={globeDragStart} onDragMove={globeDragMove} onDragEnd={globeDragEnd} overlay={mapHud}>
+<PanZoomMap bind:this={worldMap} base={world.viewBox} bind:view={mapView} bind:unit={mapUnit} className={`world-map${projectionId==='standard'?'':' projected'}`} label={`Verdenskart${projectionId==='standard'?'':` i projeksjonen ${projection.name}`} vektet ${lens?`gjennom ${lens.name}`:'etter relevans'}. ${projectionId==='globe'?'Dra for å snu kloden, knip for å zoome':'Dra og knip for å utforske'}, trykk på et land.`} onTap={({region})=>{if(lensMenu || projectionMenu || layerMenu || performance.now()-menusClosedAt<800){closeMenus();return;}const id=graph.regionToCountry.get(region);if(!id)return;if(activeLink!==id && places.links.some(l=>l.country===id)){selectLink(id);return;}choose(id,false);}} onInteract={interacted} onDragStart={globeDragStart} onDragMove={globeDragMove} onDragEnd={globeDragEnd} overlay={mapHud}>
     {#if world.sphere}<defs><clipPath id="map-sphere-clip"><path d={world.sphere} /></clipPath>{#if disc}<radialGradient id="globe-shade" cx="42%" cy="38%" r="62%"><stop offset="0" class="shade-light" /><stop offset="1" class="shade-dark" /></radialGradient>{/if}</defs><path class="map-sphere" d={world.sphere} />{/if}
     {#if world.graticule}<path class="map-graticule" d={world.graticule} clip-path={world.sphere?'url(#map-sphere-clip)':null} />{/if}
     {#each world.regions as region (region.id)}{#if region.path}<path d={region.path} data-region={region.id} fill-rule="evenodd" style:fill={fill(region.id)} class:focused={focusRegion===region.id} class:neighbour={neighbours.some(n=>n.geo?.mapRegionId===region.id)} />{/if}{/each}
     {#if disc}<circle class="globe-shade" cx={disc.x} cy={disc.y} r={disc.r} fill="url(#globe-shade)" />{/if}
-    {#if arcs.length}<g class="map-links" class:has-active={Boolean(active)} aria-hidden="true">{#each arcs as a (a.country)}<g class="map-link" class:active={a.country===activeLink} class:shared={!a.directed}><path class="link-shaft" d={a.shaft} style:stroke-width={`${a.width}px`} />{#if a.tip}<path class="link-tip" d={a.tip} />{/if}</g>{/each}</g>{/if}
+    {#if arcs.length}<g class="map-links" class:has-active={Boolean(active)} aria-hidden="true">{#each arcs as a (a.country)}<g class="map-link" class:active={a.country===activeLink} class:shared={!a.directed} class:quiet={a.quiet}><path class="link-casing" d={a.shaft} style:stroke-width={`${a.width+2.5}px`} /><path class="link-shaft" d={a.shaft} style:stroke-width={`${a.width}px`} />{#if a.tip}<path class="link-tip" d={a.tip} />{/if}</g>{/each}</g>{/if}
     {#each mapLabels as l (l.id)}<text class="map-label" class:main={l.main} x={l.at.x} y={l.at.y} style:font-size={`${(l.main?14:11)*mapUnit}px`} style:stroke-width={`${3*mapUnit}px`}>{l.text}</text>{/each}
 </PanZoomMap>
 {/key}
@@ -289,8 +308,8 @@
       {#if inAtlas.topics.length}<div class="chips">{#each inAtlas.topics.slice(0,topicLimit) as unitId}<button class="chip" onclick={()=>onUnit?.(unitId)}>{label(`unit:${unitId}`)}</button>{/each}{#if inAtlas.topics.length>topicLimit}<button class="chip quiet" onclick={()=>topicLimit=inAtlas.topics.length}>+{inAtlas.topics.length-topicLimit} til</button>{/if}</div>{/if}
       {#if inAtlas.questions.length}<div class="row wrap"><button class="secondary" onclick={()=>onQuiz('mixed',{targetIds:inAtlas.questions,title:`Spørsmål om ${focus.label}`})}>Øv på spørsmål om {focus.label}</button></div>{/if}{/if}
     {#if otherLenses.length}<h3>Andre linser ser her</h3><div class="stack compact">{#each otherLenses as other}<button class="lens-switch" aria-pressed={other.lens.id===lensId} onclick={()=>chooseLens(other.lens.id)}><strong>{other.lens.name}</strong><small>{other.reason || other.lens.question}</small></button>{/each}</div>{/if}
-    {#if places.links.length}<h3>Forbindelser på kartet</h3><p class="muted detail">{[showArrows && `Pilene viser kildebelagte forbindelser fra ${focus.label} til andre land: nobelprisvinnere og hvor de arbeidet, påvirkning mellom tenkere, og nyheter.`, showTopics && 'Stiplede linjer er land som nevnes i samme emne i Atlas.', 'Trykk på et land med linje for å se forbindelsen, og trykk igjen for å gå dit.'].filter(Boolean).join(' ')}</p>
-      {#each places.links as link (link.country)}<button class="entity-row link-row" aria-pressed={link.country===activeLink} onclick={()=>selectLink(link.country,true)}><span><small class="eyebrow">{kindText(link)}{directionText(link)}</small><strong>{#if flagFor(graph.byId.get(link.country))}<Flag iso2={flagFor(graph.byId.get(link.country))} />{/if}{label(link.country)}</strong><small class="muted">{link.examples[0].context}</small></span></button>{/each}
+    {#if places.links.length}<h3>Forbindelser på kartet</h3><p class="muted detail">{[showArrows && `Pilene viser kildebelagte forbindelser fra ${focus.label} til andre land: nobelprisvinnere og hvor de arbeidet, påvirkning mellom tenkere, og nyheter.`, showTopics && 'Stiplede linjer er land som nevnes i samme emne i Atlas.', places.lensSees?`${lens.name} legger vekt på ${lensKinds}. De står først, og de andre linjene er tonet ned.`:lens && (showArrows || showTopics)?`${lens.name} sier lite om disse forbindelsene, så alle vises likt.`:'', 'Trykk på et land med linje for å se forbindelsen, og trykk igjen for å gå dit.'].filter(Boolean).join(' ')}</p>
+      {#each places.links as link (link.country)}<button class="entity-row link-row" class:quiet={places.lensSees && !link.lensWeight} aria-pressed={link.country===activeLink} onclick={()=>selectLink(link.country,true)}><span><small class="eyebrow">{kindText(link)}{directionText(link)}</small><strong>{#if flagFor(graph.byId.get(link.country))}<Flag iso2={flagFor(graph.byId.get(link.country))} />{/if}{label(link.country)}</strong><small class="muted">{link.examples[0].context}</small></span></button>{/each}
       <div class="row wrap"><button class="secondary" onclick={showAllLinks}>Vis alle {places.links.length} på kartet</button></div>{#if places.total>places.links.length}<p class="muted detail">Viser de {places.links.length} sterkeste av {places.total}.</p>{/if}{/if}
     {#if focus.geo && !showArrows && !showTopics}<h3>Forbindelser på kartet</h3><p class="muted detail">Pilene og de stiplede linjene er slått av.</p><div class="row wrap"><button class="secondary" onclick={()=>{showArrows=true;showTopics=true;}}>Slå på forbindelser</button></div>{/if}
     {#if neighbours.length}<h3>Naboland</h3><div class="chips">{#each neighbours as n}<button class="chip" onclick={()=>choose(n.id)}>{#if flagFor(n)}<Flag iso2={flagFor(n)} />{/if}{n.label}</button>{/each}</div>{/if}

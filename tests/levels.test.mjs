@@ -99,3 +99,14 @@ test('axis insights find where accuracy falls: here, exact details rather than f
 test('timeline labels never carry an ordinal that gives the order away', () => {
   for (const t of timelineTargets(data)) for (const item of t.timeline.items) assert.doesNotMatch(item.label, /^\d+\.\s/);
 });
+
+test('a quiz about one entity starts on a level that has questions for it', async () => {
+  const {levelsWithQuestions, usableLevel} = await import('../src/lib/levels.js');
+  const targets = [{level:3}, {level:4}];
+  assert.deepEqual(levelsWithQuestions(targets), [3, 4]);
+  assert.equal(usableLevel([3, 4], 1), 3);
+  assert.equal(usableLevel([3, 4], 4), 4);
+  assert.equal(usableLevel([3, 4], 0), 0);
+  assert.equal(usableLevel([], 2), 0);
+  assert.deepEqual(levelsWithQuestions([{level:1}]), [1, 2]);
+});

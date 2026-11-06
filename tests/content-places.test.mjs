@@ -66,7 +66,7 @@ test('each kind of line can be switched off on its own', () => {
   assert.ok(sourcedOnly.links.length > 0 && topicsOnly.links.length > 0);
   assert.ok(sourcedOnly.links.every(l => l.shared === 0 && l.kinds.every(k => k.kind !== 'topic')));
   assert.ok(topicsOnly.links.every(l => l.out + l.in === 0 && l.kinds.every(k => k.kind === 'topic') && l.examples.every(e => e.kind === 'topic')));
-  assert.deepEqual(none, {home: 'norway', links: [], total: 0});
+  assert.deepEqual(none, {home: 'norway', links: [], total: 0, lensSees: false});
   const countries = new Set([...sourcedOnly.links, ...topicsOnly.links].map(l => l.country));
   assert.equal(both.total, countries.size);
 });

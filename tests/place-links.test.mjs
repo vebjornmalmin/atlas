@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {buildWorldGraph, placeLinks} from '../src/lib/world-graph.js';
+import {buildWorldGraph, placeLinks, lensLinkWeights} from '../src/lib/world-graph.js';
 
 const data = JSON.parse(await readFile(new URL('../public/knowledge/foundation.json', import.meta.url), 'utf8'));
 const graph = buildWorldGraph(data);
@@ -41,7 +41,7 @@ test('a person is linked from the country of birth to where the work was done', 
 test('places without such relations get nothing to draw', () => {
   const quiet = graph.countries.find(c => placeLinks(graph, c.id).links.length === 0);
   assert.ok(quiet, 'some countries have no drawn links');
-  assert.deepEqual(placeLinks(graph, 'no-such-id'), {home: null, links: [], total: 0});
+  assert.deepEqual(placeLinks(graph, 'no-such-id'), {home: null, links: [], total: 0, lensSees: false});
 });
 
 test('examples name the people behind a link, each once', () => {
@@ -50,4 +50,23 @@ test('examples name the people behind a link, each once', () => {
   const ids = germany.examples.map(e => e.id);
   assert.equal(new Set(ids).size, ids.length);
   assert.ok(germany.examples.every(e => ['person', 'news-event'].includes(graph.byId.get(e.id).type)), germany.examples.map(e => e.label).join(', '));
+});
+
+test('a lens puts the kinds of line it weights first and marks the rest', () => {
+  const lens = id => graph.lenses.find(l => l.id === id);
+  assert.deepEqual(lensLinkWeights(null), {nobel: 0, ideas: 0, news: 0, topic: 0});
+  assert.equal(lensLinkWeights(lens('world-system')).nobel, 1);
+  assert.equal(lensLinkWeights(lens('networks')).ideas, 1);
+  assert.equal(lensLinkWeights(lens('geopolitics')).news, 0.7);
+  // Verdenssystem weights Nobel links only: every link it ranks first has one, and later ones have none.
+  const world = placeLinks(graph, 'norway', 200, null, {lens: lens('world-system')});
+  assert.ok(world.lensSees);
+  const firstQuiet = world.links.findIndex(l => !l.lensWeight);
+  const seen = firstQuiet < 0 ? world.links : world.links.slice(0, firstQuiet);
+  assert.ok(seen.length > 0 && seen.every(l => l.kinds.some(k => k.kind === 'nobel')));
+  if (firstQuiet >= 0) assert.ok(world.links.slice(firstQuiet).every(l => !l.lensWeight && !l.kinds.some(k => k.kind === 'nobel')));
+  // A lens that weights none of the kinds changes nothing: same links in the same order, none marked.
+  const plain = placeLinks(graph, 'norway', 200), civ = placeLinks(graph, 'norway', 200, null, {lens: lens('civilizations')});
+  assert.equal(civ.lensSees, false);
+  assert.deepEqual(civ.links.map(l => l.country), plain.links.map(l => l.country));
 });

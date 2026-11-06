@@ -40,8 +40,9 @@ export async function captureFeedbackScreen() {
     scrollX,scrollY,scale,logging:false,useCORS:false,allowTaint:false,
     backgroundColor:getComputedStyle(document.documentElement).backgroundColor,
     ignoreElements:element=>element.hasAttribute('data-feedback-ui'),
+    // Closed sections are drawn as they look: html2canvas would otherwise paint their hidden contents.
     onclone:document=>{
-      const freeze=document.createElement('style');freeze.textContent='*,*::before,*::after{animation:none!important;transition:none!important}';document.head.appendChild(freeze);
+      const freeze=document.createElement('style');freeze.textContent='*,*::before,*::after{animation:none!important;transition:none!important}details:not([open])>:not(summary){display:none!important}';document.head.appendChild(freeze);
       const originalsList=[...window.document.querySelectorAll('svg')];
       const clones=[...document.querySelectorAll('svg')];
       for(const [svgIndex,svg] of clones.entries()) {

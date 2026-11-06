@@ -180,8 +180,8 @@
 /* One lens button on the map instead of twenty chips; the list opens over the map. */
 .atlas-kart .lens-pill{position:absolute;left:6px;top:auto;bottom:4px;display:inline-flex;align-items:center;gap:7px;max-width:calc(100% - 76px);padding:0 14px;color:var(--ink);font-size:13px;font-weight:600}
 .atlas-kart .lens-pill small{font-size:10px;font-weight:650;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.atlas-kart .lens-pill svg{flex:none;width:14px;height:14px}
-.atlas-kart .lens-pill svg path{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.atlas-kart .lens-pill svg.pill-chevron{flex:none;width:14px;height:14px}
+.atlas-kart .lens-pill svg.pill-chevron path{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
 .atlas-kart .lens-menu{position:absolute;z-index:6;left:8px;right:8px;bottom:54px;max-height:calc(100% - 118px);overflow-y:auto;display:grid;grid-template-columns:1fr 1fr;gap:0 12px;padding:6px 12px;border:1px solid var(--line);border-radius:var(--r-l);background:color-mix(in srgb,var(--surface) 96%,transparent);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 12px 30px #1b231a24;overscroll-behavior:contain}
 .atlas-kart .lens-option{min-height:44px;padding:8px 2px;border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;box-shadow:none;color:var(--ink);font-size:13.5px;text-align:left;line-height:1.25}
 .atlas-kart .lens-option[aria-pressed="true"]{color:var(--accent);font-weight:650;box-shadow:inset 3px 0 0 var(--accent);padding-left:10px}
@@ -194,8 +194,8 @@
 .atlas-kart .world-map .shade-dark{stop-color:#000;stop-opacity:.16}
 .atlas-kart .projection-pill{left:auto;right:6px;display:inline-flex;align-items:center;gap:7px;max-width:calc(100% - 150px);padding:0 14px;color:var(--ink);font-weight:600}
 .atlas-kart .projection-pill small{font-size:10px;font-weight:650;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.atlas-kart .projection-pill svg{flex:none;width:14px;height:14px}
-.atlas-kart .projection-pill svg path{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.atlas-kart .projection-pill svg.pill-chevron{flex:none;width:14px;height:14px}
+.atlas-kart .projection-pill svg.pill-chevron path{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
 .atlas-kart .projection-menu{position:absolute;z-index:6;left:8px;right:8px;top:50px;max-height:calc(100% - 112px);overflow-y:auto;display:grid;grid-template-columns:1fr 1fr;gap:0 12px;padding:6px 12px;border:1px solid var(--line);border-radius:var(--r-l);background:color-mix(in srgb,var(--surface) 96%,transparent);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 12px 30px #1b231a24;overscroll-behavior:contain}
 .atlas-kart .projection-option small{display:block;margin-top:2px;font-size:11px;font-weight:400;color:var(--muted)}
 .atlas-kart .projection-note{margin:12px 0 0;font-size:14px;line-height:1.5}
@@ -589,3 +589,34 @@
 .atlas-kart .layer-option[aria-checked="true"] .switch{background:var(--accent)}
 .atlas-kart .layer-option[aria-checked="true"] .switch:after{transform:translateX(18px)}
 .atlas-kart .layer-option:active:not(:disabled){transform:none}
+/* The lens and map buttons are named by an icon instead of a small-caps word: an eye for the lens,
+   coloured squares for the heat map, a globe or a folded map for the projection. */
+/* Lines and lenses together. A light casing under each line keeps it readable over any lens colour, also the
+   warm half of Verdenssystem's scale and the dark heat map. Lines the lens does not weight are toned down. */
+.atlas-kart .world-map svg path.link-casing{fill:none;stroke:var(--surface);opacity:.75;stroke-linecap:round;vector-effect:non-scaling-stroke;transition:opacity .2s}
+.atlas-kart .world-map .map-link.shared path.link-casing{stroke-dasharray:4 4}
+.atlas-kart .world-map svg path.link-tip{stroke:var(--surface);stroke-width:1px;paint-order:stroke;vector-effect:non-scaling-stroke}
+.atlas-kart .world-map .map-links .map-link.quiet:not(.active) path.link-shaft,.atlas-kart .world-map .map-links .map-link.quiet:not(.active) path.link-tip{opacity:.22}
+.atlas-kart .world-map .map-links .map-link.quiet:not(.active) path.link-casing{opacity:0}
+.atlas-kart .world-map .map-links.has-active .map-link:not(.active) path.link-casing{opacity:0}
+.atlas-kart .world-map .map-link.active path.link-casing{opacity:.9}
+.atlas-kart .link-row.quiet{opacity:.6}
+.atlas-kart .link-card p.link-lens{margin-top:2px;font-size:12px}
+/* Icons for the lens and the map type (src/lib/map-icons.js), in the buttons and in the map type menu. */
+.atlas-kart svg.pill-icon{flex:none;width:17px;height:17px;color:var(--accent)}
+.atlas-kart svg.pill-icon *{fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.atlas-kart svg.pill-icon .dot,.atlas-kart svg.pill-icon .cell{fill:currentColor;stroke:none}
+.atlas-kart svg.pill-icon .glint{stroke-width:1.1}
+.atlas-kart .projection-option{display:flex;align-items:flex-start;gap:9px}
+.atlas-kart .projection-option svg.pill-icon{margin-top:1px}
+.atlas-kart .projection-option[aria-pressed="true"] svg.pill-icon{color:var(--accent)}
+/* While the map is in use the buttons keep only their icon, flag and arrow. The name slides out and back. */
+.atlas-kart .map-pill .pill-label{display:inline-block;max-width:220px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;vertical-align:bottom;transition:max-width .28s ease,opacity .2s ease,margin .28s ease}
+.atlas-kart .map-pill.compact .pill-label{max-width:0;opacity:0}
+.atlas-kart .lens-pill.compact,.atlas-kart .projection-pill.compact{gap:0;padding:0 13px}
+.atlas-kart .map-pill.compact svg.pill-chevron{display:none}
+.atlas-kart .focus-pill{display:inline-flex;align-items:center}
+.atlas-kart .focus-pill .pill-label{margin-left:6px}
+.atlas-kart .focus-pill .pill-down{margin-left:5px}
+.atlas-kart .focus-pill.compact{padding:0 13px}
+.atlas-kart .focus-pill.compact .pill-label{margin-left:0}

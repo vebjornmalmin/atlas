@@ -3,7 +3,7 @@
   // double-tap to zoom in, and tap to choose. Callers can claim a drag (for drawing arrows).
   import {onMount} from 'svelte';
   import {parseBox,boxString,fitAspect,clampView,zoomAt,panBy} from './map-view.js';
-  let {base,initial=null,view=$bindable(null),unit=$bindable(1),label='Kart',maxZoom=24,className='',onTap=null,onDragStart=null,onDragMove=null,onDragEnd=null,children,overlay=null,controls=true}=$props();
+  let {base,initial=null,view=$bindable(null),unit=$bindable(1),label='Kart',maxZoom=24,className='',onTap=null,onDragStart=null,onDragMove=null,onDragEnd=null,onInteract=null,children,overlay=null,controls=true}=$props();
 
   let svg=$state();
   let size=$state({w:0,h:0});
@@ -54,6 +54,8 @@
   }
   function down(event){
     if(event.button>0)return;
+    // The page can tuck its own controls away while the learner works the map.
+    onInteract?.();
     stop();
     svg.setPointerCapture?.(event.pointerId);
     pointers.set(event.pointerId,{x:event.clientX,y:event.clientY});
@@ -122,7 +124,7 @@
     onTap?.({region,point,element});
   }
   function wheel(event){
-    event.preventDefault();stop();
+    event.preventDefault();stop();onInteract?.();
     const p=toSvg(event.clientX,event.clientY);
     // Trackpad pinch arrives as ctrl+wheel with small deltas; mouse wheels send larger steps.
     const factor=Math.exp(-event.deltaY*(event.ctrlKey?.012:.0022));
@@ -160,9 +162,9 @@
   </svg>
   {#if overlay}{@render overlay()}{/if}
   {#if controls}<div class="pz-controls" aria-label="Kartkontroller">
-    <button type="button" aria-label="Zoom inn" onclick={()=>zoomBy(2)}><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 4v12M4 10h12"/></svg></button>
-    <button type="button" aria-label="Zoom ut" onclick={()=>zoomBy(.5)}><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12"/></svg></button>
-    {#if zoomed}<button type="button" class="pz-reset" aria-label="Vis hele kartet" onclick={reset}><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 8V3h5M17 8V3h-5M3 12v5h5M17 12v5h-5"/></svg></button>{/if}
+    <button type="button" aria-label="Zoom inn" onclick={()=>{onInteract?.();zoomBy(2);}}><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 4v12M4 10h12"/></svg></button>
+    <button type="button" aria-label="Zoom ut" onclick={()=>{onInteract?.();zoomBy(.5);}}><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12"/></svg></button>
+    {#if zoomed}<button type="button" class="pz-reset" aria-label="Vis hele kartet" onclick={()=>{onInteract?.();reset();}}><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 8V3h5M17 8V3h-5M3 12v5h5M17 12v5h-5"/></svg></button>{/if}
   </div>{/if}
 </div>
 

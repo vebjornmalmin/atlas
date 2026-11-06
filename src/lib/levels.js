@@ -124,6 +124,13 @@ export function levelAccepts(target, level) {
   const actual = levelOf(target);
   return actual === level || actual === level - 1;
 }
+// The levels a quiz over these targets can start on, and the one to use when the wanted level has no questions:
+// the wanted level itself, 0 (all levels), or the nearest level that has questions.
+export const levelsWithQuestions = targets => LEVELS.map(l=>l.id).filter(level=>targets.some(t=>levelAccepts(t,level)));
+export function usableLevel(levels, wanted) {
+  if (wanted === 0 || levels.includes(wanted)) return wanted;
+  return levels.reduce((best,level)=>best===null || Math.abs(level-wanted)<Math.abs(best-wanted) ? level : best, null) ?? 0;
+}
 export const levelDistance = (target, level) => level ? Math.abs(levelOf(target) - level) : 0;
 
 /** Explain what makes this particular question hard, in one short line. */

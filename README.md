@@ -4,6 +4,25 @@ Offline kunnskapstrening på norsk, laget for iPhone 17 Pro.
 
 Live app: https://atlas-first-app.atlas-memory.workers.dev
 
+## Neste utgave — 1.7.1: Linser og linjer sammen (ikke publisert)
+
+**Linsen bestemmer hvilke linjer som teller.** Hver linse har allerede vekter på relasjonstypene, og de samme vektene brukes nå på linjene: Verdenssystem vektlegger nobelpriser, Nettverk og møter nobelpriser og påvirkning, Geopolitikk nyheter. Linjene linsen vektlegger, kommer først blant de 30 som tegnes, og de andre tones ned på kartet og i listen. Under listen står det hva linsen vektlegger, og kortet for en linje sier om linsen legger vekt på den eller sier lite om den. En linse som ikke vektlegger noen av linjetypene (for eksempel Sivilisasjoner), endrer ingenting, og listen sier det. Felles emner er Atlas' egen gruppering og vektes ikke av noen linse. Varmekartet har ingen linse, så der vises alle linjer likt. Logikken er `lensLinkWeights` og `placeLinks` i `src/lib/world-graph.js`.
+
+**Linjene synes over alle farger.** Pilene og Verdenssystems varme farger var den samme oransje tonen, så pilene forsvant. Hver linje har nå en lys kant under seg, som også holder dem lesbare over det mørke varmekartet.
+
+**Ikoner i stedet for ord på kartknappene** (`src/lib/map-icons.js`). «Linse» og «Kart» er byttet ut med ikoner. Linsen er et øye med en lupe som iris, og varmekartet er fargede ruter. Hver karttype har sitt eget omriss: et rutenett for Standard, en globus, Mercator med breddegrader som sprer seg mot polene, Equal Earths avrundede sider, appelsinskallet med kutt, Sør opp med pil, ringer rundt Oslo, et hjerte og Peirces kvadrat med rute. Ikonene står også i menyen over karttyper. Knappene har fortsatt fullt navn for skjermlesere.
+
+**Knappene trekker seg sammen når du bruker kartet.** Så snart du drar, knipper, zoomer eller trykker på kartet, viser knappene bare ikonet, og landknappen bare flagg og ↓. Et trykk på flagget viser navnet i tre sekunder, eller til du rører kartet igjen. Trykker du mens navnet vises, går du til omtalen under kartet. Når du velger et nytt land, vises navnet i tre sekunder. Linse- og kartknappen viser navnet mens menyen deres er åpen. Når Kart åpnes på nytt, vises navnene igjen.
+
+**Rettelser fra en full gjennomgang av appen før publisering.**
+
+- **Quiz om én person eller ett sted starter på et nivå som har spørsmål.** Nivåmenyen på en side som Marie Curie tilbød alle nivåer, og «Quiz om Marie Curie» på nivå 2 sa bare at det ikke fantes spørsmål. Menyen viser nå bare nivåene som har spørsmål om det du står på, og velger ditt quiznivå når det finnes der, ellers det nærmeste (`levelsWithQuestions` og `usableLevel` i `src/lib/levels.js`).
+- **Ingen zoom ved dobbelttrykk.** To raske trykk zoomet hele siden, både på tekst og på flagget som skifter mellom flagg og navn. Hele appen bruker nå `touch-action: manipulation`, så to trykk er to trykk. Knipe-zoom virker fortsatt.
+- **Mellomrom i datolinjen på I dag.** «6. NOVEMBER· 2 DAGER PÅ RAD» manglet mellomrommet før prikken.
+- **Skjermbildet i en tilbakemelding viser lukkede seksjoner som lukket.** Innholdet i «Fordypning og forbindelser» og «Kilder» ble tegnet oppå hverandre i bildet selv om seksjonene var lukket.
+
+263 automatiske tester består, og produksjonsbygget lages uten feil. Hele appen er gått gjennom i den installerte hjemmeskjermappen i iPhone 17 Pro-simulatoren, lyst og mørkt, med lukking og gjenåpning underveis: oppdateringsbanneret (fremgang og side beholdes), søk, en personside og quiz om personen, tilbakemelding som lagres og fører tilbake til samme svar, en økt som fortsetter på samme spørsmål etter omstart, Tid med epoker, Emner, Deg (fremgang, siste svar, økten, innstillinger), og Kart: karttyper, linser, bryterne for piler, stiplede linjer og varmekart, kortet for en linje, valg av nytt land, knapper som trekker seg sammen, og flagget som viser navnet og skjules igjen ved zoom. Et nytt trykk på flagget mens navnet vises går til omtalen; to svært raske trykk viser bare navnet.
+
 ## Gjeldende utgave — 1.7.0: Forbindelser og varmekart på kartet
 
 Publisert 6. november 2026: app 1.7.0, utgivelse `873e7755ff74`, kunnskapspakke 2.2.2 (uendret), som statiske filer via Wrangler fra `main` etter at `main` var sendt til GitHub. Safari i simulatoren fant den nye utgaven på den publiserte adressen, oppdaterte seg og viste Kart med forbindelseslinjene og lagknappen.

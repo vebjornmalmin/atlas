@@ -32,7 +32,9 @@ button,input,textarea,select{font:inherit}
 button,a,input,textarea,select{-webkit-tap-highlight-color:transparent}
 button{cursor:pointer;overflow-wrap:normal}
 button:disabled{cursor:default;opacity:.45}
-button,a{touch-action:manipulation}
+/* No double-tap zoom anywhere in the app: two quick taps (on a button that changes, or on text) must stay taps.
+   Pinch zoom still works. */
+html,button,a{touch-action:manipulation}
 a{color:var(--accent);text-underline-offset:4px}
 button:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 input:focus-visible,textarea:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:1px}

@@ -8,7 +8,7 @@
   import PanZoomMap from '../lib/PanZoomMap.svelte';
   import SortableList from '../lib/SortableList.svelte';
   import {pathBounds,unionBox} from '../lib/map-view.js';
-  import {LEVELS,AXES,levelName,estimateVariants,timelineTargets,FAMILIAR_ISO3,preferredLevel,levelFromDepth,profileSummary,axisInsights} from '../lib/levels.js';
+  import {LEVELS,AXES,levelName,estimateVariants,timelineTargets,FAMILIAR_ISO3,preferredLevel,levelFromDepth,levelsWithQuestions,usableLevel,profileSummary,axisInsights} from '../lib/levels.js';
   import LearningPath from '../lib/LearningPath.svelte';
   import StorySpine from '../lib/StorySpine.svelte';
   import {chapterFor,yearSpan,weavePerspectives,simultaneityTargets,PERSPECTIVE_REASON,perspectiveLabel} from '../lib/story.js';
@@ -277,6 +277,13 @@
   let intervals = $derived(current ? ratingIntervals(currentState) : {});
   const retryNote = rating => nextActionNote(session,{correct,usedHint,learnedFirst,rating:effectiveRating(rating,{correct,usedHint,learnedFirst,mode:current?.mode})});
   let entity = $derived(data?.entities.find(e => e.id === detailId));
+  // A person or place often has questions on only some levels. The level menu on its page offers only those,
+  // and starts on the chosen quiz level when it works here, otherwise on the nearest one that does.
+  let entityTargets = $derived(entity ? targets.filter(t=>t.entityId===entity.id) : []);
+  let entityLevels = $derived(levelsWithQuestions(entityTargets));
+  let entityLevelChoice = $state(null);
+  let entityLevel = $derived(usableLevel(entityLevels, entityLevelChoice ?? quizLevel));
+  $effect(()=>{ detailId; entityLevelChoice=null; });
   let relationshipLimit = $state(40);
   let entityRelationships = $derived(data?.relationships.filter(r=>r.from===detailId || r.to===detailId) || []);
   $effect(()=>{ detailId; relationshipLimit = 40; });
@@ -742,7 +749,7 @@
     {:else}
       {@const paused=savedSessions.filter(s=>s.id!=='active' && s.sessionId!==session?.sessionId && s.status==='active')}
       <div class="today">
-      {#if !quizSetup}<header class="t-head"><p class="eyebrow">{new Date().toLocaleDateString('nb-NO',{weekday:'long',day:'numeric',month:'long'})}{#if streak>1} · {streak} dager på rad{/if}</p><div class="t-title-row"><h1>{reviewedToday?'Godt i gang':'I dag'}</h1>{#if reviewedToday}<span class="t-meta">{reviewedToday} svar i dag</span>{/if}</div></header>
+      {#if !quizSetup}<header class="t-head"><p class="eyebrow">{new Date().toLocaleDateString('nb-NO',{weekday:'long',day:'numeric',month:'long'})}{#if streak>1}{` · ${streak} dager på rad`}{/if}</p><div class="t-title-row"><h1>{reviewedToday?'Godt i gang':'I dag'}</h1>{#if reviewedToday}<span class="t-meta">{reviewedToday} svar i dag</span>{/if}</div></header>
       {#if session?.status==='active' && (current || currentLesson) && !(data.curriculum && session.title==='Dagens økt')}<div class="t-chapter t-resume"><p class="eyebrow">Påbegynt</p><h2>{session.title || 'Påbegynt økt'}</h2><p class="t-sub">{session.index} av {session.queue.length} gjort</p><button class="primary" onclick={()=>run(()=>resumeSession())}>Fortsett der du var</button></div>{/if}
       {#if data.curriculum}
         {@const plan=dailyPlan}
@@ -796,7 +803,7 @@
     <div class="atlas-entity">
       <button class="quiet back-button" onclick={()=>detailId=''}>← Atlas</button><section class="hero"><p class="eyebrow">{typeLabel(entity.type)}</p><h1>{#if entity.geo && entity.iso2}<Flag iso2={entity.iso2} />{/if}{entity.label}</h1><p class="lead">{entity.summary}</p></section>{#if entity.type==='topic'}<button class="primary" onclick={()=>openUnit(entity.id.replace(/^unit:/,''))}>Åpne emnet</button>{/if}{#if artworkMedia.find(m=>m.entityId===entity.id)}{@const art=artworkMedia.find(m=>m.entityId===entity.id)}<figure class="artwork-figure"><img src={art.url} alt={`${art.title} av ${art.artist}`} width={art.width} height={art.height}><figcaption class="muted detail">{art.credit} · <a href={art.sourceUrl} target="_blank" rel="noreferrer">Bildekilde</a></figcaption></figure>{/if}
       {#if sourceQueries(entity,data.sources).length}<div class="card stack"><button class="secondary" disabled={busy} onclick={()=>run(()=>loadMoreSources(entity.id))}>Hent bilder og flere spørsmål</button><p class="muted detail">Henter kildebelagte forbindelser og bilder med fri bruk. Innholdet lagres på denne enheten.</p>{#if sourceProgress || sourceStatus}<p class="muted" role="status">{sourceProgress || sourceStatus}</p>{/if}</div>{/if}
-      <div class="card stack"><label>Nivå<select class="select" bind:value={quizLevel}>{#each LEVELS as l}<option value={l.id}>{l.id} · {l.name}</option>{/each}<option value={0}>Alle nivåer</option></select></label><button class="primary" disabled={busy || !targets.some(t=>t.entityId===entity.id)} onclick={()=>run(()=>beginSession('mixed',{entityId:entity.id,title:entity.label,level:quizLevel}))}>Quiz om {entity.label}</button>{#if !targets.some(t=>t.entityId===entity.id)}<p class="muted">Denne siden har ikke quizspørsmål ennå.</p>{/if}</div>
+      <div class="card stack">{#if entityTargets.length}<label>Nivå<select class="select" value={entityLevel} onchange={event=>entityLevelChoice=Number(event.currentTarget.value)}>{#each LEVELS.filter(l=>entityLevels.includes(l.id)) as l}<option value={l.id}>{l.id} · {l.name}</option>{/each}<option value={0}>Alle nivåer</option></select></label>{/if}<button class="primary" disabled={busy || !entityTargets.length} onclick={()=>run(()=>beginSession('mixed',{entityId:entity.id,title:entity.label,level:entityLevel}))}>Quiz om {entity.label}</button>{#if !entityTargets.length}<p class="muted">Denne siden har ikke quizspørsmål ennå.</p>{/if}</div>
       {#if worldGraph}<button class="secondary" onclick={()=>{try{const saved=JSON.parse(localStorage.getItem('atlas-world')||'{}');localStorage.setItem('atlas-world',JSON.stringify({...saved,focusId:entity.id}));}catch{}navigate('world');}}>Se {entity.label} gjennom historiesynene →</button>{/if}<div class="chips">{#each entity.collectionIds as id}<button class="chip" onclick={()=>run(()=>beginSession('mixed',{collectionId:id,level:quizLevel,title:titleFor(id)}))}>Quiz: {titleFor(id)} →</button>{/each}</div>
       <h2 class="section-title">Sammenhenger</h2><div class="card">{#each entityRelationships.slice(0,relationshipLimit) as relation}{@const other=data.entities.find(e=>e.id===(relation.from===entity.id?relation.to:relation.from))}<button class="entity-row" onclick={()=>detailId=other?.id || ''}><span><small class="eyebrow">{relation.from===entity.id || relation.type==='borders'?relationLabel(relation.type):`${relationLabel(relation.type)} · inngående`}</small><strong>{other?.label}</strong><small class="muted">{relation.context}</small></span><span aria-hidden="true">↗</span></button>{/each}</div>
       {#if entityRelationships.length > relationshipLimit}<button class="secondary" onclick={()=>relationshipLimit+=40}>Vis flere forbindelser ({entityRelationships.length})</button>{/if}

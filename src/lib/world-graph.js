@@ -57,12 +57,21 @@ const LINK_KINDS = {'knowledge-flow': 'nobel', 'award-time-affiliation': 'nobel'
  * (from contentPlaces), a country is also linked to the countries named in the same topics; those
  * links have no direction.
  */
+/** How much a lens cares about each kind of line on the map: its weight on the relations behind that kind.
+ * A shared topic is Atlas's own grouping, not a historical relation, so no lens weights it. */
+export function lensLinkWeights(lens) {
+  const weights = {nobel: 0, ideas: 0, news: 0, topic: 0};
+  for (const [type, kind] of Object.entries(LINK_KINDS)) weights[kind] = Math.max(weights[kind], lens?.relations?.[type] || 0);
+  return weights;
+}
+
 // `sourced: false` leaves out the register's own links (Nobel prizes, influence, news); without
 // `content` there are no shared-topic links. The map's switches turn each kind off this way.
-export function placeLinks(graph, id, limit = 10, content = null, {sourced = true} = {}) {
+// With a lens that weights some kinds, those links come first and carry `lensWeight` > 0; the rest have 0.
+export function placeLinks(graph, id, limit = 10, content = null, {sourced = true, lens = null} = {}) {
   const entity = graph.byId.get(id);
   const home = entity?.geo ? id : graph.countryOf.get(id) || null;
-  if (!home) return {home: null, links: [], total: 0};
+  if (!home) return {home: null, links: [], total: 0, lensSees: false};
   const sources = entity.geo ? [home, ...(graph.members.get(home) || []).filter(m => m !== home)] : [id];
   const partners = new Map();
   if (sourced) for (const source of sources) for (const link of graph.adjacency.get(source) || []) {
@@ -81,6 +90,7 @@ export function placeLinks(graph, id, limit = 10, content = null, {sourced = tru
     }
     if (link.relation.type === 'knowledge-flow' && !p.flowContext) p.flowContext = link.relation.context;
   }
+  const weights = lensLinkWeights(lens), lensSees = Object.values(weights).some(w => w > 0);
   const shared = {}, topicExamples = {};
   if (content && entity.geo) for (const unitId of content.countries.get(home)?.topics || []) {
     const title = graph.byId.get(`unit:${unitId}`)?.label;
@@ -104,9 +114,10 @@ export function placeLinks(graph, id, limit = 10, content = null, {sourced = tru
     const register = p.examples.length ? p.examples : flow, topics = topicExamples[p.country] || [];
     const first = together > sum(() => true) ? topics : register, second = first === topics ? register : topics;
     const examples = [...first.slice(0, second.length ? 2 : 3), ...second].slice(0, 3);
-    return {country: p.country, out: sum(key => key.endsWith(':out')), in: sum(key => key.endsWith(':in')), shared: together, count: sum(() => true) + together, kinds, examples};
-  }).sort((a, b) => b.count - a.count || graph.byId.get(a.country).label.localeCompare(graph.byId.get(b.country).label, 'nb'));
-  return {home, links: links.slice(0, limit), total: links.length};
+    const lensWeight = Math.max(0, ...kinds.map(k => weights[k.kind])), lensScore = kinds.reduce((total, k) => total + k.count * weights[k.kind], 0);
+    return {country: p.country, out: sum(key => key.endsWith(':out')), in: sum(key => key.endsWith(':in')), shared: together, count: sum(() => true) + together, kinds, examples, lensWeight, lensScore};
+  }).sort((a, b) => b.lensScore - a.lensScore || b.count - a.count || graph.byId.get(a.country).label.localeCompare(graph.byId.get(b.country).label, 'nb'));
+  return {home, links: links.slice(0, limit), total: links.length, lensSees};
 }
 
 export function newsWeight(item, now = new Date(), halfLife = 14) {
