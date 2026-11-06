@@ -19259,8 +19259,8 @@
     },
     {
       "id": "core:nh-vikingtiden-treller",
-      "prompt": "Omtrent hvor stor del av befolkningen i vikingtiden kan ha vært treller?",
-      "answer": "En fjerdedel til en tredjedel",
+      "prompt": "Omtrent hvor stor del av befolkningen i vikingtiden kan ha vært treller, ifølge ulike anslag?",
+      "answer": "Mellom en tidel og en tredjedel",
       "entityId": "unit:nh-vikingtiden",
       "previousDifficulty": 4,
       "difficulty": 4,
@@ -21444,7 +21444,7 @@
     },
     {
       "id": "core:nh-etterkrigstiden-arbeiderpartistaten",
-      "prompt": "Hva kalles perioden fra 1935 til midten av 1960-årene, da ett parti hadde regjeringsmakten nesten hele tiden?",
+      "prompt": "Hva kalles perioden fra 1935 og inn i 1960-årene, da ett parti hadde regjeringsmakten nesten hele tiden?",
       "answer": "Arbeiderpartistaten",
       "entityId": "unit:nh-etterkrigstiden",
       "previousDifficulty": 3,
@@ -43180,7 +43180,7 @@
     {
       "id": "core:lit-moderne-norsk-forklar-autofiksjon",
       "prompt": "Forklar hva autofiksjon er, og hvorfor «Min kamp» vakte så sterke reaksjoner.",
-      "answer": "Autofiksjon er romaner som bygger tett på forfatterens eget liv, med virkelige personer som modeller. I «Min kamp» opptrer Knausgårds familie og venner under egne navn, og noen av dem mente de ble utlevert. Samtidig fascinerte ærligheten og nærheten mange lesere.",
+      "answer": "Autofiksjon er romaner som bygger tett på forfatterens eget liv, med virkelige personer som modeller. I «Min kamp» skriver Knausgård om familie og venner, de fleste under egne navn, og noen av dem mente de ble utlevert. Samtidig fascinerte ærligheten og nærheten mange lesere.",
       "entityId": "unit:lit-moderne-norsk",
       "previousDifficulty": 4,
       "difficulty": 4,
@@ -44697,7 +44697,7 @@
     },
     {
       "id": "core:mus-barokken-mendelssohn",
-      "prompt": "Bachs store kirkeverk ble sjelden framført etter hans død. Hvilken komponist satte i gang gjenoppdagelsen med Matteuspassjonen i Berlin i 1829?",
+      "prompt": "Bachs store kirkeverk ble sjelden framført etter hans død. Hvilken komponist satte i gang gjenoppdagelsen med Matteuspasjonen i Berlin i 1829?",
       "answer": "Felix Mendelssohn",
       "entityId": "unit:mus-barokken",
       "previousDifficulty": 5,
@@ -46975,7 +46975,7 @@
     {
       "id": "core:ide-1800-tidslinje",
       "prompt": "Sett 1800-tallsverkene i riktig rekkefølge.",
-      "answer": "Hegels «Åndens fenomenologi» (1807) → Kierkegaards «Enten-Eller» (1843) → «Det kommunistiske manifest» (1848) → Mills «Om friheten» (1859) → Nietzsches «Den muntre vitenskap» (1882)",
+      "answer": "Hegels «Åndens fenomenologi» (1807) → Kierkegaards «Enten-Eller» (1843) → «Det kommunistiske manifest» (1848) → Mills «Om friheten» (1859) → Nietzsches «Den muntre vitenskapen» (1882)",
       "entityId": "unit:ide-1800",
       "previousDifficulty": 4,
       "difficulty": 4,
