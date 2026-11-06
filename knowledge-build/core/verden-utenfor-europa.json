@@ -51,6 +51,10 @@
         {
           "title": "Chang'an – Store norske leksikon",
           "url": "https://snl.no/Chang'an"
+        },
+        {
+          "title": "Qin og Han-dynastiene – Store norske leksikon",
+          "url": "https://snl.no/Qin_og_Han-dynastiene"
         }
       ],
       "cards": [
@@ -607,7 +611,7 @@
               "year": 1591
             }
           ],
-          "explain": "Rikene fulgte hverandre i samme område i over 350 år. Hvert av dem bygde på kontrollen over handelen gjennom Sahara.",
+          "explain": "Rikene fulgte hverandre i samme område i over 350 år. Hvert av dem bygde på kontrollen over handelen gjennom Sahara. Årstallet for Malis grunnleggelse bygger på muntlig tradisjon og er bare omtrentlig.",
           "hint": "Riket Mansa Musa styrte, ble grunnlagt bare et par generasjoner før ham."
         },
         {
@@ -734,6 +738,10 @@
         {
           "title": "Inkariket – Store norske leksikon",
           "url": "https://snl.no/Inkariket"
+        },
+        {
+          "title": "Francisco Pizarro – Store norske leksikon",
+          "url": "https://snl.no/Francisco_Pizarro"
         }
       ],
       "cards": [
@@ -817,7 +825,7 @@
           "accept": [
             "Pizarro"
           ],
-          "explain": "Pizarro hadde under 200 mann. Atahualpa betalte et rom fullt av gull og sølv i løsesum, men ble henrettet året etter. Inkariket var svekket av en borgerkrig mellom Atahualpa og broren Huáscar.",
+          "explain": "Pizarro hadde under 200 mann. Atahualpa betalte et rom fullt av gull og sølv i løsesum, men ble henrettet året etter. Inkariket var svekket av en borgerkrig mellom Atahualpa og halvbroren Huáscar.",
           "hint": "Han hadde vært med Balboa over Panama til Stillehavet."
         },
         {
@@ -921,7 +929,7 @@
             "De ble utryddet da aztekerne erobret landområdene",
             "De utvandret sørover og ble en del av inkariket"
           ],
-          "explain": "Mayabyer som Chichén Itzá blomstret også etter 900, og spanjolene brukte nesten 200 år på å erobre de siste mayastatene. Den siste, Nojpetén, falt i 1697.",
+          "explain": "Mayabyer som Chichén Itzá blomstret også etter 900, og spanjolene brukte over 150 år på å erobre de siste mayastatene. Den siste, itzá-riket med hovedstaden Nojpetén ved Petén-sjøen, falt i 1697.",
           "hint": "Tenk på hvem som bor i høylandet i Guatemala i dag."
         }
       ]
@@ -1183,6 +1191,10 @@
         {
           "title": "samurai – Store norske leksikon",
           "url": "https://snl.no/samurai"
+        },
+        {
+          "title": "Deshima – Store norske leksikon",
+          "url": "https://snl.no/Deshima"
         }
       ],
       "cards": [
@@ -1280,7 +1292,7 @@
             "Britene",
             "Spanjolene"
           ],
-          "explain": "De holdt til på den lille kunstige øya Dejima i Nagasaki. Portugiserne var kastet ut fordi shogunen fryktet katolsk misjon. Gjennom nederlenderne fulgte japanske lærde med på vestlig medisin og naturvitenskap.",
+          "explain": "De holdt til på den lille kunstige øya Dejima i Nagasaki. Portugiserne var kastet ut fordi shogunen fryktet at den katolske misjonen kunne gi kristne lensherrer støtte utenfra. Gjennom nederlenderne fulgte japanske lærde med på vestlig medisin og naturvitenskap.",
           "hint": "Landet deres var protestantisk og hadde kjempet seg fri fra Spania."
         },
         {
