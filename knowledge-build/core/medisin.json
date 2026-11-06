@@ -16,17 +16,18 @@
         "from": -400,
         "to": 200
       },
-      "summary": "Den greske og romerske medisinen formulerte læren om fire kroppsvæsker, og den ble stående som grunnlag for medisinen langt inn på 1600-tallet.",
+      "summary": "Greske og romerske leger forklarte sykdom med naturlige årsaker og med læren om fire kroppsvæsker, og denne medisinen rådet langt inn på 1600-tallet.",
       "lesson": [
-        "Hippokrates, en gresk lege fra øya Kos, levde på 400-tallet f.Kr. Han regnes som medisinens far. Navnet hans står også for en samling tekster, Corpus Hippocraticum, og ikke alle tekstene er skrevet av ham selv.",
-        "Læren om fire kroppsvæsker tilskrives Hippokrates. Den sier at sykdom skyldes ubalanse mellom blod, slim, gul galle og svart galle. Denne læren kalles humoralpatologi. Behandlingen var å gjenopprette balansen mellom væskene.",
-        "Galen, en romersk lege av gresk opprinnelse, systematiserte disse ideene. Han skrev over 500 verker om filosofi, matematikk, grammatikk og medisin. Siden han sjelden fikk dissekere mennesker, studerte han dyreanatomi. Derfor ble noen av beskrivelsene hans feil. Likevel var læren hans grunnlaget for medisinen til langt inn på 1600-tallet."
+        "Hippokrates var en gresk lege fra øya Kos på 400-tallet f.Kr. Han regnes som medisinens far. Legene i hans skole forklarte sykdom med naturlige årsaker, ikke som straff fra gudene, og de la vekt på å iaktta pasienten nøye. Samlingen av tekster som bærer navnet hans, Corpus Hippocraticum, er skrevet av mange forfattere.",
+        "I disse tekstene står læren om fire kroppsvæsker: blod, slim, gul galle og svart galle. Sykdom ble forklart som ubalanse mellom væskene, og læren kalles humoralpatologi. Behandlingen skulle gjenopprette balansen med kosthold, brekk- og avføringsmidler og årelating, der legen tappet blod fra pasienten.",
+        "Galen var en gresk lege fra Pergamon som på 100-tallet ble livlege for keiser Marcus Aurelius i Roma. Han samlet den greske medisinen i et stort system. Han fikk ikke dissekere mennesker og studerte aper og griser, så noen beskrivelser ble feil. Gjennom den persiske legen Ibn Sina og hans «Medisinens kanon» fra omkring 1025 levde læren videre til langt inn på 1600-tallet."
       ],
       "keyPoints": [
-        "Hippokrates regnes som medisinens far, men samlingen Corpus Hippocraticum er ikke skrevet av ham alene.",
-        "Læren om de fire kroppsvæskene forklarte sykdom som ubalanse mellom væskene.",
-        "Galen systematiserte den greske medisinen og skrev over 500 verker.",
-        "Galens lære var grunnlaget for medisinen til langt inn på 1600-tallet."
+        "Hippokrates regnes som medisinens far; skolen hans forklarte sykdom med naturlige årsaker.",
+        "Humoralpatologien så sykdom som ubalanse mellom blod, slim, gul galle og svart galle.",
+        "Årelating og andre behandlinger skulle gjenopprette balansen mellom væskene.",
+        "Galen bygde anatomien på dyr, og noen beskrivelser ble derfor feil.",
+        "Via blant andre Ibn Sina var Galens lære grunnlaget for medisinen til langt inn på 1600-tallet."
       ],
       "sources": [
         {
@@ -55,135 +56,192 @@
           "id": "med-oldtiden-hippokrates",
           "step": 1,
           "type": "choice",
-          "prompt": "Hvilken gresk lege, fra øya Kos, regnes som medisinens far?",
+          "prompt": "Hvilken gresk lege fra øya Kos regnes som medisinens far?",
           "answer": "Hippokrates",
           "distractors": [
-            "Platon",
-            "Euklid",
-            "Herodot"
+            "Galen",
+            "Asklepios",
+            "Aristoteles"
           ],
-          "explain": "Den hippokratiske ed er tradisjonelt tilskrevet ham, men den er et etisk ideal, ikke en lov. Platon, Euklid og Herodot var også greske, men de var ikke leger."
+          "explain": "Asklepios var legekunstens gud, og Aristoteles var filosof og naturforsker. Galen levde over 500 år etter Hippokrates og virket i Roma.",
+          "hint": "Han levde på samme tid som Sokrates, og en kjent ed for leger bærer navnet hans."
         },
         {
           "id": "med-oldtiden-fire-vaesker",
           "step": 1,
           "type": "choice",
-          "prompt": "Hvor mange kroppsvæsker bygget den klassiske læren om sykdom på?",
-          "answer": "Fire",
+          "prompt": "Hvilke fire kroppsvæsker bygde læren om sykdom i oldtiden på?",
+          "answer": "Blod, slim, gul galle og svart galle",
           "distractors": [
-            "Tre",
-            "Fem",
-            "Seks"
+            "Blod, slim, urin og svette",
+            "Blod, lymfe, galle og magesaft",
+            "Blod, spytt, tårer og svette"
           ],
-          "explain": "Væskene var blod, slim, gul galle og svart galle. Behandlingen skulle gjenopprette balansen mellom dem."
+          "explain": "Hver væske ble knyttet til et temperament. Ordene sangvinsk, flegmatisk, kolerisk og melankolsk kommer fra denne læren og brukes fortsatt om personligheter.",
+          "hint": "To av væskene var varianter av samme stoff, en lys og en mørk."
         },
         {
           "id": "med-oldtiden-galen",
           "step": 1,
           "type": "choice",
-          "prompt": "Hvilken romersk lege av gresk opprinnelse systematiserte den greske medisinen?",
+          "prompt": "Hvilken lege samlet den greske medisinen i et system som rådet i Europa i over tusen år?",
           "answer": "Galen",
           "distractors": [
             "Hippokrates",
-            "Vesalius",
-            "Harvey"
+            "Celsus",
+            "Herofilos"
           ],
-          "explain": "Galen skrev over 500 verker om filosofi, matematikk, grammatikk og medisin. Han skrev også om pulsen."
+          "explain": "Galen kom fra Pergamon i Lilleasia. Han var lege for gladiatorer før han ble livlege for keiser Marcus Aurelius i Roma. Sårene til gladiatorene ga ham et sjeldent innblikk i menneskekroppen.",
+          "hint": "Han virket i Roma på 100-tallet, flere hundre år etter legen fra Kos."
         },
         {
           "id": "med-oldtiden-humoral",
           "step": 2,
           "type": "text",
-          "prompt": "Hva kalles læren om sykdom som ubalanse mellom kroppsvæskene?",
+          "prompt": "Hva kalles læren om at sykdom skyldes ubalanse mellom kroppsvæskene?",
           "answer": "Humoralpatologi",
           "accept": [
-            "Humoral patologi"
+            "humoralpatologien",
+            "humoral patologi",
+            "humorallæren",
+            "væskelæren"
           ],
-          "explain": "Ordet humor er latin for væske. Læren var grunnlaget for medisinen i nesten to tusen år."
+          "explain": "Humor betyr væske på latin, og patologi er læren om sykdom. Uttrykket «i godt humør» kommer fra samme tanke: Væskene var i balanse.",
+          "hint": "Navnet er satt sammen av et latinsk ord for fuktighet og et gresk ord for sykdomslære."
         },
         {
-          "id": "med-oldtiden-anatomi",
+          "id": "med-oldtiden-arelating",
           "step": 2,
           "type": "text",
-          "prompt": "Hva kalles den delen av medisinen som studerer kroppens bygning?",
-          "answer": "Anatomi",
-          "explain": "Galen måtte nøye seg med dyr, og det ga feil. Vesalius og Harvey utfordret senere deler av hans lære."
+          "prompt": "Hva kalles behandlingen der legen tappet blod fra pasienten for å gjenopprette balansen mellom væskene?",
+          "answer": "Årelating",
+          "accept": [
+            "årelatning",
+            "åreladning",
+            "årelate"
+          ],
+          "explain": "Årelating ble brukt mot nesten alle sykdommer helt inn på 1800-tallet. Den svekket ofte pasienten. George Washington døde i 1799 etter å ha fått tappet store mengder blod.",
+          "hint": "Behandlingen ble utført med kniv eller igler og var i bruk helt til 1800-tallet."
         },
         {
-          "id": "med-oldtiden-tidslinje",
-          "step": 3,
-          "type": "order",
-          "prompt": "Sett disse milepælene fra oldtiden og fram til Vesalius i riktig rekkefølge.",
-          "items": [
-            {
-              "label": "Hippokrates lever",
-              "year": -400
-            },
-            {
-              "label": "Galen skriver sine verker (ca.)",
-              "year": 150
-            },
-            {
-              "label": "Vesalius gir ut sin anatomiatlas",
-              "year": 1543
-            }
+          "id": "med-oldtiden-ibn-sina",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvilken persisk lege skrev «Medisinens kanon», som førte Galens lære videre i flere hundre år?",
+          "answer": "Ibn Sina",
+          "accept": [
+            "Avicenna",
+            "Abu Ali ibn Sina",
+            "Ibn Sinā"
           ],
-          "explain": "Mellom Hippokrates og Vesalius gikk nesten 1950 år. Galens lære var det mest brukte grunnlaget for medisinen i store deler av denne tiden."
+          "explain": "I Europa ble han kjent under navnet Avicenna. Kanonen ble oversatt til latin på 1100-tallet og var lærebok ved universitetene til langt inn på 1600-tallet.",
+          "hint": "Han levde rundt år 1000 i det som i dag er Usbekistan og Iran, og var også filosof."
+        },
+        {
+          "id": "med-oldtiden-hvorfor-naturlige-arsaker",
+          "step": 3,
+          "type": "choice",
+          "prompt": "Hva var det nye ved den hippokratiske medisinen?",
+          "answer": "Sykdom ble forklart med naturlige årsaker, ikke med gudenes vilje",
+          "distractors": [
+            "Legene begynte å dissekere mennesker for å lære anatomi",
+            "Sykdom ble forklart med smitte fra usynlige organismer",
+            "Legene brukte for første gang planter som legemidler"
+          ],
+          "explain": "Før dette ble sykdom ofte sett som straff eller tegn fra gudene. Selv epilepsi, «den hellige sykdommen», forklarte de hippokratiske legene med naturlige årsaker. Smitte fra mikrober ble først påvist på 1800-tallet.",
+          "hint": "Tenk på hvordan sykdom ble forklart før legene fra Kos, og hva de satte i stedet."
         },
         {
           "id": "med-oldtiden-galen-feil",
           "step": 3,
           "type": "explain",
           "prompt": "Hvorfor ble noen av Galens beskrivelser av menneskekroppen feil?",
-          "answer": "Han fikk nesten aldri dissekere mennesker. Derfor studerte han dyr og overførte resultatene til mennesker, og det ga feil.",
+          "answer": "Han fikk ikke dissekere mennesker. Derfor studerte han aper, griser og andre dyr og overførte funnene til mennesket. Der dyrene er bygd annerledes, ble beskrivelsene feil.",
           "checklist": [
-            "Galen studerte mest dyr",
-            "Dyreanatomi ble overført til mennesker",
-            "Feilene ble rettet senere"
+            "Galen fikk ikke dissekere mennesker",
+            "Han studerte dyr i stedet",
+            "Han overførte dyrenes anatomi til mennesket"
           ],
-          "explain": "Feilene var en av grunnene til at senere anatomer ville undersøke kroppen selv."
+          "explain": "Galen beskrev for eksempel underkjeven som to knokler, slik den er hos mange dyr. Vesalius rettet slike feil på 1500-tallet etter egne disseksjoner av mennesker.",
+          "hint": "Tenk på hva romersk lov og skikk tillot, og hva han da måtte undersøke i stedet."
         },
         {
-          "id": "med-oldtiden-koblinger",
+          "id": "med-oldtiden-tidslinje",
+          "step": 3,
+          "type": "order",
+          "prompt": "Sett disse milepælene i medisinens historie i riktig rekkefølge.",
+          "items": [
+            {
+              "label": "Hippokrates virker på Kos",
+              "year": -400
+            },
+            {
+              "label": "Galen blir livlege for Marcus Aurelius",
+              "year": 169
+            },
+            {
+              "label": "Ibn Sina skriver «Medisinens kanon»",
+              "year": 1025
+            },
+            {
+              "label": "Vesalius gir ut anatomiboken sin",
+              "year": 1543
+            }
+          ],
+          "explain": "Fra Hippokrates til Vesalius gikk det nesten 2000 år. I hele denne tiden bygde medisinen i stor grad på de samme gamle tekstene.",
+          "hint": "Bare én av hendelsene skjedde før vår tidsregning."
+        },
+        {
+          "id": "med-oldtiden-koble-leger",
           "step": 3,
           "type": "match",
-          "prompt": "Koble navnet med det som hører til.",
+          "prompt": "Koble legen med det han er kjent for.",
           "pairs": [
             {
               "left": "Hippokrates",
-              "right": "Læren om de fire kroppsvæskene"
+              "right": "Forklarte sykdom med naturlige årsaker"
             },
             {
               "left": "Galen",
-              "right": "Systematiserte den greske medisinen"
+              "right": "Bygde anatomien på disseksjon av dyr"
             },
             {
-              "left": "Humoralpatologi",
-              "right": "Sykdom som ubalanse mellom væsker"
+              "left": "Ibn Sina",
+              "right": "Førte gresk medisin videre i den islamske verden"
+            },
+            {
+              "left": "Vesalius",
+              "right": "Rettet anatomien etter disseksjon av mennesker"
             }
           ],
-          "explain": "Læren om væskene holdt seg i lang tid, også etter at Galen hadde systematisert den."
+          "explain": "Hver av dem bygde på dem som kom før. Vesalius brøt ikke med Galen på alle punkter, men satte egne iakttakelser foran de gamle tekstene.",
+          "hint": "Legen som rettet feilene, levde på 1500-tallet."
         },
         {
-          "id": "med-oldtiden-verker",
+          "id": "med-oldtiden-galen-keiser",
           "step": 4,
-          "type": "number",
-          "prompt": "Hvor mange verker skrev Galen? Oppgi et tall.",
-          "answer": "500",
-          "tolerance": 50,
-          "unit": "verker",
-          "explain": "Blant verkene var skrifter om pulsen. Galen skrev 18 bøker om pulsens 27 egenskaper, og han mente hjertefrekvensen var den viktigste."
+          "type": "choice",
+          "prompt": "Hvilken romersk keiser hadde Galen som livlege?",
+          "answer": "Marcus Aurelius",
+          "distractors": [
+            "Augustus",
+            "Nero",
+            "Hadrian"
+          ],
+          "explain": "Marcus Aurelius er også kjent som filosof, for betraktningene «Til meg selv». Galen fortsatte som lege for sønnen hans, Commodus.",
+          "hint": "Keiseren var stoiker og skrev filosofiske betraktninger mens han førte krig ved Donau."
         },
         {
           "id": "med-oldtiden-corpus",
           "step": 4,
           "type": "text",
-          "prompt": "Hva kalles samlingen av tekster som bærer Hippokrates' navn?",
+          "prompt": "Hva kalles samlingen av medisinske tekster som bærer Hippokrates' navn?",
           "answer": "Corpus Hippocraticum",
           "accept": [
-            "Corpus hippocraticum"
+            "Corpus Hippokraticum"
           ],
-          "explain": "Tekstene ble samlet over tid, og de er ikke skrevet av én og samme forfatter."
+          "explain": "Samlingen har rundt 60 skrifter fra flere generasjoner og ble trolig satt sammen i Alexandria. Den hippokratiske ed er en av tekstene.",
+          "hint": "Navnet er latinsk, og det første ordet betyr kropp eller samling."
         }
       ]
     },
@@ -197,19 +255,20 @@
       ],
       "years": {
         "from": 1543,
-        "to": 1628
+        "to": 1661
       },
       "summary": "Vesalius og Harvey bygget på det de selv så i kroppen, og Harvey viste at blodet går i et kretsløp drevet av hjertet.",
       "lesson": [
-        "I 1543 ga Andreas Vesalius ut De humani corporis fabrica, en rikt illustrert anatomibok bygget på hans egne dissekeringer. Boken var skrevet på latin og trykt i Basel. Den regnes som den første anatomiatlasen med relativt nøyaktige illustrasjoner.",
-        "I 1628 ga William Harvey ut en bok om hjertet og blodet. Han viste at hjertet pumper blodet gjennom arteriene og venene i et kretsløp. Harvey hadde vært lege i London fra 1602 og var kongelig lege for to engelske konger.",
-        "Harvey så at arterieblod og venblod er det samme blodet. De tynneste blodårene, kapillærene, ble påvist senere av Malpighi, og det ga bedre forståelse av lungenes funksjon. Vesalius og Harvey presenterte arbeidet sitt som en videreføring av Galen, ikke som et oppgjør med ham."
+        "I 1543 ga Andreas Vesalius, professor i Padova, ut De humani corporis fabrica, en rikt illustrert anatomibok bygd på egne disseksjoner av mennesker. Før ham leste professoren gjerne høyt fra Galen mens en assistent dissekerte. Vesalius så selv etter og viste at Galen på flere punkter hadde beskrevet dyr, ikke mennesker.",
+        "Galen mente at blodet ble laget av maten i leveren og brukt opp ute i kroppen. I 1628 ga engelskmannen William Harvey ut en bok om hjertets og blodets bevegelse. Han regnet ut at hjertet pumper langt mer blod enn kroppen kan lage. Klaffene i venene slipper dessuten blodet bare én vei, mot hjertet. Det samme blodet må derfor gå i et kretsløp.",
+        "Harvey kunne ikke se hvordan blodet kom fra arteriene over i venene. I 1661 så italieneren Marcello Malpighi de tynneste blodårene, kapillærene, i mikroskop. Dermed var kretsløpet bevist. Både Vesalius og Harvey hadde respekt for Galen, men satte egne iakttakelser foran de gamle tekstene."
       ],
       "keyPoints": [
-        "Vesalius ga i 1543 ut De humani corporis fabrica, en anatomiatlas bygget på egne dissekeringer.",
-        "Harvey viste i 1628 at hjertet pumper blodet i et kretsløp gjennom kroppen.",
-        "Kapillærene, de tynneste blodårene, ble påvist senere av Malpighi.",
-        "Harvey var kongelig lege for to engelske konger."
+        "Vesalius ga i 1543 ut De humani corporis fabrica, bygd på egne disseksjoner av mennesker.",
+        "Galen mente at blodet ble laget i leveren og brukt opp i kroppen.",
+        "Harvey viste i 1628 at hjertet driver det samme blodet rundt i et kretsløp.",
+        "Harveys bevis var blodmengden hjertet pumper, og veneklaffene som bare slipper blodet én vei.",
+        "Malpighi så kapillærene i 1661 og fullførte bildet av kretsløpet."
       ],
       "sources": [
         {
@@ -238,27 +297,43 @@
           "id": "med-anatomi-blodomlop-vesalius",
           "step": 1,
           "type": "choice",
-          "prompt": "Hvilken anatom bygget boken sin på egne dissekeringer?",
+          "prompt": "Hvilken anatom på 1500-tallet rettet Galens feil ved å dissekere menneskekropper selv?",
           "answer": "Andreas Vesalius",
           "distractors": [
-            "Galen",
+            "Leonardo da Vinci",
             "William Harvey",
-            "Hippokrates"
+            "Ambroise Paré"
           ],
-          "explain": "Boken var rik på illustrasjoner, og flere av dem ble brukt i lærebøker langt inn på 1800-tallet."
+          "explain": "Leonardo da Vinci dissekerte også og tegnet detaljert anatomi, men tegningene ble ikke utgitt og var lite kjent i flere hundre år. Vesalius' bok ble trykt og spredt over hele Europa.",
+          "hint": "Han var fra Brussel og ble professor i Padova i ung alder."
         },
         {
           "id": "med-anatomi-blodomlop-harvey",
           "step": 1,
           "type": "choice",
-          "prompt": "Hvilken engelsk lege viste at hjertet pumper blodet rundt i kroppen?",
+          "prompt": "Hvem viste at hjertet driver det samme blodet rundt i kroppen i et kretsløp?",
           "answer": "William Harvey",
           "distractors": [
-            "Edward Jenner",
-            "Louis Pasteur",
-            "Ignaz Semmelweis"
+            "Andreas Vesalius",
+            "Marcello Malpighi",
+            "Edward Jenner"
           ],
-          "explain": "Harvey viste at blodet går i et kretsløp drevet av hjertet, og at arterie- og venblod er det samme blodet."
+          "explain": "Harvey viste også at arterieblod og veneblod er det samme blodet. Han kunne likevel ikke se hvordan blodet kom fra arteriene over i venene.",
+          "hint": "Han var engelsk og livlege for kong Karl 1."
+        },
+        {
+          "id": "med-anatomi-blodomlop-galens-laere",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hva mente Galen skjedde med blodet?",
+          "answer": "Det ble laget i leveren og brukt opp i kroppen",
+          "distractors": [
+            "Det gikk rundt i et lukket kretsløp",
+            "Det ble laget i hjertet og renset i lungene",
+            "Det ble laget i milten og skilt ut med svetten"
+          ],
+          "explain": "Ifølge Galen ble maten gjort om til blod i leveren, og blodet ble brukt opp som næring ute i kroppen. Han mente også at blod sivet gjennom små porer i skilleveggen i hjertet. Begge deler ble motbevist.",
+          "hint": "Ifølge Galen ble blodet laget av maten, og det kom ikke tilbake."
         },
         {
           "id": "med-anatomi-blodomlop-kapillaer",
@@ -268,101 +343,161 @@
           "answer": "Kapillærer",
           "accept": [
             "kapillærene",
-            "kapillar"
+            "kapillær",
+            "kapillar",
+            "hårkar",
+            "hårkarene"
           ],
-          "explain": "De ble påvist av Malpighi, etter Harvey. Det ga bedre forståelse av lungenes funksjon."
+          "explain": "Malpighi så dem i froskelunger med mikroskop i 1661, fire år etter Harveys død. Dermed var det vist hvordan blodet kommer fra arteriene over i venene.",
+          "hint": "Det norske navnet sammenligner dem med noe på hodet ditt, så tynne er de."
         },
         {
           "id": "med-anatomi-blodomlop-kretsloep",
           "step": 2,
           "type": "text",
-          "prompt": "Hva kalles blodets bevegelse rundt i kroppen, fra hjertet og tilbake igjen?",
+          "prompt": "Hva kalles blodets vei fra hjertet, ut i kroppen og tilbake til hjertet?",
           "answer": "Blodomløp",
           "accept": [
             "blodomløpet",
             "kretsløp",
-            "blodets kretsløp"
+            "kretsløpet",
+            "blodets kretsløp",
+            "sirkulasjon"
           ],
-          "explain": "Begrepet dekker både det store og det lille kretsløpet, gjennom kroppen og gjennom lungene."
+          "explain": "Det lille kretsløpet går gjennom lungene, det store gjennom resten av kroppen. Lungekretsløpet var beskrevet på 1200-tallet av den arabiske legen Ibn al-Nafis, men det var ukjent i Europa.",
+          "hint": "Tenk på en runde som ender der den startet, slik en løperunde gjør."
         },
         {
-          "id": "med-anatomi-blodomlop-latin",
+          "id": "med-anatomi-blodomlop-veneklaffer",
           "step": 2,
           "type": "text",
-          "prompt": "Hva heter den latinske anatomiboken til Vesalius?",
-          "answer": "De humani corporis fabrica",
-          "explain": "Boken er på latin og har sju bøker. Den ble trykt i Basel av Johannes Oporinus."
+          "prompt": "Hva hindrer blodet i venene i å renne bakover, bort fra hjertet?",
+          "answer": "Veneklaffer",
+          "accept": [
+            "veneklaffene",
+            "veneklaff",
+            "klaffer",
+            "klaffene",
+            "klaffer i venene"
+          ],
+          "explain": "Harveys lærer i Padova, Fabricius, hadde beskrevet dem uten å forstå hva de var til. Harvey viste at de bare slipper blodet én vei: mot hjertet.",
+          "hint": "Hjertet har fire av samme slag, og de åpner og lukker seg som små dører."
+        },
+        {
+          "id": "med-anatomi-blodomlop-hvorfor-mengde",
+          "step": 3,
+          "type": "choice",
+          "prompt": "Hvilket argument brukte Harvey mot læren om at blodet lages i leveren og brukes opp?",
+          "answer": "Hjertet pumper langt mer blod enn kroppen kan lage av maten",
+          "distractors": [
+            "Han så blodet strømme gjennom kapillærene i mikroskop",
+            "Han fant porer i skilleveggen mellom hjertets kamre",
+            "Han målte at blodet i venene er kaldere enn i arteriene"
+          ],
+          "explain": "Harvey regnet med hvor mye blod hjertet pumper i hvert slag. På en time blir det flere ganger kroppens vekt, langt mer enn noen kan spise. Kapillærene ble først sett av Malpighi etter Harveys død.",
+          "hint": "Tenk på hva Harvey fikk ut av å regne på hvor mye blod som går gjennom hjertet."
         },
         {
           "id": "med-anatomi-blodomlop-koblinger",
           "step": 3,
           "type": "match",
-          "prompt": "Koble personen med verket eller funnet.",
+          "prompt": "Koble personen med synet på eller funnet om blodet og kroppen.",
           "pairs": [
             {
+              "left": "Galen",
+              "right": "Blodet lages i leveren og brukes opp"
+            },
+            {
               "left": "Andreas Vesalius",
-              "right": "Anatomiatlas fra 1543"
+              "right": "Anatomi bygd på egne disseksjoner"
             },
             {
               "left": "William Harvey",
-              "right": "Blodets kretsløp"
+              "right": "Hjertet driver blodet i et kretsløp"
             },
             {
-              "left": "Malpighi",
-              "right": "Kapillærene"
+              "left": "Marcello Malpighi",
+              "right": "Kapillærene binder arterier og vener sammen"
             }
           ],
-          "explain": "Begge bygget på det de så selv, ikke bare på tekster."
+          "explain": "Galens lære ble ikke forkastet på én gang, men bit for bit. Hver ny iakttakelse rettet noe, og Malpighis mikroskop fylte det siste hullet i Harveys bevis.",
+          "hint": "Den eneste av dem som brukte mikroskop, kom sist."
         },
         {
           "id": "med-anatomi-blodomlop-forklar",
           "step": 3,
           "type": "explain",
-          "prompt": "Hvorfor var det betydningsfullt at Vesalius bygget boken sin på egne dissekeringer?",
-          "answer": "Galen hadde i hovedsak studert dyr. Vesalius kunne sammenligne de gamle beskrivelsene med menneskekroppen og rette feil. Det gjorde boken mer pålitelig enn tradisjonen den utfordret.",
+          "prompt": "Hvorfor var det betydningsfullt at Vesalius bygde boken sin på egne disseksjoner?",
+          "answer": "Før ham lærte man anatomi ved å lese Galen, som hadde studert dyr. Vesalius så selv etter i menneskekroppen og kunne rette feilene. Slik ble egen iakttakelse viktigere enn gamle autoriteter.",
           "checklist": [
-            "Galen studerte dyr",
-            "Vesalius sammenlignet med mennesker",
-            "Boken rettet feil i tradisjonen"
+            "Den gamle anatomien bygde på Galens studier av dyr",
+            "Vesalius undersøkte menneskekroppen selv og rettet feil",
+            "Egen iakttakelse fikk forrang foran autoritet"
           ],
-          "explain": "Utgaven fra 1543 ble trykt i Basel, og Vesalius sto selv bak arbeidet med trykkingen."
+          "explain": "Boktrykkerkunsten gjorde at de nøyaktige tresnittene kunne spres i mange like eksemplarer over hele Europa. Det samme skjedde med Harveys bok om blodet.",
+          "hint": "Tenk på hvor den gamle kunnskapen kom fra, og hva som endret seg da anatomen selv så etter."
         },
         {
           "id": "med-anatomi-blodomlop-tidslinje",
           "step": 3,
           "type": "order",
-          "prompt": "Sett disse hendelsene fra Vesalius til Harvey i riktig rekkefølge.",
+          "prompt": "Sett disse trinnene i forståelsen av kroppen og blodet i riktig rekkefølge.",
           "items": [
             {
-              "label": "Vesalius gir ut sin anatomiatlas",
+              "label": "Galen skriver om anatomi i Roma",
+              "year": 170
+            },
+            {
+              "label": "Vesalius gir ut anatomiboken sin",
               "year": 1543
             },
             {
-              "label": "Harvey begynner å praktisere i London",
-              "year": 1602
+              "label": "Harvey beskriver blodets kretsløp",
+              "year": 1628
             },
             {
-              "label": "Harvey gir ut boken om hjertet og blodet",
-              "year": 1628
+              "label": "Malpighi ser kapillærene i mikroskop",
+              "year": 1661
             }
           ],
-          "explain": "Harvey hadde praktisert i London i over tjue år da boken om hjertet kom ut."
+          "explain": "Det gikk nesten 1400 år fra Galen til Vesalius, men bare litt over hundre år fra Vesalius til Malpighi. Den vitenskapelige revolusjonen satte fart på utviklingen.",
+          "hint": "Bare én av hendelsene skjedde i oldtiden."
         },
         {
           "id": "med-anatomi-blodomlop-atlas-aar",
           "step": 4,
           "type": "year",
-          "prompt": "I hvilket år kom Vesalius' anatomiatlas ut?",
+          "prompt": "Hvilket år kom Vesalius' store anatomibok ut?",
           "answer": "1543",
-          "explain": "Boken kom ut i Basel i juni, etter et trykkeri som Vesalius overvåket selv."
+          "explain": "Vesalius var da bare 28 år og professor i Padova. Illustrasjonene ble brukt og kopiert i lærebøker i over to hundre år.",
+          "hint": "Samme år kom Kopernikus' bok om at Jorda går rundt sola."
         },
         {
-          "id": "med-anatomi-blodomlop-harvey-aar",
+          "id": "med-anatomi-blodomlop-latin",
           "step": 4,
-          "type": "year",
-          "prompt": "I hvilket år ga Harvey ut boken om hjertet og blodet?",
-          "answer": "1628",
-          "explain": "Tittelen er på latin: Exercitatio anatomica de motu cordis et sanguinis in animalibus. Den er forkortet i noen kilder."
+          "type": "text",
+          "prompt": "Hva er den latinske tittelen på Vesalius' anatomibok?",
+          "answer": "De humani corporis fabrica",
+          "accept": [
+            "Fabrica",
+            "De fabrica",
+            "De humani corporis fabrica libri septem"
+          ],
+          "explain": "Verket er delt i sju bøker og ble trykt i Basel. Samme år kom en kortere utgave for studenter, kalt «Epitome».",
+          "hint": "Tittelen betyr «Om menneskekroppens bygning»."
+        },
+        {
+          "id": "med-anatomi-blodomlop-malpighi",
+          "step": 4,
+          "type": "text",
+          "prompt": "Hvilken italiensk lege så kapillærene i mikroskop i 1661?",
+          "answer": "Marcello Malpighi",
+          "accept": [
+            "Malpighi",
+            "M. Malpighi"
+          ],
+          "explain": "Malpighi regnes som grunnleggeren av mikroskopisk anatomi. Flere strukturer i kroppen, blant annet i nyrene, er oppkalt etter ham.",
+          "hint": "Han arbeidet i Bologna og så blodårene i lungene til en frosk."
         }
       ]
     },
@@ -374,20 +509,20 @@
         "bio-sykdom-immunforsvar"
       ],
       "years": {
-        "from": 1796,
+        "from": 1721,
         "to": 1980
       },
       "summary": "Jenner brukte kukopper til å beskytte mot kopper, og etter nesten to hundre år ble kopper erklært utryddet.",
       "lesson": [
-        "Kopper var en alvorlig og smittsom virussykdom. Før vaksinen fantes det en metode kalt inokulasjon, der man bevisst smittet friske mennesker med materiale fra syke. Inokulasjon var en tidlig metode for å beskytte mot kopper.",
-        "I 1796 tok den britiske legen Edward Jenner i bruk materiale fra kukopper som vaksine. Han la merke til at folk som hadde hatt kukopper ikke fikk vanlige kopper. Årstallet 1796 er det vanligste, men kildene er ikke helt enige. Jenner publiserte sine resultater i 1798.",
-        "Verdens helseorganisasjon (WHO) erklærte kopper utryddet i 1980, etter et program som startet i 1967. Det siste naturlige tilfellet ble registrert i Somalia i 1977. Viruset finnes fortsatt i to høysikkerhetslaboratorier."
+        "Kopper var en svært smittsom virussykdom som drepte omtrent 30 prosent av dem som ble smittet. Mange overlevende fikk arr eller ble blinde. Lenge var den beste beskyttelsen inokulasjon: Man smittet friske mennesker med materiale fra koppesår for å gi en mildere sykdom. Metoden var kjent i Asia og Det osmanske riket og kom til England i 1721.",
+        "I 1796 smittet den britiske legen Edward Jenner en gutt med materiale fra kukopper, en mild sykdom hos storfe. Senere utsatte han gutten for kopper, og han ble ikke syk. Det bekreftet en gammel erfaring blant melkepiker: De som hadde hatt kukopper, fikk ikke kopper. Jenner publiserte resultatene i 1798. Metoden ble kalt vaksinasjon, av latin vacca, ku.",
+        "Viruset smitter bare mennesker og har ikke noe dyrereservoar. Verdens helseorganisasjon (WHO) satte i 1967 i gang et program som fant hvert tilfelle og vaksinerte alle rundt, såkalt ringvaksinasjon. Det siste naturlige tilfellet var i Somalia i 1977, og i 1980 ble kopper erklært utryddet. Viruset finnes fortsatt i to høysikkerhetslaboratorier, i USA og Russland."
       ],
       "keyPoints": [
-        "Jenner viste at kukopper beskyttet mot kopper, og innførte koppevaksinasjonen.",
+        "Kopper drepte omtrent 30 prosent av de smittede; inokulasjon med ekte kopper var den eldre beskyttelsen.",
+        "Jenner brukte kukopper i 1796, og ordet vaksine kommer av latin vacca, ku.",
         "Viruset smitter bare mennesker, og det gjorde utryddelsen mulig.",
-        "Verdens helseorganisasjon erklærte kopper utryddet i 1980.",
-        "Viruset finnes fortsatt i to høysikkerhetslaboratorier."
+        "WHO erklærte kopper utryddet i 1980, tre år etter det siste naturlige tilfellet."
       ],
       "sources": [
         {
@@ -420,79 +555,120 @@
           "id": "med-vaksinen-koppene-jenner",
           "step": 1,
           "type": "choice",
-          "prompt": "Hvilken britisk lege står bak den første koppevaksinen?",
+          "prompt": "Hvilken lege sto bak den første vaksinen, mot kopper?",
           "answer": "Edward Jenner",
           "distractors": [
-            "Ignaz Semmelweis",
             "Louis Pasteur",
-            "Robert Koch"
+            "Robert Koch",
+            "Ignaz Semmelweis"
           ],
-          "explain": "Metoden bygget på observasjonen at folk som hadde hatt kukopper, ikke fikk kopper."
+          "explain": "Jenner prøvde metoden i 1796 på den åtte år gamle James Phipps. Et slikt forsøk på et barn ville ikke blitt godkjent i dag. Pasteur utviklet vaksiner mot andre sykdommer nesten hundre år senere.",
+          "hint": "Han var landsens lege i England på slutten av 1700-tallet."
         },
         {
           "id": "med-vaksinen-koppene-utryddet",
           "step": 1,
           "type": "choice",
-          "prompt": "Hvilken smittsom sykdom er i dag utryddet i naturen?",
+          "prompt": "Hvilken sykdom hos mennesker er den eneste som er utryddet fra hele verden?",
           "answer": "Kopper",
           "distractors": [
             "Polio",
             "Tuberkulose",
-            "Difteri"
+            "Meslinger"
           ],
-          "explain": "Viruset smitter bare mennesker, så det finnes ingen dyr som kan bære det."
+          "explain": "Polio er nær ved, men viruset finnes fortsatt i Pakistan og Afghanistan. Den eneste andre sykdommen som er utryddet, er kvegpest, en sykdom hos storfe, i 2011.",
+          "hint": "Tenk på sykdommen der den aller første vaksinen ble brukt."
+        },
+        {
+          "id": "med-vaksinen-koppene-iakttakelse",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hvilken erfaring bygde Jenner vaksinen på?",
+          "answer": "De som hadde hatt kukopper, fikk ikke kopper",
+          "distractors": [
+            "De som hadde overlevd pest, fikk ikke kopper",
+            "Barn som ble ammet lenge, fikk ikke kopper",
+            "De som drakk mye melk, fikk ikke kopper"
+          ],
+          "explain": "Kukopper og kopper er beslektede virus, og immunforsvaret kjenner dem igjen som like. Derfor beskytter en mild infeksjon med det ene mot det farlige andre. Jenner visste ikke at virus fantes; de ble påvist rundt 1900.",
+          "hint": "Tenk på hvem på gårdene som oftest var i kontakt med syke kyr."
         },
         {
           "id": "med-vaksinen-koppene-inokulasjon",
           "step": 2,
           "type": "text",
-          "prompt": "Hva kalles den tidlige metoden der man bevisst smittet friske med materiale fra syke?",
+          "prompt": "Hva kalles den eldre metoden der man bevisst smittet friske mennesker med materiale fra koppesår?",
           "answer": "Inokulasjon",
           "accept": [
-            "Inokulering"
+            "inokulering",
+            "inokulasjonen",
+            "variolasjon",
+            "variolisering"
           ],
-          "explain": "Jenner brukte i stedet materiale fra kukopper, en beslektet sykdom hos storfe."
+          "explain": "Inokulasjon ga vanligvis en mildere sykdom, men noen få prosent døde, og de smittede kunne smitte andre. Vaksinen med kukopper var langt tryggere.",
+          "hint": "Metoden kom til England med en adelskvinne som hadde sett den brukt i Konstantinopel."
         },
         {
           "id": "med-vaksinen-koppene-kukopper",
           "step": 2,
           "type": "text",
-          "prompt": "Hva kalles sykdommen Jenner brukte som grunnlag for vaksinen?",
+          "prompt": "Hvilken mild sykdom hos storfe hentet Jenner smittestoffet fra?",
           "answer": "Kukopper",
           "accept": [
-            "Kukopp"
+            "kukopp",
+            "kukoppene"
           ],
-          "explain": "Kukopper og kopper er begge poxvirus, og de er beslektet."
+          "explain": "Kukopper og kopper er nære slektninger blant koppevirusene. Senere koppevaksiner ble laget av vaccinia, et beslektet virus som gir enda mildere infeksjon.",
+          "hint": "Sykdommen ga sår på jurene, og melkepikene fikk den på hendene."
+        },
+        {
+          "id": "med-vaksinen-koppene-ordet-vaksine",
+          "step": 2,
+          "type": "choice",
+          "prompt": "Hva er opprinnelsen til ordet vaksine?",
+          "answer": "Latin vacca, som betyr ku",
+          "distractors": [
+            "Latin virus, som betyr gift",
+            "Gresk phylax, som betyr vokter",
+            "Latin vacuus, som betyr tom"
+          ],
+          "explain": "Louis Pasteur foreslo å bruke ordet om alle preparater som gir immunitet, til ære for Jenner. Derfor heter også vaksiner mot helt andre sykdommer det samme.",
+          "hint": "Tenk på hvor Jenner hentet smittestoffet fra."
         },
         {
           "id": "med-vaksinen-koppene-utryddelse",
           "step": 3,
           "type": "explain",
-          "prompt": "Hvorfor kunne kopper utryddes, når mange andre smittsomme sykdommer fortsatt finnes?",
-          "answer": "Viruset smitter bare mennesker, så det finnes ingen dyrereservoar å vende tilbake til. Når smittekjedene er brutt, forsvinner viruset fra naturen.",
+          "prompt": "Hvorfor kunne kopper utryddes, mens mange andre smittsomme sykdommer fortsatt finnes?",
+          "answer": "Viruset smitter bare mennesker, så det har ingen dyr å gjemme seg i. Sykdommen var lett å kjenne igjen, og vaksinen beskyttet godt. Ved å finne hvert tilfelle og vaksinere alle rundt kunne smittekjedene brytes til viruset forsvant.",
           "checklist": [
-            "Viruset smitter bare mennesker",
-            "Det finnes ingen dyrereservoar",
-            "Smittekjedene må brytes"
+            "Viruset smitter bare mennesker og har ikke noe dyrereservoar",
+            "Sykdommen var lett å oppdage, og vaksinen virket godt",
+            "Smittekjedene ble brutt ved å vaksinere rundt hvert tilfelle"
           ],
-          "explain": "Viruset finnes fortsatt i to høysikkerhetslaboratorier."
+          "explain": "Polio er vanskeligere å utrydde, fordi de fleste smittede ikke får symptomer, og smitten kan spre seg ubemerket. Meslinger er så smittsomt at nesten alle må være vaksinert.",
+          "hint": "Tenk på hvor viruset kunne gjemme seg, hvor lett sykdommen var å oppdage, og hvordan programmet arbeidet."
         },
         {
           "id": "med-vaksinen-koppene-tidslinje",
           "step": 3,
           "type": "order",
-          "prompt": "Sett hendelsene fra Jenner til utryddelsen av kopper i riktig rekkefølge.",
+          "prompt": "Sett hendelsene i kampen mot kopper i riktig rekkefølge.",
           "items": [
             {
-              "label": "Jenner tar i bruk kukopper som vaksine",
+              "label": "Inokulasjon kommer til England",
+              "year": 1721
+            },
+            {
+              "label": "Jenner vaksinerer med kukopper",
               "year": 1796
             },
             {
-              "label": "Jenner publiserer resultatene",
-              "year": 1798
+              "label": "WHO starter utryddelsesprogrammet",
+              "year": 1967
             },
             {
-              "label": "Siste naturlige tilfelle i Somalia",
+              "label": "Siste naturlige tilfelle, i Somalia",
               "year": 1977
             },
             {
@@ -500,55 +676,66 @@
               "year": 1980
             }
           ],
-          "explain": "Fra Jenners vaksine til utryddelsen gikk det nesten 200 år."
+          "explain": "Fra Jenners vaksine til utryddelsen gikk det nesten 200 år, men selve programmet tok bare 13 år.",
+          "hint": "Den eldste metoden brukte smitte fra ekte kopper."
         },
         {
-          "id": "med-vaksinen-koppene-koblinger",
+          "id": "med-vaksinen-koppene-koble-begreper",
           "step": 3,
           "type": "match",
           "prompt": "Koble begrepet med det det betyr.",
           "pairs": [
             {
               "left": "Inokulasjon",
-              "right": "Bevisst smitte med materiale fra syke"
+              "right": "Smitte med ekte kopper for å gi mild sykdom"
             },
             {
-              "left": "Kukopper",
-              "right": "Gir beskyttelse mot kopper"
+              "left": "Vaksinasjon",
+              "right": "Smitte med kukopper for å gi beskyttelse"
             },
             {
-              "left": "Koppevaksinen",
-              "right": "Utviklet av Jenner"
+              "left": "Ringvaksinasjon",
+              "right": "Vaksinere alle rundt hvert sykdomstilfelle"
+            },
+            {
+              "left": "Dyrereservoar",
+              "right": "Dyr der et smittestoff kan overleve utenom mennesket"
             }
           ],
-          "explain": "Koppevaksinen bygde på Jenners observasjoner, ikke på direkte smitte med kopper."
+          "explain": "Forskjellen mellom inokulasjon og vaksinasjon er avgjørende: Den første ga ekte kopper og kunne starte nye utbrudd, den andre gjorde det ikke.",
+          "hint": "Det eldste begrepet beskriver en metode som brukte selve koppeviruset."
         },
         {
           "id": "med-vaksinen-koppene-1980",
           "step": 4,
           "type": "year",
-          "prompt": "I hvilket år erklærte WHO kopper utryddet?",
+          "prompt": "Hvilket år erklærte Verdens helseorganisasjon kopper utryddet?",
           "answer": "1980",
-          "explain": "Utryddelsesprogrammet startet i 1967, og det siste naturlige tilfellet var i Somalia i 1977."
+          "explain": "Erklæringen kom etter over to år uten nye tilfeller. Kopper hadde trolig tatt rundt 300 millioner liv bare på 1900-tallet.",
+          "hint": "Det var samme år som de olympiske sommerlekene i Moskva."
         },
         {
           "id": "med-vaksinen-koppene-1977",
           "step": 4,
           "type": "year",
-          "prompt": "I hvilket år ble det siste naturlige tilfellet av kopper registrert?",
+          "prompt": "Hvilket år ble det siste naturlige tilfellet av kopper registrert?",
           "answer": "1977",
-          "explain": "Tilfellet var i Somalia. I dag finnes viruset bare i laboratorier."
+          "explain": "Pasienten var sykehuskokken Ali Maow Maalin i Somalia. Han overlevde og arbeidet senere med vaksinasjon mot polio. Et laboratorieuhell i Birmingham året etter ga det aller siste dødsfallet.",
+          "hint": "Det var ti år etter at utryddelsesprogrammet startet."
         },
         {
-          "id": "med-vaksinen-koppene-who",
+          "id": "med-vaksinen-koppene-dodelighet",
           "step": 4,
-          "type": "text",
-          "prompt": "Hva er det fulle navnet på organisasjonen som erklærte kopper utryddet?",
-          "answer": "Verdens helseorganisasjon",
-          "accept": [
-            "WHO"
+          "type": "choice",
+          "prompt": "Omtrent hvor stor andel av de smittede døde av vanlige kopper?",
+          "answer": "Omtrent 30 prosent",
+          "distractors": [
+            "Omtrent 3 prosent",
+            "Omtrent 10 prosent",
+            "Omtrent 70 prosent"
           ],
-          "explain": "WHO er FNs helseorganisasjon. Utryddelsen var et internasjonalt program der mange land deltok."
+          "explain": "Dødeligheten var høyest blant små barn. Mange overlevende fikk arr i ansiktet, og kopper var en av de vanligste årsakene til blindhet.",
+          "hint": "Dødeligheten var mye høyere enn ved spanskesyken, men de fleste overlevde."
         }
       ]
     },
@@ -565,15 +752,16 @@
       },
       "summary": "Semmelweis, Pasteur, Koch og Armauer Hansen viste at sykdom kan skyldes mikrober, og det la grunnlaget for hygiene, vaksiner og behandling.",
       "lesson": [
-        "Lenge visste man lite om hva som gir infeksjoner. I 1847 viste Ignaz Semmelweis i Wien at håndvask med klorkalk reduserte barselfeber. Teorien var omstridt, og han døde i 1865 uten at den var godtatt av de fleste leger.",
-        "Louis Pasteur viste at gjæring skyldes mikrober, og han utviklet vaksiner, blant annet mot miltbrann i 1881. I 1882 påviste Robert Koch at tuberkulose skyldes en bakterie. Kochs postulater, kriterier for å vise at en mikrobe gir en sykdom, brukes fortsatt.",
-        "I 1873 fant Gerhard Armauer Hansen i Bergen bakterien Mycobacterium leprae, som gir spedalskhet. Bakterien er i slekt med tuberkulosebasillen."
+        "Før midten av 1800-tallet trodde mange leger at smittsomme sykdommer spredte seg med dårlig, stinkende luft fra råtnende stoffer. Dette kalles miasmeteorien. I 1847 viste Ignaz Semmelweis i Wien at dødeligheten av barselfeber falt kraftig da legene vasket hendene i klorkalk. Han kunne ikke forklare hvorfor, og mange leger avviste ham. Han døde i 1865.",
+        "Louis Pasteur viste at gjæring og forråtnelse skyldes mikrober, og han utviklet vaksiner, blant annet mot miltbrann i 1881. Inspirert av Pasteur begynte den britiske kirurgen Joseph Lister å rense sår og instrumenter med karbolsyre og publiserte resultatene i 1867. I 1882 påviste Robert Koch at tuberkulose skyldes en bakterie. Kochs postulater, kriterier for å vise at en mikrobe gir en sykdom, brukes fortsatt i modernisert form.",
+        "I 1873 fant Gerhard Armauer Hansen i Bergen bakterien Mycobacterium leprae, som gir spedalskhet. Mange trodde at sykdommen var arvelig, men Hansen mente den smittet. Norge isolerte de syke, og spedalskheten forsvant nesten helt fra landet. Bakterien er i slekt med tuberkulosebasillen."
       ],
       "keyPoints": [
+        "Før mikrobene ble påvist, trodde mange at sykdom spredte seg med dårlig luft, miasma.",
         "Semmelweis viste i 1847 at håndvask med klorkalk reduserte barselfeber.",
-        "Pasteur viste at gjæring skyldes mikrober, og han utviklet vaksiner.",
-        "Koch påviste i 1882 at tuberkulose skyldes en bakterie, og formulerte kriterier for å bevise årsak.",
-        "Armauer Hansen fant i 1873 bakterien som gir spedalskhet."
+        "Pasteur viste at gjæring skyldes mikrober, og Lister brukte det til å rense sår.",
+        "Koch påviste tuberkelbasillen i 1882, og postulatene hans avgjør om en mikrobe gir sykdom.",
+        "Armauer Hansen fant leprabakterien i Bergen i 1873."
       ],
       "sources": [
         {
@@ -614,59 +802,114 @@
           "id": "med-bakteriene-semmelweis",
           "step": 1,
           "type": "choice",
-          "prompt": "Hvilken ungarsk lege viste at håndvask reduserte smitte på fødeklinikken?",
+          "prompt": "Hvilken lege viste i Wien at håndvask reduserte dødeligheten blant fødende?",
           "answer": "Ignaz Semmelweis",
           "distractors": [
-            "Edward Jenner",
+            "Joseph Lister",
             "Robert Koch",
-            "Alexander Fleming"
+            "Louis Pasteur"
           ],
-          "explain": "Han sammenlignet to fødeklinikker i Wien og lette etter forskjellen mellom dem."
+          "explain": "Ved avdelingen der leger og studenter kom rett fra obduksjoner, døde langt flere mødre enn ved jordmødrenes avdeling. Semmelweis mente at legene førte noe med seg fra likene på hendene.",
+          "hint": "Han var født i Ungarn og arbeidet på en fødeklinikk på 1840-tallet."
         },
         {
           "id": "med-bakteriene-pasteur",
           "step": 1,
           "type": "choice",
-          "prompt": "Hvilken fransk forsker viste at gjæring skyldes mikrober?",
+          "prompt": "Hvilken forsker viste at gjæring og forråtnelse skyldes mikrober?",
           "answer": "Louis Pasteur",
           "distractors": [
             "Robert Koch",
-            "Edward Jenner",
-            "Gerhard Armauer Hansen"
+            "Joseph Lister",
+            "Edward Jenner"
           ],
-          "explain": "Pasteur foreslo å varme vin og øl til 55–60 °C for å drepe uønskede bakterier. Metoden kalles pasteurisering."
+          "explain": "Pasteur foreslo å varme vin og øl til 55–60 °C for å drepe uønskede mikrober. Metoden kalles pasteurisering og brukes i dag mest på melk.",
+          "hint": "Han var fransk kjemiker og hjalp blant annet vin- og ølprodusenter."
         },
         {
-          "id": "med-bakteriene-leprabakterie",
+          "id": "med-bakteriene-miasma",
+          "step": 1,
+          "type": "choice",
+          "prompt": "Hva gikk miasmeteorien ut på?",
+          "answer": "At sykdom spres med dårlig, stinkende luft",
+          "distractors": [
+            "At sykdom skyldes ubalanse i kroppsvæskene",
+            "At sykdom skyldes levende mikrober",
+            "At sykdom går i arv fra foreldrene"
+          ],
+          "explain": "Teorien var feil, men den førte til nyttige tiltak som kloakk og rent vann, fordi skitt og stank ofte fulgte med smitte. Ordet malaria betyr «dårlig luft» på italiensk.",
+          "hint": "Ordet miasma er gresk og betyr forurensning eller dunst."
+        },
+        {
+          "id": "med-bakteriene-armauer-hansen",
           "step": 2,
           "type": "text",
-          "prompt": "Hvilken bakterie gir spedalskhet?",
-          "answer": "Mycobacterium leprae",
+          "prompt": "Hvilken norsk lege fant bakterien som gir spedalskhet?",
+          "answer": "Gerhard Armauer Hansen",
           "accept": [
-            "Leprabakterien"
+            "Armauer Hansen",
+            "G. A. Hansen",
+            "Gerhard Henrik Armauer Hansen",
+            "Hansen"
           ],
-          "explain": "Sykdommen kalles i dag også lepra, og den har fått navnet Hansens sykdom etter Armauer Hansen."
+          "explain": "Sykdommen kalles i dag også Hansens sykdom. Norge hadde fra 1856 et nasjonalt register over spedalske, og det ga Hansen et uvanlig godt grunnlag for forskningen.",
+          "hint": "Han var lege i Bergen og svigersønn av lepraforskeren Daniel Cornelius Danielssen."
         },
         {
           "id": "med-bakteriene-koch",
           "step": 2,
           "type": "text",
-          "prompt": "Hvilken tysk forsker påviste tuberkelbasillen?",
+          "prompt": "Hvilken tysk lege påviste bakterien som gir tuberkulose?",
           "answer": "Robert Koch",
-          "explain": "Påvisningen ble allment akseptert blant fagfolk. Koch formulerte også kriterier for å bevise årsak."
+          "accept": [
+            "Koch",
+            "R. Koch",
+            "Heinrich Hermann Robert Koch"
+          ],
+          "explain": "Tuberkulose var en av de vanligste dødsårsakene i Europa, også i Norge. Koch fikk nobelprisen i fysiologi eller medisin i 1905.",
+          "hint": "Han arbeidet i Berlin og var Pasteurs store rival."
+        },
+        {
+          "id": "med-bakteriene-postulat-navn",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva kalles kriteriene for å bevise at en bestemt mikrobe gir en bestemt sykdom?",
+          "answer": "Kochs postulater",
+          "accept": [
+            "Kochs postulat",
+            "Koch-postulatene",
+            "Kochs postulatene"
+          ],
+          "explain": "Ideen går tilbake til Kochs lærer Jakob Henle. Koch og medarbeideren Friedrich Loeffler formulerte kriteriene på 1880-tallet.",
+          "hint": "Navnet består av en forskers navn og et latinsk ord for krav eller forutsetning."
         },
         {
           "id": "med-bakteriene-postulater",
           "step": 3,
           "type": "explain",
           "prompt": "Hvorfor var Kochs postulater viktige for medisinen?",
-          "answer": "De ga en fast fremgangsmåte for å avgjøre om en mikrobe er årsak til en sykdom. Mikroben må finnes hos de syke, kunne dyrkes i renkultur og gi sykdom når den settes inn i et friskt individ.",
+          "answer": "De ga en fast metode for å avgjøre om en mikrobe er årsak til en sykdom, i stedet for gjetninger. Mikroben må finnes hos de syke, kunne dyrkes i renkultur og gi samme sykdom når den overføres til et friskt forsøksdyr.",
           "checklist": [
-            "Mikroben må finnes hos de syke",
-            "Den må kunne dyrkes i renkultur",
-            "Den må gi sykdom hos friske når den settes inn"
+            "Ga en fast metode for å bevise hvilken mikrobe som gir en sykdom",
+            "Mikroben må finnes hos de syke og kunne dyrkes i renkultur",
+            "Renkulturen må gi sykdom hos et friskt forsøksdyr"
           ],
-          "explain": "Kriteriene brukes fortsatt i dag, også når årsaken til en ny sykdom skal avgjøres."
+          "explain": "Postulatene har grenser. Noen mikrober kan ikke dyrkes, og friske bærere kan ha mikroben uten å bli syke. Leprabakterien kan fortsatt ikke dyrkes i laboratoriet.",
+          "hint": "Tenk på hva det krever å bevise at nettopp én mikrobe er årsaken, og ta med trinnene."
+        },
+        {
+          "id": "med-bakteriene-hvorfor-semmelweis",
+          "step": 3,
+          "type": "choice",
+          "prompt": "Hvorfor avviste mange leger Semmelweis' krav om håndvask?",
+          "answer": "Han kunne ikke forklare det, for mikrobene var ennå ukjent",
+          "distractors": [
+            "Dødeligheten falt ikke på avdelingene som innførte håndvask",
+            "Klorkalk var for dyrt for de fleste sykehusene",
+            "Han la ikke fram tallene før etter sin død"
+          ],
+          "explain": "Mange leger likte heller ikke tanken på at de selv førte døden med seg. Først med Pasteur og Lister fikk håndvasken en forklaring. Semmelweis døde i 1865, samme år som Lister gjorde sine første forsøk med karbolsyre.",
+          "hint": "Tenk på hva legene på 1840-tallet ennå ikke visste om smitte."
         },
         {
           "id": "med-bakteriene-koblinger",
@@ -691,59 +934,65 @@
               "right": "Bakterien som gir spedalskhet"
             }
           ],
-          "explain": "Funnene la grunnlaget for at smitte ble forstått som noe man kunne påvise og forebygge."
+          "explain": "Funnene bygde på hverandre: Pasteurs mikrober ga forklaringen Semmelweis manglet, og Kochs metoder gjorde det mulig å finne den enkelte årsaken.",
+          "hint": "Den eneste nordmannen arbeidet i Bergen."
         },
         {
           "id": "med-bakteriene-tidslinje",
           "step": 3,
           "type": "order",
-          "prompt": "Sett funnene om bakterier og sykdom i riktig rekkefølge.",
+          "prompt": "Sett funnene om mikrober og sykdom i riktig rekkefølge.",
           "items": [
             {
               "label": "Semmelweis viser effekten av håndvask",
               "year": 1847
             },
             {
-              "label": "Armauer Hansen finner leprabakterien",
-              "year": 1873
+              "label": "Lister publiserer resultater med karbolsyre",
+              "year": 1867
             },
             {
-              "label": "Pasteur lager vaksine mot miltbrann",
-              "year": 1881
+              "label": "Armauer Hansen finner leprabakterien",
+              "year": 1873
             },
             {
               "label": "Koch påviser tuberkelbasillen",
               "year": 1882
             }
           ],
-          "explain": "De fire hendelsene kom i løpet av 35 år. Mikrobeteorien vant fram i denne perioden."
+          "explain": "Det gikk 35 år fra Semmelweis' håndvask til Kochs funn. I den tiden ble læren om at mange sykdommer skyldes mikrober, alminnelig godtatt.",
+          "hint": "Håndvasken kom før noen kunne forklare hvorfor den virket."
         },
         {
           "id": "med-bakteriene-hansen-aar",
           "step": 4,
           "type": "year",
-          "prompt": "I hvilket år fant Armauer Hansen bakterien som gir spedalskhet?",
+          "prompt": "Hvilket år fant Armauer Hansen bakterien som gir spedalskhet?",
           "answer": "1873",
-          "explain": "Han var overlege ved spedalskehospitalet i Bergen."
+          "explain": "Hansen mente at spedalskhet smitter, mens mange da trodde den var arvelig. Norge fikk lover om isolering av de syke, og antallet nye tilfeller sank raskt.",
+          "hint": "Det var to år etter at den fransk-prøyssiske krigen sluttet."
         },
         {
           "id": "med-bakteriene-koch-aar",
           "step": 4,
           "type": "year",
-          "prompt": "I hvilket år påviste Robert Koch tuberkelbasillen?",
+          "prompt": "Hvilket år påviste Robert Koch tuberkelbasillen?",
           "answer": "1882",
-          "explain": "Kochs påvisning gjorde at tuberkulose ble forstått som en smittsom sykdom, og ikke som en arvelig en."
+          "explain": "Koch la fram funnet 24. mars, og den datoen er i dag verdens tuberkulosedag. Påvisningen viste at tuberkulose smitter og ikke er arvelig.",
+          "hint": "Funnet kom året etter Pasteurs vaksine mot miltbrann."
         },
         {
-          "id": "med-bakteriene-postulat-navn",
+          "id": "med-bakteriene-leprabakterie",
           "step": 4,
           "type": "text",
-          "prompt": "Hva kalles kriteriene for å bevise at en mikrobe er årsak til en sykdom?",
-          "answer": "Kochs postulater",
+          "prompt": "Hva er det latinske navnet på bakterien som gir spedalskhet?",
+          "answer": "Mycobacterium leprae",
           "accept": [
-            "Kochs postulat"
+            "M. leprae",
+            "Mycobacterium lepra"
           ],
-          "explain": "Kriteriene ble først beskrevet av Jakob Henle i 1840. Friedrich Loeffler formulerte dem som postulater i 1883."
+          "explain": "Slekten Mycobacterium omfatter også tuberkulosebasillen, Mycobacterium tuberculosis. Begge vokser svært langsomt, og derfor tar behandlingen lang tid.",
+          "hint": "Bakterien hører til samme slekt som tuberkulosebasillen, og artsnavnet er det latinske ordet for sykdommen."
         }
       ]
     },
@@ -758,16 +1007,17 @@
         "from": 1928,
         "to": 1945
       },
-      "summary": "Flemings oppdagelse av en muggsopp som drepte bakterier førte til penicillin, og til antibiotika som et nytt legemiddelområde.",
+      "summary": "Flemings oppdagelse av en muggsopp som drepte bakterier førte til penicillin, og antibiotika gjorde dødelige infeksjoner til sykdommer som kan kureres.",
       "lesson": [
-        "I 1928 la Alexander Fleming merke til at en muggsopp, Penicillium, hadde drept bakterier i en av sine kulturer. Han kalte det aktive stoffet penicillin. Fleming klarte ikke å isolere stoffet i ren form. Det gjorde Howard Florey og Ernst Boris Chain om lag ti år senere.",
-        "Penicillin var et av de første antibiotika: stoffer som dreper bakterier eller hindrer dem i å vokse. Fleming, Florey og Chain fikk Nobelprisen i medisin i 1945. Muggsoppen kom inn i kulturen ved en tilfeldig forurensning i laboratoriet."
+        "I 1928 la Alexander Fleming merke til at en muggsopp, Penicillium, hadde drept bakteriene rundt seg i en skål på laboratoriet hans i London. Soppen hadde kommet dit ved et uhell. Han kalte det aktive stoffet penicillin, men klarte ikke å rense det eller lage nok til behandling.",
+        "Rundt 1940 lyktes Howard Florey og Ernst Boris Chain i Oxford med å rense penicillin, og i 1941 behandlet de den første pasienten. Under andre verdenskrig ble stoffet masseprodusert i USA. Infeksjoner som før ofte var dødelige, kunne nå kureres. Fleming, Florey og Chain fikk nobelprisen i fysiologi eller medisin i 1945.",
+        "Antibiotika er stoffer som dreper bakterier eller hindrer dem i å vokse. Sulfapreparatene kom på 1930-tallet, noen år før penicillinet ble tatt i bruk. Streptomycin, oppdaget i 1943, ble det første midlet som virket mot tuberkulose. Allerede i nobeltalen advarte Fleming om at bakteriene kunne bli motstandsdyktige hvis stoffet ble brukt feil."
       ],
       "keyPoints": [
-        "Fleming så i 1928 at muggsoppen Penicillium drepte bakterier rundt seg.",
-        "Stoffet ble kalt penicillin og ble isolert av Florey og Chain et tiår senere.",
-        "Fleming, Florey og Chain fikk Nobelprisen i medisin i 1945.",
-        "Antibiotika er stoffer som dreper bakterier eller hindrer at de vokser."
+        "Fleming oppdaget i 1928 at muggsoppen Penicillium drepte bakterier, men kunne ikke rense stoffet.",
+        "Florey og Chain renset penicillin rundt 1940, og det ble masseprodusert under krigen.",
+        "Fleming, Florey og Chain fikk nobelprisen i 1945.",
+        "Antibiotika dreper bakterier eller hindrer vekst; feil bruk gir resistens."
       ],
       "sources": [
         {
@@ -792,51 +1042,58 @@
           "id": "med-antibiotika-fleming",
           "step": 1,
           "type": "choice",
-          "prompt": "Hvilken skotsk forsker så at en muggsopp drepte bakterier i en kultur?",
+          "prompt": "Hvem la først merke til at muggsoppen Penicillium drepte bakterier?",
           "answer": "Alexander Fleming",
           "distractors": [
-            "Edward Jenner",
-            "Robert Koch",
-            "Ignaz Semmelweis"
+            "Howard Florey",
+            "Ernst Boris Chain",
+            "Paul Ehrlich"
           ],
-          "explain": "Fleming isolerte ikke det aktive stoffet selv. Det måtte andre forskere gjøre."
+          "explain": "Fleming var skotsk og arbeidet på St Mary's Hospital i London. Florey og Chain gjorde stoffet om til et legemiddel over ti år senere.",
+          "hint": "Han var skotsk og kom tilbake fra ferie til et rotete laboratorium."
         },
         {
-          "id": "med-antibiotika-sopp",
+          "id": "med-antibiotika-vendepunkt",
           "step": 1,
           "type": "choice",
-          "prompt": "Hvilken type organisme er muggsopp?",
-          "answer": "Sopp",
+          "prompt": "Hvorfor var penicillinet et vendepunkt i medisinen?",
+          "answer": "Infeksjoner som før ofte var dødelige, kunne kureres",
           "distractors": [
-            "Bakterie",
-            "Virus",
-            "Parasitt"
+            "Det var den første vaksinen mot en virussykdom",
+            "Det gjorde operasjoner smertefrie for første gang",
+            "Det kunne kurere alle sykdommer som skyldes mikrober"
           ],
-          "explain": "Penicillium er en muggsopp som danner stoffer som hemmer bakterier."
+          "explain": "Før penicillinet kunne et skrubbsår eller en lungebetennelse bli dødelig. Penicillin virker ikke mot virus, og smertefri kirurgi kom med narkosen på 1840-tallet.",
+          "hint": "Tenk på hva som kunne skje med en betent rift eller en lungebetennelse før 1940-tallet."
         },
         {
           "id": "med-antibiotika-penicillin",
           "step": 1,
           "type": "choice",
-          "prompt": "Hva kalles stoffet muggsoppen produserte, som drepte bakteriene?",
+          "prompt": "Hva kalte Fleming stoffet fra muggsoppen som drepte bakteriene?",
           "answer": "Penicillin",
           "distractors": [
-            "Insulin",
-            "Morfin",
-            "Kinin"
+            "Streptomycin",
+            "Sulfanilamid",
+            "Insulin"
           ],
-          "explain": "Stoffet er et antibiotikum, og det ble senere brukt som legemiddel etter at det var renset."
+          "explain": "Navnet kommer fra muggsoppen Penicillium, som har navn etter latin penicillus, liten pensel, fordi sporehusene ligner en pensel.",
+          "hint": "Stoffet ble masseprodusert under andre verdenskrig og reddet mange sårede soldater."
         },
         {
           "id": "med-antibiotika-florey",
           "step": 2,
           "type": "text",
-          "prompt": "Hvilke to forskere isolerte det aktive stoffet i penicillin?",
+          "prompt": "Hvilke to forskere i Oxford renset penicillin og viste at det kunne kurere infeksjoner?",
           "answer": "Florey og Chain",
           "accept": [
-            "Howard Florey og Ernst Boris Chain"
+            "Chain og Florey",
+            "Howard Florey og Ernst Boris Chain",
+            "Howard Florey og Ernst Chain",
+            "Ernst Chain og Howard Florey"
           ],
-          "explain": "Florey og Chain fikk Nobelprisen sammen med Fleming i 1945."
+          "explain": "Florey var australier, og Chain var tyskfødt og hadde flyktet fra nazistene. Den første pasienten, politimannen Albert Alexander, ble bedre i 1941, men døde da penicillinet tok slutt.",
+          "hint": "Den ene var australier, den andre en tyskfødt kjemiker som hadde flyktet til Storbritannia."
         },
         {
           "id": "med-antibiotika-antibiotika",
@@ -845,9 +1102,27 @@
           "prompt": "Hva kalles stoffer som dreper bakterier eller hindrer dem i å vokse?",
           "answer": "Antibiotika",
           "accept": [
-            "Antibiotikum"
+            "antibiotikum",
+            "antibiotikumet",
+            "antibakterielle midler"
           ],
-          "explain": "Penicillin er et av de første antibiotika som ble tatt i bruk."
+          "explain": "Ordet er satt sammen av gresk anti, mot, og bios, liv. Det ble tatt i bruk av Selman Waksman, som også fant streptomycin.",
+          "hint": "Penicillin og streptomycin er eksempler, og navnet på gruppen er bygd av gresk."
+        },
+        {
+          "id": "med-antibiotika-tuberkulose",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hvilken sykdom ble streptomycin det første virksomme midlet mot?",
+          "answer": "Tuberkulose",
+          "accept": [
+            "tuberkulosen",
+            "TB",
+            "TBC",
+            "tæring"
+          ],
+          "explain": "Bakterien blir fort resistent mot ett middel alene. Derfor behandles sykdommen i dag med flere antibiotika samtidig i minst seks måneder.",
+          "hint": "Robert Koch hadde funnet bakterien bak sykdommen i 1882."
         },
         {
           "id": "med-antibiotika-koblinger",
@@ -857,68 +1132,104 @@
           "pairs": [
             {
               "left": "Alexander Fleming",
-              "right": "Så muggsoppens virkning i 1928"
+              "right": "Oppdaget at en muggsopp drepte bakterier"
             },
             {
-              "left": "Howard Florey og Ernst Boris Chain",
-              "right": "Isolerte det aktive stoffet"
+              "left": "Florey og Chain",
+              "right": "Renset penicillin og viste at det virket"
             },
             {
-              "left": "Penicillin",
-              "right": "Stoff fra muggsoppen Penicillium"
+              "left": "Sulfapreparater",
+              "right": "Antibakterielle midler fra 1930-tallet"
+            },
+            {
+              "left": "Streptomycin",
+              "right": "Første virksomme middel mot tuberkulose"
             }
           ],
-          "explain": "Oppdagelsen og utviklingen av stoffet var to ulike trinn, og de ble gjort av ulike forskere."
+          "explain": "Oppdagelsen og utviklingen av et legemiddel er ulike trinn, ofte gjort av ulike forskere. Sulfapreparatene var i bruk før penicillinet, men virket svakere og ga flere bivirkninger.",
+          "hint": "Det eldste av legemidlene var syntetisk og kom før penicillinet ble tatt i bruk."
         },
         {
           "id": "med-antibiotika-forklar",
           "step": 3,
           "type": "explain",
           "prompt": "Hvorfor var det ikke nok at Fleming så virkningen av muggsoppen?",
-          "answer": "Han så at stoffet drepte bakterier i en kultur, men han fikk ikke fram det rene aktive stoffet. Det krevde videre kjemisk arbeid av andre forskere. Først da kunne stoffet brukes som medisin.",
+          "answer": "Han så at stoffet drepte bakterier i en skål, men klarte ikke å rense det eller lage nok av det. Florey og Chain måtte isolere stoffet, prøve det på dyr og mennesker og finne måter å produsere det på. Først da kunne det brukes som medisin.",
           "checklist": [
-            "Fleming så virkningen i en kultur",
-            "Det aktive stoffet måtte isoleres",
-            "Andre forskere gjorde det kjemiske arbeidet"
+            "Fleming så bare virkningen i en skål",
+            "Stoffet måtte renses og prøves på dyr og mennesker",
+            "Det måtte kunne produseres i store mengder"
           ],
-          "explain": "Nobelprisen i 1945 gikk til alle tre, ikke bare til Fleming."
+          "explain": "Fleming publiserte funnet i 1929, men det fikk lite oppmerksomhet i ti år. Masseproduksjon i store tanker i USA gjorde at de allierte hadde nok penicillin ved invasjonen i Normandie i 1944.",
+          "hint": "Tenk på hva som skal til fra en iakttakelse i laboratoriet til et legemiddel på apoteket."
+        },
+        {
+          "id": "med-antibiotika-hvorfor-advarsel",
+          "step": 3,
+          "type": "choice",
+          "prompt": "Hvorfor advarte Fleming mot å bruke for små doser penicillin?",
+          "answer": "Bakterier som overlever, kan bli resistente",
+          "distractors": [
+            "Pasienten kan bli avhengig av stoffet",
+            "Muggsoppen kan begynne å vokse i kroppen",
+            "Kroppen kan slutte å lage egne antistoffer"
+          ],
+          "explain": "Er dosen for lav, dør bare de mest følsomme bakteriene, og de mer motstandsdyktige får formere seg. Det er naturlig utvalg. I dag regnes antibiotikaresistens som en av de største truslene mot folkehelsen.",
+          "hint": "Tenk på naturlig utvalg: Hvilke bakterier blir igjen etter en halv behandling?"
         },
         {
           "id": "med-antibiotika-tidslinje",
           "step": 3,
           "type": "order",
-          "prompt": "Sett hendelsene fra Koch til Nobelprisen for penicillin i riktig rekkefølge.",
+          "prompt": "Sett disse milepælene for antibiotika i riktig rekkefølge.",
           "items": [
-            {
-              "label": "Koch påviser tuberkelbasillen",
-              "year": 1882
-            },
             {
               "label": "Fleming ser muggsoppens virkning",
               "year": 1928
             },
             {
-              "label": "Fleming, Florey og Chain får Nobelprisen",
+              "label": "Sulfapreparatene tas i bruk",
+              "year": 1935
+            },
+            {
+              "label": "Første pasient behandles med renset penicillin",
+              "year": 1941
+            },
+            {
+              "label": "Streptomycin oppdages",
+              "year": 1943
+            },
+            {
+              "label": "Nobelprisen for penicillinet",
               "year": 1945
             }
           ],
-          "explain": "Fra Kochs påvisning av tuberkelbasillen til Flemings penicillin gikk det 46 år."
+          "explain": "Sulfapreparatene kom i bruk før penicillinet, selv om Fleming hadde gjort oppdagelsen sin flere år tidligere. Det viser hvor lang veien fra funn til legemiddel kan være.",
+          "hint": "Det syntetiske midlet kom etter Flemings oppdagelse, men før penicillinet ble renset."
         },
         {
           "id": "med-antibiotika-nobel-aar",
           "step": 4,
           "type": "year",
-          "prompt": "I hvilket år fikk Fleming, Florey og Chain Nobelprisen i medisin?",
+          "prompt": "Hvilket år fikk Fleming, Florey og Chain nobelprisen for penicillinet?",
           "answer": "1945",
-          "explain": "Prisen ble gitt for oppdagelsen av penicillin og dens betydning for helsevesenet."
+          "explain": "Prisen kom bare 17 år etter oppdagelsen, raskt for en nobelpris. I nobeltalen advarte Fleming mot resistens ved feil bruk.",
+          "hint": "Prisen ble delt ut samme høst som andre verdenskrig sluttet."
         },
         {
-          "id": "med-antibiotika-fleming-aar",
+          "id": "med-antibiotika-fleming-by",
           "step": 4,
-          "type": "year",
-          "prompt": "I hvilket år så Fleming muggsoppens virkning mot bakterier?",
-          "answer": "1928",
-          "explain": "Muggsoppen kom inn i kulturen ved en tilfeldig forurensning i laboratoriet."
+          "type": "choice",
+          "prompt": "I hvilken by arbeidet Fleming da han oppdaget penicillinet?",
+          "answer": "London",
+          "distractors": [
+            "Oxford",
+            "Edinburgh",
+            "Glasgow"
+          ],
+          "explain": "Fleming arbeidet ved St Mary's Hospital. Oxford var stedet der Florey og Chain senere renset stoffet, og Fleming var født i Skottland.",
+          "hint": "Sykehuset hans lå like ved jernbanestasjonen Paddington."
         }
       ]
     },
@@ -928,21 +1239,23 @@
       "tier": 2,
       "prerequisites": [
         "med-antibiotika",
-        "bio-arv-dna"
+        "bio-sykdom-immunforsvar"
       ],
       "years": {
-        "from": 1921,
+        "from": 1901,
         "to": 1956
       },
-      "summary": "Insulin, arvestoffets struktur og transplantasjon endret hva medisinen kunne gjøre for pasientene.",
+      "summary": "Blodtyper, insulin og organtransplantasjon endret hva medisinen kunne gjøre for pasientene.",
       "lesson": [
-        "I 1921–1922 ble insulin oppdaget i Toronto av Frederick Banting, Charles Best, James Collip og John Macleod. Insulin ble livreddende behandling for diabetes type 1, der bukspyttkjertelen ikke lager nok insulin. Banting og Macleod fikk Nobelprisen i 1923, og hver av dem delte prisen med en av medarbeiderne.",
-        "Arvestoffets dobbeltspiral ble beskrevet i 1953; se leksjonen om arv og DNA. I 1954 ble det utført transplantasjon mellom eneggede tvillinger, der avstøtning uteblir fordi genene er like. Den første nyretransplantasjonen i Norge fant sted i 1956."
+        "I 1901 viste østerrikeren Karl Landsteiner at blod fra ulike mennesker kan klumpe seg når det blandes. Han beskrev blodtypene i det som ble AB0-systemet. Nå kunne leger velge blod som passet, og blodoverføring ble trygg. Landsteiner fikk nobelprisen i 1930.",
+        "Ved diabetes type 1 lager ikke bukspyttkjertelen nok av hormonet insulin, som hjelper cellene å ta opp sukker fra blodet. Sykdommen var dødelig. I 1921–1922 fant Frederick Banting, Charles Best, James Collip og John Macleod i Toronto en måte å utvinne insulin på. Nå kunne en dødelig sykdom holdes i sjakk, men ikke kureres. Banting og Macleod fikk nobelprisen i 1923 og delte pengene med Best og Collip.",
+        "Immunforsvaret angriper vanligvis organer fra andre mennesker. Det kalles avstøtning. I 1954 transplanterte Joseph Murray i Boston en nyre mellom eneggede tvillinger. Der uteblir avstøtningen, fordi genene er like. Den første nyretransplantasjonen i Norge ble utført i 1956. Senere gjorde legemidler som demper immunforsvaret, det mulig å bruke organer fra andre givere."
       ],
       "keyPoints": [
-        "Insulin ble oppdaget i Toronto i 1921–1922 og ble livreddende behandling for diabetes type 1.",
-        "Banting og Macleod fikk Nobelprisen i 1923, og hver delte prisen med en medarbeider.",
-        "Mellom eneggede tvillinger kan vev overføres uten avstøtning, fordi genene er like.",
+        "Landsteiner fant blodtypene i 1901 og gjorde blodoverføring trygg.",
+        "Insulin ble utvunnet i Toronto i 1921–1922 og gjorde diabetes type 1 til en sykdom som kan behandles.",
+        "Banting og Macleod fikk nobelprisen i 1923 og delte den med Best og Collip.",
+        "Mellom eneggede tvillinger uteblir avstøtning, fordi genene er like.",
         "Den første nyretransplantasjonen i Norge ble utført i 1956."
       ],
       "sources": [
@@ -961,43 +1274,46 @@
       ],
       "cards": [
         {
-          "id": "med-1900-tallet-insulin-sted",
+          "id": "med-1900-tallet-landsteiner",
           "step": 1,
           "type": "choice",
-          "prompt": "I hvilken kanadisk by ble insulin oppdaget?",
-          "answer": "Toronto",
+          "prompt": "Hva oppdaget Karl Landsteiner i 1901?",
+          "answer": "At mennesker har ulike blodtyper",
           "distractors": [
-            "London",
-            "Paris",
-            "Berlin"
+            "At blodet går i et kretsløp",
+            "At hvite blodceller spiser bakterier",
+            "At jern i blodet binder oksygen"
           ],
-          "explain": "Insulin er et hormon fra bukspyttkjertelen, og det regulerer blodsukkeret."
+          "explain": "Før dette kunne en blodoverføring drepe pasienten. Under første verdenskrig begynte man å lagre blod, og blodbanker ble vanlige fra 1930-tallet. Kretsløpet var Harveys funn, nesten 300 år tidligere.",
+          "hint": "Funnet var avgjørende for blodgivere og blodbanker."
         },
         {
-          "id": "med-1900-tallet-nobel-aar",
+          "id": "med-1900-tallet-insulin-virkning",
           "step": 1,
           "type": "choice",
-          "prompt": "Hvilket år fikk Banting og Macleod Nobelprisen i medisin?",
-          "answer": "1923",
+          "prompt": "Hva gjør hormonet insulin i kroppen?",
+          "answer": "Det hjelper cellene å ta opp sukker",
           "distractors": [
-            "1921",
-            "1945",
-            "1953"
+            "Det bryter ned fett i tynntarmen",
+            "Det dreper bakterier i blodbanen",
+            "Det frakter oksygen fra lungene"
           ],
-          "explain": "Prisen gikk for insulinoppdagelsen. Best og Collip var med på arbeidet, men ble ikke tatt med i prisen."
+          "explain": "Uten insulin hoper sukkeret seg opp i blodet, mens cellene sulter. Kroppen bryter da ned fett og muskler, og ubehandlet fører diabetes type 1 til døden.",
+          "hint": "Tenk på hva som måles i blodet hos en person med diabetes."
         },
         {
-          "id": "med-1900-tallet-hormon",
+          "id": "med-1900-tallet-hvorfor-insulin",
           "step": 1,
           "type": "choice",
-          "prompt": "Hva er insulin?",
-          "answer": "Et hormon",
+          "prompt": "Hvorfor var insulinet et medisinsk gjennombrudd?",
+          "answer": "En dødelig sykdom kunne nå holdes i sjakk",
           "distractors": [
-            "Et antibiotikum",
-            "En vaksine",
-            "Et virus"
+            "En smittsom sykdom kunne nå utryddes",
+            "En arvelig sykdom kunne nå kureres for godt",
+            "En vanlig infeksjon kunne nå behandles med én dose"
           ],
-          "explain": "Insulin senker blodsukkeret. Ved diabetes type 1 lager kroppen for lite av det."
+          "explain": "Insulin kurerer ikke diabetes, men erstatter hormonet kroppen mangler, og pasientene må ta det resten av livet. Den første pasienten, 14 år gamle Leonard Thompson, fikk insulin i januar 1922.",
+          "hint": "Tenk på forskjellen mellom å kurere en sykdom og å erstatte noe kroppen mangler."
         },
         {
           "id": "med-1900-tallet-bukspyttkjertel",
@@ -1006,9 +1322,11 @@
           "prompt": "Hvilket organ lager insulin?",
           "answer": "Bukspyttkjertelen",
           "accept": [
-            "Bukspyttkjertel"
+            "bukspyttkjertel",
+            "pankreas"
           ],
-          "explain": "Insulin dannes i bukspyttkjertelen og slippes ut i blodet."
+          "explain": "Insulinet lages i små celleklynger, de langerhanske øyene. Ved diabetes type 1 har kroppens eget immunforsvar ødelagt cellene som lager det.",
+          "hint": "Organet ligger bak magesekken og lager også fordøyelsesenzymer."
         },
         {
           "id": "med-1900-tallet-diabetes",
@@ -1017,84 +1335,141 @@
           "prompt": "Hvilken sykdom ble insulin en livreddende behandling mot?",
           "answer": "Diabetes type 1",
           "accept": [
-            "Type 1-diabetes"
+            "type 1-diabetes",
+            "type 1 diabetes",
+            "diabetes type I",
+            "diabetes",
+            "diabetes mellitus",
+            "sukkersyke"
           ],
-          "explain": "Insulin er et av de viktigste eksemplene på hvordan forskning ga livreddende legemidler."
+          "explain": "Før insulinet var en streng sultediett den eneste behandlingen, og de fleste døde innen få år. Diabetes type 2 er langt vanligere og skyldes oftest at cellene reagerer dårlig på insulinet.",
+          "hint": "Sykdommen gir høyt blodsukker og rammer ofte barn og unge."
         },
         {
-          "id": "med-1900-tallet-utelatt",
+          "id": "med-1900-tallet-avstotning",
+          "step": 2,
+          "type": "text",
+          "prompt": "Hva kalles det når immunforsvaret angriper et transplantert organ?",
+          "answer": "Avstøtning",
+          "accept": [
+            "avstøting",
+            "avstøtningsreaksjon",
+            "rejeksjon"
+          ],
+          "explain": "Immunforsvaret kjenner igjen proteiner på overflaten av cellene som fremmede. Jo likere giver og mottaker er, desto mindre er risikoen.",
+          "hint": "Det er det samme forsvaret som bekjemper bakterier, men nå rettet mot et nytt organ."
+        },
+        {
+          "id": "med-1900-tallet-forklar-tvillinger",
           "step": 3,
           "type": "explain",
-          "prompt": "Hvem ble utelatt fra Nobelprisen i 1923, selv om de var med på arbeidet?",
-          "answer": "Charles Best og James Collip var med på arbeidet, men de fikk ikke prisen. Banting og Macleod delte sin andel med dem.",
+          "prompt": "Forklar hvorfor den første vellykkede nyretransplantasjonen ble gjort mellom eneggede tvillinger.",
+          "answer": "Immunforsvaret angriper vev det oppfatter som fremmed, og vanligvis blir et organ fra en annen person avstøtt. Eneggede tvillinger har like gener, så immunforsvaret kjenner ikke nyren som fremmed. Transplantasjon mellom andre ble først mulig med legemidler som demper immunforsvaret.",
           "checklist": [
-            "Nevne Best og Collip",
-            "Nevne at Banting og Macleod fikk prisen",
-            "Nevne at prisandelen ble delt"
+            "Immunforsvaret angriper vev som er fremmed",
+            "Eneggede tvillinger har like gener",
+            "Organer fra andre krever legemidler som demper immunforsvaret"
           ],
-          "explain": "Det viser at en Nobelpris ikke alltid gjenspeiler hvem som gjorde arbeidet."
+          "explain": "Joseph Murray fikk nobelprisen i 1990 for dette arbeidet. Med bedre legemidler mot avstøtning fra 1980-tallet ble transplantasjon av nyre, hjerte og lever vanlig behandling.",
+          "hint": "Tenk på hva immunforsvaret reagerer på, og hva som er spesielt med eneggede tvillinger."
         },
         {
           "id": "med-1900-tallet-koblinger",
           "step": 3,
           "type": "match",
-          "prompt": "Koble begrepet med det det står for.",
+          "prompt": "Koble personen med gjennombruddet.",
           "pairs": [
             {
-              "left": "Insulin",
-              "right": "Livreddende behandling ved diabetes type 1"
+              "left": "Karl Landsteiner",
+              "right": "Blodtypene"
             },
             {
-              "left": "Tvillingtransplantasjon",
-              "right": "Uten avstøtning, fordi genene er like"
+              "left": "Frederick Banting",
+              "right": "Insulin"
             },
             {
-              "left": "DNA-strukturen",
-              "right": "Dobbeltspiral beskrevet i 1953"
+              "left": "Joseph Murray",
+              "right": "Nyretransplantasjon mellom tvillinger"
+            },
+            {
+              "left": "Alexander Fleming",
+              "right": "Penicillin"
             }
           ],
-          "explain": "Oppdagelsene kom fra ulike felt, men alle endret hva behandlingen kunne gjøre."
+          "explain": "Gjennombruddene bygde på hverandre: Blodoverføring og antibiotika gjorde store operasjoner tryggere, og det banet vei for transplantasjon.",
+          "hint": "Han som arbeidet i Toronto, behandlet en sykdom med et hormon."
         },
         {
           "id": "med-1900-tallet-tidslinje",
           "step": 3,
           "type": "order",
-          "prompt": "Sett gjennombruddene fra insulin til den første norske nyretransplantasjonen i riktig rekkefølge.",
+          "prompt": "Sett disse gjennombruddene i riktig rekkefølge.",
           "items": [
             {
-              "label": "Insulin oppdages (1921–1922)",
-              "year": 1921
+              "label": "Landsteiner finner blodtypene",
+              "year": 1901
             },
             {
-              "label": "DNA-strukturen beskrives",
-              "year": 1953
+              "label": "Første pasient får insulin",
+              "year": 1922
             },
             {
-              "label": "Transplantasjon mellom eneggede tvillinger",
+              "label": "Fleming oppdager penicillinet",
+              "year": 1928
+            },
+            {
+              "label": "Nyre transplanteres mellom eneggede tvillinger",
               "year": 1954
-            },
-            {
-              "label": "Første nyretransplantasjon i Norge",
-              "year": 1956
             }
           ],
-          "explain": "Fra insulinet til den første norske nyretransplantasjonen gikk det 35 år."
+          "explain": "Det gikk drøyt 50 år fra blodtypene til den første vellykkede nyretransplantasjonen. Uten trygg blodoverføring og antibiotika ville så store operasjoner vært for farlige.",
+          "hint": "Funnet som gjorde blodoverføring trygg, kom først."
+        },
+        {
+          "id": "med-1900-tallet-insulin-sted",
+          "step": 4,
+          "type": "choice",
+          "prompt": "I hvilken by ble insulin utvunnet første gang?",
+          "answer": "Toronto",
+          "distractors": [
+            "Montréal",
+            "Boston",
+            "Ottawa"
+          ],
+          "explain": "Arbeidet foregikk ved Universitetet i Toronto, i laboratoriet til John Macleod. Banting var kirurg og hadde fått ideen etter å ha lest en artikkel om bukspyttkjertelen.",
+          "hint": "Byen ligger i Canada, i provinsen Ontario."
+        },
+        {
+          "id": "med-1900-tallet-nobel-aar",
+          "step": 4,
+          "type": "year",
+          "prompt": "Hvilket år fikk Banting og Macleod nobelprisen for insulinet?",
+          "answer": "1923",
+          "explain": "Prisen kom bare to år etter forsøkene, svært raskt for en nobelpris. Banting var rasende over at Best ikke ble tatt med, og delte pengene sine med ham.",
+          "hint": "Prisen kom året etter at den første pasienten ble behandlet."
+        },
+        {
+          "id": "med-1900-tallet-utelatt",
+          "step": 4,
+          "type": "text",
+          "prompt": "Hvilken ung medarbeider delte Banting nobelprisen sin med?",
+          "answer": "Charles Best",
+          "accept": [
+            "Best",
+            "Charles H. Best",
+            "Charles Herbert Best"
+          ],
+          "explain": "Best var student da arbeidet begynte. Macleod delte sin del med biokjemikeren James Collip, som hadde renset insulinet så det kunne gis til pasienter.",
+          "hint": "Han var en ung student som assisterte Banting sommeren 1921."
         },
         {
           "id": "med-1900-tallet-norge-aar",
           "step": 4,
           "type": "year",
-          "prompt": "I hvilket år ble den første nyretransplantasjonen i Norge utført?",
+          "prompt": "Hvilket år ble den første nyretransplantasjonen i Norge utført?",
           "answer": "1956",
-          "explain": "Teknikken var prøvd på dyr lenge før, allerede fra 1912."
-        },
-        {
-          "id": "med-1900-tallet-dna-aar",
-          "step": 4,
-          "type": "year",
-          "prompt": "I hvilket år ble dobbeltspiralen til DNA beskrevet?",
-          "answer": "1953",
-          "explain": "Modellen bygget på røntgenbilder og kjemisk kunnskap. Leksjonen om arv og DNA viser hvordan strukturen ble funnet."
+          "explain": "Teknikken for å sy sammen blodårer var utviklet av Alexis Carrel, som fikk nobelprisen for den i 1912. Problemet var ikke kirurgien, men avstøtningen.",
+          "hint": "Det var to år etter tvillingtransplantasjonen i Boston."
         }
       ]
     }
