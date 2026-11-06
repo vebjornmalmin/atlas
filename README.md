@@ -4,6 +4,16 @@ Offline kunnskapstrening på norsk, laget for iPhone 17 Pro.
 
 Live app: https://atlas-first-app.atlas-memory.workers.dev
 
+## Neste utgave — 1.8.0: En gjennomgått kunnskapskjerne og hint i to trinn (ikke publisert)
+
+**Hele kunnskapskjernen er gått gjennom.** Hvert fagområde ble lest i fire runder: to for riktighet, én for om spørsmålene er verdt å vite og stilt slik en god lærer ville stilt dem, og en siste kontroll av omskrivingene. Kuriositeter, nakne årstall og rekordtall er byttet ut med spørsmål om hva ting er, hvorfor de skjedde og hva de førte til; ankre som 1814 og 1905 testes fortsatt skarpt. Kjernen har nå 1520 kort i 120 emner. 329 kort som spurte om noe som ikke var verdt å vite, er erstattet av nye kort med nye ID-er, og læringshistorikken på de gamle kortene følger ikke med. Regelen «Verdt å vite, ikke quiz» står i `docs/curriculum-authoring.md`. Påstander som ikke kunne kontrolleres mot snl.no under gjennomgangen, står i `docs/fact-check-queue.md`.
+
+**Hint i to trinn** (`src/lib/hints.js`). Alle kort har et skrevet hint, et holdepunkt fra sammenhengen som ikke gir bort svaret, og bygget stopper kort uten hint. «Hint» viser det skrevne hintet, og «Mer hjelp» viser et trinn laget av svarets form: antall tegn eller ord og forbokstav for navn, tiåret (eller århundret når kortet har toleranse) for årstall, størrelsesorden for tall og ett galt alternativ strøket ut for flervalg. Hvor langt eleven gikk, lagres som `hintLevel`, og hintene står der fortsatt når appen åpnes igjen.
+
+**En påbegynt økt fortsetter etter oppdateringen.** En økt som var lagret før de nye kortene kom, stoppet ved første kort som ikke finnes lenger, med «Spørsmålet er ikke tilgjengelig». Kort som er fjernet, hoppes nå over når økten åpnes eller gjenopptas, og svarene som alt er gitt, beholdes (`dropRetired` i `src/lib/session-journal.js`).
+
+Kunnskapspakken er 2.3.0. 270 automatiske tester består, og produksjonsbygget lages uten feil. Produksjonsbygget er servert med `wrangler dev` og prøvd i en nettleser som etterligner iPhone, lyst og mørkt: begge hinttrinnene i en flervalgsoppgave, det strøkne alternativet, og at hintene står der etter at siden er lastet på nytt. Sjekken i den installerte hjemmeskjermappen i iPhone 17 Pro-simulatoren gjenstår.
+
 ## Gjeldende utgave — 1.7.1: Linser og linjer sammen
 
 **Linsen bestemmer hvilke linjer som teller.** Hver linse har allerede vekter på relasjonstypene, og de samme vektene brukes nå på linjene: Verdenssystem vektlegger nobelpriser, Nettverk og møter nobelpriser og påvirkning, Geopolitikk nyheter. Linjene linsen vektlegger, kommer først blant de 30 som tegnes, og de andre tones ned på kartet og i listen. Under listen står det hva linsen vektlegger, og kortet for en linje sier om linsen legger vekt på den eller sier lite om den. En linse som ikke vektlegger noen av linjetypene (for eksempel Sivilisasjoner), endrer ingenting, og listen sier det. Felles emner er Atlas' egen gruppering og vektes ikke av noen linse. Varmekartet har ingen linse, så der vises alle linjer likt. Logikken er `lensLinkWeights` og `placeLinks` i `src/lib/world-graph.js`.

@@ -1,8 +1,8 @@
 {
   "id": "atlas-foundation",
-  "version": "2.2.2",
+  "version": "2.3.0",
   "schemaVersion": 1,
-  "generatedAt": "2026-11-05T21:00:00Z",
+  "generatedAt": "2026-11-06T21:00:00Z",
   "collections": [
     {
       "id": "us-presidents",
