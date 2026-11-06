@@ -47,6 +47,14 @@
         {
           "title": "Babylonsk matematikk – Store norske leksikon",
           "url": "https://snl.no/babylonsk_matematikk"
+        },
+        {
+          "title": "Time – Store norske leksikon",
+          "url": "https://snl.no/time"
+        },
+        {
+          "title": "Aristarkhos fra Samos – Store norske leksikon",
+          "url": "https://snl.no/Aristarkhos_fra_Samos"
         }
       ],
       "cards": [
@@ -75,7 +83,7 @@
             "Grekerne",
             "Romerne"
           ],
-          "explain": "Grunntallet 60 kan deles på mange tall uten rest, og det gjorde regning med vinkler og tid enkel. Systemet går tilbake til sumererne, men det var babylonske astronomer som brukte det på himmelen. Døgnets 24 timer har vi derimot fra egypterne.",
+          "explain": "Grunntallet 60 kan deles på mange tall uten rest, og det gjorde regning med vinkler og tid enkel. Systemet går tilbake til sumererne, men det var babylonske astronomer som brukte det på himmelen. Døgnets 24 timer går trolig tilbake til egypterne, som delte både dag og natt i tolv deler, men også i Mesopotamia ble døgnet delt i 24 timer.",
           "hint": "Folket bodde mellom Eufrat og Tigris og skrev med kiler i leire."
         },
         {
@@ -260,6 +268,10 @@
         {
           "title": "Galileo Galilei – Store norske leksikon",
           "url": "https://snl.no/Galileo_Galilei"
+        },
+        {
+          "title": "Index librorum prohibitorum – Store norske leksikon",
+          "url": "https://snl.no/Index_librorum_prohibitorum"
         }
       ],
       "cards": [
@@ -469,6 +481,14 @@
         {
           "title": "Fysikkens historie – Store norske leksikon",
           "url": "https://snl.no/fysikkens_historie"
+        },
+        {
+          "title": "Edmond Halley – Store norske leksikon",
+          "url": "https://snl.no/Edmond_Halley"
+        },
+        {
+          "title": "Halleys komet – Store norske leksikon",
+          "url": "https://snl.no/Halleys_komet"
         }
       ],
       "cards": [
@@ -668,6 +688,10 @@
         {
           "title": "The Legacy of Henrietta Leavitt: A Re-analysis of the First Cepheid Period-Luminosity Relation",
           "url": "https://arxiv.org/pdf/2502.17438"
+        },
+        {
+          "title": "Edwin Hubble – Store norske leksikon",
+          "url": "https://snl.no/Edwin_Hubble"
         }
       ],
       "cards": [
@@ -883,6 +907,10 @@
         {
           "title": "50 Years Ago: Apollo Astronauts Land, Take First Steps on Moon – NASA",
           "url": "https://www.nasa.gov/centers-and-facilities/kennedy/50-years-ago-apollo-astronauts-land-take-first-steps-on-moon/"
+        },
+        {
+          "title": "Sputnik – Store norske leksikon",
+          "url": "https://snl.no/Sputnik"
         }
       ],
       "cards": [
@@ -1069,7 +1097,7 @@
       "lesson": [
         "Jordas atmosfære gjør stjernebilder uskarpe og stopper mye av det infrarøde og ultrafiolette lyset. Derfor sender astronomene teleskoper ut i rommet. Hubble-romteleskopet ble satt i bane rundt Jorda fra romfergen Discovery i 1990. Speilet var slipt litt feil, og bildene ble uskarpe, men astronauter monterte korrigerende optikk i 1993.",
         "James Webb-teleskopet ble skutt opp 25. desember 2021 og går i bane rundt punktet L2, omtrent 1,5 millioner kilometer fra Jorda. Det ser i infrarødt lys. Lyset fra de eldste galaksene er strukket mot rødt på den lange veien hit, og infrarødt lys går lettere gjennom støvskyer. Teleskopet må holdes svært kaldt for ikke å blendes av sin egen varme.",
-        "Voyager 1 ble sendt opp i 1977 og er den fjerneste menneskelagde gjenstanden. Den passerte Jupiter og Saturn og krysset i 2012 grensen til det interstellare rommet. Signalene bruker nå omtrent et døgn hjem. I Norge har Andøya skutt opp forskningsraketter siden 1962, og der er det nå bygd en romhavn for små satellitter."
+        "Voyager 1 ble sendt opp i 1977 og er den fjerneste menneskelagde gjenstanden. Den passerte Jupiter og Saturn og krysset i 2012 grensen til det interstellare rommet. Fra november 2026 bruker signalene et helt døgn hjem, og en halvtime mer for hvert år. I Norge har Andøya skutt opp forskningsraketter siden 1962, og der er det nå bygd en romhavn for små satellitter."
       ],
       "keyPoints": [
         "Romteleskoper slipper unna atmosfæren, som gjør bildene uskarpe og stopper deler av lyset.",
@@ -1098,6 +1126,10 @@
         {
           "title": "Andøya Space – Store norske leksikon",
           "url": "https://snl.no/And%C3%B8ya_Space"
+        },
+        {
+          "title": "James Webb-romteleskopet – Store norske leksikon",
+          "url": "https://snl.no/James_Webb-romteleskopet"
         }
       ],
       "cards": [
@@ -1127,7 +1159,7 @@
             "Den var den første satellitten i bane"
           ],
           "explain": "Ved Jupiter fikk sonden ekstra fart av planetens tyngdekraft, en såkalt slyngmanøver, som sendte den videre mot Saturn og ut av solsystemet. Den bærer en gullplate med lyder og bilder fra Jorda, i tilfelle noen skulle finne den.",
-          "hint": "Signalene fra den bruker nå omtrent et døgn hjem."
+          "hint": "Signalene fra den bruker et døgn eller mer på veien hjem."
         },
         {
           "id": "rom-teleskop-sonder-andoya",
@@ -1142,7 +1174,7 @@
             "Andøya romhavn",
             "Andoya"
           ],
-          "explain": "Rakettene har særlig målt nordlyset og den øvre atmosfæren. På Nordmela er det bygd en romhavn for små satellitter, men det første forsøket på å nå bane derfra, i 2025, mislyktes etter omtrent et halvt minutt.",
+          "explain": "Rakettene har særlig målt nordlyset og den øvre atmosfæren. På Nordmela er det bygd en romhavn for små satellitter. Det første forsøket på å nå bane derfra mislyktes i mars 2025 etter omtrent et halvt minutt, men i september 2026 kom en rakett derfra i bane.",
           "hint": "Øya er den nordligste i Vesterålen."
         },
         {

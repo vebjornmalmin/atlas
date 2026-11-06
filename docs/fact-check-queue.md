@@ -2,25 +2,6 @@
 
 Gjennomgangen av kunnskapskjernen i november 2026 ble gjort uten tilgang til snl.no. Anmelderne endret bare fakta de var sikre på, og listet opp resten her. Hver linje er en påstand som står i et kort eller en leksjon nå, og som bør kontrolleres med `node scripts/snl.mjs read …` før den regnes som sikker. Stryk linjen når den er kontrollert eller rettet.
 
-## Astronomi og romfart
-
-- [ ] `rom-galaksene` – Hubble fant Cepheiden i Andromedatåken høsten 1923, og funnet ble kjent i 1924.. *Leksjonen er endret fra «I 1924 fant». Datoene for funnet og kunngjøringen bør sjekkes.*
-- [ ] `rom-galaksene-rekkefolge` – Hubble viste i 1924 at Andromedatåken er en egen galakse.. *Funnet ble gjort i 1923, kjent i 1924 og presentert formelt i januar 1925. Kildene kan oppgi et annet år.*
-- [ ] `rom-himmelen-oldtiden-aristarkhos` – Kopernikus nevnte Aristarkhos i et utkast til De revolutionibus.. *Avsnittet ble strøket i den trykte utgaven. Opplysningen er fra hukommelsen.*
-- [ ] `rom-himmelen-oldtiden-babylonerne` – Egypterne ga oss døgnets 24 timer, mens inndelingen i 60 kommer fra babylonerne.. *Dette er vanlig fremstilt slik, men ikke kontrollert mot SNL.*
-- [ ] `rom-kopernikanske-revolusjon-kirken` – De revolutionibus ble forbudt i 1616, forbudet ble opphevet på 1800-tallet, og Kopernikus var kannik.. *Ny forklaringstekst. Forbudet i 1616 gjaldt egentlig «inntil boken ble rettet», og opphevelsesåret bør bekreftes.*
-- [ ] `rom-kopernikanske-revolusjon-kirken` – I 1616 ble De revolutionibus satt på listen over forbudte bøker til den var rettet, og den ble strøket fra listen på 1800-tallet.. *Presiseringen «til den var rettet» (donec corrigatur) er fra egen kunnskap.*
-- [ ] `rom-newton-halley` – Halley koblet kometene fra 1531, 1607 og 1682 og forutsa at kometen ville komme tilbake rundt 1758. Han døde i 1742, og kometen ble sett julen 1758. Den kom sist i 1986 og kommer igjen i 2061.. *Nytt kort med flere årstall som ikke står i kildene.*
-- [ ] `rom-sputnik-maanen-landinger` – Ingen har gått på Månen siden desember 1972, og Sovjetunionen sendte aldri mennesker dit.. *Gjelder til en Artemis-landing skjer. Status bør sjekkes ved publisering, og kortet og nøkkelpunktet må oppdateres etter en ny landing.*
-- [ ] `rom-sputnik-maanen-sputnik-aar` – Sputnik veide 84 kg og gikk i bane i omtrent tre måneder.. *Ny forklaring. Riktig etter det jeg vet, men ikke sjekket mot kilde.*
-- [ ] `rom-teleskop-sonder` – Signalene fra Voyager 1 bruker nå nesten et døgn hjem.. *Voyager 1 nærmer seg én lysdag avstand nettopp rundt slutten av 2026. Formuleringen kan være utdatert, og sonden kan ha mistet kontakten.*
-- [ ] `rom-teleskop-sonder` – Signalene fra Voyager 1 bruker nå omtrent et døgn hjem (november 2026).. *Avstanden øker hele tiden. Sonden var ventet å nå ett lysdøgn omtrent nå.*
-- [ ] `rom-teleskop-sonder-andoya` – Den første oppskytingen mot bane fra Andøya (Isar Aerospace, 2025) mislyktes etter omtrent et halvt minutt.. *Rettet fra «få sekunder» etter hukommelsen; kunne ikke sjekkes mot kilden.*
-- [ ] `rom-teleskop-sonder-andoya` – Det første forsøket på å skyte opp en rakett til bane fra Andøya (Isar Spectrum) var i mars 2025 og mislyktes etter få sekunder.. *Dette er hentet fra hukommelsen. Om det har vært en vellykket oppskyting fram til november 2026, er ukjent.*
-- [ ] `rom-teleskop-sonder-kulde` – Webbs solskjerm er omtrent på størrelse med en tennisbane og holder instrumentene under minus 220 grader.. *Tallene er skrevet etter hukommelsen fra NASA-materiale, ikke kontrollert mot kilden.*
-- [ ] `rom-teleskop-sonder-slynge` – Voyager 1 passerte Jupiter i 1979 og får strøm fra radioaktivt plutonium, ikke solceller.. *Ny forklaring; står ikke i emnets kilder.*
-- [ ] `rom-teleskop-sonder-webb` – Webbs speil er 6,5 meter bredt og har 18 sekskantede segmenter, nesten tre ganger bredere enn Hubbles.. *Ny forklaring; står ikke i emnets kilder.*
-
 ## Det moderne århundret
 
 - [ ] `mh-2000-tallet-aar-taliban` – Ti norske soldater ble drept i Afghanistan. Taliban forbød skolegang for jenter etter sjette klasse.. *Nye faktaopplysninger i forklaringen, ikke kontrollert mot kilde.*
@@ -199,57 +180,6 @@ Gjennomgangen av kunnskapskjernen i november 2026 ble gjort uten tilgang til snl
 - [ ] `mus-wienerklassisisme-eroica-komponist` – «Eroica» varer nesten en time (står også i leksjonen og keyPoints). *Vanlige framføringer varer 45–52 minutter. «Rundt 50 minutter» kan være mer presist.*
 - [ ] `mus-wienerklassisisme-eroica-napoleon` – Ifølge Ferdinand Ries strøk Beethoven tilegnelsen da Napoleon utropte seg til keiser; partituret med navnet skrapt ut er bevart; verket ble utgitt i 1806 «til minne om en stor mann».. *Nytt kort bygd på en kjent anekdote; den er markert som Ries' beretning, men bør kontrolleres.*
 - [ ] `mus-wienerklassisisme-esterhazy` – Orkesteret ble oppløst etter fyrst Nikolaus' død i 1790, og Haydns tolv London-symfonier ble en triumf.. *Ny forklaring.*
-
-## Naturvitenskap
-
-- [ ] `nat-atomer-mendelejev` – Den gamle forklaringen sa at han var «en av seks forskere i fem land».. *Formuleringen kan stå i SNL, men jeg kunne ikke kontrollere den. Den er gjort mykere til «en av flere forskere».*
-- [ ] `nat-atomer-tilstand` – Vann koker ved omtrent 70 °C på toppen av Mount Everest.. *Ny påstand. Kilder oppgir 68–71 °C.*
-- [ ] `nat-energi-elektrisitet-andel-fossil` – I 2021 sto fornybar energi med vannkraft for rundt 14 prosent av verdens energiforbruk og kjernekraft for rundt 4 prosent. Olje sto for rundt 30 prosent.. *Tallene avhenger av beregningsmetoden (substitusjonsmetoden i Energy Institutes statistikk). De er justert fra 15 og 5 etter hukommelsen.*
-- [ ] `nat-energi-elektrisitet-andel-fossil` – Rundt 80 prosent av verdens energiforbruk kom fra fossile kilder i 2021.. *Ikke endret, men kildene oppgir 80–82 prosent avhengig av metode.*
-- [ ] `nat-energi-elektrisitet-andel-norge` – Vannkraftandelen av norsk kraftproduksjon har de siste årene ligget mellom omtrent 88 og 92 prosent.. *Erstattet det uverifiserte «89,3 prosent i 2020 (NVE)». Spennvidden er fra hukommelsen og bør kontrolleres mot NVE/SSB.*
-- [ ] `nat-energi-elektrisitet-fossil` – Kull kommer mest fra landplanter i sumpskoger, olje og gass mest fra plankton; dinosaurene bidro med svært lite.. *Ny påstand. Bør kontrolleres mot SNL «Fossilt brensel».*
-- [ ] `nat-energi-elektrisitet-norge` – Vindkraft sto for rundt 9 prosent av norsk kraftproduksjon i 2023, og Norge er blant de sju største vannkraftprodusentene.. *Tallet stod der fra før og er ikke endret. Det endrer seg fra år til år.*
-- [ ] `nat-jordas-indre-fart` – Platene langs Atlanterhavsryggen driver fra hverandre med omtrent 2,5 cm i året.. *Farten varierer langs ryggen (ca. 2–5 cm). Den er beholdt med toleranse 1. Hintet sammenligner med hvor fort negler vokser (ca. 3–4 cm i året).*
-- [ ] `nat-jordas-indre-pangea` – Pangea begynte å bryte opp for omtrent 200 millioner år siden; Atlanterhavet blir omtrent 2,5 cm bredere i året.. *Skrevet fra egen kunnskap. Opprevningen tidfestes ulikt (ca. 200–175 mill. år).*
-- [ ] `nat-jordas-indre-plategrenser` – Utenfor Japan presses havbunn ned under en annen plate; beltet rundt Stillehavet kalles Ildringen; tsunamien i Japan i 2011.. *Nytt kort og ny tekst i leksjonen. Bør kontrolleres mot SNL, særlig at «Ildringen» er den vanlige norske formen.*
-- [ ] `nat-jordas-indre-platetektonikk` – Litosfæreplatene er fra noen titalls til et par hundre kilometer tykke.. *Det tidligere tallet 40–280 km er erstattet med en grovere formulering. Det bør kontrolleres mot SNL «platetektonikk».*
-- [ ] `nat-kjemiske-reaksjoner-ph7` – Magesaft har pH rundt 1–2.. *Endret fra «rundt 1». Kildene oppgir ulike intervaller, ofte 1,5–3,5.*
-- [ ] `nat-krefter-bevegelse-hammer-fjaer` – Forsøket med hammer og fjær ble gjort under Apollo 15 i 1971.. *Ny påstand fra egen kunnskap.*
-- [ ] `nat-krefter-bevegelse-principia` – Newton skrev Principia på under to år etter at Edmond Halley oppmuntret ham (besøket var i 1684).. *Ny påstand i forklaringen, skrevet fra egen kunnskap.*
-- [ ] `nat-lys-lyd-sollys` – Radiosignaler til Mars bruker mellom omtrent 3 og 22 minutter hver vei.. *Nytt tall i forklaringen. Det er standard, men kunne ikke kontrolleres.*
-- [ ] `nat-moderne-fysikk-aar-fisjon` – Hahn og Strassmann oppdaget fisjon i Berlin i 1938, Meitner og Frisch forklarte den like etter, Fermis reaktor i Chicago gikk kritisk i 1942.. *Nytt kort. Jeg er sikker på årstallene, men kildene kunne ikke kontrolleres.*
-- [ ] `nat-moderne-fysikk-tungtvann` – Vemork var den eneste store produsenten av tungtvann i verden; sabotasjen i 1943 og senkingen av jernbaneferja på Tinnsjøen i 1944 stanset leveransene; Tyskland fikk aldri en reaktor i gang.. *Ny påstand, skrevet fra egen kunnskap. «Den eneste store produsenten» og «fikk aldri en reaktor i gang» bør kontrolleres mot SNL eller Norsk Industriarbeidermuseum.*
-- [ ] `nat-solsystemet-dogn` – Ved ekvator beveger bakken seg rundt 1670 km/t.. *Nytt tall, regnet ut fra omkretsen (40 075 km / 24 t).*
-- [ ] `nat-solsystemet-forklar-midnattssol` – Midnattssol varer rundt en måned i Bodø og rundt fire måneder på Svalbard; polarsirkelen ligger på omtrent 66,6 grader nord.. *Skrevet fra egen kunnskap; snl.no var blokkert.*
-- [ ] `nat-solsystemet-helning` – Jordaksens helning svinger mellom omtrent 22 og 24,5 grader i en syklus på rundt 41 000 år.. *Nytt innhold i forklaringen, skrevet etter hukommelsen (Milanković-syklus).*
-- [ ] `nat-solsystemet-hvorfor-manen` – Sola trekker rundt 180 ganger så hardt i Jorda som Månen.. *Ny påstand i forklaringen, beregnet fra masser og avstander. Den bør kontrolleres mot kilden om tidevann.*
-- [ ] `nat-solsystemet-naermest` – Venus er den varmeste planeten, med over 400 grader på overflaten, på grunn av en tykk CO2-atmosfære.. *Ny forklaringstekst. Overflaten er omkring 460 °C, så «over 400» er en forsiktig formulering.*
-- [ ] `nat-universet` – Den observerbare delen av universet har trolig flere hundre milliarder galakser, kanskje flere.. *Den tidligere teksten sa over tusen milliarder (anslaget fra 2016). Nyere målinger antyder færre, så formuleringen er gjort mer forsiktig.*
-- [ ] `nat-universet-forklar-svart-hull` – Kollapsen til et svart hull skjer ofte, men ikke alltid, sammen med en supernova.. *«Ofte» er lagt inn. Mislykkede supernovaer med direkte kollaps er en hypotese med noe observasjonsstøtte.*
-- [ ] `nat-vitenskapens-gjennombrudd-aar-darwin` – Darwin ga ut «Artenes opprinnelse» i 1859, etter at Wallace uavhengig var kommet fram til samme idé, og over tjue år etter Beagle-reisen.. *Ny påstand fra egen kunnskap.*
-- [ ] `nat-vitenskapens-gjennombrudd-curie` – Marie Curie var den første kvinnen som fikk nobelprisen og den første som fikk den to ganger; polonium er oppkalt etter Polen.. *Forklaringen er skrevet om. Jeg er sikker, men det er ikke kontrollert mot kilde.*
-- [ ] `nat-vitenskapens-gjennombrudd-kepler` – Kepler viste i 1609 (Astronomia nova) at planetbanene er ellipser med Sola utenfor midten; Kopernikus trengte ekstra småsirkler (episykler).. *Ny påstand i leksjon og på nytt kort. Den er skrevet fra egen kunnskap fordi snl.no var blokkert.*
-
-## Teknologi og oppfinnelser
-
-- [ ] `tek-boktrykk` – Gutenbergbibelen ble trykt i trolig rundt 180 eksemplarer (endret fra omtrent 200).. *Det vanlige anslaget er 158–180. Jeg kunne ikke sjekke det mot snl.no.*
-- [ ] `tek-boktrykk-papir-vei` – Papirmøller fantes i Bagdad fra slutten av 700-tallet og i Spania og Italia fra 1100- og 1200-tallet.. *Nytt kort. Påstanden står også i forklaringen til vue-islamsk-gullalder-forklar.*
-- [ ] `tek-boktrykk-spredning` – Norge fikk sitt første faste trykkeri i Christiania i 1643.. *Skrevet etter hukommelsen; snl.no var blokkert, og opplysningen står ikke i emnets kilder.*
-- [ ] `tek-boktrykk-venezia` – Venezia var en av Europas største trykkebyer rundt 1500, fordi byen hadde kapital og handelsveier. Manutius gjorde små bøker med kursiv skrift populære.. *Nytt kort fra egen kunnskap, og opplysningen står ikke i kildelisten.*
-- [ ] `tek-dampmaskin-jernbane-koble` – Norge innførte felles normaltid i 1895.. *Årstallet står bare i forklaringen og er ikke kontrollert mot noen kilde.*
-- [ ] `tek-dampmaskin-jernbane-robert` – Hovedbanen ble finansiert dels med britisk og dels med norsk kapital, og britiske ingeniører ledet arbeidet.. *Den nye forklaringen er skrevet etter hukommelsen.*
-- [ ] `tek-dampmaskin-jernbane-robert` – Robert Stephenson bygde Britannia-broen over Menaistredet (åpnet 1850) like før arbeidet med Hovedbanen begynte (1851).. *Nytt hint. Tidspunktet bør bekreftes.*
-- [ ] `tek-datamaskin-internett-arpanet-hva` – ARPANET gikk over til TCP/IP i 1983.. *Ny forklaring utenfor kildelisten.*
-- [ ] `tek-datamaskin-internett-forklar` – Den første transistorradioen som fikk plass i lomma, kom i 1954.. *Ny opplysning (Regency TR-1).*
-- [ ] `tek-datamaskin-internett-pakker` – Hovedformålet med ARPANET var å dele dyre datamaskiner, ikke å overleve en atomkrig. Pakkesvitsjing lot mange dele linjene.. *Kortet tar et standpunkt mot en utbredt myte. Det bør støttes av en kilde, for eksempel Internet Society.*
-- [ ] `tek-elektrisitet-telegraf-birkeland` – Birkeland oppdaget lysbuen ved en kortslutning i den elektromagnetiske kanonen sin.. *Hintet bygger på en kjent fortelling, og den kan være forenklet.*
-- [ ] `tek-elektrisitet-telegraf-birkeland` – Birkeland var avbildet på den forrige 200-kroneseddelen.. *Jeg er ganske sikker på at det var 1994-serien, men har ikke kunnet kontrollere det.*
-- [ ] `tek-elektrisitet-telegraf-eyde` – Sam Eyde var fra Arendal, utdannet ingeniør i Tyskland, kjøpte opp fossefall og grunnla Norsk Hydro med svensk og fransk kapital.. *Hint og forklaring bygger på hukommelsen. Kapitalkildene (Wallenberg og fransk bank) og utdanningsstedet bør kontrolleres mot SNL.*
-- [ ] `tek-fly-bil-radio-ford-hvorfor` – Med samlebåndet gikk tiden det tok å sette sammen en Model T, ned fra over tolv timer til rundt halvannen.. *Tallene er mye sitert, men er ikke kontrollert her.*
-- [ ] `tek-fly-bil-radio-radiotelegrafi` – Telegrafistene på Titanic fikk Carpathia til å komme, og etterpå ble det krav om radiovakt døgnet rundt på passasjerskip.. *Ny opplysning utenfor kildelisten.*
-- [ ] `tek-skrift-hjul-metaller-bronse` – I Norden varte bronsealderen fra omkring 1700 til 500 f.Kr.. *Ny forklaring. Kildene for Norge sier ofte 1800–500 f.Kr.*
-- [ ] `tek-skrift-hjul-metaller-hammurabi` – Steinstøtten med Hammurabis lover ble funnet i Susa i Iran i 1901 og står i Louvre.. *Nytt kort. Utgravningen skjedde i 1901–1902, så årstallet i hintet bør sjekkes.*
-- [ ] `tek-skrift-hjul-metaller-hjul-opphav` – Hjulet dukker opp nesten samtidig omkring 3500 f.Kr. i Mesopotamia, Sentral-Europa og på steppene, og i Mellom-Amerika fantes det bare på leketøy.. *Dette er arkeologisk konsensus slik jeg kjenner den, men det er ikke kontrollert mot snl.no/hjul.*
 
 ## Verden utenfor Europa
 

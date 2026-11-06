@@ -45,6 +45,10 @@
         {
           "title": "Sumer – Store norske leksikon",
           "url": "https://snl.no/Sumer"
+        },
+        {
+          "title": "Hammurabis lover – Store norske leksikon",
+          "url": "https://snl.no/Hammurabis_lover"
         }
       ],
       "cards": [
@@ -87,7 +91,7 @@
             "Det kom fra Kina langs Silkeveien",
             "Det kom fra Mesopotamia, sammen med skriften"
           ],
-          "explain": "Hjul og vogner finnes fra omkring 3500 f.Kr. i Mesopotamia, Sentral-Europa og på steppene. Mange bøker sier Mesopotamia, men funnene der er ikke eldre enn de andre. Egypterne bygde pyramidene uten vogner, og i Mellom-Amerika kjente man hjulet bare fra små leketøysfigurer.",
+          "explain": "Hjul og vogner finnes fra omkring 3500 f.Kr. i Mesopotamia, Sentral-Europa og på steppene. Mange bøker nevner Mesopotamia først, men dateringene ligger så tett at ingen kan si sikkert hvor hjulet kom først. Egypterne bygde pyramidene uten vogner, og i Mellom-Amerika kjente man hjulet bare fra små leketøysfigurer.",
           "hint": "Tenk på at de eldste funnene ligger langt fra hverandre, men er omtrent like gamle."
         },
         {
@@ -128,7 +132,7 @@
             "kong Hammurabi"
           ],
           "explain": "Lovene er blant de eldste kjente lovsamlingene. Straffene fulgte prinsippet «øye for øye», men avhang av hvem som var offer og gjerningsmann: å skade en stormann ga strengere straff enn å skade en slave.",
-          "hint": "Steinstøtten ble funnet i Iran i 1901 og står i dag i Louvre i Paris."
+          "hint": "Steinstøtten ble funnet i Susa i Iran og står i dag i Louvre i Paris."
         },
         {
           "id": "tek-skrift-hjul-metaller-jern-hvorfor",
@@ -240,7 +244,7 @@
       "summary": "Løse metalltyper gjorde bøker billigere og ideer raskere å spre, og trykkpressen ble en forutsetning for reformasjonen og den nye vitenskapen.",
       "lesson": [
         "Johann Gutenberg i Mainz utviklet boktrykkerkunsten på 1450-tallet. Det nye var løse typer støpt i metall, én for hver bokstav, som kunne settes sammen til en side og brukes om igjen. En presse etter mønster av vinpressen trykket arket mot typene. Papiret, som var kommet fra Kina via den arabiske verden, var mye billigere enn pergament.",
-        "Gutenberg var ikke først. I Kina laget Bi Sheng løse typer av brent leire rundt 1041, og i Korea ble en bok trykt med metalltyper i 1377. Gutenbergbibelen, trykt rundt 1455, er hans mest kjente verk. Opplaget var trolig rundt 180 eksemplarer. Det høres lite ut, men en avskriver kunne bruke over et år på én bibel.",
+        "Gutenberg var ikke først. I Kina laget Bi Sheng løse typer av brent leire rundt 1041, og i Korea ble en bok trykt med metalltyper i 1377. Gutenbergbibelen, trykt rundt 1455, er hans mest kjente verk. Opplaget var trolig 160–180 eksemplarer. Det høres lite ut, men en avskriver kunne bruke over et år på én bibel.",
         "Rundt 1500 fantes det trykkerier i flere hundre europeiske byer. Bøker ble billigere, og samme tekst nådde mange på kort tid. Luthers skrifter ble trykt i hundretusenvis av eksemplarer etter 1517. Forskere fikk like kopier av tabeller og figurer, og bøker på folkespråk ga mer faste skrivemåter."
       ],
       "keyPoints": [
@@ -266,6 +270,14 @@
         {
           "title": "Bibelen – Store norske leksikon",
           "url": "https://snl.no/Bibelen"
+        },
+        {
+          "title": "papir – Store norske leksikon",
+          "url": "https://snl.no/papir"
+        },
+        {
+          "title": "Aldus Pius Manutius – Store norske leksikon",
+          "url": "https://snl.no/Aldus_Pius_Manutius"
         }
       ],
       "cards": [
@@ -336,7 +348,7 @@
             "Den var begrenset til byene langs Rhinen",
             "Kirken tillot den bare i klostrene"
           ],
-          "explain": "Boktrykkerne fulgte handelsveiene og pengene, og Venezia, med sine rike kjøpmenn, ble et av de største trykkesentrene. Norden var sent ute: Norge fikk sitt første faste trykkeri i Christiania først i 1643.",
+          "explain": "Boktrykkerne fulgte handelsveiene og pengene, og Venezia, med sine rike kjøpmenn, ble et av de største trykkesentrene. Norge var sent ute: Danmark og Sverige fikk trykkerier i 1480-årene, men Norge fikk sitt første boktrykkeri i Christiania først i 1643.",
           "hint": "Tenk på hvor raskt Luthers skrifter nådde ut over hele Europa noen tiår senere."
         },
         {
@@ -483,6 +495,14 @@
         {
           "title": "Hovedbanen – Store norske leksikon",
           "url": "https://snl.no/Hovedbanen"
+        },
+        {
+          "title": "Robert Stephenson – Store norske leksikon",
+          "url": "https://snl.no/Robert_Stephenson"
+        },
+        {
+          "title": "normaltid – Store norske leksikon",
+          "url": "https://snl.no/normaltid"
         }
       ],
       "cards": [
@@ -697,6 +717,10 @@
         {
           "title": "Kristian Birkeland – Store norske leksikon",
           "url": "https://snl.no/Kristian_Birkeland"
+        },
+        {
+          "title": "Norsk Hydro – Store norske leksikon",
+          "url": "https://snl.no/Norsk_Hydro"
         }
       ],
       "cards": [
@@ -765,7 +789,7 @@
             "Birkeland"
           ],
           "explain": "Birkeland forklarte nordlyset med ladde partikler fra Sola. Han var avbildet på den forrige 200-kroneseddelen.",
-          "hint": "Lysbuen fant han ved et uhell, da en elektromagnetisk kanon han hadde bygd, kortsluttet."
+          "hint": "Oppdagelsen kom ved et uhell under en demonstrasjon av en elektromagnetisk kanon han hadde bygd."
         },
         {
           "id": "tek-elektrisitet-telegraf-rekkefolge",
@@ -917,8 +941,8 @@
           "url": "https://snl.no/Wilbur_Wright"
         },
         {
-          "title": "Orville Wright – Store norske leksikon",
-          "url": "https://snl.no/Orville_Wright"
+          "title": "Titanic – Store norske leksikon",
+          "url": "https://snl.no/Titanic"
         },
         {
           "title": "Tryggve Gran – Store norske leksikon",
