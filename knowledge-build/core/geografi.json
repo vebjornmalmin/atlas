@@ -285,6 +285,10 @@
         {
           "title": "Polarsirkel – Store norske leksikon",
           "url": "https://snl.no/polarsirkel"
+        },
+        {
+          "title": "Sognefjorden – Store norske leksikon",
+          "url": "https://snl.no/Sognefjorden"
         }
       ],
       "cards": [
@@ -368,7 +372,7 @@
           "accept": [
             "Sognefjord"
           ],
-          "explain": "Regnet fra havet er Sognefjorden over 200 kilometer lang. På det dypeste, utenfor Vadheim, er den 1303 meter, men ved munningen bare 150–200 meter dyp. En grunn terskel ytterst er typisk for fjorder: Der stoppet breen og la igjen grus og stein.",
+          "explain": "Regnet fra havet er Sognefjorden over 200 kilometer lang. På det dypeste, utenfor Vadheim, er den 1303 meter, men ved munningen bare 100–200 meter dyp. En grunn terskel ytterst er typisk for fjorder: Breen gravde mindre ved munningen enn lenger inne, og noen steder ligger det også morene på terskelen.",
           "hint": "Den skjærer inn fra kysten nord for Bergen og ender ved Skjolden."
         },
         {
@@ -702,7 +706,7 @@
           "type": "year",
           "prompt": "I hvilket år ble Svalbardtraktaten undertegnet?",
           "answer": "1920",
-          "explain": "Traktaten trådte i kraft i 1925, og da ble Svalbard formelt en del av Norge. Over 40 land har sluttet seg til den, og alle har lik rett til fiske, fangst og gruvedrift.",
+          "explain": "Traktaten trådte i kraft i 1925, og da ble Svalbard formelt en del av Norge. Nesten 50 land har sluttet seg til den, og alle har lik rett til fiske, fangst og gruvedrift.",
           "hint": "Den ble undertegnet i Paris mens fredsoppgjøret etter første verdenskrig ennå pågikk."
         }
       ]
@@ -742,6 +746,14 @@
         {
           "title": "Donau – Store norske leksikon",
           "url": "https://snl.no/Donau"
+        },
+        {
+          "title": "Volga – Store norske leksikon",
+          "url": "https://snl.no/Volga"
+        },
+        {
+          "title": "Mont Blanc – Store norske leksikon",
+          "url": "https://snl.no/Mont_Blanc"
         }
       ],
       "cards": [
@@ -815,7 +827,7 @@
             "Dunărea",
             "Donau-elva"
           ],
-          "explain": "Donau er rundt 2850 kilometer lang og renner gjennom eller langs ti land, flere enn noen annen elv. I romertiden var elva en stor del av grensen for Romerriket, og den er fortsatt en viktig vei for skipsfart mellom Sentral-Europa og Svartehavet.",
+          "explain": "Donau er rundt 2850 kilometer lang og renner gjennom eller langs ti land. Nedbørfeltet berører 19 land, flere enn for noen annen elv. I romertiden var elva en stor del av grensen for Romerriket, og den er fortsatt en viktig vei for skipsfart mellom Sentral-Europa og Svartehavet.",
           "hint": "Elva begynner i Schwarzwald i Tyskland og munner ut i Svartehavet."
         },
         {
@@ -829,7 +841,7 @@
             "Volga-elva",
             "Volgaelva"
           ],
-          "explain": "Volga er rundt 3500 kilometer lang og har vært Russlands viktigste ferdselsåre. I vikingtiden brukte svenske vikinger elva som handelsvei mot øst, og i dag er den bundet sammen med andre elver og kanaler helt til Østersjøen og Svartehavet.",
+          "explain": "Volga er nesten 3700 kilometer lang og har vært Russlands viktigste ferdselsåre. I vikingtiden brukte svenske vikinger elva som handelsvei mot øst, og i dag er den bundet sammen med andre elver og kanaler helt til Østersjøen og Svartehavet.",
           "hint": "Elva renner gjennom Kazan og ender ved Astrakhan."
         },
         {
@@ -975,6 +987,10 @@
         {
           "title": "Midtøsten – Store norske leksikon",
           "url": "https://snl.no/Midt%C3%B8sten"
+        },
+        {
+          "title": "Tibet – Store norske leksikon",
+          "url": "https://snl.no/Tibet"
         }
       ],
       "cards": [
@@ -1197,6 +1213,10 @@
         {
           "title": "Nigeria – Store norske leksikon",
           "url": "https://snl.no/Nigeria"
+        },
+        {
+          "title": "Suezkanalen – Store norske leksikon",
+          "url": "https://snl.no/Suezkanalen"
         }
       ],
       "cards": [
@@ -1444,6 +1464,14 @@
         {
           "title": "Panamakanalen – Store norske leksikon",
           "url": "https://snl.no/Panamakanalen"
+        },
+        {
+          "title": "Amazonas – Store norske leksikon",
+          "url": "https://snl.no/Amazonas_-_elv_i_S%C3%B8r-Amerika"
+        },
+        {
+          "title": "Amerigo Vespucci – Store norske leksikon",
+          "url": "https://snl.no/Amerigo_Vespucci"
         }
       ],
       "cards": [
@@ -1486,7 +1514,7 @@
             "Den renner gjennom flest land i verden",
             "Den har verdens største elvedelta"
           ],
-          "explain": "Amazonas fører omtrent en femdel av alt elvevann som renner ut i havet, og nedbørfeltet dekker over en tredel av Sør-Amerika. Om den også er lengst, er usikkert. Elva gjennom flest land er Donau.",
+          "explain": "Amazonas fører omtrent en femdel av alt elvevann som renner ut i havet, og nedbørfeltet dekker over en tredel av Sør-Amerika. Om den også er lengst, er usikkert. Donau er elva med flest land i nedbørfeltet.",
           "hint": "Tenk på hvor mye regn som faller over regnskogen rundt den."
         },
         {
@@ -1595,7 +1623,7 @@
             "Munningen kan også avgrenses ulikt",
             "Ulike målemetoder gir ulik rangering"
           ],
-          "explain": "Med vanlige mål er Nilen omtrent 6700 kilometer og Amazonas omtrent 6400. Målt i vannføring er det ingen tvil: Amazonas fører mer vann enn de neste sju elvene til sammen. Rekorder for elvelengde bør derfor tas med forbehold.",
+          "explain": "Med vanlige mål er Nilen omtrent 6700 kilometer og Amazonas omtrent 6400. Målt i vannføring er det ingen tvil: Amazonas fører langt mer vann enn noen annen elv. Rekorder for elvelengde bør derfor tas med forbehold.",
           "hint": "Tenk på begge endene av elva: hvor den begynner, og hvor den slutter."
         },
         {
@@ -1897,6 +1925,14 @@
         {
           "title": "Taiga – Store norske leksikon",
           "url": "https://snl.no/taiga"
+        },
+        {
+          "title": "Middelhavsklima – Store norske leksikon",
+          "url": "https://snl.no/middelhavsklima"
+        },
+        {
+          "title": "Vertikal temperaturgradient – Store norske leksikon",
+          "url": "https://snl.no/vertikal_temperaturgradient"
         }
       ],
       "cards": [
@@ -2064,7 +2100,7 @@
             "Kald luft fra Polhavet blir fanget mellom toppene",
             "Berggrunnen i fjellet holder seg frossen hele året"
           ],
-          "explain": "I snitt synker temperaturen med rundt 0,6 grader per 100 meter. Over tregrensen blir sommeren for kald for skog, og fjellvegetasjonen ligner tundraen lenger nord. Det samme gjelder nær ekvator: Kilimanjaro har is på toppen.",
+          "explain": "I snitt synker temperaturen med omkring 0,65 grader per 100 meter. Over tregrensen blir sommeren for kald for skog, og fjellvegetasjonen ligner tundraen lenger nord. Det samme gjelder nær ekvator: Kilimanjaro har is på toppen.",
           "hint": "Tenk på hvordan det føles å gå fra fjorden og opp på en fjelltopp en sommerdag."
         },
         {
@@ -2129,6 +2165,14 @@
         {
           "title": "Indonesia – Store norske leksikon",
           "url": "https://snl.no/Indonesia"
+        },
+        {
+          "title": "World Population Prospects 2024 – FN",
+          "url": "https://population.un.org/wpp/"
+        },
+        {
+          "title": "World Urbanization Prospects 2025 – FN",
+          "url": "https://www.un.org/sustainabledevelopment/blog/2025/11/press-release-wup2025/"
         }
       ],
       "cards": [
@@ -2171,7 +2215,7 @@
             "Omtrent en tidel",
             "Nesten alle"
           ],
-          "explain": "Tallet avhenger av hva som regnes som by. Med landenes egne definisjoner bor litt over halvparten i byer. I Norge bor over 80 prosent i tettsteder. Byveksten er nå størst i Afrika og Sør-Asia.",
+          "explain": "Tallet avhenger av hva som regnes som by: FNs felles mål fra 2025 gir 45 prosent, landenes egne definisjoner 58 prosent. I Norge bor over 80 prosent i tettsteder. Byveksten er nå størst i Afrika og Sør-Asia.",
           "hint": "FN regnet med at byene gikk forbi landsbygda i folketall rundt 2007."
         },
         {

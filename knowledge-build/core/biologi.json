@@ -40,6 +40,10 @@
         {
           "title": "Kloroplaster – Store norske leksikon",
           "url": "https://snl.no/kloroplaster"
+        },
+        {
+          "title": "ATP – adenosintrifosfat – Den Store Danske",
+          "url": "https://lex.dk/ATP_-_adenosintrifosfat"
         }
       ],
       "cards": [
@@ -224,7 +228,7 @@
             "adenosintrifosfat",
             "adenosin-trifosfat"
           ],
-          "explain": "Et menneske bryter ned og bygger opp igjen omtrent sin egen kroppsvekt i ATP hver dag. Molekylet driver alt fra muskelarbeid til byggingen av proteiner.",
+          "explain": "Kroppen har bare litt ATP på lager, men bryter ned og bygger opp igjen flere titalls kilo hver dag, etter noen anslag like mye som sin egen kroppsvekt. Molekylet driver alt fra muskelarbeid til byggingen av proteiner.",
           "hint": "Molekylet lades opp i mitokondriene og brukes overalt i cellen, som et oppladbart batteri."
         }
       ]
@@ -587,7 +591,7 @@
             "Orangutangene",
             "Gibbonene"
           ],
-          "explain": "Vanlig sjimpanse og bonobo står oss like nært. Både genetiske og anatomiske studier viser dette. Slektslinjene skilte trolig lag for seks til ti millioner år siden, men anslagene spriker mye.",
+          "explain": "Vanlig sjimpanse og bonobo står oss like nært. Både genetiske og anatomiske studier viser dette. Når slektslinjene skilte lag, er usikkert; anslagene spenner fra rundt fem til ti millioner år siden.",
           "hint": "De lever i Afrika, bruker redskaper og deler omtrent 98–99 prosent av DNA-et med oss."
         },
         {
@@ -723,6 +727,10 @@
         {
           "title": "Biologisk mangfold – Store norske leksikon",
           "url": "https://snl.no/biologisk_mangfold"
+        },
+        {
+          "title": "Insekter – Store norske leksikon",
+          "url": "https://snl.no/insekter"
         }
       ],
       "cards": [
@@ -889,8 +897,8 @@
           "answer": "5",
           "unit": "prosent",
           "tolerance": 2,
-          "explain": "Det er beskrevet rundt 70 000 nålevende arter av virveldyr, og over halvparten av dem er fisker. Insektene alene teller rundt én million beskrevne arter.",
-          "hint": "Insektene alene utgjør over halvparten av alle beskrevne arter."
+          "explain": "Det er beskrevet rundt 70 000 nålevende arter av virveldyr, og over halvparten av dem er fisker. Insektene alene teller over én million beskrevne arter. Andelen virveldyr blir 3–7 prosent, alt etter hvilket totaltall man regner med.",
+          "hint": "Insektene alene utgjør over halvparten av alle beskrevne dyrearter."
         }
       ]
     },
@@ -963,7 +971,7 @@
             "I tykktarmen",
             "I spiserøret"
           ],
-          "explain": "Tynntarmen er fire til fem meter lang hos en voksen, og millioner av tarmtotter gir den en svært stor overflate. Magesekken elter maten med saltsyre og enzymer, men tar opp svært lite næring.",
+          "explain": "Tynntarmen er omtrent tre til seks meter lang hos en voksen, alt etter hvordan den måles, og millioner av tarmtotter gir den en svært stor overflate. Magesekken elter maten med saltsyre og enzymer, men tar opp svært lite næring.",
           "hint": "Tenk på den delen av tarmen som er flere meter lang og har en enorm indre overflate."
         },
         {
