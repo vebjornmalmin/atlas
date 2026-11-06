@@ -41,6 +41,14 @@
         {
           "title": "Årstider – Store norske leksikon",
           "url": "https://snl.no/%C3%A5rstider"
+        },
+        {
+          "title": "Midnattssol – Store norske leksikon",
+          "url": "https://snl.no/midnattssol"
+        },
+        {
+          "title": "Venus – Store norske leksikon",
+          "url": "https://snl.no/Venus"
         }
       ],
       "cards": [
@@ -124,7 +132,7 @@
             "Mercur",
             "Mercury"
           ],
-          "explain": "Selv om Merkur ligger nærmest, er Venus den varmeste planeten, med over 400 grader på overflaten. Den tykke atmosfæren av karbondioksid holder på varmen, en kraftig drivhuseffekt.",
+          "explain": "Selv om Merkur ligger nærmest, er Venus den varmeste planeten, med omkring 470 grader på overflaten. Den tykke atmosfæren av karbondioksid holder på varmen, en kraftig drivhuseffekt.",
           "hint": "Den er den minste av planetene og har nesten ingen atmosfære."
         },
         {
@@ -179,7 +187,7 @@
             "Om sommeren heller nordområdene mot Sola og blir i sollys hele døgnet",
             "Om vinteren heller de bort, og Sola kommer ikke over horisonten"
           ],
-          "explain": "Polarsirkelen ligger der helningen setter grensen, på omtrent 66,6 grader nord. Jo lenger nord, desto lengre varer midnattssola: i Bodø rundt en måned, på Svalbard rundt fire måneder.",
+          "explain": "Polarsirkelen ligger der helningen setter grensen, på omtrent 66,6 grader nord. Jo lenger nord, desto lengre varer midnattssola: i Bodø rundt seks uker, på Svalbard rundt fire måneder.",
           "hint": "Tenk på hvordan helningen plasserer nordområdene når Jorda roterer én gang rundt i løpet av døgnet."
         },
         {
@@ -216,7 +224,7 @@
       "summary": "Big bang, galakser, stjerner og svarte hull viser hvor gammelt og hvor stort universet er.",
       "lesson": [
         "Universet er alt som finnes av rom, materie og energi. Ifølge de beste modellene begynte det å utvide seg for omtrent 13,8 milliarder år siden, fra en svært tett og varm tilstand. Denne begynnelsen kalles big bang, på norsk det store smellet. Big bang var ikke en eksplosjon i rommet, men en hendelse med selve rommet. Utvidelsen startet overalt og har ikke noe sentrum.",
-        "Stjernene er samlet i galakser, store systemer av stjerner, gass og støv. Den observerbare delen av universet har trolig flere hundre milliarder galakser, kanskje flere. Vår egen heter Melkeveien og er en flat skive med spiralarmer. Avstandene måles ofte i lysår, strekningen lyset går på ett år: omtrent 9,46 billioner kilometer. Fordi lyset bruker tid, ser vi bakover i tid når vi ser langt ut.",
+        "Stjernene er samlet i galakser, store systemer av stjerner, gass og støv. Anslagene for hvor mange galakser den observerbare delen av universet har, spenner fra noen hundre til over tusen milliarder. Vår egen heter Melkeveien og er en flat skive med spiralarmer. Avstandene måles ofte i lysår, strekningen lyset går på ett år: omtrent 9,46 billioner kilometer. Fordi lyset bruker tid, ser vi bakover i tid når vi ser langt ut.",
         "En stjerne dannes når en sky av gass og støv trekker seg sammen til kjernen blir så varm at hydrogen smelter sammen til helium. Når brenselet tar slutt, blir en stjerne som Sola trolig en hvit dverg. Svært tunge stjerner ender i en supernovaeksplosjon og etterlater en nøytronstjerne eller et svart hull, der tyngdekraften er så sterk at ikke engang lys slipper ut."
       ],
       "keyPoints": [
@@ -460,6 +468,14 @@
         {
           "title": "Atlanterhavsryggen – Store norske leksikon",
           "url": "https://snl.no/Atlanterhavsryggen"
+        },
+        {
+          "title": "Pangea – Store norske leksikon",
+          "url": "https://snl.no/Pangea"
+        },
+        {
+          "title": "Ildringen – Store norske leksikon",
+          "url": "https://snl.no/ildringen"
         }
       ],
       "cards": [
@@ -488,7 +504,7 @@
             "Kontinentene ligger fast, men havet stiger og synker",
             "Fjellkjeder bygges bare opp av vulkanutbrudd"
           ],
-          "explain": "Platene er fra noen titalls til et par hundre kilometer tykke og glir over den mykere astenosfæren. Kontinentene følger passivt med, som tømmerstokker frosset fast i isflak.",
+          "explain": "Platene er 40–280 kilometer tykke og glir over den mykere astenosfæren. Kontinentene følger passivt med, som tømmerstokker frosset fast i isflak.",
           "hint": "Tenk på Atlanterhavsryggen, der ny havbunn stadig dannes."
         },
         {
@@ -578,7 +594,7 @@
               "right": "To kontinenter kolliderer"
             }
           ],
-          "explain": "Rundt Stillehavet ligger mange grenser der havbunn presses ned, og beltet av vulkaner og jordskjelv der kalles Ildringen. Når en plate rykker til under havet, kan den løfte vannmassene og gi en tsunami, slik det skjedde i Japan i 2011.",
+          "explain": "Rundt Stillehavet ligger mange grenser der havbunn presses ned, og beltet av vulkaner og jordskjelv der kalles ildringen. Når en plate rykker til under havet, kan den løfte vannmassene og gi en tsunami, slik det skjedde i Japan i 2011.",
           "hint": "Japan har både dype havgroper og mange vulkaner."
         },
         {
@@ -679,6 +695,10 @@
         {
           "title": "Aggregattilstand – Store norske leksikon",
           "url": "https://snl.no/aggregattilstand"
+        },
+        {
+          "title": "Kokepunkt – Store norske leksikon",
+          "url": "https://snl.no/kokepunkt"
         }
       ],
       "cards": [
@@ -764,7 +784,7 @@
             "Mendeleyev",
             "Mendelejeff"
           ],
-          "explain": "Han var en av flere forskere som omtrent samtidig og uavhengig av hverandre fant at egenskapene gjentar seg periodisk. Mendelejev skilte seg ut ved å forutsi egenskapene til grunnstoffer som ennå ikke var funnet.",
+          "explain": "Han var en av seks forskere i fem land som omtrent samtidig og uavhengig av hverandre fant at egenskapene gjentar seg periodisk. Mendelejev skilte seg ut ved å forutsi egenskapene til grunnstoffer som ennå ikke var funnet.",
           "hint": "Han arbeidet i St. Petersburg, og grunnstoff nummer 101 er oppkalt etter ham."
         },
         {
@@ -1113,6 +1133,10 @@
         {
           "title": "Newton – Store norske leksikon",
           "url": "https://snl.no/newton"
+        },
+        {
+          "title": "Isaac Newton – Store norske leksikon",
+          "url": "https://snl.no/Isaac_Newton"
         }
       ],
       "cards": [
@@ -1280,7 +1304,7 @@
           "type": "year",
           "prompt": "Hvilket år kom Newtons «Principia», der bevegelseslovene ble gitt ut?",
           "answer": "1687",
-          "explain": "Newton hadde mange av de grunnleggende ideene rundt tjue år tidligere, men skrev boka på under to år etter at astronomen Edmond Halley oppmuntret ham. Den ble grunnlaget for fysikk og astronomi i de neste århundrene.",
+          "explain": "Newton hadde mange av de grunnleggende ideene rundt tjue år tidligere, men skrev boka først etter at astronomen Edmond Halley oppmuntret ham. Halley betalte også trykkingen. Den ble grunnlaget for fysikk og astronomi i de neste århundrene.",
           "hint": "Boka kom året før den ærerike revolusjonen i England."
         }
       ]
@@ -1321,6 +1345,14 @@
         {
           "title": "Fossilt brensel – Store norske leksikon",
           "url": "https://snl.no/fossilt_brensel"
+        },
+        {
+          "title": "Kull – Store norske leksikon",
+          "url": "https://snl.no/kull"
+        },
+        {
+          "title": "Dannelse av petroleum – Store norske leksikon",
+          "url": "https://snl.no/dannelse_av_petroleum"
         }
       ],
       "cards": [
@@ -1509,7 +1541,7 @@
           "answer": "80",
           "unit": "prosent",
           "tolerance": 5,
-          "explain": "Olje var den største enkeltkilden med rundt 30 prosent, foran kull og naturgass. Fornybar energi, medregnet vannkraft, sto for rundt 14 prosent og kjernekraft for rundt 4.",
+          "explain": "Anslagene ligger på 80–82 prosent, avhengig av beregningsmetode. Olje var den største enkeltkilden med rundt 30 prosent, foran kull og naturgass. Fornybar energi, medregnet vannkraft, sto for rundt 14 prosent og kjernekraft for rundt 4.",
           "hint": "Olje, kull og gass dominerer fortsatt, selv om fornybar energi vokser raskt."
         }
       ]
@@ -1758,6 +1790,10 @@
         {
           "title": "Marie Curie – Store norske leksikon",
           "url": "https://snl.no/Marie_Curie"
+        },
+        {
+          "title": "Johannes Kepler – Store norske leksikon",
+          "url": "https://snl.no/Johannes_Kepler"
         }
       ],
       "cards": [
@@ -1992,6 +2028,14 @@
         {
           "title": "Fisjon – kjernefysikk – Store norske leksikon",
           "url": "https://snl.no/fisjon_-_kjernefysikk"
+        },
+        {
+          "title": "Tungtvannsaksjonene – Store norske leksikon",
+          "url": "https://snl.no/tungtvannsaksjonene"
+        },
+        {
+          "title": "Otto Hahn – Store norske leksikon",
+          "url": "https://snl.no/Otto_Hahn"
         }
       ],
       "cards": [
@@ -2167,7 +2211,7 @@
             "Til å kjøle ned motorene i ubåter",
             "Til å lage drivstoff til rakettene"
           ],
-          "explain": "I tungtvann har hydrogenatomene et ekstra nøytron i kjernen. Vemork var den eneste store produsenten i verden, og sabotasjen i 1943 og senkingen av jernbaneferja på Tinnsjøen i 1944 stanset leveransene. Tyskland fikk aldri en reaktor i gang.",
+          "explain": "I tungtvann har hydrogenatomene et ekstra nøytron i kjernen. Vemork hadde Europas eneste faste produksjon, og sabotasjen i 1943 og senkingen av jernbaneferja på Tinnsjøen i 1944 stanset leveransene. Tyskland fikk aldri en reaktor i gang.",
           "hint": "Tungtvann er vanlig vann med tyngre hydrogen, så det kan verken brenne eller eksplodere."
         }
       ]
