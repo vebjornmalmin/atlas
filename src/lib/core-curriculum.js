@@ -47,7 +47,7 @@ export function choiceProblems({prompt, answer, distractors = []}) {
 export function hintProblems(card) {
   const errors = [], warnings = [];
   const hint = typeof card.hint === 'string' ? card.hint.trim() : '';
-  if (!hint) { warnings.push('mangler hint.'); return {errors, warnings}; }
+  if (!hint) { errors.push('mangler hint.'); return {errors, warnings}; }
   if (hint.length > 220) errors.push(`hintet er for langt (${hint.length} tegn).`);
   else if (hint.length > 160) warnings.push(`hintet er langt (${hint.length} tegn).`);
   if (!/[.?]$/.test(hint)) warnings.push('hintet bør slutte med punktum.');

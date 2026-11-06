@@ -7,7 +7,7 @@ import {attachKnowledge, schedulingKey} from '../src/lib/knowledge-model.js';
 import {validatePackage} from '../src/lib/content.js';
 
 const card = (unit, n, step, extra = {}) => ({id: `${unit}-k${n}`, step, type: 'choice', prompt: `Spørsmål ${n} om ${unit}?`, answer: `Svar ${unit} ${n}`,
-  distractors: [`Feil a ${n}`, `Feil b ${n}`, `Feil c ${n}`], explain: `Forklaring nummer ${n} som lærer bort noe nytt om emnet.`, ...extra});
+  distractors: [`Feil a ${n}`, `Feil b ${n}`, `Feil c ${n}`], explain: `Forklaring nummer ${n} som lærer bort noe nytt om emnet.`, hint: `Ledetråd nummer ${n}.`, ...extra});
 const unit = (id, prerequisites = [], tier = 1) => ({id, title: `Emne ${id}`, tier, prerequisites, summary: 'Et emne.',
   lesson: [`Svar ${id} 1 og Svar ${id} 2 og Svar ${id} 3.`, `Svar ${id} 4 og Svar ${id} 5 og Svar ${id} 6 og Svar ${id} 7 og Svar ${id} 8.`],
   keyPoints: ['Ett.', 'To.', 'Tre.'], sources: [{title: 'Kilde', url: `https://snl.no/${id}`}],
