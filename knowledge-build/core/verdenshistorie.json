@@ -44,6 +44,14 @@
         {
           "title": "Shang-dynastiet – Store norske leksikon",
           "url": "https://snl.no/Shang-dynastiet"
+        },
+        {
+          "title": "Det gamle Egypts historie – Store norske leksikon",
+          "url": "https://snl.no/Det_gamle_Egypts_historie"
+        },
+        {
+          "title": "Gilgamesh – Store norske leksikon",
+          "url": "https://snl.no/Gilgamesh"
         }
       ],
       "cards": [
@@ -226,7 +234,7 @@
             "Omkring 1500 f.Kr.",
             "Omkring 500 f.Kr."
           ],
-          "explain": "Egypt ble samlet tidlig, mens Mesopotamia lenge besto av løst tilknyttede bystater. Nyere dateringer legger samlingen litt før 3000 f.Kr. Den gammelegyptiske historien varte i nesten 3000 år, til romerne erobret landet i år 30 f.Kr.",
+          "explain": "Egypt ble samlet tidlig, mens Mesopotamia lenge besto av løst tilknyttede bystater. Dateringene varierer: Tradisjonelt regnes samlingen til omkring 3100 f.Kr., mens andre kronologier sier omkring 2900 f.Kr. Den gammelegyptiske historien varte i nesten 3000 år, til romerne erobret landet i år 30 f.Kr.",
           "hint": "Det skjedde omtrent samtidig som kileskriften tok form i Mesopotamia."
         },
         {
@@ -240,7 +248,7 @@
             "Hatshepsut",
             "Kleopatra"
           ],
-          "explain": "Det gamle riket (omtrent 2700–2200 f.Kr.) var pyramidenes tid. Tutankhamon og Hatshepsut levde over tusen år senere, i Det nye riket, og Kleopatra enda senere. Forskerne diskuterer fortsatt hvordan pyramiden ble bygd med datidens hjelpemidler.",
+          "explain": "Det gamle riket (omtrent 2600–2100 f.Kr.) var pyramidenes tid. Tutankhamon og Hatshepsut levde over tusen år senere, i Det nye riket, og Kleopatra enda senere. Forskerne diskuterer fortsatt hvordan pyramiden ble bygd med datidens hjelpemidler.",
           "hint": "Han styrte i Det gamle riket, over tusen år før faraoene som ble gravlagt i Kongenes dal."
         },
         {
@@ -299,6 +307,14 @@
         {
           "title": "Antikkens olympiske leker – Store norske leksikon",
           "url": "https://snl.no/antikkens_olympiske_leker"
+        },
+        {
+          "title": "Athens historie – Store norske leksikon",
+          "url": "https://snl.no/Athens_historie"
+        },
+        {
+          "title": "Parthenon – Store norske leksikon",
+          "url": "https://snl.no/Parthenon"
         }
       ],
       "cards": [
@@ -462,7 +478,7 @@
             "Loddtrekning til mange embeter",
             "Bare voksne mannlige borgere deltok, ikke kvinner, slaver og innflyttere"
           ],
-          "explain": "Rundt 430 f.Kr. hadde Athen trolig om lag 40 000 borgere, mens slavene kanskje var over 100 000. Tanken var likevel at makten skulle ligge hos borgerne, ikke hos eksperter og mektige enkeltmenn.",
+          "explain": "Rundt 430 f.Kr. hadde Athen trolig om lag 40 000 mannlige borgere. Anslagene over antall slaver spriker fra 50 000 til 200 000. Tanken var likevel at makten skulle ligge hos borgerne, ikke hos eksperter og mektige enkeltmenn.",
           "hint": "Tenk på hvem som stemte, hvordan embetene ble fordelt, og hvem som var utelukket."
         },
         {
@@ -477,7 +493,7 @@
             "Parthenontempelet",
             "Parthenonen"
           ],
-          "explain": "Perserne hadde brent de eldre templene på Akropolis i 480 f.Kr., og arbeidet med det nye tempelet begynte i 447 f.Kr. Senere ble det kirke og moské, og i 1687 ble det sprengt da et osmansk kruttlager inne i tempelet ble truffet under en venetiansk beleiring.",
+          "explain": "Perserne hadde brent de eldre templene på Akropolis i 480 f.Kr., og arbeidet med det nye tempelet begynte i 447 f.Kr. Senere ble det kirke og moské, og i 1687 ble det sterkt skadet da et osmansk kruttlager inne i tempelet eksploderte under en venetiansk beleiring.",
           "hint": "Navnet viser til gudinnens tilnavn, som betyr «jomfruen»."
         },
         {
@@ -525,7 +541,7 @@
       "lesson": [
         "Ifølge romernes egen tradisjon ble Roma grunnlagt i 753 f.Kr. Rundt 509 f.Kr. ble kongene fjernet, og Roma ble en republikk. To konsuler, valgt for ett år om gangen, hadde den utøvende makten. Senatet, som besto av tidligere embetsmenn, styrte i praksis finanser og utenrikspolitikk. Gjennom kriger, blant annet mot Kartago, ble Roma herre over Middelhavet.",
         "I senrepublikken kjempet mektige hærførere om makten, med hærer som var mer lojale mot dem enn mot staten. Julius Cæsar erobret Gallia, krysset elven Rubicon med hæren og ble diktator, men ble drept 15. mars 44 f.Kr. Adoptivsønnen Octavian vant borgerkrigen, fikk ærestittelen Augustus i 27 f.Kr. og regnes som den første keiseren. Han la grunnlaget for Pax Romana, rundt 200 år med stabile forhold innad i riket.",
-        "Kristendommen spredte seg tross forfølgelser. Keiser Konstantin begunstiget de kristne og flyttet hovedstaden til Konstantinopel i 330. I 380 ble kristendommen statsreligion under keiser Theodosius. Riket ble delt for godt i 395. Vestriket hadde lang grense mot germanske folk og svakere økonomi, og i 476 ble den siste vestromerske keiseren avsatt. Østromerriket levde videre i nesten tusen år."
+        "Kristendommen spredte seg tross forfølgelser. Keiser Konstantin begunstiget de kristne og flyttet hovedstaden til Konstantinopel i 330. Fra 380 gjorde keiser Theodosius kristendommen til statsreligion gjennom en rekke påbud. Riket ble delt for godt i 395. Vestriket hadde lang grense mot germanske folk og svakere økonomi, og i 476 ble den siste vestromerske keiseren avsatt. Østromerriket levde videre i nesten tusen år."
       ],
       "keyPoints": [
         "Roma var republikk fra omkring 509 f.Kr. og ble styrt av konsuler og senat.",
@@ -550,6 +566,14 @@
         {
           "title": "Det vestromerske rike – Store norske leksikon",
           "url": "https://snl.no/Det_vestromerske_rike"
+        },
+        {
+          "title": "Punerkrigene – Store norske leksikon",
+          "url": "https://snl.no/punerkrigene"
+        },
+        {
+          "title": "Theodosius den store – Store norske leksikon",
+          "url": "https://snl.no/Theodosius_den_store"
         }
       ],
       "cards": [
@@ -705,7 +729,7 @@
               "year": 476
             }
           ],
-          "explain": "På femti år gikk kristendommen fra å være favorisert til å bli statsreligion, og i 391 forbød Theodosius hedenske ofringer. Mange regner bruddet med den gresk-romerske religionen som slutten på antikken.",
+          "explain": "På femti år gikk kristendommen fra å være favorisert til å bli statsreligion, og i 391 forbød Theodosius hedensk gudsdyrkelse og stengte templene. Mange regner bruddet med den gresk-romerske religionen som slutten på antikken.",
           "hint": "Den første kristne keiseren står bak den tidligste hendelsen."
         },
         {
@@ -1047,6 +1071,10 @@
         {
           "title": "Michelangelo – Store norske leksikon",
           "url": "https://snl.no/Michelangelo"
+        },
+        {
+          "title": "de’ Medici – Store norske leksikon",
+          "url": "https://snl.no/de%E2%80%99_Medici"
         }
       ],
       "cards": [
@@ -1212,7 +1240,7 @@
             "Løse typer og papir ga mange like eksemplarer",
             "Ideer spredte seg raskere og bredere"
           ],
-          "explain": "Papiret var en kinesisk oppfinnelse som kom til Europa via den arabiske verden, og i Italia fantes papirmøller fra 1200-tallet. Uten papir hadde Gutenbergs teknikk fått langt mindre betydning: Én bibel på pergament krevde huder fra over hundre kalver.",
+          "explain": "Papiret var en kinesisk oppfinnelse som kom til Europa via den arabiske verden, og i Italia fantes papirmøller fra 1200-tallet. Uten papir hadde Gutenbergs teknikk fått langt mindre betydning: Ifølge ulike anslag krevde én bibel på pergament huder fra 80 til 170 dyr.",
           "hint": "Tenk på hvordan bøker ble laget før, hva de kostet, og hvor raskt ideer kunne spre seg."
         },
         {
@@ -1549,6 +1577,10 @@
         {
           "title": "Amerikanske urfolk – Store norske leksikon",
           "url": "https://snl.no/amerikanske_urfolk"
+        },
+        {
+          "title": "Bartolomé de las Casas – Store norske leksikon",
+          "url": "https://snl.no/Bartolom%C3%A9_de_las_Casas"
         }
       ],
       "cards": [
@@ -1726,7 +1758,7 @@
             "Rundt 5 millioner",
             "Over 40 millioner"
           ],
-          "explain": "Anslaget bygger på data fra rundt 36 000 skipsreiser. Om lag to millioner døde under overfarten, og nesten halvparten av dem som kom fram, endte i Brasil.",
+          "explain": "Anslaget bygger på data fra over 35 000 skipsreiser. Om lag to millioner døde under overfarten, og over 40 prosent av alle ble solgt til Brasil.",
           "hint": "Det er mer enn dobbelt så mange som bor i Norge i dag."
         },
         {
@@ -2035,6 +2067,14 @@
         {
           "title": "Det kommunistiske manifest – Store norske leksikon",
           "url": "https://snl.no/Det_kommunistiske_manifest"
+        },
+        {
+          "title": "George Stephenson – Store norske leksikon",
+          "url": "https://snl.no/George_Stephenson"
+        },
+        {
+          "title": "Liverpool – Store norske leksikon",
+          "url": "https://snl.no/Liverpool"
         }
       ],
       "cards": [
@@ -2194,7 +2234,7 @@
           "type": "year",
           "prompt": "Hvilket år kom «Det kommunistiske manifest»?",
           "answer": "1848",
-          "explain": "Det ble utgitt anonymt i London i februar, bare dager før februarrevolusjonen brøt ut i Paris. Først fra 1860-årene fikk det stor innflytelse på arbeiderbevegelsen i Europa.",
+          "explain": "Det ble utgitt anonymt i London 21. februar, dagen før februarrevolusjonen brøt ut i Paris. Først fra 1860-årene fikk det stor innflytelse på arbeiderbevegelsen i Europa.",
           "hint": "Samme år brøt det ut revolusjoner i store deler av Europa."
         },
         {
@@ -2206,8 +2246,8 @@
           "accept": [
             "Liverpool havn"
           ],
-          "explain": "Råbomullen kom i stor grad fra slaveplantasjene i det amerikanske sør. Strekningen var den første mellom to byer der damplokomotiver trakk både passasjerer og gods etter fast rutetabell, og jernbaner og dampskip bandt snart markedene sammen.",
-          "hint": "Byen var på 1700-tallet Englands største havn for slavehandelen."
+          "explain": "Råbomullen kom i stor grad fra slaveplantasjene i det amerikanske sør. Strekningen regnes ofte som den første rutegående jernbanen mellom to byer med bare damplokomotiver. Verdens første jernbane med damplokomotiv var Stockton–Darlington-banen fra 1825.",
+          "hint": "Byen vokste på 1700-tallet fram som Englands ledende havn for slavehandelen."
         },
         {
           "id": "vh-industrielle-revolusjon-india",
