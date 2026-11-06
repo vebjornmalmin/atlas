@@ -63,7 +63,8 @@
             "I Nederland på 1600-tallet",
             "I Tyskland på 1800-tallet"
           ],
-          "explain": "Renessansen var et brudd med middelalderen og en gjenoppdagelse av antikkens kultur. Kunstlivet samlet seg særlig i Firenze og Roma, der pave Julius 2. bestilte store prosjekter."
+          "explain": "Renessansen var et brudd med middelalderen og en gjenoppdagelse av antikkens kultur. Kunstlivet samlet seg særlig i Firenze og Roma, der pave Julius 2. bestilte store prosjekter.",
+          "hint": "Tenk på landet der Romerrikets ruiner sto midt i byene, og tiden da boktrykkerkunsten kom."
         },
         {
           "id": "kul-kunstepoker-gotikk-kjennetegn",
@@ -76,7 +77,8 @@
             "Flate tak, glassfasader og stålbjelker",
             "Kupler, søylehaller og åpne atrier"
           ],
-          "explain": "Spissbuer og utvendige strebebuer førte vekten ned utenfor veggene. Da kunne veggene bli tynnere og fylles med farget glass som slapp lyset inn."
+          "explain": "Spissbuer og utvendige strebebuer førte vekten ned utenfor veggene. Da kunne veggene bli tynnere og fylles med farget glass som slapp lyset inn.",
+          "hint": "Tenk på hva som slipper lyset inn i Notre-Dame, og formen på buene over vinduene."
         },
         {
           "id": "kul-kunstepoker-romantikk-tema",
@@ -89,7 +91,8 @@
             "Geometriske former og flater",
             "Reklame og populærkultur"
           ],
-          "explain": "Landskapet hadde før vært bakgrunn i figurmalerier. Nå ble det selve hovedmotivet og ladet med følelser, som hos Caspar David Friedrich og nordmannen J.C. Dahl."
+          "explain": "Landskapet hadde før vært bakgrunn i figurmalerier. Nå ble det selve hovedmotivet og ladet med følelser, som hos Caspar David Friedrich og nordmannen J.C. Dahl.",
+          "hint": "Tenk på Caspar David Friedrichs ensomme skikkelser foran tåke og fjell."
         },
         {
           "id": "kul-kunstepoker-impresjonisme-maal",
@@ -102,7 +105,8 @@
             "Tingene sett fra flere sider samtidig",
             "Bibelske scener i streng symmetri"
           ],
-          "explain": "Maling på tube gjorde det lettere å male raskt ute i naturen. Rene farger ble satt ved siden av hverandre, slik at blandingen skjedde i øyet og ikke på paletten."
+          "explain": "Maling på tube gjorde det lettere å male raskt ute i naturen. Rene farger ble satt ved siden av hverandre, slik at blandingen skjedde i øyet og ikke på paletten.",
+          "hint": "Tenk på Monet, som malte samme motiv igjen og igjen til ulike tider av døgnet."
         },
         {
           "id": "kul-kunstepoker-barokk",
@@ -114,7 +118,8 @@
             "barokk",
             "barokktiden"
           ],
-          "explain": "Navnet kommer trolig fra portugisisk barroco, en uregelmessig formet perle, og var først nedsettende. I Italia var barokken knyttet til kirken, i Frankrike til kongen og hoffet."
+          "explain": "Navnet kommer trolig fra portugisisk barroco, en uregelmessig formet perle, og var først nedsettende. I Italia var barokken knyttet til kirken, i Frankrike til kongen og hoffet.",
+          "hint": "Tenk på Caravaggio og Rembrandt, og epoken mellom renessansen og klassisismen."
         },
         {
           "id": "kul-kunstepoker-perspektiv",
@@ -125,9 +130,10 @@
           "distractors": [
             "Pointillisme",
             "Collage",
-            "Glassmaleri"
+            "Fresko"
           ],
-          "explain": "Brunelleschi og Masaccio var blant de første som eksperimenterte med lineært perspektiv. Leonardo da Vinci studerte i tillegg anatomi gjennom disseksjon for å gjengi kroppen naturtro."
+          "explain": "Alle linjer som går innover i bildet, møtes i ett forsvinningspunkt, slik at tingene krymper med avstanden. Brunelleschi og Masaccio var blant de første som brukte metoden. Fresko er en maleteknikk på våt kalk, ikke en måte å skape dybde på.",
+          "hint": "Tenk på linjer som løper innover i bildet og møtes i ett punkt i horisonten."
         },
         {
           "id": "kul-kunstepoker-impresjonisme-navn",
@@ -139,7 +145,8 @@
             "impresjonismen",
             "impresjonistene"
           ],
-          "explain": "Journalisten Louis Leroy brukte ordet nedsettende etter den første utstillingen i 1874. Monets bilde het «Inntrykk av en soloppgang» og ble kritisert for å se ut som en skisse."
+          "explain": "Journalisten Louis Leroy brukte ordet nedsettende etter den første utstillingen i 1874. Monets bilde het «Inntrykk av en soloppgang» og ble kritisert for å se ut som en skisse.",
+          "hint": "Kritikeren Louis Leroy gjorde narr av den første utstillingen i Paris i 1874."
         },
         {
           "id": "kul-kunstepoker-ekspresjonisme",
@@ -151,7 +158,8 @@
             "ekspresjonisme",
             "ekspresjonistene"
           ],
-          "explain": "Bevegelsen hadde hovedsete i Tyskland, med kunstnergruppene Brücke og Der Blaue Reiter. Vincent van Gogh og Edvard Munch regnes som viktige forløpere. Malerne forlot ofte sentralperspektivet og lot fargen bære følelsen."
+          "explain": "Bevegelsen hadde hovedsete i Tyskland, med kunstnergruppene Brücke og Der Blaue Reiter. Vincent van Gogh og Edvard Munch regnes som viktige forløpere. Malerne forlot ofte sentralperspektivet og lot fargen bære følelsen.",
+          "hint": "Tenk på de tyske gruppene Die Brücke og Der Blaue Reiter, med Munch som forløper."
         },
         {
           "id": "kul-kunstepoker-rekkefolge",
@@ -180,7 +188,8 @@
               "year": 1905
             }
           ],
-          "explain": "Mange epoker kan leses som reaksjoner på den forrige: romantikken mot nyklassisismens fornuft, impresjonismen mot salongmaleriet og ekspresjonismen mot impresjonismens vekt på den ytre verden."
+          "explain": "Mange epoker kan leses som reaksjoner på den forrige: romantikken mot nyklassisismens fornuft, impresjonismen mot salongmaleriet og ekspresjonismen mot impresjonismens vekt på den ytre verden.",
+          "hint": "Bare én av epokene begynte i middelalderen, i fransk kirkearkitektur."
         },
         {
           "id": "kul-kunstepoker-kjennetegn",
@@ -205,7 +214,8 @@
               "right": "Raske strøk og rene farger i friluft"
             }
           ],
-          "explain": "Kjennetegnene speiler skiftende idealer: gotikkens lys og høyde, barokkens bevegelse i kirkens og kongens tjeneste, og 1800-tallets vekt på kunstnerens egne følelser og inntrykk."
+          "explain": "Kjennetegnene speiler skiftende idealer: gotikkens lys og høyde, barokkens bevegelse i kirkens og kongens tjeneste, og 1800-tallets vekt på kunstnerens egne følelser og inntrykk.",
+          "hint": "Begynn med katedralene: lyset kom inn gjennom fargede vinduer."
         },
         {
           "id": "kul-kunstepoker-forklar-ekspresjonisme",
@@ -218,7 +228,8 @@
             "Ekspresjonisme: indre følelser og opplevelser",
             "Ekspresjonistene forvrengte form og farge med vilje"
           ],
-          "explain": "Navnene speiler forskjellen: inntrykk mot uttrykk. Kritikere brukte først ordet ekspresjonisme om all ny kunst som brøt med impresjonismens vekt på den ytre verden."
+          "explain": "Navnene speiler forskjellen: inntrykk mot uttrykk. Kritikere brukte først ordet ekspresjonisme om all ny kunst som brøt med impresjonismens vekt på den ytre verden.",
+          "hint": "Tenk på inntrykk utenfra mot uttrykk innenfra, og hva som skjer med formene."
         },
         {
           "id": "kul-kunstepoker-gotikk-navn",
@@ -231,7 +242,8 @@
             "Den oppsto først i den tyske byen Gotha",
             "Den ble oppkalt etter en fransk abbed"
           ],
-          "explain": "Kunsthistorikeren Giorgio Vasari mente på 1500-tallet at byggestilen var like usivilisert som goterne. Navnet ble stående uten den negative meningen, slik det også gikk med barokk og impresjonisme."
+          "explain": "Kunsthistorikeren Giorgio Vasari mente på 1500-tallet at byggestilen var like usivilisert som goterne. Navnet ble stående uten den negative meningen, slik det også gikk med barokk og impresjonisme.",
+          "hint": "Tenk på hva kunstnerne et par hundre år senere mente om middelalderens smak."
         },
         {
           "id": "kul-kunstepoker-st-denis",
@@ -240,7 +252,8 @@
           "prompt": "Klosterkirken Saint-Denis ved Paris regnes som starten på gotikken. Omtrent hvilket år ble koret bygd om?",
           "answer": "1140",
           "tolerance": 5,
-          "explain": "Abbed Suger kombinerte for første gang spissbuer, ribbehvelv og strebesystem. Notre-Dame i Paris, påbegynt i 1163, fulgte etter og ble et forbilde for hele Europa."
+          "explain": "Abbed Suger kombinerte for første gang spissbuer, ribbehvelv og strebesystem. Notre-Dame i Paris, påbegynt i 1163, fulgte etter og ble et forbilde for hele Europa.",
+          "hint": "Ombyggingen skjedde under kong Ludvig 7., noen år før det andre korstoget."
         }
       ]
     },
@@ -253,8 +266,8 @@
       ],
       "summary": "Verdens mest kjente malerier er særegne i teknikk og motiv, og de forteller mye om tiden de ble laget i.",
       "lesson": [
-        "Fra høyrenessansen kommer Leonardo da Vincis «Mona Lisa», påbegynt omkring 1503 og i dag i Louvre i Paris. Veggmaleriet «Nattverden» («Det siste måltid») i Milano viser øyeblikket da Jesus sier at en av disiplene skal forråde ham. Leonardo myket opp konturene med teknikken sfumato. Michelangelo, egentlig billedhugger, malte takfreskene i Det sixtinske kapell i Vatikanet med scener fra skapelsesberetningen.",
-        "I Flandern fornyet Jan van Eyck maleriet på 1400-tallet med oljefarger i lysende nyanser og myke overganger. I barokken malte Rembrandt det store gruppeportrettet «Nattevakten» (1642), og Johannes Vermeer i Delft gjorde lyset i stille interiører til selve hovedsaken.",
+        "Fra høyrenessansen kommer Leonardo da Vincis «Mona Lisa», påbegynt omkring 1503 og i dag i Louvre i Paris. Veggmaleriet «Nattverden» i Milano viser øyeblikket da Jesus sier at en av disiplene skal forråde ham. Han malte det på tørr puss, ikke som fresko, og det begynte snart å forvitre. Leonardo myket opp konturene med teknikken sfumato. Michelangelo, egentlig billedhugger, malte takfreskene i Det sixtinske kapell i Vatikanet med scener fra skapelsesberetningen.",
+        "I Flandern fornyet Jan van Eyck maleriet på 1400-tallet med oljefarger i lysende nyanser og myke overganger. I barokken malte Rembrandt det store gruppeportrettet «Nattevakten» (1642), som egentlig viser en dagscene. Johannes Vermeer i Delft gjorde lyset i stille interiører til selve hovedsaken og malte også «Pike med perleøredobb».",
         "Impresjonisten Claude Monet malte samme motiv i serier for å fange skiftende lys. Postimpresjonisten Vincent van Gogh, kjent for «Solsikker» (1888), brukte intense farger og kraftige penselstrøk og ble en forløper for ekspresjonismen. I 1937 svarte Pablo Picasso på bombingen av byen Guernica under den spanske borgerkrigen. Maleriet «Guernica» regnes som et av 1900-tallets fremste kunstverk."
       ],
       "keyPoints": [
@@ -310,7 +323,8 @@
             "I Prado i Madrid",
             "I Vatikanmuseene i Roma"
           ],
-          "explain": "Modellen var trolig Lisa Gherardini, gift med den florentinske kjøpmannen Francesco del Giocondo. Derfor kalles maleriet «La Gioconda» på italiensk."
+          "explain": "Modellen var trolig Lisa Gherardini, gift med den florentinske kjøpmannen Francesco del Giocondo. Derfor kalles maleriet «La Gioconda» på italiensk.",
+          "hint": "Leonardo tok maleriet med seg da han flyttet til den franske kongens hoff."
         },
         {
           "id": "kul-mesterverk-nattverden",
@@ -323,7 +337,8 @@
             "Jesus vasker disiplenes føtter før måltidet",
             "Disiplene møter den oppstandne Jesus i Emmaus"
           ],
-          "explain": "Leonardo malte scenen i spisesalen i klosteret Santa Maria delle Grazie i 1495–1498. Han la vekt på disiplenes ulike reaksjoner, et psykologisk drama rundt bordet."
+          "explain": "Leonardo malte scenen i spisesalen i klosteret Santa Maria delle Grazie i 1495–1498. Han la vekt på disiplenes ulike reaksjoner, et psykologisk drama rundt bordet.",
+          "hint": "Tenk på hvorfor mennene rundt bordet reagerer så opprørt og så forskjellig."
         },
         {
           "id": "kul-mesterverk-sixtinske",
@@ -336,7 +351,8 @@
             "Leonardo da Vinci",
             "Sandro Botticelli"
           ],
-          "explain": "Michelangelo var først og fremst billedhugger og nølte før han tok oppdraget fra pave Julius 2. Han malte taket i 1508–1512, med ni felt fra skapelsen fram til Noa langs midten."
+          "explain": "Michelangelo var først og fremst billedhugger og nølte før han tok oppdraget fra pave Julius 2. Han malte taket i 1508–1512, med ni felt fra skapelsen fram til Noa langs midten.",
+          "hint": "Han var først og fremst billedhugger og laget også David-statuen i Firenze."
         },
         {
           "id": "kul-mesterverk-guernica",
@@ -349,7 +365,8 @@
             "Barrikadekampene i Paris under revolusjonen i 1830",
             "Jordskjelvet som la Lisboa i ruiner i 1755"
           ],
-          "explain": "Den spanske regjeringen bestilte maleriet til verdensutstillingen i Paris samme år. Etter Picassos ønske kom det først til Spania etter demokratiseringen, i 1981, og i dag henger det i Reina Sofía i Madrid."
+          "explain": "Den spanske regjeringen bestilte maleriet til verdensutstillingen i Paris samme år. Etter Picassos ønske kom det først til Spania etter demokratiseringen, i 1981, og i dag henger det i Reina Sofía i Madrid.",
+          "hint": "Guernica er en baskisk by, og maleriet kom mens Franco kjempet om makten i Spania."
         },
         {
           "id": "kul-mesterverk-vermeer",
@@ -363,21 +380,23 @@
             "Jan Vermeer",
             "Vermeer van Delft"
           ],
-          "explain": "Vermeer arbeidet i Delft og ble nesten glemt etter sin død, til han ble gjenoppdaget i 1866. Bare mellom 30 og 40 malerier tilskrives ham. Det myke lyset og samspillet mellom gult og blått er typisk for ham."
+          "explain": "Vermeer arbeidet i Delft og ble nesten glemt etter sin død, til han ble gjenoppdaget i 1866. Bare mellom 30 og 40 malerier tilskrives ham. Det myke lyset og samspillet mellom gult og blått er typisk for ham.",
+          "hint": "Maleren arbeidet i Delft og var nesten glemt i 200 år etter sin død."
         },
         {
           "id": "kul-mesterverk-van-eyck",
           "step": 2,
           "type": "choice",
           "media": "the-arnolfini-portrait",
-          "prompt": "Hvem malte dette dobbeltportrettet fra 1434?",
+          "prompt": "Hvem malte dette dobbeltportrettet?",
           "answer": "Jan van Eyck",
           "distractors": [
             "Rembrandt",
             "Johannes Vermeer",
             "Albrecht Dürer"
           ],
-          "explain": "Jan van Eyck var en banebryter for nordeuropeisk renessansemaleri. Han ble lenge regnet som oljemaleriets oppfinner. Den egentlige fornyelsen hans var lysende farger og myke overganger, som i stoffene og metallet her."
+          "explain": "Portrettet fra 1434 viser trolig kjøpmannen Giovanni Arnolfini og kona hans i Brugge. Van Eyck ble lenge regnet som oljemaleriets oppfinner, men hans egentlige fornyelse var lysende farger og myke overganger, som i stoffene og metallet her.",
+          "hint": "Maleren var flamsk og virket i Brugge på 1400-tallet."
         },
         {
           "id": "kul-mesterverk-van-gogh-retning",
@@ -391,7 +410,8 @@
             "Surrealismen",
             "Popkunsten"
           ],
-          "explain": "Vincent van Gogh malte denne versjonen av «Solsikker» i Arles i 1888. Han regnes som postimpresjonist, men de kraftige strøkene og fargene som bærer følelser, pekte fram mot ekspresjonismen. Kubismen bygde i stedet på Paul Cézanne."
+          "explain": "Vincent van Gogh malte denne versjonen av «Solsikker» i Arles i 1888. Han regnes som postimpresjonist, men de kraftige strøkene og fargene som bærer følelser, pekte fram mot ekspresjonismen. Kubismen bygde i stedet på Paul Cézanne.",
+          "hint": "Tenk på retningen som lot fargen bære følelser, slik Munch også gjorde."
         },
         {
           "id": "kul-mesterverk-monet",
@@ -405,7 +425,8 @@
             "Romantikken",
             "Kubismen"
           ],
-          "explain": "Claude Monet malte vannliljedammen og gangbroen i hagen sin i Giverny gang på gang, i skiftende lys. De senere vannliljebildene nærmet seg et nesten abstrakt uttrykk."
+          "explain": "Claude Monet malte vannliljedammen og gangbroen i hagen sin i Giverny gang på gang, i skiftende lys. De senere vannliljebildene nærmet seg et nesten abstrakt uttrykk.",
+          "hint": "Maleren laget serier av samme motiv i skiftende lys, her fra sin egen hage."
         },
         {
           "id": "kul-mesterverk-kobling",
@@ -430,7 +451,8 @@
               "right": "Leonardo da Vinci"
             }
           ],
-          "explain": "Verkene spenner over mer enn 400 år, fra høyrenessansen via barokken og postimpresjonismen til modernismen."
+          "explain": "Verkene spenner over mer enn 400 år, fra høyrenessansen via barokken og postimpresjonismen til modernismen.",
+          "hint": "Det eneste maleriet fra 1900-tallet skildrer en krig i Spania."
         },
         {
           "id": "kul-mesterverk-nattevakten-navn",
@@ -443,7 +465,8 @@
             "Det viser byens nattevakt på runde i Amsterdam",
             "Oppdragsgiveren ønsket et nattlig motiv"
           ],
-          "explain": "Bildet ble malt i 1642 for kaptein Banning Cocqs kompani av Amsterdams skyttergilde. Etter rensingen i 1947 ser man at det er en dagscene. Spillet mellom lys og mørke er typisk for barokken."
+          "explain": "Bildet ble malt i 1642 for kaptein Banning Cocqs kompani av Amsterdams skyttergilde. Etter rensingen i 1947 ser man at det er en dagscene. Spillet mellom lys og mørke er typisk for barokken.",
+          "hint": "Tenk på hva som skjer med overflaten på gamle oljemalerier over flere hundre år."
         },
         {
           "id": "kul-mesterverk-nattverden-bevaring",
@@ -453,10 +476,11 @@
           "answer": "Den er malt på tørr puss, ikke som fresko",
           "distractors": [
             "Den ble malt med akvarell på lerret",
-            "Den ble flyttet fra Roma til Milano",
+            "Bomber traff veggen under andre verdenskrig",
             "Den ble skåret opp av en besøkende"
           ],
-          "explain": "I en fresko males det på våt kalk, slik Michelangelo gjorde i Det sixtinske kapell. Leonardo brukte oljetempera på tørr puss, og maleriet begynte tidlig å forvitre. Restaureringen ble fullført i 1999."
+          "explain": "I en fresko males det på våt kalk, slik Michelangelo gjorde i Det sixtinske kapell, og fargen binder seg til veggen. Leonardo brukte oljetempera på tørr puss for å kunne arbeide langsomt. Da spisesalen ble bombet i 1943, sto veggen med maleriet igjen, beskyttet av sandsekker.",
+          "hint": "Sammenlign med Michelangelos takmalerier, som er langt bedre bevart."
         },
         {
           "id": "kul-mesterverk-forklar-mona-lisa",
@@ -469,7 +493,8 @@
             "Lys og skygge gir dybde og volum",
             "Uklarheten gjør uttrykket åpent for tolkning"
           ],
-          "explain": "Teknikkene bygger på renessansens studier av natur og lys. Leonardo var maler, billedhugger, ingeniør og vitenskapsmann, et universalgeni."
+          "explain": "Leonardo bygde opp ansiktet med mange tynne, gjennomskinnelige lag oljemaling. Den samme uklarheten finnes i landskapet bak, der fjerne åser blir blåere og mer utydelige, såkalt luftperspektiv.",
+          "hint": "Tenk på konturene, overgangene mellom lys og skygge og hvordan vi leser smilet."
         },
         {
           "id": "kul-mesterverk-sixtinske-aar",
@@ -477,7 +502,8 @@
           "type": "year",
           "prompt": "Hvilket år fullførte Michelangelo takmaleriene i Det sixtinske kapell?",
           "answer": "1512",
-          "explain": "Arbeidet tok fire år, med et opphold på ni måneder blant annet på grunn av pengemangel. I 1536–1541 malte han også den dramatiske fresken «Dommedag» på alterveggen."
+          "explain": "Michelangelo malte stående på et stillas han selv hadde konstruert, med hodet bøyd bakover. Myten om at han lå på ryggen, stemmer ikke. I 1536–1541 malte han også den dramatiske fresken «Dommedag» på alterveggen.",
+          "hint": "Han ble ferdig omtrent ti år etter at Leonardo begynte på «Mona Lisa»."
         },
         {
           "id": "kul-mesterverk-vermeer-antall",
@@ -490,7 +516,8 @@
             "Rundt 200",
             "Over 800"
           ],
-          "explain": "Vermeer arbeidet langsomt og konsentrerte seg nesten bare om interiører fra sitt eget hjem. Lyset faller gjerne mykt inn fra venstre."
+          "explain": "Vermeer arbeidet langsomt og konsentrerte seg nesten bare om interiører fra sitt eget hjem. Lyset faller gjerne mykt inn fra venstre.",
+          "hint": "Han malte langsomt og fikk bare et par bilder ferdig i året gjennom en kort karriere."
         }
       ]
     },
@@ -562,7 +589,8 @@
             "Portretter av embetsmenn",
             "Bibelske scener"
           ],
-          "explain": "Dahl var nær venn av Caspar David Friedrich, men malte naturen mer realistisk. Han ivret for norske kunstforeninger og for Nasjonalgalleriet, og han var den første som gjorde oppmerksom på stavkirkene."
+          "explain": "Dahl var nær venn av Caspar David Friedrich, men malte naturen mer realistisk. Han ivret for norske kunstforeninger og for Nasjonalgalleriet, og han kjempet for å bevare stavkirkene.",
+          "hint": "Han bodde i Dresden, men reiste hjem på lange studieturer i norsk natur."
         },
         {
           "id": "kul-norsk-kunst-brudeferd",
@@ -575,7 +603,8 @@
             "Christian Krohg og Frits Thaulow",
             "Erik Werenskiold og Gerhard Munthe"
           ],
-          "explain": "Tidemand malte figurene og Gude landskapet. Et festkledd brudefølge i båt på en solfylt vestlandsfjord gjør bildet til et typisk uttrykk for nasjonalromantikken. Originalen eies av Nasjonalmuseet."
+          "explain": "Tidemand malte figurene og Gude landskapet. Et festkledd brudefølge i båt på en solfylt vestlandsfjord gjør bildet til et typisk uttrykk for nasjonalromantikken. Originalen eies av Nasjonalmuseet.",
+          "hint": "Den ene var spesialist på folkeliv og figurer, den andre på fjord og natur."
         },
         {
           "id": "kul-norsk-kunst-skrik",
@@ -589,7 +618,8 @@
             "Arbeiderklassens kamp",
             "Kjærlighetens lykke"
           ],
-          "explain": "Munch beskrev et øyeblikk da han følte et stort, uendelig skrik gjennom naturen. Landskapet er Oslofjorden sett fra Ekebergåsen, under en blodrød himmel. Bildet regnes som Munchs dristigste ekspresjonistiske forsøk."
+          "explain": "Munch beskrev et øyeblikk da han følte et stort, uendelig skrik gjennom naturen. Landskapet er Oslofjorden sett fra Ekebergåsen, under en blodrød himmel. Bildet regnes som Munchs dristigste ekspresjonistiske forsøk.",
+          "hint": "Munch beskrev et skrik han følte gjennom naturen en kveld ved Oslofjorden."
         },
         {
           "id": "kul-norsk-kunst-vigeland",
@@ -602,7 +632,8 @@
             "Maleriene i Universitetets aula i Oslo",
             "Utsmykningen av Oslo rådhus"
           ],
-          "explain": "Anlegget dekker 320 dekar, med den nesten 17 meter høye Monolitten som midtpunkt. Det er en av Norges største turistattraksjoner."
+          "explain": "Anlegget har over 200 skulpturer i bronse og granitt. Midtpunktet er Monolitten, som er over 14 meter høy og hugget ut av én granittblokk. Det er en av Norges mest besøkte turistattraksjoner.",
+          "hint": "Hovedverket har over 200 figurer i stein og bronse og en høy granittsøyle."
         },
         {
           "id": "kul-norsk-kunst-krohg",
@@ -614,7 +645,8 @@
             "Krohg",
             "Chr. Krohg"
           ],
-          "explain": "Krohg skrev også romanen «Albertine» (1886) om prostitusjonen i Kristiania. Boken ble beslaglagt. Han veiledet unge kunstnere, blant dem Edvard Munch."
+          "explain": "Krohg skrev også romanen «Albertine» (1886) om prostitusjonen i Kristiania. Boken ble beslaglagt. Han veiledet unge kunstnere, blant dem Edvard Munch.",
+          "hint": "Han var også forfatter og skrev en roman om prostitusjonen i Kristiania."
         },
         {
           "id": "kul-norsk-kunst-kielland",
@@ -625,7 +657,8 @@
           "accept": [
             "Kielland"
           ],
-          "explain": "Kielland var med på å stifte Norsk Kvinnesaksforening i 1884. Hun delte bolig med Harriet Backer i både München og Paris."
+          "explain": "Kielland var med på å stifte Norsk Kvinnesaksforening i 1884. Hun delte bolig med Harriet Backer i både München og Paris.",
+          "hint": "Hun var søster av en kjent forfatter fra Stavanger."
         },
         {
           "id": "kul-norsk-kunst-livsfrisen",
@@ -637,7 +670,8 @@
             "Livs-frisen",
             "Livsfrise"
           ],
-          "explain": "Utstillingen i Berlin i 1892 ble en skandale og ble stengt etter en uke. Serien vokste videre med «Skrik» og andre bilder, og i 1902 viste han 22 motiver samlet i Berlin. Han ville male levende mennesker som puster, føler, lider og elsker."
+          "explain": "En utstilling i Berlin i 1892 ble en skandale og ble stengt etter en uke, men gjorde Munch kjent i Tyskland. Serien vokste videre med «Skrik» og andre bilder, og i 1902 viste han 22 motiver samlet i Berlin. Han ville male levende mennesker som puster, føler, lider og elsker.",
+          "hint": "Navnet sier at bildene skulle henge sammen som et bånd om menneskets tilværelse."
         },
         {
           "id": "kul-norsk-kunst-backer",
@@ -650,7 +684,8 @@
             "Store slag fra norrøn historie",
             "Nasjonale mønstre fra gamle vevnader"
           ],
-          "explain": "Backer regnes som en av de fremste koloristene i norsk kunst. Bildene hennes, fra bondestuer til middelalderkirker, skulle først og fremst nytes som lys- og fargestudier, ikke vekke politisk engasjement slik Krohgs bilder skulle."
+          "explain": "Backer regnes som en av de fremste koloristene i norsk kunst. Bildene hennes, fra bondestuer til middelalderkirker, skulle først og fremst nytes som lys- og fargestudier, ikke vekke politisk engasjement slik Krohgs bilder skulle.",
+          "hint": "Tenk på bilder som skal nytes som malerkunst, ikke vekke politisk debatt."
         },
         {
           "id": "kul-norsk-kunst-forklar-munch",
@@ -663,7 +698,8 @@
             "Munch: indre sjeleliv og eksistensielle temaer",
             "Forenklede former og følelsesladet farge"
           ],
-          "explain": "Munch skrev i 1889 at det ikke lenger skulle males folk som leser og kvinner som strikker. Han begynte likevel som naturalist, med bildet «Morgen» fra 1884."
+          "explain": "Munch skrev i 1889 at det ikke lenger skulle males folk som leser og kvinner som strikker. Han begynte likevel som naturalist, med bildet «Morgen» fra 1884.",
+          "hint": "Tenk på ytre mot indre virkelighet, hvilke temaer han valgte, og hvordan han brukte form og farge."
         },
         {
           "id": "kul-norsk-kunst-rekkefolge",
@@ -672,12 +708,12 @@
           "prompt": "Sett bildene i rekkefølge etter når de ble malt.",
           "items": [
             {
-              "label": "«Brudeferd i Hardanger», originalen (Tidemand og Gude)",
-              "year": 1848
+              "label": "«Vinter ved Sognefjorden» (J.C. Dahl)",
+              "year": 1827
             },
             {
-              "label": "«Morgen» (Munch)",
-              "year": 1884
+              "label": "«Brudeferd i Hardanger», originalen (Tidemand og Gude)",
+              "year": 1848
             },
             {
               "label": "«Sommernatt» (Kitty Kielland)",
@@ -688,7 +724,8 @@
               "year": 1893
             }
           ],
-          "explain": "På under 50 år gikk norsk maleri fra nasjonalromantikk via naturalisme og stemningsmaleri til Munchs symbolisme."
+          "explain": "På mindre enn 70 år gikk norsk maleri fra Dahls romantiske landskap via nasjonalromantikk og stemningsmaleri til Munchs symbolisme.",
+          "hint": "Dahl var aktiv en hel generasjon før nasjonalromantikkens høydepunkt."
         },
         {
           "id": "kul-norsk-kunst-kobling",
@@ -713,7 +750,8 @@
               "right": "Stemningsfulle landskap fra Jæren"
             }
           ],
-          "explain": "Kunsten speiler et land som bygde nasjonal identitet på 1800-tallet, først gjennom natur og bondekultur, senere også gjennom kritikk av samfunnet."
+          "explain": "Kunsten speiler et land som bygde nasjonal identitet på 1800-tallet, først gjennom natur og bondekultur, senere også gjennom kritikk av samfunnet.",
+          "hint": "Den eneste kvinnen i oppgaven malte det flate landskapet sør for Stavanger."
         },
         {
           "id": "kul-norsk-kunst-skrik-versjon",
@@ -726,7 +764,8 @@
             "I Bergen Kunstmuseum",
             "I Thielska galleriet i Stockholm"
           ],
-          "explain": "Munch laget fem versjoner: to malerier, én i fargestift, én i pastell og et litografi. Det andre maleriet, fra rundt 1910, tilhører Munchmuseet."
+          "explain": "Munch laget fem versjoner: to malerier, én i fargestift, én i pastell og et litografi. Det andre maleriet, fra rundt 1910, tilhører Munchmuseet.",
+          "hint": "Denne versjonen ble gitt til statens samling i 1910, lenge før Munch testamenterte sine egne bilder."
         },
         {
           "id": "kul-norsk-kunst-brudeferd-aar",
@@ -734,7 +773,8 @@
           "type": "year",
           "prompt": "Hvilket år ble originalen av «Brudeferd i Hardanger», som Nasjonalmuseet eier, fullført?",
           "answer": "1848",
-          "explain": "Originalen ble malt i Düsseldorf vinteren 1847–1848. Samme år ble en gjentakelse malt der fiolinisten Ole Bull satt modell for felespilleren, og i 1853 tok Tidemand og Gude opp motivet i en ny utforming."
+          "explain": "Originalen ble malt i Düsseldorf vinteren 1847–1848. Samme år ble en gjentakelse malt der fiolinisten Ole Bull satt modell for felespilleren, og i 1853 tok Tidemand og Gude opp motivet i en ny utforming.",
+          "hint": "Bildet ble fullført det året revolusjoner spredte seg over store deler av Europa."
         }
       ]
     },
@@ -796,7 +836,8 @@
             "Hverdagsgjenstander stilles ut som ferdige kunstverk",
             "Reklamebilder gjentas i store, fargesterke trykk"
           ],
-          "explain": "Picasso og Braque bygde på Paul Cézanne, som mente at alle former i naturen kan føres tilbake til kulen, kjeglen og sylinderen. Et glass kunne vises ovenfra og fra siden i samme bilde. Utgangspunktet var Picassos «Les Demoiselles d'Avignon» fra 1907."
+          "explain": "Picasso og Braque bygde på Paul Cézanne, som mente at alle former i naturen kan føres tilbake til kulen, kjeglen og sylinderen. Et glass kunne vises ovenfra og fra siden i samme bilde. Utgangspunktet var Picassos «Les Demoiselles d'Avignon» fra 1907.",
+          "hint": "Tenk på Cézannes idé om å føre naturen tilbake til kule, kjegle og sylinder."
         },
         {
           "id": "kul-moderne-kunst-surrealisme",
@@ -809,7 +850,8 @@
             "I matematikk og geometriske former",
             "I reklame og populærkultur"
           ],
-          "explain": "André Breton formulerte programmet i det surrealistiske manifestet i 1924. Bevegelsen begynte som litteratur, men fra omkring 1925 ble billedkunsten dominerende."
+          "explain": "André Breton formulerte programmet i det surrealistiske manifestet i 1924. Bevegelsen begynte som litteratur, men fra omkring 1925 ble billedkunsten dominerende.",
+          "hint": "Bevegelsen var sterkt påvirket av Sigmund Freuds psykoanalyse."
         },
         {
           "id": "kul-moderne-kunst-popkunst",
@@ -822,7 +864,8 @@
             "Urørt natur og storslagne landskap",
             "Drømmer og det ubevisste sjelelivet"
           ],
-          "explain": "Retningen oppsto i Europa og USA som et svar på etterkrigstidens forbruk og populærkultur. Den ville nærme seg hverdagens erfaringer, i motsetning til det abstrakte maleriet."
+          "explain": "Retningen oppsto i Europa og USA som et svar på etterkrigstidens forbruk og populærkultur. Den ville nærme seg hverdagens erfaringer, i motsetning til det abstrakte maleriet.",
+          "hint": "Tenk på Andy Warhols bilder av Marilyn Monroe og kjente merkevarer."
         },
         {
           "id": "kul-moderne-kunst-fountain",
@@ -835,7 +878,8 @@
             "En gipsavstøpning av hånden sin",
             "En stabel med suppebokser"
           ],
-          "explain": "Han signerte det «R. Mutt 1917» og kalte det «Fountain». Poenget var at kunstnerens valg, ikke håndverket, gjør noe til kunst. Han spurte: Hva er kunst, og hvem skal bestemme det?"
+          "explain": "Han signerte det «R. Mutt 1917» og kalte det «Fountain». Poenget var at kunstnerens valg, ikke håndverket, gjør noe til kunst. Han spurte: Hva er kunst, og hvem skal bestemme det?",
+          "hint": "Gjenstanden var masseprodusert og ble signert med det oppdiktede navnet «R. Mutt»."
         },
         {
           "id": "kul-moderne-kunst-braque",
@@ -846,7 +890,8 @@
           "accept": [
             "Braque"
           ],
-          "explain": "De to arbeidet så tett at de også utviklet collage sammen, med påklistret avispapir og etiketter. Kubismen hadde størst betydning fram til første verdenskrig."
+          "explain": "De to arbeidet så tett at de også utviklet collage sammen, med påklistret avispapir og etiketter. Kubismen hadde størst betydning fram til første verdenskrig.",
+          "hint": "Han var fransk, og de tidlige kubistiske bildene hans kan forveksles med Picassos."
         },
         {
           "id": "kul-moderne-kunst-kandinskij",
@@ -858,9 +903,11 @@
             "Kandinskij",
             "Kandinsky",
             "Wassily Kandinsky",
-            "Vasilij Kandinsky"
+            "Vasilij Kandinsky",
+            "Wassily Kandinskij"
           ],
-          "explain": "Kandinskij mente at farge, form og komposisjon kan vekke følelser slik musikk gjør. I boken fra 1912 sammenlignet han fargenyanser med lyden av ulike instrumenter."
+          "explain": "Kandinskij mente at farge, form og komposisjon kan vekke følelser slik musikk gjør. I boken fra 1912 sammenlignet han fargenyanser med lyden av ulike instrumenter.",
+          "hint": "Han sammenlignet farger med lyden av musikkinstrumenter og arbeidet lenge i München."
         },
         {
           "id": "kul-moderne-kunst-dali",
@@ -873,7 +920,8 @@
             "Dali",
             "Salvador Dali"
           ],
-          "explain": "Det mest kjente eksempelet er «Hukommelsens standhaftighet» fra 1931. Dalí var sterkt påvirket av Sigmund Freuds psykoanalyse og gjorde navnet sitt til et kommersielt varemerke."
+          "explain": "Det mest kjente eksempelet er «Hukommelsens standhaftighet» fra 1931. Dalí var sterkt påvirket av Sigmund Freuds psykoanalyse og gjorde navnet sitt til et kommersielt varemerke.",
+          "hint": "Han var katalansk, hadde en oppbøyd bart og var sterkt påvirket av Freud."
         },
         {
           "id": "kul-moderne-kunst-warhol",
@@ -884,7 +932,8 @@
           "accept": [
             "Warhol"
           ],
-          "explain": "Silketrykk gjorde det mulig å gjenta samme bilde mange ganger, slik reklamen gjør. Warhol ville at popkunsten skulle være for alle."
+          "explain": "Silketrykk gjorde det mulig å gjenta samme bilde mange ganger, slik reklamen gjør. Warhol ville at popkunsten skulle være for alle.",
+          "hint": "Han kalte atelieret sitt i New York for «The Factory»."
         },
         {
           "id": "kul-moderne-kunst-rekkefolge",
@@ -913,7 +962,8 @@
               "year": 1956
             }
           ],
-          "explain": "Retningene overlappet og påvirket hverandre. Popkunsten brukte for eksempel readymades og hverdagsgjenstander, slik Duchamp hadde gjort nesten et halvt århundre før."
+          "explain": "Retningene overlappet og påvirket hverandre. Popkunsten brukte for eksempel readymades og hverdagsgjenstander, slik Duchamp hadde gjort nesten et halvt århundre før.",
+          "hint": "Bare én av hendelsene skjedde etter andre verdenskrig."
         },
         {
           "id": "kul-moderne-kunst-forklar-fountain",
@@ -927,7 +977,8 @@
             "Det utfordret hvem som bestemmer hva kunst er",
             "Det banet vei for konseptkunsten"
           ],
-          "explain": "«Fountain» ble ikke vist sammen med de andre verkene, selv om utstillingen skulle være uten jury. Verket er kjent gjennom Alfred Stieglitz' fotografi."
+          "explain": "«Fountain» ble ikke vist sammen med de andre verkene, selv om utstillingen skulle være uten jury. Originalen forsvant, og verket er kjent gjennom Alfred Stieglitz' fotografi og senere kopier.",
+          "hint": "Tenk på hvem som laget gjenstanden, hva som da blir viktigst, og hva det betydde for senere kunst."
         },
         {
           "id": "kul-moderne-kunst-kobling",
@@ -952,7 +1003,8 @@
               "right": "Andy Warhol"
             }
           ],
-          "explain": "Picasso hører hjemme i flere retninger: Han var med på å skape kubismen, og André Breton regnet ham også blant surrealistene."
+          "explain": "Picasso hører hjemme i flere retninger: Han var med på å skape kubismen, og André Breton regnet ham også blant surrealistene.",
+          "hint": "Mannen som skrev om det åndelige i kunsten, malte uten synlig motiv."
         },
         {
           "id": "kul-moderne-kunst-demoiselles",
@@ -966,7 +1018,8 @@
             "Pikene fra Avignon",
             "Les demoiselles d'Avignon"
           ],
-          "explain": "Maleriet viser fem nakne kvinner med kropper brutt opp i flater. De første gjennomført kubistiske bildene kom like etter, i fasen som kalles fasettkubisme."
+          "explain": "Maleriet viser fem nakne kvinner med kropper brutt opp i flater. De første gjennomført kubistiske bildene kom like etter, i fasen som kalles fasettkubisme.",
+          "hint": "Maleriet viser fem nakne kvinner, og tittelen peker mot en gate i Barcelona."
         },
         {
           "id": "kul-moderne-kunst-klint",
@@ -979,7 +1032,8 @@
             "Hanna Pauli",
             "Vera Nilsson"
           ],
-          "explain": "Hilma af Klint ville gi form til åndelige dimensjoner som øyet ikke kan se. Hun regnes i dag som en pioner for det abstrakte billedspråket, ved siden av Kandinskij."
+          "explain": "Hilma af Klint ville gi form til åndelige dimensjoner som øyet ikke kan se. Hun regnes i dag som en pioner for det abstrakte billedspråket, ved siden av Kandinskij.",
+          "hint": "Hun var spiritist og ville at bildene først skulle vises 20 år etter hennes død."
         }
       ]
     },
@@ -1053,7 +1107,8 @@
             "Kornlagre for tørkeår",
             "Observatorier for stjernene"
           ],
-          "explain": "De ble bygd fra omkring 2600 til 1600 f.Kr., og vi kjenner 138 av dem. De eldste hadde trappetrinn, men i det fjerde dynastiet fikk de glatte sider."
+          "explain": "De ble bygd fra omkring 2600 til 1600 f.Kr., og vi kjenner 138 av dem. De eldste hadde trappetrinn, men i det fjerde dynastiet fikk de glatte sider.",
+          "hint": "Tenk på hva som lå i kammeret dypt inne i Kheopspyramiden."
         },
         {
           "id": "kul-arkitektur-soyleordener",
@@ -1066,7 +1121,8 @@
             "Toskansk, dorisk og kompositt",
             "Egyptisk, persisk og minoisk"
           ],
-          "explain": "Ordenene skilles særlig på kapitelet, toppen av søylen. Romerne la senere til den toskanske ordenen og komposittkapitelet."
+          "explain": "Ordenene skilles særlig på kapitelet, toppen av søylen. Romerne la senere til den toskanske ordenen og komposittkapitelet.",
+          "hint": "Ordenene er oppkalt etter to greske folkegrupper og en gresk by."
         },
         {
           "id": "kul-arkitektur-gotikk",
@@ -1079,7 +1135,8 @@
             "Tykke murer og runde buer",
             "Kupler med lysåpning på toppen"
           ],
-          "explain": "Strebesystemet tok opp sidetrykket utenfor kirken, så veggene kunne bli tynnere og fylles med glassmalerier. Høyden skulle også symbolisere at kirken kom nærmere himmelen."
+          "explain": "Strebesystemet tok opp sidetrykket utenfor kirken, så veggene kunne bli tynnere og fylles med glassmalerier. Høyden skulle også symbolisere at kirken kom nærmere himmelen.",
+          "hint": "Tenk på hvordan vekten ble ført ut fra veggene, slik at de kunne fylles med glass."
         },
         {
           "id": "kul-arkitektur-urnes",
@@ -1092,7 +1149,8 @@
             "Heddal stavkirke",
             "Gol stavkirke"
           ],
-          "explain": "Kirken står ved Lustrafjorden og ble bygd tidlig på 1130-tallet. Treskurden fra en eldre kirke på stedet har gitt navn til urnesstilen, med stiliserte dyr i kamp. Maleren J.C. Dahl var den første som gjorde oppmerksom på stavkirkene."
+          "explain": "Kirken står ved Lustrafjorden og ble bygd tidlig på 1130-tallet. Treskurden fra en eldre kirke på stedet har gitt navn til urnesstilen, med stiliserte dyr i kamp. Maleren J.C. Dahl var blant de første som kjempet for å bevare stavkirkene.",
+          "hint": "Den står ved Lustrafjorden og har gitt navn til en stil i treskurd."
         },
         {
           "id": "kul-arkitektur-pantheon",
@@ -1104,7 +1162,8 @@
             "Panteon",
             "Pantheon i Roma"
           ],
-          "explain": "Kuppelen er støpt, og den indre høyden er lik diameteren: 43,3 meter. Templet ble gjort om til kirke i 609 og er derfor godt bevart."
+          "explain": "Kuppelen er støpt, og den indre høyden er lik diameteren: 43,3 meter. Templet ble gjort om til kirke i 609 og er derfor godt bevart.",
+          "hint": "Navnet betyr «alle guders tempel» på gresk."
         },
         {
           "id": "kul-arkitektur-colosseum",
@@ -1116,7 +1175,8 @@
             "Kolosseum",
             "Colosseo"
           ],
-          "explain": "I oldtiden het det Amphitheatrum Flavium etter keiserslekten. Fasaden har doriske, joniske og korintiske halvsøyler etasje for etasje, mens støpte hvelv og buer bærer konstruksjonen."
+          "explain": "I oldtiden het det Amphitheatrum Flavium etter keiserslekten. Fasaden har doriske, joniske og korintiske halvsøyler etasje for etasje, mens støpte hvelv og buer bærer konstruksjonen.",
+          "hint": "Navnet kommer trolig av en kjempestatue av keiser Nero som sto like ved."
         },
         {
           "id": "kul-arkitektur-nidaros",
@@ -1126,9 +1186,11 @@
           "answer": "Nidarosdomen",
           "accept": [
             "Nidaros domkirke",
-            "Nidaros"
+            "Nidaros",
+            "Nidarosdomkirken"
           ],
-          "explain": "De stående delene ble bygd mellom omkring 1150 og 1300, fra tidlig romansk til høygotisk stil. Den er den eneste kirken i Norge med gjennomgående gotiske strebebuer."
+          "explain": "De stående delene ble bygd mellom omkring 1150 og 1300, fra tidlig romansk til høygotisk stil. Den er den eneste kirken i Norge med gjennomgående gotiske strebebuer.",
+          "hint": "Kirken er Norges nasjonalhelligdom og målet for pilegrimsleden fra Oslo."
         },
         {
           "id": "kul-arkitektur-snohetta",
@@ -1140,7 +1202,8 @@
             "Snohetta",
             "Snøhetta AS"
           ],
-          "explain": "Snøhetta vant konkurransen i 2000. Bygget skulle fungere som kulturinstitusjon, byrom og landskap på én gang, og fikk Mies van der Rohe-prisen i 2009."
+          "explain": "Snøhetta vant konkurransen i 2000. Bygget skulle fungere som kulturinstitusjon, byrom og landskap på én gang, og fikk Mies van der Rohe-prisen i 2009.",
+          "hint": "Kontoret er oppkalt etter en fjelltopp på Dovrefjell."
         },
         {
           "id": "kul-arkitektur-rekkefolge",
@@ -1169,7 +1232,8 @@
               "year": 2008
             }
           ],
-          "explain": "Rekkefølgen viser to tusen år med byggeteknikk: romerske støpte hvelv, middelalderens stavverk og spissbuer, og 1900-tallets rene former der funksjonen styrer."
+          "explain": "Rekkefølgen viser to tusen år med byggeteknikk: romerske støpte hvelv, middelalderens stavverk og spissbuer, og 1900-tallets rene former der funksjonen styrer.",
+          "hint": "Bare ett av byggverkene er fra oldtiden."
         },
         {
           "id": "kul-arkitektur-forklar-funksjonalisme",
@@ -1183,7 +1247,8 @@
             "Rette linjer, store vinduer og enkle flater",
             "Sosialt mål: boliger for de brede lag"
           ],
-          "explain": "Bauhaus-skolen i Tyskland og Le Corbusier i Frankrike var viktige forbilder. Restaurant Skansen i Oslo fra 1927 regnes som det tidligste eksempelet på funksjonalisme i Norden."
+          "explain": "Bauhaus-skolen i Tyskland og Le Corbusier i Frankrike var viktige forbilder. Restaurant Skansen i Oslo fra 1927 regnes som et av de første funksjonalistiske byggene i Norden.",
+          "hint": "Tenk på hva som bestemmer formen, hva som ble fjernet, og hvem byggene skulle tjene."
         },
         {
           "id": "kul-arkitektur-kobling",
@@ -1208,7 +1273,8 @@
               "right": "Kheopspyramiden"
             }
           ],
-          "explain": "Hver konstruksjon løste et problem: hvordan spenne over et stort rom, slippe inn lys eller bygge varig i det materialet som fantes."
+          "explain": "Hver konstruksjon løste et problem: hvordan spenne over et stort rom, slippe inn lys eller bygge varig i det materialet som fantes.",
+          "hint": "Det romerske templet har en åpning øverst i taket."
         },
         {
           "id": "kul-arkitektur-kheops-hoyde",
@@ -1218,7 +1284,8 @@
           "answer": "146",
           "unit": "meter",
           "tolerance": 3,
-          "explain": "I dag er den 139 meter høy. Det gikk med nær 2,5 millioner steinblokker på to til tre tonn hver. Pyramidene i Giza er det eneste av antikkens sju underverker som fortsatt står."
+          "explain": "I dag er den omtrent 139 meter høy, fordi toppen og den glatte kledningen er borte. Det gikk med omkring 2,3 millioner steinblokker. Kheopspyramiden er det eneste av antikkens sju underverker som fortsatt står.",
+          "hint": "Den var omtrent halvparten så høy som Eiffeltårnet og verdens høyeste byggverk i årtusener."
         },
         {
           "id": "kul-arkitektur-opera-aar",
@@ -1226,7 +1293,8 @@
           "type": "year",
           "prompt": "Hvilket år sto operahuset i Bjørvika ferdig?",
           "answer": "2008",
-          "explain": "Operahuset ga Snøhetta det endelige internasjonale gjennombruddet. Kontoret hadde allerede i 1989 vunnet konkurransen om det nye biblioteket i Alexandria i Egypt."
+          "explain": "Operahuset ga Snøhetta det endelige internasjonale gjennombruddet. Kontoret hadde allerede i 1989 vunnet konkurransen om det nye biblioteket i Alexandria i Egypt.",
+          "hint": "Operaen åpnet samme år som finanskrisen rammet verdensøkonomien."
         }
       ]
     },
@@ -1237,7 +1305,7 @@
       "prerequisites": [],
       "summary": "Den klassiske musikken har tre store epoker med hver sine komponister, og symfoniorkesteret er bygd opp av fire instrumentgrupper.",
       "lesson": [
-        "Klassisk musikk deles gjerne i epoker. Barokken (omtrent 1600–1750) ga oss operaen, solokonserten og generalbassen, der melodien bæres av et fast akkompagnement. Johann Sebastian Bach regnes som barokkens fullender, og Antonio Vivaldi skrev «De fire årstider», fire fiolinkonserter som skildrer hver sin årstid.",
+        "Klassisk musikk deles gjerne i epoker. Barokken (omtrent 1600–1750) ga oss operaen, solokonserten og generalbassen, en basslinje med akkorder som bærer melodien. Johann Sebastian Bach regnes som barokkens fullender, og Antonio Vivaldi skrev «De fire årstider», fire fiolinkonserter som skildrer hver sin årstid.",
         "Wienerklassisismen (omtrent 1750–1820), med Joseph Haydn, Wolfgang Amadeus Mozart og Ludwig van Beethoven, svarte på barokkens tyngde med lettere uttrykk og klarere form. Den firesatsige symfonien ble epokens viktigste form. Beethoven ble døv, men skrev likevel sin 9. symfoni, der han tok inn kor og solister med Schillers dikt «Ode til gleden».",
         "I romantikken (omtrent 1820–1900) kom følelser, natur og enkeltmennesket i forgrunnen. Frédéric Chopin skrev stemningsfulle klaverstykker, og Pjotr Tsjajkovskij komponerte ballettene «Svanesjøen» og «Nøtteknekkeren». Et symfoniorkester består av fire instrumentgrupper: strykere, treblåsere, messingblåsere og slagverk."
       ],
@@ -1294,7 +1362,8 @@
             "Omkring 1750–1820",
             "Omkring 1820–1900"
           ],
-          "explain": "Barokken kom etter renessansen og ble avløst av klassisismen. Bach, som døde i 1750, regnes som komponisten som oppsummerte og avsluttet epoken."
+          "explain": "Barokken kom etter renessansen og ble avløst av klassisismen. Bach, som døde i 1750, regnes som komponisten som oppsummerte og avsluttet epoken.",
+          "hint": "Epoken sluttet omtrent da Johann Sebastian Bach døde."
         },
         {
           "id": "kul-klassisk-musikk-wienerklassikere",
@@ -1307,7 +1376,8 @@
             "Chopin, Liszt og Schumann",
             "Grieg, Svendsen og Nordraak"
           ],
-          "explain": "Alle tre bodde lenge i Wien. Stilen deres var et svar på barokkens tyngde og kompleksitet, med lettere uttrykk og klarere form."
+          "explain": "Alle tre bodde lenge i Wien. Stilen deres var et svar på barokkens tyngde og kompleksitet, med lettere uttrykk og klarere form.",
+          "hint": "Tenk på komponistene som skrev symfonier i Wien mellom barokken og romantikken."
         },
         {
           "id": "kul-klassisk-musikk-orkester",
@@ -1320,7 +1390,8 @@
             "Strykere, tangenter, vokal og elektronikk",
             "Treblåsere, klaver, harpe og kor"
           ],
-          "explain": "Et fullt symfoniorkester har 80–110 musikere og ledes av en dirigent. Valthorn hører til messingblåserne, mens fløyte, obo, klarinett og fagott er treblåsere."
+          "explain": "Et fullt symfoniorkester har 80–110 musikere og ledes av en dirigent. Valthorn hører til messingblåserne, mens fløyte, obo, klarinett og fagott er treblåsere.",
+          "hint": "Tenk på hva instrumentene er laget av, og hvordan lyden lages."
         },
         {
           "id": "kul-klassisk-musikk-romantikk",
@@ -1333,7 +1404,8 @@
             "Matematiske mønstre og strenge regler",
             "Kongemaktens prakt og hoffets fester"
           ],
-          "explain": "I barokken og klassisismen ble musikk ofte skrevet til en tekst eller en anledning. Romantikerne utforsket hvordan klang kan vekke stemninger, og korte klaverstykker og symfoniske dikt ble viktige former."
+          "explain": "I barokken og klassisismen ble musikk ofte skrevet til en tekst eller en anledning. Romantikerne utforsket hvordan klang kan vekke stemninger, og korte klaverstykker og symfoniske dikt ble viktige former.",
+          "hint": "Tenk på Chopins stemningsfulle klaverstykker og kunstnere som lot hjertet styre."
         },
         {
           "id": "kul-klassisk-musikk-bach",
@@ -1346,7 +1418,8 @@
             "J.S. Bach",
             "J. S. Bach"
           ],
-          "explain": "Bach og Händel ble født samme år. Begge samlet barokkens særtrekk i et personlig tonespråk, og kontrapunktet, flere selvstendige stemmer samtidig, nådde et høydepunkt."
+          "explain": "Bach og Händel ble født samme år. Begge samlet barokkens særtrekk i et personlig tonespråk, og kontrapunktet, flere selvstendige stemmer samtidig, nådde et høydepunkt.",
+          "hint": "Han var kantor i Leipzig og ble født samme år som Händel."
         },
         {
           "id": "kul-klassisk-musikk-vivaldi",
@@ -1357,7 +1430,8 @@
           "accept": [
             "Vivaldi"
           ],
-          "explain": "Konsertene ble utgitt i Amsterdam i 1725 sammen med sonetter som beskriver årstidene. Solofiolinen tegner hver årstids karakter mot strykeorkesteret."
+          "explain": "Konsertene ble utgitt i Amsterdam i 1725 sammen med sonetter som beskriver årstidene. Solofiolinen tegner hver årstids karakter mot strykeorkesteret.",
+          "hint": "Han var prest i Venezia og ble kalt «den røde presten» etter håret sitt."
         },
         {
           "id": "kul-klassisk-musikk-ode",
@@ -1370,7 +1444,8 @@
             "Til gleden",
             "Ode an die Freude"
           ],
-          "explain": "Kor og solister i en symfoni var et radikalt grep, og det sies at Beethoven sprengte symfoniens rammer. Ved uroppførelsen i 1824 var han døv og sto ved dirigentpulten mens to andre ledet kor og orkester."
+          "explain": "Kor og solister i en symfoni var et radikalt brudd med sjangeren. Ved uroppførelsen i 1824 var Beethoven døv og sto ved dirigentpulten mens to andre ledet kor og orkester.",
+          "hint": "Melodien er i dag Europarådets og EUs hymne."
         },
         {
           "id": "kul-klassisk-musikk-tsjajkovskij",
@@ -1384,7 +1459,8 @@
             "Tchaikovsky",
             "Pjotr Tsjaikovskij"
           ],
-          "explain": "Tsjajkovskij hadde en egen evne til å lage melodier som er lette å huske. Han ble venn med Edvard Grieg, som han møtte i Leipzig i 1888."
+          "explain": "«Svanesjøen» fikk en lunken mottakelse i 1877 og ble først en suksess i en ny oppsetning etter hans død. Tsjajkovskij ble venn med Edvard Grieg, som han møtte i Leipzig i 1888.",
+          "hint": "Han skrev også «Tornerose» og døde i St. Petersburg i 1893."
         },
         {
           "id": "kul-klassisk-musikk-rekkefolge",
@@ -1413,7 +1489,8 @@
               "year": 1840
             }
           ],
-          "explain": "Til sammen spenner de over barokken, wienerklassisismen og romantikken. Beethoven står i overgangen: Han avsluttet wienerklassisismen, mens de sene verkene hans peker inn i romantikken."
+          "explain": "Til sammen spenner de over barokken, wienerklassisismen og romantikken. Beethoven står i overgangen: Han avsluttet wienerklassisismen, mens de sene verkene hans peker inn i romantikken.",
+          "hint": "Bare én av komponistene levde i barokken."
         },
         {
           "id": "kul-klassisk-musikk-forklar-beethoven",
@@ -1426,7 +1503,8 @@
             "Sprengte rammene, blant annet med kor i 9. symfoni",
             "Personlig uttrykk og fri kunstnerrolle peker mot romantikken"
           ],
-          "explain": "Komponister som Schubert, Schumann og Brahms bygde videre på Beethoven. Etter ham måtte en symfoni helst tilføre sjangeren noe nytt."
+          "explain": "Komponister som Schubert, Schumann og Brahms bygde videre på Beethoven. Etter ham måtte en symfoni helst tilføre sjangeren noe nytt.",
+          "hint": "Tenk på hva han overtok fra Haydn og Mozart, hva han endret, og hvordan han levde som kunstner."
         },
         {
           "id": "kul-klassisk-musikk-kobling",
@@ -1451,7 +1529,8 @@
               "right": "Nokturner for klaver"
             }
           ],
-          "explain": "Verkene viser hvordan sjangrene skiftet: barokkens solokonsert, wienerklassikernes symfoni og romantikkens ballett og korte klaverstykker."
+          "explain": "Verkene viser hvordan sjangrene skiftet: barokkens solokonsert, wienerklassikernes symfoni og romantikkens ballett og korte klaverstykker.",
+          "hint": "Barokkomponisten skrev fiolinkonserter om naturens gang gjennom året."
         },
         {
           "id": "kul-klassisk-musikk-niende-aar",
@@ -1459,7 +1538,8 @@
           "type": "year",
           "prompt": "Hvilket år ble Beethovens 9. symfoni uroppført?",
           "answer": "1824",
-          "explain": "Beethoven døde tre år senere, i 1827. Symfonien ble stående som et ideal for komponister gjennom hele 1800-tallet."
+          "explain": "Beethoven døde tre år senere, i 1827. Symfonien ble stående som et ideal for komponister gjennom hele 1800-tallet.",
+          "hint": "Den ble uroppført i Wien om lag ti år etter Wienerkongressen."
         },
         {
           "id": "kul-klassisk-musikk-orkester-storrelse",
@@ -1472,7 +1552,8 @@
             "35–45",
             "150–200"
           ],
-          "explain": "Joseph Haydn hadde omkring 25 musikere ved fyrstehoffet Esterháza. Orkesteret vokste i romantikken, da komponister som Beethoven og Berlioz skrev for større besetninger."
+          "explain": "Joseph Haydn hadde omkring 25 musikere ved fyrstehoffet Esterháza. Orkesteret vokste i romantikken, da komponister som Beethoven og Berlioz skrev for større besetninger.",
+          "hint": "Tenk på hvor mange som trengs når alle fire instrumentgrupper er fullt besatt."
         }
       ]
     },
@@ -1546,7 +1627,8 @@
             "Strenge fuger etter barokkens forbilde",
             "Atonal musikk uten faste tonearter"
           ],
-          "explain": "Grieg brukte folketoner direkte og ga dem et personlig uttrykk. Nettopp fordi det nasjonale var så sammenvokst med ham, ble musikken forstått over hele verden."
+          "explain": "Grieg brukte folketoner direkte og ga dem et personlig uttrykk. Nettopp fordi det nasjonale var så sammenvokst med ham, ble musikken forstått over hele verden.",
+          "hint": "Tenk på slåttene og folkevisene han hørte i Norge."
         },
         {
           "id": "kul-norsk-musikk-ole-bull",
@@ -1559,7 +1641,8 @@
             "Dirigent for Bergens symfoniorkester",
             "Folkemusikkforsker som samlet slåtter"
           ],
-          "explain": "Bull turnerte i hele Europa og i Nord-Amerika. Han var også drivkraften bak Det Norske Theater i Bergen fra 1850, Norges første norskspråklige teater."
+          "explain": "Bull turnerte i hele Europa og i Nord-Amerika. Han var også drivkraften bak Det Norske Theater i Bergen fra 1850, Norges første norskspråklige teater.",
+          "hint": "Han turnerte i Amerika og grunnla en norsk koloni i Pennsylvania."
         },
         {
           "id": "kul-norsk-musikk-nasjonalsang",
@@ -1572,7 +1655,8 @@
             "Henrik Ibsen og Ole Bull",
             "Ivar Aasen og Halfdan Kjerulf"
           ],
-          "explain": "Bjørnson skrev den første versjonen i 1859, mens Norge var i union med Sverige. Nordraak laget melodien trolig i 1863–1864, og sangen ble raskt brukt som nasjonalsang."
+          "explain": "Bjørnson skrev den første versjonen i 1859, mens Norge var i union med Sverige. Nordraak laget melodien trolig i 1863–1864, og sangen ble raskt brukt som nasjonalsang.",
+          "hint": "Teksten er av en nobelprisvinner i litteratur, og melodien av Griegs unge venn."
         },
         {
           "id": "kul-norsk-musikk-peer-gynt",
@@ -1585,7 +1669,8 @@
             "Ludvig Holbergs «Jeppe på Bjerget»",
             "Bjørnstjerne Bjørnsons «Synnøve Solbakken»"
           ],
-          "explain": "Scenemusikken fra 1874–1875 har 26 stykker. Grieg samlet de mest kjente i to orkestersuiter, som ble populære over hele verden."
+          "explain": "Scenemusikken fra 1874–1875 har 26 stykker. Grieg samlet de mest kjente i to orkestersuiter, som ble populære over hele verden.",
+          "hint": "Skuespillet handler om en fantasifull bondegutt som møter troll i Dovre."
         },
         {
           "id": "kul-norsk-musikk-hardingfele",
@@ -1598,7 +1683,8 @@
             "hardingfelen",
             "hardangerfele"
           ],
-          "explain": "Fela er som regel litt mindre enn fiolinen og rikt utsmykket. I nasjonalromantikken ble den et symbol på norsk egenart, og den har inspirert mange komponister."
+          "explain": "Fela er som regel litt mindre enn fiolinen og rikt utsmykket. I nasjonalromantikken ble den et symbol på norsk egenart, og den har inspirert mange komponister.",
+          "hint": "Instrumentet har navn etter et fjorddistrikt i Vestland."
         },
         {
           "id": "kul-norsk-musikk-troldhaugen",
@@ -1609,7 +1695,8 @@
           "accept": [
             "Trollhaugen"
           ],
-          "explain": "Grieg bodde der særlig om somrene resten av livet. Ekteparet er gravlagt på eiendommen, og huset er i dag museum."
+          "explain": "Grieg bodde der særlig om somrene resten av livet. Ekteparet er gravlagt på eiendommen, og huset er i dag museum.",
+          "hint": "Navnet viser til underjordiske vesener fra folkeeventyrene."
         },
         {
           "id": "kul-norsk-musikk-halvorsen",
@@ -1620,7 +1707,8 @@
           "accept": [
             "Halvorsen"
           ],
-          "explain": "Halvorsen ledet Nationaltheatrets orkester fra 1899 til 1929, med ett års avbrudd, og skrev over 30 scenemusikker. I 1908, året etter Griegs død, satte han sammen den første trykte utgaven av «Peer Gynt»-musikken."
+          "explain": "Halvorsen ledet Nationaltheatrets orkester fra 1899 til 1929, med ett års avbrudd, og skrev over 30 scenemusikker. I 1908, året etter Griegs død, satte han sammen den første trykte utgaven av «Peer Gynt»-musikken.",
+          "hint": "Han ledet orkesteret ved Nationaltheatret i nesten 30 år og var gift med Griegs niese."
         },
         {
           "id": "kul-norsk-musikk-backer-grondahl",
@@ -1633,7 +1721,8 @@
             "Fiolinist og grunnlegger av et teater i Bergen",
             "Hardingfelespiller og samler av slåtter"
           ],
-          "explain": "Hun skrev rundt 250 romanser og 150 klaverstykker. Søsteren Harriet Backer var en av tidens fremste malere."
+          "explain": "Hun skrev rundt 250 romanser og 150 klaverstykker. Søsteren Harriet Backer var en av tidens fremste malere.",
+          "hint": "Søsteren var maleren Harriet Backer, og hun selv satt helst ved flygelet."
         },
         {
           "id": "kul-norsk-musikk-forklar-folkemusikk",
@@ -1646,7 +1735,8 @@
             "Hardingfela og folketonene ble nasjonalsymboler",
             "Grieg bygde kunstmusikk på slåtter og folkeviser"
           ],
-          "explain": "Grieg gikk langt: Klaverstykkene «Slåtter», bygd på hardingfelemelodier, peker med sine dissonanser fram mot Béla Bartók."
+          "explain": "Grieg gikk langt: Klaverstykkene «Slåtter», bygd på hardingfelemelodier, peker med sine dissonanser fram mot Béla Bartók.",
+          "hint": "Tenk på unionen med Sverige, jakten på det særnorske og hvordan komponistene brukte slåttene."
         },
         {
           "id": "kul-norsk-musikk-rekkefolge",
@@ -1675,7 +1765,8 @@
               "year": 1885
             }
           ],
-          "explain": "Ole Bull er bindeleddet: Han løftet fram folkemusikken, var drivkraften bak et norskspråklig teater og sendte den unge Grieg til Leipzig."
+          "explain": "Ole Bull er bindeleddet: Han løftet fram folkemusikken, var drivkraften bak et norskspråklig teater og sendte den unge Grieg til Leipzig.",
+          "hint": "Troldhaugen ble bygd sist, da Grieg allerede var verdensberømt."
         },
         {
           "id": "kul-norsk-musikk-kobling",
@@ -1700,7 +1791,8 @@
               "right": "Dirigent ved Nationaltheatret"
             }
           ],
-          "explain": "Tre av dem var tett knyttet til Grieg: Bull sendte ham til Leipzig, Nordraak inspirerte ham, og Halvorsen redigerte «Peer Gynt»-musikken etter hans død."
+          "explain": "Tre av dem var tett knyttet til Grieg: Bull sendte ham til Leipzig, Nordraak inspirerte ham, og Halvorsen redigerte «Peer Gynt»-musikken etter hans død.",
+          "hint": "Den eneste kvinnen i oppgaven var en av tidens fremste pianister."
         },
         {
           "id": "kul-norsk-musikk-nasjonalromantikk",
@@ -1725,7 +1817,8 @@
               "right": "Brudeferd i Hardanger"
             }
           ],
-          "explain": "I 1849 møttes kunstartene på scenen i Christiania: «Brudeferd i Hardanger» ble vist som levende bilde, med Ole Bull som felespiller i båten. Lindemans folketoner hadde samme betydning for musikken som Aasens dialekter for språket. Grieg fullendte senere det Kjerulf og Nordraak begynte på."
+          "explain": "I 1849 møttes kunstartene på scenen i Christiania: «Brudeferd i Hardanger» ble vist som levende bilde, med Ole Bull som felespiller i båten. Lindemans folketoner hadde samme betydning for musikken som Aasens dialekter for språket. Grieg fullendte senere det Kjerulf og Nordraak begynte på.",
+          "hint": "Maleriet som hører med, viser et festkledd brudefølge i båt."
         },
         {
           "id": "kul-norsk-musikk-myllarguten",
@@ -1738,7 +1831,8 @@
             "Torgeir Augundson",
             "Torgeir Augudson"
           ],
-          "explain": "Bull møtte Torgeir Augundsson, kalt Myllarguten, første gang i 1831. Vennskapet fikk stor betydning for norsk musikk, og Myllarguten regnes blant felespillerne som gjorde hardingfela populær."
+          "explain": "Bull møtte Torgeir Augundsson, kalt Myllarguten, første gang i 1831. Vennskapet fikk stor betydning for norsk musikk, og Myllarguten regnes blant felespillerne som gjorde hardingfela populær.",
+          "hint": "Han var en fattig spillemann fra Telemark som Ole Bull kalte et geni."
         },
         {
           "id": "kul-norsk-musikk-nasjonalsang-aar",
@@ -1746,7 +1840,8 @@
           "type": "year",
           "prompt": "Hvilket år vedtok Stortinget «Ja, vi elsker dette landet» som offisiell nasjonalsang?",
           "answer": "2019",
-          "explain": "Sangen hadde vært brukt som nasjonalsang siden urfremføringen i 1864. Teksten har åtte strofer, men vanligvis synges bare den første og de to siste."
+          "explain": "Sangen hadde vært brukt som nasjonalsang siden urfremføringen i 1864. Teksten har åtte strofer, men vanligvis synges bare den første og de to siste.",
+          "hint": "Vedtaket kom bare måneder før koronapandemien stengte Norge."
         }
       ]
     }
