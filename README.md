@@ -4,7 +4,7 @@ Offline kunnskapstrening på norsk, laget for iPhone 17 Pro.
 
 Live app: https://atlas-first-app.atlas-memory.workers.dev
 
-## Neste utgave — 1.7.1: Linser og linjer sammen (ikke publisert)
+## Gjeldende utgave — 1.7.1: Linser og linjer sammen
 
 **Linsen bestemmer hvilke linjer som teller.** Hver linse har allerede vekter på relasjonstypene, og de samme vektene brukes nå på linjene: Verdenssystem vektlegger nobelpriser, Nettverk og møter nobelpriser og påvirkning, Geopolitikk nyheter. Linjene linsen vektlegger, kommer først blant de 30 som tegnes, og de andre tones ned på kartet og i listen. Under listen står det hva linsen vektlegger, og kortet for en linje sier om linsen legger vekt på den eller sier lite om den. En linse som ikke vektlegger noen av linjetypene (for eksempel Sivilisasjoner), endrer ingenting, og listen sier det. Felles emner er Atlas' egen gruppering og vektes ikke av noen linse. Varmekartet har ingen linse, så der vises alle linjer likt. Logikken er `lensLinkWeights` og `placeLinks` i `src/lib/world-graph.js`.
 
@@ -23,7 +23,9 @@ Live app: https://atlas-first-app.atlas-memory.workers.dev
 
 263 automatiske tester består, og produksjonsbygget lages uten feil. Hele appen er gått gjennom i den installerte hjemmeskjermappen i iPhone 17 Pro-simulatoren, lyst og mørkt, med lukking og gjenåpning underveis: oppdateringsbanneret (fremgang og side beholdes), søk, en personside og quiz om personen, tilbakemelding som lagres og fører tilbake til samme svar, en økt som fortsetter på samme spørsmål etter omstart, Tid med epoker, Emner, Deg (fremgang, siste svar, økten, innstillinger), og Kart: karttyper, linser, bryterne for piler, stiplede linjer og varmekart, kortet for en linje, valg av nytt land, knapper som trekker seg sammen, og flagget som viser navnet og skjules igjen ved zoom. Et nytt trykk på flagget mens navnet vises går til omtalen; to svært raske trykk viser bare navnet.
 
-## Gjeldende utgave — 1.7.0: Forbindelser og varmekart på kartet
+Publisert 6. november 2026: app 1.7.1, utgivelse `48ea166881d5`, kunnskapspakke 2.2.2 (uendret), som statiske filer via Wrangler fra `main` etter at `main` var sendt til GitHub. `/version.json` viser den nye utgivelsen, og `/` og `/sw.js` svarer med sikkerhetshodene. Den installerte hjemmeskjermappen for den publiserte adressen i iPhone 17 Pro-simulatoren fant den nye utgaven, oppdaterte seg og beholdt Italia på Globus. Etter lukking og gjenåpning trakk knappene seg sammen når kartet ble dratt, flagget viste navnet, et dobbelttrykk zoomet ikke, Innstillinger viste app 1.7.1, og siden for Marie Curie startet på nivå 3.
+
+## 1.7.0: Forbindelser og varmekart på kartet
 
 Publisert 6. november 2026: app 1.7.0, utgivelse `873e7755ff74`, kunnskapspakke 2.2.2 (uendret), som statiske filer via Wrangler fra `main` etter at `main` var sendt til GitHub. Safari i simulatoren fant den nye utgaven på den publiserte adressen, oppdaterte seg og viste Kart med forbindelseslinjene og lagknappen.
 
