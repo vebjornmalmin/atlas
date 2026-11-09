@@ -4,7 +4,7 @@ Offline kunnskapstrening på norsk, laget for iPhone 17 Pro.
 
 Live app: https://atlas-first-app.atlas-memory.workers.dev
 
-## Neste utgave — 1.9.1: Sikkerhetskopier som kan leses tilbake, og rettelser etter en gjennomgang (ikke publisert)
+## Gjeldende utgave — 1.9.1: Sikkerhetskopier som kan leses tilbake, og rettelser etter en gjennomgang
 
 Før 1.9.0 ble publisert, ble de siste endringene og resten av appen lest gjennom: oppstart, lagring, oppdatering, øktene og alle oppgavetypene. Dette ble rettet:
 
@@ -22,6 +22,8 @@ Funnet, men ikke rettet: Lytt og Kjenn igjen temaet spiller gjennom Web Audio, s
 
 279 automatiske tester består, og produksjonsbygget lages uten feil. Produksjonsbygget er servert med `wrangler dev` og prøvd i den installerte hjemmeskjermappen i iPhone 17 Pro-simulatoren, som oppdaterte seg fra forrige bygg via «En ny utgave er klar» og viste app 1.9.1 og innhold 2.3.0. Sikkerhetskopien ble lastet ned (13 KB, uten kunnskapsbiblioteket), lagret i Filer, valgt igjen og gjenopprettet, og fremgangen sto der etterpå. Dagens kapittel, en fri quiz og en kartquiz var åpne samtidig; hver av dem kom tilbake på samme spørsmål med svaret slik det sto, også etter at appen var lukket helt og åpnet igjen. Fokus sto etter gjenåpning, alternativene i Kjenn igjen temaet varierte, zoomknappene på quizkartet virket, Diagnostikk viste lagringstallene, og I dag og et spørsmål var lesbare i mørkt utseende. Ikke prøvd i simulatoren: lyd, årstallsfeltet for år før Kristus og et påbegynt tekstsvar etter gjenåpning.
 
+Publisert 9. november 2026: app 1.9.1, utgivelse `3ba3bc5f2725`, kunnskapspakke 2.3.0, som statiske filer via Wrangler fra `main` (`0d41adb`), som alt var sendt til GitHub. 1.9.0 ble aldri publisert for seg; endringene i den følger med her. `/version.json` viser den nye utgivelsen, og `/` og `/sw.js` svarer med sikkerhetshodene. Den installerte hjemmeskjermappen for den publiserte adressen i iPhone 17 Pro-simulatoren, som sto på 1.8.0, viste «En ny utgave er klar», oppdaterte seg til 1.9.1, og viste app 1.9.1 og innhold 2.3.0 på samme side etter at den var lukket helt og åpnet igjen.
+
 ## 1.9.0: Fortsett mellom quizer, velg fokus på I dag
 
 **Ingen quiz går tapt når du starter en annen.** Før ble dagens økt lagt i en lukket liste nederst når man startet en fri quiz, og kortet for dagens kapittel tilbød å starte en ny plan. Nå er alle uferdige quizer åpne. Kortet for dagens kapittel sier «Fortsett der du var» også når økten er satt til side, quizen du sist brukte vises først, og de andre ligger under «Også påbegynt». En quiz kan avsluttes uten å miste svarene. Sluttskjermen tilbyr å gå tilbake til quizen du satte til side, for eksempel «Tilbake til dagens kapittel · 3 av 14 gjort».
@@ -30,9 +32,9 @@ Funnet, men ikke rettet: Lytt og Kjenn igjen temaet spiller gjennom Web Audio, s
 
 **Fokus endres der du ser det.** Kortet for dagens kapittel viser fokus (fagområder og rekkefølge) med «Endre»: velg neste kapittel, fagområder og om historien skal følges gjennom tid. Et emne kan også gjøres til neste kapittel fra emnesiden i Atlas → Emner. Alle innstillinger lagres med en gang; før forsvant valg av fagområder når appen ble lukket hvis man ikke trykket «Lagre».
 
-Beslutningene står i `docs/levels-and-story.md`. Kunnskapspakken er uendret (2.3.0). 276 automatiske tester består, og produksjonsbygget lages uten feil. Produksjonsbygget er servert med `wrangler dev` og prøvd i en nettleser som etterligner iPhone, lyst og mørkt: pause i dagens økt, fri quiz, omlasting, fortsette begge, tilbake fra sluttskjermen, avslutte en quiz, ferdig dagens økt med et ekstra kapittel, og fokus valgt fra I dag og fra Emner etter omlasting. Sjekken i den installerte hjemmeskjermappen i iPhone 17 Pro-simulatoren gjenstår.
+Beslutningene står i `docs/levels-and-story.md`. Kunnskapspakken er uendret (2.3.0). 276 automatiske tester består, og produksjonsbygget lages uten feil. Produksjonsbygget er servert med `wrangler dev` og prøvd i en nettleser som etterligner iPhone, lyst og mørkt: pause i dagens økt, fri quiz, omlasting, fortsette begge, tilbake fra sluttskjermen, avslutte en quiz, ferdig dagens økt med et ekstra kapittel, og fokus valgt fra I dag og fra Emner etter omlasting. Sjekken i den installerte hjemmeskjermappen i iPhone 17 Pro-simulatoren ble gjort sammen med 1.9.1.
 
-## Gjeldende utgave — 1.8.0: En gjennomgått kunnskapskjerne og hint i to trinn
+## 1.8.0: En gjennomgått kunnskapskjerne og hint i to trinn
 
 **Hele kunnskapskjernen er gått gjennom.** Hvert fagområde ble lest i fire runder: to for riktighet, én for om spørsmålene er verdt å vite og stilt slik en god lærer ville stilt dem, og en siste kontroll av omskrivingene. Kuriositeter, nakne årstall og rekordtall er byttet ut med spørsmål om hva ting er, hvorfor de skjedde og hva de førte til; ankre som 1814 og 1905 testes fortsatt skarpt. Kjernen har nå 1520 kort i 120 emner. 329 kort som spurte om noe som ikke var verdt å vite, er erstattet av nye kort med nye ID-er, og læringshistorikken på de gamle kortene følger ikke med. Regelen «Verdt å vite, ikke quiz» står i `docs/curriculum-authoring.md`.
 
