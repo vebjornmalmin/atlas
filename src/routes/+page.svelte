@@ -12,7 +12,7 @@
   import LearningPath from '../lib/LearningPath.svelte';
   import StorySpine from '../lib/StorySpine.svelte';
   import {chapterFor,yearSpan,weavePerspectives,simultaneityTargets,PERSPECTIVE_REASON,perspectiveLabel} from '../lib/story.js';
-  import {buildDailySession,buildUnitReview,curriculumProgress,recommendedUnits,gradeAnswer,knownNameSet,isLessonEntry,practiceStreak,UNIT_STATUS} from '../lib/progression.js';
+  import {buildDailySession,buildUnitReview,curriculumProgress,focusUnit,focusedUnits,gradeAnswer,knownNameSet,isLessonEntry,practiceStreak,UNIT_STATUS} from '../lib/progression.js';
   import {STEP_LABELS,formatYear} from '../lib/core-curriculum.js';
   import {FORMAT_CHOICES,WORLD_FORMAT_CHOICES,STRUCTURED_MODES,buildFormatTargets,gradeStructured,structuredReady} from '../lib/quiz-formats.js';
   import WorldExplorer from '../lib/WorldExplorer.svelte';
@@ -29,7 +29,7 @@
   import {APP_VERSION,APP_CHECK_INTERVAL,OFFLINE_HEADER,createAppUpdateChecker} from '../lib/app-updates.js';
   import {foundationTargets} from '../lib/foundations.js';
   import {factKey,learningStage,quizProgress,overviewBounds,effectiveRating} from '../lib/journey.js';
-  import {saveJournal,readJournal,questionDraft,restoreDraft,dropRetired} from '../lib/session-journal.js';
+  import {saveJournal,readJournal,questionDraft,restoreDraft,dropRetired,openSessions,isDaily,sameDay,lastActivity,doneLabel,DAILY_TITLE} from '../lib/session-journal.js';
   import {hintSteps,removesOption,removedOption} from '../lib/hints.js';
   import Feedback from '../lib/Feedback.svelte';
   import {answerPresentation,contextualExplanation,questionSupport} from '../lib/presentation.js';
@@ -242,9 +242,21 @@
     const regionsOf = id => { const seen = new Set(); let frontier = parents(id); while (frontier.length) { frontier.forEach(r => seen.add(r)); frontier = frontier.flatMap(parents).filter(r => !seen.has(r)); } return [...seen].map(r => labels.get(r)).join(' '); };
     return targets.filter(t => t.mode === 'map' && (norway ? t.datasetId === 'norway' : t.datasetId === 'world' && pattern.test(regionsOf(t.entityId)))).map(t => t.id);
   }
-  let dailyInProgress = $derived(session?.status==='active' && session.title==='Dagens økt' && Boolean(current || currentLesson) && dayKey(new Date(session.startedAt))===dayKey(new Date(clock)));
-  // An unfinished daily session from an earlier day; today's plan replaces it and starting archives it.
-  let staleDaily = $derived(session?.status==='active' && session.title==='Dagens økt' && Boolean(current || currentLesson) && !dailyInProgress);
+  // Every unfinished quiz, the active one and those set aside for another quiz, newest first.
+  let openList = $derived(data ? openSessions(session,savedSessions,{now:new Date(clock),exists:entryExists}) : []);
+  let todaysDaily = $derived(openList.find(isDaily) || null);
+  let otherOpen = $derived(openList.filter(s=>!isDaily(s)));
+  // A quiz the learner set aside more recently than today's session is offered first.
+  let resumeFirst = $derived(Boolean(otherOpen.length && (!todaysDaily || lastActivity(otherOpen[0])>lastActivity(todaysDaily))));
+  // An unfinished daily session from an earlier day; today's plan takes over its due cards and topics.
+  let staleDaily = $derived(session?.status==='active' && isDaily(session) && Boolean(current || currentLesson) && !sameDay(session.startedAt,clock));
+  // What the daily plan works on: the chosen chapter, the subjects and the order. Changes are saved at once.
+  let chosenUnit = $derived(data?.curriculum && coreProgress ? focusUnit(data.curriculum,coreProgress,prefs.focusUnitId) : null);
+  let todayChapter = $derived(data?.curriculum ? chapterFor(chosenUnit && selection.units?.includes(chosenUnit.id) ? [chosenUnit.id] : selection.units || [],data.curriculum) : null);
+  let focusDomains = $derived(data?.curriculum ? data.curriculum.domains.filter(d=>prefs.collectionIds.includes(d.id)) : []);
+  let focusSummary = $derived(`${focusDomains.length ? focusDomains.map(d=>d.title).join(', ') : 'Alle fagområder'} · ${prefs.story!==false ? 'i tidsrekkefølge' : 'grunnleggende emner først'}`);
+  let focusPath = $derived(data?.curriculum && coreProgress ? focusedUnits(data.curriculum,coreProgress,prefs) : []);
+  let focusOpen = $state(false);
   let streak = $derived(practiceStreak(reviews,new Date(clock)));
   let gradeNote = $state('');
   let currentEntry = $derived(session?.queue[session.index] || null);
@@ -351,14 +363,45 @@
   }
   async function savePreferences(silent = false) {
     if (prefs.fromYear !== '' && prefs.toYear !== '' && Number(prefs.fromYear)>Number(prefs.toYear)) throw new Error('Startåret må være før sluttåret.');
-    const record = JSON.parse(JSON.stringify(prefs));
-    await put(db,'settings',record);
-    document.documentElement.dataset.theme = prefs.theme;
+    clearTimeout(prefsTimer); prefsPending = '';
+    await storePreferences(JSON.stringify(prefs));
     if(!silent) notify('Utvalget er lagret.');
   }
   function toggleCollection(id) {
     prefs.collectionIds = prefs.collectionIds.includes(id) ? prefs.collectionIds.filter(x=>x!==id) : [...prefs.collectionIds,id];
+    keepFocusInDomains();
   }
+  const isDomain = id => Boolean(data?.curriculum?.domains.some(d=>d.id===id));
+  function allDomains() { prefs.collectionIds = prefs.collectionIds.filter(id=>!isDomain(id)); }
+  // A chosen chapter outside the chosen subjects would surprise; the subjects win.
+  function keepFocusInDomains() {
+    const unit = data?.curriculum?.units.find(u=>u.id===prefs.focusUnitId), domains = prefs.collectionIds.filter(isDomain);
+    if (unit && domains.length && !domains.includes(unit.domainId)) prefs.focusUnitId = '';
+  }
+  function chooseChapter(id) {
+    // Choosing a topic outside the chosen subjects adds its subject, so the choice is not undone.
+    const unit = data?.curriculum?.units.find(u=>u.id===id), domains = prefs.collectionIds.filter(isDomain);
+    if (unit && domains.length && !domains.includes(unit.domainId)) prefs.collectionIds = [...prefs.collectionIds,unit.domainId];
+    prefs.focusUnitId = id;
+    notify(todaysDaily ? `${unitTitle(id)} kommer i neste økt. Dagens påbegynte økt fortsetter som før.` : `${unitTitle(id)} er valgt som dagens kapittel.`);
+  }
+  // Preferences are saved as soon as they change; there is no separate save step to forget.
+  let prefsReady = false, prefsTimer, prefsPending = '';
+  let prefsNote = $state('');
+  async function storePreferences(snapshot) {
+    prefsPending = '';
+    const record = JSON.parse(snapshot);
+    if (record.fromYear !== '' && record.toYear !== '' && Number(record.fromYear)>Number(record.toYear)) { prefsNote = 'Startåret må være før sluttåret. Årene er ikke lagret ennå.'; return; }
+    prefsNote = '';
+    document.documentElement.dataset.theme = record.theme;
+    try { await put(db,'settings',record); } catch (failure) { await recordError('preferences',failure); }
+  }
+  function flushPreferences() { clearTimeout(prefsTimer); if (prefsPending) void storePreferences(prefsPending); }
+  $effect(()=>{
+    const snapshot = JSON.stringify(prefs);
+    if (!prefsReady || !db) return;
+    prefsPending = snapshot; clearTimeout(prefsTimer); prefsTimer = setTimeout(flushPreferences,250);
+  });
   const LEGACY_ROUTES = {learn:['atlas','emner'],world:['atlas','kart'],explore:['atlas',''],focus:['me','okten'],progress:['me','fremgang'],settings:['me','innstillinger']};
   function resolveRoute(route) {
     const [next,tab] = LEGACY_ROUTES[route] || [['today','atlas','me'].includes(route)?route:'today',''];
@@ -399,7 +442,8 @@
     await archiveActive();
     const rows = planned ? selected.queue : safeLearningQueue(selected.queue);
     const queue = rows.map(q=>q.target?{id:q.target.id,reason:q.reason,unitId:q.unitId,objectiveId:q.objectiveId,support:q.support}:{id:q.id,reason:q.reason,unitId:q.unitId});
-    session = {id:'active',difficultyPolicy:'2026-10-11',sessionId:crypto.randomUUID(),startedAt:new Date().toISOString(),title:scope?.title || (practiceObjective?'Fri quiz':'Dagens økt'),chapter:!scope && !practiceObjective && data.curriculum?chapterFor(selection.units || [],data.curriculum):null,scope,objective:practiceObjective,queue,practice,index:0,results:[],status:'active'};
+    const startedAt=new Date().toISOString();
+    session = {id:'active',difficultyPolicy:'2026-10-11',sessionId:crypto.randomUUID(),startedAt,updatedAt:startedAt,title:scope?.title || (practiceObjective?'Fri quiz':DAILY_TITLE),chapter:!scope && !practiceObjective && data.curriculum?todayChapter:null,scope,objective:practiceObjective,queue,practice,index:0,results:[],status:'active'};
     await put(db,'sessions',session);
     sessionScreen = true; quizSetup = false; view = 'today'; window.location.hash='today';
     await prepareQuestion(); await refresh(); window.scrollTo(0,0);
@@ -407,16 +451,34 @@
   async function finishLesson() {
     const entry=session.queue[session.index];
     const index=session.index+1;
-    session={...session,index,draft:null,results:[...session.results,{id:entry.id,lesson:true}],status:index>=session.queue.length?'completed':'active'};
+    session={...session,index,draft:null,updatedAt:new Date().toISOString(),results:[...session.results,{id:entry.id,lesson:true}],status:index>=session.queue.length?'completed':'active'};
     await put(db,'sessions',session);
     await prepareQuestion();
   }
   // A content update can retire cards that a saved session still has ahead of it.
   const entryExists = entry => isLessonEntry(entry) ? Boolean(data?.curriculum?.units.some(u=>u.id===entry.unitId)) : targets.some(t=>t.id===entry?.id);
   async function resumeSession(saved = null) {
-    if(saved) {await archiveActive();session={...dropRetired(saved,entryExists),id:'active'};await put(db,'sessions',session);await prepareQuestion(session.draft);await refresh();}
+    const now=new Date().toISOString();
+    if(saved) {await archiveActive();session={...dropRetired(saved,entryExists),id:'active',updatedAt:now};await put(db,'sessions',session);await prepareQuestion(session.draft);await refresh();}
+    else if(session?.status==='active') {session={...session,updatedAt:now};await put(db,'sessions',session);}
     if (!current && !currentLesson) { notify('Spørsmålet er ikke tilgjengelig. Du kan starte en ny quiz.'); return; }
     sessionScreen = true; view='today';window.location.hash='today'; window.scrollTo(0,0);
+  }
+  // Continue any open quiz: the active one as it is, a set-aside one by swapping it in.
+  async function continueSession(item) {
+    await resumeSession(item.sessionId===session?.sessionId && session.status==='active' ? null : item);
+  }
+  // Ending a quiz early only drops its place in the queue; every answer given is already saved.
+  async function closeSession(item) {
+    const closedAt=new Date().toISOString();
+    await transaction(db,['sessions'],tx=>{
+      const store=tx.objectStore('sessions');
+      store.put({...item,id:item.sessionId,status:'closed',closedAt});
+      if(item.sessionId===session?.sessionId) store.put({...session,status:'closed',closedAt});
+    });
+    if(item.sessionId===session?.sessionId) session={...session,status:'closed',closedAt};
+    await refresh();
+    notify(`«${item.title || 'Quiz'}» er avsluttet. Svarene du ga, er lagret.`);
   }
   function reveal() {
     if (STRUCTURED_MODES.includes(current?.mode)) correct=gradeStructured(current,formatDraft,worldGraph?.neighbours).correct;
@@ -449,7 +511,7 @@
     const applied=practice?await recordReview(db,null,saved):await recordReview(db,result.card,event,mirror);
     // Update memory directly; reading every store back after each answer made phones lag.
     if(applied){reviews=[...reviews,saved];if(!practice){const ids=new Set([result.card.id,mirror.id]);states=[...states.filter(s=>!ids.has(s.id)),result.card,...(mirror.id!==result.card.id?[mirror]:[])];}}
-    session=advanceSession(session,{id:target.id,rating,correct,learnedFirst,usedHint,mode:target.mode});
+    session={...advanceSession(session,{id:target.id,rating,correct,learnedFirst,usedHint,mode:target.mode}),updatedAt:now.toISOString()};
     await transaction(db,['sessions'],tx=>{
       tx.objectStore('sessions').put(session);
       if(session.status==='completed') tx.objectStore('sessions').put({...session,id:session.sessionId,completedAt:now.toISOString()});
@@ -574,7 +636,7 @@
     uiReady=true;
     let scrollTimer;
     const onScroll=()=>{if(!scrollTimer)scrollTimer=setTimeout(()=>{scrollTimer=undefined;scrollY=Math.round(window.scrollY);},300);};
-    const onHide=()=>{if(document.visibilityState==='hidden'){scrollY=Math.round(window.scrollY);keepUiState();}};
+    const onHide=()=>{if(document.visibilityState==='hidden'){scrollY=Math.round(window.scrollY);keepUiState();flushPreferences();}};
     window.addEventListener('scroll',onScroll,{passive:true});document.addEventListener('visibilitychange',onHide);window.addEventListener('pagehide',onHide);
     offlineTest=new URLSearchParams(window.location.search).has('offline-test');
     installed=window.matchMedia('(display-mode: standalone)').matches || Boolean(navigator.standalone);
@@ -593,6 +655,7 @@
       try {
         db=await openDatabase();
         prefs={...DEFAULT_PREFERENCES,...await get(db,'settings','preferences')};
+        prefsReady=true;
         document.documentElement.dataset.theme=prefs.theme;
         data=(await all(db,'packages'))[0] || null;
         if(!data || data.language !== 'nb') {await checkUpdates(true);data=(await all(db,'packages'))[0] || null;}
@@ -605,7 +668,7 @@
         const pruned=dropRetired(session,entryExists);if(pruned!==session){session=pruned;await put(db,'sessions',session);}
         const journal=readJournal(localStorage,session);
         await prepareQuestion(journal?.draft || session?.draft);
-        if(journal?.view===view){sessionScreen=Boolean(journal.screen && session);detailId=journal.detailId || '';}
+        if(journal?.view===view){sessionScreen=Boolean(journal.screen && ['active','completed'].includes(session?.status));detailId=journal.detailId || '';}
         if('serviceWorker' in navigator && !import.meta.env.DEV) {
           registration=await navigator.serviceWorker.register('/sw.js',{updateViaCache:'none'});
           updateReady=Boolean(registration.waiting);
@@ -660,12 +723,14 @@
     {#if sessionScreen && session?.status === 'completed'}
       {@const answered=session.results.filter(r=>!r.lesson)}
       {@const touched=[...new Set(session.queue.map(q=>q.unitId).filter(Boolean))]}
+      {@const back=openList[0]}
       <div class="session-view s-summary">
         <header class="s-summary-head"><p class="eyebrow">{session.title || 'Økt'}</p><h1>Økten er ferdig</h1><p class="s-sub">{new Set(answered.map(r=>r.id)).size} spørsmål · {answered.length} svar</p></header>
         <div class="s-results" role="group" aria-label="Resultat av økten"><span><strong>{outcome.independent}</strong>uten hjelp</span><span><strong>{outcome.supported}</strong>med støtte</span><span><strong>{outcome.retry}</strong>øv videre</span></div>
         {#if touched.length && coreProgress}<section class="s-topics"><h2 class="s-label">Emnene dine</h2>{#each touched as id}{@const row=coreProgress.units.get(id)}{#if row}<button class="s-unit" data-status={row.status} onclick={()=>{selectedUnit=id;navigate('learn');}}><span class="s-dot" aria-hidden="true"></span><span class="s-unit-text"><strong>{unitTitle(id)}</strong><small>{UNIT_STATUS[row.status].label} · {row.correct} av {row.total} riktig sist</small><span class="s-bar-track"><span style={`width:${Math.round(100*row.correct/row.total)}%`}></span></span></span><svg class="s-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9.5 6 6 6-6 6"/></svg></button>{/if}{/each}</section>{/if}
         <div class="s-end-actions">{#if retryIds.length}<button class="primary" onclick={()=>run(()=>beginSession('mixed',{targetIds:retryIds,level:0,title:'Øv videre'}))}>Øv på {retryIds.length} {retryIds.length==1?'kort':'kort'} igjen</button>{/if}
-        {#if data.curriculum && !session.objective && selection.queue.length}<button class={retryIds.length?'secondary':'primary'} onclick={()=>run(()=>beginSession(null,session.scope?.unitId?{...session.scope,unitMode:'learn'}:null))}>Lær mer</button>{:else if session.objective}<button class="secondary" onclick={()=>run(()=>beginSession(session.objective || 'mixed',session.scope))}>Ta en quiz til</button>{/if}
+        {#if back}<button class={retryIds.length?'secondary':'primary'} onclick={()=>run(()=>continueSession(back))}>{isDaily(back)?'Tilbake til dagens kapittel':`Tilbake til ${back.title || 'quizen'}`}<small class="s-end-note">{isDaily(back) && back.chapter?.title?`${back.chapter.title} · `:''}{doneLabel(back)}</small></button>{/if}
+        {#if data.curriculum && !session.objective && selection.queue.length}<button class={retryIds.length || back?'secondary':'primary'} onclick={()=>run(()=>beginSession(null,session.scope?.unitId?{...session.scope,unitMode:'learn'}:null))}>Lær mer</button>{:else if session.objective}<button class="secondary" onclick={()=>run(()=>beginSession(session.objective || 'mixed',session.scope))}>Ta en quiz til</button>{/if}
         <button class="quiet" onclick={()=>sessionScreen=false}>Ferdig for nå</button></div>
       </div>
     {:else if sessionScreen && currentLesson}
@@ -756,18 +821,21 @@
       {/if}</section>
       </div>
     {:else}
-      {@const paused=savedSessions.filter(s=>s.id!=='active' && s.sessionId!==session?.sessionId && s.status==='active')}
+      {#snippet resumeCard(item)}
+        <div class="t-chapter t-resume"><p class="eyebrow">{item.sessionId===session?.sessionId?'Påbegynt':'Satt til side'}</p><h2>{item.title || 'Quiz'}</h2><p class="t-sub">{doneLabel(item)}</p>
+          <div class="t-actions"><button class="primary" disabled={busy} onclick={()=>run(()=>continueSession(item))}>Fortsett der du var</button><button class="quiet" disabled={busy} onclick={()=>run(()=>closeSession(item))}>Avslutt quizen</button></div></div>
+      {/snippet}
       <div class="today">
       {#if !quizSetup}<header class="t-head"><p class="eyebrow">{new Date().toLocaleDateString('nb-NO',{weekday:'long',day:'numeric',month:'long'})}{#if streak>1}{` · ${streak} dager på rad`}{/if}</p><div class="t-title-row"><h1>{reviewedToday?'Godt i gang':'I dag'}</h1>{#if reviewedToday}<span class="t-meta">{reviewedToday} svar i dag</span>{/if}</div></header>
-      {#if session?.status==='active' && (current || currentLesson) && !(data.curriculum && session.title==='Dagens økt')}<div class="t-chapter t-resume"><p class="eyebrow">Påbegynt</p><h2>{session.title || 'Påbegynt økt'}</h2><p class="t-sub">{session.index} av {session.queue.length} gjort</p><button class="primary" onclick={()=>run(()=>resumeSession())}>Fortsett der du var</button></div>{/if}
+      {#if resumeFirst}{@render resumeCard(otherOpen[0])}{/if}
       {#if data.curriculum}
         {@const plan=dailyPlan}
         {@const fresh=plan.filter(q=>q.target && !['Due review',PERSPECTIVE_REASON].includes(q.reason))}
-        {@const chapter=chapterFor(selection.units || [],data.curriculum)}
+        {@const chapter=todayChapter}
         <div class="t-chapter">
-          {#if dailyInProgress}
-            <p class="eyebrow">Dagens kapittel</p><h2>{session.chapter?.title || 'Dagens økt'}</h2><p class="t-sub">{session.index} av {session.queue.length} gjort</p>
-            <button class="primary" onclick={()=>run(()=>resumeSession())}>Fortsett der du var</button>
+          {#if todaysDaily}
+            <p class="eyebrow">Dagens kapittel{todaysDaily.sessionId!==session?.sessionId?' · satt til side':''}</p><h2>{todaysDaily.chapter?.title || 'Dagens økt'}</h2><p class="t-sub">{doneLabel(todaysDaily)}</p>
+            <button class="primary" disabled={busy} onclick={()=>run(()=>continueSession(todaysDaily))}>Fortsett der du var</button>
           {:else if plan.length}
             <p class="eyebrow">{chapter?`${chapter.era}${chapter.span?` · ${chapter.span}`:''}`:'Repetisjon'}</p>
             <h2>{chapter?.title || 'Det du holder på å glemme'}</h2>
@@ -777,20 +845,37 @@
             <button class="primary" disabled={busy} onclick={()=>run(()=>beginSession())}>Start dagens kapittel</button>
           {:else}
             <h2>Ferdig for i dag</h2><p class="t-sub">Alt som skulle repeteres er gjort. Nye kort i de aktive emnene kommer når du har repetert de forrige.</p>
-            {#if coreProgress}{@const next=recommendedUnits(data.curriculum,coreProgress,{domainIds:prefs.collectionIds,story:prefs.story!==false})[0]}{#if next}<button class="secondary" onclick={()=>run(()=>beginSession(null,{unitId:next.id,unitMode:'learn',title:next.title}))}>Les neste kapittel nå: {next.title}</button>{/if}{/if}
+            {#if coreProgress}{@const next=focusPath[0]}{#if next}<button class="secondary" onclick={()=>run(()=>beginSession(null,{unitId:next.id,unitMode:'learn',title:next.title}))}>Les neste kapittel nå: {next.title}</button>{/if}{/if}
           {/if}
-          {#if staleDaily}<p class="t-sub stale-session">Økten fra {new Date(session.startedAt).toLocaleDateString('nb-NO',{weekday:'long'})} ble ikke fullført ({session.index} av {session.queue.length}). <button class="link-button" onclick={()=>run(()=>resumeSession())}>Fortsett den</button></p>{/if}
+          {#if staleDaily && !todaysDaily}<p class="t-sub stale-session">Økten fra {new Date(session.startedAt).toLocaleDateString('nb-NO',{weekday:'long'})} ble ikke fullført ({doneLabel(session)}). Svarene er lagret, og det som gjensto, kommer med i planen for i dag.</p>{/if}
+          <div class="t-focus"><p><span class="s-label">Fokus</span><span class="t-focus-text">{focusSummary}</span></p><button class="secondary sm" aria-expanded={focusOpen} aria-controls="focus-panel" onclick={()=>focusOpen=!focusOpen}>{focusOpen?'Ferdig':'Endre'}</button></div>
+          {#if focusOpen}
+            <section id="focus-panel" class="t-focus-panel" aria-label="Velg fokus for dagens kapittel">
+              <h3 class="s-label">Neste kapittel</h3>
+              <p class="t-sub">Velg hva du vil jobbe med. Valget gjelder til emnet har vært gjennom alle kortene sine.</p>
+              <div class="t-rows">{#each focusPath.slice(0,6) as unit}{@const row=coreProgress.units.get(unit.id)}{@const picked=chosenUnit?unit.id===chosenUnit.id:chapter?.title===unit.title}
+                <button class="t-row t-pick" data-status={row.status} aria-pressed={picked} onclick={()=>chooseChapter(unit.id)}><span class="s-dot" aria-hidden="true"></span><span class="t-row-text"><strong>{unit.title}</strong><small>{unit.years?`${yearSpan(unit)} · `:''}{domainTitle(unit.domainId)} · {UNIT_STATUS[row.status].label}</small></span>{#if picked}<span class="t-picked">{chosenUnit?'Valgt':'Neste'}</span>{/if}</button>
+              {/each}</div>
+              <button class="quiet t-all" onclick={()=>{selectedUnit='';atlasTab='emner';navigate('atlas');}}>Velg blant alle emner<svg class="s-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9.5 6 6 6-6 6"/></svg></button>
+              <h3 class="s-label">Fagområder</h3>
+              <div class="chips t-domains"><button type="button" class="chip" aria-pressed={!focusDomains.length} onclick={allDomains}>Alle</button>{#each data.curriculum.domains as domain}<button type="button" class="chip" aria-pressed={prefs.collectionIds.includes(domain.id)} onclick={()=>toggleCollection(domain.id)}>{domain.title}</button>{/each}</div>
+              <label class="t-toggle"><input type="checkbox" checked={prefs.story!==false} onchange={e=>prefs.story=e.currentTarget.checked}><span>Følg historien gjennom tid<small>Nye emner i tidsrekkefølge på tvers av fag. Slått av: grunnleggende emner først, fag for fag.</small></span></label>
+              <p class="t-sub t-saved">Lagres med en gang.{todaysDaily?' Dagens påbegynte økt fortsetter som før; endringen gjelder neste økt.':''} <button class="link-button" onclick={()=>{meTab='okten';navigate('me');}}>Øktlengde og nytt stoff</button></p>
+            </section>
+          {/if}
         </div>
+        {#if otherOpen.length && !resumeFirst}{@render resumeCard(otherOpen[0])}{/if}
         {#if !reviews.length && !prefs.introSeen}<div class="t-intro"><details><summary>Slik fungerer Atlas</summary><ul><li>Hver dag er et kapittel i én historie gjennom tid: en epoke, og hva som skjedde andre steder samtidig.</li><li>Hvert emne begynner med en kort innføring. Spørsmålene kommer litt etter, så du henter fram i stedet for å kopiere.</li><li>Det du holder på å glemme, kommer tilbake til riktig tid. Noen minutter om dagen er nok.</li></ul></details><button class="quiet" onclick={()=>run(async()=>{prefs.introSeen=true;await savePreferences(true);})}>Skjønner</button></div>{/if}
         {#if coreProgress}
-          {@const path=recommendedUnits(data.curriculum,coreProgress,{domainIds:prefs.collectionIds,story:prefs.story!==false}).filter(u=>!(selection.units || []).includes(u.id)).slice(0,3)}
+          {@const path=focusPath.filter(u=>!(selection.units || []).includes(u.id)).slice(0,3)}
           {#if path.length}<section class="t-next"><h2 class="s-label">Neste på reisen</h2>
           <div class="t-rows">{#each path as unit}{@const row=coreProgress.units.get(unit.id)}
             <button class="t-row" data-status={row.status} onclick={()=>openUnit(unit.id)}><span class="s-dot" aria-hidden="true"></span><span class="t-row-text"><strong>{unit.title}</strong><small>{unit.years?`${yearSpan(unit)} · `:''}{domainTitle(unit.domainId)} · {row.status==='new'?'Ikke startet':UNIT_STATUS[row.status].label}</small></span><svg class="s-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9.5 6 6 6-6 6"/></svg></button>
           {/each}</div><button class="quiet t-all" onclick={()=>{atlasTab='tid';navigate('atlas');}}>Se hele reisen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></button></section>{/if}
         {/if}
       {:else}
-      <div class="t-chapter"><h2>Dagens quiz</h2><p class="t-sub">{selection.queue.length} spørsmål · nivå {preferredLevel(prefs) || 'alle'}</p><button class="primary" disabled={busy || !selection.queue.length} onclick={()=>run(()=>beginSession())}>Start dagens quiz</button></div>
+      <div class="t-chapter"><h2>Dagens quiz</h2>{#if todaysDaily}<p class="t-sub">{doneLabel(todaysDaily)}</p><button class="primary" disabled={busy} onclick={()=>run(()=>continueSession(todaysDaily))}>Fortsett der du var</button>{:else}<p class="t-sub">{selection.queue.length} spørsmål · nivå {preferredLevel(prefs) || 'alle'}</p><button class="primary" disabled={busy || !selection.queue.length} onclick={()=>run(()=>beginSession())}>Start dagens quiz</button>{/if}</div>
+        {#if otherOpen.length && !resumeFirst}{@render resumeCard(otherOpen[0])}{/if}
       {/if}
       <div class="t-practice"><div><h2>Øv fritt</h2><p>Velg tema, nivå og form: kart, piler, tidslinjer, flervalg eller skriving.</p></div><button class="secondary" onclick={()=>{quizSetup=true;window.scrollTo(0,0);}}>Lag en quiz</button></div>
       {/if}
@@ -803,7 +888,7 @@
           {#if !formatAvailable(quizMode)}<p class="t-sub">Ingen spørsmål i denne formen på dette nivået. Velg et annet nivå eller tema.</p>{/if}
         </div>
       {/if}
-      {#if paused.length && !quizSetup}<details class="t-paused"><summary>Quizer på pause ({paused.length})</summary>{#each paused as saved}<button class="t-row" onclick={()=>run(()=>resumeSession(saved))}><span class="t-row-text"><strong>{saved.title || 'Quiz'}</strong><small>{saved.index+1} av {saved.queue.length}</small></span><svg class="s-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9.5 6 6 6-6 6"/></svg></button>{/each}</details>{/if}
+      {#if otherOpen.length>1 && !quizSetup}<section class="t-open"><h2 class="s-label">Også påbegynt</h2><div class="t-rows">{#each otherOpen.slice(1) as item (item.sessionId)}<div class="t-open-row"><button class="t-row" disabled={busy} onclick={()=>run(()=>continueSession(item))}><span class="t-row-text"><strong>{item.title || 'Quiz'}</strong><small>{doneLabel(item)} · {displayDate(lastActivity(item))}</small></span><svg class="s-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9.5 6 6 6-6 6"/></svg></button><button class="quiet t-remove" disabled={busy} aria-label={`Avslutt ${item.title || 'quizen'}`} onclick={()=>run(()=>closeSession(item))}>Avslutt</button></div>{/each}</div></section>{/if}
       </div>
     {/if}
   {:else if view === 'atlas'}
@@ -838,7 +923,8 @@
     {:else}<div class="card"><p>Verdensutforskeren trenger kunnskapspakke 2.1.0. Koble til nettet for å oppdatere.</p><button class="secondary" disabled={busy} onclick={()=>run(()=>checkUpdates(true))}>Se etter oppdatering</button></div>{/if}
         {:else}
           {#if data.curriculum && coreProgress}
-      <div class="atlas-emner"><LearningPath curriculum={data.curriculum} progress={coreProgress} sources={data.sources} bind:selectedUnit {busy}
+      <div class="atlas-emner"><LearningPath curriculum={data.curriculum} progress={coreProgress} sources={data.sources} bind:selectedUnit {busy} focusUnitId={chosenUnit?.id || ''}
+        onfocus={chooseChapter}
         onstart={id=>run(()=>beginSession(null,{unitId:id,unitMode:'learn',title:unitTitle(id)}))}
         onreview={id=>run(()=>beginSession(null,{unitId:id,unitMode:'review',title:unitTitle(id)}))}
         mapFor={id=>unitMapTargets(id).length>2} onmap={id=>run(()=>beginSession('geography',{targetIds:unitMapTargets(id),level:0,title:`Kart: ${unitTitle(id)}`}))} /></div>
@@ -883,7 +969,7 @@
     {#if progressTab==='history'}<details class="card" open><summary>Siste svar</summary>{#each [...reviews].sort((a,b)=>b.timestamp.localeCompare(a.timestamp)).slice(0,10) as review}<p class="detail"><strong>{targets.find(t=>t.id===review.targetId)?.prompt || 'Tidligere spørsmål'}</strong><br><span class="muted">{review.learnedFirst?'Lært først':review.usedHint?'Med hint':review.correct===true?'Riktig':review.correct===false?'Feil':'Svar vist'} · {displayDate(review.timestamp)}</span></p>{/each}</details>{/if}
     {:else if meTab==='okten'}
     
-    <p class="muted">Dette styrer dagens kapittel. Fri quiz velger du når du starter den.</p>
+    <p class="muted">Dette styrer dagens kapittel. Endringene lagres med en gang. Fri quiz velger du når du starter den.</p>
     <form onsubmit={event=>{event.preventDefault();run(async()=>{await savePreferences();});}}>
       {#if data.curriculum}<div class="card"><h2>Fagområder</h2><p class="muted">Ingen valgt betyr alle. Nye emner veksler mellom fagområdene du velger.</p><div class="chips">{#each data.curriculum.domains as domain}<button type="button" class="chip" class:active={prefs.collectionIds.includes(domain.id)} aria-pressed={prefs.collectionIds.includes(domain.id)} onclick={()=>toggleCollection(domain.id)}>{domain.title}</button>{/each}</div></div>{/if}
       <div class="card stack"><label class="field">Øktlengde<select class="select" bind:value={prefs.dailyMinutes}><option value={3}>Kort · omtrent 6 spørsmål</option><option value={5}>Vanlig · omtrent 10 spørsmål</option><option value={10}>Lang · omtrent 20 spørsmål</option></select></label><label class="field">Nytt stoff<select class="select" bind:value={prefs.newRatio}><option value={0}>Bare repetisjon når noe er klart</option><option value={0.25}>Lite nytt</option><option value={0.4}>Balansert</option><option value={0.6}>Mye nytt</option></select></label><p class="muted detail">Repetisjoner kommer alltid først. Nye kort fyller resten av økten.</p>
@@ -891,13 +977,13 @@
         <fieldset><legend>Nivå for perspektiver og registre</legend><div class="level-picker">{#each LEVELS as l}<button type="button" class="level-option" aria-pressed={preferredLevel(prefs)===l.id} onclick={()=>prefs.level=l.id}><strong>{l.id}</strong><small>{l.name}</small></button>{/each}</div><p class="level-note">{LEVELS.find(l=>l.id===preferredLevel(prefs))?.note || 'Alle nivåer.'}</p></fieldset></div>
       <details class="card"><summary>Registre og fri quiz</summary><p class="muted">Disse valgene gjelder bare quizer fra registrene (Nobelpriser, kommuner, land), ikke emnene.</p><h3>Samlinger</h3><div class="chips">{#each data.collections.filter(c=>!c.core) as collection}<button type="button" class="chip" class:active={prefs.collectionIds.includes(collection.id)} aria-pressed={prefs.collectionIds.includes(collection.id)} onclick={()=>toggleCollection(collection.id)}>{collection.title}</button>{/each}</div>
       <h3>Hva er relevant for deg?</h3><p class="muted">Spørsmål fra registrene vektes etter påvirkning, aktualitet og nærhet. Nå: Påvirkning {prefs.relevance?.impact ?? DEFAULT_RELEVANCE.impact} · Aktualitet {prefs.relevance?.actuality ?? DEFAULT_RELEVANCE.actuality} · Nærhet {prefs.relevance?.locality ?? DEFAULT_RELEVANCE.locality}.</p><button type="button" class="secondary" onclick={openWeights}>Endre vektingen i Kart</button><div class="stack"><label class="field">Fagområde<select class="select" bind:value={prefs.subject}><option value="all">Alle fagområder</option>{#each [...new Set(data.collections.map(c=>c.subject))] as subject}<option value={subject}>{subjectLabel(subject)}</option>{/each}</select></label><label class="field">Geografisk relevans<select class="select" bind:value={prefs.geography}><option value="global">Global betydning</option><option value="norway">Mer norsk relevans</option></select></label><p class="muted detail">Norske spørsmål prioriteres.</p><label class="field">Bredde<select class="select" bind:value={prefs.breadth}><option value="broad">Veksle mellom fagområder</option><option value="deep">Fordypning</option></select></label><div class="row"><label class="field">Fra år<input class="input" type="number" min="-10000" max="2100" placeholder="Valgfritt" bind:value={prefs.fromYear}></label><label class="field">Til år<input class="input" type="number" min="-10000" max="2100" placeholder="Valgfritt" bind:value={prefs.toYear}></label></div><p class="muted detail">Årsfilteret gjelder spørsmål med dato.</p></div></details>
-      <button class="primary" type="submit" disabled={busy}>Lagre</button>
+      {#if prefsNote}<p class="settings-note" role="alert">{prefsNote}</p>{/if}
     </form>
     {:else}
 
     <div class="settings-list">
       <section class="set-group"><h2 class="group-title">Visning</h2><div class="set-rows">
-      <div class="settings-row"><label for="theme">Utseende</label><select id="theme" class="select" bind:value={prefs.theme} onchange={()=>run(savePreferences)}><option value="system">Følg enheten</option><option value="light">Lyst</option><option value="dark">Mørkt</option></select></div>
+      <div class="settings-row"><label for="theme">Utseende</label><select id="theme" class="select" bind:value={prefs.theme}><option value="system">Følg enheten</option><option value="light">Lyst</option><option value="dark">Mørkt</option></select></div>
       </div></section>
       <section class="set-group"><h2 class="group-title">Påminnelse</h2><div class="set-rows">
       <div class="settings-row"><div><label for="reminder">Daglig påminnelse</label><p>Legges i kalenderen din</p></div><input id="reminder" class="input" type="time" bind:value={prefs.reminderTime} onchange={()=>run(()=>savePreferences(true))}></div>

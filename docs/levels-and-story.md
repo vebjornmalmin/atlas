@@ -20,7 +20,7 @@ Gamle lenker (`#learn`, `#world`, `#explore`, `#focus`, `#progress`, `#settings`
 
 ### Historien gjennom tid
 
-Nye emner åpnes omtrent i tidsrekkefølge på tvers av fag, fra der eleven sist begynte (`storyCursor`). Mellom hvert daterte emne kommer et tidløst emne fra naturfag, geografi eller samfunn. Forutsetningene mellom emner gjelder fortsatt. Hver dag er et kapittel med epoke og tidsrom. Rekkefølgen kan slås av under Deg → Økten.
+Nye emner åpnes omtrent i tidsrekkefølge på tvers av fag, fra der eleven sist begynte (`storyCursor`). Mellom hvert daterte emne kommer et tidløst emne fra naturfag, geografi eller samfunn. Forutsetningene mellom emner gjelder fortsatt. Hver dag er et kapittel med epoke og tidsrom. Rekkefølgen kan slås av under «Fokus» på I dag og under Deg → Økten.
 
 I dagens økt flettes inntil to **perspektiver** inn etter emnets egne kort:
 
@@ -29,6 +29,29 @@ I dagens økt flettes inntil to **perspektiver** inn etter emnets egne kort:
 3. **Et annet blikk**: en oppgave fra historiesynene, valgt etter fagområdet (for eksempel kildekritikk og historiesyn for historie, naboland og ruter for geografi, skalastigen for naturfag).
 
 Perspektivene følger valgt nivå og nylig øvde perspektiver hviler i tre dager.
+
+### Fortsette mellom quizer
+
+Tilbakemelding (november 2026): å gå fra quiz til quiz og fortsette der man var, fungerte ikke, og det var vanskelig å endre hva dagens økt jobber med.
+
+Årsaken til det første var at bare én økt regnes som aktiv. Startet man en fri quiz midt i dagens økt, ble dagens økt lagt i en lukket liste nederst, og kortet for dagens kapittel viste en ny plan med «Start dagens kapittel» i stedet for «Fortsett». Å starte den laget en ny økt ved siden av den gamle.
+
+Regelen er nå:
+
+- **Alle uferdige quizer er åpne** (`openSessions` i `session-journal.js`): den aktive og de som ble satt til side da en annen quiz startet. Den som sist ble brukt, vises først.
+- **Dagens økt følger dagen.** Kortet for dagens kapittel viser «Fortsett der du var» også når økten er satt til side for en annen quiz. En uferdig økt fra en tidligere dag tilbys ikke lenger; repetisjonene og de påbegynte emnene kommer med i dagens plan, og svarene er lagret.
+- **Andre quizer** (fri quiz, emne, kart) vises som «Påbegynt» med «Fortsett der du var» og «Avslutt quizen», resten under «Også påbegynt». De holdes åpne i 30 dager. Å avslutte fjerner bare plassen i køen; svarene er lagret.
+- **Når en quiz er ferdig**, tilbyr sluttskjermen å gå tilbake til quizen som ble satt til side, for eksempel «Tilbake til dagens kapittel · 3 av 14 gjort».
+- Fremdriften skrives likt overalt: «3 av 14 gjort».
+
+### Fokus
+
+Fagområdene lå under Deg → Økten og ble bare lagret med «Lagre». Endringen virket med en gang i appen, men forsvant når appen ble lukket. Nå gjelder:
+
+- **Fokus vises på kortet for dagens kapittel** med fagområder og rekkefølge, og «Endre» åpner valgene der: neste kapittel, fagområder og historien gjennom tid.
+- **Neste kapittel kan velges** (`focusUnitId`, `focusUnit` og `focusedUnits` i `progression.js`). Det valgte emnet kommer først i dagens plan, også før forutsetningene er på plass, slik det allerede var lov å utforske i Emner. Valget gjelder til emnet har vært gjennom alle kortene sine. Det kan også velges fra emnesiden i Atlas → Emner. Velger man et emne utenfor de valgte fagområdene, legges faget til; tas faget bort, faller valget av emnet bort.
+- **Alle innstillinger lagres med en gang**, også under Deg → Økten. Et ugyldig årsspenn lagres ikke og forklares der.
+- En påbegynt dagens økt endres ikke av et nytt fokus; endringen gjelder neste økt.
 
 ### Fire akser i stedet for én stige
 

@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {compileCore, mergeCore, validateCoreDomains, taughtBefore} from '../src/lib/core-curriculum.js';
-import {buildDailySession, curriculumProgress, gradeAnswer, isLessonEntry, recommendedUnits, buildUnitReview, nextCards} from '../src/lib/progression.js';
+import {buildDailySession, curriculumProgress, focusUnit, focusedUnits, gradeAnswer, isLessonEntry, recommendedUnits, buildUnitReview, nextCards} from '../src/lib/progression.js';
 import {attachKnowledge, schedulingKey} from '../src/lib/knowledge-model.js';
 import {validatePackage} from '../src/lib/content.js';
 
@@ -227,4 +227,21 @@ test('self-approved answers are listed newest first with what was typed and expe
     {targetId: 'a', prompt: 'Hvem malte Skrik?', expected: 'Edvard Munch', typed: 'Munk'}
   ]);
   assert.equal(selfApprovals(targets, reviews, 1).length, 1);
+});
+
+test('a chosen chapter comes first in the daily plan and lapses when its cards are used up', () => {
+  const {data, targets} = fixture();
+  const progress = curriculumProgress(data.curriculum, targets, [], []);
+  assert.equal(focusUnit(data.curriculum, progress, 'b-en').id, 'b-en');
+  assert.equal(focusedUnits(data.curriculum, progress, {focusUnitId: 'b-en'})[0].id, 'b-en');
+  const session = buildDailySession({data, targets, states: [], reviews: [], preferences: {dailyMinutes: 5, focusUnitId: 'b-en'}, now: new Date('2026-11-01T09:00:00Z')});
+  assert.equal(session.units[0], 'b-en');
+  assert.equal(session.queue[0].unitId, 'b-en', 'the chosen topic opens the session with its lesson');
+  // A topic further on is allowed even before its prerequisites, like exploring ahead in Emner.
+  assert.equal(focusedUnits(data.curriculum, progress, {focusUnitId: 'a-to'})[0].id, 'a-to');
+  const seen = targets.filter(t => t.unitId === 'b-en').map(t => answer(t, true));
+  const later = curriculumProgress(data.curriculum, targets, [], seen);
+  assert.equal(focusUnit(data.curriculum, later, 'b-en'), null);
+  assert.notEqual(focusedUnits(data.curriculum, later, {focusUnitId: 'b-en'})[0]?.id, 'b-en');
+  assert.equal(focusUnit(data.curriculum, progress, 'finnes-ikke'), null);
 });

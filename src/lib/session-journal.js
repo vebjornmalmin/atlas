@@ -25,3 +25,30 @@ export function questionDraft(targetId, values) { return JSON.parse(JSON.stringi
 export function restoreDraft(target, draft) {
   return target && draft?.targetId===target.id ? draft : null;
 }
+
+// Unfinished sessions are kept so the learner can move between quizzes and pick each one up again.
+export const DAILY_TITLE = 'Dagens økt';
+export const OPEN_SESSION_DAYS = 30;
+export const isDaily = session => session?.title === DAILY_TITLE;
+export const lastActivity = session => session?.updatedAt || session?.startedAt || '';
+const dayKey = value => { const d = new Date(value); return `${d.getFullYear()}-${d.getMonth()}-${d.getDate()}`; };
+export const sameDay = (a, b) => dayKey(a) === dayKey(b);
+
+/**
+ * Every session that can be continued: the active one and those set aside when another quiz was started.
+ * The active copy wins over its archived copy. A daily session belongs to its own day; after that its due
+ * cards and unfinished topics return in the new day's plan. Other quizzes stay for {@link OPEN_SESSION_DAYS}.
+ * Newest activity first.
+ */
+export function openSessions(active, saved = [], {now = new Date(), exists = () => true} = {}) {
+  const byId = new Map();
+  for (const item of [...saved.filter(s => s?.id !== 'active'), active]) if (item?.sessionId) byId.set(item.sessionId, item);
+  return [...byId.values()]
+    .filter(s => s.status === 'active' && Array.isArray(s.queue) && s.index < s.queue.length)
+    .filter(s => isDaily(s) ? sameDay(s.startedAt, now) : now - new Date(lastActivity(s)) < OPEN_SESSION_DAYS * 86400000)
+    .filter(s => s.queue.slice(s.index).some(exists))
+    .sort((a, b) => lastActivity(b).localeCompare(lastActivity(a)));
+}
+
+/** «3 av 14 gjort»: the same count on every card, in the session and in the list of open quizzes. */
+export const doneLabel = session => `${session.index} av ${session.queue.length} gjort`;

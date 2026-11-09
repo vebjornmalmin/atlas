@@ -56,11 +56,34 @@
 .t-practice h2{margin:0 0 2px;font-size:17px;font-weight:600;letter-spacing:-.01em}
 .t-practice p{margin:0;font-size:13px;line-height:1.45;color:var(--muted)}
 .t-practice button{flex:none}
-.t-paused{margin:18px 0 0;border-top:var(--rule)}
-.t-paused>summary{display:flex;justify-content:space-between;align-items:center;min-height:48px;padding:0;list-style:none;font-size:14px;font-weight:600;color:var(--ink);cursor:pointer}
-.t-paused>summary::-webkit-details-marker{display:none}
-.t-paused>summary::after{content:"";float:none;width:7px;height:7px;border-right:1.5px solid var(--muted);border-bottom:1.5px solid var(--muted);transform:rotate(45deg);margin-right:4px}
-.t-paused[open]>summary::after{content:"";transform:rotate(-135deg)}
+/* Open quizzes: the latest one as a card, the others as rows that can be continued or ended. */
+.t-actions{display:grid;gap:2px}
+.t-actions .quiet{min-height:44px;color:var(--muted)}
+.t-open{margin:22px 0 0}
+.t-open-row{display:flex;align-items:center;gap:6px;border-bottom:var(--rule)}
+.t-open-row .t-row{flex:1;min-width:0;border-bottom:0}
+.t-remove{flex:none;min-height:44px;padding:0 4px;font-size:13px;color:var(--muted)}
+
+/* Focus: what the daily plan works on, changed in place and saved at once. */
+.t-focus{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:16px 0 0;padding-top:12px;border-top:var(--rule)}
+.t-focus p{display:flex;flex-direction:column;gap:2px;min-width:0;margin:0}
+.t-focus .s-label{margin:0}
+.t-focus-text{font-size:14px;line-height:1.4;color:var(--ink)}
+.t-focus button{flex:none}
+.t-focus-panel{margin:4px 0 0}
+.t-focus-panel>h3.s-label{margin:18px 0 6px}
+.t-focus-panel>.t-sub{margin:0 0 8px;font-size:13px}
+.t-pick{gap:12px}
+.t-pick[aria-pressed="true"]{padding-left:10px;box-shadow:inset 3px 0 0 var(--accent)}
+.t-pick[aria-pressed="true"] strong{color:var(--accent)}
+.t-picked{flex:none;font-size:12px;font-weight:650;color:var(--accent)}
+.t-domains .chip{min-height:40px}
+.t-domains .chip[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent);color:var(--ink)}
+.t-toggle{display:flex;align-items:flex-start;gap:12px;margin:18px 0 0;font-size:14px;font-weight:600;line-height:1.35;color:var(--ink)}
+.t-toggle input{flex:none;width:22px;height:22px;margin:0;accent-color:var(--accent)}
+.t-toggle small{display:block;margin-top:3px;font-size:12.5px;font-weight:400;line-height:1.45;color:var(--muted)}
+.t-saved{margin:14px 0 0;font-size:12.5px}
+.t-saved .link-button{min-height:44px;font-size:12.5px}
 .t-builder{display:grid;gap:20px}
 .t-builder fieldset{border:0;padding:0;margin:0;min-width:0}
 .t-builder legend,.t-field{padding:0;margin:0 0 8px;font-size:11px;font-weight:650;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
@@ -204,6 +227,7 @@
 .s-unit-text strong{font-size:15px;line-height:1.3}
 .s-unit-text small{font-size:12px;line-height:1.4;color:var(--muted)}
 .s-end-actions{display:grid;gap:8px}
+.s-end-note{display:block;margin-top:2px;font-size:12px;font-weight:500;opacity:.8}
 
 /* ---------- Quiz types ---------- */
 /* Timeline ordering */

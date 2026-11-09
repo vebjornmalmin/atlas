@@ -105,6 +105,23 @@ export function recommendedUnits(curriculum, progress, {domainIds = [], story = 
   return [...started, ...interleaved];
 }
 
+/**
+ * The chapter the learner chose to work on next, while it still has unseen cards. A choice overrides
+ * the story order and the prerequisites; it lapses by itself once the topic has been through all its cards.
+ */
+export function focusUnit(curriculum, progress, focusUnitId) {
+  const unit = focusUnitId ? curriculum?.units.find(u => u.id === focusUnitId) : null;
+  return unit && progress.units.get(unit.id)?.unseen.length ? unit : null;
+}
+
+/** The path with the chosen chapter first. */
+export function focusedUnits(curriculum, progress, preferences = {}) {
+  const domainIds = preferences.collectionIds || [];
+  const path = recommendedUnits(curriculum, progress, {domainIds, story: preferences.story !== false});
+  const chosen = focusUnit(curriculum, progress, preferences.focusUnitId);
+  return chosen ? [chosen, ...path.filter(u => u.id !== chosen.id)] : path;
+}
+
 const disclosure = target => normalizeAnswer([target.explanation, target.cardType === 'explain' ? '' : target.answer].join(' '));
 function revealedBy(target, text) {
   if (!text || ['explain', 'order', 'match'].includes(target.cardType)) return false;
@@ -177,7 +194,7 @@ export function buildDailySession({data, targets, states, reviews, preferences =
   const newTarget = preferences.newRatio === 0 ? 0 : Math.max(3, Math.round(size * Number(preferences.newRatio ?? 0.4)));
   const dueRows = due.slice(0, Math.max(0, size - newTarget)).map(target => ({target, reason: 'Due review', unitId: target.unitId}));
   const room = preferences.newRatio === 0 && due.length ? 0 : size - dueRows.length;
-  const candidates = unitIds ? unitIds.map(id => curriculum.units.find(u => u.id === id)).filter(Boolean) : recommendedUnits(curriculum, progress, {domainIds, story: preferences.story !== false});
+  const candidates = unitIds ? unitIds.map(id => curriculum.units.find(u => u.id === id)).filter(Boolean) : focusedUnits(curriculum, progress, {...preferences, collectionIds: domainIds});
   const lessons = [], fresh = [];
   let disclosed = dueRows.map(row => disclosure(row.target)).join(' ');
   const perUnit = unitIds?.length === 1 ? room : Math.max(3, Math.ceil(room / 2));

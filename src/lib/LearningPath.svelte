@@ -1,7 +1,7 @@
 <script>
   import {UNIT_STATUS} from './progression.js';
   import {STEP_LABELS} from './core-curriculum.js';
-  let {curriculum, progress, sources = [], selectedUnit = $bindable(''), onstart, onreview, onmap = null, mapFor = () => null, busy = false} = $props();
+  let {curriculum, progress, sources = [], selectedUnit = $bindable(''), onstart, onreview, onmap = null, mapFor = () => null, busy = false, focusUnitId = '', onfocus = null} = $props();
   let openDomain = $state(curriculum.domains[0]?.id ?? '');
   const unitById = $derived(new Map(curriculum.units.map(unit => [unit.id, unit])));
   const unit = $derived(unitById.get(selectedUnit));
@@ -29,6 +29,7 @@
     {#if state.unseen.length}
       <button class="primary" disabled={busy} onclick={() => onstart(unit.id)}>{state.status === 'new' ? 'Begynn på emnet' : `Fortsett · ${state.unseen.length} nye kort`}</button>
     {/if}
+    {#if onfocus && state.unseen.length}<button class="secondary" disabled={busy || focusUnitId === unit.id} aria-pressed={focusUnitId === unit.id} onclick={() => onfocus(unit.id)}>{focusUnitId === unit.id ? 'Valgt som neste kapittel i I dag' : 'Gjør til neste kapittel i I dag'}</button>{/if}
     {#if state.attempted}<button class="secondary" disabled={busy} onclick={() => onreview(unit.id)}>Øv på emnet{state.weak.length ? ` · ${state.weak.length} å styrke` : ''}</button>{/if}
     {#if onmap && mapFor(unit.id)}<button class="secondary" disabled={busy} onclick={() => onmap(unit.id)}>Øv på kartet</button>{/if}
   </div>
