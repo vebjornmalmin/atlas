@@ -20,7 +20,7 @@ Beslutning som skal holde: en sikkerhetskopi inneholder personlige data, ikke ku
 
 Funnet, men ikke rettet: Lytt og Kjenn igjen temaet spiller gjennom Web Audio, som iPhone demper når ringebryteren står på lydløs, uten at appen sier fra. Et trykk på avspilling før opptaket er hentet, kan gi meldingen om manglende nett selv om nettet virker. Uttoningen i Lytt følger klokken og ikke lyden, så et opptak som bufrer, tones ut for tidlig. Filterbrikker og noen tekstknapper er 36 punkter høye. Disse må prøves på en telefon med lyd før de endres.
 
-279 automatiske tester består, og produksjonsbygget lages uten feil.
+279 automatiske tester består, og produksjonsbygget lages uten feil. Produksjonsbygget er servert med `wrangler dev` og prøvd i den installerte hjemmeskjermappen i iPhone 17 Pro-simulatoren, som oppdaterte seg fra forrige bygg via «En ny utgave er klar» og viste app 1.9.1 og innhold 2.3.0. Sikkerhetskopien ble lastet ned (13 KB, uten kunnskapsbiblioteket), lagret i Filer, valgt igjen og gjenopprettet, og fremgangen sto der etterpå. Dagens kapittel, en fri quiz og en kartquiz var åpne samtidig; hver av dem kom tilbake på samme spørsmål med svaret slik det sto, også etter at appen var lukket helt og åpnet igjen. Fokus sto etter gjenåpning, alternativene i Kjenn igjen temaet varierte, zoomknappene på quizkartet virket, Diagnostikk viste lagringstallene, og I dag og et spørsmål var lesbare i mørkt utseende. Ikke prøvd i simulatoren: lyd, årstallsfeltet for år før Kristus og et påbegynt tekstsvar etter gjenåpning.
 
 ## 1.9.0: Fortsett mellom quizer, velg fokus på I dag
 
