@@ -4,6 +4,16 @@ Offline kunnskapstrening på norsk, laget for iPhone 17 Pro.
 
 Live app: https://atlas-first-app.atlas-memory.workers.dev
 
+## Neste utgave — 1.9.0: Fortsett mellom quizer, velg fokus på I dag (ikke publisert)
+
+**Ingen quiz går tapt når du starter en annen.** Før ble dagens økt lagt i en lukket liste nederst når man startet en fri quiz, og kortet for dagens kapittel tilbød å starte en ny plan. Nå er alle uferdige quizer åpne. Kortet for dagens kapittel sier «Fortsett der du var» også når økten er satt til side, quizen du sist brukte vises først, og de andre ligger under «Også påbegynt». En quiz kan avsluttes uten å miste svarene. Sluttskjermen tilbyr å gå tilbake til quizen du satte til side, for eksempel «Tilbake til dagens kapittel · 3 av 14 gjort».
+
+**Startsiden sier hva du skal gjøre.** Når dagens økt er gjort, sier overskriften det, og mer samme dag er merket «Ekstra kapittel · frivillig». En økt som ikke er begynt, sier «Start» og viser hva den inneholder, i stedet for «Fortsett der du var» på 0 av 11. En ny økt i samme emne forklarer at den har kort du ikke har sett ennå, så den ikke ser ut som samme test en gang til.
+
+**Fokus endres der du ser det.** Kortet for dagens kapittel viser fokus (fagområder og rekkefølge) med «Endre»: velg neste kapittel, fagområder og om historien skal følges gjennom tid. Et emne kan også gjøres til neste kapittel fra emnesiden i Atlas → Emner. Alle innstillinger lagres med en gang; før forsvant valg av fagområder når appen ble lukket hvis man ikke trykket «Lagre».
+
+Beslutningene står i `docs/levels-and-story.md`. Kunnskapspakken er uendret (2.3.0). 276 automatiske tester består, og produksjonsbygget lages uten feil. Produksjonsbygget er servert med `wrangler dev` og prøvd i en nettleser som etterligner iPhone, lyst og mørkt: pause i dagens økt, fri quiz, omlasting, fortsette begge, tilbake fra sluttskjermen, avslutte en quiz, ferdig dagens økt med et ekstra kapittel, og fokus valgt fra I dag og fra Emner etter omlasting. Sjekken i den installerte hjemmeskjermappen i iPhone 17 Pro-simulatoren gjenstår.
+
 ## Gjeldende utgave — 1.8.0: En gjennomgått kunnskapskjerne og hint i to trinn
 
 **Hele kunnskapskjernen er gått gjennom.** Hvert fagområde ble lest i fire runder: to for riktighet, én for om spørsmålene er verdt å vite og stilt slik en god lærer ville stilt dem, og en siste kontroll av omskrivingene. Kuriositeter, nakne årstall og rekordtall er byttet ut med spørsmål om hva ting er, hvorfor de skjedde og hva de førte til; ankre som 1814 og 1905 testes fortsatt skarpt. Kjernen har nå 1520 kort i 120 emner. 329 kort som spurte om noe som ikke var verdt å vite, er erstattet av nye kort med nye ID-er, og læringshistorikken på de gamle kortene følger ikke med. Regelen «Verdt å vite, ikke quiz» står i `docs/curriculum-authoring.md`.
