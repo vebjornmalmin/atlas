@@ -76,7 +76,7 @@ export function buildWorldTargets(data, graph) {
     const labels = path.map(id => byId.get(id).label);
     result.push({id:`border-walk:${from}:${to}`, format:'border-walk', mode:'border-walk', kind:'connections', entityId:from, collectionIds:['flags-borders'], datasetId:'world',
       prompt:`Reis over land fra ${labels[0]} til ${labels.at(-1)}. Velg ett naboland om gangen.`, start:from, goal:to, shortest:path.length - 1,
-      answer:labels.join(' → '), acceptedAnswers:[], explanation:`Den korteste reisen på kartgrunnlaget krysser ${path.length - 1} landegrenser: ${labels.join(' → ')}. Andre ruter med like mange grenser godtas. Grensene gjelder i dag.`,
+      answer:labels.join(' → '), acceptedAnswers:[], explanation:`Den korteste reisen på kartgrunnlaget krysser ${path.length - 1} landegrenser: ${labels.join(' → ')}. Andre ruter godtas også, med opptil én grense mer. Grensene gjelder i dag.`,
       sourceIds:[natural].filter(Boolean), difficulty:4, significance:3});
   }
 

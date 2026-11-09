@@ -4,7 +4,25 @@ Offline kunnskapstrening på norsk, laget for iPhone 17 Pro.
 
 Live app: https://atlas-first-app.atlas-memory.workers.dev
 
-## Neste utgave — 1.9.0: Fortsett mellom quizer, velg fokus på I dag (ikke publisert)
+## Neste utgave — 1.9.1: Sikkerhetskopier som kan leses tilbake, og rettelser etter en gjennomgang (ikke publisert)
+
+Før 1.9.0 ble publisert, ble de siste endringene og resten av appen lest gjennom: oppstart, lagring, oppdatering, øktene og alle oppgavetypene. Dette ble rettet:
+
+- **Sikkerhetskopien kan gjenopprettes.** Kopien inneholdt hele kunnskapsbiblioteket to ganger og ble over 30 MB, mens gjenopprettingen avviste filer over 20 MB. Ingen kopi appen lagde, kunne altså leses tilbake. Nå inneholder kopien bare det som er ditt: svarene, repetisjonsplanen, øktene, innstillingene og loggen. Den er noen få kilobyte for en ny bruker, og biblioteket som er installert, blir stående ved gjenoppretting. Eldre kopier med biblioteket i kan fortsatt leses (grensen er 100 MB). Etter gjenoppretting åpner appen på I dag med økten fra kopien.
+- **Appen starter uten å lese 20 MB.** Ved hver oppstart ble alle lagrede filer lest inn i minnet for å telle bytes til Diagnostikk. Det skjer nå bare når Diagnostikk åpnes.
+- **Feilmeldinger på norsk.** Meldinger fra lagring, gjenoppretting og påminnelse sto på engelsk. En fil som ikke er en sikkerhetskopi, gir en forklaring i stedet for en teknisk feil.
+- **Kjenn igjen temaet: svaret avsløres ikke av alternativene.** De samme tre titlene var gale alternativer i seks av sju oppgaver, så det ukjente alternativet var alltid riktig. Alternativene trekkes nå ulikt for hvert tema, og alle titlene brukes.
+- **Årstall før Kristus kan skrives.** Feltet for år i Historiske piler ga talltastatur også når svaret var «218 f.Kr.», så et riktig svar ble rettet som feil. Slike oppgaver får vanlig tastatur.
+- **Lytt: avspillingsknappen virker etter at utdraget er ferdig.** Den store knappen gjorde ingenting; bare «Spill igjen» virket.
+- **Mindre rettelser.** Et berøringsavbrudd fra systemet fjerner ikke lenger en kobling i Koble sammen. Lydkonteksten lukkes etter hver temaoppgave. Skjermbildet i tilbakemeldinger tegner menyikonene med riktig farge. Flaggalternativene har hvert sitt navn for VoiceOver. Zoomknappene på quizkartene og lukkeknappen på forbindelseskortet er 44 punkter. Naboreise sier at én grense mer enn korteste rute godtas, slik rettingen alltid har gjort. Datoen på I dag følger klokken når appen står åpen over natten.
+
+Beslutning som skal holde: en sikkerhetskopi inneholder personlige data, ikke kunnskapsbiblioteket. Biblioteket er likt for alle og installeres fra appen.
+
+Funnet, men ikke rettet: Lytt og Kjenn igjen temaet spiller gjennom Web Audio, som iPhone demper når ringebryteren står på lydløs, uten at appen sier fra. Et trykk på avspilling før opptaket er hentet, kan gi meldingen om manglende nett selv om nettet virker. Uttoningen i Lytt følger klokken og ikke lyden, så et opptak som bufrer, tones ut for tidlig. Filterbrikker og noen tekstknapper er 36 punkter høye. Disse må prøves på en telefon med lyd før de endres.
+
+279 automatiske tester består, og produksjonsbygget lages uten feil.
+
+## 1.9.0: Fortsett mellom quizer, velg fokus på I dag
 
 **Ingen quiz går tapt når du starter en annen.** Før ble dagens økt lagt i en lukket liste nederst når man startet en fri quiz, og kortet for dagens kapittel tilbød å starte en ny plan. Nå er alle uferdige quizer åpne. Kortet for dagens kapittel sier «Fortsett der du var» også når økten er satt til side, quizen du sist brukte vises først, og de andre ligger under «Også påbegynt». En quiz kan avsluttes uten å miste svarene. Sluttskjermen tilbyr å gå tilbake til quizen du satte til side, for eksempel «Tilbake til dagens kapittel · 3 av 14 gjort».
 

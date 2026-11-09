@@ -64,6 +64,14 @@ test('theme ids are unique and each has sources, familiarity and metadata', () =
   }
 });
 
+test('theme distractors vary, so the unfamiliar option is not always the answer', () => {
+  const targets = buildThemeTargets();
+  const asDistractor = new Map();
+  for (const target of targets) for (const choice of target.choices) if (choice !== target.answer) asDistractor.set(choice, (asDistractor.get(choice) || 0) + 1);
+  assert.equal(asDistractor.size, targets.length, 'every title is a distractor somewhere');
+  assert.ok(Math.max(...asDistractor.values()) < targets.length - 1, 'no title is a distractor in every other question');
+});
+
 test('theme targets have deterministic choices with the answer exactly once', () => {
   const first = buildThemeTargets();
   const second = buildThemeTargets();

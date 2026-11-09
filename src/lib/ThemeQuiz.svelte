@@ -53,7 +53,8 @@
     draft = {...draft, choice};
   }
 
-  $effect(() => () => player.stop());
+  // Each question has its own player; its audio context is closed with it.
+  $effect(() => () => player.dispose());
 </script>
 
 <section class="theme-quiz">

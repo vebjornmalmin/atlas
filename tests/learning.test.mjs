@@ -16,7 +16,7 @@ test('FSRS differentiates forgotten and remembered targets and persists scheduli
   assert.equal(good.card.reps, 1);
   assert.equal(good.card.id, 'a');
   assert.equal(good.card.last_review, now.toISOString());
-  assert.throws(() => scheduleReview('a', undefined, 0, now), /Invalid recall/);
+  assert.throws(() => scheduleReview('a', undefined, 0, now), /Ugyldig vurdering/);
 });
 
 test('serialized scheduling state rehydrates and supports subsequent reviews', () => {
@@ -104,9 +104,9 @@ test('calendar export is a daily floating-local-time event with notification and
   assert.match(calendar, /BEGIN:VALARM\r\nTRIGGER:PT0M/);
   assert.match(calendar, /END:VEVENT\r\nEND:VCALENDAR\r\n$/);
   assert.equal(calendar.replace(/\r\n/g, '').includes('\n'), false);
-  assert.throws(() => reminderCalendar('invalid', localNow), /valid reminder time/);
+  assert.throws(() => reminderCalendar('invalid', localNow), /gyldig klokkeslett/);
   for (const invalid of ['24:00', '99:99', '09:60', '9:00', '']) {
-    assert.throws(() => reminderCalendar(invalid, localNow), /valid reminder time/);
+    assert.throws(() => reminderCalendar(invalid, localNow), /gyldig klokkeslett/);
   }
   assert.match(reminderCalendar('23:59', localNow), /DTSTART:20261010T235900/);
 });

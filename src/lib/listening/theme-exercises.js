@@ -24,11 +24,13 @@ function seededOrder(items, seed) {
   return result;
 }
 
-// Fire alternativer: svaret og tre andre verk, helst fra samme epoke.
+// Fire alternativer: svaret og tre andre verk, helst fra samme epoke. Resten trekkes ulikt for hvert tema,
+// ellers går de samme tre titlene igjen i nesten alle oppgaver, og det ukjente alternativet er alltid svaret.
 export function buildThemeChoices(theme, themes = THEMES) {
+  const rank = other => hashText(`${theme.id}|${other.id}`);
   const others = themes
     .filter(other => other.id !== theme.id)
-    .sort((a, b) => Number(b.era === theme.era) - Number(a.era === theme.era) || a.id.localeCompare(b.id))
+    .sort((a, b) => Number(b.era === theme.era) - Number(a.era === theme.era) || rank(a) - rank(b) || a.id.localeCompare(b.id))
     .slice(0, 3);
   return seededOrder([theme.title, ...others.map(other => other.title)], hashText(theme.id));
 }

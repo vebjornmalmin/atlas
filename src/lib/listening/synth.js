@@ -157,7 +157,7 @@ function playVoice(ctx, graph, bus, midi, when, duration, velocity) {
   hammer.stop(when + 0.03);
 }
 
-// Returnerer {play(theme, {onNote, onEnd, velocity}), stop(), isPlaying}.
+// Returnerer {play(theme, {onNote, onEnd, velocity}), stop(), dispose(), isPlaying}.
 // AudioContext opprettes først ved play(), som må komme fra et trykk (iOS).
 export function createPlayer({createContext = defaultCreateContext} = {}) {
   let ctx = null;
@@ -240,9 +240,19 @@ export function createPlayer({createContext = defaultCreateContext} = {}) {
     return true;
   }
 
+  // Lukker lydkonteksten når spilleren ikke skal brukes mer; nettleseren tillater bare noen få samtidig.
+  function dispose() {
+    stop();
+    const closing = ctx;
+    ctx = null;
+    graph = null;
+    if (closing?.close) setTimeout(() => Promise.resolve(closing.close()).catch(() => {}), 350);
+  }
+
   return {
     play,
     stop,
+    dispose,
     get isPlaying() {
       return playing;
     }

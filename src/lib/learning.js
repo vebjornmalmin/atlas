@@ -48,7 +48,7 @@ export function hydrateCard(state, now = new Date()) {
 }
 
 export function scheduleReview(targetId, state, rating, now = new Date()) {
-  if (![1, 2, 3, 4].includes(rating)) throw new Error('Invalid recall rating.');
+  if (![1, 2, 3, 4].includes(rating)) throw new Error('Ugyldig vurdering av svaret.');
   const result = scheduler.next(hydrateCard(state, now), now, state ? rating : Math.min(rating,3));
   if(!state && new Date(result.card.due)-now>86400000){result.card.due=new Date(now.getTime()+86400000);result.card.scheduled_days=1;}
   return {
@@ -146,7 +146,7 @@ export function memorySummary(targets, states, now = new Date()) {
 }
 
 export function reminderCalendar(time, now = new Date()) {
-  if (!/^([01]\d|2[0-3]):[0-5]\d$/.test(time)) throw new Error('Choose a valid reminder time.');
+  if (!/^([01]\d|2[0-3]):[0-5]\d$/.test(time)) throw new Error('Velg et gyldig klokkeslett for påminnelsen.');
   const [hours, minutes] = time.split(':').map(Number);
   const date = new Date(now); date.setHours(hours, minutes, 0, 0);
   if (date <= now) date.setDate(date.getDate() + 1);

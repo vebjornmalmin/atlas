@@ -75,7 +75,7 @@
 {:else if target.mode==='estimate'}
   <EstimateTimeline {target} bind:draft {revealed} />
 {:else if target.mode==='pick'}
-  <div class="flag-choices">{#each target.choices as choice}<button class="flag-choice" aria-pressed={draft.choice===choice.id} aria-label={revealed?choice.label:'Flaggalternativ'} disabled={revealed} onclick={()=>draft={choice:choice.id}}><Flag iso2={choice.iso2} size="choice" />{#if revealed}<small class:success={choice.id===target.correctId}>{choice.label}</small>{/if}</button>{/each}</div>
+  <div class="flag-choices">{#each target.choices as choice,i}<button class="flag-choice" aria-pressed={draft.choice===choice.id} aria-label={revealed?choice.label:`Flaggalternativ ${i+1}`} disabled={revealed} onclick={()=>draft={choice:choice.id}}><Flag iso2={choice.iso2} size="choice" />{#if revealed}<small class:success={choice.id===target.correctId}>{choice.label}</small>{/if}</button>{/each}</div>
 {:else if target.mode==='border-walk' && graph && dataset}
   <PanZoomMap base={dataset.viewBox} initial={walkView} bind:unit label="Reiseruten. Trykk på et naboland for å gå dit." className="walk-board" onTap={stepTo}>
     {#each dataset.regions as region}{@const step=nextSteps.some(n=>regionOf(n.id)===region.id)}<path d={region.path} data-region={region.id} fill-rule="evenodd" class:walked={walk.some(id=>regionOf(id)===region.id)} class:goal={regionOf(target.goal)===region.id} class:here={regionOf(here)===region.id} class:step={!revealed && step && here!==target.goal} />{/each}
@@ -98,5 +98,5 @@
   </PanZoomMap>
   <p class="muted map-note">{revealed?'Grønn pil: riktig retning.':draft.from && !draft.to?`Fra ${labelOf(draft.from)}. Dra eller trykk på landet pilen skal til.`:draft.to?`${labelOf(draft.from)} → ${labelOf(draft.to)}. Dra en ny pil for å endre.`:'Dra fra ett land til et annet. Dagens grenser, forenklet retning.'}</p>
   <div class="sr-only" role="group" aria-label="Velg land med tastatur">{#each target.regions as r}<button type="button" disabled={revealed} onclick={()=>tapCountry({region:r.id})}>{r.label}{draft.from===r.id?' (fra)':draft.to===r.id?' (til)':''}</button>{/each}</div>
-  {#if target.askYear!==false}<label class="arrow-year">År<input class="recall-year" inputmode="numeric" placeholder="Årstall" value={draft.year || ''} disabled={revealed} oninput={e=>draft={...draft,year:e.currentTarget.value}} /></label>{/if}
+  {#if target.askYear!==false}<label class="arrow-year">År<input class="recall-year" inputmode={target.year<0?'text':'numeric'} autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder={target.year<0?'F.eks. 480 f.Kr.':'Årstall'} value={draft.year || ''} disabled={revealed} oninput={e=>draft={...draft,year:e.currentTarget.value}} /></label>{/if}
 {/if}

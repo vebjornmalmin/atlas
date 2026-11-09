@@ -159,6 +159,8 @@
     if (status === 'playing') return pause();
     if (status === 'paused') return resume();
     if (status === 'loading') return;
+    // After the excerpt has ended the audio stands at its end; start it over instead of finishing at once.
+    if (status === 'done') return replay();
     return begin();
   }
 

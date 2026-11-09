@@ -33,7 +33,7 @@
   import {hintSteps,removesOption,removedOption} from '../lib/hints.js';
   import Feedback from '../lib/Feedback.svelte';
   import {answerPresentation,contextualExplanation,questionSupport} from '../lib/presentation.js';
-  import { openDatabase, all, get, put, installPackage, recordReview, logEvent, exportDatabase, restoreDatabase, clearLogs, transaction } from '../lib/storage.js';
+  import { openDatabase, all, get, put, installPackage, recordReview, logEvent, exportDatabase, restoreDatabase, validateBackup, clearLogs, transaction } from '../lib/storage.js';
   import { validatePackage, contentHash, readiness } from '../lib/content.js';
   import { readUiState, saveUiState } from '../lib/ui-state.js';
   import { DEFAULT_PREFERENCES, selectSession, selectPracticeSession, scheduleReview, stateForTarget, ratingIntervals, memorySummary, reminderCalendar, targetMatches } from '../lib/learning.js';
@@ -588,18 +588,22 @@
   }
   async function readBackup(event) {
     const file=event.currentTarget.files[0]; if(!file)return;
-    if(file.size>20*1024*1024)throw new Error('Velg en sikkerhetskopi mindre enn 20 MB.');
-    const {validateBackup}=await import('../lib/storage.js');
-    confirmRestore=validateBackup(JSON.parse(await file.text()));
-    event.currentTarget.value='';
+    const input=event.currentTarget;
+    // Backups from before 1.9.1 also carried the knowledge library and are over 30 MB.
+    if(file.size>100*1024*1024)throw new Error('Velg en sikkerhetskopi mindre enn 100 MB.');
+    let parsed;
+    try {parsed=JSON.parse(await file.text());} catch {throw new Error('Filen kunne ikke leses. Velg en sikkerhetskopi lastet ned fra Atlas.');}
+    finally {input.value='';}
+    confirmRestore=validateBackup(parsed);
   }
   async function restore() {
     await restoreDatabase(db,confirmRestore);confirmRestore=null;
     await restoreSourceContent();
     prefs={...DEFAULT_PREFERENCES,...await get(db,'settings','preferences')};
-    session=await get(db,'sessions','active') || null;
+    session=dropRetired(await get(db,'sessions','active') || null,entryExists);
     document.documentElement.dataset.theme=prefs.theme;
-    await refresh();notify('Sikkerhetskopien er gjenopprettet.');
+    sessionScreen=false;
+    await refresh();await prepareQuestion(session?.draft);notify('Sikkerhetskopien er gjenopprettet.');
   }
   async function applyUpdate() {
     if(sessionScreen && session?.status==='active')throw new Error('Fullfør eller sett økten på pause før du oppdaterer appen.');
@@ -684,9 +688,8 @@
           updateReady=Boolean(registration.waiting);
           registration.addEventListener('updatefound',()=>{
             const worker=registration.installing;
-            worker?.addEventListener('statechange',()=>{if(worker.state==='installed' || worker.state==='activated'){updateReady=Boolean(registration.waiting);void checkStorage().catch(()=>{});}});
+            worker?.addEventListener('statechange',()=>{if(worker.state==='installed' || worker.state==='activated')updateReady=Boolean(registration.waiting);});
           });
-          void navigator.serviceWorker.ready.then(()=>checkStorage()).catch(()=>{});
         }
         appChecker=createAppUpdateChecker({
           fetchVersion:async()=>{if(offlineTest)throw new Error('Koble til nettet for å sjekke oppdateringer.');const response=await fetch('/version.json',{cache:'no-store',signal:AbortSignal.timeout(10000)});if(response.headers.get(OFFLINE_HEADER))throw Object.assign(new Error('Fikk ikke kontakt med nettet.'),{offline:true});if(!response.ok)throw new Error('Kunne ikke sjekke appversjonen. Prøv igjen.');return response.json();},
@@ -738,7 +741,7 @@
         <header class="s-summary-head"><p class="eyebrow">{session.title || 'Økt'}</p><h1>Økten er ferdig</h1><p class="s-sub">{new Set(answered.map(r=>r.id)).size} spørsmål · {answered.length} svar</p></header>
         <div class="s-results" role="group" aria-label="Resultat av økten"><span><strong>{outcome.independent}</strong>uten hjelp</span><span><strong>{outcome.supported}</strong>med støtte</span><span><strong>{outcome.retry}</strong>øv videre</span></div>
         {#if touched.length && coreProgress}<section class="s-topics"><h2 class="s-label">Emnene dine</h2>{#each touched as id}{@const row=coreProgress.units.get(id)}{#if row}<button class="s-unit" data-status={row.status} onclick={()=>{selectedUnit=id;navigate('learn');}}><span class="s-dot" aria-hidden="true"></span><span class="s-unit-text"><strong>{unitTitle(id)}</strong><small>{UNIT_STATUS[row.status].label} · {row.correct} av {row.total} riktig sist</small><span class="s-bar-track"><span style={`width:${Math.round(100*row.correct/row.total)}%`}></span></span></span><svg class="s-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9.5 6 6 6-6 6"/></svg></button>{/if}{/each}</section>{/if}
-        <div class="s-end-actions">{#if retryIds.length}<button class="primary" onclick={()=>run(()=>beginSession('mixed',{targetIds:retryIds,level:0,title:'Øv videre'}))}>Øv på {retryIds.length} {retryIds.length==1?'kort':'kort'} igjen</button>{/if}
+        <div class="s-end-actions">{#if retryIds.length}<button class="primary" onclick={()=>run(()=>beginSession('mixed',{targetIds:retryIds,level:0,title:'Øv videre'}))}>Øv på {retryIds.length} kort igjen</button>{/if}
         {#if back}<button class={retryIds.length?'secondary':'primary'} onclick={()=>run(()=>continueSession(back))}>{isDaily(back)?'Tilbake til dagens kapittel':`Tilbake til ${back.title || 'quizen'}`}<small class="s-end-note">{isDaily(back) && back.chapter?.title?`${back.chapter.title} · `:''}{doneLabel(back)}</small></button>{/if}
         {#if data.curriculum && !session.objective && selection.queue.length}<button class={retryIds.length || back?'secondary':'primary'} onclick={()=>run(()=>beginSession(null,session.scope?.unitId?{...session.scope,unitMode:'learn'}:null))}>{isDaily(session)?'Ta et ekstra kapittel':'Lær mer'}</button>{:else if session.objective}<button class="secondary" onclick={()=>run(()=>beginSession(session.objective || 'mixed',session.scope))}>Ta en quiz til</button>{/if}
         <button class="quiet" onclick={()=>sessionScreen=false}>Ferdig for nå</button></div>
@@ -836,7 +839,7 @@
           <div class="t-actions"><button class="primary" disabled={busy} onclick={()=>run(()=>continueSession(item))}>Fortsett der du var</button><button class="quiet" disabled={busy} onclick={()=>run(()=>closeSession(item))}>Avslutt quizen</button></div></div>
       {/snippet}
       <div class="today">
-      {#if !quizSetup}<header class="t-head"><p class="eyebrow">{new Date().toLocaleDateString('nb-NO',{weekday:'long',day:'numeric',month:'long'})}{#if streak>1}{` · ${streak} dager på rad`}{/if}</p><div class="t-title-row"><h1>{dailyDone?'Dagens økt er gjort':reviewedToday?'Godt i gang':'I dag'}</h1>{#if reviewedToday}<span class="t-meta">{reviewedToday} svar i dag</span>{/if}</div>{#if dailyDone}<p class="t-lead">Du kan stoppe her. Det du har svart på, kommer tilbake når det er tid for repetisjon. Mer i dag er frivillig.</p>{/if}</header>
+      {#if !quizSetup}<header class="t-head"><p class="eyebrow">{new Date(clock).toLocaleDateString('nb-NO',{weekday:'long',day:'numeric',month:'long'})}{#if streak>1}{` · ${streak} dager på rad`}{/if}</p><div class="t-title-row"><h1>{dailyDone?'Dagens økt er gjort':reviewedToday?'Godt i gang':'I dag'}</h1>{#if reviewedToday}<span class="t-meta">{reviewedToday} svar i dag</span>{/if}</div>{#if dailyDone}<p class="t-lead">Du kan stoppe her. Det du har svart på, kommer tilbake når det er tid for repetisjon. Mer i dag er frivillig.</p>{/if}</header>
       {#if resumeFirst}{@render resumeCard(otherOpen[0])}{/if}
       {#if data.curriculum}
         {@const plan=dailyPlan}
@@ -1015,7 +1018,7 @@
       {#if !installed}<div class="settings-row"><div><span>Installer Atlas</span><p>iPhone: Del → Legg til på Hjem-skjerm i Safari.</p></div>{#if installPrompt}<button class="secondary" onclick={()=>run(async()=>{await installPrompt.prompt();await installPrompt.userChoice;installPrompt=null;})}>Installer</button>{/if}</div>{/if}
       </div></section>
       <section class="set-group"><h2 class="group-title">Data på enheten</h2><div class="set-rows">
-      <div class="settings-row"><div><span>Sikkerhetskopi</span><p>Fremgangen lagres bare på denne enheten.</p></div><button class="secondary" disabled={busy} onclick={()=>run(async()=>download(await exportDatabase(db),`atlas-backup-${new Date().toISOString().slice(0,10)}.json`))}>Last ned</button></div>
+      <div class="settings-row"><div><span>Sikkerhetskopi</span><p>Fremgangen lagres bare på denne enheten. Kopien inneholder svarene, repetisjonsplanen og innstillingene dine.</p></div><button class="secondary" disabled={busy} onclick={()=>run(async()=>download(JSON.stringify(await exportDatabase(db)),`atlas-backup-${new Date().toISOString().slice(0,10)}.json`))}>Last ned</button></div>
       <div class="settings-row"><span>Gjenopprett fra sikkerhetskopi</span><button class="secondary" disabled={busy} onclick={()=>restoreInput.click()}>Velg fil</button><input bind:this={restoreInput} type="file" accept=".json,application/json" hidden onchange={event=>run(()=>readBackup(event))}></div>
       </div></section>
     </div>
@@ -1032,7 +1035,7 @@
     {/if}
     </div>
   {/if}
-  {#if confirmRestore}<div class="card confirm" role="alert"><h2>Erstatte lokale data?</h2><p>Dette gjenoppretter sikkerhetskopien fra {displayDate(confirmRestore.exportedAt)} og erstatter kunnskapen og læringshistorikken på denne enheten. Eksporter en kopi først hvis du vil beholde den.</p><button class="primary" disabled={busy} onclick={()=>run(restore)}>Erstatt med denne sikkerhetskopien</button><button class="secondary" onclick={()=>confirmRestore=null}>Avbryt</button></div>{/if}
+  {#if confirmRestore}<div class="card confirm" role="alert"><h2>Erstatte lokale data?</h2><p>Dette gjenoppretter sikkerhetskopien fra {displayDate(confirmRestore.exportedAt)} og erstatter {confirmRestore.version===1?'kunnskapsbiblioteket, læringshistorikken og innstillingene':'læringshistorikken og innstillingene'} på denne enheten. Last ned en kopi først hvis du vil beholde det som er her nå.</p><button class="primary" disabled={busy} onclick={()=>run(restore)}>Erstatt med denne sikkerhetskopien</button><button class="secondary" onclick={()=>confirmRestore=null}>Avbryt</button></div>{/if}
   {#if pendingDestruction==='logs'}<div class="card confirm" role="alert"><h2>Tømme diagnostikkloggen?</h2><p>Læringshistorikken beholdes. Den lokale diagnostikkloggen slettes.</p><button class="primary" onclick={()=>run(async()=>{await clearLogs(db);pendingDestruction='';await refresh();})}>Tøm diagnostikkloggen</button><button class="secondary" onclick={()=>pendingDestruction=''}>Avbryt</button></div>{/if}
 </main>
 <Feedback context={()=>({appVersion:APP_VERSION,view,packageId:data?.id,packageVersion:data?.version,target:current?{id:current.id,prompt:current.prompt,mode:current.mode,entityId:current.entityId}:null,session:sessionScreen?{index:session?.index,total:session?.queue.length,revealed,correct,usedHint}:null,focus:JSON.parse(JSON.stringify(prefs)),selfApproved:selfApprovals(targets,reviews),offlineTest,error})}/>

@@ -38,6 +38,8 @@
     const end=e=>{
       window.removeEventListener('pointermove',move);window.removeEventListener('pointerup',end);window.removeEventListener('pointercancel',end);
       board.removeEventListener('touchmove',block);
+      // A touch the system took over (a swipe from the screen edge) is not a tap.
+      if(e.type==='pointercancel'){pull=null;return;}
       if(!start.moved){pull=null;choose(side,id);return;}
       pull=null;
       const target=e.type==='pointerup'?itemAt(e.clientX,e.clientY):null;

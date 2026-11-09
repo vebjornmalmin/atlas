@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import 'fake-indexeddb/auto';
-import { openDatabase, STORES, all, get, put, installPackage, recordReview, exportDatabase, restoreDatabase, logEvent } from '../src/lib/storage.js';
+import { openDatabase, STORES, PERSONAL_STORES, validateBackup, all, get, put, installPackage, recordReview, exportDatabase, restoreDatabase, logEvent } from '../src/lib/storage.js';
 import { scheduleReview, Rating } from '../src/lib/learning.js';
 const foundation = JSON.parse(await readFile(new URL('../public/knowledge/foundation.json', import.meta.url), 'utf8'));
 async function database(t) { const db = await openDatabase(`test-${crypto.randomUUID()}`); t.after(() => db.close()); return db; }
@@ -59,7 +59,7 @@ test('repeated review event is applied exactly once and cannot overwrite newer s
   assert.equal((await all(db, 'reviews')).length, 1);
 });
 
-test('backup restores content, settings, and learning history together', async t => {
+test('backup restores settings and learning history, and leaves the installed library alone', async t => {
   const source = await database(t);
   const destination = await database(t);
   await installPackage(source, foundation);
@@ -74,6 +74,41 @@ test('backup restores content, settings, and learning history together', async t
   assert.equal(await get(destination, 'settings', 'old-setting'), undefined);
 });
 
+// A full copy of the database is over 30 MB as a file, more than the restore accepted; no backup could be read back.
+test('a backup holds only personal data and stays small enough to restore', async t => {
+  const db = await database(t);
+  await installPackage(db, foundation);
+  await put(db, 'settings', { id: 'preferences', dailyMinutes: 8 });
+  const backup = await exportDatabase(db);
+  assert.deepEqual(Object.keys(backup.stores).sort(), [...PERSONAL_STORES].sort());
+  assert.ok(JSON.stringify(backup).length < 100000);
+  const other = await database(t);
+  await installPackage(other, foundation);
+  await restoreDatabase(other, JSON.parse(JSON.stringify(backup)));
+  assert.equal((await all(other, 'packages')).length, 1);
+  assert.equal((await all(other, 'targets')).length, foundation.targets.length);
+  assert.equal((await get(other, 'settings', 'preferences')).dailyMinutes, 8);
+});
+
+const fullBackup = async db => {
+  const stores = {};
+  for (const name of STORES) stores[name] = await all(db, name);
+  return { format: 'atlas-backup', version: 1, databaseVersion: 1, exportedAt: now.toISOString(), stores };
+};
+
+test('an older backup that carries the knowledge library still restores', async t => {
+  const source = await database(t);
+  await installPackage(source, foundation);
+  await put(source, 'settings', { id: 'preferences', dailyMinutes: 3 });
+  const backup = JSON.parse(JSON.stringify(await fullBackup(source)));
+  const destination = await database(t);
+  await restoreDatabase(destination, backup);
+  assert.equal((await all(destination, 'packages'))[0].id, foundation.id);
+  assert.equal((await all(destination, 'entities')).length, foundation.entities.length);
+  assert.equal((await get(destination, 'settings', 'preferences')).dailyMinutes, 3);
+  assert.throws(() => validateBackup({ ...backup, version: 3 }), /sikkerhetskopi/);
+});
+
 test('invalid backup and interrupted restore both preserve existing data', async t => {
   const db = await database(t);
   await installPackage(db, foundation);
@@ -81,7 +116,7 @@ test('invalid backup and interrupted restore both preserve existing data', async
   const original = await exportDatabase(db);
   const invalid = structuredClone(original);
   invalid.stores.states.push({ id: 'bad', due: 'not-a-date', stability: -1 });
-  await assert.rejects(restoreDatabase(db, invalid), /invalid memory/);
+  await assert.rejects(restoreDatabase(db, invalid), /ugyldig repetisjonsplan/);
   assert.deepEqual((await exportDatabase(db)).stores, original.stores);
   const interrupted = structuredClone(original);
   interrupted.stores.settings.push({ id: 'uncloneable', value() {} });
@@ -101,7 +136,7 @@ test('local diagnostic history is bounded and long messages are trimmed', async 
 test('restore rebuilds graph indexes from validated packages rather than trusting altered backup indexes', async t => {
   const db = await database(t);
   await installPackage(db, foundation);
-  const backup = await exportDatabase(db);
+  const backup = await fullBackup(db);
   const corrupted = structuredClone(backup);
   corrupted.stores.entities = [{ id: 'invented', label: 'Invalid index record' }];
   corrupted.stores.relationships = [{ id: 'broken', from: 'missing', to: 'missing' }];
