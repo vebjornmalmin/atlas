@@ -44,6 +44,17 @@ Regelen er nå:
 - **Når en quiz er ferdig**, tilbyr sluttskjermen å gå tilbake til quizen som ble satt til side, for eksempel «Tilbake til dagens kapittel · 3 av 14 gjort».
 - Fremdriften skrives likt overalt: «3 av 14 gjort».
 
+### Hva skal jeg gjøre nå?
+
+Tilbakemelding: startsiden viste «Dagens kapittel · 0 av 11 gjort · Fortsett der du var» etter at dagens økt alt var gjort, og det var uklart om man skulle ta testen på nytt. «Lær mer» på sluttskjermen hadde startet en ny dagens økt, ofte i samme emne fordi et emne har flere kort enn én økt tar. Kortet så derfor ut som en gjentakelse.
+
+Startsiden sier nå hvor man står:
+
+- **Dagens økt er gjort** (`dailyDoneToday`): overskriften sier det, med «Du kan stoppe her … Mer i dag er frivillig». Et nytt kapittel samme dag heter «Ekstra kapittel · frivillig» og har en dempet knapp. Sluttskjermen kaller knappen «Ta et ekstra kapittel».
+- **En økt som ikke er begynt** sier «Start», ikke «Fortsett», og viser hva den inneholder (`sessionMix`): repetisjoner, nye kort, perspektiver og om den begynner med en innføring.
+- **Samme emne igjen** forklares: «Samme emne som i dagens økt, med kort du ikke har sett ennå.» Ellers står det at ingen av kortene er besvart tidligere i dag, når det stemmer.
+- **En påbegynt økt** viser en fremdriftslinje og «3 av 14 gjort · 11 igjen» med «Fortsett der du var».
+
 ### Fokus
 
 Fagområdene lå under Deg → Økten og ble bare lagret med «Lagre». Endringen virket med en gang i appen, men forsvant når appen ble lukket. Nå gjelder:

@@ -52,3 +52,25 @@ export function openSessions(active, saved = [], {now = new Date(), exists = () 
 
 /** «3 av 14 gjort»: the same count on every card, in the session and in the list of open quizzes. */
 export const doneLabel = session => `${session.index} av ${session.queue.length} gjort`;
+
+/** Whether a daily session was finished today; a further daily session that day is optional extra. */
+export function dailyDoneToday(active, saved = [], now = new Date()) {
+  return [active, ...saved].some(s => s && isDaily(s) && s.status === 'completed' && sameDay(s.completedAt || s.updatedAt || s.startedAt, now));
+}
+
+/**
+ * What is left in a session, so the start page can say what it holds instead of only a count.
+ * `answeredToday` holds cards answered today in other sessions; `repeats` counts those still ahead.
+ */
+export function sessionMix(session, {perspectiveReason = '', answeredToday = new Set()} = {}) {
+  const mix = {review: 0, fresh: 0, perspective: 0, retry: 0, lesson: 0, repeats: 0};
+  for (const entry of session?.queue?.slice(session.index) || []) {
+    if (typeof entry.id === 'string' && entry.id.startsWith('lesson:')) { mix.lesson++; continue; }
+    if (entry.sessionRetry) { mix.retry++; continue; }
+    if (entry.reason === 'Due review') mix.review++;
+    else if (perspectiveReason && entry.reason === perspectiveReason) mix.perspective++;
+    else mix.fresh++;
+    if (answeredToday.has(entry.id)) mix.repeats++;
+  }
+  return mix;
+}

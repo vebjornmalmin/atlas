@@ -29,7 +29,7 @@
   import {APP_VERSION,APP_CHECK_INTERVAL,OFFLINE_HEADER,createAppUpdateChecker} from '../lib/app-updates.js';
   import {foundationTargets} from '../lib/foundations.js';
   import {factKey,learningStage,quizProgress,overviewBounds,effectiveRating} from '../lib/journey.js';
-  import {saveJournal,readJournal,questionDraft,restoreDraft,dropRetired,openSessions,isDaily,sameDay,lastActivity,doneLabel,DAILY_TITLE} from '../lib/session-journal.js';
+  import {saveJournal,readJournal,questionDraft,restoreDraft,dropRetired,openSessions,isDaily,sameDay,lastActivity,doneLabel,dailyDoneToday,sessionMix,DAILY_TITLE} from '../lib/session-journal.js';
   import {hintSteps,removesOption,removedOption} from '../lib/hints.js';
   import Feedback from '../lib/Feedback.svelte';
   import {answerPresentation,contextualExplanation,questionSupport} from '../lib/presentation.js';
@@ -246,6 +246,16 @@
   let openList = $derived(data ? openSessions(session,savedSessions,{now:new Date(clock),exists:entryExists}) : []);
   let todaysDaily = $derived(openList.find(isDaily) || null);
   let otherOpen = $derived(openList.filter(s=>!isDaily(s)));
+  // After today's session is done, anything more is optional; the start page says so.
+  let dailyDone = $derived(dailyDoneToday(session,savedSessions,new Date(clock)));
+  // Chapters already worked on in a finished session today; a further session there brings the next cards, not a repeat.
+  let doneChapters = $derived(new Set([session,...savedSessions].filter(s=>s && isDaily(s) && s.status==='completed' && sameDay(s.completedAt || s.updatedAt || s.startedAt,clock)).map(s=>s.chapter?.title).filter(Boolean)));
+  const continuesNote = title => doneChapters.has(title) ? 'Samme emne som i dagens økt, med kort du ikke har sett ennå.' : '';
+  let todaysMix = $derived.by(()=>{
+    if(!todaysDaily)return null;
+    const answeredToday=new Set(reviews.filter(r=>sameDay(r.timestamp,clock) && !r.id?.startsWith(`${todaysDaily.sessionId}:`)).map(r=>r.targetId));
+    return sessionMix(todaysDaily,{perspectiveReason:PERSPECTIVE_REASON,answeredToday});
+  });
   // A quiz the learner set aside more recently than today's session is offered first.
   let resumeFirst = $derived(Boolean(otherOpen.length && (!todaysDaily || lastActivity(otherOpen[0])>lastActivity(todaysDaily))));
   // An unfinished daily session from an earlier day; today's plan takes over its due cards and topics.
@@ -730,7 +740,7 @@
         {#if touched.length && coreProgress}<section class="s-topics"><h2 class="s-label">Emnene dine</h2>{#each touched as id}{@const row=coreProgress.units.get(id)}{#if row}<button class="s-unit" data-status={row.status} onclick={()=>{selectedUnit=id;navigate('learn');}}><span class="s-dot" aria-hidden="true"></span><span class="s-unit-text"><strong>{unitTitle(id)}</strong><small>{UNIT_STATUS[row.status].label} · {row.correct} av {row.total} riktig sist</small><span class="s-bar-track"><span style={`width:${Math.round(100*row.correct/row.total)}%`}></span></span></span><svg class="s-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9.5 6 6 6-6 6"/></svg></button>{/if}{/each}</section>{/if}
         <div class="s-end-actions">{#if retryIds.length}<button class="primary" onclick={()=>run(()=>beginSession('mixed',{targetIds:retryIds,level:0,title:'Øv videre'}))}>Øv på {retryIds.length} {retryIds.length==1?'kort':'kort'} igjen</button>{/if}
         {#if back}<button class={retryIds.length?'secondary':'primary'} onclick={()=>run(()=>continueSession(back))}>{isDaily(back)?'Tilbake til dagens kapittel':`Tilbake til ${back.title || 'quizen'}`}<small class="s-end-note">{isDaily(back) && back.chapter?.title?`${back.chapter.title} · `:''}{doneLabel(back)}</small></button>{/if}
-        {#if data.curriculum && !session.objective && selection.queue.length}<button class={retryIds.length || back?'secondary':'primary'} onclick={()=>run(()=>beginSession(null,session.scope?.unitId?{...session.scope,unitMode:'learn'}:null))}>Lær mer</button>{:else if session.objective}<button class="secondary" onclick={()=>run(()=>beginSession(session.objective || 'mixed',session.scope))}>Ta en quiz til</button>{/if}
+        {#if data.curriculum && !session.objective && selection.queue.length}<button class={retryIds.length || back?'secondary':'primary'} onclick={()=>run(()=>beginSession(null,session.scope?.unitId?{...session.scope,unitMode:'learn'}:null))}>{isDaily(session)?'Ta et ekstra kapittel':'Lær mer'}</button>{:else if session.objective}<button class="secondary" onclick={()=>run(()=>beginSession(session.objective || 'mixed',session.scope))}>Ta en quiz til</button>{/if}
         <button class="quiet" onclick={()=>sessionScreen=false}>Ferdig for nå</button></div>
       </div>
     {:else if sessionScreen && currentLesson}
@@ -826,7 +836,7 @@
           <div class="t-actions"><button class="primary" disabled={busy} onclick={()=>run(()=>continueSession(item))}>Fortsett der du var</button><button class="quiet" disabled={busy} onclick={()=>run(()=>closeSession(item))}>Avslutt quizen</button></div></div>
       {/snippet}
       <div class="today">
-      {#if !quizSetup}<header class="t-head"><p class="eyebrow">{new Date().toLocaleDateString('nb-NO',{weekday:'long',day:'numeric',month:'long'})}{#if streak>1}{` · ${streak} dager på rad`}{/if}</p><div class="t-title-row"><h1>{reviewedToday?'Godt i gang':'I dag'}</h1>{#if reviewedToday}<span class="t-meta">{reviewedToday} svar i dag</span>{/if}</div></header>
+      {#if !quizSetup}<header class="t-head"><p class="eyebrow">{new Date().toLocaleDateString('nb-NO',{weekday:'long',day:'numeric',month:'long'})}{#if streak>1}{` · ${streak} dager på rad`}{/if}</p><div class="t-title-row"><h1>{dailyDone?'Dagens økt er gjort':reviewedToday?'Godt i gang':'I dag'}</h1>{#if reviewedToday}<span class="t-meta">{reviewedToday} svar i dag</span>{/if}</div>{#if dailyDone}<p class="t-lead">Du kan stoppe her. Det du har svart på, kommer tilbake når det er tid for repetisjon. Mer i dag er frivillig.</p>{/if}</header>
       {#if resumeFirst}{@render resumeCard(otherOpen[0])}{/if}
       {#if data.curriculum}
         {@const plan=dailyPlan}
@@ -834,15 +844,25 @@
         {@const chapter=todayChapter}
         <div class="t-chapter">
           {#if todaysDaily}
-            <p class="eyebrow">Dagens kapittel{todaysDaily.sessionId!==session?.sessionId?' · satt til side':''}</p><h2>{todaysDaily.chapter?.title || 'Dagens økt'}</h2><p class="t-sub">{doneLabel(todaysDaily)}</p>
-            <button class="primary" disabled={busy} onclick={()=>run(()=>continueSession(todaysDaily))}>Fortsett der du var</button>
+            {@const mix=todaysMix}
+            {@const begun=todaysDaily.index>0}
+            <p class="eyebrow">{dailyDone?'Ekstra kapittel · frivillig':'Dagens kapittel'}{todaysDaily.sessionId!==session?.sessionId && begun?' · satt til side':''}</p><h2>{todaysDaily.chapter?.title || 'Dagens økt'}</h2>
+            {#if begun}
+              <div class="t-progress" role="progressbar" aria-label="Fremgang i økten" aria-valuemin="0" aria-valuemax={todaysDaily.queue.length} aria-valuenow={todaysDaily.index}><span style={`width:${Math.round(100*todaysDaily.index/todaysDaily.queue.length)}%`}></span></div>
+              <p class="t-sub">{doneLabel(todaysDaily)} · {todaysDaily.queue.length-todaysDaily.index} igjen</p>
+            {:else}
+              <div class="t-counts"><span><strong>{mix.review}</strong>{mix.review===1?'repetisjon':'repetisjoner'}</span><span><strong>{mix.fresh}</strong>nye kort</span><span><strong>{mix.perspective}</strong>{mix.perspective===1?'perspektiv':'perspektiver'}</span></div>
+              <p class="t-sub">Ikke startet ennå{mix.lesson?`, begynner med ${mix.lesson===1?'en kort innføring':`${mix.lesson} korte innføringer`}`:''}. {continuesNote(todaysDaily.chapter?.title) || (reviewedToday && !mix.repeats?'Ingen av kortene har du svart på tidligere i dag.':'')}</p>
+            {/if}
+            <button class={dailyDone && !begun?'secondary':'primary'} disabled={busy} onclick={()=>run(()=>continueSession(todaysDaily))}>{begun?'Fortsett der du var':dailyDone?'Start det ekstra kapitlet':'Start dagens kapittel'}</button>
           {:else if plan.length}
-            <p class="eyebrow">{chapter?`${chapter.era}${chapter.span?` · ${chapter.span}`:''}`:'Repetisjon'}</p>
+            <p class="eyebrow">{dailyDone?'Ekstra kapittel · frivillig':chapter?`${chapter.era}${chapter.span?` · ${chapter.span}`:''}`:'Repetisjon'}</p>
             <h2>{chapter?.title || 'Det du holder på å glemme'}</h2>
             {#if coreProgress}<StorySpine curriculum={data.curriculum} progress={coreProgress} highlight={selection.units || []} compact />{/if}
             <div class="t-counts"><span><strong>{plan.filter(q=>q.reason==='Due review').length}</strong>repetisjoner</span><span><strong>{fresh.length}</strong>nye kort</span><span><strong>{plan.filter(q=>q.reason===PERSPECTIVE_REASON).length}</strong>{plan.filter(q=>q.reason===PERSPECTIVE_REASON).length===1?'perspektiv':'perspektiver'}</span></div>
+            {#if dailyDone && continuesNote(chapter?.title)}<p class="t-sub">{continuesNote(chapter?.title)}</p>{/if}
             {#if (selection.units || []).length>1}<p class="t-sub">Også i dag: {selection.units.filter(id=>id!==data.curriculum.units.find(u=>u.title===chapter?.title)?.id).map(unitTitle).join(' og ')}</p>{/if}
-            <button class="primary" disabled={busy} onclick={()=>run(()=>beginSession())}>Start dagens kapittel</button>
+            <button class={dailyDone?'secondary':'primary'} disabled={busy} onclick={()=>run(()=>beginSession())}>{dailyDone?'Start et ekstra kapittel':'Start dagens kapittel'}</button>
           {:else}
             <h2>Ferdig for i dag</h2><p class="t-sub">Alt som skulle repeteres er gjort. Nye kort i de aktive emnene kommer når du har repetert de forrige.</p>
             {#if coreProgress}{@const next=focusPath[0]}{#if next}<button class="secondary" onclick={()=>run(()=>beginSession(null,{unitId:next.id,unitMode:'learn',title:next.title}))}>Les neste kapittel nå: {next.title}</button>{/if}{/if}

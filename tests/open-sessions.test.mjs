@@ -31,3 +31,14 @@ test('a session whose remaining cards were all retired by a content update is no
   const open = openSessions(null, [quiz('f1')], {now, exists: entry => entry.id === 'a'});
   assert.deepEqual(open, []);
 });
+
+test('a second daily session on the same day is recognised as extra, and says what it holds', async () => {
+  const {dailyDoneToday, sessionMix} = await import('../src/lib/session-journal.js');
+  const done = quiz('d1', {title: DAILY_TITLE, status: 'completed', completedAt: at(1)});
+  const yesterday = quiz('d0', {title: DAILY_TITLE, status: 'completed', completedAt: at(30)});
+  assert.equal(dailyDoneToday(null, [done], now), true);
+  assert.equal(dailyDoneToday(null, [yesterday], now), false);
+  assert.equal(dailyDoneToday(quiz('f', {status: 'completed', completedAt: at(1)}), [], now), false, 'a free quiz is not the daily session');
+  const extra = quiz('d2', {title: DAILY_TITLE, index: 0, queue: [{id: 'lesson:x'}, {id: 'r1', reason: 'Due review'}, {id: 'n1', reason: 'Unit introduction'}, {id: 'n2', reason: 'New knowledge'}, {id: 'p1', reason: 'Perspektiv'}]});
+  assert.deepEqual(sessionMix(extra, {perspectiveReason: 'Perspektiv', answeredToday: new Set(['n2'])}), {review: 1, fresh: 2, perspective: 1, retry: 0, lesson: 1, repeats: 1});
+});
