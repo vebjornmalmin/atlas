@@ -34,6 +34,8 @@ Designbeslutninger som skal holde:
 
 Kontrollert i iPhone 17 Pro-simulatoren i den installerte hjem-skjerm-appen mot produksjonsbygget kjørt lokalt, i lyst og mørkt, også etter at appen ble lukket og åpnet igjen. Morsom: I dag, oppdateringsbanneret, innføring, flervalg med riktig og feil svar, tidslinje med sortering og retting, Lag en quiz, Atlas (Emner, Tid, Kart) og Deg. Bytte mellom alle tre stilene i Innstillinger; Normal og Kjedelig i Innstillinger, I dag og en tidslinje med retting; Kjedelig beholdt etter lukking og ny åpning, midt i en quiz. Det nye ikonet ble lagt på hjem-skjermen fra Safari; appen åpnet fra det, ble lukket helt og åpnet igjen på samme fane. 283 automatiske tester består, og produksjonsbygget lages uten feil.
 
+Publisert 11. november 2026: app 1.10.0, utgivelse `2607d6a28d23`, kunnskapspakke 2.3.0, som statiske filer via Wrangler fra `main` (`bf6dfa1`), som alt var sendt til GitHub. `/version.json` viser den nye utgivelsen, `/` svarer med sikkerhetshodene, og `/icon-192.png` er det nye ikonet. Den installerte hjemmeskjermappen for den publiserte adressen i iPhone 17 Pro-simulatoren, som sto på 1.9.1 midt i en fri quiz, viste «En ny utgave er klar», oppdaterte seg til 1.10.0 i Morsom med quizen fortsatt påbegynt, og viste app 1.10.0 og innhold 2.3.0 på samme side etter at den var lukket helt og åpnet igjen. Den beholdt det gamle ikonet, slik iPhone gjør til appen legges til på nytt.
+
 ## 1.9.1: Sikkerhetskopier som kan leses tilbake, og rettelser etter en gjennomgang
 
 Før 1.9.0 ble publisert, ble de siste endringene og resten av appen lest gjennom: oppstart, lagring, oppdatering, øktene og alle oppgavetypene. Dette ble rettet:
