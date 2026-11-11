@@ -1,0 +1,296 @@
+/* Morsom: the retro desktop look. Loaded after design.css, today.css and atlas-me.css.
+   The app is one window on a desk: a blue title bar for the header, a taskbar for the tab bar.
+   Inside it, things you act on are small windows and chunky buttons with an ink outline and a hard shadow
+   that pushes in when pressed. Lists and reading text stay calm: hairlines, no shadows.
+   Colours: orange for the one main action, yellow for what is chosen, blue for links and the header,
+   pink and yellow title bars to tell windows apart, green and red only for right and wrong. */
+
+/* Every rule here is scoped to data-look="fun", so the Normal and Kjedelig looks never see it.
+   :where() keeps the scope from adding specificity, so the rules weigh what they did unscoped. */
+
+/* ---------- Tokens ---------- */
+/* Title bars and fills keep the same bright colours in light and dark; text on them is always --bar-ink.
+   The dark blocks repeat every colour token, because design.css's own dark block is more specific than the light one here. */
+:root[data-look="fun"]{
+  --sans:ui-rounded,"SF Pro Rounded","Nunito","Varela Round",-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+  --serif:var(--sans);
+  --gutter:16px;--r-l:12px;--nav-h:64px;--bar-h:46px;
+  --blue:#3d97d3;--orange:#ef6c42;--yellow:#f4ba3e;--pink:#f3a2b2;--green:#5fbf86;--red:#ee7466;--bar-ink:#1f1a2b;--paper:#fbf6ec;
+  color-scheme:light;
+  --desk:#8f868a;--bg:#f3eadb;--surface:#fbf6ec;--surface-2:#e8ddca;--ink:#1f1a2b;--edge:#1f1a2b;--muted:#665d6d;--line:#d8ccb7;--line-strong:#ac9f88;
+  --accent:#1d6aa1;--accent-ink:#fbf6ec;--accent-soft:#d5e7f3;--danger:#bb3626;--warm:#c1592b;--success:#2c7f50;
+  --hl:#fbe0a0;--ok-soft:#cdebd6;--bad-soft:#f8cdc6;--track:#f6e6c4;
+  --shadow:3px 3px 0 var(--edge);--shadow-l:4px 4px 0 var(--edge);
+  background:var(--desk);
+}
+:root[data-look="fun"][data-theme="dark"]{
+  color-scheme:dark;
+  --desk:#3b3447;--bg:#27222f;--surface:#302a3a;--surface-2:#1e1a26;--ink:#f3eadb;--edge:#060509;--muted:#b3a9ba;--line:#40394c;--line-strong:#5d5470;
+  --accent:#7bc0ec;--accent-ink:#0f1d28;--accent-soft:#223a4e;--danger:#ff9483;--warm:#f4a56f;--success:#84d6a0;
+  --hl:#5b4817;--ok-soft:#1f4630;--bad-soft:#562630;--track:#3a3020;
+  --shadow:3px 3px 0 var(--edge);--shadow-l:4px 4px 0 var(--edge);
+}
+@media(prefers-color-scheme:dark){:root[data-look="fun"]:not([data-theme="light"]):not([data-theme="dark"]){
+  color-scheme:dark;
+  --desk:#3b3447;--bg:#27222f;--surface:#302a3a;--surface-2:#1e1a26;--ink:#f3eadb;--edge:#060509;--muted:#b3a9ba;--line:#40394c;--line-strong:#5d5470;
+  --accent:#7bc0ec;--accent-ink:#0f1d28;--accent-soft:#223a4e;--danger:#ff9483;--warm:#f4a56f;--success:#84d6a0;
+  --hl:#5b4817;--ok-soft:#1f4630;--bad-soft:#562630;--track:#3a3020;
+  --shadow:3px 3px 0 var(--edge);--shadow-l:4px 4px 0 var(--edge);
+}}
+
+/* ---------- Desk and window ---------- */
+html[data-look="fun"],:where([data-look="fun"]) body{background:var(--desk)}
+:where([data-look="fun"]) body{padding:0 8px}
+:where([data-look="fun"]) .app-shell{max-width:480px;min-height:calc(100dvh - env(safe-area-inset-top) - env(safe-area-inset-bottom) - var(--nav-h) - 22px);margin:calc(6px + env(safe-area-inset-top)) auto calc(var(--nav-h) + 14px + env(safe-area-inset-bottom));padding:0 var(--gutter) 24px;background:var(--bg);border:2px solid var(--edge);border-radius:14px;box-shadow:var(--shadow-l)}
+:where([data-look="fun"]) #main-view{padding-top:16px}
+
+/* Title bar: the header of the window. The feedback button sits in it as a title-bar button. */
+:where([data-look="fun"]) .app-header{margin:0 calc(var(--gutter)*-1);padding:0 56px 0 10px;min-height:var(--bar-h);background:var(--blue);border-bottom:2px solid var(--edge);border-radius:12px 12px 0 0;color:var(--bar-ink)}
+:where([data-look="fun"]) .brand{gap:9px;min-height:44px;color:var(--bar-ink);font-family:var(--sans);font-size:21px;font-weight:800;letter-spacing:-.4px}
+:where([data-look="fun"]) .mark{width:28px;height:28px;border:2px solid var(--edge);border-radius:8px;background:var(--paper);color:var(--bar-ink)}
+:where([data-look="fun"]) .mark svg{width:18px;height:18px}
+:where([data-look="fun"]) .status{border:2px solid var(--edge);border-radius:8px;background:var(--paper);color:var(--bar-ink);font-weight:700;padding:3px 8px}
+:where([data-look="fun"]) .status:before{background:var(--orange);width:7px;height:7px;border:1.5px solid var(--edge)}
+html[data-look="fun"] body .feedback-trigger.feedback-trigger{top:calc(env(safe-area-inset-top) + 8px);right:max(14px,calc((100vw - 480px)/2 + 6px));isolation:isolate;color:var(--bar-ink);border-radius:10px}
+html[data-look="fun"].quiz-active body .feedback-trigger.feedback-trigger{top:calc(env(safe-area-inset-top) + 8px);right:max(14px,calc((100vw - 480px)/2 + 6px))}
+html[data-look="fun"] body .feedback-trigger.feedback-trigger:before{content:"";position:absolute;z-index:-1;inset:5px;border:2px solid var(--edge);border-radius:8px;background:var(--paper);box-shadow:2px 2px 0 var(--edge)}
+html[data-look="fun"] body .feedback-trigger.feedback-trigger svg{width:19px;height:19px;stroke-width:1.9}
+html[data-look="fun"] body .feedback-trigger.feedback-trigger:active:not(:disabled){color:var(--bar-ink);transform:translate(1px,1px)}
+
+/* Taskbar: three chunky keys; the open one is pressed in and yellow. */
+:where([data-look="fun"]) .bottom-nav{gap:6px;padding:6px 8px calc(6px + env(safe-area-inset-bottom));background:var(--bg);border-top:2px solid var(--edge)}
+:where([data-look="fun"]) .nav-button{flex-direction:row;gap:8px;min-height:50px;padding:0 6px;border:2px solid transparent;border-radius:10px;color:var(--muted);font-size:14px;font-weight:700;letter-spacing:0;text-transform:none}
+:where([data-look="fun"]) .nav-button:before{display:none}
+:where([data-look="fun"]) .nav-button svg{stroke-width:1.8}
+:where([data-look="fun"]) .nav-button.active{background:var(--yellow);border-color:var(--edge);color:var(--bar-ink);box-shadow:inset 2px 2px 0 rgb(31 26 43 / .22)}
+:where([data-look="fun"]) .nav-button.active svg{color:var(--bar-ink);stroke-width:2}
+
+/* Quiz mode: no header or taskbar; the session's own bar is the title bar and its action bar is the taskbar. */
+:where([data-look="fun"]) .quiz-active .app-shell{min-height:calc(100dvh - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 92px);margin-bottom:calc(86px + env(safe-area-inset-bottom));padding-top:0;padding-bottom:20px}
+:where([data-look="fun"]) .quiz-active #main-view{padding-top:0}
+:where([data-look="fun"]) .quiz-active .s-top{margin:0 calc(var(--gutter)*-1) 16px;padding:0 56px 0 4px;min-height:var(--bar-h);background:var(--blue);border-bottom:2px solid var(--edge);border-radius:12px 12px 0 0}
+:where([data-look="fun"]) .quiz-active .s-back{color:var(--bar-ink);font-weight:750}
+:where([data-look="fun"]) .s-bar{padding:10px 16px calc(10px + env(safe-area-inset-bottom));border-top:2px solid var(--edge);background:var(--bg)}
+:where([data-look="fun"]) .quiz-active .s-bar .primary{box-shadow:var(--shadow)}
+:where([data-look="fun"]) .quiz-active .s-bar .primary:active:not(:disabled){box-shadow:1px 1px 0 var(--edge)}
+:where([data-look="fun"]) .quiz-active .s-bar .primary:disabled{box-shadow:none}
+:where([data-look="fun"]) .quiz-actions{border-top:2px solid var(--edge);box-shadow:none}
+/* A question without an action bar yet: the window runs down to the bottom of the screen. */
+html[data-look="fun"].quiz-active:not(:has(.s-bar)) .app-shell{min-height:calc(100dvh - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 20px);margin-bottom:calc(14px + env(safe-area-inset-bottom))}
+
+/* ---------- Type ---------- */
+:where([data-look="fun"]) h1,:where([data-look="fun"]) h2{font-weight:700;letter-spacing:-.3px}
+:where([data-look="fun"]) h3{font-weight:700}
+:where([data-look="fun"]) .atlas-tid .story-era,:where([data-look="fun"]) .hero-title,:where([data-look="fun"]) .t-head h1,:where([data-look="fun"]) .s-question,:where([data-look="fun"]) .s-answer,:where([data-look="fun"]) .s-lesson-title,:where([data-look="fun"]) .s-summary-head h1,:where([data-look="fun"]) .s-intro h1,:where([data-look="fun"]) .me-title,:where([data-look="fun"]) .t-chapter h2,:where([data-look="fun"]) .tl-title,:where([data-look="fun"]) .question,:where([data-look="fun"]) .lesson-title,:where([data-look="fun"]) .atlas-emner .unit-hero h1,:where([data-look="fun"]) .atlas-entity .hero h1,:where([data-look="fun"]) .lens-card h2,:where([data-look="fun"]) .atlas-kart .lens-card h2,:where([data-look="fun"]) .atlas-kart .focus-card h2,:where([data-look="fun"]) .empty h2,:where([data-look="fun"]) .install-card h2{font-weight:700;letter-spacing:-.4px}
+:where([data-look="fun"]) .s-question.is-answered{font-weight:600;letter-spacing:0}
+:where([data-look="fun"]) .t-counts strong,:where([data-look="fun"]) .s-results strong,:where([data-look="fun"]) .stat strong,:where([data-look="fun"]) .stat b,:where([data-look="fun"]) .ledger-stats .stat strong,:where([data-look="fun"]) .result-grid strong,:where([data-look="fun"]) .me-page .result-grid strong,:where([data-look="fun"]) .plan-counts strong,:where([data-look="fun"]) .ledger-num,:where([data-look="fun"]) .me-page .axis-steps strong,:where([data-look="fun"]) .me-page .level-id,:where([data-look="fun"]) .atlas-kart .metric-row strong,:where([data-look="fun"]) .estimate-value,:where([data-look="fun"]) .session-view .estimate-value,:where([data-look="fun"]) .tl-year{font-weight:750}
+:where([data-look="fun"]) .s-count strong{font-weight:750}
+:where([data-look="fun"]) .eyebrow{font-weight:750;letter-spacing:.1em}
+:where([data-look="fun"]) .unit-text strong,:where([data-look="fun"]) .t-row-text strong,:where([data-look="fun"]) .s-unit-text strong,:where([data-look="fun"]) .atlas-page .entity-row strong,:where([data-look="fun"]) .me-page .entity-row strong,:where([data-look="fun"]) .atlas-emner .unit-text strong,:where([data-look="fun"]) .atlas-emner .domain-header strong,:where([data-look="fun"]) .atlas-tid .story-list .unit-text strong,:where([data-look="fun"]) .ledger-row .unit-text strong{font-weight:650}
+:where([data-look="fun"]) a{text-decoration-thickness:2px;text-decoration-color:color-mix(in srgb,var(--accent) 45%,transparent)}
+:where([data-look="fun"]) .quiet,:where([data-look="fun"]) .back-button,:where([data-look="fun"]) .link-button,:where([data-look="fun"]) .s-back,:where([data-look="fun"]) .t-all{font-weight:700}
+
+/* Section labels are little name tags, like the labels under desktop icons. */
+:where([data-look="fun"]) .s-label,:where([data-look="fun"]) .section-title,:where([data-look="fun"]) .atlas-page .section-title,:where([data-look="fun"]) .atlas-page .card>h2,:where([data-look="fun"]) .me-page h2{display:block;width:fit-content;max-width:100%;margin:26px 0 10px;padding:3px 10px;border:2px solid var(--edge);border-radius:7px;background:var(--surface);color:var(--ink);font-family:var(--sans);font-size:12.5px;font-weight:750;letter-spacing:.02em;line-height:1.4;text-transform:none;box-shadow:2px 2px 0 var(--edge)}
+:where([data-look="fun"]) .section-title{display:flex}
+:where([data-look="fun"]) .t-focus .s-label{box-shadow:none;margin:0 0 4px;padding:1px 8px;font-size:11.5px}
+:where([data-look="fun"]) .atlas-tid .story-era{border-top:2px solid var(--edge)}
+
+/* ---------- Buttons ---------- */
+:where([data-look="fun"]) button{border:2px solid var(--edge);background:var(--surface);font-weight:650}
+:where([data-look="fun"]) .primary{background:var(--orange);color:var(--bar-ink);border:2px solid var(--edge);border-radius:var(--r-m);box-shadow:var(--shadow);font-weight:750;letter-spacing:0}
+:where([data-look="fun"]) .secondary{background:var(--surface);color:var(--ink);border:2px solid var(--edge);border-radius:var(--r-m);box-shadow:var(--shadow);font-weight:700}
+:where([data-look="fun"]) .primary.danger{background:var(--red);border-color:var(--edge);color:var(--bar-ink)}
+:where([data-look="fun"]) .quiet,:where([data-look="fun"]) .back-button,:where([data-look="fun"]) .link-button{border-color:transparent;background:transparent;box-shadow:none}
+:where([data-look="fun"]) .primary:active:not(:disabled),:where([data-look="fun"]) .secondary:active:not(:disabled),:where([data-look="fun"]) .s-choice:active:not(:disabled),:where([data-look="fun"]) .s-rate:active:not(:disabled),:where([data-look="fun"]) .level-option:active:not(:disabled),:where([data-look="fun"]) .format-choice:active:not(:disabled),:where([data-look="fun"]) .flag-choice:active:not(:disabled),:where([data-look="fun"]) .rating-button:active:not(:disabled),:where([data-look="fun"]) .q-replay:active:not(:disabled),:where([data-look="fun"]) .q-melody-play:active:not(:disabled),:where([data-look="fun"]) .estimate-nudge button:active:not(:disabled),:where([data-look="fun"]) .neighbour-grid button:active:not(:disabled),:where([data-look="fun"]) .chip:active:not(:disabled){transform:translate(2px,2px);box-shadow:1px 1px 0 var(--edge)}
+:where([data-look="fun"]) .primary:disabled,:where([data-look="fun"]) .secondary:disabled{opacity:1;background:var(--surface-2);color:var(--muted);border-color:var(--line-strong);box-shadow:none}
+:where([data-look="fun"]) .icon-button{border-radius:var(--r-m)}
+
+/* Chips: small labelled keys; the chosen one is yellow. */
+:where([data-look="fun"]) .chip{border:2px solid var(--edge);border-radius:8px;background:var(--surface);color:var(--ink);font-weight:650}
+:where([data-look="fun"]) .chip.active,:where([data-look="fun"]) .chip[aria-pressed="true"],:where([data-look="fun"]) .t-domains .chip[aria-pressed="true"]{background:var(--yellow);border-color:var(--edge);color:var(--bar-ink)}
+:where([data-look="fun"]) .me-page .chips .chip{border-radius:8px}
+
+/* Tabs: folder tabs on a rule. The open tab joins the window below it. */
+:where([data-look="fun"]) .segmented,:where([data-look="fun"]) .ruled-tabs{gap:4px;padding:0 2px;border-bottom:0;box-shadow:inset 0 -2px 0 var(--edge)}
+:where([data-look="fun"]) .segmented button,:where([data-look="fun"]) .ruled-tabs button{min-height:44px;padding:0 12px;border:2px solid var(--edge);border-radius:10px 10px 0 0;background:var(--surface-2);color:var(--muted);font-family:var(--sans);font-size:15px;font-weight:700;letter-spacing:0}
+:where([data-look="fun"]) .segmented button[aria-selected="true"],:where([data-look="fun"]) .ruled-tabs button[aria-selected="true"]{background:var(--bg);border-bottom-color:var(--bg);color:var(--ink);box-shadow:inset 0 4px 0 var(--orange)}
+:where([data-look="fun"]) .segmented button[aria-selected="true"]:after,:where([data-look="fun"]) .ruled-tabs button[aria-selected="true"]:after{display:none}
+:where([data-look="fun"]) .sub-nav button[aria-pressed="true"]{box-shadow:inset 0 -3px 0 var(--orange)}
+:where([data-look="fun"]) .atlas-page .tl .chips .chip[aria-pressed="true"]{box-shadow:inset 0 -3px 0 var(--orange)}
+:where([data-look="fun"]) .atlas-page .ruled-tabs{margin-top:12px}
+
+/* ---------- Forms ---------- */
+:where([data-look="fun"]) .input,:where([data-look="fun"]) .textarea,:where([data-look="fun"]) .select,:where([data-look="fun"]) input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="file"]),:where([data-look="fun"]) textarea,:where([data-look="fun"]) select{border:2px solid var(--edge);border-radius:var(--r-m);background:var(--surface);box-shadow:inset 2px 2px 0 var(--line)}
+:where([data-look="fun"]) .input:focus,:where([data-look="fun"]) .textarea:focus,:where([data-look="fun"]) .select:focus,:where([data-look="fun"]) input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="file"]):focus,:where([data-look="fun"]) textarea:focus,:where([data-look="fun"]) select:focus{outline:none;box-shadow:inset 2px 2px 0 var(--line),0 0 0 3px var(--blue)}
+:where([data-look="fun"]) input[type="checkbox"],:where([data-look="fun"]) input[type="radio"],:where([data-look="fun"]) input[type="range"]{accent-color:var(--orange)}
+:where([data-look="fun"]) input[type="file"]::file-selector-button{border:2px solid var(--edge);background:var(--surface);font-weight:650}
+:where([data-look="fun"]) button:focus-visible,:where([data-look="fun"]) a:focus-visible,:where([data-look="fun"]) summary:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+
+/* ---------- Windows ---------- */
+:where([data-look="fun"]) .card{background:var(--surface);border:2px solid var(--edge);border-radius:var(--r-l);box-shadow:var(--shadow-l)}
+:where([data-look="fun"]) .card.plain{background:none;border:0;border-top:2px solid var(--line);border-radius:0;box-shadow:none}
+:where([data-look="fun"]) .card.feature{border:2px solid var(--edge);box-shadow:var(--shadow-l)}
+:where([data-look="fun"]) .card.skeleton{background:none;border:0;box-shadow:none}
+/* Windows that carry a title bar drawn as their first line. */
+:where([data-look="fun"]) .t-chapter,:where([data-look="fun"]) .card.confirm,:where([data-look="fun"]) .s-feedback,:where([data-look="fun"]) .install-card{position:relative;padding:0 16px 16px;background:var(--surface);border:2px solid var(--edge);border-radius:var(--r-l);box-shadow:var(--shadow-l)}
+:where([data-look="fun"]) .t-chapter::before,:where([data-look="fun"]) .card.confirm::before,:where([data-look="fun"]) .install-card::before{content:"";display:block;height:36px;margin:0 -16px 14px;background:var(--yellow);border-bottom:2px solid var(--edge);border-radius:10px 10px 0 0}
+:where([data-look="fun"]) .t-chapter>.eyebrow:first-child{position:absolute;top:0;left:14px;right:14px;height:36px;margin:0;overflow:hidden;color:var(--bar-ink);font-size:13px;font-weight:750;letter-spacing:.01em;line-height:36px;text-transform:none;white-space:nowrap;text-overflow:ellipsis}
+:where([data-look="fun"]) .t-chapter>.eyebrow:first-child::first-letter{text-transform:uppercase}
+:where([data-look="fun"]) .t-chapter.t-resume::before{background:var(--pink)}
+:where([data-look="fun"]) .t-chapter h2{margin-top:2px}
+:where([data-look="fun"]) .t-chapter .primary,:where([data-look="fun"]) .t-chapter>.secondary{margin-top:6px}
+:where([data-look="fun"]) .card.confirm{padding-top:0;margin:16px 0}
+:where([data-look="fun"]) .card.confirm::before{background:var(--red)}
+:where([data-look="fun"]) .card.confirm .primary{margin-bottom:12px}
+:where([data-look="fun"]) .install-card::before{background:var(--blue)}
+
+/* The answer: a window whose title bar says right or wrong. */
+:where([data-look="fun"]) .s-feedback{margin:0 0 16px;padding:0 14px 14px}
+:where([data-look="fun"]) .s-verdict{display:flex;align-items:center;height:36px;margin:0 -14px 12px;padding:0 12px;background:var(--blue);border-bottom:2px solid var(--edge);border-radius:10px 10px 0 0;color:var(--bar-ink);font-size:12px;font-weight:800;letter-spacing:.1em}
+:where([data-look="fun"]) .s-feedback.is-right,:where([data-look="fun"]) .s-feedback.is-wrong{border-left-color:var(--edge)}
+:where([data-look="fun"]) .is-right>.s-verdict{background:var(--green);color:var(--bar-ink)}
+:where([data-look="fun"]) .is-wrong>.s-verdict{background:var(--red);color:var(--bar-ink)}
+:where([data-look="fun"]) .s-verdict svg{width:18px;height:18px;stroke-width:2.4}
+:where([data-look="fun"]) .s-feedback .s-more,:where([data-look="fun"]) .s-feedback details:last-child{border-bottom:0}
+
+/* Small information windows. */
+:where([data-look="fun"]) .toast{border:2px solid var(--edge);border-radius:var(--r-l);background:var(--surface);color:var(--ink);box-shadow:var(--shadow-l)}
+:where([data-look="fun"]) .toast .quiet{color:var(--ink)}
+:where([data-look="fun"]) dialog{border:2px solid var(--edge);border-radius:14px;background:var(--surface);box-shadow:5px 5px 0 var(--edge)}
+:where([data-look="fun"]) dialog::backdrop{background:rgb(22 19 29 / .45);backdrop-filter:none}
+html[data-look="fun"] .feedback-dialog.feedback-dialog{border:2px solid var(--edge);border-bottom:0;box-shadow:none}
+:where([data-look="fun"]) .banner{border:2px solid var(--edge);border-radius:var(--r-m);background:var(--accent-soft);box-shadow:var(--shadow)}
+:where([data-look="fun"]) .banner.warm{border-left-color:var(--edge);background:var(--hl)}
+:where([data-look="fun"]) .banner.error{border-left-color:var(--edge);background:var(--bad-soft)}
+:where([data-look="fun"]) .banner.warm .eyebrow{color:var(--ink)}
+
+/* Lists you pick from sit in a box; the rows inside keep hairlines. */
+:where([data-look="fun"]) .t-rows,:where([data-look="fun"]) .entity-list,:where([data-look="fun"]) .s-topics .s-unit-list{padding:0 14px;background:var(--surface);border:2px solid var(--edge);border-radius:var(--r-l);box-shadow:var(--shadow-l)}
+:where([data-look="fun"]) .t-rows>:last-child,:where([data-look="fun"]) .t-rows>:last-child .t-row,:where([data-look="fun"]) .entity-list>.entity-row:last-child{border-bottom:0}
+:where([data-look="fun"]) .entity-row{padding-left:0}
+:where([data-look="fun"]) .atlas-page .entity-list{margin-top:10px}
+:where([data-look="fun"]) .t-pick[aria-pressed="true"]{box-shadow:inset 4px 0 0 var(--orange);padding-left:12px}
+:where([data-look="fun"]) .atlas-tid .unit-row.picked,:where([data-look="fun"]) .atlas-kart .lens-switch[aria-pressed="true"],:where([data-look="fun"]) .atlas-kart .lens-option[aria-pressed="true"]{box-shadow:inset 4px 0 0 var(--orange)}
+:where([data-look="fun"]) .atlas-kart .lens-option[aria-pressed="true"],:where([data-look="fun"]) .atlas-tid .unit-row.picked strong{color:var(--ink)}
+
+/* Status panels and headline numbers sit in their own small windows. */
+:where([data-look="fun"]) .atlas-emner .unit-status{border:2px solid var(--edge);border-radius:var(--r-l);background:var(--surface);box-shadow:var(--shadow-l)}
+:where([data-look="fun"]) .ledger-stats .stat-row{border:2px solid var(--edge);border-radius:var(--r-m);background:var(--surface);overflow:hidden}
+:where([data-look="fun"]) .ledger-stats .stat,:where([data-look="fun"]) .ledger-stats .stat:first-child{padding:12px 12px 10px;border-left:2px solid var(--edge)}
+:where([data-look="fun"]) .ledger-stats .stat:first-child{border-left:0}
+
+/* Counts: a strip of cells with ink rules. */
+:where([data-look="fun"]) .t-counts,:where([data-look="fun"]) .s-results{background:var(--bg);border:2px solid var(--edge);border-radius:var(--r-m);overflow:hidden}
+:where([data-look="fun"]) .t-counts span,:where([data-look="fun"]) .s-results span{padding:8px 10px 8px;border-left:2px solid var(--edge)}
+:where([data-look="fun"]) .t-counts span:first-child,:where([data-look="fun"]) .s-results span:first-child{padding-left:10px}
+:where([data-look="fun"]) .t-counts strong{font-size:28px}
+:where([data-look="fun"]) .s-results{background:var(--surface)}
+
+/* ---------- Progress: segmented blocks in a framed track ---------- */
+:where([data-look="fun"]) .t-progress,:where([data-look="fun"]) .bar,:where([data-look="fun"]) .atlas-page .bar,:where([data-look="fun"]) .me-page .bar,:where([data-look="fun"]) .s-bar-track{height:14px;padding:2px;border:2px solid var(--edge);border-radius:6px;background:var(--track);overflow:hidden}
+:where([data-look="fun"]) .bar.small,:where([data-look="fun"]) .atlas-page .bar.small{height:12px}
+:where([data-look="fun"]) .t-progress>span,:where([data-look="fun"]) .bar>span,:where([data-look="fun"]) .atlas-page .bar>span,:where([data-look="fun"]) .me-page .bar>span,:where([data-look="fun"]) .s-bar-track>span{height:100%;border-radius:2px;background:repeating-linear-gradient(90deg,var(--orange) 0 7px,transparent 7px 10px)}
+:where([data-look="fun"]) .s-steps{gap:4px}
+:where([data-look="fun"]) .s-steps span{height:12px;border:2px solid var(--edge);border-radius:4px;background:var(--track)}
+:where([data-look="fun"]) .s-steps .done{background:var(--yellow)}
+:where([data-look="fun"]) .s-steps .independent{background:var(--orange)}
+:where([data-look="fun"]) .s-steps .active{background:var(--surface);box-shadow:inset 0 0 0 2px var(--orange)}
+:where([data-look="fun"]) .s-count{font-family:var(--sans);font-size:14px}
+:where([data-look="fun"]) .progress-track{height:12px;border:2px solid var(--edge);background:var(--track)}
+:where([data-look="fun"]) .progress-fill{background:var(--orange)}
+
+/* Status dots on the learning path. */
+:where([data-look="fun"]) .s-dot,:where([data-look="fun"]) .unit-dot{border-width:2px;border-color:var(--edge)}
+:where([data-look="fun"]) [data-status="started"]>.s-dot,:where([data-look="fun"]) [data-status="practiced"]>.s-dot,:where([data-look="fun"]) .unit-row[data-status="started"] .unit-dot,:where([data-look="fun"]) .unit-row[data-status="practiced"] .unit-dot{border-color:var(--edge);background:linear-gradient(90deg,var(--orange) 50%,transparent 50%)}
+:where([data-look="fun"]) [data-status="grounded"]>.s-dot,:where([data-look="fun"]) .unit-row[data-status="grounded"] .unit-dot{border-color:var(--edge);background:linear-gradient(90deg,var(--orange) 75%,transparent 75%)}
+:where([data-look="fun"]) [data-status="complete"]>.s-dot,:where([data-look="fun"]) [data-status="secure"]>.s-dot,:where([data-look="fun"]) .unit-row[data-status="complete"] .unit-dot,:where([data-look="fun"]) .unit-row[data-status="secure"] .unit-dot{border-color:var(--edge);background:var(--orange)}
+:where([data-look="fun"]) [data-status="secure"]>.s-dot,:where([data-look="fun"]) .unit-row[data-status="secure"] .unit-dot{box-shadow:0 0 0 3px var(--yellow)}
+
+/* ---------- Answer controls ---------- */
+:where([data-look="fun"]) .s-choice{border:2px solid var(--edge);background:var(--surface);box-shadow:var(--shadow);font-weight:600}
+:where([data-look="fun"]) .s-choice-key{border:2px solid var(--edge);border-radius:7px;background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:800}
+:where([data-look="fun"]) .s-choice[aria-pressed="true"]{border-color:var(--edge);background:var(--hl);transform:translate(2px,2px);box-shadow:1px 1px 0 var(--edge)}
+:where([data-look="fun"]) .s-choice[aria-pressed="true"] .s-choice-key{background:var(--orange);border-color:var(--edge);color:var(--bar-ink)}
+:where([data-look="fun"]) .s-choice:disabled{box-shadow:none;transform:none}
+:where([data-look="fun"]) .s-choice.is-correct{border-color:var(--edge);background:var(--ok-soft)}
+:where([data-look="fun"]) .s-choice.is-correct .s-choice-key{background:var(--green);border-color:var(--edge);color:var(--bar-ink)}
+:where([data-look="fun"]) .s-choice.is-wrong{border-color:var(--edge);background:var(--bad-soft)}
+:where([data-look="fun"]) .s-choice.is-wrong .s-choice-key{background:var(--red);border-color:var(--edge);color:var(--bar-ink)}
+:where([data-look="fun"]) .s-choice.is-removed:disabled{border-style:dashed}
+:where([data-look="fun"]) .session-view .s-input:focus{border-color:var(--edge)}
+:where([data-look="fun"]) .s-hint{border:2px solid var(--edge);border-radius:var(--r-m);background:var(--hl)}
+:where([data-look="fun"]) .s-hint-step{color:var(--ink)}
+:where([data-look="fun"]) .s-alert{border:2px solid var(--edge);border-radius:var(--r-m);background:var(--hl)}
+:where([data-look="fun"]) .s-retry{border:2px solid var(--edge);border-radius:7px;background:var(--pink);color:var(--bar-ink);font-weight:700}
+:where([data-look="fun"]) .s-context,:where([data-look="fun"]) .s-keys,:where([data-look="fun"]) .q-anchor,:where([data-look="fun"]) .question-context{border-left:4px solid var(--orange)}
+:where([data-look="fun"]) .s-keys .s-label{color:var(--ink)}
+:where([data-look="fun"]) .s-key-list li::before{color:var(--ink);font-weight:800}
+:where([data-look="fun"]) .s-yours{border:2px dashed var(--line-strong);background:transparent}
+:where([data-look="fun"]) .s-rate{border:2px solid var(--edge);background:var(--surface);box-shadow:var(--shadow);border-radius:var(--r-m)}
+:where([data-look="fun"]) .rating-button,:where([data-look="fun"]) .level-option,:where([data-look="fun"]) .format-choice,:where([data-look="fun"]) .flag-choice,:where([data-look="fun"]) .q-replay,:where([data-look="fun"]) .estimate-nudge button,:where([data-look="fun"]) .session-view .estimate-nudge button,:where([data-look="fun"]) .neighbour-grid button,:where([data-look="fun"]) .session-view .neighbour-grid button{border:2px solid var(--edge);border-radius:var(--r-m);background:var(--surface);color:var(--ink);box-shadow:var(--shadow)}
+:where([data-look="fun"]) .level-option[aria-pressed="true"],:where([data-look="fun"]) .format-choice[aria-pressed="true"],:where([data-look="fun"]) .flag-choice[aria-pressed="true"],:where([data-look="fun"]) .secondary[aria-pressed="true"],:where([data-look="fun"]) .lens-switch[aria-pressed="true"],:where([data-look="fun"]) .t-builder .level-option[aria-pressed="true"],:where([data-look="fun"]) .t-builder .format-choice[aria-pressed="true"]{border-color:var(--edge);background:var(--hl);transform:translate(2px,2px);box-shadow:1px 1px 0 var(--edge)}
+:where([data-look="fun"]) .level-option:disabled,:where([data-look="fun"]) .format-choice:disabled{box-shadow:none}
+:where([data-look="fun"]) .atlas-kart .world-formats .format-choice,:where([data-look="fun"]) .atlas-kart .lens-switch{box-shadow:none}
+:where([data-look="fun"]) .atlas-kart .lens-switch[aria-pressed="true"]{background:transparent;transform:none}
+
+/* Ordering, matching and maps. */
+:where([data-look="fun"]) .sort-item,:where([data-look="fun"]) .session-view .sort-item{border:2px solid var(--edge);background:var(--surface);box-shadow:var(--shadow)}
+:where([data-look="fun"]) .sort-list.dragging .sort-item.lifted{border-color:var(--edge);background:var(--hl);box-shadow:6px 6px 0 var(--edge)}
+:where([data-look="fun"]) .session-view .sort-index{color:var(--ink);font-weight:800}
+:where([data-look="fun"]) .session-view .sort-item.is-right{border-color:var(--edge);border-left-width:2px;background:var(--ok-soft);box-shadow:none}
+:where([data-look="fun"]) .session-view .sort-item.is-wrong{border-color:var(--edge);border-left-width:2px;background:var(--bad-soft);box-shadow:none}
+:where([data-look="fun"]) .match-item,:where([data-look="fun"]) .session-view .match-item{border:2px solid var(--edge);background:var(--surface);box-shadow:var(--shadow)}
+:where([data-look="fun"]) .match-item[aria-pressed="true"],:where([data-look="fun"]) .session-view .match-item[aria-pressed="true"]{border-color:var(--edge);background:var(--hl);box-shadow:1px 1px 0 var(--edge)}
+:where([data-look="fun"]) .match-item.linked{border-color:var(--edge)}
+:where([data-look="fun"]) .match-item:disabled{box-shadow:none}
+:where([data-look="fun"]) .match-dot{border-color:var(--edge);background:var(--surface)}
+:where([data-look="fun"]) .match-item.linked .match-dot,:where([data-look="fun"]) .match-item[aria-pressed="true"] .match-dot{background:var(--orange)}
+:where([data-look="fun"]) .match-lines path{stroke:var(--edge)}
+:where([data-look="fun"]) .match-lines circle{fill:var(--edge)}
+:where([data-look="fun"]) .pz-map,:where([data-look="fun"]) .map-board,:where([data-look="fun"]) .session-view .pz-map,:where([data-look="fun"]) .session-view .map-board{border:2px solid var(--edge);border-radius:var(--r-l);background:color-mix(in srgb,var(--blue) 24%,var(--bg))}
+:where([data-look="fun"]) .pz-map svg path{stroke:color-mix(in srgb,var(--edge) 55%,transparent)}
+:where([data-look="fun"]) .pz-map svg path.selected{fill:var(--orange);stroke:var(--edge)}
+:where([data-look="fun"]) .pz-controls button{border:2px solid var(--edge);background:var(--surface);box-shadow:2px 2px 0 var(--edge);-webkit-backdrop-filter:none;backdrop-filter:none}
+:where([data-look="fun"]) .pz-controls button:active:not(:disabled){transform:translate(1px,1px);box-shadow:1px 1px 0 var(--edge)}
+:where([data-look="fun"]) .map-pill{border:2px solid var(--edge);background:var(--surface);box-shadow:2px 2px 0 var(--edge);-webkit-backdrop-filter:none;backdrop-filter:none}
+/* The atlas map runs to the window's edges. */
+:where([data-look="fun"]) .atlas-kart .world-map.pz-map{width:calc(100% + var(--gutter)*2);margin:0 calc(var(--gutter)*-1);border-width:2px 0;border-radius:0}
+:where([data-look="fun"]) .atlas-kart .world-map.projected{background:var(--bg)}
+:where([data-look="fun"]) .atlas-kart .world-map path.map-sphere{fill:color-mix(in srgb,var(--blue) 24%,var(--bg));stroke:var(--edge)}
+:where([data-look="fun"]) .atlas-kart .pz-controls{border:2px solid var(--edge);border-radius:var(--r-m);background:var(--surface);box-shadow:var(--shadow);-webkit-backdrop-filter:none;backdrop-filter:none}
+:where([data-look="fun"]) .atlas-kart .pz-controls button{border:0;box-shadow:none;background:transparent}
+:where([data-look="fun"]) .atlas-kart .pz-controls button+button{border-top:2px solid var(--edge)}
+:where([data-look="fun"]) .atlas-kart .map-pill{border:0;background:transparent;box-shadow:none}
+:where([data-look="fun"]) .atlas-kart .map-pill:before{border:2px solid var(--edge);border-radius:10px;background:var(--surface);box-shadow:2px 2px 0 var(--edge);-webkit-backdrop-filter:none;backdrop-filter:none}
+:where([data-look="fun"]) .atlas-kart .layer-pill:before{border-radius:10px}
+:where([data-look="fun"]) .atlas-kart .lens-menu,:where([data-look="fun"]) .atlas-kart .projection-menu{border:2px solid var(--edge);border-radius:var(--r-l);background:var(--surface);box-shadow:var(--shadow-l);-webkit-backdrop-filter:none;backdrop-filter:none}
+:where([data-look="fun"]) .atlas-kart .link-card{border:2px solid var(--edge);border-radius:var(--r-l);background:var(--surface);box-shadow:var(--shadow-l);-webkit-backdrop-filter:none;backdrop-filter:none}
+:where([data-look="fun"]) .atlas-kart .layer-option .switch{border:2px solid var(--edge);background:var(--surface-2)}
+:where([data-look="fun"]) .atlas-kart .layer-option .switch:after{top:1px;left:1px;border:2px solid var(--edge);box-shadow:none;background:var(--paper)}
+:where([data-look="fun"]) .atlas-kart .layer-option[aria-checked="true"] .switch{background:var(--orange)}
+:where([data-look="fun"]) .atlas-kart svg.pill-icon{color:var(--ink)}
+
+/* Listening: a big round play key and a piano roll. */
+:where([data-look="fun"]) .q-play{border:2px solid var(--edge);background:var(--orange);color:var(--bar-ink);box-shadow:var(--shadow-l)}
+:where([data-look="fun"]) .q-ring .q-track{stroke:rgb(31 26 43 / .2)}
+:where([data-look="fun"]) .q-ring .q-progress{stroke:var(--bar-ink)}
+:where([data-look="fun"]) .q-melody-play{border:2px solid var(--edge);background:var(--orange);color:var(--bar-ink);box-shadow:var(--shadow);font-weight:750}
+:where([data-look="fun"]) .q-roll{border:2px solid var(--edge);background:var(--surface-2)}
+:where([data-look="fun"]) .q-roll rect{fill:color-mix(in srgb,var(--blue) 50%,var(--surface))}
+:where([data-look="fun"]) .q-roll rect.active{fill:var(--orange)}
+
+/* Estimating a year. */
+:where([data-look="fun"]) .estimate-line{height:8px;border:2px solid var(--edge);background:var(--track);top:29px}
+:where([data-look="fun"]) .estimate-pin{background:var(--orange);border:2px solid var(--edge);box-shadow:2px 2px 0 var(--edge)}
+
+/* Artwork in a picture frame. */
+:where([data-look="fun"]) .artwork-figure img,:where([data-look="fun"]) .session-view .artwork-figure img{padding:6px;border:2px solid var(--edge);border-radius:var(--r-m);background:var(--surface);box-shadow:var(--shadow)}
+:where([data-look="fun"]) .atlas-entity .artwork-figure img{border-radius:var(--r-m)}
+
+/* Loading. */
+:where([data-look="fun"]) .skeleton span{background:var(--surface-2);border-radius:6px}
+
+@media(prefers-reduced-motion:reduce){
+  :where([data-look="fun"]) .s-choice[aria-pressed="true"],:where([data-look="fun"]) .level-option[aria-pressed="true"],:where([data-look="fun"]) .format-choice[aria-pressed="true"]{transition:none}
+}

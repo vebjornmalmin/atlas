@@ -3,6 +3,12 @@
   import '../lib/design.css';
   import '../lib/styles/today.css';
   import '../lib/styles/atlas-me.css';
+  import '../lib/styles/desktop.css';
+  import '../lib/styles/boring.css';
+  import { applyLook, storedLook } from '../lib/look.js';
+
+  // Show the chosen look before the database opens; the page confirms it from the saved preferences.
+  if (typeof document !== 'undefined') applyLook(storedLook());
 
   let { children } = $props();
   let active = $state('today');

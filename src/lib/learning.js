@@ -10,7 +10,7 @@ const scheduler = fsrs({ request_retention: 0.9, enable_fuzz: false, enable_shor
 export const DEFAULT_PREFERENCES = {
   id: 'preferences', collectionIds: [], dailyMinutes: 5, newRatio: 0.4,
   depth: 'foundation', geography: 'global', objective: 'mixed', breadth: 'broad',
-  subject: 'all', fromYear: '', toYear: '', theme: 'system', reminderTime: '09:00',
+  subject: 'all', fromYear: '', toYear: '', theme: 'system', look: 'fun', reminderTime: '09:00',
   relevance: { ...DEFAULT_RELEVANCE }
 };
 

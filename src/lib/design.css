@@ -1,4 +1,6 @@
 /* Atlas design system: an editorial catalogue. Paper and ink, deep green, one warm accent.
+   This is the Normal look. The other looks are layered on top, chosen with data-look on <html>:
+   styles/desktop.css for Morsom (data-look="fun") and styles/boring.css for Kjedelig (data-look="boring").
    Tokens first, then base, shell, shared components, then the per-feature rules further down. */
 :root{
   --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",sans-serif;

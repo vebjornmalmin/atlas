@@ -1,30 +1,11 @@
-import base64
 import json
 from pathlib import Path
-import struct
-import zlib
 
 root = Path(__file__).parent
 version = json.loads((root / 'package.json').read_text())['version']
 public = root / 'public'
 
-def png(size):
-    def chunk(kind, data):
-        return struct.pack('!I', len(data)) + kind + data + struct.pack('!I', zlib.crc32(kind + data) & 0xffffffff)
-    rows = bytearray()
-    for y in range(size):
-        rows.append(0)
-        for x in range(size):
-            u, v = x / size, y / size
-            left = abs(u - (0.5 - (v - 0.28) * 0.4)) < 0.025
-            right = abs(u - (0.5 + (v - 0.28) * 0.4)) < 0.025
-            bar = 0.53 < v < 0.58 and 0.39 < u < 0.61
-            mark = (0.28 < v < 0.72 and (left or right)) or bar
-            rows.extend((243, 242, 232) if mark else (53, 77, 60))
-    return b'\x89PNG\r\n\x1a\n' + chunk(b'IHDR', struct.pack('!IIBBBBB', size, size, 8, 2, 0, 0, 0)) + chunk(b'IDAT', zlib.compress(rows)) + chunk(b'IEND', b'')
-
-for size in (192, 512):
-    (public / f'icon-{size}.png').write_bytes(png(size))
+# The home screen icons (public/icon-192.png, public/icon-512.png) are checked in, drawn from scripts/app-icon.svg.
 import hashlib
 import re
 import html

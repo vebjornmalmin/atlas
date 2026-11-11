@@ -4,7 +4,37 @@ Offline kunnskapstrening på norsk, laget for iPhone 17 Pro.
 
 Live app: https://atlas-first-app.atlas-memory.workers.dev
 
-## Gjeldende utgave — 1.9.1: Sikkerhetskopier som kan leses tilbake, og rettelser etter en gjennomgang
+## Gjeldende utgave — 1.10.0: Tre stiler – Morsom, Normal og Kjedelig, og et nytt ikon
+
+Under Deg → Innstillinger → Visning velger du **Stil**. Funksjoner, spørsmål, retting og data er like i alle tre; bare utseendet endres, med en gang du velger. Valget lagres på enheten sammen med de andre innstillingene og gjelder også i mørk modus.
+
+- **Morsom** (standard) er et nytt, lekent og gammeldags skrivebord, beskrevet under.
+- **Normal** er det rolige uttrykket Atlas hadde før: papir og blekk, dyp grønn og serif-overskrifter.
+- **Kjedelig** er helt uten pynt: Arial, svart på hvitt, tynne grå linjer og firkantede hjørner. Ingen skygger, uskarphet, bevegelse eller sperrede versaler. Alt er grått; bare riktig og feil beholder en dempet grønn og rød, fordi de bærer mening.
+
+### Morsom: et skrivebord med vinduer
+
+- **Appen er ett vindu på et skrivebord.** Kremfarget vindu med blekkfarget kant og hard skygge på en varm grå flate. Toppfeltet er en blå tittellinje med Atlas-merket og tilbakemeldingsknappen som tittelknapp. Fanelinjen er en oppgavelinje der fanen du står på, er en gul, nedtrykt tast.
+- **Faste roller for fargene.** Oransje er den ene hovedhandlingen på skjermen. Gul er det som er valgt (fane, nivå, form, flervalgssvar). Blå er lenker og tittellinjer. Rosa og gult skiller vinduer fra hverandre (påbegynt og dagens kapittel). Grønt og rødt brukes bare for riktig og feil.
+- **Det du kan trykke på, ser trykkbart ut.** Knapper, flervalg, sorteringskort, koblinger, nivåer og former har kant og hard skygge og trykkes inn når de velges. Lesetekst, forklaringer og lister forblir rolige: hårlinjer, ingen skygger.
+- **Små vinduer med tittellinje** for dagens kapittel, påbegynte quizer og tilbakemeldingen etter svar. Tittellinjen sier «Riktig» i grønt eller «Ikke helt» i rødt.
+- **Fremdrift som blokker**: rammede spor med oransje segmenter, og ett felt per spørsmål i økten. Seksjonsnavn er små navnelapper. Faner i Atlas og Deg er arkfaner.
+- **Avrundet skrift** (SF Pro Rounded på iPhone) i stedet for serif. Mørk modus bruker samme lyse tittelfarger på et lilla-grått skrivebord.
+
+### Nytt hjem-skjerm-ikon
+
+Ikonet er et par gamle, runde briller med svart innfatning, sett litt fra siden med stengene synlige, og med en globus i hvert glass, på gul bunn. Det er ett ikon for alle tre stilene: iPhone lagrer ikonet når appen legges på hjem-skjermen, og en nettapp kan ikke bytte det senere. Har du Atlas på hjem-skjermen fra før, må appen fjernes og legges til på nytt for å få det nye ikonet. Tegningen ligger i `scripts/app-icon.svg`, og `public/icon-192.png` og `public/icon-512.png` er laget fra den.
+
+Designbeslutninger som skal holde:
+
+- Stilen settes som `data-look` på `<html>` (`fun`, `normal`, `boring`) av `src/lib/look.js`. `src/lib/design.css` er Normal. `src/lib/styles/desktop.css` (Morsom) og `src/lib/styles/boring.css` (Kjedelig) lastes etter den, og hver regel der er avgrenset til sin stil med `:where([data-look=…])`, så de aldri lekker inn i de andre og ikke endrer hvor tungt reglene veier.
+- Hver stil har sine egne fargetokens for lyst og mørkt i sin egen fil. Morsoms tittelfarger (`--blue`, `--orange`, `--yellow`, `--pink`, `--green`, `--red`) er like i lyst og mørkt, og tekst på dem er alltid `--bar-ink`.
+- En kopi av valget ligger i `localStorage`, så riktig stil vises før databasen er åpnet; statuslinjefargen følger stilen.
+- I Morsom gis skygger og kanter bare til ting man handler med; lesestoff får ikke skygge.
+
+Kontrollert i iPhone 17 Pro-simulatoren i den installerte hjem-skjerm-appen mot produksjonsbygget kjørt lokalt, i lyst og mørkt, også etter at appen ble lukket og åpnet igjen. Morsom: I dag, oppdateringsbanneret, innføring, flervalg med riktig og feil svar, tidslinje med sortering og retting, Lag en quiz, Atlas (Emner, Tid, Kart) og Deg. Bytte mellom alle tre stilene i Innstillinger; Normal og Kjedelig i Innstillinger, I dag og en tidslinje med retting; Kjedelig beholdt etter lukking og ny åpning, midt i en quiz. Det nye ikonet ble lagt på hjem-skjermen fra Safari; appen åpnet fra det, ble lukket helt og åpnet igjen på samme fane. 283 automatiske tester består, og produksjonsbygget lages uten feil.
+
+## 1.9.1: Sikkerhetskopier som kan leses tilbake, og rettelser etter en gjennomgang
 
 Før 1.9.0 ble publisert, ble de siste endringene og resten av appen lest gjennom: oppstart, lagring, oppdatering, øktene og alle oppgavetypene. Dette ble rettet:
 

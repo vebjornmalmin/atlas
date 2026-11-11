@@ -36,6 +36,7 @@
   import { openDatabase, all, get, put, installPackage, recordReview, logEvent, exportDatabase, restoreDatabase, validateBackup, clearLogs, transaction } from '../lib/storage.js';
   import { validatePackage, contentHash, readiness } from '../lib/content.js';
   import { readUiState, saveUiState } from '../lib/ui-state.js';
+  import { LOOKS, applyLook } from '../lib/look.js';
   import { DEFAULT_PREFERENCES, selectSession, selectPracticeSession, scheduleReview, stateForTarget, ratingIntervals, memorySummary, reminderCalendar, targetMatches } from '../lib/learning.js';
   import { checkAnswer, makeRecognitionOptions, buildRecognitionIndex, hasRecognitionOptions, buildTimelineExercise, gradeTimeline, createMapExercise, gradeMapSelection } from '../lib/exercises.js';
 
@@ -406,6 +407,8 @@
     document.documentElement.dataset.theme = record.theme;
     try { await put(db,'settings',record); } catch (failure) { await recordError('preferences',failure); }
   }
+  // The look changes the moment it is picked, without waiting for the save.
+  $effect(()=>{ const look=prefs.look; if (prefsReady) applyLook(look); });
   function flushPreferences() { clearTimeout(prefsTimer); if (prefsPending) void storePreferences(prefsPending); }
   $effect(()=>{
     const snapshot = JSON.stringify(prefs);
@@ -1006,7 +1009,8 @@
 
     <div class="settings-list">
       <section class="set-group"><h2 class="group-title">Visning</h2><div class="set-rows">
-      <div class="settings-row"><label for="theme">Utseende</label><select id="theme" class="select" bind:value={prefs.theme}><option value="system">Følg enheten</option><option value="light">Lyst</option><option value="dark">Mørkt</option></select></div>
+      <div class="settings-row"><div><label for="look">Stil</label><p>{LOOKS.find(l=>l.id===prefs.look)?.note}</p></div><select id="look" class="select" bind:value={prefs.look}>{#each LOOKS as l}<option value={l.id}>{l.label}</option>{/each}</select></div>
+      <div class="settings-row"><label for="theme">Lyst eller mørkt</label><select id="theme" class="select" bind:value={prefs.theme}><option value="system">Følg enheten</option><option value="light">Lyst</option><option value="dark">Mørkt</option></select></div>
       </div></section>
       <section class="set-group"><h2 class="group-title">Påminnelse</h2><div class="set-rows">
       <div class="settings-row"><div><label for="reminder">Daglig påminnelse</label><p>Legges i kalenderen din</p></div><input id="reminder" class="input" type="time" bind:value={prefs.reminderTime} onchange={()=>run(()=>savePreferences(true))}></div>

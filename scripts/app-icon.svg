@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+<defs>
+<filter id="sh" x="-10%" y="-10%" width="130%" height="130%">
+<feOffset in="SourceAlpha" dx="12" dy="12" result="o"/>
+<feFlood flood-color="#1f1a2b" flood-opacity="0.3"/>
+<feComposite in2="o" operator="in"/>
+<feMerge>
+<feMergeNode/>
+<feMergeNode in="SourceGraphic"/>
+</feMerge>
+</filter>
+</defs>
+<rect width="512" height="512" fill="#f4ba3e"/>
+<g filter="url(#sh)">
+<g transform="translate(256 272) scale(.86) translate(-272 -290)">
+<path d="M68.0 320 C110 270 166 236 230 218" fill="none" stroke="#1f1a2b" stroke-width="16" stroke-linecap="round"/>
+<path d="M68.0 320 C110 270 166 236 230 218" fill="none" stroke="#4a4458" stroke-width="4" stroke-linecap="round" transform="translate(-2 -3)"/>
+<path d="M444.0 320 C480 286 500 258 514 234 Q522 222 520 248" fill="none" stroke="#1f1a2b" stroke-width="16" stroke-linecap="round"/>
+<path d="M444.0 320 C480 286 500 258 514 234 Q522 222 520 248" fill="none" stroke="#4a4458" stroke-width="4" stroke-linecap="round" transform="translate(-3 -2)"/>
+<defs>
+<clipPath id="cl">
+<circle cx="158" cy="322" r="60"/>
+</clipPath>
+<clipPath id="gl">
+<circle cx="158" cy="322" r="60"/>
+</clipPath>
+</defs>
+<g clip-path="url(#cl)">
+<rect x="98" y="262" width="120" height="120" fill="#d5e7f3"/>
+<circle cx="158" cy="322" r="60" fill="#3d97d3"/>
+<g clip-path="url(#gl)">
+<g transform="translate(158 322) scale(0.60)" fill="#5fbf86" stroke="#1f1a2b" stroke-width="8" stroke-linejoin="round">
+<path d="M-82 -60 C-55 -88 -10 -84 -4 -62 C2 -40 -22 -32 -26 -10 C-30 14 -56 22 -70 4 C-84 -14 -104 -36 -82 -60 Z"/>
+<path d="M18 4 C40 -10 72 0 84 22 C96 48 70 82 44 92 C26 98 16 62 22 44 C26 28 4 16 18 4 Z"/>
+<path d="M36 -76 C52 -86 72 -78 68 -60 C64 -46 42 -46 36 -58 Z"/>
+</g>
+<g fill="none" stroke="#1f1a2b" stroke-width="5" opacity=".55">
+<ellipse cx="158" cy="322" rx="27.0" ry="60"/>
+<line x1="98" y1="322" x2="218" y2="322"/>
+</g>
+</g>
+<circle cx="158" cy="322" r="60" fill="none" stroke="#1f1a2b" stroke-width="9"/>
+<rect x="98" y="262" width="120" height="120" fill="#1f1a2b" opacity=".1"/>
+<path d="M172 252 L196 252 L124 392 L100 392 Z" fill="#fbf6ec" opacity=".45"/>
+<path d="M208 252 L218 252 L146 392 L136 392 Z" fill="#fbf6ec" opacity=".35"/>
+</g>
+<defs>
+<clipPath id="cr">
+<circle cx="354" cy="322" r="60"/>
+</clipPath>
+<clipPath id="gr">
+<circle cx="354" cy="322" r="60"/>
+</clipPath>
+</defs>
+<g clip-path="url(#cr)">
+<rect x="294" y="262" width="120" height="120" fill="#d5e7f3"/>
+<circle cx="354" cy="322" r="60" fill="#3d97d3"/>
+<g clip-path="url(#gr)">
+<g transform="translate(354 322) scale(0.60)" fill="#5fbf86" stroke="#1f1a2b" stroke-width="8" stroke-linejoin="round">
+<path d="M-82 -60 C-55 -88 -10 -84 -4 -62 C2 -40 -22 -32 -26 -10 C-30 14 -56 22 -70 4 C-84 -14 -104 -36 -82 -60 Z"/>
+<path d="M18 4 C40 -10 72 0 84 22 C96 48 70 82 44 92 C26 98 16 62 22 44 C26 28 4 16 18 4 Z"/>
+<path d="M36 -76 C52 -86 72 -78 68 -60 C64 -46 42 -46 36 -58 Z"/>
+</g>
+<g fill="none" stroke="#1f1a2b" stroke-width="5" opacity=".55">
+<ellipse cx="354" cy="322" rx="27.0" ry="60"/>
+<line x1="294" y1="322" x2="414" y2="322"/>
+</g>
+</g>
+<circle cx="354" cy="322" r="60" fill="none" stroke="#1f1a2b" stroke-width="9"/>
+<rect x="294" y="262" width="120" height="120" fill="#1f1a2b" opacity=".1"/>
+<path d="M368 252 L392 252 L320 392 L296 392 Z" fill="#fbf6ec" opacity=".45"/>
+<path d="M404 252 L414 252 L342 392 L332 392 Z" fill="#fbf6ec" opacity=".35"/>
+</g>
+<g fill="none" stroke="#1f1a2b" stroke-width="24">
+<circle cx="158" cy="322" r="72.0"/>
+<circle cx="354" cy="322" r="72.0"/>
+</g>
+<path d="M226 276 Q256 240 286 276 L282 300 Q256 270 230 300 Z" fill="#1f1a2b" stroke="#1f1a2b" stroke-width="6" stroke-linejoin="round"/>
+<path d="M80.0 314 h-14 v18 h14 Z M432.0 314 h14 v18 h-14 Z" fill="#1f1a2b" stroke="#1f1a2b" stroke-width="6" stroke-linejoin="round"/>
+<g fill="none" stroke="#4a4458" stroke-width="4" stroke-linecap="round">
+<path d="M100 270 A72.0 72.0 0 0 1 184 254.0"/>
+<path d="M296 270 A72.0 72.0 0 0 1 380 254.0"/>
+<path d="M234 270 Q256 248 278 270"/>
+</g>
+<g fill="#cfc6b8">
+<circle cx="74.0" cy="320" r="3"/>
+<circle cx="74.0" cy="328" r="3"/>
+<circle cx="438.0" cy="320" r="3"/>
+<circle cx="438.0" cy="328" r="3"/>
+</g>
+</g>
+</g>
+</svg>
