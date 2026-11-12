@@ -3,6 +3,7 @@
   import '../lib/design.css';
   import '../lib/styles/today.css';
   import '../lib/styles/atlas-me.css';
+  import '../lib/styles/quizoff.css';
   import '../lib/styles/desktop.css';
   import '../lib/styles/boring.css';
   import { applyLook, storedLook } from '../lib/look.js';

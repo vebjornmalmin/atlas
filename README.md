@@ -4,6 +4,50 @@ Offline kunnskapstrening på norsk, laget for iPhone 17 Pro.
 
 Live app: https://atlas-first-app.atlas-memory.workers.dev
 
+## Neste utgave — 1.11.0: Quiz-off mot venner (ikke publisert ennå)
+
+**Quiz-off** er en direkte quiz for 2–8 spillere, hver på sin telefon. Den ligger på I dag under «Øv fritt».
+
+- **Start og bli med.** Én spiller starter et spill og får en kode på fire bokstaver. I lobbyen står koden, en QR-kode og lenken til spillet. De andre i rommet retter kameraet mot QR-koden og trykker på lenken; er de et annet sted, sender verten lenken med «Inviter» (delingsmenyen) eller «Kopier lenke». Lenken åpner quiz-off rett på «Bli med i spillet ABCD»: skriv navn, trykk én gang. Koden kan fortsatt skrives inn i appen.
+- **Verten velger** fagområde (eller blandet), 5, 10 eller 15 spørsmål, 15, 20 eller 30 sekunder per spørsmål og form: flervalg, flervalg og skriving, eller med forklaringer.
+- **Alle får samme spørsmål samtidig**, med nedtelling. Man svarer én gang. Riktig svar gir 100 poeng pluss inntil 50 for fart.
+- **Med forklaringer** er omtrent hvert femte spørsmål et «forklar hvorfor»-spørsmål (minst ett, aldri det første). Alle skriver en forklaring på høyst 400 tegn og har 60 sekunder, uansett tiden verten valgte.
+- **Så stemmer spillerne.** Alle ser fasiten og hva et godt svar bør ha med, og deretter svarene uten navn. Hver velger det svaret som ligger nærmest fasiten, på 30 sekunder. Eget svar står der, merket «Ditt svar», men kan ikke velges. Én stemme, og den kan ikke endres. Også den som ikke svarte, stemmer. Mens man venter, ser man hvem som har stemt, men ikke på hvem.
+- **Svaret med flest stemmer vinner** 150 poeng, like mye som det beste svaret på et vanlig spørsmål. Deler flere svar flest stemmer, vinner alle. Svarte bare én, vinner det svaret uten stemming; svarte ingen, får ingen poeng. Avsløringen viser hvem som skrev hva, stemmene, vinneren, fasiten og forklaringen.
+- **Etter hver runde** vises riktig svar, forklaringen, hva alle svarte og stillingen. Spillet går videre av seg selv etter 20 sekunder («Neste spørsmål om 14 s»), eller før hvis alle har trykket «Neste».
+- **Spillet tåler at telefonen sovner.** Lukkes appen eller faller nettet ut, kommer spilleren tilbake til samme spørsmål. En runde venter til tiden er ute på en spiller som falt ut underveis.
+- **Spørsmålene** er flervalg og korte tekstsvar fra kunnskapskjernen: 1279 av de 1520 kortene, og med forklaringer også de 120 forklaringskortene. Hint, «Jeg vil lære dette først» og «Godkjenn svaret mitt» finnes ikke i quiz-off, og svarene lagres ikke i læringshistorikken.
+
+Slik er det bygd: ett lite rom på Cloudflare per spill (en Durable Object) nummererer hendelsene og holder klokken. Hver telefon lagrer hele hendelsesloggen og regner ut spillet selv, og retter svarene med Atlas' vanlige rettekode. Derfor må alle ha samme utgave av appen. Rommet holder svarene tilbake til runden er lukket og måler svartiden selv. Navn, svar og poeng slettes fra rommet 30 minutter etter spillet. Protokollen, reglene, kostnaden og beslutningene står i `docs/quiz-off.md`.
+
+Beslutninger som skal holde:
+
+- Spilltilstanden ligger på hver telefon som en nummerert hendelseslogg; rommet bestemmer bare rekkefølge og tid.
+- Quiz-off bruker bare kort som følger med kunnskapspakken, og flervalg bare med kortets egne svaralternativer, slik at alle telefoner viser det samme.
+- En oppdatering av appen tilbys først når spillet er over.
+- Lenken er appens egen adresse med koden (`/?quizoff=ABCD`) og inneholder ikke noe annet. Parameteren fjernes fra adressen så snart appen har lest den. Er telefonen allerede med i et annet spill, beholdes det til spilleren selv velger å forlate det.
+- På iPhone åpnes en lenke alltid i Safari, ikke i hjem-skjerm-appen, og spillet havner der. Det er godtatt fordi et spill er kort og ikke rører læringshistorikken. En skanner inne i appen står på listen over senere arbeid.
+- QR-koden lages i appen uten bibliotek (`src/lib/quizoff/qr.js`) og vises alltid som mørkt på hvitt med hvit kant, også i mørk modus. Den er lest riktig av en uavhengig leser for alle versjonene som brukes.
+- `wrangler.toml` har nå et Worker-skript (`worker/index.js`) for `/api/*`. Resten serveres fortsatt som statiske filer uten at Workeren kjøres.
+- Forklaringer avgjøres av spillernes stemmer, ikke av appen. Rommet teller ikke stemmene; det tar imot dem, holder dem tilbake til avsløringen og sender dem med i loggen, og hver telefon regner ut vinneren.
+- Ingen kan stemme på sitt eget svar. Likt antall stemmer gir delt seier; to spillere som begge svarte, vinner derfor alltid begge, og det er godtatt.
+- Navnene skjules bare på stemmeskjermen. Hvem som skrev hva, ligger i loggen på telefonen; det er godtatt for et spill mellom venner.
+- En vunnet forklaring teller som riktig i stillingen, men tiden telles ikke med i uavgjort-regelen, fordi stemmingen ikke handler om fart.
+- Avsløringen går videre av seg selv etter 20 sekunder, målt med rommets klokke. Knappen «Gå videre uten å vente» er fjernet. Er ingen tilkoblet, venter spillet.
+- En stemmerunde koster én skrevet rad per stemme hos Cloudflare: et spill med 4 spillere, 8 vanlige spørsmål og 2 forklaringer skriver 64 rader mot 56 uten forklaringer.
+
+395 automatiske tester består (283 før 1.11.0), blant dem to tester der tre simulerte telefoner spiller hele spill gjennom romlogikken med brudd, svar og stemmer uten nett, forklaringsrunder med stemming og delt seier, avsløringer som går videre av seg selv og omstart midt i stemmingen, og ender med samme spill. Produksjonsbygget lages uten feil. Mot `wrangler dev` spilte to skriptede spillere et helt spill med en forklaringsrunde og stemming, med identiske logger (`scripts/quizoff-smoke.mjs`). Stemmerundene og den automatiske overgangen er også spilt for hånd i nettleseren med tre spillere: valget av formen, en forklaring som overlevde en omlasting, en spiller som ikke svarte, en som ikke stemte, delt seier, en omlasting midt i stemmingen og avsløringer som gikk videre etter 20 sekunder, i alle tre stilene og i mørk modus.
+
+Stemmerundene og den automatiske overgangen er kontrollert i iPhone 17 Pro-simulatoren i hjem-skjerm-appen mot produksjonsbygget kjørt lokalt, med to skriptede motspillere, i Morsom i lyst: formen «Med forklaringer» valgt i lobbyen; avsløringen gikk videre av seg selv etter 20 sekunder uten at noen trykket «Neste»; et forklaringsspørsmål med 60 sekunder og flerlinjefelt; stemmeskjermen med fasit, kriterier og svarene uten navn, der eget svar var merket og ikke kunne velges; én stemme avgitt og bekreftet; avsløringen med vinner, stemmetall, 150 poeng og stilling. Ikke kontrollert i simulatoren: uavgjort, runder uten svar eller stemmer, lukking og gjenåpning midt i en stemmerunde, og de andre stilene og mørk modus for de nye skjermene (sett i nettleser).
+
+Lenken og QR-koden er kontrollert i iPhone 17 Pro-simulatoren mot produksjonsbygget kjørt lokalt: verten startet et spill i hjem-skjerm-appen, QR-koden på skjermbildet av lobbyen ble lest med macOS' egen QR-leser og ga lenken til spillet, lenken åpnet Safari rett på «Bli med i spillet», ett trykk ga begge spillerne i samme lobby, og «Inviter» åpnet delingsmenyen med lenken. Safari hadde en eldre utgave lagret og viste «En ny utgave er klar» før bli med-steget; en invitasjon som ikke er brukt, huskes derfor nå gjennom en oppdatering, og bli med-steget sto der fortsatt etter at siden ble lastet på nytt. Lenker åpnes i Safari på iPhone, så dette er kontrollert der og ikke i hjem-skjerm-appen. Ikke kontrollert: skanning med et ekte kamera og «Kopier lenke».
+
+Kontrollert i iPhone 17 Pro-simulatoren i hjem-skjerm-appen mot produksjonsbygget kjørt lokalt, med en skriptet motspiller: starte spill, lobby med valg og delingsmeny, bli med på kode, flervalg og skrevet svar (også et svar med skrivefeil som ble godkjent), avsløring, stilling og sluttresultat, forlate spillet, og appen lukket helt og åpnet igjen midt i et spørsmål og i en avsløring. Oppdateringsbanneret var skjult under spillet og kom fram etterpå. Morsom i lyst og mørkt, Kjedelig i lyst, Normal i lyst (inngangen og lobbyen).
+
+Rettet under kontrollen: appen nektet å starte et spill fordi Safari meldte «uten nett» selv om nettet virket; kortene på startsiden hadde tomme tittellinjer i Morsom; koden øverst var usynlig i mørk Morsom.
+
+Ikke kontrollert: to telefoner mot hverandre, mobilnett, at skjermen holdes våken, åtte spillere, meldingen om ulike utgaver, og rommet kjørt på Cloudflare (dvale, opprydding og gratisgrensene). Funnet, men ikke rettet: tilbakemeldingens skjermbilde kan inneholde spillernavn, og topplinjen i Morsom får ikke sin egen stil når fanelinjen er skjult, verken i quiz-off eller i vanlige økter.
+
 ## Gjeldende utgave — 1.10.0: Tre stiler – Morsom, Normal og Kjedelig, og et nytt ikon
 
 Under Deg → Innstillinger → Visning velger du **Stil**. Funksjoner, spørsmål, retting og data er like i alle tre; bare utseendet endres, med en gang du velger. Valget lagres på enheten sammen med de andre innstillingene og gjelder også i mørk modus.

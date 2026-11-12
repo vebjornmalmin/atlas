@@ -1,0 +1,156 @@
+/* Quiz-off: a live quiz against friends. Loaded after today.css; questions and reveals reuse the session (s-…) classes,
+   the start and the lobby reuse the I dag (t-…) classes. Only what those do not cover lives here, under .qo. */
+
+.qo .t-lead{margin-top:6px}
+.qo-actions{display:grid;gap:8px;margin:18px 0 0}
+.qo-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.qo-status{margin:0 0 8px;min-height:0;font-size:13px;line-height:1.4;color:var(--muted)}
+.qo-status:empty{margin:0}
+.qo-notice{margin:0 0 12px;font-size:14px;line-height:1.45;color:var(--ink)}
+
+/* Start: name, then two ways in. */
+.qo-start{gap:12px}
+.qo-start>.input{margin:-4px 0 4px}
+.qo-choice{margin:0}
+.qo-choice h2{font-size:24px;margin:0 0 6px}
+.qo-choice .t-sub{margin:0 0 12px}
+.qo-join{display:grid;gap:8px}
+.qo-join .s-meta{margin:0}
+.qo-join .secondary{min-height:52px}
+.qo #qo-code{max-width:220px;height:64px;font-family:var(--serif);font-size:34px;line-height:1;letter-spacing:.3em;text-transform:uppercase;font-variant-numeric:tabular-nums}
+.qo #qo-code::placeholder{color:var(--line-strong);letter-spacing:.3em}
+
+/* Lobby: the code large enough to read across a table. */
+.qo-code-card{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:4px 14px;margin:0 0 14px;padding:16px 18px;background:var(--surface);border:var(--rule);border-top:3px solid var(--accent);border-radius:var(--r-s,6px) 6px 14px 14px}
+.qo-code-card .s-label{grid-column:1/-1;margin:0}
+.qo-code{margin:0;font-family:var(--serif);font-size:56px;font-weight:400;line-height:1;letter-spacing:.14em;color:var(--ink);font-variant-numeric:tabular-nums;user-select:all;-webkit-user-select:all}
+.qo-code-card .secondary{min-height:48px}
+/* The QR code is always dark on white with its quiet zone inside the SVG: never inverted, in any style or in dark mode. */
+.qo-qr{grid-column:1/-1;display:grid;justify-items:center;gap:10px;margin:14px 0 0;padding:14px 0 0;border-top:var(--rule)}
+.qo-qr svg{display:block;width:232px;max-width:100%;height:auto;background:#fff;border-radius:4px;shape-rendering:crispEdges}
+.qo-qr figcaption{max-width:32ch;font-size:14px;line-height:1.45;text-align:center;color:var(--muted)}
+.qo-link{grid-column:1/-1;display:grid;gap:6px;margin:12px 0 0;padding:12px 0 0;border-top:var(--rule)}
+.qo-link .s-label{margin:0}
+.qo-link-text{margin:0;font-size:14px;line-height:1.45;color:var(--ink);overflow-wrap:anywhere;user-select:all;-webkit-user-select:all}
+.qo-code-card .qo-link .secondary{justify-self:start;min-height:44px}
+
+/* A join link: one game, one name, one tap. */
+.qo-invite-code{white-space:nowrap;letter-spacing:.08em}
+.qo-invite{gap:10px}
+.qo-invite .primary{min-height:52px}
+.qo-other{margin:20px 0 12px;padding:12px 0 0;border-top:var(--rule)}
+.qo-other .s-label{margin:0 0 6px}
+.qo-other .quiet{min-height:44px}
+.qo-conflict-note{margin:12px 0 0}
+.qo-players{margin:0 0 18px}
+.qo-player{display:flex;align-items:center;gap:12px;min-height:52px;padding:6px 0;border-bottom:var(--rule);list-style:none}
+.qo .t-rows{margin:0;padding:0;list-style:none}
+.qo-dot{flex:none;width:10px;height:10px;border-radius:50%;border:1.5px solid var(--muted);background:transparent}
+.qo-dot.is-on{border-color:var(--success);background:var(--success)}
+.qo-setup{margin:4px 0 0}
+.qo-seg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+.qo-seg .secondary{min-height:48px;padding:8px;font-size:17px;font-variant-numeric:tabular-nums}
+.qo-setup .format-choice{min-height:60px}
+.qo-setup .format-choice strong{font-size:14px}
+.qo-setup .format-choice small{font-size:11.5px}
+/* The third form spans the row: its note is a sentence, not a hint. */
+.qo-setup .qo-form-open{grid-column:1/-1}
+.qo-setup>.t-sub{margin:-12px 0 0}
+.qo-wait{padding:14px 0;border-top:var(--rule)}
+
+/* Question: the code at the top right leaves room for the feedback button. */
+.qo-top{justify-content:space-between;padding-right:52px}
+.qo-top-code{font-family:var(--serif);font-size:14px;letter-spacing:.12em;color:var(--muted)}
+.qo-confirm .qo-row .secondary{min-height:44px}
+.qo-timer{display:flex;align-items:center;gap:10px;margin:10px 0 0}
+.qo-timer-track{flex:1;height:6px;border-radius:3px;background:var(--line);overflow:hidden}
+.qo-timer-track>span{display:block;height:100%;background:var(--accent);transition:width .25s linear}
+.qo-timer-num{min-width:2ch;font-family:var(--serif);font-size:22px;line-height:1;text-align:right;color:var(--ink);font-variant-numeric:tabular-nums}
+.qo-timer.is-low .qo-timer-track>span{background:var(--warm)}
+.qo-timer.is-low .qo-timer-num{color:var(--warm)}
+.qo-sent{margin:0 0 18px;padding:12px 14px;border-left:3px solid var(--accent);background:var(--surface-2);border-radius:0 8px 8px 0}
+.qo-sent .s-label{margin:0 0 4px}
+.qo-sent-answer{margin:0;font-family:var(--serif);font-size:22px;line-height:1.3;color:var(--ink);overflow-wrap:anywhere}
+.qo-answered{margin:6px 0 0}
+.qo-sent-answer.is-long{font-family:inherit;font-size:16px;line-height:1.5;white-space:pre-line}
+.qo-open-form .recall-long{min-height:150px;font-size:16px;line-height:1.45}
+
+/* Vote: the model answer and its criteria, then the answers without names. */
+.qo-vote-title{margin:0 0 12px;font-family:var(--serif);font-size:22px;font-weight:400;line-height:1.25;color:var(--ink)}
+.qo-model{margin:0 0 16px;padding:12px 14px;border:var(--rule);border-radius:8px;background:var(--surface-2)}
+.qo-model .s-label{margin:0 0 4px}
+.qo-model-text{margin:0 0 10px;font-size:15px;line-height:1.5;color:var(--ink)}
+.qo-model-text:last-child{margin:0}
+.qo-criteria{margin:0;padding:0 0 0 18px;font-size:14px;line-height:1.45;color:var(--ink)}
+.qo-criteria li{margin:0 0 4px}
+.qo-ballot-label{margin:4px 0 8px}
+.qo-ballot .qo-ballot-choice{align-items:start;min-height:52px;text-align:left}
+.qo-ballot .s-choice-label{font-size:15px;line-height:1.45;overflow-wrap:anywhere;white-space:pre-line}
+.qo-own{display:block;margin-top:4px;font-size:12.5px;font-weight:600;color:var(--muted)}
+.qo-ballot .qo-ballot-choice.is-own{border-style:dashed;background:transparent}
+.qo-vote>.s-meta{margin:6px 0 0}
+
+/* Reveal: everyone's answer, then the standings. */
+.qo-round,.qo-table{margin:18px 0 0}
+.qo-answer{display:flex;align-items:center;gap:12px;min-height:56px;padding:8px 0;border-bottom:var(--rule)}
+.qo-answer small{overflow-wrap:anywhere}
+.qo-open-answer{align-items:flex-start}
+.qo-open-answer .qo-mark,.qo-open-answer .qo-points{padding-top:2px}
+.qo-open-text{display:block;margin:2px 0;font-size:14.5px;line-height:1.45;color:var(--ink);overflow-wrap:anywhere;white-space:pre-line}
+.qo-open-answer .t-row-text{flex:1;min-width:0}
+.qo-mark{flex:none;width:22px;font-size:17px;font-weight:700;text-align:center;color:var(--muted)}
+.qo-answer.is-right .qo-mark{color:var(--success)}
+.qo-answer.is-wrong .qo-mark{color:var(--danger)}
+.qo-points{flex:none;margin-left:auto;font-family:var(--serif);font-size:18px;color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap}
+.qo-points small{font-family:var(--sans,inherit);font-size:12px;color:var(--muted)}
+.qo-standings{margin:0;padding:0;list-style:none;border-top:var(--rule)}
+.qo-standings li{display:flex;align-items:center;gap:12px;min-height:52px;padding:6px 0;border-bottom:var(--rule);font-size:15px}
+.qo-standings li.is-you{font-weight:650}
+.qo-standings li.has-left{color:var(--muted)}
+.qo-rank{flex:none;display:grid;place-items:center;width:30px;height:30px;border:1px solid var(--line);border-radius:50%;font-family:var(--serif);font-size:15px;color:var(--accent);font-variant-numeric:tabular-nums}
+.qo-standings li.is-you .qo-rank{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.qo-who{flex:1;min-width:0;overflow-wrap:anywhere}
+.qo-who small{font-weight:400;color:var(--muted)}
+/* The reveal moves on by itself: the countdown sits next to "Neste". */
+.qo-auto{flex:0 1 auto;max-width:42%;font-size:13px;line-height:1.3;color:var(--muted);font-variant-numeric:tabular-nums}
+.qo .s-next-note:empty{display:none}
+.qo-final .qo-standings li{min-height:58px;font-size:16px}
+.qo-final .qo-standings li:first-child .qo-points{font-size:22px}
+
+@media(prefers-reduced-motion:reduce){.qo-timer-track>span{transition:none}}
+
+/* Morsom: the code and the timer as chunky parts, like the other things you act on. */
+:where([data-look="fun"]) .qo-code-card{border:2px solid var(--edge);border-radius:12px;background:var(--surface);box-shadow:var(--shadow)}
+:where([data-look="fun"]) .qo-code{font-family:var(--sans);font-weight:800}
+:where([data-look="fun"]) .qo-qr svg{border:2px solid var(--edge);border-radius:8px}
+:where([data-look="fun"]) .qo #qo-code{border:2px solid var(--edge);border-radius:10px;font-family:var(--sans);font-weight:800}
+:where([data-look="fun"]) .qo-timer-track{height:12px;border:2px solid var(--edge);border-radius:6px;background:var(--track)}
+:where([data-look="fun"]) .qo-timer-track>span{background:var(--blue)}
+:where([data-look="fun"]) .qo-timer.is-low .qo-timer-track>span{background:var(--orange)}
+:where([data-look="fun"]) .qo-timer-num{font-family:var(--sans);font-weight:800}
+:where([data-look="fun"]) .qo-rank{border:2px solid var(--edge);font-family:var(--sans);font-weight:800;color:var(--ink)}
+:where([data-look="fun"]) .qo-standings li.is-you .qo-rank{background:var(--yellow);border-color:var(--edge);color:var(--bar-ink)}
+:where([data-look="fun"]) .qo-sent{border:2px solid var(--edge);border-radius:10px;background:var(--hl)}
+:where([data-look="fun"]) .qo-dot{border:2px solid var(--edge)}
+:where([data-look="fun"]) .qo-dot.is-on{background:var(--green)}
+:where([data-look="fun"]) .qo-top{padding-right:56px}
+:where([data-look="fun"]) .qo .t-rows{padding:0 14px}
+:where([data-look="fun"]) .qo-top-code{color:var(--ink);font-family:var(--sans);font-weight:800}
+:where([data-look="fun"]) .qo-model{border:2px solid var(--edge);border-radius:10px;background:var(--surface)}
+:where([data-look="fun"]) .qo-vote-title{font-family:var(--sans);font-weight:800}
+:where([data-look="fun"]) .qo-ballot .qo-ballot-choice.is-own{border:2px dashed var(--line-strong);box-shadow:none;background:transparent}
+:where([data-look="fun"]) .qo-auto{color:var(--ink);font-weight:600}
+
+/* Kjedelig: no serif, no tracking; the code stays readable without spacing. */
+:where([data-look="boring"]) .qo-code{font-size:44px;font-weight:700}
+:where([data-look="boring"]) .qo-qr svg{border:1px solid var(--line-strong);border-radius:0}
+:where([data-look="boring"]) .qo-invite-code{letter-spacing:0}
+:where([data-look="boring"]) .qo #qo-code{font-size:28px;font-weight:700}
+:where([data-look="boring"]) .qo-code-card{border-top-width:1px;border-color:var(--line-strong)}
+:where([data-look="boring"]) .qo-sent{border-left-width:1px;border:1px solid var(--line-strong)}
+:where([data-look="boring"]) .qo-rank{border-color:var(--line-strong);color:var(--ink)}
+:where([data-look="boring"]) .qo-timer-num{font-weight:700}
+:where([data-look="boring"]) .qo-model{border:1px solid var(--line-strong);border-radius:0;background:transparent}
+:where([data-look="boring"]) .qo-vote-title{font-family:inherit;font-weight:700;font-size:20px}
+:where([data-look="boring"]) .qo-ballot .qo-ballot-choice.is-own{border:1px dashed var(--line-strong)}
+.qo [tabindex="-1"]:focus,.qo [tabindex="-1"]:focus-visible{outline:none}
