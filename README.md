@@ -4,7 +4,7 @@ Offline kunnskapstrening på norsk, laget for iPhone 17 Pro.
 
 Live app: https://atlas-first-app.atlas-memory.workers.dev
 
-## Neste utgave — 1.11.0: Quiz-off mot venner (ikke publisert ennå)
+## Gjeldende utgave — 1.11.0: Quiz-off mot venner
 
 **Quiz-off** er en direkte quiz for 2–8 spillere, hver på sin telefon. Den har sin egen fane, mellom Atlas og Deg.
 
@@ -56,7 +56,9 @@ Rettet under kontrollen: appen nektet å starte et spill fordi Safari meldte «u
 
 Ikke kontrollert: to telefoner mot hverandre, mobilnett, at skjermen holdes våken, åtte spillere, meldingen om ulike utgaver, og rommet kjørt på Cloudflare (dvale, opprydding og gratisgrensene). Funnet, men ikke rettet: tilbakemeldingens skjermbilde kan inneholde spillernavn, og topplinjen i Morsom får ikke sin egen stil når fanelinjen er skjult, verken i quiz-off eller i vanlige økter.
 
-## Gjeldende utgave — 1.10.0: Tre stiler – Morsom, Normal og Kjedelig, og et nytt ikon
+Publisert 13. november 2026: app 1.11.0, utgivelse `6131c89dc479`, kunnskapspakke 2.3.0, via Wrangler fra `main` (`a155004`), som alt var sendt til GitHub. Workeren har nå rommet for quiz-off som Durable Object (`QUIZ_ROOM`); resten er de samme statiske filene. `/version.json` viser den nye utgivelsen, `/` svarer med sikkerhetshodene, og `/api/*` som ikke finnes, svarer 404. To skriptede spillere spilte et helt spill mot rommet på Cloudflare (`scripts/quizoff-smoke.mjs`): avvisning av feil utgave og ukjent rom, et brudd og en ny tilkobling midt i spillet, en forklaringsrunde med stemmer, en avsløring som gikk videre av seg selv etter 20 sekunder, like logger hos begge og et rom som ble slettet da alle hadde gått. Testen lot først den andre spilleren svare før den første var koblet til igjen over nettet; nå venter den på det. Den installerte hjemmeskjermappen for den publiserte adressen i iPhone 17 Pro-simulatoren, som sto på 1.10.0 midt i en fri quiz, viste «En ny utgave er klar», oppdaterte seg til 1.11.0 med fire faner og quizen fortsatt påbegynt. Fra Quiz-off-fanen ble den med i et spill mot en skriptet vert på rommet på Cloudflare, gikk av seg selv fra Atlas til første spørsmål da verten startet, kom tilbake rett i spillet etter å ha blitt lukket helt midt i et spørsmål, og spilte ferdig til sluttresultatet. Før publisering ble fanelinjen også sett i Kjedelig og i mørk modus. Fortsatt ikke kontrollert: to ekte telefoner, mobilnett, åtte spillere og gratisgrensene over tid.
+
+## 1.10.0: Tre stiler – Morsom, Normal og Kjedelig, og et nytt ikon
 
 Under Deg → Innstillinger → Visning velger du **Stil**. Funksjoner, spørsmål, retting og data er like i alle tre; bare utseendet endres, med en gang du velger. Valget lagres på enheten sammen med de andre innstillingene og gjelder også i mørk modus.
 

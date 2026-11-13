@@ -21,7 +21,7 @@ async function waitFor(check, what, ms = 15000) {
 }
 
 function bot(name, code) {
-  const b = {name, id:randomUUID(), key:randomUUID() + randomUUID(), events:[], answered:new Set(), voted:new Set(), readied:new Set(), welcomes:0, errors:[], ws:null, paused:false, dropAt:null, waitOn:null, forceOn:null};
+  const b = {name, id:randomUUID(), key:randomUUID() + randomUUID(), events:[], answered:new Set(), voted:new Set(), readied:new Set(), welcomes:0, errors:[], ws:null, paused:false, dropAt:null, holdAt:null, waitOn:null, forceOn:null};
   b.seq = () => b.events.at(-1)?.seq ?? 0;
   b.send = msg => b.ws.send(JSON.stringify(msg));
   b.connect = () => new Promise((resolve, reject) => {
@@ -51,6 +51,8 @@ function bot(name, code) {
     if (!e || b.paused || b.ws.readyState !== WebSocket.OPEN) return;
     if (e.t === 'question' && !b.answered.has(e.q)) {
       if (b.dropAt === e.q) { b.dropAt = null; b.paused = true; b.ws.close(); log(`${name} drops its socket at question ${e.q}`); return; }
+      // holdAt: wait with this answer until told to go on, so a slow reconnect over the internet isn't raced.
+      if (b.holdAt === e.q) return;
       b.answered.add(e.q);
       setTimeout(() => b.send({t:'answer', q:e.q, answer:`${name}-${e.q}`}), 30 + Math.random() * 50);
       // Like a phone's countdown: if the round is still open at the deadline, say so.
@@ -121,6 +123,7 @@ async function main() {
   log('ping answered with pong');
 
   kari.dropAt = 1;
+  ola.holdAt = 2;
   ola.forceOn = kari.waitOn = ola.waitOn = 3;
   ola.send({t:'start', settings:{count:4, seconds:10, title:'Smoke'}, questions:[{id:'core:a', mode:'recognition'}, {id:'core:b', mode:'recall'}, {id:'core:c', mode:'recall'}, {id:'core:d', mode:'open'}]});
 
@@ -132,6 +135,8 @@ async function main() {
   await kari.connect();
   assert.equal(kari.welcomes, 2);
   log(`Kari rejoined with have=${have}, now at seq ${kari.seq()}`);
+  ola.holdAt = null;
+  ola.act();
 
   await waitFor(() => ola.events.at(-1)?.t === 'finished' && kari.events.at(-1)?.t === 'finished', 'the finish', 60000);
   assert.deepEqual(kari.events, ola.events, 'both bots hold the same log');
