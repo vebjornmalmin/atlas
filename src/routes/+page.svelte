@@ -77,7 +77,8 @@
   let quizMode = $state('mixed');
   let quizSetup = $state(false);
   // Quiz-off: its screen is open in I dag; info is what the game reports (phase, code, question) for the shell around it.
-  let quizoff = $state(false);
+  // Quiz-off has its own tab. Once opened, its screen stays alive behind the other tabs, so a game keeps its connection.
+  let quizoffOpen = $state(false);
   let quizoffInfo = $state.raw(null);
   let quizoffInvite = $state.raw(null);
   let progressTab = $state('overview');
@@ -86,7 +87,7 @@
   let scrollY = $state(0);
   let uiReady = $state(false);
   let restoreScroll = 0;
-  const uiSnapshot = () => ({view,atlasTab,meTab,progressTab,query,collectionFilter,selectedUnit,detailId,quizSetup,quizoff,quiz:{collection:quizCollection,level:quizLevel,mode:quizMode},timeline:{...timelineState},scrollY});
+  const uiSnapshot = () => ({view,atlasTab,meTab,progressTab,query,collectionFilter,selectedUnit,detailId,quizSetup,quiz:{collection:quizCollection,level:quizLevel,mode:quizMode},timeline:{...timelineState},scrollY});
   function keepUiState(){try{saveUiState(localStorage,uiSnapshot());}catch{/* The app still works; it just opens at the start next time. */}}
   $effect(()=>{const state=uiSnapshot();if(uiReady && state)keepUiState();});
   let journalWarning = false;
@@ -101,7 +102,13 @@
   let revealed = $state(false);
   let answer = $state('');
   let formatDraft = $state.raw({});
-  $effect(()=>{document.documentElement.classList.toggle('quiz-active',view==='today' && (quizoff?['question','vote','reveal'].includes(quizoffInfo?.phase):sessionScreen && session?.status==='active'));});
+  $effect(()=>{document.documentElement.classList.toggle('quiz-active',view==='quizoff'?['question','vote','reveal'].includes(quizoffInfo?.phase):view==='today' && sessionScreen && session?.status==='active');});
+  $effect(()=>{if(view==='quizoff')quizoffOpen=true;});
+  // The tab bar marks the Quiz-off tab while a game is going on and another tab is open.
+  $effect(()=>{window.dispatchEvent(new CustomEvent('atlas-quizoff-live',{detail:Boolean(quizoffInfo?.inGame)}));});
+  // When the host starts the game, every player is taken to the first question, wherever they were in the app.
+  let quizoffPhase='';
+  $effect(()=>{const phase=quizoffInfo?.phase || '';if(quizoffPhase==='lobby' && phase==='question' && view!=='quizoff')navigate('quizoff');quizoffPhase=phase;});
   $effect(()=>{if(revealed && sessionScreen){void tick().then(()=>{document.querySelector('#recall')?.blur();document.querySelector('#answer-heading')?.focus({preventScroll:true});window.scrollTo({top:0,behavior:'instant'});});}});
   let correct = $state(null);
   let usedHint = $state(false);
@@ -424,7 +431,7 @@
   });
   const LEGACY_ROUTES = {learn:['atlas','emner'],world:['atlas','kart'],explore:['atlas',''],focus:['me','okten'],progress:['me','fremgang'],settings:['me','innstillinger']};
   function resolveRoute(route) {
-    const [next,tab] = LEGACY_ROUTES[route] || [['today','atlas','me'].includes(route)?route:'today',''];
+    const [next,tab] = LEGACY_ROUTES[route] || [['today','atlas','quizoff','me'].includes(route)?route:'today',''];
     if (next==='atlas' && tab) atlasTab = tab;
     if (next==='me' && tab) meTab = tab;
     return next;
@@ -465,7 +472,7 @@
     const startedAt=new Date().toISOString();
     session = {id:'active',difficultyPolicy:'2026-10-11',sessionId:crypto.randomUUID(),startedAt,updatedAt:startedAt,title:scope?.title || (practiceObjective?'Fri quiz':DAILY_TITLE),chapter:!scope && !practiceObjective && data.curriculum?todayChapter:null,scope,objective:practiceObjective,queue,practice,index:0,results:[],status:'active'};
     await put(db,'sessions',session);
-    sessionScreen = true; quizSetup = false; if(!quizoffInfo?.inGame)quizoff = false; view = 'today'; window.location.hash='today';
+    sessionScreen = true; quizSetup = false; view = 'today'; window.location.hash='today';
     await prepareQuestion(); await refresh(); window.scrollTo(0,0);
   }
   async function finishLesson() {
@@ -482,7 +489,7 @@
     if(saved) {await archiveActive();session={...dropRetired(saved,entryExists),id:'active',updatedAt:now};await put(db,'sessions',session);await prepareQuestion(session.draft);await refresh();}
     else if(session?.status==='active') {session={...session,updatedAt:now};await put(db,'sessions',session);}
     if (!current && !currentLesson) { notify('Spørsmålet er ikke tilgjengelig. Du kan starte en ny quiz.'); return; }
-    sessionScreen = true; if(!quizoffInfo?.inGame)quizoff = false; view='today';window.location.hash='today'; window.scrollTo(0,0);
+    sessionScreen = true; view='today';window.location.hash='today'; window.scrollTo(0,0);
   }
   // Continue any open quiz: the active one as it is, a set-aside one by swapping it in.
   async function continueSession(item) {
@@ -656,14 +663,13 @@
     // A quiz-off saved on the phone is the exact activity to return to, whatever else was open.
     let quizoffSaved=false;
     try{quizoffSaved=Boolean(localStorage.getItem(QUIZOFF_KEY));}catch{/* No saved game. */}
-    if(quizoffSaved)history.replaceState(null,'','#today');
-    // A join link (?quizoff=CODE) opens quiz-off on joining that game, once: the parameter is removed so a reload does not join again.
-    if(new URLSearchParams(window.location.search).has(INVITE_PARAM)){quizoffInvite={code:codeFromUrl(window.location.search)};history.replaceState(null,'',`${window.location.pathname}${withoutInvite(window.location.search)}#today`);}
+    if(quizoffSaved)history.replaceState(null,'','#quizoff');
+    // A join link (?quizoff=CODE) opens the Quiz-off tab on joining that game, once: the parameter is removed so a reload does not join again.
+    if(new URLSearchParams(window.location.search).has(INVITE_PARAM)){quizoffInvite={code:codeFromUrl(window.location.search)};history.replaceState(null,'',`${window.location.pathname}${withoutInvite(window.location.search)}#quizoff`);}
     route(); window.addEventListener('hashchange',route);
-    const tabAgain=event=>{if(event.detail===view && !sessionScreen){quizSetup=false;detailId='';if(!quizoffInfo?.inGame)quizoff=false;}};
+    const tabAgain=event=>{if(event.detail===view && !sessionScreen){quizSetup=false;detailId='';}};
     window.addEventListener('atlas-tab-again',tabAgain);
     if(ui && view===ui.view){detailId=ui.detailId;quizSetup=ui.quizSetup && view==='today';restoreScroll=quizoffInvite?0:ui.scrollY;}
-    quizoff=quizoffSaved || Boolean(quizoffInvite) || Boolean(ui?.quizoff && view==='today');
     uiReady=true;
     let scrollTimer;
     const onScroll=()=>{if(!scrollTimer)scrollTimer=setTimeout(()=>{scrollTimer=undefined;scrollY=Math.round(window.scrollY);},300);};
@@ -750,9 +756,7 @@
   {:else if !data}
     <section class="hero"><h1>Koble til nettet</h1><p class="lead">Last ned spørsmålene for å komme i gang.</p><button class="primary" onclick={()=>window.location.reload()}>Prøv igjen</button></section>
   {:else if view === 'today'}
-    {#if quizoff}
-      <QuizOff pack={data} {knownNames} index={recognitionIndex} appVersion={APP_VERSION} invite={quizoffInvite} onstate={next=>quizoffInfo=next} onexit={()=>{quizoff=false;quizoffInfo=null;quizoffInvite=null;window.scrollTo(0,0);}} />
-    {:else if sessionScreen && session?.status === 'completed'}
+    {#if sessionScreen && session?.status === 'completed'}
       {@const answered=session.results.filter(r=>!r.lesson)}
       {@const touched=[...new Set(session.queue.map(q=>q.unitId).filter(Boolean))]}
       {@const back=openList[0]}
@@ -920,7 +924,6 @@
         {#if otherOpen.length && !resumeFirst}{@render resumeCard(otherOpen[0])}{/if}
       {/if}
       <div class="t-practice"><div><h2>Øv fritt</h2><p>Velg tema, nivå og form: kart, piler, tidslinjer, flervalg eller skriving.</p></div><button class="secondary" onclick={()=>{quizSetup=true;window.scrollTo(0,0);}}>Lag en quiz</button></div>
-      <div class="t-practice"><div><h2>Quiz-off</h2><p>Spill mot venner, hver på sin telefon.</p></div><button class="secondary" onclick={()=>{quizoff=true;window.scrollTo(0,0);}}>Spill</button></div>
       {/if}
       {#if quizSetup}<div class="t-back"><button class="s-back" onclick={()=>quizSetup=false}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m14.5 6-6 6 6 6"/></svg><span>I dag</span></button></div><header class="t-head"><h1>Lag en quiz</h1></header>
         <div class="t-builder">
@@ -1056,8 +1059,9 @@
     {/if}
     </div>
   {/if}
+  {#if data && !loading && quizoffOpen}<div hidden={view!=='quizoff'}><QuizOff pack={data} {knownNames} index={recognitionIndex} appVersion={APP_VERSION} invite={quizoffInvite} active={view==='quizoff'} onstate={next=>quizoffInfo=next} /></div>{/if}
   {#if confirmRestore}<div class="card confirm" role="alert"><h2>Erstatte lokale data?</h2><p>Dette gjenoppretter sikkerhetskopien fra {displayDate(confirmRestore.exportedAt)} og erstatter {confirmRestore.version===1?'kunnskapsbiblioteket, læringshistorikken og innstillingene':'læringshistorikken og innstillingene'} på denne enheten. Last ned en kopi først hvis du vil beholde det som er her nå.</p><button class="primary" disabled={busy} onclick={()=>run(restore)}>Erstatt med denne sikkerhetskopien</button><button class="secondary" onclick={()=>confirmRestore=null}>Avbryt</button></div>{/if}
   {#if pendingDestruction==='logs'}<div class="card confirm" role="alert"><h2>Tømme diagnostikkloggen?</h2><p>Læringshistorikken beholdes. Den lokale diagnostikkloggen slettes.</p><button class="primary" onclick={()=>run(async()=>{await clearLogs(db);pendingDestruction='';await refresh();})}>Tøm diagnostikkloggen</button><button class="secondary" onclick={()=>pendingDestruction=''}>Avbryt</button></div>{/if}
 </main>
-<Feedback context={()=>({appVersion:APP_VERSION,view,packageId:data?.id,packageVersion:data?.version,target:current && !quizoff?{id:current.id,prompt:current.prompt,mode:current.mode,entityId:current.entityId}:null,session:sessionScreen && !quizoff?{index:session?.index,total:session?.queue.length,revealed,correct,usedHint}:null,focus:JSON.parse(JSON.stringify(prefs)),selfApproved:selfApprovals(targets,reviews),offlineTest,error,quizoff:quizoff && quizoffInfo?{code:quizoffInfo.code,phase:quizoffInfo.phase,question:quizoffInfo.question,total:quizoffInfo.total,status:quizoffInfo.status}:null})}/>
+<Feedback context={()=>({appVersion:APP_VERSION,view,packageId:data?.id,packageVersion:data?.version,target:current && view!=='quizoff'?{id:current.id,prompt:current.prompt,mode:current.mode,entityId:current.entityId}:null,session:sessionScreen && view!=='quizoff'?{index:session?.index,total:session?.queue.length,revealed,correct,usedHint}:null,focus:JSON.parse(JSON.stringify(prefs)),selfApproved:selfApprovals(targets,reviews),offlineTest,error,quizoff:view==='quizoff' && quizoffInfo?{code:quizoffInfo.code,phase:quizoffInfo.phase,question:quizoffInfo.question,total:quizoffInfo.total,status:quizoffInfo.status}:null})}/>
 {#if toast}<div id="toast" class="toast" role="status" aria-live="polite"><span>{toast}</span><button class="quiet" aria-label="Lukk melding" onclick={()=>toast=''}>×</button></div>{/if}

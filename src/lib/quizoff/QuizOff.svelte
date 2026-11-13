@@ -10,7 +10,9 @@
 
   // pack: the installed knowledge pack. onstate reports {inGame,phase,code,question,total,status} to the page.
   // invite: {code} from a join link (code '' when the link had no valid code), or null.
-  let {pack,knownNames=null,index=null,appVersion,invite=null,onexit=()=>{},onstate=()=>{}}=$props();
+  // active: whether the Quiz-off tab is showing. The page keeps this screen alive on the other tabs, so a game
+  // stays connected and keeps time while the player looks at something else.
+  let {pack,knownNames=null,index=null,appVersion,invite=null,active=true,onstate=()=>{}}=$props();
 
   // What only this phone needs to get back to the exact place: a typed but unsent answer and "Neste" tapped.
   const LOCAL_KEY='atlas-quizoff-local',SETUP_KEY='atlas-quizoff-setup';
@@ -155,7 +157,14 @@
       else if(phase==='finished')announce='Spillet er ferdig';
     });
     const target={question:'qo-question',vote:'qo-vote',reveal:'qo-result',finished:'qo-final',lobby:'qo-lobby'}[phase];
-    if(target)void tick().then(()=>{window.scrollTo({top:0,behavior:'instant'});document.getElementById(target)?.focus({preventScroll:true});});
+    if(target)focusNext=target;
+  });
+  // On another tab the page is the player's: the move to the top waits until they come back.
+  let focusNext=$state('');
+  $effect(()=>{
+    if(!active || !focusNext)return;
+    const target=focusNext;focusNext='';
+    void tick().then(()=>{window.scrollTo({top:0,behavior:'instant'});document.getElementById(target)?.focus({preventScroll:true});});
   });
 
   function errorText(error){
@@ -196,9 +205,9 @@
     codeField=event.currentTarget.value.toUpperCase().replace(/[^A-ZÆØÅ]/g,'').slice(0,CODE_LENGTH);
     event.currentTarget.value=codeField;
   }
-  function leave(exit){
+  function leave(){
     client.leave();keepLocal({});attempt='';
-    if(exit)onexit();
+    void tick().then(()=>window.scrollTo({top:0,behavior:'instant'}));
   }
 
   function start(){
@@ -289,7 +298,7 @@
 
 {#snippet connection()}
   <p class="qo-status" aria-live="polite">{#if snap.status==='reconnecting'}Kobler til igjen …{:else if snap.status==='connecting' && phase!=='start'}Kobler til …{/if}</p>
-  {#if snap.error && snap.room}<div class="banner error" role="alert"><p>{errorText(snap.error)}</p><button class="quiet" onclick={()=>leave(true)}>Forlat</button></div>{/if}
+  {#if snap.error && snap.room}<div class="banner error" role="alert"><p>{errorText(snap.error)}</p><button class="quiet" onclick={()=>leave()}>Forlat</button></div>{/if}
 {/snippet}
 
 {#snippet top()}
@@ -300,7 +309,7 @@
   {#if confirmLeave}
     <div class="s-alert qo-confirm" role="group" aria-label="Forlate spillet?">
       <p>Forlate spillet? Du kan ikke komme tilbake til det, og de andre spiller videre uten deg.</p>
-      <div class="qo-row"><button class="secondary" onclick={()=>leave(true)}>Forlat spillet</button><button class="quiet" onclick={()=>confirmLeave=false}>Bli i spillet</button></div>
+      <div class="qo-row"><button class="secondary" onclick={()=>leave()}>Forlat spillet</button><button class="quiet" onclick={()=>confirmLeave=false}>Bli i spillet</button></div>
     </div>
   {/if}
 {/snippet}
@@ -315,9 +324,8 @@
   {:else if phase==='replaced'}
     <header class="t-head"><p class="eyebrow">Quiz-off · {code}</p><h1>Åpnet et annet sted</h1></header>
     <p class="t-lead">Du har åpnet dette spillet på en annen telefon eller i et annet vindu. Spillet fortsetter der.</p>
-    <div class="qo-actions"><button class="primary" onclick={()=>client.reconnect()}>Fortsett på denne telefonen</button><button class="quiet" onclick={()=>leave(true)}>Forlat spillet</button></div>
+    <div class="qo-actions"><button class="primary" onclick={()=>client.reconnect()}>Fortsett på denne telefonen</button><button class="quiet" onclick={()=>leave()}>Forlat spillet</button></div>
   {:else if phase==='start' && invited}
-    <div class="t-back"><button class="s-back" onclick={()=>{client.forget();onexit();}}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m14.5 6-6 6 6 6"/></svg><span>I dag</span></button></div>
     <header class="t-head"><p class="eyebrow">Quiz-off</p><h1 id="qo-invite" tabindex="-1">Bli med i spillet <span class="qo-invite-code">{invited}</span></h1><p class="t-lead">Du er invitert til en direkte quiz, hver på sin telefon. Skriv navnet ditt, så er du med.</p></header>
     {@const failure=formError || errorText(snap.error)}
     {#if failure}<div class="banner error" role="alert"><p>{failure}</p></div>{/if}
@@ -330,7 +338,6 @@
     <div class="qo-other"><p class="s-label">Noe annet?</p><div class="qo-row"><button class="quiet" onclick={()=>otherWay('qo-code')}>Skriv en annen kode</button><button class="quiet" onclick={()=>otherWay('qo-new')}>Start et eget spill</button></div></div>
     <p class="s-meta">Quiz-off trenger internett. Navn og svar ligger på serveren til 30 minutter etter spillet. Svarene kommer ikke med i læringshistorikken din.</p>
   {:else if phase==='start'}
-    <div class="t-back"><button class="s-back" onclick={()=>{client.forget();onexit();}}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m14.5 6-6 6 6 6"/></svg><span>I dag</span></button></div>
     <header class="t-head"><h1>Quiz-off</h1><p class="t-lead">Spill mot venner, hver på sin telefon. Alle får de samme spørsmålene samtidig. Raske, riktige svar gir mest poeng.</p></header>
     {@const failure=formError || errorText(snap.error)}
     {#if failure}<div class="banner error" role="alert"><p>{failure}</p></div>{/if}
@@ -350,7 +357,7 @@
       <p class="s-meta">Quiz-off trenger internett. Navn og svar ligger på serveren til 30 minutter etter spillet. Svarene kommer ikke med i læringshistorikken din.</p>
     </div>
   {:else if phase==='lobby'}
-    <div class="t-back"><button class="s-back" onclick={()=>leave(true)}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m14.5 6-6 6 6 6"/></svg><span>Forlat spillet</span></button></div>
+    <div class="t-back"><button class="s-back" onclick={()=>leave()}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m14.5 6-6 6 6 6"/></svg><span>Forlat spillet</span></button></div>
     <header class="t-head"><p class="eyebrow">Quiz-off</p><h1 id="qo-lobby" tabindex="-1">Venter på spillere</h1></header>
     {@render connection()}
     <section class="qo-code-card" aria-label="Koden til spillet">
@@ -532,10 +539,10 @@
       {#if me}<p class="t-lead">{me.points} poeng · {me.correct} av {total} riktige · {board.length} spillere</p>{/if}</header>
     {@render connection()}
     <section class="qo-table qo-final"><h2 class="s-label">Resultatet</h2>{@render standings(board,'Sluttresultatet')}</section>
-    <div class="qo-actions"><button class="primary" onclick={()=>leave(false)}>Nytt spill</button><button class="secondary" onclick={()=>leave(true)}>Tilbake til I dag</button></div>
+    <div class="qo-actions"><button class="primary" onclick={()=>leave()}>Nytt spill</button></div>
   {:else}
     <header class="t-head"><p class="eyebrow">Quiz-off · {code}</p><h1>Kobler til …</h1></header>
     {@render connection()}
-    <div class="qo-actions"><button class="quiet" onclick={()=>leave(true)}>Forlat spillet</button></div>
+    <div class="qo-actions"><button class="quiet" onclick={()=>leave()}>Forlat spillet</button></div>
   {/if}
 </div>

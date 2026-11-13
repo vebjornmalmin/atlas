@@ -5,7 +5,7 @@ import {readUiState,saveUiState,uiDefaults,UI_FRESH_HOURS} from '../src/lib/ui-s
 const memory = () => { const data = new Map(); return {getItem: k => data.has(k) ? data.get(k) : null, setItem: (k, v) => data.set(k, String(v))}; };
 const HOUR = 3600e3;
 const visit = {...uiDefaults(), view: 'atlas', atlasTab: 'emner', meTab: 'innstillinger', progressTab: 'levels', query: 'Ibsen', selectedUnit: 'nh-1814',
-  detailId: 'person:ibsen', quizSetup: true, quizoff: true, quiz: {collection: 'world-geography', level: 3, mode: 'map'}, timeline: {zoom: 'nineteenth', domain: 'verdenshistorie', selectedId: 'vh-napoleon'}, scrollY: 640};
+  detailId: 'person:ibsen', quizSetup: true, quiz: {collection: 'world-geography', level: 3, mode: 'map'}, timeline: {zoom: 'nineteenth', domain: 'verdenshistorie', selectedId: 'vh-napoleon'}, scrollY: 640};
 
 test('reopening the app soon after returns to the same place with the same choices', () => {
   const storage = memory();
@@ -21,7 +21,6 @@ test('after a long break the app opens on I dag but keeps tabs, timeline view an
   assert.equal(state.detailId, '');
   assert.equal(state.query, '');
   assert.equal(state.quizSetup, false);
-  assert.equal(state.quizoff, false);
   assert.equal(state.scrollY, 0);
   assert.equal(state.timeline.selectedId, '');
   assert.equal(state.atlasTab, 'emner');
@@ -45,7 +44,7 @@ test('missing, damaged or foreign saved state falls back to the defaults', () =>
   assert.deepEqual(state.timeline, {zoom: '', domain: '', selectedId: ''});
   assert.equal(state.scrollY, 0);
   assert.equal(state.query, '');
-  assert.equal(state.quizoff, false);
+  assert.equal('quizoff' in state, false);
 });
 
 test('a clock that moved backwards does not count as a fresh visit', () => {
@@ -58,4 +57,16 @@ test('a progress view that no longer exists opens the overview instead of an emp
   const storage = memory();
   storage.setItem('atlas-ui', JSON.stringify({...visit, progressTab: 'library', at: 1000}));
   assert.equal(readUiState(storage, 2000).progressTab, 'overview');
+});
+
+test('the Quiz-off tab is a place to return to, and the flag from before 1.11.0 still finds it', () => {
+  const storage = memory();
+  saveUiState(storage, {...uiDefaults(), view: 'quizoff'}, 1000);
+  assert.equal(readUiState(storage, 1000 + HOUR).view, 'quizoff');
+  assert.equal(readUiState(storage, 1000 + (UI_FRESH_HOURS + 1) * HOUR).view, 'today');
+  const older = memory();
+  older.setItem('atlas-ui', JSON.stringify({...uiDefaults(), view: 'today', quizoff: true, at: 1000}));
+  assert.equal(readUiState(older, 1000 + HOUR).view, 'quizoff');
+  older.setItem('atlas-ui', JSON.stringify({...uiDefaults(), view: 'atlas', quizoff: true, at: 1000}));
+  assert.equal(readUiState(older, 1000 + HOUR).view, 'atlas');
 });

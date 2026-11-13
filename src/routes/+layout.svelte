@@ -14,9 +14,12 @@
   let { children } = $props();
   let active = $state('today');
   let status = $state('');
+  // True while a quiz-off is going on and another tab is open: the Quiz-off tab gets a dot.
+  let quizoffLive = $state(false);
   const navigation = [
     { id: 'today', label: 'I dag' },
     { id: 'atlas', label: 'Atlas' },
+    { id: 'quizoff', label: 'Quiz-off' },
     { id: 'me', label: 'Deg' }
   ];
   // Older links keep working: they open the part of Atlas or Deg that replaced them.
@@ -31,12 +34,15 @@
     const updateStatus = event => {
       if (typeof event.detail === 'string') status = event.detail;
     };
+    const updateQuizoff = event => { quizoffLive = event.detail === true; };
     syncRoute();
     window.addEventListener('hashchange', syncRoute);
     window.addEventListener('atlas-status', updateStatus);
+    window.addEventListener('atlas-quizoff-live', updateQuizoff);
     return () => {
       window.removeEventListener('hashchange', syncRoute);
       window.removeEventListener('atlas-status', updateStatus);
+      window.removeEventListener('atlas-quizoff-live', updateQuizoff);
     };
   });
 
@@ -79,11 +85,14 @@
           <circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/>
         {:else if item.id === 'atlas'}
           <circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3Z"/>
+        {:else if item.id === 'quizoff'}
+          <circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M2.5 19c.9-3 2.9-4.7 5.5-4.7 1.6 0 3 .6 4 1.8 1-1.2 2.4-1.8 4-1.8 2.6 0 4.6 1.7 5.5 4.7"/>
         {:else}
           <circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.4-6 8-6s6.5 2 8 6"/>
         {/if}
       </svg>
       <span>{item.label}</span>
+      {#if item.id === 'quizoff' && quizoffLive && active !== 'quizoff'}<span class="nav-dot"><span class="sr-only">, spillet pågår</span></span>{/if}
     </button>
   {/each}
 </nav>

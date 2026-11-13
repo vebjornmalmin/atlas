@@ -17,26 +17,28 @@ Løsningen er ett lite rom på Cloudflare (en Durable Object, `QuizRoom`) per sp
 
 ## Et spill sett fra spilleren
 
-1. **Start.** Spilleren velger «Quiz-off», skriver navn og oppretter et rom eller skriver en kode. Navnet huskes til neste gang.
+1. **Start.** Spilleren trykker på fanen «Quiz-off» (mellom Atlas og Deg), skriver navn og oppretter et rom eller skriver en kode. Navnet huskes til neste gang.
 2. **Kode, lenke og QR-kode.** Rommet får en kode på fire bokstaver (A–Z uten I og O, 331 776 mulige koder). I lobbyen står koden, en QR-kode og lenken til spillet. Man kan bli med på tre måter, se «Å bli med».
 3. **Lobby.** Spillerne dukker opp etter hvert som de kommer. Den første som kom er vert og velger fagområde, antall spørsmål, tid per spørsmål og form: «Flervalg», «Flervalg og skriving» eller «Med forklaringer». Vertens telefon plukker spørsmålene og sender dem med startmeldingen. Det trengs minst to spillere.
 4. **Runder.** Alle får samme spørsmål samtidig og en nedtelling. Svaret kan ikke endres. Runden lukkes når alle har svart eller tiden er ute.
 5. **Forklaringsspørsmål** (bare med formen «Med forklaringer»). Spørsmålet ber om en forklaring, og svaret skrives i et felt med flere linjer, høyst 400 tegn. Det har alltid 60 sekunder, uansett hva verten valgte for de andre spørsmålene.
 6. **Stemming.** Har minst to svart på et forklaringsspørsmål, kommer en stemmerunde på 30 sekunder. Alle ser fasiten og kriteriene for et godt svar, og så svarene uten navn, i en rekkefølge som ikke følger spillerlisten. Hver spiller velger svaret som ligger nærmest fasiten og trykker «Stem på svar B». Det egne svaret vises, merket «Ditt svar», men kan ikke velges. Én stemme, og den kan ikke endres. Også den som ikke svarte, stemmer. Mens de venter, ser spillerne hvem som har stemt, men ikke på hvem. Stemmingen lukkes når alle har stemt eller tiden er ute. Svarte bare én, vinner det svaret uten stemming; svarte ingen, går runden rett til avsløringen.
 7. **Avsløring.** Alle ser alles svar, hvem som hadde rett, poengene for runden og stillingen. Etter et forklaringsspørsmål ser de hvem som skrev hva, hvor mange stemmer hvert svar fikk, hvem som vant, fasiten og forklaringen. Nederst står «Neste spørsmål om 14 s» (eller «Resultatet om …» etter siste spørsmål). Spillet går videre av seg selv etter 20 sekunder, eller før hvis alle tilkoblede har trykket «Neste».
-8. **Slutt.** Etter siste runde vises sluttstillingen. Etter 30 minutter er rommet slettet, men telefonen beholder loggen til spilleren går ut av spillet.
+8. **Slutt.** Etter siste runde vises sluttstillingen. Etter 30 minutter er rommet slettet, men telefonen beholder loggen til spilleren går ut av spillet med «Nytt spill».
+
+Spilleren kan bytte fane i lobbyen og etter spillet. Skjermen for quiz-off lever videre bak de andre fanene, så forbindelsen og klokken går som før, og fanen får en prikk så lenge spillet pågår. Når verten starter, går alle spillerne til første spørsmål, uansett hvilken fane de er på. Under spørsmål, stemming og avsløring er fanelinjen skjult.
 
 ### Å bli med
 
 | Måte | Slik virker det |
 |---|---|
-| Skrive koden | I Atlas: «Quiz-off» på I dag, navn og koden. |
+| Skrive koden | I Atlas: fanen «Quiz-off», navn og koden. |
 | Lenke | «Inviter» åpner delingsmenyen med en tekst, lenken og koden. Får ikke telefonen delt, kopieres teksten med lenken; går ikke det heller, vises lenken. Lenken står også under QR-koden, kan merkes og har «Kopier lenke». |
 | QR-kode | De andre i rommet retter kameraet mot QR-koden i lobbyen og trykker på lenken som dukker opp. QR-koden er bare lenken. |
 
 **Lenken** er appens egen adresse med koden: `https://<adresse>/?quizoff=ABCD`. Den inneholder ikke navn, nøkkel eller noe annet. Når Atlas åpnes med `?quizoff=`:
 
-1. Parameteren fjernes fra adressen med en gang (`history.replaceState`), slik at en ny innlasting eller et senere besøk ikke prøver å bli med igjen. Andre parametere og `#today` blir stående. Koden huskes i fanen (`sessionStorage`, `atlas-quizoff-invite`) til spilleren er med eller velger noe annet. Nettleseren kan ha en eldre utgave av Atlas lagret og tilby «Oppdater appen» før spilleren har blitt med; etter oppdateringen står bli med-steget der fortsatt.
+1. Parameteren fjernes fra adressen med en gang (`history.replaceState`), slik at en ny innlasting eller et senere besøk ikke prøver å bli med igjen. Andre parametere blir stående, og adressen får `#quizoff`, så appen åpner på Quiz-off-fanen. Koden huskes i fanen (`sessionStorage`, `atlas-quizoff-invite`) til spilleren er med eller velger noe annet. Nettleseren kan ha en eldre utgave av Atlas lagret og tilby «Oppdater appen» før spilleren har blitt med; etter oppdateringen står bli med-steget der fortsatt.
 2. Har telefonen et lagret spill med samme kode, fortsetter det bare.
 3. Har telefonen et lagret spill med en annen kode, beholdes det, og spilleren får vite at hen allerede er med i et spill og må forlate det for å bli med i det andre. Begge valgene vises: «Fortsett i spillet …» og «Forlat … og bli med i …». Et ferdig spill teller ikke; det glemmes, og lenken åpnes som vanlig.
 4. Ellers åpnes quiz-off på «Bli med i spillet ABCD», med koden ferdig utfylt. Spilleren skriver bare navn (det er fylt ut hvis nettleseren har et lagret navn) og trykker én gang. «Skriv en annen kode» og «Start et eget spill» fører til den vanlige startsiden.
@@ -237,6 +239,8 @@ Spillere med like mange poeng og lik tid deler plassering. Spillere som har forl
 | Ingen «Godkjenn svaret mitt» | Poeng i en konkurranse må ikke kunne gis av spilleren selv. Appens egen retting avgjør, likt på alle telefoner. |
 | Svar fra quiz-off skrives ikke til læringshistorikken i denne versjonen | Et svar med tidspress i en konkurranse sier lite om hva som huskes, og ukjente kort ville hoppet over innføringen sin. |
 | Ingen kan bli med etter start | Alle telefoner regner ut spillet fra hele loggen fra første hendelse, og spørsmålene er valgt for dem som var med. Å komme sent inn gir en spiller som har gått glipp av spørsmål og poeng. |
+| Quiz-off har sin egen fane | Det er noe du gjør sammen med andre, ikke en del av dagens læring, og passet ikke inn i I dag. En egen fane gjør det lett å finne når noen sier «bli med», og gir lobbyen og resultatet et sted å være mens spilleren ser på noe annet. |
+| Spillet starter for alle, uansett fane | Runden venter ikke på dem som ikke ser spørsmålet; klokken går. At verten starter, er derfor det eneste som flytter spilleren til en annen fane uten at spilleren har trykket. |
 | Appoppdatering venter til spillet er over | Å bytte app- eller pakkeversjon midt i et spill kan gi en annen retting enn de andre har. Oppdateringsbanneret vises etter spillet. |
 | Kode, lenke og QR-kode; ingen skanner i appen | En skanner i appen krever kameratilgang og en QR-leser i tillegg til koderen, mens kameraappen på iPhone allerede leser QR-koder og åpner lenken. Lenken går derfor via Safari, ikke hjem-skjerm-appen, og koden finnes fortsatt for dem som vil skrive den. |
 | Lenken bærer bare koden | Det som skal til for å bli med, er koden og et navn. Navn og nøkkel lages på telefonen som blir med. |
